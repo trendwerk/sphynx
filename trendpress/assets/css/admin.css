@@ -1,0 +1,25 @@
+/* 	=========
+	ADMIN.CSS 
+	========= */
+
+.trendpress-options.wrap label {
+	display: block;
+	clear: both;
+}
+
+.trendpress-options.wrap input {
+	width: 300px;
+}
+
+.trendpress-options.wrap input.button-primary {
+	width: auto;
+}
+
+.trendpress-options.wrap label {
+	display: inline-block;
+	float: left;
+	height: auto; 
+	position: relative;
+	top: 3px;
+	width: 140px;
+}

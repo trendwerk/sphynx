@@ -1,0 +1,387 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TrendPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-18 08:59+0100\n"
+"PO-Revision-Date: 2012-07-18 09:15+0100\n"
+"Last-Translator: \n"
+"Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"X-Poedit-SearchPath-0: ...\n"
+"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-SearchPath-2: .\n"
+
+#: ../assets/inc/class.TPNav.php:101
+msgid "Search for"
+msgstr "Zoekresultaten voor"
+
+#: ../assets/inc/class.TPNav.php:246
+msgid "Contact"
+msgstr "Contact"
+
+#: ../assets/inc/class.TPPlugins.php:36
+msgid "WordPress SEO by Yoast"
+msgstr "WordPress SEO door Yoast"
+
+#: ../assets/inc/class.TPPlugins.php:37
+msgid "Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the WordPress SEO plugin by Yoast."
+msgstr "Verbeter je WordPress SEO: Schrijf betere content en optimaliseer je WordPress site door gebruik te maken van de WordPress SEO plugin door Yoast."
+
+#: ../assets/inc/class.TPPlugins.php:41
+msgid "Google Analytics for WordPress"
+msgstr "Google Analytics voor Wordpress"
+
+#: ../assets/inc/class.TPPlugins.php:42
+msgid "This plugin makes it simple to add Google Analytics to your WordPress blog, adding lots of features, eg. custom variables and automatic clickout and download tracking."
+msgstr "Deze plugin maakt het mogelijk om Google Analytics toe te voegen aan je WordPress site. Extra features: instelbare variabele en automatische clickout en download tracking."
+
+#: ../assets/inc/class.TPPlugins.php:46
+msgid "Theme updater"
+msgstr "Thema updater"
+
+#: ../assets/inc/class.TPPlugins.php:47
+msgid "Do you wish that you could somehow get update notifications within WordPress for custom themes that you use for your site?"
+msgstr "Wil je dat er update meldingen binnen WordPress mogelijk zijn voor het custom thema dat gebruikt wordt voor je site?"
+
+#: ../assets/inc/class.TPPlugins.php:52
+msgid "W3 Total Cache"
+msgstr "W3 Total Cache"
+
+#: ../assets/inc/class.TPPlugins.php:53
+msgid "Improve site performance and user experience via caching: browser, page, object, database, minify and content delivery network support."
+msgstr "Verbeter de site performance en user experience doormiddel van caching (browser caching, page caching, object caching, database caching, bestandsverkleining en content delivery network ondersteuning)."
+
+#: ../assets/inc/class.TPPlugins.php:57
+msgid "Search everything"
+msgstr "Search everything"
+
+#: ../assets/inc/class.TPPlugins.php:58
+msgid "Increases WordPress' default search functionality in three easy steps."
+msgstr "Verbeterd de WordPress basis zoek functionaliteit in drie simpele stappen."
+
+#: ../assets/inc/class.TPPlugins.php:66
+msgid "Multiple content blocks"
+msgstr "Multiple content blocks"
+
+#: ../assets/inc/class.TPPlugins.php:67
+msgid "Lets you use more than one content \"block\" on a template. You only have to insert one tag inside the template, so it's easy to use."
+msgstr "Laat je meer dan een content \"block\" per template gebruiken. Je hoeft enkel een tag te plaatsen binnen de template, dus is het gemakkelijk te gebruiken."
+
+#: ../assets/inc/class.TPPlugins.php:71
+msgid "Redirection"
+msgstr "Redirections"
+
+#: ../assets/inc/class.TPPlugins.php:72
+msgid "Redirection is a WordPress plugin to manage 301 redirections and keep track of 404 errors without requiring knowledge of Apache .htaccess files."
+msgstr "Redirection is een WordPress plugin waar je 301 redirections mee kunt instellen en 404 errors kunt traceren zonder kennis te hoeven hebben van Apache .htaccess files."
+
+#: ../assets/inc/class.TPPlugins.php:99
+msgid "Recommended plugins"
+msgstr "Aanbevolen plugins "
+
+#: ../assets/inc/class.TPPlugins.php:99
+msgid "Recommended"
+msgstr "Aanbevolen"
+
+#: ../assets/inc/class.TPPlugins.php:116
+msgid "Recommended plugin <strong>activated</strong>."
+msgstr "Aanbevolen plugin <strong>geactiveerd</strong>."
+
+#: ../assets/inc/class.TPPlugins.php:200
+#, php-format
+msgid "The plugin <strong>%1$s</strong> has been reset to the recommended TrendPress settings."
+msgstr "De settings van de plugin <strong>%1$s</strong> hebben nu de aanbevolen TrendPress instellingen."
+
+#: ../assets/inc/class.TPPlugins.php:247
+#, php-format
+msgid "<a href=\"%1$s\">Return to recommended plugins</a>"
+msgstr "<a href=\"%1$s\">Ga terug naar aanbevolen plugins</a>"
+
+#: ../assets/inc/functions.breadcrumbs.php:20
+msgid "Home"
+msgstr "Home"
+
+#: ../assets/inc/functions.custom-post-type.php:22
+msgid "Custom post types"
+msgstr "Custom post types"
+
+#: ../assets/inc/functions.custom-post-type.php:58
+msgid "There are no Custom Post Types at the moment."
+msgstr "Er zijn geen Custom Post Types op dit moment."
+
+#: ../assets/inc/functions.custom-post-type.php:68
+msgid "Add to Menu"
+msgstr "Voeg toe aan menu"
+
+#: ../assets/inc/functions.pagination.php:16
+msgid "Pagination"
+msgstr "Paginatie"
+
+#: ../assets/inc/functions.pagination.php:17
+msgid "Next"
+msgstr "Volgende"
+
+#: ../assets/inc/functions.pagination.php:18
+msgid "Previous"
+msgstr "Vorige"
+
+#: ../assets/inc/functions.theme-options.php:10
+msgid "Theme options"
+msgstr "Thema opties"
+
+#: ../assets/inc/widget.submenu.php:10
+msgid "Shows the submenu according to the custom menu"
+msgstr "Laat het submenu zien volgens het custom menu"
+
+#: ../assets/inc/widget.submenu.php:12
+msgid "Submenu"
+msgstr "Submenu"
+
+#: ../assets/inc/admin-views/plugin-table.php:20
+msgid "Install now"
+msgstr "Installeer nu"
+
+#: ../assets/inc/admin-views/plugin-table.php:22
+msgid "Are you sure you want to reset to the recommended TrendPress settings?"
+msgstr "Weet je zeker dat je de aanbevolen TrendPress settings wilt resetten? "
+
+#: ../assets/inc/admin-views/plugin-table.php:22
+msgid "Apply settings"
+msgstr "Pas settings toe"
+
+#: ../assets/inc/admin-views/plugin-table.php:24
+msgid "Activate"
+msgstr "Activeer"
+
+#: ../assets/inc/admin-views/recommended-plugins.php:5
+msgid "On this page, you can install recommended plugins and apply recommended settings to them after installing."
+msgstr "Op deze pagina kun je aanbevolen plugins installeren en aanbevolen settings toepassen na installatie."
+
+#: ../assets/inc/admin-views/recommended-plugins.php:12
+msgid "Optional plugins"
+msgstr "Optionele plugins"
+
+#: ../assets/inc/admin-views/theme-options.php:6
+msgid "General settings"
+msgstr "Algemene settings"
+
+#: ../assets/inc/admin-views/theme-options.php:8
+msgid "Sitename"
+msgstr "Sitenaam"
+
+#: ../assets/inc/admin-views/theme-options.php:9
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../assets/inc/admin-views/theme-options.php:13
+msgid "Name"
+msgstr "Naam"
+
+#: ../assets/inc/admin-views/theme-options.php:14
+msgid "Adres"
+msgstr "Adres"
+
+#: ../assets/inc/admin-views/theme-options.php:15
+msgid "Postal code"
+msgstr "Postcode"
+
+#: ../assets/inc/admin-views/theme-options.php:16
+msgid "City"
+msgstr "Stad"
+
+#: ../assets/inc/admin-views/theme-options.php:17
+msgid "E-mail"
+msgstr "E-mail"
+
+#: ../assets/inc/admin-views/theme-options.php:18
+msgid "Telephone"
+msgstr "Telefoon"
+
+#: ../assets/inc/admin-views/theme-options.php:19
+msgid "CC No"
+msgstr "KvK Nr"
+
+#: ../assets/inc/admin-views/theme-options.php:20
+msgid "VAT No"
+msgstr "BTW Nr"
+
+#: ../assets/inc/admin-views/theme-options.php:21
+msgid "Bank"
+msgstr "Bank"
+
+#: ../assets/inc/admin-views/theme-options.php:22
+msgid "Bank No"
+msgstr "Bank nummer"
+
+#: ../assets/inc/admin-views/theme-options.php:24
+msgid "Social media links"
+msgstr "Social media links"
+
+#: ../assets/inc/admin-views/theme-options.php:32
+msgid "Send"
+msgstr "Verstuurd"
+
+#~ msgid "The page you are looking for doesn't excist."
+#~ msgstr "De pagina die je zoekt lijkt niet te bestaan."
+
+#~ msgid ""
+#~ "Seems like the page you were looking for might have been moved or just "
+#~ "didn't excist in the first place"
+#~ msgstr ""
+#~ "Het lijkt er op dat de pagina waar je naar op zoek bent is verplaatst of "
+#~ "helemaal niet heeft bestaan"
+
+#~ msgid "You might want to check out our "
+#~ msgstr "Misschien wil je onze"
+
+#~ msgid "sitemap"
+#~ msgstr "sitemap"
+
+#~ msgid "or use the searchform below to find the page you are looking for."
+#~ msgstr "bekijken of het onderstaande zoekformulier gebruiken."
+
+#~ msgid "This post is password protected. Try logging in."
+#~ msgstr "Deze post is beschermd met een wachtwoord. Probeer in te loggen."
+
+#~ msgid "Responses"
+#~ msgstr "Reacties"
+
+#~ msgid "Your comment needs te be approved by us&hellip;"
+#~ msgstr "Je reactie moet nog door ons worden goedgekeurd&hellip;"
+
+#~ msgid "written by"
+#~ msgstr "geschreven door"
+
+#~ msgid "on"
+#~ msgstr "op"
+
+#~ msgid "Respond"
+#~ msgstr "Reageer"
+
+#~ msgid "Log out"
+#~ msgstr "Log uit"
+
+#~ msgid "Log out &raquo;"
+#~ msgstr "Log uit &raquo;"
+
+#~ msgid "Name:"
+#~ msgstr "Naam:"
+
+#~ msgid "Email:"
+#~ msgstr "Email:"
+
+#~ msgid "Website:"
+#~ msgstr "Website"
+
+#~ msgid ""
+#~ "You are using a very old version of Internet Explorer. For the best "
+#~ "experience please upgrade (for free) to a modern browser:"
+#~ msgstr ""
+#~ "Je gebruikt een verouderde versie van Internet Explorer. Voor een betere "
+#~ "gebruikerservaring kun je (gratis) upgraden naar een betere browser:"
+
+#~ msgid "Daily archives: %s"
+#~ msgstr "Dag archief: %s"
+
+#~ msgid "Monthly archives: %s"
+#~ msgstr "Maand archief: %s"
+
+#~ msgid "Yearly archives: %s"
+#~ msgstr "Jaar archief: %s"
+
+#~ msgid "Category archives: %s"
+#~ msgstr "Categorie archief: %s"
+
+#~ msgid "Tag Archives: %s"
+#~ msgstr "Tag archief: %s"
+
+#~ msgid "News"
+#~ msgstr "Nieuws"
+
+#~ msgid "Posted on:"
+#~ msgstr "Gepost op:"
+
+#~ msgid "in the category:"
+#~ msgstr "in de categorie:"
+
+#~ msgid "Read more &raquo;"
+#~ msgstr "Lees meer &raquo;"
+
+#~ msgid "No results found. Try it again using different words."
+#~ msgstr "Geen resultaten gevonden. Probeer het opnieuw met andere woorden."
+
+#~ msgid "Pages:"
+#~ msgstr "Pagina's:"
+
+#~ msgid "Permanent Link to:"
+#~ msgstr "Permanente link naar:"
+
+#~ msgid "News categories:"
+#~ msgstr "Nieuws categorieën:"
+
+#~ msgid "Found"
+#~ msgstr "Gevonden"
+
+#~ msgid " articles "
+#~ msgstr "artikelen"
+
+#~ msgid "containing the keyword: "
+#~ msgstr "met het keyword:"
+
+#~ msgid "<strong>"
+#~ msgstr "<strong>"
+
+#~ msgid "</strong>"
+#~ msgstr "</strong>"
+
+#~ msgid "Posted on"
+#~ msgstr "Gepost op"
+
+#~ msgid "Sorry, no posts matched your criteria. Try refining your search"
+#~ msgstr ""
+#~ "Sorry, we hebben geen posts gevonden die voldoen aan deze criteria. "
+#~ "Probeer het opnieuw met andere"
+
+#~ msgid "Keyword&hellip;"
+#~ msgstr "woorden&hellip;"
+
+#~ msgid "Go"
+#~ msgstr "Ga"
+
+#~ msgid "Page %s"
+#~ msgstr "Pagina's %s"
+
+#~ msgid "Subpages of the active page"
+#~ msgstr "Subpaginas van de actieve pagina"
+
+#~ msgid ""
+#~ "Social media widget that shows a list of social media network sites that "
+#~ "the user specified."
+#~ msgstr ""
+#~ "Social media widget die een lijst van social media netwerk sites toont "
+#~ "gespecificeerd door de gebruiker."
+
+#~ msgid "Keep in touch"
+#~ msgstr "Blijf op de hoogte"
+
+#~ msgid "Widget that shows the user specified contact data."
+#~ msgstr ""
+#~ "Widget die de door de gebruiker gespecificeerde contactgegevens toont."
+
+#~ msgid "Contact data"
+#~ msgstr "Contact gegevens"
+
+#~ msgid "Contact data, as used in the \"Contact data\" widget"
+#~ msgstr ""
+#~ "Contact gegevens die worden gebruikt ik de \"Contact gegevens\" widget"
+
+#~ msgid "Social media accounts, as used in the \"Stay tuned\" widget."
+#~ msgstr ""
+#~ "Social media account die worden gebruikt in de \"Blijf op de hoogte\" "
+#~ "widget"

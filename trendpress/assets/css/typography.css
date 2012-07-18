@@ -1,0 +1,167 @@
+/* 	==============
+	TYPOGRAPHY.CSS 
+	============== */
+
+/*	GLOBAL: COMMON TYPOGRAPHY
+	------------------------- */
+	
+body { 
+	font: normal 100% "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 { 
+	font-family: "helvetica neue", helvetica, arial, sans-serif; 
+	font-weight: normal; }
+
+h1, h2 { 
+	font-weight: bold;
+	line-height: 44px; 
+	margin-top: 22px;
+	margin-bottom: 22px; }
+
+h3, h4, h5, h6 { 
+	font-weight: bold;
+	line-height: 22px; 
+	margin-top: 22px;
+	margin-bottom: 22px; }
+
+	h1 { font-size: 38px; }
+	h2 { font-size: 26px; }
+	h3 { font-size: 20px; }
+	h4 { font-size: 16px; }
+	h5 { font-size: 14px; }
+
+a {
+    color: #0066CC;
+    text-decoration: underline; }
+
+	a:focus, a:hover { color: #0099FF; }
+	
+p, address {	
+	font-size: 14px; 
+	line-height: 22px;
+	margin-bottom: 22px; }
+
+address { font-style: normal; }
+
+strong, b { font-weight: bold; }
+
+em, i { font-style: italic; }
+
+blockquote, q { 
+	font-family: "helvetica neue", helvetica, arial, sans-serif; 
+	font-style: italic; }
+	
+	blockquote { padding: 0 22px; }
+	
+		blockquote p { font-size: 14px; }
+		
+ul, ol { 
+	font-size: 14px;
+	line-height: 22px;
+	margin-left: 22px;
+	margin-bottom: 22px; }
+
+	ul, ol { list-style-position: outside; }
+
+		ul ul, ol ol, ul ol, ol ul { margin: 0 0 0 22px; }
+		
+	ol ol { list-style-type: lower-latin; }
+		
+/* obscure */
+		
+cite { 
+	font-style: normal;
+	font-weight: bold; }
+	
+	cite:before { content: '- '; }
+
+dl, dialog { 
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 22px; }
+	
+	dl dt { font-weight: bold; }
+	
+		dt { line-height: 44px; }
+
+abbr, dfn, acronym { text-transform: uppercase; }
+	
+	abbr[title], dfn[title], acronym[title] {
+		border-bottom: 1px dotted;
+		font-style: normal;
+		cursor: help; }
+
+code, pre { 
+	background: #FFFFB3;
+	font-size: 14px; }
+	
+	pre { 
+		line-height: 22px;
+		padding: 0 7px; 
+	    margin-bottom: 22px; 
+	    white-space: pre-wrap;
+	 	white-space: -moz-pre-wrap;
+	 	white-space: -o-pre-wrap; }
+	 	
+sub, sup {
+	font-size: 10px;
+	height: 0;
+	line-height: 1;
+	padding: 0 2px 0 1px;
+	position: relative;
+	vertical-align: baseline; }
+	
+	sup { top: -5px; }
+	sub { top: 4px; }
+
+ins {
+	background-color: #D1FFB3;
+	text-decoration: none; }
+
+mark {
+	background-color: #FFFFB3;
+	font-style: italic;
+	font-weight: bold; }
+
+del { 
+	background: #FFB3B3;
+	text-decoration: line-through; }
+
+hr {
+	border: 0;   
+	border-top: 1px solid #CCCCCC;
+	display: block;
+	height: 1px;
+	margin: 1em 0;
+	padding: 0; }
+	
+/*	GLOBAL: WIDGET TYPOGRAPHY
+	------------------------- */
+	
+div.widget_rss ul li a.rsswidget { font-size: 16px; }
+div.widget_rss ul li span.rss-date { font-size: 12px;   }
+	
+/*	GLOBAL:	FORMS 
+	------------- */
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[type="submit"],
+textarea, 
+select { 
+	font-family: "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 13px; }
+
+input[type="submit"] { font-weight: bold; }
