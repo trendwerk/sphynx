@@ -29,7 +29,7 @@
 			<p><label for="linkedin">Linkedin</label> <input name="linkedin" id="linkedin" type="text" value="<?php echo get_option('tp-linkedin'); ?>"/></p>
 			<p><label for="youtube">YouTube</label> <input name="youtube" id="youtube" type="text" value="<?php echo get_option('tp-youtube'); ?>"/></p>
 			
-			<input type="submit" name="tp_submit" class="button-primary" value="<?php _e('Send','tp'); ?>"/>
+			<input type="submit" name="tp_submit" class="button-primary" value="<?php _e('Save','tp'); ?>"/>
 		</fieldset>
 	</form>
 </div>
