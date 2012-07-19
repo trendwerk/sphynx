@@ -44,9 +44,8 @@ class TPPlugins {
 			),
 			'theme-updater' => array(
 				'name' => __('Theme updater','tp'),
-				'description' => __('Do you wish that you could somehow get update notifications within WordPress for custom themes that you use for your site?','tp'),
-				'path' => 'theme-updater/updater.php',
-				'settings' => true
+				'description' => __('Enables the ability to update the TrendPress parent theme within WordPress.','tp'),
+				'path' => 'theme-updater/updater.php'
 			),
 			'w3-total-cache' => array(
 				'name' => __('W3 Total Cache','tp'),

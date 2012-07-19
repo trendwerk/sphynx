@@ -60,11 +60,25 @@ var tp_template_url = $('div#templateurl').html();
 
 	if($('ul#hoofdnavigatie').length > 0) {
 
+		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() { });
+		
+	}
+
+	if($('ul#hoofdnavigatie').length > 0) {
+
+		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() { });
+		
 		$.getScript(tp_template_url+'/assets/script/superfish/superfish.js', function() {
-
-			$('ul#hoofdnavigatie').superfish();
-
-		});	
+		
+		$("ul#hoofdnavigatie").supersubs({ 
+		
+			minWidth:    12,
+			maxWidth:    27, 
+			extraWidth:  1 
+		
+		}).superfish();
+		
+		});
 	
 	}
 

@@ -24,6 +24,6 @@ include('assets/inc/widget.submenu.php');
 /**
  * @language Load the textdomain 'tp'
  */
-load_theme_textdomain('tp',TEMPLATEPATH.'/assets/languages');
+load_theme_textdomain('tp',STYLESHEETPATH.'/assets/languages');
 
 ?>

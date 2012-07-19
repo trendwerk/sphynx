@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-18 12:50+0100\n"
-"PO-Revision-Date: 2012-07-18 12:50+0100\n"
+"POT-Creation-Date: 2012-07-18 17:05+0100\n"
+"PO-Revision-Date: 2012-07-18 17:06+0100\n"
 "Last-Translator: \n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "MIME-Version: 1.0\n"
@@ -46,8 +46,8 @@ msgid "Theme updater"
 msgstr "Thema updater"
 
 #: ../assets/inc/class.TPPlugins.php:47
-msgid "Do you wish that you could somehow get update notifications within WordPress for custom themes that you use for your site?"
-msgstr "Wil je dat er update meldingen binnen WordPress mogelijk zijn voor het custom thema dat gebruikt wordt voor je site?"
+msgid "Enables the ability to update the TrendPress parent theme within WordPress."
+msgstr "Maakt het mogelijk het TrendPress parent theme te updaten binnen WordPress."
 
 #: ../assets/inc/class.TPPlugins.php:52
 msgid "W3 Total Cache"
@@ -149,11 +149,11 @@ msgstr "Installeer nu"
 
 #: ../assets/inc/admin-views/plugin-table.php:22
 msgid "Are you sure you want to reset to the recommended TrendPress settings?"
-msgstr "Weet je zeker dat je de aanbevolen TrendPress settings wilt resetten? "
+msgstr "Weet je zeker dat je de aanbevolen TrendPress instellingen wilt toepassen?"
 
 #: ../assets/inc/admin-views/plugin-table.php:22
 msgid "Apply settings"
-msgstr "Pas settings toe"
+msgstr "Pas instellingen toe"
 
 #: ../assets/inc/admin-views/plugin-table.php:24
 msgid "Activate"
@@ -226,6 +226,13 @@ msgstr "Social media links"
 #: ../assets/inc/admin-views/theme-options.php:32
 msgid "Save"
 msgstr "Opslaan"
+
+#~ msgid ""
+#~ "Do you wish that you could somehow get update notifications within "
+#~ "WordPress for custom themes that you use for your site?"
+#~ msgstr ""
+#~ "Wil je dat er update meldingen binnen WordPress mogelijk zijn voor het "
+#~ "custom thema dat gebruikt wordt voor je site?"
 
 #~ msgid "Send"
 #~ msgstr "Verstuurd"
