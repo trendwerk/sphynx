@@ -1,0 +1,5 @@
+@import url(../trendpress/assets/css/typography.css);
+@import url(../trendpress/assets/css/misc.css);
+@import url(style.css);
+
+body { background: white; }
