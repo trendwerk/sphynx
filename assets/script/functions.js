@@ -71,10 +71,13 @@ jQuery(document).ready(function($){
 	
 	// if there's a a.fancybox, then get the fancybox script
 		
-	$('section#main div.alignright a').addClass('fancybox');
-	$('section#main div.alignnone a').addClass('fancybox');
-	$('section#main div.alignleft a').addClass('fancybox');	
-	$('section#main div.aligncenter a').addClass('fancybox');
+	$('a[href]').filter(function() {
+	
+	  return /(jpg|gif|png)$/.test($(this).attr('href'))
+	
+		}).addClass('fancybox')
+	
+	})
 		
 	$('dt.gallery-icon a').addClass('fancybox');
 		
