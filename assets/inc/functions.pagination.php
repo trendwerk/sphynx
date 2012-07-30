@@ -12,7 +12,7 @@ function tp_pagination($args = null) {
 	$defaults = array(
 		'page' => null, 'pages' => null, 
 		'range' => 3, 'gap' => 3, 'anchor' => 1,
-		'before' => '<nav id="pagination"><ul>', 'after' => '</ul></nav>',
+		'before' => '', 'after' => '',
 		'title' => __('Pagination','tp'),
 		'nextpage' => __('Next','tp'), 
 		'previouspage' => __('Previous','tp'),
@@ -32,7 +32,7 @@ function tp_pagination($args = null) {
 		$pages = intval(ceil($wp_query->found_posts / $posts_per_page));
 	}
 	
-	$output = "";
+	$output = '<nav id="pagination"><ul>';
 	if ($pages > 1) {
 		$ellipsis = "<li class='pagination-gap'>&hellip;</li>";
 
@@ -77,7 +77,7 @@ function tp_pagination($args = null) {
 			$output .= "<li><a href='" . get_pagenum_link($page + 1) . "' class='pagination-next'>$nextpage</a></li>";
 		}
 
-		$output .= '';
+		$output .= '</ul></nav>';
 	}
 
 	if ($echo) {
