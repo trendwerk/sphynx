@@ -88,7 +88,7 @@ jQuery(document).ready(function($){
 		            }).appendTo('head');
 		    };
 				
-		    $.getCSS('mycss.css');
+		    $.getCSS();
 	
 		});	
 		
