@@ -66,22 +66,23 @@ var tp_template_url = $('div#templateurl').html();
 
 	if($('ul#hoofdnavigatie').length > 0) {
 
-		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() { });
+		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() {
+
+			$.getScript(tp_template_url+'/assets/script/superfish/superfish.js', function() {
+
+				$("ul#hoofdnavigatie").supersubs({ 
 		
-		$.getScript(tp_template_url+'/assets/script/superfish/superfish.js', function() {
-		
-		$("ul#hoofdnavigatie").supersubs({ 
-		
-			minWidth:    12,
-			maxWidth:    27, 
-			extraWidth:  1 
-		
-		}).superfish();
-		
+					minWidth:    12,
+					maxWidth:    27, 
+					extraWidth:  1 
+			
+					}).superfish();
+			
+				});
+				
 		});
 	
 	}
-
 // 4. PSEUDO CLASSES
 
 	/*	add the right pseudo-classes to elements for styling purposes */
