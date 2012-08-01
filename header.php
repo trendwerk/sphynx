@@ -18,6 +18,10 @@
 		<link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_url')?>/assets/img/favicon/favicon.ico" />
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_url'); ?>" />
 		<link rel="stylesheet" type="text/css" media="print" href="<?php echo get_template_directory_uri() ?>/assets/css/print.css" />	
+		<!-- 
+		<link rel="stylesheet/less" type="text/css" media="screen, projections" href="<?php bloginfo('template_url')?>/assets/script/less/styles.less">
+		<script src="<?php bloginfo('template_url')?>/assets/script/less/less-1.3.0.min.js" type="text/javascript"></script>
+		-->
 		<script type="text/javascript" src="<?php bloginfo('template_url')?>/assets/script/modernizr/modernizr.dev.js"></script>	
 		<?php wp_head();?>
 	</head>
@@ -31,6 +35,16 @@
 				<div id="search" class="threecol last right">
 					<?php get_search_form(); ?>
 				</div>
+				<div class="menu-topnavigatie-container">
+					<ul id="topmenu" class="navigation">
+						<?php wp_nav_menu( array(
+							'menu' => 'Topnavigatie',
+							'depth' => '0',
+							'container' => '',
+							'items_wrap' => '%3$s' )); 
+						?>						
+					</ul>
+				</div>
 			</div>
 		</header>
 		<nav id="main-navigation" class="container">
@@ -43,16 +57,6 @@
 						'items_wrap' => '%3$s'
 					)); ?>
 				</ul>
-				<div class="menu-topnavigatie-container">
-					<ul id="topmenu" class="navigation">
-						<?php wp_nav_menu( array(
-							'menu' => 'Topnavigatie',
-							'depth' => '0',
-							'container' => '',
-							'items_wrap' => '%3$s' )); 
-						?>						
-					</ul>
-				</div>
 			</div>	
 		</nav>
 		<section id="main" class="container">
