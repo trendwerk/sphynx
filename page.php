@@ -5,8 +5,7 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1 id="page-title"><?php the_title(); ?></h1>
 			<?php the_content(); ?>
-		<?php endwhile; else: ?>
-		<?php endif; ?>
+		<?php endwhile; endif; ?>
 	</article>
 	<aside class="sidebar vertical fourcol last">
 		<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('Page'); ?>

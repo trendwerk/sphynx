@@ -16,15 +16,15 @@
 if(function_exists('register_sidebar')) {	
 	register_sidebar(array(
 		'name' => 'Home',
-		'id' => 'homeid',
+		'id' => 'home',
 		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div></div>',
+		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	));
 	register_sidebar(array(
 		'name' => 'Page',
-		'id' => 'pageid',
+		'id' => 'page',
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
@@ -32,7 +32,7 @@ if(function_exists('register_sidebar')) {
 	));
 	register_sidebar(array(
 		'name' => 'Blog',
-		'id' => 'blogid',
+		'id' => 'blog',
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
