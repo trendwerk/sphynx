@@ -1,4 +1,4 @@
 TrendPress
 ==========
 
-A WordPress framework for company use.
+A WordPress framework to create awesome websites
