@@ -11,6 +11,6 @@ function tp_the_excerpt($length=55,$more='&hellip;',$content='') {
 	
 	$excerpt = wp_trim_words($content,$length,$more);
 	
-	echo '<p>'.$excerpt.'</p>';
+	echo '<p>'.apply_filters('the_excerpt',$excerpt).'</p>';
 }
 ?>

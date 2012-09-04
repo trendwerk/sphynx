@@ -16,7 +16,7 @@ function tp_search_title_highlight($title) {
 
     return $title;
 }
-add_filter('the_title','tp_search_title_highlight');
+if(!is_admin()) add_filter('the_title','tp_search_title_highlight');
 
 /**
  * Highlight search results in excerpts
@@ -31,7 +31,7 @@ function tp_search_excerpt_highlight($excerpt) {
 	
     return $excerpt;
 }
-add_filter('the_excerpt','tp_search_excerpt_highlight');
+if(!is_admin()) add_filter('the_excerpt','tp_search_excerpt_highlight');
 
 /**
  * Highlight search results in the content
@@ -46,5 +46,5 @@ function tp_search_content_highlight($content) {
 	
     return $content;
 }
-add_filter('the_content','tp_search_content_highlight');
+if(!is_admin()) add_filter('the_content','tp_search_content_highlight');
 ?>

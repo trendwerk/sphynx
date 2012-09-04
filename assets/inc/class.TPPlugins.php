@@ -52,15 +52,21 @@ class TPPlugins {
 				'description' => __('Improve site performance and user experience via caching: browser, page, object, database, minify and content delivery network support.','tp'),
 				'path' => 'w3-total-cache/w3-total-cache.php'
 			),
-			'wp-smush-it' => array(
+			'wp-smushit' => array(
 				'name' => __('WP Smush.it','tp'),
-				'description' => __(' Reduce image file sizes and improve performance using the Smush.it API within WordPress.','tp'),
-				'path' => 'w3-total-cache/w3-total-cache.php'
+				'description' => __('Reduce image file sizes and improve performance using the Smush.it API within WordPress.','tp'),
+				'path' => 'wp-smushit/wp-smushit.php'
 			),
 			'search-everything' => array(
 				'name' => __('Search everything','tp'),
 				'description' => __('Increases WordPress\' default search functionality in three easy steps.','tp'),
 				'path' => 'search-everything/search-everything.php',
+				'settings' => true
+			),
+			'tinymce-advanced' => array(
+				'name' => __('TinyMCE Advanced','tp'),
+				'description' => __('Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor.','tp'),
+				'path' => 'tinymce-advanced/tinymce-advanced.php',
 				'settings' => true
 			)
 		);
@@ -190,6 +196,34 @@ class TPPlugins {
 				);
 					
 				update_option('se_options',$options);
+			}
+			
+			//TinyMCE Advanced settings
+			if($_GET['settings'] == 'tinymce-advanced') {
+				$tadv_options = array( 'advlink1' => 0, 'advimage' => 1, 'editorstyle' => 0, 'hideclasses' => 0, 'contextmenu' => 0, 'no_autop' => 0 );
+				$tadv_plugins = array( 'style', 'emotions', 'print', 'searchreplace', 'xhtmlxtras', 'advimage', 'table' );
+				$tadv_toolbars = array( 
+					'toolbar_1' => array( 'bold', 'italic', 'separator1', 'bullist', 'numlist', 'separator2', 'link', 'unlink', 'separator3', 'styleprops', 'separator4', 'wp_more', 'wp_page', 'separator5', 'spellchecker', 'search', 'separator6', 'fullscreen' ), 
+					'toolbar_2' => array( 'formatselect', 'styleselect', 'pastetext', 'pasteword', 'removeformat', 'separator7', 'charmap', 'print', 'separator8', 'undo', 'redo', 'attribs', 'wp_help', 'wp_adv' ), 
+					'toolbar_3' => array( 'tablecontrols' ), 
+					'toolbar_4' => array() 
+				);
+				
+				$tadv_btns1 = array( 'bold', 'italic', 'separator', 'bullist', 'numlist', 'separator', 'link', 'unlink', 'separator', 'styleprops', 'separator', 'wp_more', 'wp_page', 'separator', 'spellchecker', 'search', 'separator', 'fullscreen' );
+				$tadv_btns2 = array( 'formatselect', 'styleselect', 'pastetext', 'pasteword', 'removeformat', 'separator', 'charmap', 'print', 'separator', 'undo', 'redo', 'attribs', 'wp_help', 'wp_adv' );
+				$tadv_btns3 = array( 'tablecontrols' );
+				$tadv_btns4 = array();
+				
+				$tadv_allbtns = array( 'wp_adv', 'bold', 'italic', 'strikethrough', 'underline', 'bullist', 'numlist', 'outdent', 'indent', 'justifyleft', 'justifycenter', 'justifyright', 'justifyfull', 'cut', 'copy', 'paste', 'link', 'unlink', 'image', 'wp_more', 'wp_page', 'search', 'replace', 'fontselect', 'fontsizeselect', 'wp_help', 'fullscreen', 'styleselect', 'formatselect', 'forecolor', 'backcolor', 'pastetext', 'pasteword', 'removeformat', 'cleanup', 'spellchecker', 'charmap', 'print', 'undo', 'redo', 'tablecontrols', 'cite', 'ins', 'del', 'abbr', 'acronym', 'attribs', 'layer', 'advhr', 'code', 'visualchars', 'nonbreaking', 'sub', 'sup', 'visualaid', 'insertdate', 'inserttime', 'anchor', 'styleprops', 'emotions', 'media', 'blockquote', 'separator', '|' );
+				
+				update_option('tadv_options',$tadv_options);
+				update_option('tadv_toolbars',$tadv_toolbars);
+				update_option('tadv_plugins',$tadv_plugins);
+				update_option('tadv_btns1',$tadv_btns1);
+				update_option('tadv_btns2',$tadv_btns2);
+				update_option('tadv_btns3',$tadv_btns3);
+				update_option('tadv_btns4',$tadv_btns4);
+				update_option('tadv_allbtns',$tadv_allbtns);
 			}
 		}
 	}
