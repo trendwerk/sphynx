@@ -15,7 +15,7 @@
 					<?php echo $labels['description']; ?>
 				</td>
 				
-				<td class="settings" style="width:100px; text-align: right;">
+				<td class="settings" style="width:200px; text-align: left;">
 					<?php if(!$this->has_plugin($labels['path'])) { ?>
 						<a href="<?php echo wp_nonce_url('update.php?action=install-plugin&amp;plugin='.$plugin,'install-plugin_'.$plugin); ?>"><?php _e('Install now','tp'); ?></a>
 					<?php } else if(is_plugin_active($labels['path']) && $labels['settings']) { ?>

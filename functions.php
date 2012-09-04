@@ -18,7 +18,6 @@ include('assets/inc/functions.debug.php');
 include('assets/inc/functions.pagination.php');
 include('assets/inc/functions.search.php');
 include('assets/inc/functions.theme-options.php');
-include('assets/inc/functions.tiny-mce-changes.php');
 include('assets/inc/widget.submenu.php');
 
 /**

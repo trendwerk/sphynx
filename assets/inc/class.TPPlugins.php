@@ -52,6 +52,11 @@ class TPPlugins {
 				'description' => __('Improve site performance and user experience via caching: browser, page, object, database, minify and content delivery network support.','tp'),
 				'path' => 'w3-total-cache/w3-total-cache.php'
 			),
+			'wp-smush-it' => array(
+				'name' => __('WP Smush.it','tp'),
+				'description' => __(' Reduce image file sizes and improve performance using the Smush.it API within WordPress.','tp'),
+				'path' => 'w3-total-cache/w3-total-cache.php'
+			),
 			'search-everything' => array(
 				'name' => __('Search everything','tp'),
 				'description' => __('Increases WordPress\' default search functionality in three easy steps.','tp'),

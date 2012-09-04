@@ -24,12 +24,6 @@ table {
 	
 		.ie7 table td { border-bottom: 1px solid #000000 !important; }
 	
-		table tr.odd { background: #FFFFFF; }
-		
-		table tr.even { background: #F3F3F3; } 
-	
-		table th { background: #DDDDDD; }
-	
 		table th { 
 			padding: 5px 10px;
 			text-align: left; }

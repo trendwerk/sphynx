@@ -138,6 +138,8 @@ var tp_template_url = $('div#templateurl').html();
 			};
 			
 	$('.search input').clearOnFocus();
+	$('.hide_label').clearOnFocus();
+
 
 //	7. HYPERLINKS
 
