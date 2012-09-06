@@ -200,7 +200,7 @@ class TPPlugins {
 			
 			//TinyMCE Advanced settings
 			if($_GET['settings'] == 'tinymce-advanced') {
-				$tadv_options = array( 'advlink1' => 0, 'advimage' => 1, 'editorstyle' => 0, 'hideclasses' => 0, 'contextmenu' => 0, 'no_autop' => 0 );
+				$tadv_options = array( 'advlink1' => 0, 'advimage' => 1, 'editorstyle' => 1, 'hideclasses' => 0, 'contextmenu' => 0, 'no_autop' => 0 );
 				$tadv_plugins = array( 'style', 'emotions', 'print', 'searchreplace', 'xhtmlxtras', 'advimage', 'table' );
 				$tadv_toolbars = array( 
 					'toolbar_1' => array( 'bold', 'italic', 'separator1', 'bullist', 'numlist', 'separator2', 'link', 'unlink', 'separator3', 'styleprops', 'separator4', 'wp_more', 'wp_page', 'separator5', 'spellchecker', 'search', 'separator6', 'fullscreen' ), 
