@@ -9,7 +9,7 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<meta name="author" content="Trendwerk" />
-		<meta name ="viewport" content ="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+		<meta name ="viewport" content ="maximum-scale=1.0, user-scalable=yes, width=device-width" />
 		<title><?php wp_title('-'); ?></title>
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php bloginfo('name'); ?> RSS Feed" />
 		<link rel="apple-touch-icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/assets/img/favicon/apple-touch-icon.png" />
