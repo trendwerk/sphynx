@@ -23,7 +23,6 @@
 	6.	SEARCH
 	7. 	HYPERLINKS
 	8.	REL EXTERNAL
-	9. 	REMOVE LINKS
 	
 	------------------------------------------------------------------
 	
@@ -56,21 +55,21 @@ var tp_template_url = $('div#templateurl').html();
 	/*	all of our websites use 'superfish' to display a dynamic 
 		navigation. this is why it's in the core of our framework. */
 
-	// see if there's a ul#hoofdnavigatie, if true, then load superfish.js
+	// see if there's a nav#main-navigation ul.sf-menu, if true, then load superfish.js
 
-	if($('ul#hoofdnavigatie').length > 0) {
+	if($('nav#main-navigation ul.sf-menu').length > 0) {
 
 		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() { });
 		
 	}
 
-	if($('ul#hoofdnavigatie').length > 0) {
+	if($('nav#main-navigation ul.sf-menu').length > 0) {
 
 		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() {
 
 			$.getScript(tp_template_url+'/assets/script/superfish/superfish.js', function() {
 
-				$("ul#hoofdnavigatie").supersubs({ 
+				$("nav#main-navigation ul.sf-menu").supersubs({ 
 		
 					minWidth:    12,
 					maxWidth:    27, 
@@ -87,16 +86,14 @@ var tp_template_url = $('div#templateurl').html();
 
 	/*	add the right pseudo-classes to elements for styling purposes */
 
-	$('ul#hoofdnavigatie li:first-child').addClass('first-child');
-	$('ul#hoofdnavigatie li:last-child').addClass('last-child');
+	$('nav#main-navigation ul.sf-menu li:first-child').addClass('first-child');
+	$('nav#main-navigation ul.sf-menu li:last-child').addClass('last-child');
 
 	$('ul#topmenu li:first-child').addClass('first-child');
 	$('ul#topmenu li:last-child').addClass('last-child');
 
 	$('ul#footernavigatie li:first-child').addClass('first-child');
 	$('ul#footernavigatie li:last-child').addClass('last-child');
-
-	$('div.sidebar.horizontal div.widget:last-child').addClass('last');
 
 //	5. TABLES
 
@@ -148,7 +145,7 @@ var tp_template_url = $('div#templateurl').html();
 	$('a[rel=external]').each(function(i){
 
 		this.target='_blank';
-
+		
 	});
 	
 //	8. REL EXTERNAL
@@ -160,13 +157,5 @@ var tp_template_url = $('div#templateurl').html();
 		return this.hostname && this.hostname !== location.hostname;
 
 	}).addClass('external');
-	
-//	9. REMOVE LINKS
-
-	/*	either use hyperlinks as widget titles, or
-		don't. we did the lather. */
-	
-	var c = $('h3.widgettitle a').contents().unwrap();
-	var d = $('.widget_rss h3 a').contents().unwrap();
 
 });

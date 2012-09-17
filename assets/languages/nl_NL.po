@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-04 15:59+0100\n"
-"PO-Revision-Date: 2012-09-04 15:59+0100\n"
+"POT-Creation-Date: 2012-09-17 10:09+0100\n"
+"PO-Revision-Date: 2012-09-17 10:09+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -14,6 +14,11 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
+
+#: ../../index.php:1
+msgid "Please activate a TrendPress child-theme to use this theme."
+msgstr ""
+"Om dit thema te gebruiken dient u een TrendPress child-theme te activeren."
 
 #: ../../assets/inc/class.TPNav.php:101 ../inc/class.TPNav.php:101
 msgid "Search for"
@@ -80,11 +85,11 @@ msgstr "WP Smush.it"
 
 #: ../../assets/inc/class.TPPlugins.php:57 ../inc/class.TPPlugins.php:57
 msgid ""
-" Reduce image file sizes and improve performance using the Smush.it API "
+"Reduce image file sizes and improve performance using the Smush.it API "
 "within WordPress."
 msgstr ""
-"Verkleint bestandsgroottes van afbeeldingen en verbetert prestaties via de "
-"Smush.it API van WordPress."
+"Verklein bestandsgroottes van afbeeldingen en verbetert prestaties middels "
+"de Smush.it API van WordPress."
 
 #: ../../assets/inc/class.TPPlugins.php:61 ../inc/class.TPPlugins.php:61
 msgid "Search everything"
@@ -95,11 +100,21 @@ msgid "Increases WordPress' default search functionality in three easy steps."
 msgstr ""
 "Verbeterd de WordPress basis zoek functionaliteit in drie simpele stappen."
 
-#: ../../assets/inc/class.TPPlugins.php:70 ../inc/class.TPPlugins.php:70
+#: ../../assets/inc/class.TPPlugins.php:67 ../inc/class.TPPlugins.php:67
+msgid "TinyMCE Advanced"
+msgstr "TinyMCE Advanced"
+
+#: ../../assets/inc/class.TPPlugins.php:68 ../inc/class.TPPlugins.php:68
+msgid "Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor."
+msgstr ""
+"Voegt geavanceerde functionaliteiten toe aan TinyMCE, de WYSIWYG van "
+"WordPress."
+
+#: ../../assets/inc/class.TPPlugins.php:76 ../inc/class.TPPlugins.php:76
 msgid "Multiple content blocks"
 msgstr "Multiple content blocks"
 
-#: ../../assets/inc/class.TPPlugins.php:71 ../inc/class.TPPlugins.php:71
+#: ../../assets/inc/class.TPPlugins.php:77 ../inc/class.TPPlugins.php:77
 msgid ""
 "Lets you use more than one content \"block\" on a template. You only have to "
 "insert one tag inside the template, so it's easy to use."
@@ -108,11 +123,11 @@ msgstr ""
 "enkel een tag te plaatsen binnen de template, dus is het gemakkelijk te "
 "gebruiken."
 
-#: ../../assets/inc/class.TPPlugins.php:75 ../inc/class.TPPlugins.php:75
+#: ../../assets/inc/class.TPPlugins.php:81 ../inc/class.TPPlugins.php:81
 msgid "Redirection"
 msgstr "Redirections"
 
-#: ../../assets/inc/class.TPPlugins.php:76 ../inc/class.TPPlugins.php:76
+#: ../../assets/inc/class.TPPlugins.php:82 ../inc/class.TPPlugins.php:82
 msgid ""
 "Redirection is a WordPress plugin to manage 301 redirections and keep track "
 "of 404 errors without requiring knowledge of Apache .htaccess files."
@@ -121,23 +136,23 @@ msgstr ""
 "instellen en 404 errors kunt traceren zonder kennis te hoeven hebben van "
 "Apache .htaccess files."
 
-#: ../../assets/inc/class.TPPlugins.php:103
+#: ../../assets/inc/class.TPPlugins.php:109
 #: ../../assets/inc/admin-views/recommended-plugins.php:3
 #: ../../assets/inc/admin-views/recommended-plugins.php:7
-#: ../inc/class.TPPlugins.php:103 ../inc/admin-views/recommended-plugins.php:3
+#: ../inc/class.TPPlugins.php:109 ../inc/admin-views/recommended-plugins.php:3
 #: ../inc/admin-views/recommended-plugins.php:7
 msgid "Recommended plugins"
 msgstr "Aanbevolen plugins "
 
-#: ../../assets/inc/class.TPPlugins.php:103 ../inc/class.TPPlugins.php:103
+#: ../../assets/inc/class.TPPlugins.php:109 ../inc/class.TPPlugins.php:109
 msgid "Recommended"
 msgstr "Aanbevolen"
 
-#: ../../assets/inc/class.TPPlugins.php:120 ../inc/class.TPPlugins.php:120
+#: ../../assets/inc/class.TPPlugins.php:126 ../inc/class.TPPlugins.php:126
 msgid "Recommended plugin <strong>activated</strong>."
 msgstr "Aanbevolen plugin <strong>geactiveerd</strong>."
 
-#: ../../assets/inc/class.TPPlugins.php:204 ../inc/class.TPPlugins.php:204
+#: ../../assets/inc/class.TPPlugins.php:238 ../inc/class.TPPlugins.php:238
 #, php-format
 msgid ""
 "The plugin <strong>%1$s</strong> has been reset to the recommended "
@@ -146,7 +161,7 @@ msgstr ""
 "De settings van de plugin <strong>%1$s</strong> hebben nu de aanbevolen "
 "TrendPress instellingen."
 
-#: ../../assets/inc/class.TPPlugins.php:251 ../inc/class.TPPlugins.php:251
+#: ../../assets/inc/class.TPPlugins.php:285 ../inc/class.TPPlugins.php:285
 #, php-format
 msgid "<a href=\"%1$s\">Return to recommended plugins</a>"
 msgstr "<a href=\"%1$s\">Ga terug naar aanbevolen plugins</a>"
@@ -187,11 +202,9 @@ msgid "Previous"
 msgstr "Vorige"
 
 #: ../../assets/inc/functions.theme-options.php:10
-#: ../../assets/inc/admin-views/theme-options.php:3
 #: ../inc/functions.theme-options.php:10
-#: ../inc/admin-views/theme-options.php:3
-msgid "Theme options"
-msgstr "Thema opties"
+msgid "Contact information"
+msgstr "Contactgegevens"
 
 #: ../../assets/inc/widget.submenu.php:10 ../inc/widget.submenu.php:10
 msgid "Shows the submenu according to the custom menu"
@@ -236,80 +249,107 @@ msgstr ""
 msgid "Optional plugins"
 msgstr "Optionele plugins"
 
+#: ../../assets/inc/admin-views/theme-options.php:3
+#: ../inc/admin-views/theme-options.php:3
+msgid "Theme options"
+msgstr "Thema opties"
+
 #: ../../assets/inc/admin-views/theme-options.php:6
 #: ../inc/admin-views/theme-options.php:6
 msgid "General settings"
 msgstr "Algemene settings"
 
-#: ../../assets/inc/admin-views/theme-options.php:8
-#: ../inc/admin-views/theme-options.php:8
+#: ../../assets/inc/admin-views/theme-options.php:7
+#: ../inc/admin-views/theme-options.php:7
 msgid "Sitename"
 msgstr "Sitenaam"
 
-#: ../../assets/inc/admin-views/theme-options.php:9
-#: ../inc/admin-views/theme-options.php:9
+#: ../../assets/inc/admin-views/theme-options.php:8
+#: ../inc/admin-views/theme-options.php:8
 msgid "Description"
 msgstr "Omschrijving"
 
-#: ../../assets/inc/admin-views/theme-options.php:13
-#: ../inc/admin-views/theme-options.php:13
+#: ../../assets/inc/admin-views/theme-options.php:12
+#: ../inc/admin-views/theme-options.php:12
 msgid "Company name"
 msgstr "Bedrijfsnaam"
 
-#: ../../assets/inc/admin-views/theme-options.php:14
-#: ../inc/admin-views/theme-options.php:14
+#: ../../assets/inc/admin-views/theme-options.php:13
+#: ../inc/admin-views/theme-options.php:13
 msgid "Adress"
 msgstr "Adres"
 
-#: ../../assets/inc/admin-views/theme-options.php:15
-#: ../inc/admin-views/theme-options.php:15
+#: ../../assets/inc/admin-views/theme-options.php:14
+#: ../inc/admin-views/theme-options.php:14
 msgid "Postal code"
 msgstr "Postcode"
 
-#: ../../assets/inc/admin-views/theme-options.php:16
-#: ../inc/admin-views/theme-options.php:16
+#: ../../assets/inc/admin-views/theme-options.php:15
+#: ../inc/admin-views/theme-options.php:15
 msgid "City"
 msgstr "Stad"
 
-#: ../../assets/inc/admin-views/theme-options.php:17
-#: ../inc/admin-views/theme-options.php:17
+#: ../../assets/inc/admin-views/theme-options.php:16
+#: ../inc/admin-views/theme-options.php:16
 msgid "E-mail"
 msgstr "E-mail"
 
-#: ../../assets/inc/admin-views/theme-options.php:18
-#: ../inc/admin-views/theme-options.php:18
+#: ../../assets/inc/admin-views/theme-options.php:17
+#: ../inc/admin-views/theme-options.php:17
 msgid "Telephone"
 msgstr "Telefoon"
 
-#: ../../assets/inc/admin-views/theme-options.php:19
-#: ../inc/admin-views/theme-options.php:19
-msgid "CC No"
-msgstr "KvK Nr"
+#: ../../assets/inc/admin-views/theme-options.php:18
+#: ../inc/admin-views/theme-options.php:18
+msgid "Fax"
+msgstr "Fax"
 
 #: ../../assets/inc/admin-views/theme-options.php:20
 #: ../inc/admin-views/theme-options.php:20
-msgid "VAT No"
-msgstr "BTW Nr"
+msgid "Registration numbers &amp; financial"
+msgstr "Registratie nummers &amp; financieel"
 
 #: ../../assets/inc/admin-views/theme-options.php:21
 #: ../inc/admin-views/theme-options.php:21
-msgid "Bank"
-msgstr "Bank"
+msgid "CC No."
+msgstr "KvK Nr."
 
 #: ../../assets/inc/admin-views/theme-options.php:22
 #: ../inc/admin-views/theme-options.php:22
-msgid "Bank No"
-msgstr "Bank Nr"
+msgid "VAT No."
+msgstr "BTW Nr."
+
+#: ../../assets/inc/admin-views/theme-options.php:23
+#: ../inc/admin-views/theme-options.php:23
+msgid "Bank name"
+msgstr "Bank naam"
 
 #: ../../assets/inc/admin-views/theme-options.php:24
 #: ../inc/admin-views/theme-options.php:24
+msgid "Bank No."
+msgstr "Bank Nr."
+
+#: ../../assets/inc/admin-views/theme-options.php:27
+#: ../inc/admin-views/theme-options.php:27
 msgid "Social media links"
 msgstr "Social media links"
 
-#: ../../assets/inc/admin-views/theme-options.php:32
-#: ../inc/admin-views/theme-options.php:32
+#: ../../assets/inc/admin-views/theme-options.php:28
+#: ../inc/admin-views/theme-options.php:28
+msgid ""
+"Please provide full URLs to your profile pages (e.g. http://twitter.com/"
+"trendwerk/)"
+msgstr ""
+"Vul s.v.p. de volledige URLs naar uw profiel pagina's in (bijv. http://"
+"twitter.com/trendwerk/)"
+
+#: ../../assets/inc/admin-views/theme-options.php:37
+#: ../inc/admin-views/theme-options.php:37
 msgid "Save"
 msgstr "Opslaan"
+
+#~ msgid "Bank"
+#~ msgstr "Bank"
 
 #~ msgid "Name"
 #~ msgstr "Naam"
@@ -470,9 +510,6 @@ msgstr "Opslaan"
 #~ msgid "Widget that shows the user specified contact data."
 #~ msgstr ""
 #~ "Widget die de door de gebruiker gespecificeerde contactgegevens toont."
-
-#~ msgid "Contact data"
-#~ msgstr "Contact gegevens"
 
 #~ msgid "Contact data, as used in the \"Contact data\" widget"
 #~ msgstr ""

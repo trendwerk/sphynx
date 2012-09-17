@@ -2,65 +2,71 @@
 	GRIDS.CSS 
 	========= */
 
-/* basic clear class for clearing floats */
+/* basic clear class for clearing floating elements */
 
 .clear { clear: both; }
-	
-/* 	---------
-	GRID: 960
-	--------- */
-		
+
+/* collumns */
+
+.onecol, 
+.twocol, 
+.threecol, 
+.fourcol, 
+.fivecol, 
+.sixcol, 
+.sevencol, 
+.eightcol, 
+.ninecol, 
+.tencol, 
+.elevencol,
+.twelvecol {
+	float: left;
+	margin: 10px; }
+
 /* outer container, full width */
 	
-.g960 .container {
+.container {
 	display: block;
 	clear: both;
 	float: left;
 	height: auto;
-	width: 100%; }
+	min-width: 100%; }
 	
 	/* inner container, center aligned */
 
-	.g960 .inner {
+	.inner {
 		margin: 0 auto;
-		padding: 0 0 0 20px;
 		width: 960px; }
-		
-/* static lay-out, collumns */
 
-.g960 .onecol, .g960 .twocol, .g960 .threecol, .g960 .fourcol, .g960 .fivecol, .g960 .sixcol, .g960 .sevencol, .g960 .eightcol, .g960 .ninecol, .g960 .tencol, .g960 .elevencol {
-	float: left;
-	margin-right: 20px;
-	min-height: 1px; }
+/* 	---------
+	GRID: 960
+	--------- */
+		
+/* inner container, center aligned */
+
+.g960 .inner {
+	width: 960px; }
 
 /* collumn specific widths */
 
-.g960 .inner .onecol { width: 60px; }
-.g960 .inner .twocol { width: 140px; }
-.g960 .inner .threecol { width: 220px; }
-.g960 .inner .fourcol { width: 300px; }
-.g960 .inner .fivecol { width: 380px; }
-.g960 .inner .sixcol { width: 460px; }
-.g960 .inner .sevencol { width: 540px; }
-.g960 .inner .eightcol { width: 620px; }
-.g960 .inner .ninecol { width: 700px; }
-.g960 .inner .tencol { width: 780px; }
-.g960 .inner .elevencol { width: 860px; }
-
-/* biggest collumn, no margins  */
-
-.g960 .inner .twelvecol {
-	float: left;
-	min-height: 1px;
-	width: 940px; }
-	
-/* class for last collumn */
-
-.g960 .last { margin-right: 0; }
+.g960 .onecol { width: 60px; }
+.g960 .twocol { width: 140px; }
+.g960 .threecol { width: 220px; }
+.g960 .fourcol { width: 300px; }
+.g960 .fivecol { width: 380px; }
+.g960 .sixcol { width: 460px; }
+.g960 .sevencol { width: 540px; }
+.g960 .eightcol { width: 620px; }
+.g960 .ninecol { width: 700px; }
+.g960 .tencol { width: 780px; }
+.g960 .elevencol { width: 860px; }
+.g960 .twelvecol { width: 940px; }
 
 /* set max width for images, objects and embeds */
 
-.g960 img, .g960 object, .g960 embed { max-width: 100%; }
+.g960 img, 
+.g960 object, 
+.g960 embed { max-width: 100%; }
 
 .g960 img { height: auto; }		
 
@@ -68,89 +74,81 @@
 	GRID: 1140
 	---------- */
 	
-/* outer collumn, full width */
+/* inner collumn, max width, center aligned */
 
-.g1140 .container {
-	clear: both;
-	display: block;
+.g1140 .container .inner {
+	width: auto;
+	max-width: 1140px; }
+
+/* responsive lay-out, collumns */
+
+.g1140 .onecol, 
+.g1140 .twocol, 
+.g1140 .threecol, 
+.g1140 .fourcol, 
+.g1140 .fivecol, 
+.g1140 .sixcol, 
+.g1140 .sevencol, 
+.g1140 .eightcol, 
+.g1140 .ninecol, 
+.g1140 .tencol, 
+.g1140 .elevencol {
 	float: left;
-	height: auto;
-	width: 100%; }
+	margin: 10px 1.9%; }
 	
-	/* inner collumn, max width, center aligned */
-	
-	.g1140 .container .inner {
-		margin: 0 auto; 
-		padding: 0 20px;
-		max-width: 1140px; }
-		
-		/* responsive lay-out, collumns */
-		
-		.g1140 .onecol, .g1140 .twocol, .g1140 .threecol, .g1140 .fourcol, .g1140 .fivecol, .g1140 .sixcol, .g1140 .sevencol, .g1140 .eightcol, .g1140 .ninecol, .g1140 .tencol, .g1140 .elevencol {
-			float: left;
-			margin-right: 3.8%;
-			min-height: 1px; }
+/* collumn specific widths */
 
-		.g1140 .inner .onecol { width: 4.85%; }
-		.g1140 .inner .twocol { width: 13.45%; }
-		.g1140 .inner .threecol { width: 22.05%; }
-		.g1140 .inner .fourcol { width: 30.75%; }
-		.g1140 .inner .fivecol { width: 39.45%; }
-		.g1140 .inner .sixcol { width: 48%; }
-		.g1140 .inner .sevencol { width: 56.75%; }
-		.g1140 .inner .eightcol { width: 65.4%; }
-		.g1140 .inner .ninecol { width: 74.05%; }
-		.g1140 .inner .tencol { width: 82.7%; }
-		.g1140 .inner .elevencol { width: 91.35%; }
+.g1140 .inner .onecol { width: 4.85%; }
+.g1140 .inner .twocol { width: 13.45%; }
+.g1140 .inner .threecol { width: 22.05%; }
+.g1140 .inner .fourcol { width: 30.75%; }
+.g1140 .inner .fivecol { width: 39.45%; }
+.g1140 .inner .sixcol { width: 48%; }
+.g1140 .inner .sevencol { width: 56.75%; }
+.g1140 .inner .eightcol { width: 65.4%; }
+.g1140 .inner .ninecol { width: 74.05%; }
+.g1140 .inner .tencol { width: 82.7%; }
+.g1140 .inner .elevencol { width: 91.35%; }
+.g1140 .inner .twelvecol { width: 100%; }
 		
-		/* largest collumn, no margin right */
-		
-		.g1140 .inner .twelvecol {
-			float: left;
-			min-height: 1px; 
-			width: 100%; }
-		
-		/* class for last collumn */
-		
-		.g1140 .last { margin-right: 0; }
-		
-		/* set max width for images, objects and embed */
-		
-		.g1140 img, .g1140 object, .g1140 embed { 
-			max-width: 100%;
-			/* width: 100%; */ }
-		
-		.g1140 img { height: auto; }	
-			 
+/* set max width for images, objects and embed */
+
+.g1140 img, 
+.g1140 object, 
+.g1140 embed { 
+	max-width: 100%; }
+
+.g1140 img { height: auto; }	
+
 /* MEDIA QUERIES */
     
-    @media (max-width: 480px) {
-    
-    	.g1140 .container .inner { 
-    		margin-left: 0;
-			margin-right: 0;
-    		min-width: 0;
-			padding-left: 0;
-			padding-right: 0;
-    		width: 100%; }
-        
-		.g1140 .inner .onecol, 
-		.g1140 .inner .twocol, 
-		.g1140 .inner .threecol, 
-		.g1140 .inner .fourcol, 
-		.g1140 .inner .fivecol, 
-		.g1140 .inner .sixcol, 
-		.g1140 .inner .sevencol, 
-		.g1140 .inner .eightcol, 
-		.g1140 .inner .ninecol, 
-		.g1140 .inner .tencol, 
-		.g1140 .inner .elevencol, 
-		.g1140 .inner .twelvecol {
-			float: none;
-			margin-left: 0;
-			margin-right: 0;
-			padding-left: 20px;
-			padding-right: 20px; 
-			width: auto; }
-			
-	}
+@media (max-width: 480px) {
+
+.g1140 .container .inner { 
+	margin-left: 0;
+	margin-right: 0;
+	min-width: 0;
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%; }
+
+.g1140 .inner .onecol, 
+.g1140 .inner .twocol, 
+.g1140 .inner .threecol, 
+.g1140 .inner .fourcol, 
+.g1140 .inner .fivecol, 
+.g1140 .inner .sixcol, 
+.g1140 .inner .sevencol, 
+.g1140 .inner .eightcol, 
+.g1140 .inner .ninecol, 
+.g1140 .inner .tencol, 
+.g1140 .inner .elevencol, 
+.g1140 .inner .twelvecol {
+	float: none;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 20px;
+	padding-right: 20px; 
+	width: auto; }
+	
+}

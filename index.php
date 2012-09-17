@@ -1,3 +1,1 @@
-<?php
-	//There's nothing here!
-?>
+<?php _e('Please activate a TrendPress child-theme to use this theme.','tp'); ?>

@@ -4,69 +4,76 @@
 
 /*	GLOBAL: COMMON TYPOGRAPHY
 	------------------------- */
-	
-body { 
-	font: normal 14px "helvetica neue", helvetica, arial, sans-serif;
-	line-height: 1.5; }
+
+body, p { font: normal 14px/25px "helvetica neue", helvetica, arial, sans-serif; }
+
+p { margin: 0 0 20px 0; }
 
 h1, h2, h3, h4, h5, h6 { 
 	font-family: "helvetica neue", helvetica, arial, sans-serif; 
-	font-weight: normal; }
+	font-weight: bold; }
 
-h1, h2 { 
-	font-weight: bold;
-	line-height: 44px; 
-	margin-top: 22px;
-	margin-bottom: 22px; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { text-decoration: underline; }
 
-h3, h4, h5, h6 { 
-	font-weight: bold;
-	line-height: 22px; 
-	margin-top: 22px;
-	margin-bottom: 22px; }
+h1 { 
+	font-size: 32px ;
+	line-height: 40px; 
+	margin: 0 0 20px 0; }
 
-	h1 { font-size: 38px; }
-	h2 { font-size: 26px; }
-	h3 { font-size: 20px; }
-	h4 { font-size: 16px; }
-	h5 { font-size: 14px; }
+h2 { 
+	font-size: 26px ;
+	line-height: 30px; 
+	margin: 0 0 20px 0; }
 
-a {
-    color: #0066CC;
-    text-decoration: underline; }
+h3 { 
+	font-size: 20px ;
+	line-height: 30px; 
+	margin: 0 0 10px 0; }
 
-	a:focus, a:hover { color: #0099FF; }
-	
-p, address {	
-	font-size: 14px; 
-	line-height: 22px;
-	margin-bottom: 22px; }
+h4 { 
+	font-size: 16px ;
+	line-height: 25px; 
+	margin: 0 0 10px 0; }
 
-address { font-style: normal; }
+h5 { 
+	font-size: 14px ;
+	line-height: 25px; 
+	margin: 0 0 10px 0; }
+
+h6 { 
+	font-size: 14px ;
+	line-height: 25px; 
+	margin: 0; }
+
+/* Links */
+
+a { 
+	color: #12C;
+	cursor: pointer;
+	outline: 0; }
+
+a:hover, 
+a:focus { color: #000; }
+
+/* other */
 
 strong, b { font-weight: bold; }
 
 em, i { font-style: italic; }
 
-blockquote, q { 
-	font-family: "helvetica neue", helvetica, arial, sans-serif; 
+blockquote, 
+blockquote p,
+q { 
 	font-style: italic; }
-	
-	blockquote { padding: 0 22px; }
-	
-		blockquote p { font-size: 14px; }
 		
-ul, ol { 
-	font-size: 14px;
-	line-height: 22px;
-	margin-left: 22px;
-	margin-bottom: 22px; }
+ul, ol {
+	line-height: 25px;
+	margin: 0 0 20px 25px;
+	list-style-position: outside; }
 
-	ul, ol { list-style-position: outside; }
+ul ul, ol ol, ul ol, ol ul { margin: 0 0 0 20px; }
 
-		ul ul, ol ol, ul ol, ol ul { margin: 0 0 0 22px; }
-		
-	ol ol { list-style-type: lower-latin; }
+ol ol { list-style-type: lower-latin; }
 		
 /* obscure */
 		
@@ -74,35 +81,30 @@ cite {
 	font-style: normal;
 	font-weight: bold; }
 	
-	cite:before { content: '- '; }
+cite:before { content: '- '; }
 
-dl, dialog { 
-	font-size: 14px;
-	line-height: 22px;
-	margin-bottom: 22px; }
+dl, dialog { }
 	
-	dl dt { font-weight: bold; }
+dl dt { font-weight: bold; }
 	
-		dt { line-height: 44px; }
+dt { line-height: 50px; }
 
 abbr, dfn, acronym { text-transform: uppercase; }
 	
-	abbr[title], dfn[title], acronym[title] {
+abbr[title], dfn[title], acronym[title] {
 		border-bottom: 1px dotted;
 		font-style: normal;
 		cursor: help; }
 
 code, pre { 
-	background: #FFFFB3;
-	font-size: 14px; }
+	background: #FFFFB3; }
 	
-	pre { 
-		line-height: 22px;
-		padding: 0 7px; 
-	    margin-bottom: 22px; 
-	    white-space: pre-wrap;
-	 	white-space: -moz-pre-wrap;
-	 	white-space: -o-pre-wrap; }
+pre {
+	padding: 5px 10px; 
+    margin-bottom: 22px; 
+    white-space: pre-wrap;
+ 	white-space: -moz-pre-wrap;
+ 	white-space: -o-pre-wrap; }
 	 	
 sub, sup {
 	font-size: 10px;
@@ -135,13 +137,7 @@ hr {
 	height: 1px;
 	margin: 1em 0;
 	padding: 0; }
-	
-/*	GLOBAL: WIDGET TYPOGRAPHY
-	------------------------- */
-	
-div.widget_rss ul li a.rsswidget { font-size: 16px; }
-div.widget_rss ul li span.rss-date { font-size: 12px;   }
-	
+
 /*	GLOBAL:	FORMS 
 	------------- */
 

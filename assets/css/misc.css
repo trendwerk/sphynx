@@ -47,7 +47,7 @@
 			.sf-menu li:hover ul,
 			.sf-menu li.sfHover ul {
 				left: 0;
-				top: 44px;
+				top: 40px;
 				z-index: 99; }
 
 			ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul { top: -999em; }
@@ -84,57 +84,58 @@
 				
 				.sf-sub-indicator { display: none; }
 
-	/*	GLOBAL: PAGINATION
-		------------------ */
-					
-	nav#pagination {
-		clear: both;
-		float: left;
-		font-size: 14px; 
-		height: auto;
-		margin: 22px 0 0 0;
-		width: 100%; }
-		
-		nav#pagination span.pagination-title { display: none; }
-		
-		nav#pagination ul { 
-			width: auto; 
-			text-align: center; }
-					
+/*	GLOBAL: PAGINATION
+	------------------ */
+				
+nav#pagination {
+	clear: both;
+	float: left;
+	font-size: 14px; 
+	height: auto;
+	margin: 0 0 25px 0;
+	width: 100%; }
+	
+	nav#pagination span.pagination-title { display: none; }
+	
+	nav#pagination ul { 
+		width: auto; 
+		text-align: center;
+		margin: 0; }
+				
 		nav#pagination ul li { 
 			display: inline-block;
 			list-style-type: none; }
 		
-		nav#pagination ul li a { text-decoration: none; }
-		
-		nav#pagination ul li a.pagination-page { 
-			border: 1px solid #CCCCCC;
-			padding: 1px 6px; }
-		
-		nav#pagination span.pagination-current { 
-			border: 1px solid #F0F0F0; 
-			padding: 1px 6px; }
+			nav#pagination ul li a { text-decoration: none; }
 			
-		nav#pagination .pagination-gap {
-		    margin: 0 3px;
-		    padding: 1px 3px;
-		    position: relative;
-		    top: -6px; }
+			nav#pagination ul li a.pagination-page,
+			nav#pagination ul li span.pagination-current { 
+				border: 1px solid #CCC;
+				position: relative;
+				margin: 0 3px;
+				padding: 2px 6px; }
 			
-		nav#pagination ul li a.pagination-page, nav#pagination span.pagination-current { 
-			margin: 0 3px;
-			position: relative;
-			top: -6px; }
-		
-		nav#pagination a.pagination-next, nav#pagination a.pagination-prev { border: none; }
-		
-		nav#pagination .previous-post {
-			float: left;
-			margin: 0 10px 0 0; }
+			nav#pagination ul li a.pagination-prev { 
+				border: none;
+				margin: 0 5px 0 0; }
 			
-		nav#pagination .next-post {
-			float: right;
-			margin: 0 20px 0 10px; }	
+			nav#pagination ul li a.pagination-next { 
+				border: none;
+				margin: 0 0 0 5px; }
+			
+			nav#pagination .pagination-gap {
+			    margin: 0 3px;
+			    position: relative; }
+
+			/* 	Previous and next post links */
+			
+			nav#pagination .previous-post {
+				float: left;
+				margin: 0 10px 0 0; }
+				
+			nav#pagination .next-post {
+				float: right;
+				margin: 0 0 0 10px; }	
 	
 /* 	---------
 	WORDPRESS 
@@ -143,28 +144,27 @@
 /* 	GLOBAL: IMAGES
 	-------------- */
 
-.entry-content img { margin: 0 0 22px 0; }
+.entry-content img { margin: 0 0 25px 0; }
 
 .alignleft, img.alignleft {
 	display: inline;
 	float: left; 
-	margin-right: 1.5em; }
+	margin-right: 20px; }
 	
 .alignright, img.alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em; }
+	margin-left: 20px; }
 	
 .aligncenter, img.aligncenter {
 	clear: both;
 	display: block;
-	margin-right: auto;
-	margin-left: auto; }
+	margin: 0px auto; }
 	
 .alignnone, img.alignnone {}
 
 .wp-caption {
-	margin-bottom: 17px;
+	margin-bottom: 10px;
 	padding-top: 5px;
 	text-align: center; }
 	
@@ -178,6 +178,37 @@
 .wp-smiley {
 	margin: 0 !important;
 	max-height: 1em; }
+	
+/*	GLOBAL: GALLERY
+	--------------- */
+
+.gallery { 
+	margin-bottom: 25px;
+	width: auto;
+	padding: 9px;
+	border: 1px solid #CCCCCC;
+	overflow: auto; }
+
+	.gallery dl {
+		display: block;
+		float: left;
+		margin: 10px;
+		height: auto;
+		width: auto; }
+		
+		.ie7 .gallery dt { margin-bottom: 25px; }
+	
+		.gallery dt {
+			height: 128px;
+			width: 128px; }
+		
+			.gallery dt img {
+				float: left;
+				height: auto; 
+				width: auto; }
+		
+		.gallery dd { display: none; }
+		.gallery br { display: none; }
 
 /* 	GLOBAL: BLOCKQUOTES
 	------------------- */
@@ -195,38 +226,6 @@ blockquote.right {
 	margin-right: 0;
 	text-align: left;
 	width: 33%; }
-	
-/*	GLOBAL: GALLERY
-	--------------- */
-
-.gallery { 
-	border: 1px solid #CCCCCC;
-	clear: both;
-	float: left;
-	margin-bottom: 22px;
-	padding-top: 22px;
-	width: 100%; }
-
-	.gallery dl {
-		display: block;
-		float: left;
-		margin: 0 0 22px 22px;
-		height: auto;
-		width: auto; }
-		
-		.ie7 .gallery dt { margin-bottom: 22px; }
-	
-		.gallery dt {
-			height: 128px;
-			width: 128px; }
-		
-			.gallery dt img {
-				float: left;
-				height: auto; 
-				width: auto; }
-		
-		.gallery dd { display: none; }
-		.gallery br { display: none; }
 
 /*	GLOBAL: WIDGETS
 	--------------- */
@@ -253,15 +252,22 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 		
 /* rss */
 
-	div.widget_rss h3 img { display: none; 	}
-	
+.widget_rss ul li { padding: 10px 5px 15px 5px !important; }
+
 	div.widget_rss ul li a.rsswidget { 
 		display: block; 
-		font-weight: bold; }
-	
-	div.widget_rss ul li span.rss-date, div.widget_rss ul li cite { 
-		display: block; 
-		line-height: 44px; }
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 25px;
+		margin: 0 0 0 0; }
+		
+		div.widget_rss h3 img { display: none; }
+
+	div.widget_rss ul li span.rss-date { 
+		font-size: 12px; 
+		margin: 0 0 10px 0;
+	}
+	div.widget_rss ul li span.rss-date, div.widget_rss ul li cite { display: block; }
 	
 /* social media widget */
 
@@ -278,7 +284,8 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 .contact-widget span { 
 	display: inline-block;
 	font-weight: bold;
-	width: 100px; }
+	width: 35%;
+	min-width: 75px; }
 	
 	.contact-widget ul {
 		clear: both;
