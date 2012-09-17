@@ -1,13 +1,13 @@
 </section>
-		<footer id="main-footer" class="container">
-			<div class="inner">
+		<footer id="footer" class="container">
+			<div class="container-inner">
 				<aside class="sidebar">
 					<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('Footer'); ?>
 				</aside>
 			</div>
 		</footer>
 		<footer id="credits" class="container">
-			<div class="inner">
+			<div class="container-inner">
 				<div class="twelvecol">
 					<div id="copyright">
 						<p>&copy; Copyright <?php the_time('Y'); ?> - <?php bloginfo('name'); ?> <?php ?></p>

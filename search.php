@@ -1,7 +1,6 @@
 <?php get_header(); ?>
-
-<div class="inner">		
-	<article class="eightcol">
+<div class="container-inner">		
+	<article id="content" class="eightcol">
 		<?php if (have_posts()) : ?>
 			<h1><?php printf(__( 'Search Results for: %1$s','tp'),'<span class="search-highlight">'.get_search_query().'</span>'); ?></h1>
 			<p>

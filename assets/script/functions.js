@@ -48,7 +48,7 @@ jQuery(document).ready(function($){
 	
 		$(function () {
 	
-			$.getScript(tp_template_url+'/assets/script/tinynav/tinynav.min.js', function() { $("ul#mainnav").tinyNav({active: 'selected'});});	    
+			$.getScript(tp_template_url+'/assets/script/tinynav/tinynav.min.js', function() { $("ul.sf-menu").tinyNav({active: 'selected'});});	    
 	
 		});
 	

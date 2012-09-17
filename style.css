@@ -12,7 +12,6 @@ Version: 1.0
 
 /* CSS Document */
 
-
 @import url(../trendpress/assets/css/reset.css);
 @import url(../trendpress/assets/css/misc.css);
 @import url(../trendpress/assets/css/typography.css);
@@ -103,25 +102,26 @@ a.button:hover {
 	
 body { background: #EEE; }
 
-/*	GLOBAL: HEADER#MAIN-HEADER
+/*	GLOBAL: HEADER#HEADER
 	-------------------------- */
 	
-#main-header .inner { height: 100px; }
+#header .container-inner { min-height: 100px; }
 	
-	#main-header #logo { height: 80px; }
+	#header #logo { min-height: 80px; }
 	
-		#main-header #logo p#sitename {	
+		#header #logo p#sitename {	
 			font-weight: bold;
 			font-size: 38px;
 			line-height: 44px;
 			margin: 10px 0 0 0; }
 	
-			#main-header p#sitename a {
+			#header p#sitename a {
 				color: #333;
 				text-decoration: none;  }
 	
-		#main-header p#description { 
-			color: #666; }
+		#header p#description { 
+			color: #666;
+			margin: 0; }
 
 	/* top navigation */
 		
@@ -149,7 +149,7 @@ body { background: #EEE; }
 
 	/* search form */
 	
-	#main-header #search {  }
+	#header #search {  }
 	
 		div.search { 
 			position: relative; 
@@ -182,39 +182,39 @@ body { background: #EEE; }
 			color: #000;
 			padding: 1px 2px; }
 
-/*	GLOBAL: MAIN-NAVIGATION
+/*	GLOBAL: NAVIGATION
 	----------------------- */
 	
-#main-navigation .inner {   }
+#navigation .container-inner {   }
 	
-	.sf-menu {
+	#mainnav {
 		background: #333;
-		height: 40px;
+		min-height: 40px;
 		float: left; }
 
-		.sf-menu li a {
+		#mainnav li a {
 			color: #FFF;
 			line-height: 20px;
 			padding: 10px 20px;
 			text-decoration: none; }
 
-			.sf-menu li ul { background: #333; }
+			#mainnav li ul { background: #333; }
 
-			.sf-menu li il li a { padding: 5px 20px }
+			#mainnav li il li a { padding: 5px 20px }
 
 		/* current menu item */
 
-		.sf-menu li.current-menu-ancestor, 
-		.sf-menu li.current-menu-item,
-		.sf-menu li.current-menu-parent { background: #000000; } 
+		#mainnav li.current-menu-ancestor, 
+		#mainnav li.current-menu-item,
+		#mainnav li.current-menu-parent { background: #000000; } 
 		
 		/* rollover state */
 		
-		.sf-menu li:hover, 
-		.sf-menu li.sfHover, 
-		.sf-menu a:focus, 
-		.sf-menu a:hover, 
-		.sf-menu a:active {
+		#mainnav li:hover, 
+		#mainnav li.sfHover, 
+		#mainnav a:focus, 
+		#mainnav a:hover, 
+		#mainnav a:active {
 			background: #000000;
 			outline: 0;
 			text-decoration: underline !important; }
@@ -236,7 +236,7 @@ body { background: #EEE; }
 
 #main { padding-bottom: 10px; }
 
-#main .inner { overflow: auto; }
+#main .container-inner { overflow: auto; }
 
 	/* sidebar & widgets */
 		
@@ -270,41 +270,41 @@ body { background: #EEE; }
 					
 					.widget ul li ul { display: none; }
 		
-/*	GLOBAL: FOOTER#MAIN-FOOTER
+/*	GLOBAL: FOOTER#FOOTER
 	-------------------------- */
 	
-#main-footer { background: #333; }
+#footer { background: #333; }
 
-#main-footer .inner { padding: 20px 0 0 0; }
+#footer .container-inner { padding: 20px 10px 0 10px; }
 
-	#main-footer h3,
-	#main-footer p,
-	#main-footer a,
+	#footer h3,
+	#footer p,
+	#footer a,
 	#credits p,
 	#credits a {
 		color: #FFF; }
 
-	#main-footer a:hover,
+	#footer a:hover,
 	#credits a:hover {
 		color: #999; }
 
-	#main-footer .widget {
+	#footer .widget {
 		background: none;
 		float: left;
 		margin: 10px; }
 		
-		#main-footer .widget .inner { padding: 0; }
+		#footer .widget .inner { padding: 0; }
 		
-	.g960 #main-footer .widget { width: 220px; }
+	.g960 #footer .widget { width: 220px; }
 	
-	.g1140 #main-footer .widget { width: 22.05%; }
+	.g1140 #footer .widget { width: 22%; }
 
 /*	GLOBAL: FOOTER#CREDITS
 	---------------------- */
 	
 #credits { background: #333; }
 
-#credits .inner .twelvecol {
+#credits .container-inner .twelvecol {
 	border-top: 1px solid #999;
 	margin: 0 10px;
 	padding: 10px 0;
@@ -406,36 +406,51 @@ article .meta {
 		
 .js .g1140 .tinynav { display: none; }
 
-/* large desktop */
+/* large desktops */
+@media (min-width: 1200px) {  }
 
-@media (min-width: 1200px) { }
+/* Desktops to portrait tablets */
+@media (min-width: 768px) and (max-width: 979px) {  }
 
-/* portrait mode tablet to landscape and desktop */
+/* Portrait tablets to Landscape phones */
+@media (max-width: 767px) {
 
-@media (min-width: 768px) and (max-width: 979px) { }	
+	/* Hide some elements */
 
-/* landscape devices to portrait mode tablets */
-
-@media (max-width: 767px) { 
+	.g1140 #header #logo {
+		width: 97%; }
 	
+	.g1140 #header #topnav,
+	.g1140 #header #search,
+	.g1140 #navigation #breadcrumbs,
+	.g1140 #footer { display: none; }
+	
+	.g1140 #credits .container-inner .twelvecol { border: none; }
+	
+	/* Replace main navigation by select box */
+	
+	.js .g1140 .sf-menu { display: none; }
+	
+	.js .g1140 .tinynav { 
+		display: block;
+		margin: 10px auto;
+		width: 90%; }
+	
+	/* Content and sidebar */
+
+	.g1140 #main #content {
+		float: left;
+		width: 97%;
+		margin: 10px 1.5%;
+		clear: both; }
+	
+	.g1140 #main .sidebar {
+		float: left;
+		width: 97%;
+		margin: 10px 1.5%;
+		clear: both; }
 
 }
 
-/* landscape devices and lower */
-
-@media (max-width: 1090px) {
-	
-
-}
-
-@media (max-width: 480px) {
-		
-.js .g1140 .tinynav { display: block }
-
-
-}	
-
-.ie8 button, .ie8 input[type="reset"], .ie8 input[type="submit"], .ie8 input[type="button"], .ie7 button, .ie7 input[type="reset"], .ie7 input[type="submit"], .ie7 input[type="button"] { 
-	behavior: url('http://dev.trendwerk.nl/blimp-theme/wp-content/themes/blimp-child/assets/script/pie/PIE.php');
-	position: relative;
-	z-index: 1; }
+/* Landscape phones and down */
+@media (max-width: 480px) {  }

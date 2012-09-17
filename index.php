@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<div class="inner">		
-	<section class="eightcol">
+<div class="container-inner">		
+	<section id="content" class="eightcol">
 		<h1 id="page-title">
 			<?php if(is_day()) : ?>
 				<?php printf(__( 'Daily archives: %s','tp'),'<span>'.get_the_date().'</span>'); ?>

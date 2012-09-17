@@ -8,8 +8,7 @@
 <!--<![endif]-->
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
-		<meta name="author" content="Trendwerk" />
-		<meta name ="viewport" content ="maximum-scale=1.0, user-scalable=yes, width=device-width" />
+		<meta name ="viewport" content ="user-scalable=yes, width=device-width" />
 		<title><?php wp_title('-'); ?></title>
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php bloginfo('name'); ?> RSS Feed" />
 		<link rel="apple-touch-icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/assets/img/favicon/apple-touch-icon.png" />
@@ -26,8 +25,8 @@
 		<?php wp_head();?>
 	</head>
 	<body <?php body_class('g960'); ?>>
-		<header id="main-header" class="container">
-			<div class="inner">
+		<header id="header" class="container">
+			<div class="container-inner">
 				<div id="logo" class="ninecol">
 					<p id="sitename"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></p>
 					<p id="description"><?php bloginfo('description'); ?></p>
@@ -43,24 +42,26 @@
 				</div>
 			</div>
 		</header>
-		<nav id="main-navigation" class="container">
-			<div class="inner">
-				<ul id="mainnav" class="navigation twelvecol sf-menu">
-					<?php wp_nav_menu( array(
-						'theme_location' => 'mainnav',
-						'depth' => '0',
-						'container' => '',
-						'items_wrap' => '%3$s'
-					)); ?>
-				</ul>
+		<section id="navigation" class="container">
+			<div class="container-inner">
+				<nav id="mainnav" class="navigation twelvecol">
+					<ul class="sf-menu">
+						<?php wp_nav_menu( array(
+							'theme_location' => 'mainnav',
+							'depth' => '0',
+							'container' => '',
+							'items_wrap' => '%3$s'
+						)); ?>
+					</ul>
+				</nav>
 				<?php if ( is_front_page() ) { ?>
 					<!-- Enter code here for custom homepage header -->
 				<?php } else { ?>
-					<div id="breadcrumbs" class="twelvecol">
+					<nav id="breadcrumbs" class="twelvecol">
 						<?php _e('You are here:','tp') ?>
 						<?php if (function_exists('tp_breadcrumbs')) tp_breadcrumbs(); ?>
-					</div>
+					</nav>
 				<?php } ?>
 			</div>
-		</nav>
+		</section>
 		<section id="main" class="container">
