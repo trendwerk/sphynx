@@ -55,21 +55,21 @@ var tp_template_url = $('div#templateurl').html();
 	/*	all of our websites use 'superfish' to display a dynamic 
 		navigation. this is why it's in the core of our framework. */
 
-	// see if there's a nav#main-navigation ul.sf-menu, if true, then load superfish.js
+	// see if there's a #mainnav ul.sf-menu, if true, then load superfish.js
 
-	if($('nav#main-navigation ul.sf-menu').length > 0) {
+	if($('#mainnav ul.sf-menu').length > 0) {
 
 		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() { });
 		
 	}
 
-	if($('nav#main-navigation ul.sf-menu').length > 0) {
+	if($('#mainnav ul.sf-menu').length > 0) {
 
 		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() {
 
 			$.getScript(tp_template_url+'/assets/script/superfish/superfish.js', function() {
 
-				$("nav#main-navigation ul.sf-menu").supersubs({ 
+				$("#mainnav ul.sf-menu").supersubs({ 
 		
 					minWidth:    12,
 					maxWidth:    27, 
@@ -86,14 +86,14 @@ var tp_template_url = $('div#templateurl').html();
 
 	/*	add the right pseudo-classes to elements for styling purposes */
 
-	$('nav#main-navigation ul.sf-menu li:first-child').addClass('first-child');
-	$('nav#main-navigation ul.sf-menu li:last-child').addClass('last-child');
+	$('#mainnav ul.sf-menu li:first-child').addClass('first-child');
+	$('#mainnav ul.sf-menu li:last-child').addClass('last-child');
 
-	$('ul#topmenu li:first-child').addClass('first-child');
-	$('ul#topmenu li:last-child').addClass('last-child');
+	$('#topnav li:first-child').addClass('first-child');
+	$('#topnav li:last-child').addClass('last-child');
 
-	$('ul#footernavigatie li:first-child').addClass('first-child');
-	$('ul#footernavigatie li:last-child').addClass('last-child');
+	$('#footernav li:first-child').addClass('first-child');
+	$('#footernav li:last-child').addClass('last-child');
 
 //	5. TABLES
 
