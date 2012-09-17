@@ -10,7 +10,7 @@
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<meta name="author" content="Trendwerk" />
 		<meta name ="viewport" content ="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
-		<title><?php wp_title(); ?></title>
+		<title><?php wp_title('-'); ?></title>
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php bloginfo('name'); ?> RSS Feed" />
 		<link rel="apple-touch-icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/assets/img/favicon/apple-touch-icon.png" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -22,41 +22,45 @@
 		<link rel="stylesheet/less" type="text/css" media="screen, projections" href="<?php bloginfo('template_url')?>/assets/script/less/styles.less">
 		<script src="<?php bloginfo('template_url')?>/assets/script/less/less-1.3.0.min.js" type="text/javascript"></script>
 		-->
-		<script type="text/javascript" src="<?php bloginfo('template_url')?>/assets/script/modernizr/modernizr.dev.js"></script>	
+		<script type="text/javascript" src="<?php bloginfo('template_url')?>/assets/script/modernizr/modernizr.dev.js"></script>
 		<?php wp_head();?>
 	</head>
 	<body <?php body_class('g960'); ?>>
 		<header id="main-header" class="container">
 			<div class="inner">
 				<div id="logo" class="ninecol">
-					<p id="logo-p"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></p>
-					<p id="tagline"><?php bloginfo('description'); ?> </p>
+					<p id="sitename"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></p>
+					<p id="description"><?php bloginfo('description'); ?></p>
 				</div>
-				<div id="search" class="threecol last right">
+				<nav id="topnav" class="navigation threecol">
+					<?php wp_nav_menu( array(
+						'theme_location' => 'topnav',
+						'depth' => '0' )); 
+					?>					
+				</nav>
+				<div id="search" class="threecol">
 					<?php get_search_form(); ?>
-				</div>
-				<div class="menu-topnavigatie-container">
-					<ul id="topmenu" class="navigation">
-						<?php wp_nav_menu( array(
-							'menu' => 'Topnavigatie',
-							'depth' => '0',
-							'container' => '',
-							'items_wrap' => '%3$s' )); 
-						?>						
-					</ul>
 				</div>
 			</div>
 		</header>
 		<nav id="main-navigation" class="container">
 			<div class="inner">
-				<ul id="hoofdnavigatie" class="navigation twelvecol sf-menu">
+				<ul id="mainnav" class="navigation twelvecol sf-menu">
 					<?php wp_nav_menu( array(
-						'menu' => 'Hoofdnavigatie',
+						'theme_location' => 'mainnav',
 						'depth' => '0',
 						'container' => '',
 						'items_wrap' => '%3$s'
 					)); ?>
 				</ul>
-			</div>	
+				<?php if ( is_front_page() ) { ?>
+					<!-- Enter code here for custom homepage header -->
+				<?php } else { ?>
+					<div id="breadcrumbs" class="twelvecol">
+						<?php _e('You are here:','tp') ?>
+						<?php if (function_exists('tp_breadcrumbs')) tp_breadcrumbs(); ?>
+					</div>
+				<?php } ?>
+			</div>
 		</nav>
 		<section id="main" class="container">

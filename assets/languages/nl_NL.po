@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-04 16:00+0100\n"
-"PO-Revision-Date: 2012-09-04 16:00+0100\n"
+"POT-Creation-Date: 2012-09-17 10:09+0100\n"
+"PO-Revision-Date: 2012-09-17 10:10+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -15,19 +15,19 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../../404.php:5
+#: ../../404.php:4
 msgid "The page you are looking for doesn't exist."
-msgstr "De pagina die je zoekt lijkt niet te bestaan."
+msgstr "De pagina die je zoek bestaat niet."
 
-#: ../../404.php:6
+#: ../../404.php:5
 msgid ""
 "Seems like the page you were looking for might have been moved or just "
 "didn't excist in the first place."
 msgstr ""
-"Het lijkt er op dat de pagina waar je naar op zoek bent is verplaatst of "
+"Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of "
 "helemaal niet heeft bestaan."
 
-#: ../../404.php:7
+#: ../../404.php:6
 #, php-format
 msgid ""
 "You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
@@ -100,13 +100,25 @@ msgstr "Email:"
 msgid "Website:"
 msgstr "Website"
 
-#: ../../footer.php:33
+#: ../../footer.php:32
 msgid ""
 "You are using a very old version of Internet Explorer. For the best "
 "experience please upgrade (for free) to a modern browser:"
 msgstr ""
 "Je gebruikt een verouderde versie van Internet Explorer. Voor een betere "
 "gebruikerservaring kun je (gratis) upgraden naar een betere browser:"
+
+#: ../../functions.php:55
+msgid "Main navigation"
+msgstr "Hoofd navigatie"
+
+#: ../../functions.php:56
+msgid "Top navigation"
+msgstr "Top navigatie"
+
+#: ../../functions.php:57
+msgid "Footer navigation"
+msgstr "Footer navigatie"
 
 #: ../../functions.php:92
 msgid ""
@@ -120,7 +132,7 @@ msgstr ""
 msgid "Social media links"
 msgstr "Social media links"
 
-#: ../../functions.php:98 ../../functions.php:131
+#: ../../functions.php:98 ../../functions.php:133
 #, php-format
 msgid ""
 "Change the contents of this widget on the <a href=\"%1$s\">theme options</a> "
@@ -129,123 +141,146 @@ msgstr ""
 "Verander de inhoud van de ze widget op de <a href=\"%1$s\">thema opties</a> "
 "pagina."
 
-#: ../../functions.php:106
+#: ../../functions.php:107
 msgid "Keep in touch"
 msgstr "Blijf op de hoogte"
 
-#: ../../functions.php:125
+#: ../../functions.php:127
 msgid "Widget that shows the user specified contact data."
 msgstr "Widget die de door de gebruiker gespecificeerde contactgegevens toont."
 
-#: ../../functions.php:127
-msgid "Contact data"
-msgstr "Contact gegevens"
+#: ../../functions.php:129
+msgid "Contact information"
+msgstr "Contactgegevens"
 
-#: ../../functions.php:139
+#: ../../functions.php:142
 msgid "Contact"
 msgstr "Contact"
 
-#: ../../functions.php:146
+#: ../../functions.php:159
 msgid "E-mail"
 msgstr "E-mail"
 
-#: ../../functions.php:147
+#: ../../functions.php:161
 msgid "Telephone"
 msgstr "Telefoon"
 
-#: ../../functions.php:148
+#: ../../functions.php:163
+msgid "Fax"
+msgstr "Fax"
+
+#: ../../functions.php:170
 msgid "CC No"
 msgstr "KvK Nr"
 
-#: ../../functions.php:149
+#: ../../functions.php:172
 msgid "VAT No"
 msgstr "BTW Nr"
 
-#: ../../index.php:7
+#: ../../header.php:60
+msgid "You are here:"
+msgstr "U bent hier:"
+
+#: ../../index.php:6
 #, php-format
 msgid "Daily archives: %s"
 msgstr "Dag archief: %s"
 
-#: ../../index.php:9
+#: ../../index.php:8
 #, php-format
 msgid "Monthly archives: %s"
 msgstr "Maand archief: %s"
 
-#: ../../index.php:11
+#: ../../index.php:10
 #, php-format
 msgid "Yearly archives: %s"
 msgstr "Jaar archief: %s"
 
-#: ../../index.php:13
+#: ../../index.php:12
 #, php-format
 msgid "Category archives: %s"
 msgstr "Categorie archief: %s"
 
-#: ../../index.php:15
+#: ../../index.php:14
 #, php-format
 msgid "Tag Archives: %s"
 msgstr "Tag archief: %s"
 
-#: ../../index.php:17
+#: ../../index.php:16
 #, php-format
 msgid "%s"
 msgstr "%s"
 
-#: ../../index.php:19
+#: ../../index.php:18
 msgid "News"
 msgstr "Nieuws"
 
-#: ../../index.php:25 ../../search.php:20 ../../single.php:7
+#: ../../index.php:29 ../../single.php:9
 msgid "Posted on:"
-msgstr "Gepost op:"
+msgstr "Geplaatst op:"
 
-#: ../../index.php:25 ../../search.php:20 ../../single.php:7
+#: ../../index.php:30 ../../single.php:9
 msgid "in the category:"
 msgstr "in de categorie:"
 
-#: ../../index.php:27 ../../search.php:22
-msgid "Read more &raquo;"
-msgstr "Lees meer &raquo;"
+#: ../../index.php:35 ../../search.php:25
+msgid "Read more"
+msgstr "Lees meer"
 
-#: ../../index.php:32
+#: ../../index.php:42
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
-#: ../../page-sitemap.php:12
+#: ../../page-sitemap.php:11
 msgid "Pages"
 msgstr "Pagina's:"
 
-#: ../../page-sitemap.php:38
+#: ../../page-sitemap.php:35
 msgid "Blog"
 msgstr "Blog"
 
-#: ../../search.php:7 ../../search.php:28
+#: ../../search.php:6 ../../search.php:34
 #, php-format
 msgid "Search Results for: %1$s"
 msgstr "Zoek resultaten voor:  %1$s"
 
-#: ../../search.php:14
+#: ../../search.php:12
 #, php-format
 msgid ""
 "Found %1$s articles containing the keyword: <span class=\"search-highlight\">"
 "%2$s</span>"
 msgstr ""
-"%1$s artikelen gevonden met het keyword: <span class=\"search-highlight\">"
+"%1$s artikelen gevonden met de zoekterm: <span class=\"search-highlight\">"
 "%2$s</span>"
 
-#: ../../search.php:29
-msgid "Sorry, no posts matched your criteria. Try refining your search"
+#: ../../search.php:35
+#, php-format
+msgid ""
+"Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
+"Please make sure all your words are spelled correctly or try different "
+"keywords."
 msgstr ""
-"Sorry, we hebben geen posts gevonden die voldoen aan deze criteria. Probeer "
-"het opnieuw met andere"
+"Je zoekopdracht voor <em>&quot;for %1$s&quot;</em> heeft geen resultaten "
+"opgeleverd. Controleer of alle woorden correct gespeld zijn of probeer een "
+"andere zoekterm."
 
-#: ../../searchform.php:4
-msgid "Keyword"
+#: ../../searchform.php:4 ../../searchform.php:5
+msgid "Search"
 msgstr "Zoeken"
 
-#: ../../searchform.php:5
-msgid "Go"
-msgstr "Ga"
+#~ msgid "Read more &raquo;"
+#~ msgstr "Lees meer &raquo;"
+
+#~ msgid "Sorry, no posts matched your criteria. Try refining your search"
+#~ msgstr ""
+#~ "Sorry, we hebben geen posts gevonden die voldoen aan deze criteria. "
+#~ "Probeer het opnieuw met andere"
+
+#~ msgid "Keyword"
+#~ msgstr "Zoeken"
+
+#~ msgid "Go"
+#~ msgstr "Ga"
 
 #~ msgid "Posted on"
 #~ msgstr "Gepost op"
@@ -282,9 +317,6 @@ msgstr "Ga"
 
 #~ msgid "There are no Custom Post Types at the moment."
 #~ msgstr "Er zijn geen Custom Post Types op dit moment."
-
-#~ msgid "Pagination"
-#~ msgstr "Paginatie"
 
 #~ msgid "Next"
 #~ msgstr "Volgende"

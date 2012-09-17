@@ -1,18 +1,16 @@
 <?php get_header(); ?>
 <div class="inner">
-	<article class="eightcol">
-	
-		<div id="breadcrumbs"><?php if (function_exists('tp_breadcrumbs')) tp_breadcrumbs(); ?></div>
-		
+	<aside class="sidebar fourcol">
+		<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('Page'); ?>
+	</aside>
+	<article class="eightcol">		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
-			
 			<div class="post-type-page">
 				<h2><?php _e('Pages','tp'); ?></h2>
 				<ul><?php wp_list_pages("title_li="); ?></ul>
 			</div>
-			
 			<?php if($post_types = get_post_types(array('public' => true,'_builtin' => false),'objects')) : ?>
 				<div class="custom-post-types">
 					<?php foreach($post_types as $post_type) :  ?>
@@ -31,12 +29,10 @@
 					<?php endforeach; ?>
 				</div>
 			<?php endif; ?>
-			
 			<?php $nieuws = new WP_Query(array('posts_per_page' => -1)); ?>				
 			<?php if($nieuws->have_posts()) : ?>
 				<div class="post-type-post">
 					<h2><?php _e('Blog','tp'); ?></h2>
-					
 					<ul>
 						<?php while($nieuws->have_posts()) : $nieuws->the_post(); ?>
 							<li>
@@ -48,9 +44,5 @@
 			<?php endif; ?>
 		<?php endwhile; endif; ?>
 	</article>
-	
-	<aside class="sidebar vertical fourcol last">
-		<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('Page'); ?>
-	</aside>
 </div>
 <?php get_footer(); ?>

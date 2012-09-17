@@ -6,8 +6,8 @@
 			<?php the_content(); ?>
 		<?php endwhile; endif; ?>			
 	</article>
-	<aside class="sidebar fourcol last">
-		<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('Home'); ?>
+	<aside class="sidebar fourcol">
+		<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('Home'); ?>
 	</aside>
 </div>
 <?php get_footer(); ?>

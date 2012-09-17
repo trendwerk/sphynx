@@ -17,34 +17,34 @@ if(function_exists('register_sidebar')) {
 	register_sidebar(array(
 		'name' => 'Home',
 		'id' => 'home',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_widget' => '<div class="widget %2$s"><div class="inner">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
 	));
 	register_sidebar(array(
 		'name' => 'Page',
 		'id' => 'page',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
+		'before_widget' => '<div class="widget %2$s"><div class="inner">',
+		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
-		'after_title' => '</h3>',
+		'after_title' => '</h3>'
 	));
 	register_sidebar(array(
 		'name' => 'Blog',
 		'id' => 'blog',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
+		'before_widget' => '<div class="widget %2$s"><div class="inner">',
+		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
-		'after_title' => '</h3>',
+		'after_title' => '</h3>'
 	));
 	register_sidebar(array(
 		'name' => 'Footer',
 		'id' => 'footerid',
-		'before_widget' => '<div class="%2$s widget fourcol">',
-		'after_widget' => '</div>',
+		'before_widget' => '<div class="%2$s widget"><div class="inner">',
+		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
-		'after_title' => '</h3>',	
+		'after_title' => '</h3>'
 	));
 }
 
@@ -52,9 +52,9 @@ if(function_exists('register_sidebar')) {
  * @menus Register Custom Menu's
  */
 if (function_exists('register_nav_menu')) {
-	register_nav_menu('hoofdnavigatie','Hoofdnavigatie');
-	register_nav_menu('topnavigatie','Topnavigatie');
-	register_nav_menu('footernavigatie','Footernavigatie');
+	register_nav_menu('mainnav',__('Main navigation','tp'));
+	register_nav_menu('topnav',__('Top navigation','tp'));
+	register_nav_menu('footernav',__('Footer navigation','tp'));
 }
 
 /**
@@ -83,15 +83,15 @@ add_action('init','no_postpage_thumbnails');
  * @widgets Define widgets
  */
 
-/* Widget: Sociale media gegevens uit TrendPress thema opties */
+/* Widget: Sociale media links from TrendPress theme options */
 
 add_action('widgets_init', create_function('', 'return register_widget("social_media");'));
 
 class social_media extends WP_Widget {
 	function social_media() {
-		$widget_ops = array('classname' => 'social_media', 'description' => __('Social media widget that shows a list of social media network sites that the user specified.'));
+		$widget_ops = array('classname' => 'social_media', 'description' => __('Social media widget that shows a list of social media network sites that the user specified.','tp'));
 		$control_ops = array('width' => 250, 'height' => 350);
-		$this->WP_Widget('social_media', __('Social media links'), $widget_ops, $control_ops);
+		$this->WP_Widget('social_media', __('Social media links','tp'), $widget_ops, $control_ops);
 	}
 	
 	function form($instance) {
@@ -103,20 +103,22 @@ class social_media extends WP_Widget {
 	function widget() {
 		?>
 		<div class="widget social-media-widget">
-			<h3 class="widgettitle"><?php _e('Keep in touch','tp'); ?></h3>
-			<ul>
-				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>">Twitter</a></li><?php } ?>
-				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>">Facebook</a></li><?php } ?>
-				<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>">Linkedin</a></li><?php } ?>
-				<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>">Google plus</a></li><?php } ?>
-				<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>">YouTube</a></li><?php } ?>
-			</ul>
+			<div class="inner">
+				<h3><?php _e('Keep in touch','tp'); ?></h3>
+				<ul>
+					<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>">Twitter</a></li><?php } ?>
+					<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>">Facebook</a></li><?php } ?>
+					<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>">Linkedin</a></li><?php } ?>
+					<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>">Google plus</a></li><?php } ?>
+					<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>">YouTube</a></li><?php } ?>
+				</ul>
+			</div>
 		</div>
 	    <?
 	}
 }
 
-/* Widget: Contactgegevens uit TrendPress thema opties */
+/* Widget: Contact information from TrendPress theme options */
 
 add_action('widgets_init', create_function('', 'return register_widget("contact");'));
 
@@ -124,7 +126,7 @@ class contact extends WP_Widget {
 	function contact() {
 		$widget_ops = array('classname' => 'contact', 'description' => __('Widget that shows the user specified contact data.'));
 		$control_ops = array('width' => 250, 'height' => 350);
-		$this->WP_Widget('contact', __('Contact data'), $widget_ops, $control_ops);
+		$this->WP_Widget('contact', __('Contact information','tp'), $widget_ops, $control_ops);
 	}
 	
 	function form($instance) {
@@ -136,20 +138,49 @@ class contact extends WP_Widget {
 	function widget() {
 		?>
 		<div class="widget contact-widget">
-			<h3 class="widgettitle"><?php _e('Contact','tp'); ?></h3>
-			<ul class="name-adress">
-				<?php if($naam = get_option('tp-naam')) { ?><li><strong><?php echo $naam; ?></strong></li><?php } ?>
-				<?php if($adres = get_option('tp-adres')) { ?><li><?php echo $adres; ?></li><?php } ?>
-				<?php if($postcode = get_option('tp-postcode')) { ?><li><?php echo $postcode; ?>  <?php if($plaats = get_option('tp-plaats')) { ?><?php echo $plaats; ?><?php } ?></li><?php } ?>
-			</ul>
-			<ul class="other">
-				<?php if($email = get_option('tp-email')) { ?><li><span><?php _e('E-mail','tp'); ?>:</span><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li><?php } ?>
-				<?php if($telefoon = get_option('tp-telefoon')) { ?><li><span><?php _e('Telephone','tp'); ?>:</span><?php echo $telefoon; ?></li><?php } ?>
-				<?php if($kvk = get_option('tp-kvk')) { ?><li><span><?php _e('CC No','tp'); ?>: </span><?php echo $kvk; ?></li><?php } ?>
-				<?php if($btw = get_option('tp-btw')) { ?><li><span><?php _e('VAT No','tp'); ?>: </span><?php echo $btw; ?></li><?php } ?>
-				<?php if($bank = get_option('tp-bank')) { ?><li><span><?php echo $bank; ?>:</span><?php if($banknr = get_option('tp-bank-nr')) { ?><?php echo $banknr; ?><?php } ?></li><?php } ?>
-				
-			</ul>
+			<div class="inner">
+				<h3><?php _e('Contact','tp'); ?></h3>
+				<p>
+					<?php 
+						if ($naam = get_option('tp-naam')) {
+							echo '<strong>'.$naam.'</strong><br />';
+						} if ($adres = get_option('tp-adres')) { 
+							echo $adres.'<br />'; 
+						} if ($postcode = get_option('tp-postcode')) {
+							echo $postcode.' ';
+						} if ($plaats = get_option('tp-plaats')) {
+						 echo $plaats; 
+						}
+					?>
+				</p>
+				<p>
+					<?php
+						if ($email = get_option('tp-email')) { 
+							echo'<span>'.__('E-mail','tp').': </span><a href="mailto:'.$email.'">'.$email.'</a><br />';
+						} if ($telefoon = get_option('tp-telefoon')) { 
+							echo '<span>'.__('Telephone','tp').': </span>'.$telefoon.'<br />';
+						} if ($fax = get_option('tp-fax')) { 
+							echo '<span>'.__('Fax','tp').': </span>'.$fax;
+						} 
+					?>
+				</p>
+				<p>
+					<?php
+						if ($kvk = get_option('tp-kvk')) {
+							echo '<span>'.__('CC No','tp').': </span>'.$kvk.'<br />';
+						} if ($btw = get_option('tp-btw')) {
+							echo '<span>'.__('VAT No','tp').': </span>'.$btw.'<br />';
+						} if ($banknr = get_option('tp-banknr')) {
+							if ($bank = !get_option('tp-bank')) {
+								$bank = "Bank";
+							} else {
+								$bank = get_option('tp-bank');
+							}
+							echo '<span>'.$bank.': </span>'.$banknr;
+						} 
+					?>
+				</p>
+			</div>
 		</div>
 	    <?
 	}
