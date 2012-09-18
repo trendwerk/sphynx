@@ -336,9 +336,6 @@ body { background: #EEE; }
 					
 			#credits #footernav ul ul { display: none; }
 
-#ajaxurl,
-#templateurl { display: none; }
-
 /* 	-----------------------
 	CUSTOM TEMPLATE STYLING
 	----------------------- */

@@ -16,7 +16,12 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_url')?>/assets/img/favicon/favicon.ico" />
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_url'); ?>" />
-		<link rel="stylesheet" type="text/css" media="print" href="<?php echo get_template_directory_uri() ?>/assets/css/print.css" />	
+		<link rel="stylesheet" type="text/css" media="print" href="<?php echo get_template_directory_uri() ?>/assets/css/print.css" />
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/script/functions.js"><\/script>')</script>
+		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/script/functions.js"></script>
+		
 		<!-- 
 		<link rel="stylesheet/less" type="text/css" media="screen, projections" href="<?php bloginfo('template_url')?>/assets/script/less/styles.less">
 		<script src="<?php bloginfo('template_url')?>/assets/script/less/less-1.3.0.min.js" type="text/javascript"></script>
@@ -24,7 +29,7 @@
 		<script type="text/javascript" src="<?php bloginfo('template_url')?>/assets/script/modernizr/modernizr.dev.js"></script>
 		<?php wp_head();?>
 	</head>
-	<body <?php body_class('g960'); ?>>
+	<body <?php body_class('g1140'); ?>>
 		<header id="header" class="container">
 			<div class="container-inner">
 				<div id="logo" class="ninecol">

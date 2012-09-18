@@ -27,13 +27,9 @@
 
 jQuery(document).ready(function($){
 						
-	// 1. TEMPLATE URL
+	// 1. TEMPLATE URL IS DEFINED THROUGH A JQUERY CONSTANT (not really a constant but it's quite constant)
 	
-	/*	we need a relative path to the template files. */
-	
-	var tp_template_url = $('div#templateurl').html();
-	
-	$.getScript(tp_template_url+'/assets/script/functions.js');	    
+	$.getScript(templateurl+'/assets/script/functions.js');	    
 	
 	//	2. RESPONSIVE
 	
@@ -48,7 +44,7 @@ jQuery(document).ready(function($){
 	
 		$(function () {
 	
-			$.getScript(tp_template_url+'/assets/script/tinynav/tinynav.min.js', function() { $("ul.sf-menu").tinyNav({active: 'selected'});});	    
+			$.getScript(templateurl+'/assets/script/tinynav/tinynav.min.js', function() { $("ul.sf-menu").tinyNav({active: 'selected'});});	    
 	
 		});
 	
@@ -75,13 +71,13 @@ jQuery(document).ready(function($){
 				
 	if($('a.fancybox').length > 0) {
 	
-		$.getScript(tp_template_url+'/assets/script/fancybox/jquery.fancybox.js', function() {
+		$.getScript(templateurl+'/assets/script/fancybox/jquery.fancybox.js', function() {
 		
 			$('a.fancybox').fancybox();
 			
 		    jQuery.getCSS = function( url, media ) {
 		            jQuery( document.createElement('link') ).attr({
-		                    href: tp_template_url+'/assets/script/fancybox/jquery.fancybox.css',
+		                    href: templateurl+'/assets/script/fancybox/jquery.fancybox.css',
 		                    media: media || 'screen',
 		                    type: 'text/css',
 		                    rel: 'stylesheet'
@@ -102,7 +98,7 @@ jQuery(document).ready(function($){
 		
 	if($('#cycle-slider').length > 0) {
 	
-		$.getScript(tp_template_url+'/assets/script/cycle/cycle.all.js', function() {
+		$.getScript(templateurl+'/assets/script/cycle/cycle.all.js', function() {
 	
 			$('#cycle-slider').cycle({
 	
@@ -132,7 +128,7 @@ jQuery(document).ready(function($){
 	
 		test: Modernizr.mq('only all and (max-width: 400px)'),
 		yep : '',
-		nope: tp_template_url+'/assets/script/respond/respond.min.js'
+		nope: templateurl+'/assets/script/respond/respond.min.js'
 	  
 	});	
 

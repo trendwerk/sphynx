@@ -149,7 +149,7 @@ class contact extends WP_Widget {
 						} if ($postcode = get_option('tp-postcode')) {
 							echo $postcode.' ';
 						} if ($plaats = get_option('tp-plaats')) {
-						 echo $plaats; 
+							echo $plaats; 
 						}
 					?>
 				</p>
@@ -189,5 +189,17 @@ class contact extends WP_Widget {
 /**
  * @other
  */
+function my_mce_before_init($settings) {
+    $style_formats = array(
+    	array(
+    		'title' => 'Call to action',
+    		'selector' => 'a',
+    		'classes' => 'cta'
+    	)
+    );
 
+    $settings['style_formats'] = json_encode($style_formats);
+    return $settings;
+}
+add_filter('tiny_mce_before_init', 'my_mce_before_init');
 ?>

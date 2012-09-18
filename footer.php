@@ -21,11 +21,6 @@
 				</div>
 			</div>
 		</footer>
-		<div id="ajaxurl"><?php echo admin_url('admin-ajax.php'); ?></div>
-		<div id="templateurl"><?php echo get_template_directory_uri() ?></div>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  		<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/script/functions.js"><\/script>')</script>
-		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/script/functions.js"></script>
 		<?php wp_footer(); ?>
 		<!--[if IE 6]>
 			<div class="ie6">
