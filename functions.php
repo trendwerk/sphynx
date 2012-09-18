@@ -15,6 +15,7 @@ include('assets/inc/functions.clean-up.php');
 include('assets/inc/functions.custom-excerpt-length.php');
 include('assets/inc/functions.custom-post-type.php');
 include('assets/inc/functions.debug.php');
+include('assets/inc/functions.js-constants.php');
 include('assets/inc/functions.pagination.php');
 include('assets/inc/functions.search.php');
 include('assets/inc/functions.theme-options.php');

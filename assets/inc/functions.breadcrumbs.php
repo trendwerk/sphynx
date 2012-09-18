@@ -10,7 +10,7 @@
  *
  * @param string $separator Separator between breadcrumbs
  */
-function tp_breadcrumbs($separator='>',$menu='mainnav') {
+function tp_breadcrumbs($separator='>',$menu='Hoofdnavigatie') {
 	global $post;
 	
 	$nav = new TPNav($menu);

@@ -41,12 +41,12 @@ class TPNav {
 	 *
 	 * @param string $menu Name of the custom menu that has to be used.
 	 */
-	function __construct($menu='mainnav') {
-		if($menu == 'mainnav') {
+	function __construct($menu='Hoofdnavigatie') {
+		if($menu == 'Hoofdnavigatie') {
 			$nav_menu_locations = get_theme_mod('nav_menu_locations');
 			if(is_array($nav_menu_locations)) {
-				if($nav_menu_locations['mainnav']) {
-					$navmenu_term = get_term($nav_menu_locations['mainnav'],'nav_menu');
+				if($nav_menu_locations['hoofdnavigatie']) {
+					$navmenu_term = get_term($nav_menu_locations['hoofdnavigatie'],'nav_menu');
 					if($navmenu_term) {
 						$menu = $navmenu_term->slug;
 					}

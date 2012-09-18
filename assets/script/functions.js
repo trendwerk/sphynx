@@ -30,11 +30,7 @@
 
 jQuery(document).ready(function($){
 
-// 1. TEMPLATE URL
-
-	/*	we need a relative path to the template files. */
-
-var tp_template_url = $('div#templateurl').html();
+// 1. TEMPLATE URL IS DEFINED THROUGH A JQUERY CONSTANT (not really a constant but it's quite constant)
 	
 // 2. WP GALLERY
 
@@ -59,15 +55,15 @@ var tp_template_url = $('div#templateurl').html();
 
 	if($('#mainnav ul.sf-menu').length > 0) {
 
-		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() { });
+		$.getScript(templateurl+'/assets/script/superfish/supersubs.js', function() { });
 		
 	}
 
 	if($('#mainnav ul.sf-menu').length > 0) {
 
-		$.getScript(tp_template_url+'/assets/script/superfish/supersubs.js', function() {
+		$.getScript(templateurl+'/assets/script/superfish/supersubs.js', function() {
 
-			$.getScript(tp_template_url+'/assets/script/superfish/superfish.js', function() {
+			$.getScript(templateurl+'/assets/script/superfish/superfish.js', function() {
 
 				$("#mainnav ul.sf-menu").supersubs({ 
 		

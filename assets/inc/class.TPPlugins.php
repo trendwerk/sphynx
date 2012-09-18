@@ -42,11 +42,6 @@ class TPPlugins {
 				'description' => __('This plugin makes it simple to add Google Analytics to your WordPress blog, adding lots of features, eg. custom variables and automatic clickout and download tracking.','tp'),
 				'path' => 'google-analytics-for-wordpress/googleanalytics.php'
 			),
-			'theme-updater' => array(
-				'name' => __('Theme updater','tp'),
-				'description' => __('Enables the ability to update the TrendPress parent theme within WordPress.','tp'),
-				'path' => 'theme-updater/updater.php'
-			),
 			'w3-total-cache' => array(
 				'name' => __('W3 Total Cache','tp'),
 				'description' => __('Improve site performance and user experience via caching: browser, page, object, database, minify and content delivery network support.','tp'),
