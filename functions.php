@@ -111,6 +111,8 @@ class social_media extends WP_Widget {
 					<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>">Linkedin</a></li><?php } ?>
 					<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>">Google plus</a></li><?php } ?>
 					<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>">YouTube</a></li><?php } ?>
+					<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>"><?php _e('E-mail','tp'); ?></a></li><?php } ?>
+					<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>">RSS</a></li><?php } ?>
 				</ul>
 			</div>
 		</div>
@@ -189,7 +191,7 @@ class contact extends WP_Widget {
 /**
  * @other
  */
-function my_mce_before_init($settings) {
+function tp_mce_before_init($settings) {
     $style_formats = array(
     	array(
     		'title' => 'Call to action',
@@ -201,5 +203,5 @@ function my_mce_before_init($settings) {
     $settings['style_formats'] = json_encode($style_formats);
     return $settings;
 }
-add_filter('tiny_mce_before_init', 'my_mce_before_init');
+add_filter('tiny_mce_before_init', 'tp_mce_before_init');
 ?>
