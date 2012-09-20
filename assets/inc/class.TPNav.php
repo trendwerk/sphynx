@@ -41,12 +41,12 @@ class TPNav {
 	 *
 	 * @param string $menu Name of the custom menu that has to be used.
 	 */
-	function __construct($menu='Hoofdnavigatie') {
-		if($menu == 'Hoofdnavigatie') {
+	function __construct($menu='mainnav') {
+		if($menu == 'mainnav') {
 			$nav_menu_locations = get_theme_mod('nav_menu_locations');
 			if(is_array($nav_menu_locations)) {
-				if($nav_menu_locations['hoofdnavigatie']) {
-					$navmenu_term = get_term($nav_menu_locations['hoofdnavigatie'],'nav_menu');
+				if($nav_menu_locations['mainnav']) {
+					$navmenu_term = get_term($nav_menu_locations['mainnav'],'nav_menu');
 					if($navmenu_term) {
 						$menu = $navmenu_term->slug;
 					}
@@ -296,10 +296,12 @@ class TPNav {
 	 *
 	 * @return bool
 	 */
-	function get_nav_id_by_page_title($title) {	
-		foreach($this->menu_items as $menu_item) {
-			if($menu_item->title == $title) {
-				return $menu_item->ID;
+	function get_nav_id_by_page_title($title) {
+		if($this->menu_items) {
+			foreach($this->menu_items as $menu_item) {
+				if($menu_item->title == $title) {
+					return $menu_item->ID;
+				}
 			}
 		}
 	}
@@ -310,12 +312,14 @@ class TPNav {
 	 * @return object The top menu item
 	 */
 	function get_top_parent($id) {
-		foreach($this->menu_items as $menu_item) {
-			if($menu_item->ID == $id) {
-				if($menu_item->menu_item_parent == 0) {
-					return $menu_item;
-				} else {
-					return $this->get_top_parent($menu_item->menu_item_parent);
+		if($this->menu_items) {
+			foreach($this->menu_items as $menu_item) {
+				if($menu_item->ID == $id) {
+					if($menu_item->menu_item_parent == 0) {
+						return $menu_item;
+					} else {
+						return $this->get_top_parent($menu_item->menu_item_parent);
+					}
 				}
 			}
 		}

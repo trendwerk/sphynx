@@ -57,6 +57,8 @@ function tp_save_contact_info() {
 		update_option('tp-linkedin',tp_maybe_add_http($_POST['linkedin']));
 		update_option('tp-googleplus',tp_maybe_add_http($_POST['googleplus']));
 		update_option('tp-youtube',tp_maybe_add_http($_POST['youtube']));
+		update_option('tp-newsletter',$_POST['newsletter']);
+		update_option('tp-rss',$_POST['rss']);
 	}
 }
 

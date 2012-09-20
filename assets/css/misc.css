@@ -278,6 +278,8 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 		.social-media-widget li.linkedin a { background: url('../img/social/linkedin_16.png') no-repeat center left; }
 		.social-media-widget li.googleplus a { background: url('../img/social/google-plus-icon.png') no-repeat center left; }
 		.social-media-widget li.youtube a { background: url('../img/social/youtube_16.png') no-repeat center left; }
+		.social-media-widget li.email a { background: url('../img/social/email_16.png') no-repeat center left; }
+		.social-media-widget li.rss a { background: url('../img/social/rss_16.png') no-repeat center left; }
 			
 /* widget contact-widget */
 
