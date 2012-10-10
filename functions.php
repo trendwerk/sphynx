@@ -95,7 +95,7 @@ class social_media extends WP_Widget {
 	}
 	
 	function form($instance) {
-		printf(__('Change the contents of this widget on the <a href="%1$s">theme options</a> page.', 'tp'), admin_url('themes.php?page=tp-theme-option'));
+		printf(__('Change the contents of this widget on the <a href="%1$s">contact info</a> page.', 'tp'), admin_url('themes.php?page=tp-contact_info'));
 	
 		return 'noform';
 	}
@@ -132,7 +132,7 @@ class contact extends WP_Widget {
 	}
 	
 	function form($instance) {
-		printf(__('Change the contents of this widget on the <a href="%1$s">theme options</a> page.', 'tp'), admin_url('themes.php?page=tp-theme-option'));
+		printf(__('Change the contents of this widget on the <a href="%1$s">contact info</a> page.', 'tp'), admin_url('themes.php?page=tp-contact_info'));
 	
 		return 'noform';
 	}

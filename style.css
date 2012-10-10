@@ -361,6 +361,12 @@ article .meta {
 
 .share { margin: 0 0 10px 0; }
 
+	/* Change some iframe widths for dutch localisation */
+
+	a.addthis_button_facebook_like iframe { width: 120px !important; }
+	
+	a.addthis_button_tweet iframe { width: 100px !important; }
+
 /*	comments */
 
 #comments { 

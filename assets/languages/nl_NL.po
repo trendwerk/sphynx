@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-17 10:09+0100\n"
-"PO-Revision-Date: 2012-09-17 10:10+0100\n"
+"POT-Creation-Date: 2012-10-10 15:11+0100\n"
+"PO-Revision-Date: 2012-10-10 15:11+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -100,7 +100,7 @@ msgstr "Email:"
 msgid "Website:"
 msgstr "Website"
 
-#: ../../footer.php:32
+#: ../../footer.php:27
 msgid ""
 "You are using a very old version of Internet Explorer. For the best "
 "experience please upgrade (for free) to a modern browser:"
@@ -132,52 +132,52 @@ msgstr ""
 msgid "Social media links"
 msgstr "Social media links"
 
-#: ../../functions.php:98 ../../functions.php:133
+#: ../../functions.php:98 ../../functions.php:135
 #, php-format
 msgid ""
-"Change the contents of this widget on the <a href=\"%1$s\">theme options</a> "
+"Change the contents of this widget on the <a href=\"%1$s\">contact info</a> "
 "page."
 msgstr ""
-"Verander de inhoud van de ze widget op de <a href=\"%1$s\">thema opties</a> "
+"Beheer de inhoud van de ze widget op de <a href=\"%1$s\">contactgegevens</a> "
 "pagina."
 
 #: ../../functions.php:107
 msgid "Keep in touch"
 msgstr "Blijf op de hoogte"
 
-#: ../../functions.php:127
-msgid "Widget that shows the user specified contact data."
-msgstr "Widget die de door de gebruiker gespecificeerde contactgegevens toont."
-
-#: ../../functions.php:129
-msgid "Contact information"
-msgstr "Contactgegevens"
-
-#: ../../functions.php:142
-msgid "Contact"
-msgstr "Contact"
-
-#: ../../functions.php:159
+#: ../../functions.php:114 ../../functions.php:161
 msgid "E-mail"
 msgstr "E-mail"
 
-#: ../../functions.php:161
+#: ../../functions.php:129
+msgid "Widget that shows the user specified contact data."
+msgstr "Widget die de door de gebruiker gespecificeerde contactgegevens toont."
+
+#: ../../functions.php:131
+msgid "Contact information"
+msgstr "Contactgegevens"
+
+#: ../../functions.php:144
+msgid "Contact"
+msgstr "Contact"
+
+#: ../../functions.php:163
 msgid "Telephone"
 msgstr "Telefoon"
 
-#: ../../functions.php:163
+#: ../../functions.php:165
 msgid "Fax"
 msgstr "Fax"
 
-#: ../../functions.php:170
+#: ../../functions.php:172
 msgid "CC No"
 msgstr "KvK Nr"
 
-#: ../../functions.php:172
+#: ../../functions.php:174
 msgid "VAT No"
 msgstr "BTW Nr"
 
-#: ../../header.php:60
+#: ../../header.php:62
 msgid "You are here:"
 msgstr "U bent hier:"
 
@@ -215,15 +215,15 @@ msgstr "%s"
 msgid "News"
 msgstr "Nieuws"
 
-#: ../../index.php:29 ../../single.php:9
+#: ../../index.php:29
 msgid "Posted on:"
 msgstr "Geplaatst op:"
 
-#: ../../index.php:30 ../../single.php:9
+#: ../../index.php:30
 msgid "in the category:"
 msgstr "in de categorie:"
 
-#: ../../index.php:35 ../../search.php:25
+#: ../../index.php:35 ../../search.php:24
 msgid "Read more"
 msgstr "Lees meer"
 
@@ -239,12 +239,12 @@ msgstr "Pagina's:"
 msgid "Blog"
 msgstr "Blog"
 
-#: ../../search.php:6 ../../search.php:34
+#: ../../search.php:5 ../../search.php:33
 #, php-format
 msgid "Search Results for: %1$s"
 msgstr "Zoek resultaten voor:  %1$s"
 
-#: ../../search.php:12
+#: ../../search.php:11
 #, php-format
 msgid ""
 "Found %1$s articles containing the keyword: <span class=\"search-highlight\">"
@@ -253,7 +253,7 @@ msgstr ""
 "%1$s artikelen gevonden met de zoekterm: <span class=\"search-highlight\">"
 "%2$s</span>"
 
-#: ../../search.php:35
+#: ../../search.php:34
 #, php-format
 msgid ""
 "Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
@@ -268,6 +268,14 @@ msgstr ""
 msgid "Search"
 msgstr "Zoeken"
 
+#: ../../single.php:9
+msgid "Posted on"
+msgstr "Gepost op"
+
+#: ../../single.php:9
+msgid "in the category"
+msgstr "in de categorie"
+
 #~ msgid "Read more &raquo;"
 #~ msgstr "Lees meer &raquo;"
 
@@ -281,9 +289,6 @@ msgstr "Zoeken"
 
 #~ msgid "Go"
 #~ msgstr "Ga"
-
-#~ msgid "Posted on"
-#~ msgstr "Gepost op"
 
 #~ msgid "You might want to check out our "
 #~ msgstr "Misschien wil je onze"
