@@ -1,6 +1,6 @@
 <div class="wrap trendpress-options">
 	<div id="icon-themes" class="icon32"><br></div>
-	<h2><?php _e('Theme options','tp'); ?></h2>
+	<h2><?php _e('Contact info','tp'); ?></h2>
 	<form method="post" action="<?php echo admin_url('themes.php?page=tp-contact_info'); ?>">
 		<fieldset>
 			<h3><?php _e('General settings','tp'); ?></h3>
