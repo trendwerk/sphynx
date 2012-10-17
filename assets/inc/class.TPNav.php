@@ -57,7 +57,7 @@ class TPNav {
 		$this->menu = $menu;
 		$this->menu_items = wp_get_nav_menu_items($this->menu);
 
-		$this->set_current_item();
+		if(is_array($this->menu_items)) $this->set_current_item();
 	}
 	
 	/**
