@@ -7,10 +7,11 @@
  * @param int $content Custom content you may want to shorten
  */
 function tp_the_excerpt($length=55,$more='&hellip;',$content='') {
+	if(!$content) $content = apply_filters('the_content',get_the_excerpt());
 	if(!$content) $content = apply_filters('the_content',get_the_content());
 	
 	$excerpt = wp_trim_words($content,$length,$more);
 	
-	echo '<p>'.apply_filters('the_excerpt',$excerpt).'</p>';
+	echo apply_filters('the_excerpt',$excerpt);
 }
 ?>
