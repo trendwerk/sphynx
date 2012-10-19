@@ -67,8 +67,26 @@ jQuery(document).ready(function($){
 	
 	// if there's a a.fancybox, then get the fancybox script
 		
-	var thumbnails = jQuery("a:has(img)").filter( function() { return /(jpe?g|png|gif|bmp)$/i.test(jQuery(this).addClass('fancybox')) });
+	var thumbnails = jQuery('a:has(img)').filter( function() { 
 				
+		$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif'],a[href$='.bmp']").addClass('links-to-image');
+		
+		return /(jpeg|png|gif|bmp)$/i.test(jQuery(this).addClass('has-image'));
+			
+	}); 
+	
+	$('a:has(img)').each(function () {
+	
+	  var element = $(this);
+	  
+	  if( element.is('.has-image') && element.is('.links-to-image') ) {
+	  	 
+	  	 element.addClass('fancybox');
+	  
+	  }
+	  
+	});
+					
 	if($('a.fancybox').length > 0) {
 	
 		$.getScript(templateurl+'/assets/script/fancybox/jquery.fancybox.js', function() {
