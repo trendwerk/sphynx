@@ -27,7 +27,7 @@ class submenu extends WP_Widget {
 					   	<?php $this->show_children($submenu); ?>
 					</div>
 				</div>
-		    <?
+		    <?php
 		    }
 	    }
 	}
