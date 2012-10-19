@@ -19,7 +19,7 @@
 			<?php endif; ?>
 		</h1>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<article>
+			<article <?php post_class(); ?>>
 				<h2 class="article-title">
 					<a href="<?php the_permalink() ?>">
 						<?php the_title(); ?>
@@ -40,7 +40,7 @@
 			<?php tp_pagination(); ?>
 		<?php else : ?>
 			<p><?php _e('No results found.','tp'); ?></p>
-		<?php endif; ?>	    
+		<?php endif; ?>
 	</section>	
 	<aside class="sidebar fourcol">
 		<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('Blog'); ?>

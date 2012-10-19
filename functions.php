@@ -116,7 +116,7 @@ class social_media extends WP_Widget {
 				</ul>
 			</div>
 		</div>
-	    <?
+	    <?php
 	}
 }
 
@@ -184,7 +184,7 @@ class contact extends WP_Widget {
 				</p>
 			</div>
 		</div>
-	    <?
+	    <?php
 	}
 }
 

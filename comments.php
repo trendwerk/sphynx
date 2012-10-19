@@ -5,8 +5,6 @@ if ( post_password_required() ) { ?>
 	<p class="no-comments"><?php _e('This post is password protected. Try logging in.','tp'); ?></p>
 <?php return; } ?>
 
-<!-- You can start editing here. -->
-
 <?php if(!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) : ?>  	
 	<?php die('You can not access this page directly!'); ?>  
 <?php endif; ?>

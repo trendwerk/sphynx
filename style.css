@@ -1,11 +1,13 @@
 /*
 Theme Name: [THEME NAME]
-Theme URL: [THEME URL]
+Theme URI: [THEME URL]
 Description: Custom WordPress theme based on the TrendPress framework by Ontwerpstudio Trendwerk.
 Author: Ontwerpstudio Trendwerk
 Author URI: http://www.trendwerk.nl/
 Template: trendpress
 Version: 1.0
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @charset "UTF-8";
@@ -348,13 +350,17 @@ body { background: #EEE; }
 /*	BLOG OVERVIEW
 	------------- */
 
-article .article-title {
-	margin: 0;
-}
+#blog { }
 
-article .meta {
-	color: #999;
-}
+	article { }
+
+		article .article-title {
+			margin: 0;
+		}
+		
+		article .meta {
+			color: #999;
+		}
 
 /*	SINGLE BLOGPOST
 	--------------- */
