@@ -39,5 +39,4 @@
 		<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('Blog'); ?>
 	</aside>		
 </div>
-
 <?php get_footer(); ?>

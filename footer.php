@@ -1,4 +1,4 @@
-</section>
+		</section>
 		<footer id="footer" class="container">
 			<div class="container-inner">
 				<aside class="sidebar">
@@ -34,5 +34,4 @@
 			</div>
 		<![endif]-->
 	</body>
-	
 </html>

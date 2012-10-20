@@ -367,6 +367,11 @@ body { background: #EEE; }
 
 .share { margin: 0 0 10px 0; }
 
+	/* Fix for vertical scroll bug tweet button */
+	
+	#twttrHubFrame,
+	#twttrHubFrameSecure { left: 0; }
+
 	/* Change some iframe widths for dutch localisation */
 
 	a.addthis_button_facebook_like iframe { width: 120px !important; }
