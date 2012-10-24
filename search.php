@@ -5,10 +5,10 @@
 			<h1><?php printf(__( 'Search Results for: %1$s','tp'),'<span class="search-highlight">'.get_search_query().'</span>'); ?></h1>
 			<p>
 				<?php 
-					$allsearch = &new WP_Query('s=$s&showposts=-1');
+					$allsearch = &new WP_Query('s='.get_search_query().'&showposts=-1');
 					$count = $allsearch->post_count;
 					wp_reset_query();
-					printf(__('Found %1$s articles containing the keyword: <span class="search-highlight">%2$s</span>','tp'),$count,get_search_query());
+					printf(__('Found %2$s articles containing the keyword: %1$s','tp'), '<span class="search-highlight">'.get_search_query().'</span>', $count);
 				?>
 			</p>
 		<?php while (have_posts()) : the_post(); ?>

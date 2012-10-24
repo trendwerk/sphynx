@@ -178,7 +178,7 @@ body { background: #EEE; }
 		
 		/*	search result highlight */
 		
-		#main section span.search-highlight {
+		body.search span.search-highlight {
 			background: #F1FF83;
 			border-bottom: 1px solid #CDD878;
 			color: #000;
