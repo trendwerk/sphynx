@@ -3,16 +3,16 @@ TrendPress
 
 A WordPress framework to create awesome websites
 
-SUMMARY
--------
+<h2>SUMMARY</h2>
 
-	Introduction
-	1. Structure
+<ul>
+	<li>Introduction</li>
+	<li>1. Structure</li>
+</ul>
 
-INTRODUCTION
-------------
+<h2>INTRODUCTION</h2>
 
-TrendPress is a simple and elegant WordPress theme framework. TrendPress was developed by Trendwerk, a Dutch web design company in order to speed up their work process. 
+<p>TrendPress is a simple and elegant WordPress theme framework. TrendPress was developed by Trendwerk, a Dutch web design company in order to speed up their work process.</p>
 
 You are currently reading the 'readme.md' for the parent theme. There's a child theme available as well. It's called 'trendpress-child'. 'trendpress' (the parent theme) contains a lot of best practices, improvements and other scripts wich help us to speed up the workprocess.
 
