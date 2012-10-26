@@ -265,21 +265,85 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 
 	div.widget_rss ul li span.rss-date { 
 		font-size: 12px; 
-		margin: 0 0 10px 0;
-	}
+		margin: 0 0 10px 0; }
+		
 	div.widget_rss ul li span.rss-date, div.widget_rss ul li cite { display: block; }
 	
 /* social media widget */
-
-	.social-media-widget li a { padding-left: 30px; }
 	
-		.social-media-widget li.twitter a { background: url('../img/social/twitter_16.png') no-repeat center left; }	
-		.social-media-widget li.facebook a { background: url('../img/social/facebook_16.png') no-repeat center left; }
-		.social-media-widget li.linkedin a { background: url('../img/social/linkedin_16.png') no-repeat center left; }
-		.social-media-widget li.googleplus a { background: url('../img/social/google-plus-icon.png') no-repeat center left; }
-		.social-media-widget li.youtube a { background: url('../img/social/youtube_16.png') no-repeat center left; }
-		.social-media-widget li.email a { background: url('../img/social/email_16.png') no-repeat center left; }
-		.social-media-widget li.rss a { background: url('../img/social/rss_16.png') no-repeat center left; }
+	/* small icons with text*/
+	
+	.social-media-widget.small-icons li a { padding-left: 30px; }
+
+	.social-media-widget.small-icons li.twitter a, .social-media-widget.small-icons-no-text li.twitter a { background: url('../img/social/twitter_16.png') no-repeat center left; }	
+	.social-media-widget.small-icons li.facebook a, .social-media-widget.small-icons-no-text li.facebook a { background: url('../img/social/facebook_16.png') no-repeat center left; }
+	.social-media-widget.small-icons li.linkedin a, .social-media-widget.small-icons-no-text li.linkedin a { background: url('../img/social/linkedin_16.png') no-repeat center left; }
+	.social-media-widget.small-icons li.googleplus a, .social-media-widget.small-icons-no-text li.googleplus a { background: url('../img/social/googleplus_16.png') no-repeat center left; }
+	.social-media-widget.small-icons li.youtube a, .social-media-widget.small-icons-no-text li.youtube a { background: url('../img/social/youtube_16.png') no-repeat center left; }
+	.social-media-widget.small-icons li.email a, .social-media-widget.small-icons-no-text li.email a { background: url('../img/social/email_16.png') no-repeat center left; }
+	.social-media-widget.small-icons li.rss a, .social-media-widget.small-icons-no-text li.rss a { background: url('../img/social/rss_16.png') no-repeat center left; }
+
+	/* small icons with text*/
+	
+	.social-media-widget.small-icons-no-text ul { 
+		border: none;
+		display: block;
+		padding: 5px 0 20px 0; }
+
+		.social-media-widget.small-icons-no-text li { 
+			border: none;
+			display: block;
+			float: left;
+			height: 16px;
+			margin: 0 4px 4px 0;
+			padding: 0;
+			width: 16px; }
+			
+			.social-media-widget.small-icons-no-text li a { 
+				display: block;
+				height: 16px;
+				text-indent: -999999px;
+				width: 16px; }
+				
+	/* big icons */
+
+	.social-media-widget.great-icons li { padding: 5px 0; }
+	
+		.social-media-widget.great-icons li a { 
+			display: inline-block;
+			height: 36px;
+			line-height: 36px;
+			padding-left: 42px; }
+
+	.social-media-widget.great-icons li.twitter a, .social-media-widget.great-icons-no-text li.twitter a { background: url('../img/social/twitter_32.png') no-repeat center left; }	
+	.social-media-widget.great-icons li.facebook a, .social-media-widget.great-icons-no-text li.facebook a { background: url('../img/social/facebook_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.linkedin a, .social-media-widget.great-icons-no-text li.linkedin a { background: url('../img/social/linkedin_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.googleplus a, .social-media-widget.great-icons-no-text li.googleplus a { background: url('../img/social/googleplus_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.youtube a, .social-media-widget.great-icons-no-text li.youtube a { background: url('../img/social/youtube_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.email a, .social-media-widget.great-icons-no-text li.email a { background: url('../img/social/email_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.rss a, .social-media-widget.great-icons-no-text li.rss a { background: url('../img/social/rss_32.png') no-repeat center left; }
+		
+	/* small icons with text*/
+	
+	.social-media-widget.great-icons-no-text ul { 
+		border: none;
+		display: block;
+		padding: 5px 0 40px 0; }
+
+		.social-media-widget.great-icons-no-text li { 
+			border: none;
+			display: block;
+			float: left;
+			height: 32px;
+			margin: 0 4px 4px 0;
+			padding: 0;
+			width: 32px; }
+			
+			.social-media-widget.great-icons-no-text li a { 
+				display: block;
+				height: 32px;
+				text-indent: -999999px;
+				width: 32px; }	
 			
 /* widget contact-widget */
 
