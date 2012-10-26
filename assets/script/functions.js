@@ -136,18 +136,5 @@ jQuery(document).ready(function($){
 	
 	}
 	
-	//	5. MODERNIZR
 	
-	/*	load a default modernizr polyfill for respond.min.js 
-		we need this for responsive sites on old internet 
-		explorer browsers */
-	
-	Modernizr.load({
-	
-		test: Modernizr.mq('only all and (max-width: 400px)'),
-		yep : '',
-		nope: templateurl+'/assets/script/respond/respond.min.js'
-	  
-	});	
-
 });

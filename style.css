@@ -30,7 +30,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Paragraphs and headings */
 
-body { color: #666; }
+body { 
+	color: #666; }
 
 p {  }
 
@@ -440,15 +441,6 @@ body { background: #EEE; }
 	.g1140 #footer { display: none; }
 	
 	.g1140 #credits .container-inner .twelvecol { border: none; }
-	
-	/* Replace main navigation by select box */
-	
-	.js .g1140 .sf-menu { display: none; }
-	
-	.js .g1140 .tinynav { 
-		display: block;
-		margin: 10px auto;
-		width: 90%; }
 	
 	/* Content and sidebar */
 

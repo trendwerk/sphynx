@@ -11,12 +11,6 @@
 		<meta name ="viewport" content ="user-scalable=yes, width=device-width" />
 		<title><?php wp_title('-'); ?></title>
 		<?php wp_head();?>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script>
-			window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/script/jquery.min.js"><\/script>')
-		</script>
-		<script type="text/javascript" src="<?php bloginfo('template_url')?>/assets/script/modernizr/modernizr.dev.js"></script>
-		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/script/functions.js"></script>
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php bloginfo('name'); ?> RSS Feed" />
 		<link rel="apple-touch-icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/assets/img/favicon/apple-touch-icon.png" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

@@ -58,6 +58,33 @@ if (function_exists('register_nav_menu')) {
 }
 
 /**
+ * @scripts Register and enqueue scripts
+ */
+ 
+function tp_load_scripts() {
+
+	// deregister the included library
+	
+	wp_deregister_script( 'jquery' );
+
+	// register the library again from Google's CDN
+	
+	wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', array(), null, false );
+
+	// register the script like this for a theme:
+
+	wp_register_script( 'functions', get_stylesheet_directory_uri() . '/assets/script/functions.js', array( 'jquery' ) );
+	wp_register_script( 'modernizr', get_template_directory_uri() . '/assets/script/modernizr/modernizr.lite.js' );
+
+	// then enqueue the scripts:
+
+	wp_enqueue_script( 'functions' );
+	wp_enqueue_script( 'modernizr' );
+}
+
+add_action('wp_enqueue_scripts', 'tp_load_scripts');
+
+/**
  * @languages Add the language domain
  */
 load_theme_textdomain('tp',STYLESHEETPATH.'/assets/languages');
@@ -95,28 +122,57 @@ class social_media extends WP_Widget {
 	}
 	
 	function form($instance) {
-		printf(__('Change the contents of this widget on the <a href="%1$s">contact info</a> page.', 'tp'), admin_url('themes.php?page=tp-contact_info'));
+		$type = esc_attr($instance['type']);
+		
+		$options = array('Big icons with text', 'Small icons with text', 'Big icons without text', 'Small icons without text');
+		?>
+		<p>
+			<label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Type iconen','tp'); ?>:
+				<select class="widefat" id="<?php echo $this->get_field_id('type'); ?>" name="<?php echo $this->get_field_name('type'); ?>">
+					<?php foreach($options as $option) : ?>
+						<option <?php if($option == $type) echo 'selected="selected"'; ?>><?php echo $option; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</label>
+		</p>
+		<?php
+	}
 	
-		return 'noform';
+	function update($new_instance,$old_instance) {
+		$instance = $old_instance;
+		
+		$instance['type'] = $new_instance['type'];
+				
+		return $instance;
 	}
 
-	function widget() {
+	function widget($args,$instance) {
 		?>
-		<div class="widget social-media-widget">
+		<div class="widget social-media-widget 
+			<?php if($instance['type'] == 'Small icons with text') { 
+				echo 'small-icons'; } elseif ($instance['type'] == 'Big icons with text') {
+				echo 'great-icons';
+				} elseif ($instance['type'] == 'Big icons without text') {
+				echo 'great-icons-no-text';
+				} elseif ($instance['type'] == 'Small icons without text') {
+				echo 'small-icons-no-text';
+				}			
+			 ?>
+			">
 			<div class="inner">
 				<h3><?php _e('Keep in touch','tp'); ?></h3>
 				<ul>
-					<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>">Twitter</a></li><?php } ?>
-					<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>">Facebook</a></li><?php } ?>
-					<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>">Linkedin</a></li><?php } ?>
-					<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>">Google plus</a></li><?php } ?>
-					<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>">YouTube</a></li><?php } ?>
-					<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>"><?php _e('E-mail','tp'); ?></a></li><?php } ?>
-					<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>">RSS</a></li><?php } ?>
+					<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
+					<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
+					<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
+					<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
+					<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>"><?php _e('Follow us on YouTube','tp') ?></a></li><?php } ?>
+					<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
+					<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
 				</ul>
 			</div>
 		</div>
-	    <?php
+	    <?
 	}
 }
 
