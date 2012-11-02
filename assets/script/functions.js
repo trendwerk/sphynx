@@ -144,6 +144,12 @@ jQuery(document).ready(function($){
 		
 	});
 	
+	$('a[rel=nofollow]').each(function(i){
+
+		this.target='_blank';
+		
+	});
+	
 //	8. REL EXTERNAL
 
 	/*	add a class to all the external links */
