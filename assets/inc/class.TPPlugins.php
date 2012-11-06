@@ -76,6 +76,11 @@ class TPPlugins {
 				'name' => __('Redirection','tp'),
 				'description' => __('Redirection is a WordPress plugin to manage 301 redirections and keep track of 404 errors without requiring knowledge of Apache .htaccess files.','tp'),
 				'path' => 'redirection/redirection.php'
+			),
+			'wp-migrate-db' => array(
+				'name' => __('WP Migrate DB','tp'),
+				'description' => __('Exports your database, does a find and replace on URLs and file paths, then allows you to save it to your computer.','tp'),
+				'path' => 'wp-migrate-db/wp-migrate-db.php'
 			)
 		);
 		
