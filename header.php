@@ -29,7 +29,8 @@
 				<nav id="topnav" class="navigation threecol">
 					<?php wp_nav_menu( array(
 						'theme_location' => 'topnav',
-						'depth' => '0' )); 
+						'depth' => '0',
+						'fallback_cb' => false )); 
 					?>					
 				</nav>
 				<div id="search" class="threecol">

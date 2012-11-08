@@ -15,7 +15,8 @@
 					<nav id="footernav" class="navigation">
 						<?php wp_nav_menu( array(
 							'theme_location' => 'footernav', 
-							'depth' => '1'
+							'depth' => '1',
+							'fallback_cb' => false
 						));?>
 					</nav>
 				</div>
