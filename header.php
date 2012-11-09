@@ -8,7 +8,7 @@
 <!--<![endif]-->
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
-		<meta name ="viewport" content ="user-scalable=yes, width=device-width" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0;">
 		<title><?php wp_title('-'); ?></title>
 		<?php wp_head();?>
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php bloginfo('name'); ?> RSS Feed" />
@@ -29,8 +29,7 @@
 				<nav id="topnav" class="navigation threecol">
 					<?php wp_nav_menu( array(
 						'theme_location' => 'topnav',
-						'depth' => '0',
-						'fallback_cb' => false )); 
+						'depth' => '0' )); 
 					?>					
 				</nav>
 				<div id="search" class="threecol">

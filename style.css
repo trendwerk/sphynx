@@ -30,8 +30,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Paragraphs and headings */
 
-body { 
-	color: #666; }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	
+	body {-webkit-text-size-adjust: none !important; }
+
+}
+
+body { color: #666; }
 
 p {  }
 
