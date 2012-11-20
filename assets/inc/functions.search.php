@@ -10,7 +10,7 @@
  */
 function tp_search_title_highlight($title) {
 	if($query = get_search_query()) {
-	    $keys = implode('|', explode(' ', $query));
+	    $keys = implode('|', array_filter(explode(' ', $query)));
 	    $title = preg_replace('/(' . $keys .')/iu', '<span class="search-highlight">\0</span>',$title);
     }
 
@@ -25,7 +25,7 @@ if(!is_admin()) add_filter('the_title','tp_search_title_highlight');
  */
 function tp_search_excerpt_highlight($excerpt) {
 	if($query = get_search_query()) {
-	    $keys = implode('|', explode(' ', $query));
+	    $keys = implode('|', array_filter(explode(' ', $query)));
 	    $excerpt = preg_replace('/(' . $keys .')/iu', '<span class="search-highlight">\0</span>',$excerpt);
 	}
 	
@@ -40,7 +40,7 @@ if(!is_admin()) add_filter('the_excerpt','tp_search_excerpt_highlight');
  */
 function tp_search_content_highlight($content) {
 	if($query = get_search_query()) {
-	    $keys = implode('|', explode(' ', $query));
+	    $keys = implode('|', array_filter(explode(' ', $query)));
 	    $content = preg_replace('/(' . $keys .')/iu', '<span class="search-highlight">\0</span>',$content);
 	}
 	
