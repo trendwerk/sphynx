@@ -69,8 +69,8 @@ class TPPlugins {
 		$this->optional = array(
 			'multiple-content-blocks' => array(
 				'name' => __('Multiple content blocks','tp'),
-				'description' => __('Lets you use more than one content "block" on a template. You only have to insert one tag inside the template, so it\'s easy to use.','tp'),
-				'path' => 'multiple-content-blocks/multiple_content.php'
+				'description' => __('Allow for more content blocks in WordPress than just the one.','tp'),
+				'path' => 'multiple-content-blocks/multiple-content-blocks.php'
 			),
 			'redirection' => array(
 				'name' => __('Redirection','tp'),
