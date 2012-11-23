@@ -37,9 +37,7 @@ jQuery(document).ready(function($){
 		main navigation in a select list if on small screen
 		widths. also remove some base width and height image
 		settings for fluid images. */
-		
-	if($('body').hasClass('g1140')) {
-	
+			
 		// load tinynav.js, it turns the main nav into a <select> for mobile purposes
 	
 		$(function () {
@@ -60,9 +58,7 @@ jQuery(document).ready(function($){
 				pic.removeAttr('height');
 	
 		});
-	
-	}
-	
+		
 	// 3. FANCYBOX
 	
 	// if there's a a.fancybox, then get the fancybox script
@@ -136,5 +132,15 @@ jQuery(document).ready(function($){
 	
 	}
 	
+	var bodyWidth = window.innerWidth;
+		
+	if (window.innerWidth < 1000 ) {
+				
+		$('#main .sidebar').insertAfter('#main #content');
+		
+		$('.widget:even').addClass('clear');
+
+	} 
 	
+		
 });

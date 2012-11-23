@@ -19,7 +19,7 @@
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_url'); ?>" />
 		<link type="text/css" rel="stylesheet" media="print" href="<?php echo get_template_directory_uri() ?>/assets/css/print.css" />
 	</head>
-	<body <?php body_class('g1140'); ?>>
+	<body <?php body_class(); ?>>
 		<header id="header" class="container">
 			<div class="container-inner">
 				<div id="logo" class="ninecol">
@@ -35,10 +35,6 @@
 				<div id="search" class="threecol">
 					<?php get_search_form(); ?>
 				</div>
-			</div>
-		</header>
-		<section id="navigation" class="container">
-			<div class="container-inner">
 				<nav id="mainnav" class="navigation twelvecol">
 					<ul class="sf-menu">
 						<?php wp_nav_menu( array(
@@ -58,5 +54,5 @@
 					</nav>
 				<?php } ?>
 			</div>
-		</section>
+		</header>
 		<section id="main" class="container">

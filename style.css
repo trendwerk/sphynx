@@ -12,29 +12,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 @charset "UTF-8";
 
-/* CSS Document */
+/* Import TrendPress styles */
 
-@import url(../trendpress/assets/css/reset.css);
-@import url(../trendpress/assets/css/misc.css);
-@import url(../trendpress/assets/css/typography.css);
-@import url(../trendpress/assets/css/grid.css);
-@import url(../trendpress/assets/css/table.css);
-@import url(../trendpress/assets/css/forms.css);
+@import url(../trendpress/assets/css/default.css);
 
-/* 	--------------
-	GLOBAL STYLING
-	-------------- */
-
-/*	GLOBAL: TYPOGRAPHY
-	------------------ */
+/* 	=================
+	GLOBAL TYPOGRAPHY
+	================= */
 
 /* Paragraphs and headings */
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-	
-	body {-webkit-text-size-adjust: none !important; }
-
-}
 
 body { color: #666; }
 
@@ -104,14 +90,15 @@ a.button:hover {
 	background: -o-linear-gradient(top, #EEE, #BBB);
 	background: -ms-linear-gradient(top, #EEE, #BBB);
 	background-image: linear-gradient(to bottom, #EEE, #BBB); }
-
-/*	GLOBAL: LAYOUT
-	-------------- */
+	
+/* 	=============
+	GLOBAL LAYOUT
+	============= */
 	
 body { background: #EEE; }
 
-/*	GLOBAL: HEADER#HEADER
-	-------------------------- */
+/*	GLOBAL: HEADER
+	-------------- */
 	
 #header .container-inner { min-height: 100px; }
 	
@@ -190,42 +177,45 @@ body { background: #EEE; }
 			color: #000;
 			padding: 1px 2px; }
 
-/*	GLOBAL: NAVIGATION
-	----------------------- */
-	
-#navigation .container-inner {   }
-	
-	#mainnav {
-		background: #333;
-		min-height: 40px;
-		float: left; }
-
-		#mainnav li a {
-			color: #FFF;
-			line-height: 20px;
-			padding: 10px 20px;
-			text-decoration: none; }
-
-			#mainnav li ul { background: #333; }
-
-			#mainnav li il li a { padding: 5px 20px }
-
-		/* current menu item */
-
-		#mainnav li.current-menu-ancestor, 
-		#mainnav li.current-menu-item,
-		#mainnav li.current-menu-parent { background: #000000; } 
+	/* main navigation */
 		
-		/* rollover state */
+		#mainnav {
+			background: #333;
+			min-height: 40px;
+			float: left; }
+	
+			#mainnav li a {
+				color: #FFF;
+				line-height: 20px;
+				padding: 10px 20px;
+				text-decoration: none; }
+	
+				#mainnav li ul { background: #333; }
+	
+				#mainnav li il li a { padding: 5px 20px }
+	
+			/* current menu item */
+	
+			#mainnav li.current-menu-ancestor, 
+			#mainnav li.current-menu-item,
+			#mainnav li.current-menu-parent { background: #000000; } 
+			
+			/* rollover state */
+			
+			#mainnav li:hover, 
+			#mainnav li.sfHover, 
+			#mainnav a:focus, 
+			#mainnav a:hover, 
+			#mainnav a:active {
+				background: #000000;
+				outline: 0;
+				text-decoration: underline !important; }
 		
-		#mainnav li:hover, 
-		#mainnav li.sfHover, 
-		#mainnav a:focus, 
-		#mainnav a:hover, 
-		#mainnav a:active {
-			background: #000000;
-			outline: 0;
-			text-decoration: underline !important; }
+		/* hide dropdown menu */
+		
+		#mainnav select {
+			display: none;
+		}
 
 	/* breadcrumbs */
 	
@@ -239,8 +229,8 @@ body { background: #EEE; }
 		#breadcrumbs a:hover { color: #333; }
 
 	
-/*	GLOBAL: #MAIN
-	------------- */
+/*	GLOBAL: MAIN
+	------------ */
 
 #main { padding-bottom: 10px; }
 
@@ -278,55 +268,46 @@ body { background: #EEE; }
 					
 					.widget ul li ul { display: none; }
 		
-/*	GLOBAL: FOOTER#FOOTER
-	-------------------------- */
+/*	GLOBAL: FOOTER
+	-------------- */
 	
 #footer { background: #333; }
 
-#footer .container-inner { padding: 20px 10px 0 10px; }
+#footer .container-inner { 
+	padding: 20px 10px 10px 10px;
+	overflow: hidden; }
 
 	#footer h3,
 	#footer p,
-	#footer a,
-	#credits p,
-	#credits a {
-		color: #FFF; }
+	#footer a { color: #FFF; }
 
-	#footer a:hover,
-	#credits a:hover {
-		color: #999; }
+	#footer a:hover { color: #999; }
 
 	#footer .widget {
 		background: none;
-		float: left;
-		margin: 10px; }
+		width: 220px;
+		margin: 10px;
+		float: left; }
 		
 		#footer .widget .inner { padding: 0; }
 		
-	.g960 #footer .widget { width: 220px; }
+	#footer .widget {  }
 	
-	.g1140 #footer .widget { width: 22%; }
-
-/*	GLOBAL: FOOTER#CREDITS
-	---------------------- */
+	/* Credits */
 	
-#credits { background: #333; }
+	#footer #credits {
+		border-top: 1px solid #999;
+		margin: 0 10px;
+		padding: 10px 0; }
 
-#credits .container-inner .twelvecol {
-	border-top: 1px solid #999;
-	margin: 0 10px;
-	padding: 10px 0;
-}
 	#credits p,
 	#credits a { 
 		color: #FFF;
-		line-height: 40px; 
+		line-height: 30px; 
 		margin: 0; }
 
 	#credits #copyright { float: left; }
-	
-	#credits #sitemap { float: right; }
-		
+			
 		#credits #footernav ul {
 			display: block;
 			float: right;
@@ -344,9 +325,9 @@ body { background: #EEE; }
 					
 			#credits #footernav ul ul { display: none; }
 
-/* 	-----------------------
+/* 	=======================
 	CUSTOM TEMPLATE STYLING
-	----------------------- */
+	======================= */
 
 /*	HOME
 	---- */
@@ -420,48 +401,59 @@ body { background: #EEE; }
 
 .prev-post { float: left; }
 
-/* 	------------
+/* 	============
 	MEDIAQUERIES
-	------------ */
-		
-.js .g1140 .tinynav { display: none; }
+	============ */
 
-/* large desktops */
-@media (min-width: 1200px) {  }
+/* Portrait tablets */
 
-/* Desktops to portrait tablets */
-@media (min-width: 768px) and (max-width: 979px) {  }
+@media (max-width: 1000px) {
 
-/* Portrait tablets to Landscape phones */
-@media (max-width: 767px) {
-
-	/* Hide some elements */
-
-	.g1140 #header #logo {
-		width: 97%; }
-	
-	.g1140 #header #topnav,
-	.g1140 #header #search,
-	.g1140 #navigation #breadcrumbs,
-	.g1140 #footer { display: none; }
-	
-	.g1140 #credits .container-inner .twelvecol { border: none; }
-	
-	/* Content and sidebar */
-
-	.g1140 #main #content {
-		float: left;
-		width: 97%;
-		margin: 10px 1.5%;
-		clear: both; }
-	
-	.g1140 #main .sidebar {
-		float: left;
-		width: 97%;
-		margin: 10px 1.5%;
-		clear: both; }
+	#logo { width: 380px; }
 
 }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {  }
+/* Smartphones */
+
+@media (max-width: 680px) {	
+
+	#logo { width: 300px; }
+	
+	/* Hide some elements */
+	
+	#header #topnav,
+	#header #search,
+	#mainnav ul,
+	#navigation #breadcrumbs,
+	#footer .sidebar { display: none; }
+	
+	/* Show alternetive nav menu */
+	
+	#mainnav select {
+		width: 280px;
+		margin: 10px;
+		display: block; }
+	
+	/* Footer credits */
+	
+	#footer .container-inner {
+		padding: 20px 10px;
+	}
+		#footer #credits { 
+			border: none;
+			padding: 0; }
+			
+			#footer #credits #copyright {
+				width: 100%;
+				text-align: center; }
+			
+			#credits #footernav ul {
+				clear: both;
+				text-align: center;
+				float: none; }
+	
+				#credits #footernav ul li a {
+					float: none;
+					margin: 0 5px; }
+
+}

@@ -1,22 +1,17 @@
-		</section>
+</section>
 		<footer id="footer" class="container">
 			<div class="container-inner">
 				<aside class="sidebar">
 					<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('Footer'); ?>
 				</aside>
-			</div>
-		</footer>
-		<footer id="credits" class="container">
-			<div class="container-inner">
-				<div class="twelvecol">
+				<div id="credits" class="twelvecol">
 					<div id="copyright">
 						<p>&copy; Copyright <?php the_time('Y'); ?> - <?php bloginfo('name'); ?> <?php ?></p>
 					</div>
 					<nav id="footernav" class="navigation">
 						<?php wp_nav_menu( array(
 							'theme_location' => 'footernav', 
-							'depth' => '1',
-							'fallback_cb' => false
+							'depth' => '1'
 						));?>
 					</nav>
 				</div>
