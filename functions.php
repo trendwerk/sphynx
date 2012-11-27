@@ -1,13 +1,6 @@
 <?php
 /**
  * All the child theme's specific functionalities
- * 
- * @chapter 1. Sidebars
- * @chapter 2. Custom Menu's
- * @chapter 3. Language
- * @chapter 4. Post types
- * @chapter 5. Widgets 
- * @chapter 6. Other
  */
 
 /**
@@ -60,29 +53,20 @@ if (function_exists('register_nav_menu')) {
 /**
  * @scripts Register and enqueue scripts
  */
- 
 function tp_load_scripts() {
+	//jQuery through Google's CDN
+	wp_deregister_script('jquery');
+	wp_register_script('jquery','http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',array(),null,false);
 
-	// deregister the included library
-	
-	wp_deregister_script( 'jquery' );
+	//Register scripts
+	wp_register_script('functions',get_stylesheet_directory_uri().'/assets/script/functions.js',array('jquery'));
+	wp_register_script('modernizr',get_template_directory_uri().'/assets/script/modernizr/modernizr.lite.js');
 
-	// register the library again from Google's CDN
-	
-	wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', array(), null, false );
-
-	// register the script like this for a theme:
-
-	wp_register_script( 'functions', get_stylesheet_directory_uri() . '/assets/script/functions.js', array( 'jquery' ) );
-	wp_register_script( 'modernizr', get_template_directory_uri() . '/assets/script/modernizr/modernizr.lite.js' );
-
-	// then enqueue the scripts:
-
-	wp_enqueue_script( 'functions' );
-	wp_enqueue_script( 'modernizr' );
+	//Enqueue the scripts
+	wp_enqueue_script('functions');
+	wp_enqueue_script('modernizr');
 }
-
-add_action('wp_enqueue_scripts', 'tp_load_scripts');
+add_action('wp_enqueue_scripts','tp_load_scripts');
 
 /**
  * @languages Add the language domain
