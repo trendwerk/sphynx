@@ -76,22 +76,25 @@ load_theme_textdomain('tp',STYLESHEETPATH.'/assets/languages');
 /**
  * @posttype Register post types, taxonomies and setup support
  */
-add_theme_support('post-thumbnails');
-
-function tp_disallow_postpage_thumbnails() {
+function tp_register_post_types() {
+	/**
+	 * @support Thumbnails
+	 */
+	add_theme_support('post-thumbnails');
 	remove_post_type_support('page','thumbnail');
 	remove_post_type_support('post','thumbnail');
+	
+	/**
+	 * @register Post types and taxonomies
+	 */
 }
-add_action('init','tp_disallow_postpage_thumbnails');
+add_action('init','tp_register_post_types');
 
 /**
  * @widgets Define widgets
+ *
+ * @widget Social media links from TrendPress theme options 
  */
-
-/* Widget: Sociale media links from TrendPress theme options */
-
-add_action('widgets_init', create_function('', 'return register_widget("social_media");'));
-
 class social_media extends WP_Widget {
 	function social_media() {
 		$widget_ops = array('classname' => 'social_media', 'description' => __('Social media widget that shows a list of social media network sites that the user specified.','tp'));
@@ -153,11 +156,11 @@ class social_media extends WP_Widget {
 	    <?
 	}
 }
+add_action('widgets_init',create_function('','return register_widget("social_media");'));
 
-/* Widget: Contact information from TrendPress theme options */
-
-add_action('widgets_init', create_function('', 'return register_widget("contact");'));
-
+/**
+* @widget Contact information from TrendPress theme options
+*/
 class contact extends WP_Widget {
 	function contact() {
 		$widget_ops = array('classname' => 'contact', 'description' => __('Widget that shows the user specified contact data.'));
@@ -221,14 +224,19 @@ class contact extends WP_Widget {
 	    <?php
 	}
 }
+add_action('widgets_init',create_function('','return register_widget("contact");'));
 
 /**
  * @other
  */
-function tp_mce_before_init($settings) {
+ 
+/**
+ * Add editor styles
+ */
+function tp_add_editor_styles($settings) {
     $style_formats = array(
     	array(
-    		'title' => 'Call to action',
+    		'title' => __('Call to action','tp'),
     		'selector' => 'a',
     		'classes' => 'cta'
     	)
@@ -237,5 +245,5 @@ function tp_mce_before_init($settings) {
     $settings['style_formats'] = json_encode($style_formats);
     return $settings;
 }
-add_filter('tiny_mce_before_init', 'tp_mce_before_init');
+add_filter('tiny_mce_before_init','tp_add_editor_styles');
 ?>
