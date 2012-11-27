@@ -74,21 +74,15 @@ add_action('wp_enqueue_scripts','tp_load_scripts');
 load_theme_textdomain('tp',STYLESHEETPATH.'/assets/languages');
 
 /**
- * @posttype Add support post thumbnails
+ * @posttype Register post types, taxonomies and setup support
  */
- 
 add_theme_support('post-thumbnails');
 
-function no_postpage_thumbnails() {
+function tp_disallow_postpage_thumbnails() {
 	remove_post_type_support('page','thumbnail');
 	remove_post_type_support('post','thumbnail');
 }
-
-add_action('init','no_postpage_thumbnails');
-
-/**
- * @posttype Add post types and post type support
- */
+add_action('init','tp_disallow_postpage_thumbnails');
 
 /**
  * @widgets Define widgets
