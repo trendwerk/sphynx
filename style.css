@@ -409,14 +409,56 @@ body { background: #EEE; }
 
 @media (max-width: 1000px) {
 
+	.container .container-inner { width: 640px; }
+	
+	.ninecol,
+	.tencol,
+	.elevencol,
+	.twelvecol { width: 620px; }
+			
+		.sidebar,
+		#footer .sidebar {
+			width: 100%;
+			margin: 0px;
+			float: left; }
+			
+			.sidebar .widget,
+			#footer .sidebar .widget {
+				width: 300px;
+				margin: 10px; }
+	
+	/* Theme specific styles */	
+	
 	#logo { width: 380px; }
 
 }
 
 /* Smartphones */
 
-@media (max-width: 680px) {	
+@media (max-width: 680px) {
 
+	.container .container-inner { width: 320px; }
+	
+	.fivecol,
+	.sixcol,
+	.sevencol,
+	.eightcol,
+	.ninecol,
+	.tencol,
+	.elevencol,
+	.twelvecol { width: 300px; }
+			
+		.sidebar {
+			width: 100%;
+			margin: 0px;
+			float: left; }
+			
+			.sidebar .widget {
+				width: 300px;
+				margin: 10px; }
+	
+	/* Theme specific styles */
+	
 	#logo { width: 300px; }
 	
 	/* Hide some elements */
