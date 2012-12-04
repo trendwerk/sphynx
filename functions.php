@@ -159,8 +159,8 @@ class social_media extends WP_Widget {
 add_action('widgets_init',create_function('','return register_widget("social_media");'));
 
 /**
-* @widget Contact information from TrendPress theme options
-*/
+ * @widget Contact information from TrendPress theme options
+ */
 class contact extends WP_Widget {
 	function contact() {
 		$widget_ops = array('classname' => 'contact', 'description' => __('Widget that shows the user specified contact data.'));
@@ -227,11 +227,9 @@ class contact extends WP_Widget {
 add_action('widgets_init',create_function('','return register_widget("contact");'));
 
 /**
- * @other
- */
- 
-/**
- * Add editor styles
+ * @misc
+ *
+ * @misc Add editor styles
  */
 function tp_add_editor_styles($settings) {
     $style_formats = array(
