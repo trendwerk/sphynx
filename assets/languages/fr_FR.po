@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TrendPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-06 21:43+0100\n"
+"PO-Revision-Date: 2012-12-10 22:46+0100\n"
+"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
+"Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ../..\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../../404.php:4
+msgid "The page you are looking for doesn't exist."
+msgstr "La page que vous recherchez n'existe pas."
+
+#: ../../404.php:5
+msgid ""
+"Seems like the page you were looking for might have been moved or just "
+"didn't excist in the first place."
+msgstr ""
+"Il semble que la page que vous recherchez ait été déplacée ou n'a jamais "
+"existé."
+
+#: ../../404.php:6
+#, php-format
+msgid ""
+"You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
+"searchform below to find the page you are looking for."
+msgstr ""
+"Vous pouvez consulter notre <a href=\"%1$s\">plan du site</a> ou utiliser le "
+"formulaire de recherche ci-dessous pour trouver la page que vous recherchez."
+
+#: ../../comments.php:5 ../../comments.php:14
+msgid "This post is password protected. Try logging in."
+msgstr "Ce post est sécurisé avec un mot de passe. Veuillez vous identifier."
+
+#: ../../comments.php:19
+msgid "Responses"
+msgstr "Réponses"
+
+#: ../../comments.php:25
+msgid "Your comment needs te be approved by us"
+msgstr "Votre commentaire doit être approuvé par nos soins"
+
+#: ../../comments.php:28
+msgid "written by"
+msgstr "écrit par"
+
+#: ../../comments.php:28
+msgid "on"
+msgstr "le"
+
+#: ../../comments.php:33
+msgid "No comments yet"
+msgstr "Aucun commentaire pour le moment"
+
+#: ../../comments.php:36 ../../comments.php:48
+msgid "Respond"
+msgstr "Répondre"
+
+#: ../../comments.php:38
+msgid "You must be"
+msgstr "Vous devez être"
+
+#: ../../comments.php:38
+msgid "logged in"
+msgstr "identifié"
+
+#: ../../comments.php:38
+msgid "to post a comment."
+msgstr "pour poster un commentaire."
+
+#: ../../comments.php:41
+msgid "Logged in as"
+msgstr "Identifié en tant que"
+
+#: ../../comments.php:41
+msgid "Log out"
+msgstr "Se déconnecter"
+
+#: ../../comments.php:41
+msgid "Log out &raquo;"
+msgstr "Déconnecter &raquo;"
+
+#: ../../comments.php:43
+msgid "Name:"
+msgstr "Nom :"
+
+#: ../../comments.php:44
+msgid "Email:"
+msgstr "Email :"
+
+#: ../../comments.php:45
+msgid "Website:"
+msgstr "Site Web :"
+
+#: ../../footer.php:27
+msgid ""
+"You are using a very old version of Internet Explorer. For the best "
+"experience please upgrade (for free) to a modern browser:"
+msgstr ""
+"Vous utilisez une version très ancienne d'Internet Explorer. Pour une "
+"meilleure expérience veuillez effectuer une mise à jour (gratuite) vers un "
+"navigateur plus moderne :"
+
+#: ../../functions.php:55
+msgid "Main navigation"
+msgstr "Navigation principale"
+
+#: ../../functions.php:56
+msgid "Top navigation"
+msgstr "Navigation en-tête"
+
+#: ../../functions.php:57
+msgid "Footer navigation"
+msgstr "Navigation bas de page"
+
+#: ../../functions.php:119
+msgid ""
+"Social media widget that shows a list of social media network sites that the "
+"user specified."
+msgstr ""
+"Widget médias sociaux affichant une liste de sites de réseaux de médias "
+"sociaux spécifiée par l'utilisateur."
+
+#: ../../functions.php:121
+msgid "Social media links"
+msgstr "Liens médias sociaux"
+
+#: ../../functions.php:130
+msgid "Type iconen"
+msgstr "Types d'icônes"
+
+#: ../../functions.php:163
+msgid "Keep in touch"
+msgstr "Restez en contact"
+
+#: ../../functions.php:165
+msgid "Follow us on Twitter"
+msgstr "Suivez-nous sur Twitter"
+
+#: ../../functions.php:166
+msgid "Like us on Facebook"
+msgstr "Rejoignez-nous sur Facebook"
+
+#: ../../functions.php:167
+msgid "Connect with us on LinkedIn"
+msgstr "Rejoignez-nous sur LinkedIn"
+
+#: ../../functions.php:168
+msgid "Add us on Google+"
+msgstr "Ajoutez-nous à Google+"
+
+#: ../../functions.php:169
+msgid "Follow us on YouTube"
+msgstr "Suivez-nous sur Youtube"
+
+#: ../../functions.php:170
+msgid "E-mail newsletter"
+msgstr "Newsletter email"
+
+#: ../../functions.php:171
+msgid "Subscribe to our RSS"
+msgstr "Souscrivez à notre flux RSS"
+
+#: ../../functions.php:185
+msgid "Widget that shows the user specified contact data."
+msgstr "Widget affichant les données contact spécifiées par l'utilisateur"
+
+#: ../../functions.php:187
+msgid "Contact information"
+msgstr "Informations contact"
+
+#: ../../functions.php:191
+#, php-format
+msgid ""
+"Change the contents of this widget on the <a href=\"%1$s\">contact info</a> "
+"page."
+msgstr ""
+"Modifiez le contenu de ce widget sur la page <a href=\"%1$s\">informations "
+"contact</a>."
+
+#: ../../functions.php:200
+msgid "Contact"
+msgstr "Contact"
+
+#: ../../functions.php:217
+msgid "E-mail"
+msgstr "Email"
+
+#: ../../functions.php:219
+msgid "Telephone"
+msgstr "Téléphone"
+
+#: ../../functions.php:221
+msgid "Fax"
+msgstr "Fax"
+
+#: ../../functions.php:228
+msgid "CC No"
+msgstr "N° CCI"
+
+#: ../../functions.php:230
+msgid "VAT No"
+msgstr "N° TVA"
+
+#: ../../header.php:56
+msgid "You are here:"
+msgstr "Vous êtes ici :"
+
+#: ../../index.php:6
+#, php-format
+msgid "Daily archives: %s"
+msgstr "Archives quotidiennes : %s"
+
+#: ../../index.php:8
+#, php-format
+msgid "Monthly archives: %s"
+msgstr "Archives mensuelles : %s"
+
+#: ../../index.php:10
+#, php-format
+msgid "Yearly archives: %s"
+msgstr "Achives annuelles : %s"
+
+#: ../../index.php:12
+#, php-format
+msgid "Category archives: %s"
+msgstr "Archives catégories %s"
+
+#: ../../index.php:14
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Archives tags : %s"
+
+#: ../../index.php:16
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: ../../index.php:18
+msgid "News"
+msgstr "Nouvelles"
+
+#: ../../index.php:29
+msgid "Posted on:"
+msgstr "Posté le :"
+
+#: ../../index.php:30
+msgid "in the category:"
+msgstr "dans la catégorie :"
+
+#: ../../index.php:35 ../../search.php:24
+msgid "Read more"
+msgstr "Lire davantage"
+
+#: ../../index.php:42
+msgid "No results found."
+msgstr "Aucun résultat trouvé."
+
+#: ../../page-sitemap.php:11
+msgid "Pages"
+msgstr "Pages"
+
+#: ../../page-sitemap.php:35
+msgid "Blog"
+msgstr "Blog"
+
+#: ../../search.php:5 ../../search.php:33
+#, php-format
+msgid "Search Results for: %1$s"
+msgstr "Rechercher des résultats pour : %1$s"
+
+#: ../../search.php:11
+#, php-format
+msgid "Found %2$s articles containing the keyword: %1$s"
+msgstr "Nous avons trouvé %2$s articles contenant le mot-clé : %1$s"
+
+#: ../../search.php:34
+#, php-format
+msgid ""
+"Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
+"Please make sure all your words are spelled correctly or try different "
+"keywords."
+msgstr ""
+"Votre recherche <em>&quot;%1$s&quot;</em> ne correspond à aucun document. "
+"Vérifiez que tous les mots sont correctement orthographiés ou essayez "
+"d'autres mots-clés."
+
+#: ../../searchform.php:4 ../../searchform.php:5
+msgid "Search"
+msgstr "Rechercher"
+
+#: ../../single.php:9
+msgid "Posted on"
+msgstr "Posté le"
+
+#: ../../single.php:9
+msgid "in the category"
+msgstr "dans la catégorie"
