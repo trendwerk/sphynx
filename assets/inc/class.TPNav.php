@@ -255,7 +255,7 @@ class TPNav {
 			} else {
 				if($taxonomy = get_query_var('taxonomy')) {
 					$taxonomy = get_taxonomy($taxonomy);
-					set_query_var('post_type',$taxonomy->object_type[0]);
+					if(!get_query_var('post_type')) set_query_var('post_type',$taxonomy->object_type[0]);
 				}
 				
 				//Custom post type
