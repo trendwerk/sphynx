@@ -36,7 +36,7 @@
 		<?php endif; ?>	    
 	</article>	
 	<aside class="sidebar fourcol">
-		<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('Blog'); ?>
+		<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('blog'); ?>
 	</aside>		
 </div>
 <?php get_footer(); ?>

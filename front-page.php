@@ -7,7 +7,7 @@
 		<?php endwhile; endif; ?>			
 	</article>
 	<aside class="sidebar fourcol">
-		<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('Home'); ?>
+		<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('home'); ?>
 	</aside>
 </div>
 <?php get_footer(); ?>

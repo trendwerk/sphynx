@@ -6,40 +6,43 @@
 /**
  * @sidebars Register the sidebars
  */
-if(function_exists('register_sidebar')) {	
-	register_sidebar(array(
-		'name' => 'Home',
-		'id' => 'home',
-		'before_widget' => '<div class="widget %2$s"><div class="inner">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>'
-	));
-	register_sidebar(array(
-		'name' => 'Page',
-		'id' => 'page',
-		'before_widget' => '<div class="widget %2$s"><div class="inner">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>'
-	));
-	register_sidebar(array(
-		'name' => 'Blog',
-		'id' => 'blog',
-		'before_widget' => '<div class="widget %2$s"><div class="inner">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>'
-	));
-	register_sidebar(array(
-		'name' => 'Footer',
-		'id' => 'footerid',
-		'before_widget' => '<div class="%2$s widget"><div class="inner">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>'
-	));
+function tp_register_sidebars() {
+	if(function_exists('register_sidebar')) {
+		register_sidebar(array(
+			'name' => __('Home','tp'),
+			'id' => 'home',
+			'before_widget' => '<div class="widget %2$s"><div class="inner">',
+			'after_widget' => '</div></div>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>'
+		));
+		register_sidebar(array(
+			'name' => __('Page','tp'),
+			'id' => 'page',
+			'before_widget' => '<div class="widget %2$s"><div class="inner">',
+			'after_widget' => '</div></div>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>'
+		));
+		register_sidebar(array(
+			'name' => __('Blog','tp'),
+			'id' => 'blog',
+			'before_widget' => '<div class="widget %2$s"><div class="inner">',
+			'after_widget' => '</div></div>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>'
+		));
+		register_sidebar(array(
+			'name' => __('Footer','tp'),
+			'id' => 'footerid',
+			'before_widget' => '<div class="%2$s widget"><div class="inner">',
+			'after_widget' => '</div></div>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>'
+		));	
+	}
 }
+add_action('init','tp_register_sidebars');
 
 /**
  * @menus Register Custom Menu's

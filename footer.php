@@ -2,7 +2,7 @@
 		<footer id="footer" class="container">
 			<div class="container-inner">
 				<aside class="sidebar">
-					<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('Footer'); ?>
+					<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('footerid'); ?>
 				</aside>
 				<div id="credits" class="twelvecol">
 					<div id="copyright">

@@ -7,7 +7,7 @@
 		<?php get_search_form(); ?>	 
 	</article>
 	<aside class="sidebar vertical fourcol">
-		<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('Page'); ?>
+		<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('page'); ?>
 	</aside>
 </div>
 <?php get_footer(); ?>
