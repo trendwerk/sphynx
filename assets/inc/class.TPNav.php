@@ -104,6 +104,12 @@ class TPNav {
 			$breadcrumb->is_current = true;
 			
 			$breadcrumbs = array($breadcrumb);
+		} else if(is_404()) {
+			//404
+			$breadcrumb->title = __('404','tp');
+			$breadcrumb->is_current = true;
+			
+			$breadcrumbs = array($breadcrumb);
 		} else {
 			//There are no breadcrumbs, show Home > {Current item}
 			global $post;
@@ -248,6 +254,9 @@ class TPNav {
 		} else if(get_query_var('s')) {
 			//Search page
 			
+		} else if(is_404()) {
+			//404
+			
 		} else {
 			if(!get_query_var('post_type') && !get_query_var('taxonomy')) {				
 				//Blog or single blog item
@@ -255,7 +264,7 @@ class TPNav {
 			} else {
 				if($taxonomy = get_query_var('taxonomy')) {
 					$taxonomy = get_taxonomy($taxonomy);
-					if(!get_query_var('post_type')) set_query_var('post_type',$taxonomy->object_type[0]);
+					set_query_var('post_type',$taxonomy->object_type[0]);
 				}
 				
 				//Custom post type
