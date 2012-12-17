@@ -52,7 +52,7 @@ function tp_breadcrumbs($separator='>',$menu='mainnav') {
 		echo '<span class="current">'.$author->first_name.' '.$author->last_name.'</span>';
 	} else if(get_query_var('term') && get_query_var('taxonomy')) {
 		tp_separator($separator);
-		$term = get_term_by('slug',get_query_var('term'),get_query_var('taxonomy'));
+		$term = get_term_by('slug',get_query_var('term'),get_query_var('taxonomy') && !get_query_var('s'));
 		echo '<span class="current">'.$term->name.'</span>';
 	}
 }
