@@ -32,8 +32,9 @@ function tp_pagination($args = null) {
 		$pages = intval(ceil($wp_query->found_posts / $posts_per_page));
 	}
 	
-	$output = '<nav id="pagination"><ul>';
 	if ($pages > 1) {
+		$output = '<nav id="pagination"><ul>';
+		
 		$ellipsis = "<li class='pagination-gap'>&hellip;</li>";
 
 		if ($page > 1 && !empty($previouspage)) {
