@@ -22,8 +22,8 @@ class submenu extends WP_Widget {
 			if($submenu->children) {
 			?>
 				<div class="widget submenu">
-					<div class="inner">
-						<h3 class="widgettitle"><a href="<?php echo $submenu->url; ?>"><?php echo $submenu->title; ?></a></h3>
+					<h3 class="widgettitle"><a href="<?php echo $submenu->url; ?>"><?php echo $submenu->title; ?></a></h3>
+					<div class="widget-inner">
 					   	<?php $this->show_children($submenu); ?>
 					</div>
 				</div>
