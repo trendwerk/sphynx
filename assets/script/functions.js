@@ -130,7 +130,7 @@ jQuery(document).ready(function($){
 
 			};
 			
-	$('.search .search input').clearOnFocus();
+	$('div.search .search input').clearOnFocus();
 	$('.hide_label').clearOnFocus();
 
 
