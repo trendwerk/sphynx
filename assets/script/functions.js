@@ -84,24 +84,20 @@ jQuery(document).ready(function($){
 	});
 					
 	if($('a.fancybox').length > 0) {
-	
-		$.getScript(templateurl+'/assets/script/fancybox/jquery.fancybox.js', function() {
-		
-			$('a.fancybox').fancybox();
 			
-		    jQuery.getCSS = function( url, media ) {
-		            jQuery( document.createElement('link') ).attr({
-		                    href: templateurl+'/assets/script/fancybox/jquery.fancybox.css',
-		                    media: media || 'screen',
-		                    type: 'text/css',
-		                    rel: 'stylesheet'
-		            }).appendTo('head');
-		    };
-				
-		    $.getCSS();
-	
-		});	
+		$('a.fancybox').fancybox();
 		
+	    jQuery.getCSS = function( url, media ) {
+	            jQuery( document.createElement('link') ).attr({
+	                    href: templateurl+'/assets/script/fancybox/jquery.fancybox.css',
+	                    media: media || 'screen',
+	                    type: 'text/css',
+	                    rel: 'stylesheet'
+	            }).appendTo('head');
+	    };
+			
+	    $.getCSS();
+			
 	}
 			
 	// 4. CYCLE 
@@ -112,18 +108,14 @@ jQuery(document).ready(function($){
 		
 	if($('#cycle-slider').length > 0) {
 	
-		$.getScript(templateurl+'/assets/script/cycle/cycle.all.js', function() {
-	
-			$('#cycle-slider').cycle({
-	
-				fx: 'scrollHorz', 
-				speed: 'fast', 
-				timeout: 7000,
-				pager: '#cycle-pager-inner',
-				prev: '#prev', 
-				next: '#next'
-	
-			});
+		$('#cycle-slider').cycle({
+
+			fx: 'scrollHorz', 
+			speed: 'fast', 
+			timeout: 7000,
+			pager: '#cycle-pager-inner',
+			prev: '#prev', 
+			next: '#next'	
 	
 		});	
 	
