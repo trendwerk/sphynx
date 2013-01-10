@@ -6,7 +6,7 @@
 				</aside>
 				<div id="credits" class="twelvecol">
 					<div id="copyright">
-						<p>&copy; Copyright <?php the_time('Y'); ?> - <?php bloginfo('name'); ?> <?php ?></p>
+						<p>&copy; Copyright <?php echo date("Y"); ?> - <?php bloginfo('name'); ?> <?php ?></p>
 					</div>
 					<nav id="footernav" class="navigation">
 						<?php wp_nav_menu( array(
