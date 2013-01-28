@@ -1,5 +1,5 @@
 # TrendPress / Trendpress Child
-__Documentation version 1.__
+__Documentation version 1.0__
 
 Welcome, you are currently viewing the TrendPress documentation. TrendPress is a WordPress framework of sorts. There's a parent theme (TrendPress) that contains a lot of useful scripts and settings ensuring a solid workflow and quick development. Then there's a child theme (TrendPress Child) with minimal styling. You should use the child theme to develop the actual website.
 
