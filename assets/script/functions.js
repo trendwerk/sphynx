@@ -23,6 +23,7 @@
 	6.	SEARCH
 	7. 	HYPERLINKS
 	8.	REL EXTERNAL
+	9.	BROWSER VERSION	
 	
 	------------------------------------------------------------------
 	
@@ -157,5 +158,25 @@ jQuery(document).ready(function($){
 		return this.hostname && this.hostname !== location.hostname;
 
 	}).addClass('external');
+
+// 9. BROWSER VERSION
+
+	$.each($.browser, function(i) {
+	    $('body').addClass(i);
+	    return false;  
+	});
+	
+	var os = [
+	    'iphone',
+	    'ipad',
+	    'windows',
+	    'mac',
+	    'linux'
+	];
+	
+	var match = navigator.appVersion.toLowerCase().match(new RegExp(os.join('|')));
+	if (match) {
+	    $('body').addClass(match[0]);
+	};
 
 });
