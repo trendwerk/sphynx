@@ -193,7 +193,7 @@ body { background: #EEE; }
 	
 				#mainnav li ul { background: #333; }
 	
-				#mainnav li il li a { padding: 5px 20px }
+					#mainnav li li a {  }
 	
 			/* current menu item */
 	
