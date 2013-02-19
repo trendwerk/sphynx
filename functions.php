@@ -65,11 +65,11 @@ function tp_load_scripts() {
 
 	// register scripts
 	
-	wp_register_script('functions',get_stylesheet_directory_uri().'/assets/script/functions.js',array('jquery'));
-	wp_register_script('modernizr',get_template_directory_uri().'/assets/script/modernizr/modernizr.lite.js');
-	wp_register_script('cycle',get_template_directory_uri().'/assets/script/cycle/cycle.all.js',array('jquery'));
-	wp_register_script('fancybox',get_template_directory_uri().'/assets/script/fancybox/jquery.fancybox.js',array('jquery'));
-	wp_register_script('less',get_stylesheet_directory_uri().'/assets/less/less-1.3.0.min.js');
+	wp_register_script('functions',get_stylesheet_directory_uri().'/assets/js/functions.js',array('jquery'));
+	wp_register_script('modernizr',get_template_directory_uri().'/assets/js/modernizr/modernizr.lite.js');
+	wp_register_script('cycle',get_template_directory_uri().'/assets/js/cycle/cycle.all.js',array('jquery'));
+	wp_register_script('fancybox',get_template_directory_uri().'/assets/js/fancybox/jquery.fancybox.js',array('jquery'));
+	wp_register_script('less',get_stylesheet_directory_uri().'/assets/js/less-1.3.0.min.js');
 
 	// enqueue the scripts
 	
@@ -86,7 +86,7 @@ add_action('wp_enqueue_scripts','tp_load_scripts');
 /**
  * @languages Add the language domain
  */
-load_theme_textdomain('tp',STYLESHEETPATH.'/assets/languages');
+load_theme_textdomain('tp',STYLESHEETPATH.'/assets/lang');
 
 /**
  * @posttype Register post types, taxonomies and setup support
