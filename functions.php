@@ -61,7 +61,7 @@ function tp_load_scripts() {
 	// jQuery through Google's CDN
 	
 	wp_deregister_script('jquery');
-	wp_register_script('jquery','http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',array(),null,false);
+	wp_register_script('jquery','http://code.jquery.com/jquery-latest.min.js',array(),null,false);
 
 	// register scripts
 	
@@ -69,7 +69,10 @@ function tp_load_scripts() {
 	wp_register_script('modernizr',get_template_directory_uri().'/assets/js/modernizr/modernizr.lite.js');
 	wp_register_script('cycle',get_template_directory_uri().'/assets/js/cycle/cycle.all.js',array('jquery'));
 	wp_register_script('fancybox',get_template_directory_uri().'/assets/js/fancybox/jquery.fancybox.js',array('jquery'));
+	
+	/* uncomment if you want to use less...
 	wp_register_script('less',get_stylesheet_directory_uri().'/assets/js/less-1.3.0.min.js');
+	*/
 
 	// enqueue the scripts
 	
@@ -77,7 +80,10 @@ function tp_load_scripts() {
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('cycle');
 	wp_enqueue_script('fancybox');
+	
+	/* uncomment if you want to use Less...
 	wp_enqueue_script('less');
+	*/
 
 }
 

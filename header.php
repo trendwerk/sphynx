@@ -10,7 +10,6 @@
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title><?php wp_title('-'); ?></title>
-		<link rel="stylesheet/less" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_directory'); ?>/style.less" />
 		<?php wp_head();?>
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php bloginfo('name'); ?> RSS Feed" />
 		<link rel="apple-touch-icon" type="image/x-icon" href="<?php bloginfo('template_url')?>/assets/img/favicon/apple-touch-icon.png" />
@@ -19,6 +18,9 @@
 		<link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_url')?>/assets/img/favicon/favicon.ico" />
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_url'); ?>" />
 		<link type="text/css" rel="stylesheet" media="print" href="<?php echo get_template_directory_uri() ?>/assets/css/print.css" />
+		<!-- uncomment if you want to use Less...
+		<link rel="stylesheet/less" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_directory'); ?>/style.less" /> 
+		-->	
 	</head>
 	<body <?php body_class(); ?>>
 		<header id="header" class="container">
