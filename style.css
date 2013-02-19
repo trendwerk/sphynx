@@ -159,7 +159,7 @@ body { background: #EEE; }
 			.ie7 div.search form input[type="text"] { height: auto; }
 	
 			div.search form input[type="submit"] { 
-				background: url('assets/images/search.png');
+				background: url('assets/img/search.png');
 				width: 30px;
 				height: 30px;
 				position: absolute;

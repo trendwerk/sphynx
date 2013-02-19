@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
 						
 	// 1. TEMPLATE URL IS DEFINED THROUGH A JQUERY CONSTANT (not really a constant but it's quite constant)
 	
-	$.getScript(templateurl+'/assets/script/functions.js');	    
+	$.getScript(templateurl+'/assets/js/functions.js');	    
 	
 	//	2. RESPONSIVE
 	
@@ -42,7 +42,7 @@ jQuery(document).ready(function($){
 	
 		$(function () {
 	
-			$.getScript(templateurl+'/assets/script/tinynav/tinynav.min.js', function() { $("ul.sf-menu").tinyNav({active: 'selected'});});	    
+			$.getScript(templateurl+'/assets/js/tinynav/tinynav.min.js', function() { $("ul.sf-menu").tinyNav({active: 'selected'});});	    
 	
 		});
 	
@@ -89,7 +89,7 @@ jQuery(document).ready(function($){
 		
 	    jQuery.getCSS = function( url, media ) {
 	            jQuery( document.createElement('link') ).attr({
-	                    href: templateurl+'/assets/script/fancybox/jquery.fancybox.css',
+	                    href: templateurl+'/assets/js/fancybox/jquery.fancybox.css',
 	                    media: media || 'screen',
 	                    type: 'text/css',
 	                    rel: 'stylesheet'
