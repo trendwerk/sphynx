@@ -70,21 +70,38 @@ function tp_load_scripts() {
 	wp_register_script('cycle',get_template_directory_uri().'/assets/js/cycle/cycle.all.js',array('jquery'));
 	wp_register_script('fancybox',get_template_directory_uri().'/assets/js/fancybox/jquery.fancybox.js',array('jquery'));
 	
-	/* uncomment if you want to use less...
-	wp_register_script('less',get_stylesheet_directory_uri().'/assets/js/less-1.3.0.min.js');
-	*/
-	
 	// enqueue the scripts
 	
 	wp_enqueue_script('functions');
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('cycle');
 	wp_enqueue_script('fancybox');
-	
-	/* uncomment if you want to use Less...
-	wp_enqueue_script('less');
-	*/
 
+	/*
+	
+	Remove the active comment if you want to use less for development
+
+	DEVELOPMENT WITH LESS
+	---------------------
+	1. Make sure you enqueue the less.js file below
+	2. Uncomment the style.less file in header.php
+
+	wp_register_script('less',get_stylesheet_directory_uri().'/assets/js/less-1.3.0.min.js');	
+	wp_enqueue_script('less');
+	
+	*/
+	
+	/*
+	
+	PRODUCTION WITH LESS
+	--------------------
+	1. Make sure you activate/install the WP-LESS (found here: http://wordpress.org/extend/plugins/wp-less)
+	2. Uncomment the code below and WP-LESS will parse the .less file you define below
+	
+	wp_enqueue_style('less-to-css', get_stylesheet_directory_uri().'/style.less');
+	
+	*/
+	
 }
 
 add_action('wp_enqueue_scripts','tp_load_scripts');
