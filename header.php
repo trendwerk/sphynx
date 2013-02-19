@@ -8,7 +8,7 @@
 <!--<![endif]-->
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
-		<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title><?php wp_title('-'); ?></title>
 		<link rel="stylesheet/less" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_directory'); ?>/style.less" />
 		<?php wp_head();?>
