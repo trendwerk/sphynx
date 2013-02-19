@@ -69,15 +69,11 @@ function tp_load_scripts() {
 	wp_register_script('modernizr',get_template_directory_uri().'/assets/js/modernizr/modernizr.lite.js');
 	wp_register_script('cycle',get_template_directory_uri().'/assets/js/cycle/cycle.all.js',array('jquery'));
 	wp_register_script('fancybox',get_template_directory_uri().'/assets/js/fancybox/jquery.fancybox.js',array('jquery'));
-<<<<<<< HEAD
 	
 	/* uncomment if you want to use less...
 	wp_register_script('less',get_stylesheet_directory_uri().'/assets/js/less-1.3.0.min.js');
 	*/
-=======
-	wp_register_script('less',get_stylesheet_directory_uri().'/assets/less/less-1.3.0.min.js');
->>>>>>> Changed folder structure
-
+	
 	// enqueue the scripts
 	
 	wp_enqueue_script('functions');
