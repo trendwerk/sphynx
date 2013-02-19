@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Import TrendPress styles */
 
-@import url(../trendpress/assets/css/default.css);
+@import url(../trendpress/assets/css/default.min.css);
 
 /* 	=================
 	GLOBAL TYPOGRAPHY
