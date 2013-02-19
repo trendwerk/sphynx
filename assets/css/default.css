@@ -110,7 +110,9 @@ strong, b { font-weight: bold; }
 
 em, i { font-style: italic; }
 
-blockquote, blockquote p, q { font-style: italic; }
+blockquote, blockquote p, q { 
+	font-style: italic;
+	margin: 0 0 20px 0; }
 		
 ul, ol {
 	line-height: 25px;
