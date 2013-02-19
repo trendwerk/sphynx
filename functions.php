@@ -108,92 +108,24 @@ add_action('init','tp_register_post_types');
 /**
  * @widgets Define widgets
  *
- * @widget Social media links from TrendPress theme options 
+ * @widget Contact information from TrendPress settings
  */
-class social_media extends WP_Widget {
-	function social_media() {
-		$widget_ops = array('classname' => 'social_media', 'description' => __('Social media widget that shows a list of social media network sites that the user specified.','tp'));
-		$control_ops = array('width' => 250, 'height' => 350);
-		$this->WP_Widget('social_media', __('Social media links','tp'), $widget_ops, $control_ops);
+class widget_tp_contact extends WP_Widget {
+	function widget_tp_contact() {
+		$this->WP_Widget('widget_tp_contact', __('Contact information','tp'), 'description='.__('Shows the specified contact information','tp'));
 	}
 	
 	function form($instance) {
-		$type = esc_attr($instance['type']);
-		
-		$options = array('Big icons with text', 'Small icons with text', 'Big icons without text', 'Small icons without text');
-		?>
-		<p>
-			<label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Type iconen','tp'); ?>:
-				<select class="widefat" id="<?php echo $this->get_field_id('type'); ?>" name="<?php echo $this->get_field_name('type'); ?>">
-					<?php foreach($options as $option) : ?>
-						<option <?php if($option == $type) echo 'selected="selected"'; ?>><?php echo $option; ?></option>
-					<?php endforeach; ?>
-				</select>
-			</label>
-		</p>
-		<?php
-	}
-	
-	function update($new_instance,$old_instance) {
-		$instance = $old_instance;
-		
-		$instance['type'] = $new_instance['type'];
-				
-		return $instance;
-	}
-
-	function widget($args,$instance) {
-		?>
-		<div class="widget social-media-widget 
-			<?php if($instance['type'] == 'Small icons with text') { 
-				echo 'small-icons'; } elseif ($instance['type'] == 'Big icons with text') {
-				echo 'great-icons';
-				} elseif ($instance['type'] == 'Big icons without text') {
-				echo 'great-icons-no-text';
-				} elseif ($instance['type'] == 'Small icons without text') {
-				echo 'small-icons-no-text';
-				}			
-			 ?>
-			">
-			<div class="inner">
-				<h3><?php _e('Keep in touch','tp'); ?></h3>
-				<ul>
-					<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
-					<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
-					<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
-					<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
-					<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>"><?php _e('Follow us on YouTube','tp') ?></a></li><?php } ?>
-					<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
-					<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
-				</ul>
-			</div>
-		</div>
-	    <?
-	}
-}
-add_action('widgets_init',create_function('','return register_widget("social_media");'));
-
-/**
- * @widget Contact information from TrendPress theme options
- */
-class contact extends WP_Widget {
-	function contact() {
-		$widget_ops = array('classname' => 'contact', 'description' => __('Widget that shows the user specified contact data.'));
-		$control_ops = array('width' => 250, 'height' => 350);
-		$this->WP_Widget('contact', __('Contact information','tp'), $widget_ops, $control_ops);
-	}
-	
-	function form($instance) {
-		printf(__('Change the contents of this widget on the <a href="%1$s">contact info</a> page.', 'tp'), admin_url('themes.php?page=tp-contact_info'));
+		printf(__('Change the contents of this widget on the <a href="%1$s">contact info</a> page.', 'tp'), admin_url('themes.php?page=tp-contact'));
 	
 		return 'noform';
 	}
 	
 	function widget() {
 		?>
-		<div class="widget contact-widget">
-			<div class="inner">
-				<h3><?php _e('Contact','tp'); ?></h3>
+		<div class="widget tp-contact">
+			<h3><?php _e('Contact','tp'); ?></h3>
+			<div class="widget-inner">
 				<p>
 					<?php 
 						if ($naam = get_option('tp-naam')) {
@@ -203,7 +135,7 @@ class contact extends WP_Widget {
 						} if ($postcode = get_option('tp-postcode')) {
 							echo $postcode.' ';
 						} if ($plaats = get_option('tp-plaats')) {
-							echo $plaats; 
+						 echo $plaats; 
 						}
 					?>
 				</p>
@@ -239,7 +171,72 @@ class contact extends WP_Widget {
 	    <?php
 	}
 }
-add_action('widgets_init',create_function('','return register_widget("contact");'));
+add_action('widgets_init',create_function('','return register_widget("widget_tp_contact");'));
+
+/**
+ * @widget Sociale media links from TrendPress settings
+ */
+class widget_tp_social extends WP_Widget {
+	function widget_tp_social() {
+		$this->WP_Widget('widget_tp_social', __('Social media links','tp'), 'description='.__('Shows links to specified social network profiles','tp'));
+	}
+	
+	function form($instance) {
+		$type = esc_attr($instance['type']);
+		
+		$options = array('Big icons with text', 'Small icons with text', 'Big icons without text', 'Small icons without text');
+		?>
+		<p>
+			<label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Icon types','tp'); ?>:
+				<select class="widefat" id="<?php echo $this->get_field_id('type'); ?>" name="<?php echo $this->get_field_name('type'); ?>">
+					<?php foreach($options as $option) : ?>
+						<option <?php if($option == $type) echo 'selected="selected"'; ?>><?php echo $option; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</label>
+		</p>
+		<?php
+	}
+	
+	function update($new_instance,$old_instance) {
+		$instance = $old_instance;
+		
+		$instance['type'] = $new_instance['type'];
+				
+		return $instance;
+	}
+
+	function widget($args,$instance) {
+		?>
+		<div class="widget widget-tp-social 
+			<?php if($instance['type'] == 'Small icons with text') { 
+				echo 'small-icons'; 
+				} elseif ($instance['type'] == 'Big icons with text') {
+				echo 'great-icons';
+				} elseif ($instance['type'] == 'Big icons without text') {
+				echo 'great-icons-no-text';
+				} elseif ($instance['type'] == 'Small icons without text') {
+				echo 'small-icons-no-text';
+				}
+			 ?>
+			">
+			<h3><?php _e('Keep in touch','tp'); ?></h3>
+			<div class="widget-inner">
+				<ul>
+					<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
+					<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
+					<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
+					<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
+					<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
+					<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
+					<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
+				</ul>
+			</div>
+		</div>
+	    <?php
+	}
+}
+add_action('widgets_init',create_function('','return register_widget("widget_tp_social");'));
 
 /**
  * @misc

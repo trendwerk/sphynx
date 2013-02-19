@@ -38,7 +38,7 @@ if ( post_password_required() ) { ?>
 		<p><?php _e('You must be','tp'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>"><?php _e('logged in','tp'); ?></a> <?php _e('to post a comment.','tp'); ?></p><?php else : ?>
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 			<?php if($user_ID) : ?>
-				<p><?php _e('Logged in as','tp'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="<?php _e('Log out','tp'); ?>"><?php _e('Log out &raquo;','tp'); ?></a></p>
+				<p><?php _e('Logged in as','tp'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="<?php _e('Log out','tp'); ?>"><?php _e('Log out','tp'); ?> &raquo;</a></p>
 			<?php else : ?>
 				<p><label for="author"><small><?php _e('Name:','tp'); ?> <?php if($req) echo "*"; ?></small></label><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" /></p>
 				<p><label for="email"><small><?php _e('Email:','tp'); ?> <?php if($req) echo "*"; ?></small></label><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" /></p>
