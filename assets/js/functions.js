@@ -56,15 +56,15 @@ jQuery(document).ready(function($){
 
 	if($('#mainnav ul.sf-menu').length > 0) {
 
-		$.getScript(templateurl+'/assets/script/superfish/supersubs.js', function() { });
+		$.getScript(templateurl+'/assets/js/superfish/supersubs.js', function() { });
 		
 	}
 
 	if($('#mainnav ul.sf-menu').length > 0) {
 
-		$.getScript(templateurl+'/assets/script/superfish/supersubs.js', function() {
+		$.getScript(templateurl+'/assets/js/superfish/supersubs.js', function() {
 
-			$.getScript(templateurl+'/assets/script/superfish/superfish.js', function() {
+			$.getScript(templateurl+'/assets/js/superfish/superfish.js', function() {
 
 				$("#mainnav ul.sf-menu").supersubs({ 
 		
