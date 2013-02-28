@@ -10,7 +10,6 @@
 		<title><?php wp_title('-'); ?></title>
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<?php wp_head();?>
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php bloginfo('name'); ?> RSS Feed" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -20,6 +19,7 @@
 		<!-- uncomment if you want to use Less...
 		<link rel="stylesheet/less" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_directory'); ?>/style.less" /> 
 		-->	
+		<?php wp_head();?>
 	</head>
 	<body <?php body_class(); ?>>
 		<header id="header" class="container">
