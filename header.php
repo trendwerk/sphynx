@@ -30,22 +30,22 @@
 				</div>
 				<nav id="topnav" class="navigation threecol">
 					<?php wp_nav_menu( array(
+						'container' => '',
+						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						'theme_location' => 'topnav',
 						'depth' => '0' )); 
-					?>					
+					?>			
 				</nav>
 				<div id="search" class="threecol">
 					<?php get_search_form(); ?>
 				</div>
-				<nav id="mainnav" class="navigation twelvecol">
-					<ul class="sf-menu">
-						<?php wp_nav_menu( array(
-							'theme_location' => 'mainnav',
-							'depth' => '0',
-							'container' => '',
-							'items_wrap' => '%3$s'
-						)); ?>
-					</ul>
+					<nav id="mainnav" class="navigation twelvecol">				
+					<?php wp_nav_menu( array(
+						'container' => '',
+						'items_wrap' => '<ul id="%1$s" class="%2$s sf-menu">%3$s</ul>',
+						'theme_location' => 'mainnav',
+						'depth' => '0' )); 
+					?>						
 				</nav>
 				<?php if ( is_front_page() ) { ?>
 					<!-- Enter code here for custom homepage header -->

@@ -10,6 +10,8 @@
 					</div>
 					<nav id="footernav" class="navigation">
 						<?php wp_nav_menu( array(
+							'container' => '',
+							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 							'theme_location' => 'footernav', 
 							'depth' => '1'
 						));?>
