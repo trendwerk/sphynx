@@ -71,6 +71,7 @@ class TPNav {
 		
 		if(isset($top_item)) {
 			//Base the submenu on the top parent
+			$submenu = new stdClass;
 			$submenu->ID = $top_item->ID;
 			$submenu->title = $top_item->title;
 			$submenu->url = $top_item->url;
@@ -136,7 +137,7 @@ class TPNav {
 		if($this->menu_items) {
 			foreach($this->menu_items as $menu_item) {
 				if($menu_item->ID == $id) {
-					
+					$parent = new stdClass;
 					$parent->ID = $menu_item->ID;
 					$parent->title = $menu_item->title;
 					$parent->url = $menu_item->url;
@@ -168,6 +169,7 @@ class TPNav {
 		foreach($this->menu_items as $menu_item) {
 			$child = ''; //Reset the child, apparently has to be done
 			if($menu_item->menu_item_parent == $id) {
+				$child = new stdClass;
 				$child->ID = $menu_item->ID;
 				$child->title = $menu_item->title;
 				$child->url = $menu_item->url;
