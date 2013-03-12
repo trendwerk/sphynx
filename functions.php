@@ -26,26 +26,18 @@ function tp_register_sidebars() {
 			'name' => __('Home','tp'),
 			'id' => 'home'
 		)));
-		
-		
-		
-		
-		
-		
-		
-		
-		register_sidebar(array(
+		register_sidebar(array_merge($default,array(
 			'name' => __('Page','tp'),
 			'id' => 'page'
-		));
-		register_sidebar(array(
+		)));
+		register_sidebar(array_merge($default,array(
 			'name' => __('Blog','tp'),
 			'id' => 'blog'
-		));
-		register_sidebar(array(
+		)));
+		register_sidebar(array_merge($default,array(
 			'name' => __('Footer','tp'),
 			'id' => 'footerid'
-		));
+		)));
 	}
 }
 add_action('init','tp_register_sidebars');
