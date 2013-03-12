@@ -33,33 +33,33 @@ class TPPlugins {
 		//Setup recommended plugins
 		$this->recommended = array(
 			'wordpress-seo' => array(
-				'name' => __('WordPress SEO by Yoast','tp'),
-				'description' => __('Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the WordPress SEO plugin by Yoast.','tp'),
+				'name' => 'WordPress SEO by Yoast',
+				'description' => __('Improve your SEO: Write better content and have a fully optimized WordPress site.','tp'),
 				'path' => 'wordpress-seo/wp-seo.php'
 			),
 			'google-analytics-for-wordpress' => array(
-				'name' => __('Google Analytics for WordPress','tp'),
-				'description' => __('This plugin makes it simple to add Google Analytics to your WordPress blog, adding lots of features, eg. custom variables and automatic clickout and download tracking.','tp'),
+				'name' => 'Google Analytics for WordPress',
+				'description' => __('Add Google Analytics to the website to track user statistics.','tp'),
 				'path' => 'google-analytics-for-wordpress/googleanalytics.php'
 			),
 			'w3-total-cache' => array(
-				'name' => __('W3 Total Cache','tp'),
+				'name' => 'W3 Total Cache',
 				'description' => __('Improve site performance and user experience via caching: browser, page, object, database, minify and content delivery network support.','tp'),
 				'path' => 'w3-total-cache/w3-total-cache.php'
 			),
 			'wp-smushit' => array(
-				'name' => __('WP Smush.it','tp'),
+				'name' => 'WP Smush.it',
 				'description' => __('Reduce image file sizes and improve performance using the Smush.it API within WordPress.','tp'),
 				'path' => 'wp-smushit/wp-smushit.php'
 			),
 			'search-everything' => array(
-				'name' => __('Search everything','tp'),
-				'description' => __('Increases WordPress\' default search functionality in three easy steps.','tp'),
+				'name' => 'Search everything',
+				'description' => __('Increases WordPress\' default search functionality.','tp'),
 				'path' => 'search-everything/search-everything.php',
 				'settings' => true
 			),
 			'tinymce-advanced' => array(
-				'name' => __('TinyMCE Advanced','tp'),
+				'name' => 'TinyMCE Advanced',
 				'description' => __('Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor.','tp'),
 				'path' => 'tinymce-advanced/tinymce-advanced.php',
 				'settings' => true
@@ -68,19 +68,34 @@ class TPPlugins {
 		
 		$this->optional = array(
 			'multiple-content-blocks' => array(
-				'name' => __('Multiple content blocks','tp'),
-				'description' => __('Allow for more content blocks in WordPress than just the one.','tp'),
+				'name' => 'Multiple content blocks',
+				'description' => __('Display more than one content field on WordPress pages and posts.','tp'),
 				'path' => 'multiple-content-blocks/multiple-content-blocks.php'
 			),
+			'social' => array(
+				'name' => 'Social',
+				'description' => __('Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter and Facebook as comments.','tp'),
+				'path' => 'social/social.php'
+			),
+			'capsman' => array(
+				'name' => 'Capability Manager',
+				'description' => __('A simple way to create and manage roles and capabilities.','tp'),
+				'path' => 'capsman/capsman.php'
+			),
 			'redirection' => array(
-				'name' => __('Redirection','tp'),
-				'description' => __('Redirection is a WordPress plugin to manage 301 redirections and keep track of 404 errors without requiring knowledge of Apache .htaccess files.','tp'),
+				'name' => 'Redirection',
+				'description' => __('Manage 301 redirections and keep track of 404 errors.','tp'),
 				'path' => 'redirection/redirection.php'
 			),
 			'wp-migrate-db' => array(
-				'name' => __('WP Migrate DB','tp'),
+				'name' => 'WP Migrate DB',
 				'description' => __('Exports your database, does a find and replace on URLs and file paths, then allows you to save it to your computer.','tp'),
 				'path' => 'wp-migrate-db/wp-migrate-db.php'
+			),
+			'ajax-thumbnail-rebuild' => array(
+				'name' => 'AJAX Thumbnail Rebuild',
+				'description' => __(' Rebuild all image thumbnails at once without script timeouts on your server.','tp'),
+				'path' => 'ajax-thumbnail-rebuild/ajax-thumbnail-rebuild.php'
 			)
 		);
 		

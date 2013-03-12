@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-10 13:44+0100\n"
-"PO-Revision-Date: 2012-10-10 13:45+0100\n"
+"POT-Creation-Date: 2013-03-12 13:47+0100\n"
+"PO-Revision-Date: 2013-03-12 13:50+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -20,45 +20,33 @@ msgid "Please activate a TrendPress child-theme to use this theme."
 msgstr ""
 "Om dit thema te gebruiken dient u een TrendPress child-theme te activeren."
 
-#: ../../assets/inc/class.TPNav.php:101 ../inc/class.TPNav.php:101
+#: ../../assets/inc/class.TPNav.php:102 ../inc/class.TPNav.php:102
 msgid "Search for"
 msgstr "Zoekresultaten voor"
 
-#: ../../assets/inc/class.TPNav.php:246
+#: ../../assets/inc/class.TPNav.php:110 ../inc/class.TPNav.php:110
+msgid "404"
+msgstr "404"
+
+#: ../../assets/inc/class.TPNav.php:254
 #: ../../assets/inc/admin-views/theme-options.php:20
-#: ../inc/class.TPNav.php:246 ../inc/admin-views/theme-options.php:20
+#: ../inc/class.TPNav.php:254 ../inc/admin-views/theme-options.php:20
 msgid "Contact"
 msgstr "Contact"
 
-#: ../../assets/inc/class.TPPlugins.php:36 ../inc/class.TPPlugins.php:36
-msgid "WordPress SEO by Yoast"
-msgstr "WordPress SEO door Yoast"
-
 #: ../../assets/inc/class.TPPlugins.php:37 ../inc/class.TPPlugins.php:37
 msgid ""
-"Improve your WordPress SEO: Write better content and have a fully optimized "
-"WordPress site using the WordPress SEO plugin by Yoast."
+"Improve your SEO: Write better content and have a fully optimized WordPress "
+"site."
 msgstr ""
-"Verbeter je WordPress SEO: Schrijf betere content en optimaliseer je "
-"WordPress site door gebruik te maken van de WordPress SEO plugin door Yoast."
-
-#: ../../assets/inc/class.TPPlugins.php:41 ../inc/class.TPPlugins.php:41
-msgid "Google Analytics for WordPress"
-msgstr "Google Analytics voor Wordpress"
+"Verbeter je SEO: Schrijf betere teksten en optimaliseer je WordPress voor "
+"zoekmachines."
 
 #: ../../assets/inc/class.TPPlugins.php:42 ../inc/class.TPPlugins.php:42
-msgid ""
-"This plugin makes it simple to add Google Analytics to your WordPress blog, "
-"adding lots of features, eg. custom variables and automatic clickout and "
-"download tracking."
+msgid "Add Google Analytics to the website to track user statistics."
 msgstr ""
-"Deze plugin maakt het mogelijk om Google Analytics toe te voegen aan je "
-"WordPress site. Extra features: instelbare variabele en automatische "
-"clickout en download tracking."
-
-#: ../../assets/inc/class.TPPlugins.php:46 ../inc/class.TPPlugins.php:46
-msgid "W3 Total Cache"
-msgstr "W3 Total Cache"
+"Google Analytics aan de website toevoegen om gebruikers statistieken bij te "
+"houden."
 
 #: ../../assets/inc/class.TPPlugins.php:47 ../inc/class.TPPlugins.php:47
 msgid ""
@@ -69,10 +57,6 @@ msgstr ""
 "(browser caching, page caching, object caching, database caching, "
 "bestandsverkleining en content delivery network ondersteuning)."
 
-#: ../../assets/inc/class.TPPlugins.php:51 ../inc/class.TPPlugins.php:51
-msgid "WP Smush.it"
-msgstr "WP Smush.it"
-
 #: ../../assets/inc/class.TPPlugins.php:52 ../inc/class.TPPlugins.php:52
 msgid ""
 "Reduce image file sizes and improve performance using the Smush.it API "
@@ -81,18 +65,9 @@ msgstr ""
 "Verklein bestandsgroottes van afbeeldingen en verbetert prestaties middels "
 "de Smush.it API van WordPress."
 
-#: ../../assets/inc/class.TPPlugins.php:56 ../inc/class.TPPlugins.php:56
-msgid "Search everything"
-msgstr "Search everything"
-
 #: ../../assets/inc/class.TPPlugins.php:57 ../inc/class.TPPlugins.php:57
-msgid "Increases WordPress' default search functionality in three easy steps."
-msgstr ""
-"Verbeterd de WordPress basis zoek functionaliteit in drie simpele stappen."
-
-#: ../../assets/inc/class.TPPlugins.php:62 ../inc/class.TPPlugins.php:62
-msgid "TinyMCE Advanced"
-msgstr "TinyMCE Advanced"
+msgid "Increases WordPress' default search functionality."
+msgstr "Verbeterd de WordPress basis zoek functionaliteit."
 
 #: ../../assets/inc/class.TPPlugins.php:63 ../inc/class.TPPlugins.php:63
 msgid "Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor."
@@ -100,49 +75,59 @@ msgstr ""
 "Voegt geavanceerde functionaliteiten toe aan TinyMCE, de WYSIWYG van "
 "WordPress."
 
-#: ../../assets/inc/class.TPPlugins.php:71 ../inc/class.TPPlugins.php:71
-msgid "Multiple content blocks"
-msgstr "Multiple content blocks"
-
 #: ../../assets/inc/class.TPPlugins.php:72 ../inc/class.TPPlugins.php:72
-msgid ""
-"Lets you use more than one content \"block\" on a template. You only have to "
-"insert one tag inside the template, so it's easy to use."
+msgid "Display more than one content field on WordPress pages and posts."
 msgstr ""
-"Laat je meer dan een content \"block\" per template gebruiken. Je hoeft "
-"enkel een tag te plaatsen binnen de template, dus is het gemakkelijk te "
-"gebruiken."
-
-#: ../../assets/inc/class.TPPlugins.php:76 ../inc/class.TPPlugins.php:76
-msgid "Redirection"
-msgstr "Redirections"
+"Geef meer dan één inhoud blok weer bij WordPress pagina's en berichten."
 
 #: ../../assets/inc/class.TPPlugins.php:77 ../inc/class.TPPlugins.php:77
 msgid ""
-"Redirection is a WordPress plugin to manage 301 redirections and keep track "
-"of 404 errors without requiring knowledge of Apache .htaccess files."
+"Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter "
+"and Facebook as comments."
 msgstr ""
-"Redirection is een WordPress plugin waar je 301 redirections mee kunt "
-"instellen en 404 errors kunt traceren zonder kennis te hoeven hebben van "
-"Apache .htaccess files."
+"Stuur berichten naar Twitter en/of Facebook, en geeft reacties via Twitter "
+"en Facebook weer als reacties."
 
-#: ../../assets/inc/class.TPPlugins.php:104
+#: ../../assets/inc/class.TPPlugins.php:82 ../inc/class.TPPlugins.php:82
+msgid "A simple way to create and manage roles and capabilities."
+msgstr "Een eenvoudige manier om rollen en rechten te beheren."
+
+#: ../../assets/inc/class.TPPlugins.php:87 ../inc/class.TPPlugins.php:87
+msgid "Manage 301 redirections and keep track of 404 errors."
+msgstr "Beheer 301 doorverwijzingen en houd 404 errors bij."
+
+#: ../../assets/inc/class.TPPlugins.php:92 ../inc/class.TPPlugins.php:92
+msgid ""
+"Exports your database, does a find and replace on URLs and file paths, then "
+"allows you to save it to your computer."
+msgstr ""
+"Exporteer je database, vervangt de URLs en bestandspaden en sla hem op op je "
+"computer."
+
+#: ../../assets/inc/class.TPPlugins.php:97 ../inc/class.TPPlugins.php:97
+msgid ""
+" Rebuild all image thumbnails at once without script timeouts on your server."
+msgstr ""
+"Maak alle miniatuur afbeeldingen opnieuw aan zonder script timeouts op je "
+"server."
+
+#: ../../assets/inc/class.TPPlugins.php:124
 #: ../../assets/inc/admin-views/recommended-plugins.php:3
 #: ../../assets/inc/admin-views/recommended-plugins.php:7
-#: ../inc/class.TPPlugins.php:104 ../inc/admin-views/recommended-plugins.php:3
+#: ../inc/class.TPPlugins.php:124 ../inc/admin-views/recommended-plugins.php:3
 #: ../inc/admin-views/recommended-plugins.php:7
 msgid "Recommended plugins"
 msgstr "Aanbevolen plugins "
 
-#: ../../assets/inc/class.TPPlugins.php:104 ../inc/class.TPPlugins.php:104
+#: ../../assets/inc/class.TPPlugins.php:124 ../inc/class.TPPlugins.php:124
 msgid "Recommended"
 msgstr "Aanbevolen"
 
-#: ../../assets/inc/class.TPPlugins.php:121 ../inc/class.TPPlugins.php:121
+#: ../../assets/inc/class.TPPlugins.php:141 ../inc/class.TPPlugins.php:141
 msgid "Recommended plugin <strong>activated</strong>."
 msgstr "Aanbevolen plugin <strong>geactiveerd</strong>."
 
-#: ../../assets/inc/class.TPPlugins.php:233 ../inc/class.TPPlugins.php:233
+#: ../../assets/inc/class.TPPlugins.php:253 ../inc/class.TPPlugins.php:253
 #, php-format
 msgid ""
 "The plugin <strong>%1$s</strong> has been reset to the recommended "
@@ -151,7 +136,7 @@ msgstr ""
 "De settings van de plugin <strong>%1$s</strong> hebben nu de aanbevolen "
 "TrendPress instellingen."
 
-#: ../../assets/inc/class.TPPlugins.php:280 ../inc/class.TPPlugins.php:280
+#: ../../assets/inc/class.TPPlugins.php:300 ../inc/class.TPPlugins.php:300
 #, php-format
 msgid "<a href=\"%1$s\">Return to recommended plugins</a>"
 msgstr "<a href=\"%1$s\">Ga terug naar aanbevolen plugins</a>"
@@ -347,6 +332,58 @@ msgstr "Toon RSS icoon in de sociale media widget"
 #: ../inc/admin-views/theme-options.php:111
 msgid "Save"
 msgstr "Opslaan"
+
+#~ msgid "WordPress SEO by Yoast"
+#~ msgstr "WordPress SEO door Yoast"
+
+#~ msgid "Google Analytics for WordPress"
+#~ msgstr "Google Analytics voor Wordpress"
+
+#~ msgid "W3 Total Cache"
+#~ msgstr "W3 Total Cache"
+
+#~ msgid "WP Smush.it"
+#~ msgstr "WP Smush.it"
+
+#~ msgid "Search everything"
+#~ msgstr "Search everything"
+
+#~ msgid "TinyMCE Advanced"
+#~ msgstr "TinyMCE Advanced"
+
+#~ msgid "Multiple content blocks"
+#~ msgstr "Multiple content blocks"
+
+#~ msgid "Redirection"
+#~ msgstr "Redirections"
+
+#~ msgid "AJAX Thumbnail Rebuild"
+#~ msgstr "AJAX Thumbnail Rebuild"
+
+#~ msgid ""
+#~ "This plugin makes it simple to add Google Analytics to your WordPress "
+#~ "blog, adding lots of features, eg. custom variables and automatic "
+#~ "clickout and download tracking."
+#~ msgstr ""
+#~ "Deze plugin maakt het mogelijk om Google Analytics toe te voegen aan je "
+#~ "WordPress site. Extra features: instelbare variabele en automatische "
+#~ "clickout en download tracking."
+
+#~ msgid ""
+#~ "Lets you use more than one content \"block\" on a template. You only have "
+#~ "to insert one tag inside the template, so it's easy to use."
+#~ msgstr ""
+#~ "Laat je meer dan een content \"block\" per template gebruiken. Je hoeft "
+#~ "enkel een tag te plaatsen binnen de template, dus is het gemakkelijk te "
+#~ "gebruiken."
+
+#~ msgid ""
+#~ "Redirection is a WordPress plugin to manage 301 redirections and keep "
+#~ "track of 404 errors without requiring knowledge of Apache .htaccess files."
+#~ msgstr ""
+#~ "Redirection is een WordPress plugin waar je 301 redirections mee kunt "
+#~ "instellen en 404 errors kunt traceren zonder kennis te hoeven hebben van "
+#~ "Apache .htaccess files."
 
 #~ msgid "Theme options"
 #~ msgstr "Thema opties"

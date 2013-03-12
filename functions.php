@@ -21,6 +21,7 @@ include('assets/inc/functions.debug.php');
 include('assets/inc/functions.js-constants.php');
 include('assets/inc/functions.pagination.php');
 include('assets/inc/functions.search.php');
+include('assets/inc/functions.sidebars.php');
 include('assets/inc/functions.theme-options.php');
 
 include('assets/inc/widget.submenu.php');
