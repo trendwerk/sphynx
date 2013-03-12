@@ -264,7 +264,6 @@ body { background: #EEE; }
 					font-size: 13px;
 					line-height: 20px;
 					width: auto;
-					
 					border-bottom: 1px solid #999; }
 					
 						.widget ul li a {
@@ -272,9 +271,7 @@ body { background: #EEE; }
 							width: auto;
 							padding: 5px;
 						}
-						
-						.widget ul li a:hover {  }
-					
+										
 						.widget ul li ul { display: none; }
 		
 /*	GLOBAL: FOOTER
