@@ -187,7 +187,7 @@ class widget_tp_social extends WP_Widget {
 				<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
 				<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
 			</ul>
-		<?php echo $after_title; ?>
+		<?php echo $after_widget; ?>
 	<?php
 	}
 }

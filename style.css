@@ -291,7 +291,7 @@ body { background: #EEE; }
 
 	#footer .widget {
 		background: none;
-		width: 220px;
+		width: 180px;
 		margin: 10px;
 		float: left; }
 		
@@ -430,7 +430,7 @@ body { background: #EEE; }
 			
 			.sidebar .widget,
 			#footer .sidebar .widget {
-				width: 300px;
+				width: 260px;
 				margin: 10px; }
 	
 	/* Theme specific styles */	
@@ -460,7 +460,7 @@ body { background: #EEE; }
 			float: left; }
 			
 			.sidebar .widget {
-				width: 300px;
+				width: 260px;
 				margin: 10px; }
 	
 	/* Theme specific styles */
