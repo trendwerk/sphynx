@@ -8,38 +8,44 @@
  */
 function tp_register_sidebars() {
 	if(function_exists('register_sidebar')) {
-		register_sidebar(array(
-			'name' => __('Home','tp'),
-			'id' => 'home',
-			'before_widget' => '<div class="widget %2$s"><div class="inner">',
-			'after_widget' => '</div></div>',
-			'before_title' => '<h3>',
+		
+		/**
+		 * @sidebars Default sidebar setings
+		 */
+		$default = array(
+			'before_widget' => '<div class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widgettitle">',
 			'after_title' => '</h3>'
-		));
+		);
+		
+		/**
+		 * @sidebars Register sidebars
+		 */
+		register_sidebar(array_merge($default,array(
+			'name' => __('Home','tp'),
+			'id' => 'home'
+		)));
+		
+		
+		
+		
+		
+		
+		
+		
 		register_sidebar(array(
 			'name' => __('Page','tp'),
-			'id' => 'page',
-			'before_widget' => '<div class="widget %2$s"><div class="inner">',
-			'after_widget' => '</div></div>',
-			'before_title' => '<h3>',
-			'after_title' => '</h3>'
+			'id' => 'page'
 		));
 		register_sidebar(array(
 			'name' => __('Blog','tp'),
-			'id' => 'blog',
-			'before_widget' => '<div class="widget %2$s"><div class="inner">',
-			'after_widget' => '</div></div>',
-			'before_title' => '<h3>',
-			'after_title' => '</h3>'
+			'id' => 'blog'
 		));
 		register_sidebar(array(
 			'name' => __('Footer','tp'),
-			'id' => 'footerid',
-			'before_widget' => '<div class="%2$s widget"><div class="inner">',
-			'after_widget' => '</div></div>',
-			'before_title' => '<h3>',
-			'after_title' => '</h3>'
-		));	
+			'id' => 'footerid'
+		));
 	}
 }
 add_action('init','tp_register_sidebars');
@@ -58,27 +64,29 @@ if (function_exists('register_nav_menu')) {
  */
 function tp_load_scripts() {
 
-	// jQuery through Google's CDN
-	
+	/**
+	 * @scripts jQuery through Google's CDN
+	 */
 	wp_deregister_script('jquery');
 	wp_register_script('jquery','http://code.jquery.com/jquery-latest.min.js',array(),null,false);
 
-	// register scripts
-	
+	/**
+	 * @scripts register scripts
+	 */
 	wp_register_script('functions',get_stylesheet_directory_uri().'/assets/js/functions.js',array('jquery'));
 	wp_register_script('modernizr',get_template_directory_uri().'/assets/js/modernizr/modernizr.lite.js');
 	wp_register_script('cycle',get_template_directory_uri().'/assets/js/cycle/cycle.all.js',array('jquery'));
 	wp_register_script('fancybox',get_template_directory_uri().'/assets/js/fancybox/jquery.fancybox.js',array('jquery'));
 	
-	// enqueue the scripts
-	
+	/**
+	 * @scripts enqueue the scripts
+	 */
 	wp_enqueue_script('functions');
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('cycle');
 	wp_enqueue_script('fancybox');
 
 	/*
-	
 	Remove the active comment if you want to use less for development
 
 	DEVELOPMENT WITH LESS
@@ -88,20 +96,16 @@ function tp_load_scripts() {
 
 	wp_register_script('less',get_stylesheet_directory_uri().'/assets/js/less-1.3.0.min.js');	
 	wp_enqueue_script('less');
-	
 	*/
 	
 	/*
-	
 	PRODUCTION WITH LESS
 	--------------------
 	1. Make sure you activate/install the WP-LESS (found here: http://wordpress.org/extend/plugins/wp-less)
 	2. Uncomment the code below and WP-LESS will parse the .less file you define below
 	
 	wp_enqueue_style('less-to-css', get_stylesheet_directory_uri().'/style.less');
-	
 	*/
-	
 }
 
 add_action('wp_enqueue_scripts','tp_load_scripts');
@@ -147,49 +151,47 @@ class widget_tp_contact extends WP_Widget {
 	function widget() {
 		?>
 		<div class="widget tp-contact">
-			<h3><?php _e('Contact','tp'); ?></h3>
-			<div class="widget-inner">
-				<p>
-					<?php 
-						if ($naam = get_option('tp-naam')) {
-							echo '<strong>'.$naam.'</strong><br />';
-						} if ($adres = get_option('tp-adres')) { 
-							echo $adres.'<br />'; 
-						} if ($postcode = get_option('tp-postcode')) {
-							echo $postcode.' ';
-						} if ($plaats = get_option('tp-plaats')) {
-						 echo $plaats; 
+			<h3 class="widgettitle"><?php _e('Contact','tp'); ?></h3>
+			<p>
+				<?php 
+					if ($naam = get_option('tp-naam')) {
+						echo '<strong>'.$naam.'</strong><br />';
+					} if ($adres = get_option('tp-adres')) { 
+						echo $adres.'<br />'; 
+					} if ($postcode = get_option('tp-postcode')) {
+						echo $postcode.' ';
+					} if ($plaats = get_option('tp-plaats')) {
+					 echo $plaats; 
+					}
+				?>
+			</p>
+			<p>
+				<?php
+					if ($email = get_option('tp-email')) { 
+						echo'<span>'.__('E-mail','tp').': </span><a href="mailto:'.$email.'">'.$email.'</a><br />';
+					} if ($telefoon = get_option('tp-telefoon')) { 
+						echo '<span>'.__('Telephone','tp').': </span>'.$telefoon.'<br />';
+					} if ($fax = get_option('tp-fax')) { 
+						echo '<span>'.__('Fax','tp').': </span>'.$fax;
+					} 
+				?>
+			</p>
+			<p>
+				<?php
+					if ($kvk = get_option('tp-kvk')) {
+						echo '<span>'.__('CC No','tp').': </span>'.$kvk.'<br />';
+					} if ($btw = get_option('tp-btw')) {
+						echo '<span>'.__('VAT No','tp').': </span>'.$btw.'<br />';
+					} if ($banknr = get_option('tp-banknr')) {
+						if ($bank = !get_option('tp-bank')) {
+							$bank = "Bank";
+						} else {
+							$bank = get_option('tp-bank');
 						}
-					?>
-				</p>
-				<p>
-					<?php
-						if ($email = get_option('tp-email')) { 
-							echo'<span>'.__('E-mail','tp').': </span><a href="mailto:'.$email.'">'.$email.'</a><br />';
-						} if ($telefoon = get_option('tp-telefoon')) { 
-							echo '<span>'.__('Telephone','tp').': </span>'.$telefoon.'<br />';
-						} if ($fax = get_option('tp-fax')) { 
-							echo '<span>'.__('Fax','tp').': </span>'.$fax;
-						} 
-					?>
-				</p>
-				<p>
-					<?php
-						if ($kvk = get_option('tp-kvk')) {
-							echo '<span>'.__('CC No','tp').': </span>'.$kvk.'<br />';
-						} if ($btw = get_option('tp-btw')) {
-							echo '<span>'.__('VAT No','tp').': </span>'.$btw.'<br />';
-						} if ($banknr = get_option('tp-banknr')) {
-							if ($bank = !get_option('tp-bank')) {
-								$bank = "Bank";
-							} else {
-								$bank = get_option('tp-bank');
-							}
-							echo '<span>'.$bank.': </span>'.$banknr;
-						} 
-					?>
-				</p>
-			</div>
+						echo '<span>'.$bank.': </span>'.$banknr;
+					} 
+				?>
+			</p>
 		</div>
 	    <?php
 	}
@@ -243,18 +245,16 @@ class widget_tp_social extends WP_Widget {
 				}
 			 ?>
 			">
-			<h3><?php _e('Keep in touch','tp'); ?></h3>
-			<div class="widget-inner">
-				<ul>
-					<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
-					<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
-					<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
-					<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
-					<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
-					<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
-					<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
-				</ul>
-			</div>
+			<h3 class="widgettitle"><?php _e('Keep in touch','tp'); ?></h3>
+			<ul>
+				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
+				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
+				<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
+				<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
+				<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
+				<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
+				<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
+			</ul>
 		</div>
 	    <?php
 	}
