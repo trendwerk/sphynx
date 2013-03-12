@@ -179,13 +179,13 @@ class widget_tp_social extends WP_Widget {
 			?>">
 			<?php echo $before_title . $title . $after_title; ?>
 			<ul>
-				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
-				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
-				<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
-				<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
-				<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
-				<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
-				<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
+				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
+				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
+				<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
+				<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
+				<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
+				<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
+				<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
 			</ul>
 		<?php echo $after_title; ?>
 	<?php
