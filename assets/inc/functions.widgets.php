@@ -245,7 +245,7 @@ add_action('widgets_init',create_function('','return register_widget("widget_fb_
  */
 class widget_title_content_button extends WP_Widget {
 	function widget_title_content_button() {
-		$this->WP_Widget('widget_title_content_button', __('Text with button','tp'), 'description='.__('Editable title, content & button','tp'));
+		$this->WP_Widget('widget_title_content_button', __('Text with button','tp'), 'description='.__('Editable title, tekst and button','tp'));
 	}
 	
 	function add_js() {
