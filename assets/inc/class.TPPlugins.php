@@ -30,6 +30,24 @@ class TPPlugins {
 		add_action('admin_print_scripts', array($this,'include_js'));
 		add_action('admin_print_styles', array($this,'include_css'));
 		
+		//Initialize variables
+		add_action('init',array($this,'init_vars'),1);
+		
+		//Check if 'Apply settings' has been clicked
+		add_action('init',array($this,'handle_settings'));
+		
+		//Redirect after activation
+		add_action('init',array($this,'redirect_after_activation'));
+		
+		//Show activation message
+		if(isset($_GET['activated']) && $_GET['page'] == 'tp-recommended-plugins') add_action('admin_notices',array($this,'show_plugin_activated'));
+		
+		//Add recommended link after install
+		add_filter('update_plugin_complete_actions',array($this,'add_recommended_link'));
+		add_filter('install_plugin_complete_actions',array($this,'add_recommended_link'));
+	}
+	
+	function init_vars() {
 		//Setup recommended plugins
 		$this->recommended = array(
 			'wordpress-seo' => array(
@@ -99,21 +117,8 @@ class TPPlugins {
 			)
 		);
 		
-		//Check if 'Apply settings' has been clicked
-		add_action('init',array($this,'handle_settings'));
-		
 		//Register activation hooks
 		$this->setup_activation();
-		
-		//Redirect after activation
-		add_action('init',array($this,'redirect_after_activation'));
-		
-		//Show activation message
-		if(isset($_GET['activated']) && $_GET['page'] == 'tp-recommended-plugins') add_action('admin_notices',array($this,'show_plugin_activated'));
-		
-		//Add recommended link after install
-		add_filter('update_plugin_complete_actions',array($this,'add_recommended_link'));
-		add_filter('install_plugin_complete_actions',array($this,'add_recommended_link'));
 	}
 	
 	
@@ -259,7 +264,7 @@ class TPPlugins {
 	 */
 	function setup_activation() {
 		add_action('activate_plugin',array($this,'setup_exceptions'));
-		
+
 		foreach(array_merge($this->recommended,$this->optional) as $name=>$plugin) {
 			register_activation_hook($plugin['path'],array($this,'plugin_activated'));
 		}
