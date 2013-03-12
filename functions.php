@@ -7,38 +7,18 @@
  * @sidebars Register the sidebars
  */
 function tp_register_sidebars() {
-	if(function_exists('register_sidebar')) {
-		
-		/**
-		 * @sidebars Default sidebar setings
-		 */
-		$default = array(
-			'before_widget' => '<div class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="widgettitle">',
-			'after_title' => '</h3>'
-		);
-		
-		/**
-		 * @sidebars Register sidebars
-		 */
-		register_sidebar(array_merge($default,array(
-			'name' => __('Home','tp'),
-			'id' => 'home'
-		)));
-		register_sidebar(array_merge($default,array(
-			'name' => __('Page','tp'),
-			'id' => 'page'
-		)));
-		register_sidebar(array_merge($default,array(
-			'name' => __('Blog','tp'),
-			'id' => 'blog'
-		)));
-		register_sidebar(array_merge($default,array(
-			'name' => __('Footer','tp'),
-			'id' => 'footerid'
-		)));
-	}
+	tp_register_sidebar('home',array(
+		'name' => __('Home','tp')
+	));
+	tp_register_sidebar('page',array(
+		'name' => __('Page','tp')
+	));
+	tp_register_sidebar('blog',array(
+		'name' => __('Blog','tp')
+	));
+	tp_register_sidebar('footerid',array(
+		'name' => __('Footer','tp')
+	));
 }
 add_action('init','tp_register_sidebars');
 
