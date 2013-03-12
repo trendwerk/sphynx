@@ -16,7 +16,7 @@ class TPMobileNav {
 	 * Add select box
 	 */
 	function add($nav_menu,$args) {
-		if($args->mobile) :
+		if(isset($args->mobile)) :
 			$this->nav = new TPNav($args->theme_location);
 			
 			$nav_menu .= '<select class="tp-mobile-nav">';

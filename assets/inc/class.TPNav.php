@@ -99,6 +99,7 @@ class TPNav {
 			array_reverse($breadcrumbs);
 		} else if(get_query_var('s')) {
 			//Search page exception
+			$breadcrumb = new stdClass;
 			$breadcrumb->title = __('Search for','tp').' &quot;'.get_search_query().'&quot;';
 			$breadcrumb->url = get_option('siteurl').'/?s='.get_query_var('s');
 			
@@ -107,6 +108,7 @@ class TPNav {
 			$breadcrumbs = array($breadcrumb);
 		} else if(is_404()) {
 			//404
+			$breadcrumb = new stdClass;
 			$breadcrumb->title = __('404','tp');
 			$breadcrumb->is_current = true;
 			
@@ -114,7 +116,8 @@ class TPNav {
 		} else {
 			//There are no breadcrumbs, show Home > {Current item}
 			global $post;
-
+			
+			$breadcrumb = new stdClass;
 			$breadcrumb->ID = $post->ID;
 			$breadcrumb->title = $post->post_title;
 			$breadcrumb->url = get_permalink($post->ID);
