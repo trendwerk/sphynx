@@ -45,6 +45,7 @@ class submenu extends WP_Widget {
 	}
 	
 	function widget($args,$instance) {		
+		extract($args);
 		global $post,$wpdb;
 		
 		$nav = new TPNav();
@@ -53,10 +54,11 @@ class submenu extends WP_Widget {
 		if(isset($submenu->children)) :
 			if($submenu->children) :
 			?>
-				<div class="widget submenu">
+				<?php echo $before_widget; ?>
+					<?php echo $before_title . $title . $after_title; ?>
 					<h3 class="widgettitle"><a href="<?php echo $submenu->url; ?>"><?php echo $submenu->title; ?></a></h3>
 					<?php $this->show_children($submenu); ?>
-				</div>
+				<?php echo $after_widget; ?>
 		    <?php
 		    endif;
 	    endif;
@@ -78,9 +80,10 @@ class widget_tp_contact extends WP_Widget {
 	}
 	
 	function widget() {
-		?>
-		<div class="widget tp-contact">
-			<h3 class="widgettitle"><?php _e('Contact','tp'); ?></h3>
+		extract($args);
+	?>
+		<?php echo $before_widget; ?>
+			<?php echo $before_title . $title . $after_title; ?>
 			<p>
 				<?php 
 					if ($naam = get_option('tp-naam')) {
@@ -121,8 +124,8 @@ class widget_tp_contact extends WP_Widget {
 					} 
 				?>
 			</p>
-		</div>
-	    <?php
+		<?php echo $after_widget; ?>
+	<?php
 	}
 }
 add_action('widgets_init',create_function('','return register_widget("widget_tp_contact");'));
@@ -161,8 +164,9 @@ class widget_tp_social extends WP_Widget {
 	}
 
 	function widget($args,$instance) {
-		?>
-		<div class="widget widget-tp-social 
+		extract($args);
+	?>
+		<div class="widget widget_tp_social 
 			<?php if($instance['type'] == 'Small icons with text') { 
 				echo 'small-icons'; 
 				} elseif ($instance['type'] == 'Big icons with text') {
@@ -172,9 +176,8 @@ class widget_tp_social extends WP_Widget {
 				} elseif ($instance['type'] == 'Small icons without text') {
 				echo 'small-icons-no-text';
 				}
-			 ?>
-			">
-			<h3 class="widgettitle"><?php _e('Keep in touch','tp'); ?></h3>
+			?>">
+			<?php echo $before_title . $title . $after_title; ?>
 			<ul>
 				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
 				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
@@ -184,8 +187,8 @@ class widget_tp_social extends WP_Widget {
 				<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
 				<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
 			</ul>
-		</div>
-	    <?php
+		<?php echo $after_title; ?>
+	<?php
 	}
 }
 add_action('widgets_init',create_function('','return register_widget("widget_tp_social");'));
@@ -229,13 +232,14 @@ class widget_fb_like_box extends WP_Widget {
 	function widget($args,$instance) {		
 		$title = apply_filters('widget_title', $instance['title']);
 		$url = $instance['url'];
-		?>
-		<div class="widget fb-like-box">
-			<h3 class="widgettitle"><?php echo $title; ?></h3>
+		extract($args);
+	?>
+		<?php echo $before_widget; ?>
+			<?php echo $before_title . $title . $after_title; ?>
 			<p><?php echo $content; ?></p>
 			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-show-faces="true" data-stream="false" data-header="false"></div>
-		</div>
-	    <?php
+		<?php echo $after_widget; ?>
+	<?php
 	}
 }
 add_action('widgets_init',create_function('','return register_widget("widget_fb_like_box");'));
@@ -358,10 +362,10 @@ class widget_title_content_button extends WP_Widget {
 		$button_link = $instance['button_link'];
 		$link_type = $instance['link_type'];
 		$external = $instance['external'];
+		extract($args);
 	?>
-
-		<div class="widget widget-text-image-button">
-			<h3 class="widgettitle"><?php echo $title; ?></h3>
+		<?php echo $before_widget; ?>
+			<?php echo $before_title . $title . $after_title; ?>
 		    <?php if($image) : ?>
 		    	<div class="featured-widget-image">
 		    		<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" />
@@ -380,8 +384,8 @@ class widget_title_content_button extends WP_Widget {
 		    		</a>
 		    	</a>
 	    	<?php } ?>
-		</div>
-	    <?php
+		<?php echo $after_widget; ?>
+	<?php
 	}
 }
 add_action('widgets_init',create_function('','return register_widget("widget_title_content_button");'));
@@ -569,29 +573,30 @@ class widget_title_image_content_button extends WP_Widget {
 		$button_link = $instance['button_link'];
 		$link_type = $instance['link_type'];
 		$external = $instance['external'];
+		extract($args);
 	?>
-		<div class="widget widget-text-image-button">
-			<h3 class="widgettitle"><?php echo $title; ?></h3>
-		    <?php if($image) : ?>
+		<?php echo $before_widget; ?>
+			<?php echo $before_title . $title . $after_title; ?>
+			<?php if($image) : ?>
 		    	<div class="featured-widget-image">
 		    		<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" />
 		    	</div>
 		    <?php endif; ?>
-			<?php if($content) : ?>
+		    <?php if($content) : ?>
 				<p>
 					<?php echo $content; ?>
 				</p>
-			<?php endif; ?>		
-		    <?php if($show_button) { ?>
+			<?php endif; ?>
+			<?php if($show_button) : ?>
 		    	<p>
 		    		<a class="<?php echo $link_type; ?>" href="<?php echo $button_link; ?>"
 		    			<?php if($external) : echo 'rel="external"'; endif; ?>>
 		    			<?php echo $button_text; ?>
 		    		</a>
 		    	</a>
-	    	<?php } ?>
-		</div>
-	    <?php
+	    	<?php endif; ?>
+    	<?php echo $after_widget; ?>
+    <?php
 	}
 }
 add_action('widgets_init',create_function('','return register_widget("widget_title_image_content_button");'));
