@@ -55,8 +55,10 @@ class submenu extends WP_Widget {
 			if($submenu->children) :
 			?>
 				<?php echo $before_widget; ?>
-					<?php echo $before_title . $title . $after_title; ?>
-					<h3 class="widgettitle"><a href="<?php echo $submenu->url; ?>"><?php echo $submenu->title; ?></a></h3>
+					<?php echo $before_title; ?>
+						<a href="<?php echo $submenu->url; ?>"><?php echo $submenu->title; ?></a>
+					<?php echo $after_title; ?>
+					
 					<?php $this->show_children($submenu); ?>
 				<?php echo $after_widget; ?>
 		    <?php
