@@ -8,6 +8,7 @@
  * @includes Include the following PHP files
  */
  
+include('assets/inc/class.TPMobileNav.php');
 include('assets/inc/class.TPNav.php');
 include('assets/inc/class.TPPlugins.php');
 include('assets/inc/class.TPUserCaps.php');
