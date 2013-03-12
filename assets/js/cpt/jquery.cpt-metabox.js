@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
-	$('input#submit-custom-post-type').click(function() {
+	$('#custom-post-types img.waiting').hide();
 	
+	$('input#submit-custom-post-type').click(function() {
 		//Bepaal de parameters
 		processMethod = wpNavMenu.addMenuItemToBottom;
 		

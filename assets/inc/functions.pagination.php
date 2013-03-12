@@ -82,10 +82,10 @@ function tp_pagination($args = null) {
 	}
 
 	if ($echo) {
-		echo $output;
+		echo isset($output) ? $output : '';
 	}
 
-	return $output;
+	return isset($output) ? $output : '';
 }
 
 /**
