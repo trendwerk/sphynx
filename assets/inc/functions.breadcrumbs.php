@@ -39,7 +39,7 @@ function tp_breadcrumbs($separator='>',$menu='mainnav') {
 	}
 	
 	//Single post or CPT and author pages or taxonomy pages have some
-	if(is_single()) {
+	if(is_single() && !is_single($breadcrumbs[0]->ID)) {
 		tp_separator($separator);
 		echo '<span class="current">'.$post->post_title.'</span>';
 	} else if(is_category()) {
@@ -50,10 +50,6 @@ function tp_breadcrumbs($separator='>',$menu='mainnav') {
 		tp_separator($separator);
 		$author = get_userdata(get_query_var('author'));
 		echo '<span class="current">'.$author->first_name.' '.$author->last_name.'</span>';
-	} else if(get_query_var('term') && get_query_var('taxonomy')) {
-		tp_separator($separator);
-		$term = get_term_by('slug',get_query_var('term'),get_query_var('taxonomy') && !get_query_var('s'));
-		echo '<span class="current">'.$term->name.'</span>';
 	}
 }
 

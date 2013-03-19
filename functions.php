@@ -8,6 +8,7 @@
  * @includes Include the following PHP files
  */
  
+include('assets/inc/class.TPMobileNav.php');
 include('assets/inc/class.TPNav.php');
 include('assets/inc/class.TPPlugins.php');
 include('assets/inc/class.TPUserCaps.php');
@@ -20,10 +21,10 @@ include('assets/inc/functions.custom-post-type.php');
 include('assets/inc/functions.debug.php');
 include('assets/inc/functions.js-constants.php');
 include('assets/inc/functions.pagination.php');
+include('assets/inc/functions.scripts.php');
 include('assets/inc/functions.search.php');
+include('assets/inc/functions.sidebars.php');
 include('assets/inc/functions.theme-options.php');
-
-include('assets/inc/widget.submenu.php');
 
 /**
  * @language Load the textdomain 'tp'

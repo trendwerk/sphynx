@@ -99,6 +99,7 @@ class TPNav {
 			array_reverse($breadcrumbs);
 		} else if(get_query_var('s')) {
 			//Search page exception
+			$breadcrumb = new stdClass;
 			$breadcrumb->title = __('Search for','tp').' &quot;'.get_search_query().'&quot;';
 			$breadcrumb->url = get_option('siteurl').'/?s='.get_query_var('s');
 			
@@ -107,14 +108,16 @@ class TPNav {
 			$breadcrumbs = array($breadcrumb);
 		} else if(is_404()) {
 			//404
+			$breadcrumb = new stdClass;
 			$breadcrumb->title = __('404','tp');
 			$breadcrumb->is_current = true;
 			
 			$breadcrumbs = array($breadcrumb);
-		} else {
+		} else if(!is_tax()) {
 			//There are no breadcrumbs, show Home > {Current item}
 			global $post;
-
+			
+			$breadcrumb = new stdClass;
 			$breadcrumb->ID = $post->ID;
 			$breadcrumb->title = $post->post_title;
 			$breadcrumb->url = get_permalink($post->ID);
@@ -123,6 +126,16 @@ class TPNav {
 			
 			$breadcrumbs = array($breadcrumb);
 		}
+		
+		if(is_tax()) {
+			$term = get_term_by('slug',get_query_var('term'),get_query_var('taxonomy'));
+			
+			$breadcrumb = new stdClass;
+			$breadcrumb->title = $term->name;
+			$breadcrumb->is_current = true;
+			
+			$breadcrumbs[] = $breadcrumb;
+		} 
 					
 		return $breadcrumbs;
 	}
@@ -260,7 +273,7 @@ class TPNav {
 			//404
 			
 		} else {
-			if(!get_query_var('post_type') && !get_query_var('taxonomy')) {				
+			if(!get_query_var('post_type') && !get_query_var('taxonomy')) {
 				//Blog or single blog item
 				$this->current_item = $this->get_nav_id_by_page_id(get_option('page_for_posts'));
 			} else {

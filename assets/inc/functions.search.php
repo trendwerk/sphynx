@@ -4,21 +4,6 @@
  */
 
 /**
- * Highlight search results in titles
- *
- * @param string $title
- */
-function tp_search_title_highlight($title) {
-	if($query = get_search_query()) {
-	    $keys = implode('|', array_filter(explode(' ', $query)));
-	    $title = preg_replace('/(' . $keys .')/iu', '<span class="search-highlight">\0</span>',$title);
-    }
-
-    return $title;
-}
-if(!is_admin()) add_filter('the_title','tp_search_title_highlight');
-
-/**
  * Highlight search results in excerpts
  *
  * @param string $excerpt
