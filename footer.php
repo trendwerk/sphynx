@@ -6,7 +6,9 @@
 				</aside>
 				<div id="credits" class="twelvecol">
 					<div id="copyright">
-						<p>&copy; Copyright <?php echo date("Y"); ?> - <?php bloginfo('name'); ?> <?php ?></p>
+						<p>
+							&copy; <?php _e('Copyright','tp'); ?> <?php echo date('Y'); ?> - <?php echo ($name = get_option('tp-naam')) ? $name : get_bloginfo('name'); ?>
+						</p>
 					</div>
 					<nav id="footernav" class="navigation">
 						<?php wp_nav_menu( array(
@@ -22,7 +24,7 @@
 		<?php wp_footer(); ?>
 		<!--[if IE 6]>
 			<div class="ie6">
-				<p><?php _e('You are using a very old version of Internet Explorer. For the best experience please upgrade (for free) to a modern browser:' ,'tp'); ?>
+				<p><?php _e('You are using a very old version of Internet Explorer. For the best experience please upgrade (for free) to a modern browser:','tp'); ?>
 				<ul>
 					<li><a href="http://www.mozilla.com/" rel="nofollow external">Firefox</a></li>
 					<li><a href="http://www.google.com/chrome/" rel="nofollow external">Google Chrome</a></li>
