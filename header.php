@@ -16,9 +16,7 @@
 		<link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_url')?>/assets/img/favicon/favicon.ico" />
 		<link rel="stylesheet" type="text/css" media="print" href="<?php echo get_template_directory_uri() ?>/assets/css/print.css" />
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_url'); ?>" />
-		<!-- uncomment if you want to use Less...
 		<link rel="stylesheet/less" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_directory'); ?>/style.less" /> 
-		-->	
 		<?php wp_head();?>
 	</head>
 	<body <?php body_class(); ?>>
