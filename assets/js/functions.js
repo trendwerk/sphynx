@@ -37,14 +37,7 @@ jQuery(document).ready(function($){
 		main navigation in a select list if on small screen
 		widths. also remove some base width and height image
 		settings for fluid images. */
-			
-		// load tinynav.js, it turns the main nav into a <select> for mobile purposes
-	
-		$(function () {
-	
-			$.getScript(templateurl+'/assets/js/tinynav/tinynav.min.js', function() { $("ul.sf-menu").tinyNav({active: 'selected'});});	    
-	
-		});
+		
 	
 		// remove element height and width for responsiveness
 			

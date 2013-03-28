@@ -1,5 +1,17 @@
 // MIXINS
 
+.maxDepth (@index) when (@index > 0) {
+	(~".depth@{index}") {
+		text-indent: @index * 15px - 15px;
+	}
+	.maxDepth(@index - 1);
+}
+.maxDepth (0) {}
+
+#mainnav select {
+	.maxDepth(10);
+}
+
 .border-radius, .border-radiuses {
 	-moz-background-clip: padding;
 	-webkit-background-clip: padding-box;
