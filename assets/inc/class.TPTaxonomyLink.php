@@ -139,5 +139,15 @@ class TPTaxonomyLink {
 			endif;
 		endif;
 	}
+	
+	/**
+	 * Retrieve the post that is linked to a term
+	 *
+	 * @param object $term The linked term
+	 */
+	function get_post($term) {
+		$posts = get_posts('post_type=any&meta_key=term_id&term_id='.$term->term_id.'&numberposts=1');
+		if(is_object($posts[0])) return $posts[0];
+	}
 }
 ?>
