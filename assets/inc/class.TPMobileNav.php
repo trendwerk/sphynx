@@ -9,7 +9,15 @@ class TPMobileNav {
 	var $depth;
 	
 	function __construct() {
+		add_action('wp_enqueue_scripts',array($this,'add_scripts'));
 		add_filter('wp_nav_menu',array($this,'add'),10,2);
+	}
+	
+	/**
+	 * Add scripts
+	 */
+	function add_scripts() {
+		wp_enqueue_script('tp-mobile-nav',get_template_directory_uri().'/assets/js/TPMobileNav/TPMobileNav.js');
 	}
 	
 	/**
@@ -54,7 +62,7 @@ class TPMobileNav {
 	 * @param object $item Menu item
 	 */ 
 	function add_option($item) {
-		$option = '<option class="depth-'.$this->depth.'" '.selected($item->is_current,true,false).'>';
+		$option = '<option data-url="'.$item->url.'" class="depth'.$this->depth.'" '.selected($item->is_current,true,false).'>';
 			$option .= $item->title;
 		$option .= '</option>';
 		
