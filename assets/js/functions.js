@@ -37,7 +37,6 @@ jQuery(document).ready(function($){
 		main navigation in a select list if on small screen
 		widths. also remove some base width and height image
 		settings for fluid images. */
-		
 	
 		// remove element height and width for responsiveness
 			
