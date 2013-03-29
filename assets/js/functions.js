@@ -1,91 +1,16 @@
-/*
-
-	FUNCTIONS.JS (CORE)
-	
-	All the jQuery/JavaScript enchangements go here...
-	
-	------------------------------------------------------------------	
-	
-	FILE INFO
-	
-	Last update: 	06/07/2012
-	Update by:		Derrik Wolthuis
-	
-	------------------------------------------------------------------
-	
-	INDEX
-	
-	1.	TEMPLATE URL
-	2.	WP GALLERY
-	3.	SUPERFISH
-	4.	PSEUDO CLASSES
-	5.	TABLES
-	6.	SEARCH
-	7. 	HYPERLINKS
-	8.	REL EXTERNAL
-	9.	BROWSER VERSION	
-	
-	------------------------------------------------------------------
-	
-*/
-
 jQuery(document).ready(function($){
-
-// 1. TEMPLATE URL IS DEFINED THROUGH A JQUERY CONSTANT (not really a constant but it's quite constant)
 	
-// 2. WP GALLERY
-
-	/* 	the WordPress gallery needs a rel gallery class for fancybox 
-		to open the images as a collection. the WordPress gallery
-		also has some inline styles that need to be removed. */
-
-	// add some class to the WordPress gallery for fancybox
+/**
+ * @gallery Remove unnecessary style, add rel gallery for fancybox plug-in
+ */
 
 	$('.gallery a').attr('rel', 'gallery');
 
-	// remove attr style .gallery br
-
 	$('.gallery br').removeAttr('style');
-
-// 3. SUPERFISH
-
-	/*	all of our websites use 'superfish' to display a dynamic 
-		navigation. this is why it's in the core of our framework. */
-
-	// see if there's a #mainnav ul.sf-menu, if true, then load superfish.js
-
-	if($('#mainnav ul.sf-menu').length > 0) {
-
-		$.getScript(templateurl+'/assets/js/superfish/supersubs.js', function() { });
-		
-	}
-
-	if($('#mainnav ul.sf-menu').length > 0) {
-
-		$.getScript(templateurl+'/assets/js/superfish/supersubs.js', function() {
-
-			$.getScript(templateurl+'/assets/js/superfish/superfish.js', function() {
-
-				$("#mainnav ul.sf-menu").supersubs({ 
-		
-					minWidth:    12,
-					maxWidth:    27, 
-					extraWidth:  1 
-			
-					}).superfish({
-						
-						speed: 1
-						
-					});
-			
-				});
-				
-		});
 	
-	}
-// 4. PSEUDO CLASSES
-
-	/*	add the right pseudo-classes to elements for styling purposes */
+/**
+ * @pseudo-classes Add pseudo-class classes
+ */
 
 	$('#mainnav ul.sf-menu li:first-child').addClass('first-child');
 	$('#mainnav ul.sf-menu li:last-child').addClass('last-child');
@@ -96,16 +21,11 @@ jQuery(document).ready(function($){
 	$('#footernav li:first-child').addClass('first-child');
 	$('#footernav li:last-child').addClass('last-child');
 
-//	5. TABLES
-
-	/*	add even and odd classes to the table for older browsers.
-		also add a last-child class to the last row. */
-
-	// if body has table
+/**
+ * @zebra-tables
+ */
 
 	if ($('body').has('table')) {
-
-		// add even odd
 
 		$('table tr:odd').addClass('odd');	
 		$('table tr:even').addClass('even');
@@ -114,69 +34,39 @@ jQuery(document).ready(function($){
 
 	}
 
-// 6. SEARCH
-	
-	/*	clear the input[type="text"] on focus */
-	
-	$.fn.clearOnFocus = function(){
+/**
+ * @external-links Add class external to external links and open rel="external" in a new tab
+ */
 
-		return this.focus(function() {
+	$('a').filter(function() {
 
-			var v = $(this).val();
-			
-			$(this).val( v === this.defaultValue ? '' : v );
+		return this.hostname && this.hostname !== location.hostname;
 
-			}).blur(function(){
-
-				var v = $(this).val();
-				$(this).val( v.match(/^\s+$|^$/) ? this.defaultValue : v );
-
-				});
-
-			};
-			
-	$('div.search .search input').clearOnFocus();
-	$('.hide_label').clearOnFocus();
-
-
-//	7. HYPERLINKS
-
-	/*	open all the rel="external" links in a new tab. */
-
+	}).addClass('external');
+ 
 	$('a[rel=external]').each(function(i){
 
 		this.target='_blank';
 		
 	});
 	
-//	8. REL EXTERNAL
-
-	/*	add a class to all the external links */
-
-	$("a").filter(function() {
-
-		return this.hostname && this.hostname !== location.hostname;
-
-	}).addClass('external');
-
-// 9. BROWSER VERSION
+/**
+ * @browser-detection Adds the current browser, OS and render-engine to body class
+ */
 
 	$.each($.browser, function(i) {
 	    $('body').addClass(i);
 	    return false;  
 	});
 	
-	var os = [
-	    'iphone',
-	    'ipad',
-	    'windows',
-	    'mac',
-	    'linux'
-	];
+	var os = ['iphone', 'ipad', 'windows', 'mac', 'linux'];
 	
 	var match = navigator.appVersion.toLowerCase().match(new RegExp(os.join('|')));
+	
 	if (match) {
+	
 	    $('body').addClass(match[0]);
+	
 	};
 
 });
