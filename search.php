@@ -20,7 +20,7 @@
 				</h2>
 				<?php tp_the_excerpt(50); ?>
 				<p>
-					<a  class="more" href="<?php echo the_permalink(); ?>">
+					<a  class="more-link" href="<?php echo the_permalink(); ?>">
 						<?php _e('Read more','tp'); ?>
 					</a>
 				</p>

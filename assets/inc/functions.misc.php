@@ -15,9 +15,9 @@ function tp_add_editor_styles($settings) {
     		'classes' => 'cta secondary'
     	),
     	array(
-    		'title' => __('Read more link','tp'),
+    		'title' => __('More link','tp'),
     		'selector' => 'a',
-    		'classes' => 'read-more'
+    		'classes' => 'more-link'
     	)
     );
     $settings['style_formats'] = json_encode($style_formats);
