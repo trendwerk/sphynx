@@ -21,6 +21,9 @@ jQuery(document).ready(function($){
 	$('#footernav li:first-child').addClass('first-child');
 	$('#footernav li:last-child').addClass('last-child');
 
+	$('.widget').filter(':even').addClass('even');
+	$('.widget').filter(':odd').addClass('odd');
+
 /**
  * @zebra-tables
  */

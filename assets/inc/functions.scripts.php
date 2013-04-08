@@ -3,7 +3,7 @@
  * @scripts Register scripts
  */
 function tp_register_scripts() {
-	wp_register_script('functions',get_template_directory_uri().'/assets/js/jquery/jquery.1.8.3.min.js',array('jquery'));
+	wp_register_script('jquery',get_template_directory_uri().'/assets/js/jquery/jquery.1.8.3.min.js',array('jquery'));
 	wp_register_script('functions',get_stylesheet_directory_uri().'/assets/js/functions.js',array('jquery'));
 	wp_register_script('modernizr',get_template_directory_uri().'/assets/js/modernizr/modernizr.lite.js');
 	wp_register_script('cycle',get_template_directory_uri().'/assets/js/cycle/cycle.all.js',array('jquery'));
