@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-
+	
 	/**
 	 * @parent-theme-functions Load the functions.js from the TrendPress parent theme
 	 */
@@ -22,8 +22,10 @@ jQuery(document).ready(function($){
 	});
 	
 	/** 
-	 * @repsonsive Place sidebars after content for responsive design purposes
+	 * @repsonsive
 	 */
+	 
+	// place sidebars after content for responsive design purposes
 	
 	var bodyWidth = window.innerWidth;
 		
@@ -31,9 +33,7 @@ jQuery(document).ready(function($){
 				
 		$('#main .sidebar').insertAfter('#main #content');
 		
-		$('.widget:even').addClass('clear');
-
-	} 
+	}
 		
 	/** 
 	 * @fancybox
@@ -58,5 +58,6 @@ jQuery(document).ready(function($){
 	  }
 	  
 	});
+
 						
 });
