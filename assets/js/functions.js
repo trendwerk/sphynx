@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 		$('#main .sidebar').insertAfter('#main #content');
 		
 	}
-		
+						
 	/** 
 	 * @fancybox
 	 */		
@@ -58,6 +58,37 @@ jQuery(document).ready(function($){
 	  }
 	  
 	});
+	
+	/**
+	 * @mainnav Hover state
+	 */
+	
+	$('#mainnav li').hover(  
+		
+		function(){$(this).addClass('hover')},
+		
+		function(){$(this).removeClass('hover')}
+	
+	);
+	
+	/**
+	 * @equal Heights and widths
+	 */
+	 
+	 var greatestWidth = 0;
 
+	$('#mainnav ul li li a').each(function() {
+		
+		var theWidth = $(this).width();
+		
+		if( theWidth > greatestWidth) {
+		
+		    greatestWidth = theWidth;
+		
+		}
+	
+	});
+	
+	$('#mainnav ul li li a').width(greatestWidth);  
 						
 });

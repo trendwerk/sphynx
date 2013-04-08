@@ -132,7 +132,6 @@ body {
 	#topnav {
 	
 		float: right;
-		margin: 20px 10px 0 10px;
 	
 		ul { 
 			
@@ -223,6 +222,11 @@ body {
 				}
 				
 				&:first-child a, &.first-child a { padding-left: 20px; }
+				
+				li {
+					
+					
+				}
 							
 			}
 
@@ -232,12 +236,7 @@ body {
 			
 	}
 	
-	#breadcrumbs {
-		
-		color: lighten(@text-color, 20%);
-		margin: 20px 10px 0 10px;
-		
-	}
+	#breadcrumbs { color: lighten(@text-color, 20%); }
 	
 }
 
@@ -411,7 +410,7 @@ body {
 			padding: 0 5%;
 			width: 90%;
 			
-			.onecol, .twocol, .threecol, .fourcol, .sixcol, .sevencol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+			.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
 				margin: 0;
 			} 
 			
@@ -422,7 +421,7 @@ body {
 		
 		}
 		
-		&#main .sidebar {
+		&#footer .sidebar, &#main .sidebar {
 			
 			padding: 0;
 			width: 100% ;
@@ -464,20 +463,49 @@ body {
 			
 		.container-inner {
 		
-			.onecol, .twocol, .threecol, .fourcol, .sixcol, .sevencol {
+			.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol {
 				clear: both;
 				width: 100%;
 			}
 		
 		}
 		
-		#main .sidebar {
+		&#footer .sidebar, &#main .sidebar {
 			
 			.widget { 
 				clear: both;
-				margin: 0;
-				padding: 0;
-				width: 100%;
+				margin: 2% 0;
+				padding: 3%;
+				width: 94%;
+			}
+			
+		}
+		
+		&#footer {
+			
+			#credits {
+				
+				#copyright, #footernav {
+				
+					text-align: center;
+					width: 100%;
+				
+					ul {
+					
+						.remove-list;
+						text-align: center;
+						
+						li {
+							display: inline;
+							
+							a { float: none; }
+							
+						}
+							
+					}
+					
+				}
+				
 			}
 			
 		}
