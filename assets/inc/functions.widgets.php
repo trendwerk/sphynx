@@ -81,11 +81,11 @@ class widget_tp_contact extends WP_Widget {
 		return 'noform';
 	}
 	
-	function widget() {
+	function widget($args,$instance) {
 		extract($args);
 	?>
 		<?php echo $before_widget; ?>
-			<?php echo $before_title . $title . $after_title; ?>
+			<?php echo $before_title . __('Contact','tp') . $after_title; ?>
 			<p>
 				<?php 
 					if ($naam = get_option('tp-naam')) {
@@ -179,7 +179,7 @@ class widget_tp_social extends WP_Widget {
 				echo 'small-icons-no-text';
 				}
 			?>">
-			<?php echo $before_title . $title . $after_title; ?>
+			<?php echo $before_title . __('Social media','tp') . $after_title; ?>
 			<ul>
 				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
 				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
@@ -325,7 +325,7 @@ class widget_title_content_button extends WP_Widget {
 			<p>
 				<label for="<?php echo $this->get_field_id('link_type'); ?>"><?php _e('Link type','tp'); ?>
 					<select class="widefat" id="<?php echo $this->get_field_id('link_type'); ?>" name="<?php echo $this->get_field_name('link_type'); ?>" >
-						<option value="read-more" <?php if($link_type == 'read-more') { echo "selected"; }; ?>><?php _e('Read more link','tp'); ?></option>
+						<option value="more-link" <?php if($link_type == 'more-link') { echo "selected"; }; ?>><?php _e('Read more link','tp'); ?></option>
 						<option value="cta primary" <?php if($link_type == 'cta primary') { echo "selected"; }; ?>><?php _e('Primary button','tp'); ?></option>
 						<option value="cta secondary" <?php if($link_type == 'cta secondary') { echo "selected"; }; ?>><?php _e('Secondary button','tp'); ?></option>
 					</select>
@@ -538,7 +538,7 @@ class widget_title_image_content_button extends WP_Widget {
 			<p>
 				<label for="<?php echo $this->get_field_id('link_type'); ?>"><?php _e('Link type','tp'); ?>
 					<select class="widefat" id="<?php echo $this->get_field_id('link_type'); ?>" name="<?php echo $this->get_field_name('link_type'); ?>" >
-						<option value="read-more" <?php if($link_type == 'read-more') { echo "selected"; }; ?>><?php _e('Read more link','tp'); ?></option>
+						<option value="more-link" <?php if($link_type == 'more-link') { echo "selected"; }; ?>><?php _e('Read more link','tp'); ?></option>
 						<option value="cta primary" <?php if($link_type == 'cta primary') { echo "selected"; }; ?>><?php _e('Primary button','tp'); ?></option>
 						<option value="cta secondary" <?php if($link_type == 'cta secondary') { echo "selected"; }; ?>><?php _e('Secondary button','tp'); ?></option>
 					</select>
