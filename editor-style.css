@@ -1,11 +1,12 @@
+@import url(style.css);
+
 body { 
 	background: white;
-	font: normal 14px arial, sans-serif;
-	line-height: 1.6;
 	padding: 10px;
 }
 
 a.cta {
+<<<<<<< HEAD
 	clear: both;
 	display: block;
 	float: left;
@@ -43,3 +44,7 @@ a.more-link {
 }
 
 	a.read-more:after { content: '...'; }
+=======
+	cursor: auto;
+}
+>>>>>>> parent of e8dab3a... Added basic editor styles...
