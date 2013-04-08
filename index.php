@@ -31,7 +31,7 @@
 				</p>
 				<?php tp_the_excerpt(40); ?>
 				<p>
-					<a class="more-link" href="<?php echo the_permalink(); ?>">
+					<a class="more" href="<?php echo the_permalink(); ?>">
 						<?php _e('Read more','tp'); ?>
 					</a>
 				</p>
