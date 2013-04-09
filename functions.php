@@ -16,6 +16,7 @@ include('assets/inc/functions.misc.php');
  * @scripts Enqueue scripts
  */
 function tp_enqueue_scripts() {
+	wp_enqueue_script('jquery');
 	wp_enqueue_script('functions');
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('cycle');
