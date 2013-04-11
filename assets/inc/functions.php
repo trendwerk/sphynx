@@ -1,5 +1,34 @@
 <?php
 /**
+ * Some general functions and template tags
+ */
+
+/**
+ * Debug a variable
+ * 
+ * @param mixed $var
+ */
+ 
+function dbg($var) {
+	echo '<pre>';
+		print_r($var);
+	echo '</pre>';
+}
+
+/**
+ * Convert a string to an URL (Add http:// if necessary)
+ *
+ * @param string $url
+ */
+function tp_maybe_add_http($url) {
+	if(!$url) return;
+	
+	if(!strstr($url,'http://') && !strstr($url,'https://')) $url = 'http://'.$url;
+	
+	return $url;
+}
+
+/**
  * A function for a custom excerpt length
  *
  * @param int $length The length of the excerpt (in words)
