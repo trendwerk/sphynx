@@ -99,7 +99,6 @@ h6 {
 a { 
 	color: #12C;
 	cursor: pointer;
-	outline: 0; 
 }
 
 a:hover, a:focus { color: #666; }
@@ -242,7 +241,6 @@ input[type="submit"] { font-weight: bold; }
 							
 								.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
 									background: none;
-									outline: 0;
 								}
 	
 				/* arrows */
