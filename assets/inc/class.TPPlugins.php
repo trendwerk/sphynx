@@ -50,14 +50,26 @@ class TPPlugins {
 	 * Set status to our status
 	 */
 	function set_status() {
-		global $status;
+		global $status,$totals;
 		$status = 'tp';
+		$totals = wp_parse_args($this->_totals,$totals);
 	}
 	
 	/**
 	 * Show our plugins instead of WP's
 	 */
 	function show($plugins) {
+		//Save old totals
+		$this->_totals = array('all' => 0,'active' => 0,'inactive' => 0);
+		foreach($plugins as $file=>$plugin) :
+			$this->_totals['all']++;
+			if(is_plugin_active($file) || is_plugin_active_for_network($file)) :
+				$this->_totals['active']++;
+			else :
+				$this->_totals['inactive']++;
+			endif;
+		endforeach;
+	
 		$plugins = array();
 		
 		if($this->plugins) :
