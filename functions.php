@@ -8,22 +8,22 @@
  * @includes Include the following PHP files
  */
  
+include('assets/inc/class.TPCapabilities.php');
+include('assets/inc/class.TPCleanUp.php');
 include('assets/inc/class.TPMobileNav.php');
 include('assets/inc/class.TPNav.php');
 include('assets/inc/class.TPRecommendedPlugins.php');
-include('assets/inc/class.TPUserCaps.php');
 include('assets/inc/class.TPTaxonomyLink.php');
+include('assets/inc/class.TPCPTExtras.php');
+include('assets/inc/class.TPScripts.php');
+include('assets/inc/class.TPJSConstants.php');
+include('assets/inc/class.TPSearch.php');
+include('assets/inc/class.TPSidebar.php');
 
 include('assets/inc/functions.breadcrumbs.php');
-include('assets/inc/functions.clean-up.php');
-include('assets/inc/functions.custom-excerpt-length.php');
-include('assets/inc/functions.custom-post-type.php');
+include('assets/inc/functions.excerpt.php');
 include('assets/inc/functions.debug.php');
-include('assets/inc/functions.js-constants.php');
 include('assets/inc/functions.pagination.php');
-include('assets/inc/functions.scripts.php');
-include('assets/inc/functions.search.php');
-include('assets/inc/functions.sidebars.php');
 include('assets/inc/functions.theme-options.php');
 
 /**

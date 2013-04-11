@@ -20,9 +20,6 @@ class TPRecommendedPlugins {
 	 */
 	var $optional = array();
 	
-	/**
-	 * Constructor
-	 */
 	function __construct() {
 		add_action('admin_menu',array($this,'add_admin_page'));
 		

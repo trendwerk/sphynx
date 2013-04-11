@@ -1,6 +1,6 @@
 <?php
 /**
- * Debug functions for developers
+ * Template tags for debugging
  */
 
 /**
