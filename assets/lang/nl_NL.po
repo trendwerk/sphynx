@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-12 13:51+0100\n"
-"PO-Revision-Date: 2013-03-12 14:00+0100\n"
-"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
+"POT-Creation-Date: 2013-04-11 14:43+0100\n"
+"PO-Revision-Date: 2013-04-11 14:44+0100\n"
+"Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
-"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
 "X-Poedit-KeywordsList: __;_e;_n\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ../..\n"
@@ -17,321 +17,258 @@ msgstr ""
 
 #: ../../index.php:1
 msgid "Please activate a TrendPress child-theme to use this theme."
-msgstr ""
-"Om dit thema te gebruiken dient u een TrendPress child-theme te activeren."
+msgstr "Om dit thema te gebruiken dient u een TrendPress child-theme te activeren."
 
-#: ../../assets/inc/class.TPNav.php:102 ../inc/class.TPNav.php:102
-msgid "Search for"
-msgstr "Zoekresultaten voor"
+#: ../../assets/inc/class.TPCPTExtras.php:30
+msgid "Custom post types"
+msgstr "Custom post types"
 
-#: ../../assets/inc/class.TPNav.php:110 ../inc/class.TPNav.php:110
-msgid "404"
-msgstr "404"
+#: ../../assets/inc/class.TPCPTExtras.php:65
+msgid "There are no Custom Post Types at the moment."
+msgstr "Er zijn geen Custom Post Types op dit moment."
 
-#: ../../assets/inc/class.TPNav.php:254
-#: ../../assets/inc/admin-views/theme-options.php:20
-#: ../inc/class.TPNav.php:254 ../inc/admin-views/theme-options.php:20
+#: ../../assets/inc/class.TPCPTExtras.php:75
+msgid "Add to Menu"
+msgstr "Voeg toe aan menu"
+
+#: ../../assets/inc/class.TPInformation.php:19
+msgid "General settings"
+msgstr "Algemene instellingen"
+
+#: ../../assets/inc/class.TPInformation.php:21
+msgid "Sitename"
+msgstr "Sitenaam"
+
+#: ../../assets/inc/class.TPInformation.php:24
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../assets/inc/class.TPInformation.php:30
+#: ../../assets/inc/class.TPNav.php:277
 msgid "Contact"
 msgstr "Contact"
 
-#: ../../assets/inc/class.TPPlugins.php:37 ../inc/class.TPPlugins.php:37
-msgid ""
-"Improve your SEO: Write better content and have a fully optimized WordPress "
-"site."
-msgstr ""
-"Verbeter je SEO: Schrijf betere teksten en optimaliseer je WordPress voor "
-"zoekmachines."
+#: ../../assets/inc/class.TPInformation.php:32
+msgid "Company name"
+msgstr "Bedrijfsnaam"
 
-#: ../../assets/inc/class.TPPlugins.php:42 ../inc/class.TPPlugins.php:42
+#: ../../assets/inc/class.TPInformation.php:35
+msgid "Address"
+msgstr "Adres"
+
+#: ../../assets/inc/class.TPInformation.php:38
+msgid "Postal code"
+msgstr "Postcode"
+
+#: ../../assets/inc/class.TPInformation.php:41
+msgid "City"
+msgstr "Stad"
+
+#: ../../assets/inc/class.TPInformation.php:44
+msgid "E-mail"
+msgstr "E-mail"
+
+#: ../../assets/inc/class.TPInformation.php:47
+msgid "Telephone"
+msgstr "Telefoon"
+
+#: ../../assets/inc/class.TPInformation.php:50
+msgid "Fax"
+msgstr "Fax"
+
+#: ../../assets/inc/class.TPInformation.php:56
+msgid "Registration numbers & financial"
+msgstr "Registratie nummers & financieel"
+
+#: ../../assets/inc/class.TPInformation.php:58
+msgid "CC No."
+msgstr "KvK Nr."
+
+#: ../../assets/inc/class.TPInformation.php:61
+msgid "VAT No."
+msgstr "BTW Nr."
+
+#: ../../assets/inc/class.TPInformation.php:64
+msgid "Bank name"
+msgstr "Bank naam"
+
+#: ../../assets/inc/class.TPInformation.php:67
+msgid "Bank No."
+msgstr "Bank Nr."
+
+#: ../../assets/inc/class.TPInformation.php:73
+msgid "Social media links"
+msgstr "Social media links"
+
+#: ../../assets/inc/class.TPInformation.php:75
+msgid "Twitter URL"
+msgstr "Twitter URL"
+
+#: ../../assets/inc/class.TPInformation.php:78
+msgid "Facebook URL"
+msgstr "Facebook URL"
+
+#: ../../assets/inc/class.TPInformation.php:81
+msgid "LinkedIn URL"
+msgstr "LinkedIn URL"
+
+#: ../../assets/inc/class.TPInformation.php:84
+msgid "Google Plus URL"
+msgstr "Google Plus URL"
+
+#: ../../assets/inc/class.TPInformation.php:87
+msgid "YouTube URL"
+msgstr "YouTube URL"
+
+#: ../../assets/inc/class.TPInformation.php:90
+msgid "Newsletter / mailto link"
+msgstr "Nieuwsbrief / mailto link"
+
+#: ../../assets/inc/class.TPInformation.php:93
+msgid "Show RSS feed in the social media widget"
+msgstr "Toon RSS icoon in de sociale media widget"
+
+#: ../../assets/inc/class.TPInformation.php:140
+#: ../../assets/inc/class.TPInformation.php:150
+msgid "Contact information"
+msgstr "Contactgegevens"
+
+#: ../../assets/inc/class.TPNav.php:103
+msgid "Search for"
+msgstr "Zoekresultaten voor"
+
+#: ../../assets/inc/class.TPNav.php:112
+msgid "404"
+msgstr "404"
+
+#: ../../assets/inc/class.TPRecommendedPlugins.php:52
+msgid "Improve your SEO: Write better content and have a fully optimized WordPress site."
+msgstr "Verbeter je SEO: Schrijf betere teksten en optimaliseer je WordPress voor zoekmachines."
+
+#: ../../assets/inc/class.TPRecommendedPlugins.php:57
 msgid "Add Google Analytics to the website to track user statistics."
-msgstr ""
-"Google Analytics aan de website toevoegen om gebruikers statistieken bij te "
-"houden."
+msgstr "Google Analytics aan de website toevoegen om gebruikers statistieken bij te houden."
 
-#: ../../assets/inc/class.TPPlugins.php:47 ../inc/class.TPPlugins.php:47
-msgid ""
-"Improve site performance and user experience via caching: browser, page, "
-"object, database, minify and content delivery network support."
-msgstr ""
-"Verbeter de site performance en user experience doormiddel van caching "
-"(browser caching, page caching, object caching, database caching, "
-"bestandsverkleining en content delivery network ondersteuning)."
+#: ../../assets/inc/class.TPRecommendedPlugins.php:62
+msgid "Improve site performance and user experience via caching: browser, page, object, database, minify and content delivery network support."
+msgstr "Verbeter de site performance en user experience doormiddel van caching (browser caching, page caching, object caching, database caching, bestandsverkleining en content delivery network ondersteuning)."
 
-#: ../../assets/inc/class.TPPlugins.php:52 ../inc/class.TPPlugins.php:52
-msgid ""
-"Reduce image file sizes and improve performance using the Smush.it API "
-"within WordPress."
-msgstr ""
-"Verklein bestandsgroottes van afbeeldingen en verbetert prestaties middels "
-"de Smush.it API van WordPress."
+#: ../../assets/inc/class.TPRecommendedPlugins.php:67
+msgid "Reduce image file sizes and improve performance using the Smush.it API within WordPress."
+msgstr "Verklein bestandsgroottes van afbeeldingen en verbetert prestaties middels de Smush.it API van WordPress."
 
-#: ../../assets/inc/class.TPPlugins.php:57 ../inc/class.TPPlugins.php:57
+#: ../../assets/inc/class.TPRecommendedPlugins.php:72
 msgid "Increases WordPress' default search functionality."
 msgstr "Verbeterd de WordPress basis zoek functionaliteit."
 
-#: ../../assets/inc/class.TPPlugins.php:63 ../inc/class.TPPlugins.php:63
+#: ../../assets/inc/class.TPRecommendedPlugins.php:78
 msgid "Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor."
-msgstr ""
-"Voegt geavanceerde functionaliteiten toe aan TinyMCE, de WYSIWYG van "
-"WordPress."
+msgstr "Voegt geavanceerde functionaliteiten toe aan TinyMCE, de WYSIWYG van WordPress."
 
-#: ../../assets/inc/class.TPPlugins.php:72 ../inc/class.TPPlugins.php:72
+#: ../../assets/inc/class.TPRecommendedPlugins.php:87
 msgid "Display more than one content field on WordPress pages and posts."
-msgstr ""
-"Geef meer dan één inhoud blok weer bij WordPress pagina's en berichten."
+msgstr "Geef meer dan één inhoud blok weer bij WordPress pagina's en berichten."
 
-#: ../../assets/inc/class.TPPlugins.php:77 ../inc/class.TPPlugins.php:77
-msgid ""
-"Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter "
-"and Facebook as comments."
-msgstr ""
-"Stuur berichten naar Twitter en/of Facebook, en geeft reacties via Twitter "
-"en Facebook weer als reacties."
+#: ../../assets/inc/class.TPRecommendedPlugins.php:92
+msgid "Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter and Facebook as comments."
+msgstr "Stuur berichten naar Twitter en/of Facebook, en geeft reacties via Twitter en Facebook weer als reacties."
 
-#: ../../assets/inc/class.TPPlugins.php:82 ../inc/class.TPPlugins.php:82
+#: ../../assets/inc/class.TPRecommendedPlugins.php:97
 msgid "A simple way to create and manage roles and capabilities."
 msgstr "Een eenvoudige manier om rollen en rechten te beheren."
 
-#: ../../assets/inc/class.TPPlugins.php:87 ../inc/class.TPPlugins.php:87
+#: ../../assets/inc/class.TPRecommendedPlugins.php:102
 msgid "Manage 301 redirections and keep track of 404 errors."
 msgstr "Beheer 301 doorverwijzingen en houd 404 errors bij."
 
-#: ../../assets/inc/class.TPPlugins.php:92 ../inc/class.TPPlugins.php:92
-msgid ""
-"Exports your database, does a find and replace on URLs and file paths, then "
-"allows you to save it to your computer."
-msgstr ""
-"Exporteer je database, vervangt de URLs en bestandspaden en sla hem op op je "
-"computer."
+#: ../../assets/inc/class.TPRecommendedPlugins.php:107
+msgid "Exports your database, does a find and replace on URLs and file paths, then allows you to save it to your computer."
+msgstr "Exporteer je database, vervangt de URLs en bestandspaden en sla hem op op je computer."
 
-#: ../../assets/inc/class.TPPlugins.php:97 ../inc/class.TPPlugins.php:97
-msgid ""
-" Rebuild all image thumbnails at once without script timeouts on your server."
-msgstr ""
-"Maak alle miniatuur afbeeldingen opnieuw aan zonder script timeouts op je "
-"server."
+#: ../../assets/inc/class.TPRecommendedPlugins.php:112
+msgid " Rebuild all image thumbnails at once without script timeouts on your server."
+msgstr "Maak alle miniatuur afbeeldingen opnieuw aan zonder script timeouts op je server."
 
-#: ../../assets/inc/class.TPPlugins.php:124
-#: ../../assets/inc/admin-views/recommended-plugins.php:3
-#: ../../assets/inc/admin-views/recommended-plugins.php:7
-#: ../inc/class.TPPlugins.php:124 ../inc/admin-views/recommended-plugins.php:3
-#: ../inc/admin-views/recommended-plugins.php:7
+#: ../../assets/inc/class.TPRecommendedPlugins.php:126
 msgid "Recommended plugins"
 msgstr "Aanbevolen plugins "
 
-#: ../../assets/inc/class.TPPlugins.php:124 ../inc/class.TPPlugins.php:124
+#: ../../assets/inc/class.TPRecommendedPlugins.php:126
 msgid "Recommended"
 msgstr "Aanbevolen"
 
-#: ../../assets/inc/class.TPPlugins.php:141 ../inc/class.TPPlugins.php:141
+#: ../../assets/inc/class.TPRecommendedPlugins.php:143
 msgid "Recommended plugin <strong>activated</strong>."
 msgstr "Aanbevolen plugin <strong>geactiveerd</strong>."
 
-#: ../../assets/inc/class.TPPlugins.php:253 ../inc/class.TPPlugins.php:253
+#: ../../assets/inc/class.TPRecommendedPlugins.php:255
 #, php-format
-msgid ""
-"The plugin <strong>%1$s</strong> has been reset to the recommended "
-"TrendPress settings."
-msgstr ""
-"De settings van de plugin <strong>%1$s</strong> hebben nu de aanbevolen "
-"TrendPress instellingen."
+msgid "The plugin <strong>%1$s</strong> has been reset to the recommended TrendPress settings."
+msgstr "De settings van de plugin <strong>%1$s</strong> hebben nu de aanbevolen TrendPress instellingen."
 
-#: ../../assets/inc/class.TPPlugins.php:300 ../inc/class.TPPlugins.php:300
+#: ../../assets/inc/class.TPRecommendedPlugins.php:302
 #, php-format
 msgid "<a href=\"%1$s\">Return to recommended plugins</a>"
 msgstr "<a href=\"%1$s\">Ga terug naar aanbevolen plugins</a>"
 
-#: ../../assets/inc/functions.breadcrumbs.php:20
-#: ../inc/functions.breadcrumbs.php:20
+#: ../../assets/inc/functions.breadcrumbs.php:21
 msgid "Home"
 msgstr "Home"
 
-#: ../../assets/inc/functions.custom-post-type.php:22
-#: ../inc/functions.custom-post-type.php:22
-msgid "Custom post types"
-msgstr "Custom post types"
-
-#: ../../assets/inc/functions.custom-post-type.php:58
-#: ../inc/functions.custom-post-type.php:58
-msgid "There are no Custom Post Types at the moment."
-msgstr "Er zijn geen Custom Post Types op dit moment."
-
-#: ../../assets/inc/functions.custom-post-type.php:68
-#: ../inc/functions.custom-post-type.php:68
-msgid "Add to Menu"
-msgstr "Voeg toe aan menu"
-
 #: ../../assets/inc/functions.pagination.php:16
-#: ../inc/functions.pagination.php:16
 msgid "Pagination"
 msgstr "Paginatie"
 
 #: ../../assets/inc/functions.pagination.php:17
-#: ../inc/functions.pagination.php:17
 msgid "Next"
 msgstr "Volgende"
 
 #: ../../assets/inc/functions.pagination.php:18
-#: ../inc/functions.pagination.php:18
 msgid "Previous"
 msgstr "Vorige"
 
-#: ../../assets/inc/functions.theme-options.php:10
-#: ../inc/functions.theme-options.php:10
-msgid "Contact information"
-msgstr "Contactgegevens"
-
-#: ../../assets/inc/widget.submenu.php:10 ../inc/widget.submenu.php:10
-msgid "Shows the submenu according to the custom menu"
-msgstr "Laat het submenu zien volgens het custom menu"
-
-#: ../../assets/inc/widget.submenu.php:12 ../inc/widget.submenu.php:12
-msgid "Submenu"
-msgstr "Submenu"
-
 #: ../../assets/inc/admin-views/plugin-table.php:20
-#: ../inc/admin-views/plugin-table.php:20
 msgid "Install now"
 msgstr "Installeer nu"
 
 #: ../../assets/inc/admin-views/plugin-table.php:22
-#: ../inc/admin-views/plugin-table.php:22
 msgid "Are you sure you want to reset to the recommended TrendPress settings?"
-msgstr ""
-"Weet je zeker dat je de aanbevolen TrendPress instellingen wilt toepassen?"
+msgstr "Weet je zeker dat je de aanbevolen TrendPress instellingen wilt toepassen?"
 
 #: ../../assets/inc/admin-views/plugin-table.php:22
-#: ../inc/admin-views/plugin-table.php:22
 msgid "Apply settings"
 msgstr "Pas instellingen toe"
 
 #: ../../assets/inc/admin-views/plugin-table.php:24
-#: ../inc/admin-views/plugin-table.php:24
 msgid "Activate"
 msgstr "Activeer"
 
 #: ../../assets/inc/admin-views/recommended-plugins.php:5
-#: ../inc/admin-views/recommended-plugins.php:5
-msgid ""
-"On this page, you can install recommended plugins and apply recommended "
-"settings to them after installing."
-msgstr ""
-"Op deze pagina kun je aanbevolen plugins installeren en aanbevolen settings "
-"toepassen na installatie."
+msgid "On this page, you can install recommended plugins and apply recommended settings to them after installing."
+msgstr "Op deze pagina kun je aanbevolen plugins installeren en aanbevolen settings toepassen na installatie."
 
 #: ../../assets/inc/admin-views/recommended-plugins.php:12
-#: ../inc/admin-views/recommended-plugins.php:12
 msgid "Optional plugins"
 msgstr "Optionele plugins"
 
-#: ../../assets/inc/admin-views/theme-options.php:3
-#: ../inc/admin-views/theme-options.php:3
-msgid "Contact info"
-msgstr "Contactgegevens"
+#~ msgid "Shows the submenu according to the custom menu"
+#~ msgstr "Laat het submenu zien volgens het custom menu"
 
-#: ../../assets/inc/admin-views/theme-options.php:6
-#: ../inc/admin-views/theme-options.php:6
-msgid "General settings"
-msgstr "Algemene settings"
+#~ msgid "Submenu"
+#~ msgstr "Submenu"
 
-#: ../../assets/inc/admin-views/theme-options.php:10
-#: ../inc/admin-views/theme-options.php:10
-msgid "Sitename"
-msgstr "Sitenaam"
+#~ msgid "Contact info"
+#~ msgstr "Contactgegevens"
 
-#: ../../assets/inc/admin-views/theme-options.php:14
-#: ../inc/admin-views/theme-options.php:14
-msgid "Description"
-msgstr "Omschrijving"
+#~ msgid ""
+#~ "Please provide full URLs to your profile pages (e.g. http://twitter.com/"
+#~ "trendwerk/)"
+#~ msgstr ""
+#~ "Vul s.v.p. de volledige URLs naar uw profiel pagina's in (bijv. http://"
+#~ "twitter.com/trendwerk/)"
 
-#: ../../assets/inc/admin-views/theme-options.php:24
-#: ../inc/admin-views/theme-options.php:24
-msgid "Company name"
-msgstr "Bedrijfsnaam"
-
-#: ../../assets/inc/admin-views/theme-options.php:28
-#: ../inc/admin-views/theme-options.php:28
-msgid "Address"
-msgstr "Adres"
-
-#: ../../assets/inc/admin-views/theme-options.php:32
-#: ../inc/admin-views/theme-options.php:32
-msgid "Postal code"
-msgstr "Postcode"
-
-#: ../../assets/inc/admin-views/theme-options.php:36
-#: ../inc/admin-views/theme-options.php:36
-msgid "City"
-msgstr "Stad"
-
-#: ../../assets/inc/admin-views/theme-options.php:40
-#: ../inc/admin-views/theme-options.php:40
-msgid "E-mail"
-msgstr "E-mail"
-
-#: ../../assets/inc/admin-views/theme-options.php:44
-#: ../inc/admin-views/theme-options.php:44
-msgid "Telephone"
-msgstr "Telefoon"
-
-#: ../../assets/inc/admin-views/theme-options.php:48
-#: ../inc/admin-views/theme-options.php:48
-msgid "Fax"
-msgstr "Fax"
-
-#: ../../assets/inc/admin-views/theme-options.php:54
-#: ../inc/admin-views/theme-options.php:54
-msgid "Registration numbers &amp; financial"
-msgstr "Registratie nummers &amp; financieel"
-
-#: ../../assets/inc/admin-views/theme-options.php:58
-#: ../inc/admin-views/theme-options.php:58
-msgid "CC No."
-msgstr "KvK Nr."
-
-#: ../../assets/inc/admin-views/theme-options.php:62
-#: ../inc/admin-views/theme-options.php:62
-msgid "VAT No."
-msgstr "BTW Nr."
-
-#: ../../assets/inc/admin-views/theme-options.php:66
-#: ../inc/admin-views/theme-options.php:66
-msgid "Bank name"
-msgstr "Bank naam"
-
-#: ../../assets/inc/admin-views/theme-options.php:70
-#: ../inc/admin-views/theme-options.php:70
-msgid "Bank No."
-msgstr "Bank Nr."
-
-#: ../../assets/inc/admin-views/theme-options.php:76
-#: ../inc/admin-views/theme-options.php:76
-msgid "Social media links"
-msgstr "Social media links"
-
-#: ../../assets/inc/admin-views/theme-options.php:77
-#: ../inc/admin-views/theme-options.php:77
-msgid ""
-"Please provide full URLs to your profile pages (e.g. http://twitter.com/"
-"trendwerk/)"
-msgstr ""
-"Vul s.v.p. de volledige URLs naar uw profiel pagina's in (bijv. http://"
-"twitter.com/trendwerk/)"
-
-#: ../../assets/inc/admin-views/theme-options.php:101
-#: ../inc/admin-views/theme-options.php:101
-msgid "Newsletter / mailto link"
-msgstr "Nieuwsbrief / mailto link"
-
-#: ../../assets/inc/admin-views/theme-options.php:106
-#: ../inc/admin-views/theme-options.php:106
-msgid "Show RSS feed in the social media widget"
-msgstr "Toon RSS icoon in de sociale media widget"
-
-#: ../../assets/inc/admin-views/theme-options.php:111
-#: ../inc/admin-views/theme-options.php:111
-msgid "Save"
-msgstr "Opslaan"
+#~ msgid "Save"
+#~ msgstr "Opslaan"
 
 #~ msgid "WordPress SEO by Yoast"
 #~ msgstr "WordPress SEO door Yoast"
