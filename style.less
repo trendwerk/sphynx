@@ -359,12 +359,13 @@ body { background: @heading-color; }
 				
 				}
 				
+				ul { width: 220px; }
+				
 				ul li a, 
 				ul ul li a, 
 				ul ul ul li a {
 					background: @heading-color;
-					padding: 0;
-					text-indent: 15px;
+					padding: 0 0 0 15px;
 					width: 100%;
 				}			
 							
@@ -699,31 +700,37 @@ body { background: @heading-color; }
 	
 	#main {
 		
-		p.has-img { 
-			clear: both;
-			float: left;
-			width: 100%;
-		}
+		#content { 
 		
-		img.alignleft, img.alignright, .wp-caption { 
-			float: left;
-			margin: 0 0 12px 0;
-		}
-		
-		.wp-caption {
-		
-			background: transparent;
-			border: none;
-			clear: both;
-			width: 100%;
+			padding-bottom: 20px;
 			
-			img { float: left; }
-			
-			p { 
-				clear: both; 
-				text-align: left;
+			p.has-img { 
+				clear: both;
+				float: left;
+				width: 100%;
 			}
-		
+			
+			img.alignleft, img.alignright, .wp-caption { 
+				float: left;
+				margin: 0 0 12px 0;
+			}
+			
+			.wp-caption {
+			
+				background: transparent;
+				border: none;
+				clear: both;
+				width: 100%;
+				
+				img { float: left; }
+				
+				p { 
+					clear: both; 
+					text-align: left;
+				}
+			
+			}
+			
 		}
 		
 	}
@@ -751,6 +758,15 @@ body { background: @heading-color; }
 		}
 		
 		&#footer {
+		
+			.sidebar {
+				
+				.widget {
+					padding: 0;
+					width: 100%
+				}
+			
+			}
 			
 			#credits {
 				
