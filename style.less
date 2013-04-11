@@ -188,10 +188,13 @@ img.alignleft, img.alignright {
 	margin-bottom: 12px;
 }
 
-img.size-thumbnail {
-	background: #F0F0F0;
+img.size-thumbnail, .wp-caption {
+	background: #F7F7F7;
 	border: 1px solid @border-color;
 	padding: 4px;
+		
+	.wp-caption-text { font-size: 12px; }
+	
 }
 
 /**
@@ -429,7 +432,7 @@ img.size-thumbnail {
 	
 	.sidebar { 
 	
-		padding: 6px 0 30px 0;
+		padding: 6px 0 0 0;
 		
 		.widget { 
 			background: #FFFFFF;
@@ -549,6 +552,21 @@ img.size-thumbnail {
 	}
 	
 }
+
+// search - 404
+
+.search-no-results {
+
+	#main .search {
+		
+		input[type="text"] { height: 1.85em; }
+		
+		input[type="submit"] { margin-top: 10px; }
+		
+	}
+
+}
+
 
 /**
  * @plugins
