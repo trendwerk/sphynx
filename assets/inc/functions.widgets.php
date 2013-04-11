@@ -76,7 +76,7 @@ class widget_tp_contact extends WP_Widget {
 	}
 	
 	function form($instance) {
-		printf(__('Change the contents of this widget on the <a href="%1$s">contact info</a> page.', 'tp'), admin_url('themes.php?page=tp-contact'));
+		printf(__('Change the contents of this widget on the <a href="%1$s">contact information</a> page.', 'tp'), admin_url('options-general.php?page=tp-information'));
 	
 		return 'noform';
 	}
@@ -88,14 +88,16 @@ class widget_tp_contact extends WP_Widget {
 			<?php echo $before_title . __('Contact','tp') . $after_title; ?>
 			<p>
 				<?php 
-					if ($naam = get_option('tp-naam')) {
-						echo '<strong>'.$naam.'</strong><br />';
-					} if ($adres = get_option('tp-adres')) { 
-						echo $adres.'<br />'; 
-					} if ($postcode = get_option('tp-postcode')) {
-						echo $postcode.' ';
-					} if ($plaats = get_option('tp-plaats')) {
-					 echo $plaats; 
+					if ($name = get_option('tp-company-name')) {
+						echo '<strong>'.$name.'</strong><br />';
+					} if ($address = get_option('tp-address')) { 
+						echo $address.'<br />'; 
+					} if ($postal_code = get_option('tp-postal-code')) {
+						echo $postal_code.' ';
+					} if ($city = get_option('tp-city')) {
+					 echo $city; 
+					} if ($country = get_option('tp-country')) {
+					 echo '<br />'.$country; 
 					}
 				?>
 			</p>
@@ -103,8 +105,8 @@ class widget_tp_contact extends WP_Widget {
 				<?php
 					if ($email = get_option('tp-email')) { 
 						echo'<span>'.__('E-mail','tp').': </span><a href="mailto:'.$email.'">'.$email.'</a><br />';
-					} if ($telefoon = get_option('tp-telefoon')) { 
-						echo '<span>'.__('Telephone','tp').': </span>'.$telefoon.'<br />';
+					} if ($telephone = get_option('tp-telephone')) { 
+						echo '<span>'.__('Telephone','tp').': </span>'.$telephone.'<br />';
 					} if ($fax = get_option('tp-fax')) { 
 						echo '<span>'.__('Fax','tp').': </span>'.$fax;
 					} 
@@ -112,17 +114,17 @@ class widget_tp_contact extends WP_Widget {
 			</p>
 			<p>
 				<?php
-					if ($kvk = get_option('tp-kvk')) {
-						echo '<span>'.__('CC No','tp').': </span>'.$kvk.'<br />';
-					} if ($btw = get_option('tp-btw')) {
-						echo '<span>'.__('VAT No','tp').': </span>'.$btw.'<br />';
-					} if ($banknr = get_option('tp-banknr')) {
+					if ($cc = get_option('tp-cc')) {
+						echo '<span>'.__('CC No','tp').': </span>'.$cc.'<br />';
+					} if ($vat = get_option('tp-vat')) {
+						echo '<span>'.__('VAT No','tp').': </span>'.$vat.'<br />';
+					} if ($bankno = get_option('tp-bank-no')) {
 						if ($bank = !get_option('tp-bank')) {
 							$bank = "Bank";
 						} else {
 							$bank = get_option('tp-bank');
 						}
-						echo '<span>'.$bank.': </span>'.$banknr;
+						echo '<span>'.$bank.': </span>'.$bankno;
 					} 
 				?>
 			</p>
@@ -146,7 +148,8 @@ class widget_tp_social extends WP_Widget {
 		$options = array('Big icons with text', 'Small icons with text', 'Big icons without text', 'Small icons without text');
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Icon types','tp'); ?>:
+			<label for="<?php echo $this->get_field_id('type'); ?>">
+				<strong><?php _e('Icon types','tp'); ?></strong><br />
 				<select class="widefat" id="<?php echo $this->get_field_id('type'); ?>" name="<?php echo $this->get_field_name('type'); ?>">
 					<?php foreach($options as $option) : ?>
 						<option <?php if($option == $type) echo 'selected="selected"'; ?>><?php echo $option; ?></option>
@@ -181,11 +184,11 @@ class widget_tp_social extends WP_Widget {
 			?>">
 			<?php echo $before_title . __('Social media','tp') . $after_title; ?>
 			<ul>
-				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
-				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
-				<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
-				<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
-				<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
+				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a rel="external" href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
+				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
+				<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
+				<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
+				<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a rel="external" href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
 				<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
 				<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
 			</ul>
@@ -209,13 +212,15 @@ class widget_fb_like_box extends WP_Widget {
 		$url = $instance['url'];
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+				<strong><?php _e('Title'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('url'); ?>"><?php _e('Facebook page URL'); ?>
+			<label for="<?php echo $this->get_field_id('url'); ?>">
+				<strong><?php _e('Facebook page URL'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('url'); ?>" name="<?php echo $this->get_field_name('url'); ?>" type="text" value="<?php echo $url; ?>" />
 			</label>
 		</p>
@@ -238,8 +243,16 @@ class widget_fb_like_box extends WP_Widget {
 	?>
 		<?php echo $before_widget; ?>
 			<?php echo $before_title . $title . $after_title; ?>
-			<p><?php echo $content; ?></p>
-			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-show-faces="true" data-stream="false" data-header="false"></div>
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
 		<?php echo $after_widget; ?>
 	<?php
 	}
@@ -278,6 +291,10 @@ class widget_title_content_button extends WP_Widget {
 					}
 				});
 			}
+			
+			jQuery(document).ready(function($) {
+				showbuttons_create_clicks($);
+			});
 		</script>		
 		<?php
 	}
@@ -297,12 +314,14 @@ class widget_title_content_button extends WP_Widget {
 		$this->add_js();
 	?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+				<strong><?php _e('Title'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('content'); ?>"><?php _e('Content','tp'); ?>
+			<label for="<?php echo $this->get_field_id('content'); ?>">
+				<strong><?php _e('Content','tp'); ?></strong><br />
 				<textarea class="widefat" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>" ><?php echo $content; ?></textarea>
 			</label>
 		</p>
@@ -313,17 +332,20 @@ class widget_title_content_button extends WP_Widget {
 		</p>
 		<div class="buttonsettings">
 			<p>
-				<label for="<?php echo $this->get_field_id('button_text'); ?>"><?php _e('Button text','tp'); ?>
+				<label for="<?php echo $this->get_field_id('button_text'); ?>">
+					<strong><?php _e('Button text','tp'); ?></strong><br />
 					<input class="widefat" id="<?php echo $this->get_field_id('button_text'); ?>" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
 				</label>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id('button_link'); ?>"><?php _e('Button link','tp'); ?>
+				<label for="<?php echo $this->get_field_id('button_link'); ?>">
+					<strong><?php _e('Button link','tp'); ?></strong><br />
 					<input class="widefat" id="<?php echo $this->get_field_id('button_link'); ?>" name="<?php echo $this->get_field_name('button_link'); ?>" type="text" value="<?php echo $button_link; ?>" />
 				</label>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id('link_type'); ?>"><?php _e('Link type','tp'); ?>
+				<label for="<?php echo $this->get_field_id('link_type'); ?>">
+					<strong><?php _e('Link type','tp'); ?></strong><br />
 					<select class="widefat" id="<?php echo $this->get_field_id('link_type'); ?>" name="<?php echo $this->get_field_name('link_type'); ?>" >
 						<option value="more-link" <?php if($link_type == 'more-link') { echo "selected"; }; ?>><?php _e('Read more link','tp'); ?></option>
 						<option value="cta primary" <?php if($link_type == 'cta primary') { echo "selected"; }; ?>><?php _e('Primary button','tp'); ?></option>
@@ -495,27 +517,29 @@ class widget_title_image_content_button extends WP_Widget {
 		$this->add_css();
 	?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+				<strong><?php _e('Title'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 		<div class="upload-image-container">
 			<p class="label-upload-image-p">
-				<label class="label-upload-image"><?php _e('Image'); ?></label>
+				<label class="label-upload-image"><strong><?php _e('Image'); ?></strong><br /></label>
 			</p>
 			<div class="image"><?php if($image) : ?><img src="<?php echo $image; ?>" alt="Image" /><?php endif; ?></div>
 			<p class="upload-buttons">
-				<a onclick="return false;" title="Upload image" class="thickbox cta secondary upload-image" id="add_image" href="media-upload.php?type=image&amp;TB_iframe=true&amp;width=640&amp;height=450"><?php if($image) : _e('Change image','tp'); else: _e('Upload image','tp'); endif; ?></a>
+				<a onclick="return false;" title="Upload image" class="thickbox button-secondary upload-image" id="add_image" href="media-upload.php?type=image&amp;TB_iframe=true&amp;width=640&amp;height=450"><?php if($image) : _e('Change image','tp'); else: _e('Upload image','tp'); endif; ?></a>
 				
 				<?php if($image) : ?>
-					<a class="remove-image cta secondary"><?php _e('Remove image','tp'); ?></a>
+					<a class="remove-image button-secondary"><?php _e('Remove image','tp'); ?></a>
 				<?php endif; ?>
 				
 				<input type="hidden" name="<?php echo $this->get_field_name('image'); ?>" class="image_url" value="<?php echo $image; ?>" />
 			</p>
 		</div>
 		<p>
-			<label for="<?php echo $this->get_field_id('content'); ?>"><?php _e('Content','tp'); ?>
+			<label for="<?php echo $this->get_field_id('content'); ?>">
+				<strong><?php _e('Content','tp'); ?></strong><br />
 				<textarea class="widefat" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>" ><?php echo $content; ?></textarea>
 			</label>
 		</p>
@@ -526,17 +550,20 @@ class widget_title_image_content_button extends WP_Widget {
 		</p>
 		<div class="buttonsettings">
 			<p>
-				<label for="<?php echo $this->get_field_id('button_text'); ?>"><?php _e('Button text','tp'); ?>
+				<label for="<?php echo $this->get_field_id('button_text'); ?>">
+					<strong><?php _e('Button text','tp'); ?></strong><br />
 					<input class="widefat" id="<?php echo $this->get_field_id('button_text'); ?>" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
 				</label>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id('button_link'); ?>"><?php _e('Button link','tp'); ?>
+				<label for="<?php echo $this->get_field_id('button_link'); ?>">
+					<strong><?php _e('Button link','tp'); ?></strong><br />
 					<input class="widefat" id="<?php echo $this->get_field_id('button_link'); ?>" name="<?php echo $this->get_field_name('button_link'); ?>" type="text" value="<?php echo $button_link; ?>" />
 				</label>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id('link_type'); ?>"><?php _e('Link type','tp'); ?>
+				<label for="<?php echo $this->get_field_id('link_type'); ?>">
+					<strong><?php _e('Link type','tp'); ?></strong><br />
 					<select class="widefat" id="<?php echo $this->get_field_id('link_type'); ?>" name="<?php echo $this->get_field_name('link_type'); ?>" >
 						<option value="more-link" <?php if($link_type == 'more-link') { echo "selected"; }; ?>><?php _e('Read more link','tp'); ?></option>
 						<option value="cta primary" <?php if($link_type == 'cta primary') { echo "selected"; }; ?>><?php _e('Primary button','tp'); ?></option>
@@ -575,6 +602,7 @@ class widget_title_image_content_button extends WP_Widget {
 		$button_link = $instance['button_link'];
 		$link_type = $instance['link_type'];
 		$external = $instance['external'];
+		
 		extract($args);
 	?>
 		<?php echo $before_widget; ?>
