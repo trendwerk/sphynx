@@ -1,15 +1,8 @@
-jQuery(document).ready(function($){
-	
-	/**
-	 * @parent-theme-functions Load the functions.js from the TrendPress parent theme
-	 */
-							
-	$.getScript(templateurl+'/assets/js/functions.js');	    
+jQuery(document).ready(function($){  
 		
 	/** 
 	 * @responsive Remove the width and height added to images by WordPress for responsive design
 	 */			
-	 
 	$(window).load(function() {
 
 		$('.wp-caption').removeAttr('style');
@@ -22,11 +15,8 @@ jQuery(document).ready(function($){
 	});
 	
 	/** 
-	 * @repsonsive
+	 * @responsive place sidebars after content for responsive design purposes
 	 */
-	 
-	// place sidebars after content for responsive design purposes
-	
 	var bodyWidth = window.innerWidth;
 		
 	if (window.innerWidth < 1000 ) {
@@ -38,7 +28,6 @@ jQuery(document).ready(function($){
 	/** 
 	 * @fancybox
 	 */		
-		
 	var thumbnails = jQuery('a:has(img)').filter( function() { 
 				
 		$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif'],a[href$='.bmp']").addClass('links-to-image');
@@ -62,31 +51,22 @@ jQuery(document).ready(function($){
 	/**
 	 * @mainnav Hover state
 	 */
-	
 	$('#mainnav li').hover(  
-		
 		function(){$(this).addClass('hover')},
-		
 		function(){$(this).removeClass('hover')}
-	
 	);
 	
 	/**
 	 * @equal Heights and widths
 	 */
 	 
-	 var greatestWidth = 0;
+	var greatestWidth = 0;
 
 	$('#mainnav ul li li a').each(function() {
-		
 		var theWidth = $(this).width();
-		
 		if( theWidth > greatestWidth) {
-		
 		    greatestWidth = theWidth;
-		
 		}
-	
 	});
 	
 	$('#mainnav ul li li a').width(greatestWidth);  
