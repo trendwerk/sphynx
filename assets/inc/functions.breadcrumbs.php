@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions for displaying the breadcrumbs of the current menu.
+ * Template tags for displaying the breadcrumbs of the current menu
  *
  * @uses TPNav
  */
@@ -9,6 +9,7 @@
  * Show the breadcrumbs
  *
  * @param string $separator Separator between breadcrumbs
+ * @param string $menu The menu which will be used
  */
 function tp_breadcrumbs($separator='>',$menu='mainnav') {
 	global $post;

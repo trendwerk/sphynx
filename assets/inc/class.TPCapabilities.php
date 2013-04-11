@@ -5,10 +5,7 @@
  * from editing/creating/removing admins.
  */
 
-class TPUserCaps {
-  	/**
-  	 * Constructor
-  	 */
+class TPCapabilities {
 	function __construct() {
 		//Editors can edit theme options
 		add_action('init',array($this,'set_editor_capabilities'));
@@ -76,5 +73,5 @@ class TPUserCaps {
 	}
 }
 
-new TPUserCaps();
+new TPCapabilities;
 ?>

@@ -15,9 +15,6 @@ class TPTaxonomyLink {
 	var $post_type;
 	var $taxonomy;
 	
-	/**
-	 * Constructor
-	 */
 	function __construct($post_type,$taxonomy) {
 		$this->post_type = $post_type;
 		$this->taxonomy = $taxonomy;

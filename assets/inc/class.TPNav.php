@@ -128,7 +128,17 @@ class TPNav {
 		}
 		
 		if(is_tax()) {
+			$taxonomy = get_taxonomy(get_query_var('taxonomy'));
 			$term = get_term_by('slug',get_query_var('term'),get_query_var('taxonomy'));
+			
+			if(count($taxonomy->object_type) > 1) :
+				//Multiple post types for a taxonomy, add the taxonomy name as well
+				$breadcrumb = new stdClass;
+				$breadcrumb->title = $taxonomy->labels->name;
+				$breadcrumb->is_current = true;
+				
+				$breadcrumbs[] = $breadcrumb;
+			endif;
 			
 			$breadcrumb = new stdClass;
 			$breadcrumb->title = $term->name;
@@ -273,13 +283,19 @@ class TPNav {
 			//404
 			
 		} else {
-			if(!get_query_var('post_type') && !get_query_var('taxonomy')) {
+			if(!get_query_var('post_type') && !is_tax()) {
 				//Blog or single blog item
 				$this->current_item = $this->get_nav_id_by_page_id(get_option('page_for_posts'));
 			} else {
 				if($taxonomy = get_query_var('taxonomy')) {
 					$taxonomy = get_taxonomy($taxonomy);
-					set_query_var('post_type',$taxonomy->object_type[0]);
+					
+					if(count($taxonomy->object_type) > 1) {
+						//Multiple post types to a taxonomy. Show Home > [Taxonomy name] > [Term name]
+					} else {
+						//One post type to a taxonomy. Show Home > [Post type] > [Term name]
+						set_query_var('post_type',$taxonomy->object_type[0]);
+					}
 				}
 				
 				//Custom post type

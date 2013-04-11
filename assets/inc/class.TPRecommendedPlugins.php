@@ -5,7 +5,7 @@
  * activate and apply settings to it.
  */
 
-class TPPlugins {
+class TPRecommendedPlugins {
 	/**
 	 * Recommended plugins
 	 *
@@ -20,9 +20,6 @@ class TPPlugins {
 	 */
 	var $optional = array();
 	
-	/**
-	 * Constructor
-	 */
 	function __construct() {
 		add_action('admin_menu',array($this,'add_admin_page'));
 		
@@ -307,7 +304,5 @@ class TPPlugins {
 		
 		return $links;
 	}
-}
-
-new TPPlugins();
+} new TPRecommendedPlugins;
 ?>
