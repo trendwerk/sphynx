@@ -41,6 +41,9 @@ class TPInformation {
 		add_settings_field('tp-city',__('City','tp'),array($this,'show_text_field'),'tp-information','tp-contact',array('label_for' => 'tp-city', 'class' => 'regular-text'));
 		register_setting('tp-information','tp-city');
 		
+		add_settings_field('tp-country',__('Country','tp'),array($this,'show_text_field'),'tp-information','tp-contact',array('label_for' => 'tp-country', 'class' => 'regular-text'));
+		register_setting('tp-information','tp-country');
+		
 		add_settings_field('tp-email',__('E-mail','tp'),array($this,'show_text_field'),'tp-information','tp-contact',array('label_for' => 'tp-email', 'class' => 'regular-text'));
 		register_setting('tp-information','tp-email');
 		

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-11 14:43+0100\n"
-"PO-Revision-Date: 2013-04-11 14:44+0100\n"
+"POT-Creation-Date: 2013-04-11 14:58+0100\n"
+"PO-Revision-Date: 2013-04-11 14:58+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "MIME-Version: 1.0\n"
@@ -65,71 +65,75 @@ msgid "City"
 msgstr "Stad"
 
 #: ../../assets/inc/class.TPInformation.php:44
+msgid "Country"
+msgstr "Land"
+
+#: ../../assets/inc/class.TPInformation.php:47
 msgid "E-mail"
 msgstr "E-mail"
 
-#: ../../assets/inc/class.TPInformation.php:47
+#: ../../assets/inc/class.TPInformation.php:50
 msgid "Telephone"
 msgstr "Telefoon"
 
-#: ../../assets/inc/class.TPInformation.php:50
+#: ../../assets/inc/class.TPInformation.php:53
 msgid "Fax"
 msgstr "Fax"
 
-#: ../../assets/inc/class.TPInformation.php:56
+#: ../../assets/inc/class.TPInformation.php:59
 msgid "Registration numbers & financial"
 msgstr "Registratie nummers & financieel"
 
-#: ../../assets/inc/class.TPInformation.php:58
+#: ../../assets/inc/class.TPInformation.php:61
 msgid "CC No."
 msgstr "KvK Nr."
 
-#: ../../assets/inc/class.TPInformation.php:61
+#: ../../assets/inc/class.TPInformation.php:64
 msgid "VAT No."
 msgstr "BTW Nr."
 
-#: ../../assets/inc/class.TPInformation.php:64
+#: ../../assets/inc/class.TPInformation.php:67
 msgid "Bank name"
 msgstr "Bank naam"
 
-#: ../../assets/inc/class.TPInformation.php:67
+#: ../../assets/inc/class.TPInformation.php:70
 msgid "Bank No."
 msgstr "Bank Nr."
 
-#: ../../assets/inc/class.TPInformation.php:73
+#: ../../assets/inc/class.TPInformation.php:76
 msgid "Social media links"
 msgstr "Social media links"
 
-#: ../../assets/inc/class.TPInformation.php:75
+#: ../../assets/inc/class.TPInformation.php:78
 msgid "Twitter URL"
 msgstr "Twitter URL"
 
-#: ../../assets/inc/class.TPInformation.php:78
+#: ../../assets/inc/class.TPInformation.php:81
 msgid "Facebook URL"
 msgstr "Facebook URL"
 
-#: ../../assets/inc/class.TPInformation.php:81
+#: ../../assets/inc/class.TPInformation.php:84
 msgid "LinkedIn URL"
 msgstr "LinkedIn URL"
 
-#: ../../assets/inc/class.TPInformation.php:84
+#: ../../assets/inc/class.TPInformation.php:87
 msgid "Google Plus URL"
 msgstr "Google Plus URL"
 
-#: ../../assets/inc/class.TPInformation.php:87
+#: ../../assets/inc/class.TPInformation.php:90
 msgid "YouTube URL"
 msgstr "YouTube URL"
 
-#: ../../assets/inc/class.TPInformation.php:90
+#: ../../assets/inc/class.TPInformation.php:93
 msgid "Newsletter / mailto link"
 msgstr "Nieuwsbrief / mailto link"
 
-#: ../../assets/inc/class.TPInformation.php:93
+#: ../../assets/inc/class.TPInformation.php:96
 msgid "Show RSS feed in the social media widget"
 msgstr "Toon RSS icoon in de sociale media widget"
 
-#: ../../assets/inc/class.TPInformation.php:140
-#: ../../assets/inc/class.TPInformation.php:150
+#: ../../assets/inc/class.TPInformation.php:143
+#: ../../assets/inc/class.TPInformation.php:153
 msgid "Contact information"
 msgstr "Contactgegevens"
 
