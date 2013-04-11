@@ -6,8 +6,5 @@
 		<p><?php echo sprintf(__('You might want to check out our <a href="%1$s">sitemap</a> or use the searchform below to find the page you are looking for.','tp'),get_option('siteurl').'/sitemap/'); ?></p>
 		<?php get_search_form(); ?>	 
 	</article>
-	<aside class="sidebar vertical fourcol">
-		<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('page'); ?>
-	</aside>
 </div>
 <?php get_footer(); ?>

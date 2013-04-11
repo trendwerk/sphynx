@@ -22,11 +22,11 @@
 	<body <?php body_class(); ?>>
 		<header id="header" class="container">
 			<div class="container-inner">
-				<div id="logo" class="ninecol">
+				<div id="logo" class="sixcol">
 					<p id="sitename"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></p>
 					<p id="description"><?php bloginfo('description'); ?></p>
 				</div>
-				<nav id="topnav" class="navigation threecol">
+				<nav id="topnav" class="navigation sixcol">
 					<?php 
 						wp_nav_menu( array(
 							'container' => '',
@@ -36,7 +36,7 @@
 						)); 
 					?>
 				</nav>
-				<div id="search" class="threecol">
+				<div id="search" class="sixcol">
 					<?php get_search_form(); ?>
 				</div>
 					<nav id="mainnav" class="navigation twelvecol">				

@@ -29,6 +29,7 @@
 					<?php _e('Posted on:','tp')?> <time datetime="<?php the_time('Y-m-d') ?>"><?php echo get_the_date(); ?></time> 
 					<?php _e('in the category:','tp') ?> <?php the_category(', ') ?>
 				</p>
+				<?php get_the_post_thumbnail(); ?>
 				<?php tp_the_excerpt(40); ?>
 				<p>
 					<a class="more-link" href="<?php echo the_permalink(); ?>">

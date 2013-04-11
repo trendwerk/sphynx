@@ -12,8 +12,8 @@
 				?>
 			</p>
 		<?php while (have_posts()) : the_post(); ?>
-			<article>
-				<h2 class="article-title">
+			<article <?php post_class(); ?>>
+				<h2 class="search-title">
 					<a href="<?php the_permalink() ?>">
 						<?php the_title(); ?>
 					</a>
