@@ -10,7 +10,7 @@
  
 include('assets/inc/class.TPMobileNav.php');
 include('assets/inc/class.TPNav.php');
-include('assets/inc/class.TPPlugins.php');
+include('assets/inc/class.TPRecommendedPlugins.php');
 include('assets/inc/class.TPUserCaps.php');
 include('assets/inc/class.TPTaxonomyLink.php');
 

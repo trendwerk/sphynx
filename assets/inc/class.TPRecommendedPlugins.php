@@ -5,7 +5,7 @@
  * activate and apply settings to it.
  */
 
-class TPPlugins {
+class TPRecommendedPlugins {
 	/**
 	 * Recommended plugins
 	 *
@@ -307,7 +307,5 @@ class TPPlugins {
 		
 		return $links;
 	}
-}
-
-new TPPlugins();
+} new TPRecommendedPlugins;
 ?>
