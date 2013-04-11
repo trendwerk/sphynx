@@ -96,6 +96,8 @@ class widget_tp_contact extends WP_Widget {
 						echo $postal_code.' ';
 					} if ($city = get_option('tp-city')) {
 					 echo $city; 
+					} if ($country = get_option('tp-country')) {
+					 echo '<br />'.$country; 
 					}
 				?>
 			</p>
