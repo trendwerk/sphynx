@@ -72,7 +72,6 @@ jQuery(document).ready(function($){
 	/**
 	 * @equal Heights and widths
 	 */
-	 
 	var greatestWidth = 0;
 
 	$('#mainnav ul li li a').each(function() {
@@ -82,6 +81,14 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	$('#mainnav ul li li a').width(greatestWidth);  
+	$('#mainnav ul li li a').width(greatestWidth); 
+	
+	/** 
+	 * @misc
+	 */
+			
+	$('p').has('img').addClass('has-img');		
+	
+	$('#content article:last').addClass('last-child');
 						
 });
