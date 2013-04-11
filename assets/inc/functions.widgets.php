@@ -76,7 +76,7 @@ class widget_tp_contact extends WP_Widget {
 	}
 	
 	function form($instance) {
-		printf(__('Change the contents of this widget on the <a href="%1$s">contact info</a> page.', 'tp'), admin_url('themes.php?page=tp-contact'));
+		printf(__('Change the contents of this widget on the <a href="%1$s">contact information</a> page.', 'tp'), admin_url('options-general.php?page=tp-information'));
 	
 		return 'noform';
 	}
@@ -88,14 +88,14 @@ class widget_tp_contact extends WP_Widget {
 			<?php echo $before_title . __('Contact','tp') . $after_title; ?>
 			<p>
 				<?php 
-					if ($naam = get_option('tp-naam')) {
-						echo '<strong>'.$naam.'</strong><br />';
-					} if ($adres = get_option('tp-adres')) { 
-						echo $adres.'<br />'; 
-					} if ($postcode = get_option('tp-postcode')) {
-						echo $postcode.' ';
-					} if ($plaats = get_option('tp-plaats')) {
-					 echo $plaats; 
+					if ($name = get_option('tp-company-name')) {
+						echo '<strong>'.$name.'</strong><br />';
+					} if ($address = get_option('tp-address')) { 
+						echo $address.'<br />'; 
+					} if ($postal_code = get_option('tp-postal-code')) {
+						echo $postal_code.' ';
+					} if ($city = get_option('tp-city')) {
+					 echo $city; 
 					}
 				?>
 			</p>
@@ -103,8 +103,8 @@ class widget_tp_contact extends WP_Widget {
 				<?php
 					if ($email = get_option('tp-email')) { 
 						echo'<span>'.__('E-mail','tp').': </span><a href="mailto:'.$email.'">'.$email.'</a><br />';
-					} if ($telefoon = get_option('tp-telefoon')) { 
-						echo '<span>'.__('Telephone','tp').': </span>'.$telefoon.'<br />';
+					} if ($telephone = get_option('tp-telephone')) { 
+						echo '<span>'.__('Telephone','tp').': </span>'.$telephone.'<br />';
 					} if ($fax = get_option('tp-fax')) { 
 						echo '<span>'.__('Fax','tp').': </span>'.$fax;
 					} 
@@ -112,17 +112,17 @@ class widget_tp_contact extends WP_Widget {
 			</p>
 			<p>
 				<?php
-					if ($kvk = get_option('tp-kvk')) {
-						echo '<span>'.__('CC No','tp').': </span>'.$kvk.'<br />';
-					} if ($btw = get_option('tp-btw')) {
-						echo '<span>'.__('VAT No','tp').': </span>'.$btw.'<br />';
-					} if ($banknr = get_option('tp-banknr')) {
+					if ($cc = get_option('tp-cc')) {
+						echo '<span>'.__('CC No','tp').': </span>'.$cc.'<br />';
+					} if ($vat = get_option('tp-vat')) {
+						echo '<span>'.__('VAT No','tp').': </span>'.$vat.'<br />';
+					} if ($bankno = get_option('tp-bank-no')) {
 						if ($bank = !get_option('tp-bank')) {
 							$bank = "Bank";
 						} else {
 							$bank = get_option('tp-bank');
 						}
-						echo '<span>'.$bank.': </span>'.$banknr;
+						echo '<span>'.$bank.': </span>'.$bankno;
 					} 
 				?>
 			</p>
@@ -182,11 +182,11 @@ class widget_tp_social extends WP_Widget {
 			?>">
 			<?php echo $before_title . __('Social media','tp') . $after_title; ?>
 			<ul>
-				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
-				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
-				<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
-				<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
-				<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
+				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a rel="external" href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
+				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
+				<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
+				<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
+				<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a rel="external" href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
 				<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
 				<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
 			</ul>
