@@ -12,17 +12,19 @@ class TPPlugins {
 	function __construct() {
 		$this->activate();
 		
-		add_action('admin_enqueue_scripts',array($this,'add_scripts'));
-		add_action('views_plugins',array($this,'add_tab'));
-		
-		if(isset($_GET['plugin_status'])) :
-			if($_GET['plugin_status'] == 'tp') :
-				add_action('admin_head',array($this,'set_status'));
-				add_filter('all_plugins',array($this,'show'));
-				add_filter('plugin_action_links',array($this,'remove_actions'));
-				add_filter('manage_plugins_columns',array($this,'remove_checkbox'));
-				add_filter('bulk_actions-plugins',array($this,'remove_bulk'));
-				add_filter('admin_body_class',array($this,'set_class'));
+		if(count($this->plugins)) :
+			add_action('admin_enqueue_scripts',array($this,'add_scripts'));
+			add_action('views_plugins',array($this,'add_tab'));
+			
+			if(isset($_GET['plugin_status'])) :
+				if($_GET['plugin_status'] == 'tp') :
+					add_action('admin_head',array($this,'set_status'));
+					add_filter('all_plugins',array($this,'show'));
+					add_filter('plugin_action_links',array($this,'remove_actions'));
+					add_filter('manage_plugins_columns',array($this,'remove_checkbox'));
+					add_filter('bulk_actions-plugins',array($this,'remove_bulk'));
+					add_filter('admin_body_class',array($this,'set_class'));
+				endif;
 			endif;
 		endif;
 	}
