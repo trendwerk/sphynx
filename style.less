@@ -95,7 +95,13 @@ body {
 	
 	// regular text 
 	
-	p, ul, ol, address { margin: 0 0 24px 0; }
+	p, ul, ol, address { 
+		
+		margin: 0 0 24px 0; 
+		
+		&:last-child { margin-bottom: 0; }
+	
+	}
 	
 	ul, ol {
 		
@@ -159,7 +165,6 @@ body {
 
 .more-link {
 
-	float: left;
 	text-decoration: underline;
 
 	&:after { content: ' \00bb'; }
@@ -418,6 +423,7 @@ img.size-thumbnail, .wp-caption {
 		
 	}
 	
+	
 }
 
 #main {
@@ -611,9 +617,9 @@ img.size-thumbnail, .wp-caption {
 	#header {
 	
 		#mainnav {
-		
-		margin: 0;
-		
+			
+			margin-left: 0; 
+				
 			select { display: none; }
 		
 		}
@@ -646,7 +652,7 @@ img.size-thumbnail, .wp-caption {
 			.widget {
 				float: left;
 				margin: 2% 2.1% 2% 0.5%;
-				padding: 0 3.5% 3.5% 3.7%;
+				padding: 3.5% 3.5% 3.5% 3.7%;
 				width: 41%;
 				
 				&.odd { margin-right: 0; }
