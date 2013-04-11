@@ -1,53 +1,65 @@
 jQuery(document).ready(function($){  
-
+		
 	/** 
-	 * @responsive remove the width and height added to images by WordPress for responsive design
-	 */
-
+	 * @responsive Remove the width and height added to images by WordPress for responsive design
+	 */			
 	$(window).load(function() {
+
 		$('.wp-caption').removeAttr('style');
+
 		var pic = $('img');
-		pic.removeAttr('width'); 
-		pic.removeAttr('height');
+
+			pic.removeAttr('width'); 
+			pic.removeAttr('height');
+
 	});
 	
 	/** 
 	 * @responsive place sidebars after content for responsive design purposes
 	 */
-	 
 	var bodyWidth = window.innerWidth;
+		
 	if (window.innerWidth < 1000 ) {
+				
 		$('#main .sidebar').insertAfter('#main #content');
+		
 	}
 						
 	/** 
 	 * @fancybox
-	 */
-	
-	var thumbnails = jQuery('a:has(img)').filter( function() { 	
+	 */		
+	var thumbnails = jQuery('a:has(img)').filter( function() { 
+				
 		$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif'],a[href$='.bmp']").addClass('links-to-image');
+		
 		return /(jpeg|png|gif|bmp)$/i.test(jQuery(this).addClass('has-image'));
-	});
+			
+	}); 
+	
 	$('a:has(img)').each(function () {
+	
 	  var element = $(this);
+	  
 	  if( element.is('.has-image') && element.is('.links-to-image') ) {
+	  	 
 	  	 element.addClass('fancybox');
+	  
 	  }
+	  
 	});
 	
 	/**
 	 * @mainnav Hover state
 	 */
- 
 	$('#mainnav li').hover(  
 		function(){$(this).addClass('hover')},
 		function(){$(this).removeClass('hover')}
 	);
-
+	
 	/**
 	 * @equal Heights and widths
 	 */
- 
+	 
 	var greatestWidth = 0;
 
 	$('#mainnav ul li li a').each(function() {
@@ -56,6 +68,7 @@ jQuery(document).ready(function($){
 		    greatestWidth = theWidth;
 		}
 	});
+	
 	$('#mainnav ul li li a').width(greatestWidth);  
 						
 });
