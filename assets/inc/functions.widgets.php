@@ -146,7 +146,8 @@ class widget_tp_social extends WP_Widget {
 		$options = array('Big icons with text', 'Small icons with text', 'Big icons without text', 'Small icons without text');
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Icon types','tp'); ?>:
+			<label for="<?php echo $this->get_field_id('type'); ?>">
+				<strong><?php _e('Icon types','tp'); ?></strong><br />
 				<select class="widefat" id="<?php echo $this->get_field_id('type'); ?>" name="<?php echo $this->get_field_name('type'); ?>">
 					<?php foreach($options as $option) : ?>
 						<option <?php if($option == $type) echo 'selected="selected"'; ?>><?php echo $option; ?></option>
@@ -209,13 +210,15 @@ class widget_fb_like_box extends WP_Widget {
 		$url = $instance['url'];
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+				<strong><?php _e('Title'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('url'); ?>"><?php _e('Facebook page URL'); ?>
+			<label for="<?php echo $this->get_field_id('url'); ?>">
+				<strong><?php _e('Facebook page URL'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('url'); ?>" name="<?php echo $this->get_field_name('url'); ?>" type="text" value="<?php echo $url; ?>" />
 			</label>
 		</p>
@@ -238,8 +241,16 @@ class widget_fb_like_box extends WP_Widget {
 	?>
 		<?php echo $before_widget; ?>
 			<?php echo $before_title . $title . $after_title; ?>
-			<p><?php echo $content; ?></p>
-			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-show-faces="true" data-stream="false" data-header="false"></div>
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			
+			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
 		<?php echo $after_widget; ?>
 	<?php
 	}
@@ -278,6 +289,10 @@ class widget_title_content_button extends WP_Widget {
 					}
 				});
 			}
+			
+			jQuery(document).ready(function($) {
+				showbuttons_create_clicks($);
+			});
 		</script>		
 		<?php
 	}
@@ -297,12 +312,14 @@ class widget_title_content_button extends WP_Widget {
 		$this->add_js();
 	?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+				<strong><?php _e('Title'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('content'); ?>"><?php _e('Content','tp'); ?>
+			<label for="<?php echo $this->get_field_id('content'); ?>">
+				<strong><?php _e('Content','tp'); ?></strong><br />
 				<textarea class="widefat" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>" ><?php echo $content; ?></textarea>
 			</label>
 		</p>
@@ -313,17 +330,20 @@ class widget_title_content_button extends WP_Widget {
 		</p>
 		<div class="buttonsettings">
 			<p>
-				<label for="<?php echo $this->get_field_id('button_text'); ?>"><?php _e('Button text','tp'); ?>
+				<label for="<?php echo $this->get_field_id('button_text'); ?>">
+					<strong><?php _e('Button text','tp'); ?></strong><br />
 					<input class="widefat" id="<?php echo $this->get_field_id('button_text'); ?>" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
 				</label>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id('button_link'); ?>"><?php _e('Button link','tp'); ?>
+				<label for="<?php echo $this->get_field_id('button_link'); ?>">
+					<strong><?php _e('Button link','tp'); ?></strong><br />
 					<input class="widefat" id="<?php echo $this->get_field_id('button_link'); ?>" name="<?php echo $this->get_field_name('button_link'); ?>" type="text" value="<?php echo $button_link; ?>" />
 				</label>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id('link_type'); ?>"><?php _e('Link type','tp'); ?>
+				<label for="<?php echo $this->get_field_id('link_type'); ?>">
+					<strong><?php _e('Link type','tp'); ?></strong><br />
 					<select class="widefat" id="<?php echo $this->get_field_id('link_type'); ?>" name="<?php echo $this->get_field_name('link_type'); ?>" >
 						<option value="more-link" <?php if($link_type == 'more-link') { echo "selected"; }; ?>><?php _e('Read more link','tp'); ?></option>
 						<option value="cta primary" <?php if($link_type == 'cta primary') { echo "selected"; }; ?>><?php _e('Primary button','tp'); ?></option>
@@ -495,27 +515,29 @@ class widget_title_image_content_button extends WP_Widget {
 		$this->add_css();
 	?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+				<strong><?php _e('Title'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 		<div class="upload-image-container">
 			<p class="label-upload-image-p">
-				<label class="label-upload-image"><?php _e('Image'); ?></label>
+				<label class="label-upload-image"><strong><?php _e('Image'); ?></strong><br /></label>
 			</p>
 			<div class="image"><?php if($image) : ?><img src="<?php echo $image; ?>" alt="Image" /><?php endif; ?></div>
 			<p class="upload-buttons">
-				<a onclick="return false;" title="Upload image" class="thickbox cta secondary upload-image" id="add_image" href="media-upload.php?type=image&amp;TB_iframe=true&amp;width=640&amp;height=450"><?php if($image) : _e('Change image','tp'); else: _e('Upload image','tp'); endif; ?></a>
+				<a onclick="return false;" title="Upload image" class="thickbox button-secondary upload-image" id="add_image" href="media-upload.php?type=image&amp;TB_iframe=true&amp;width=640&amp;height=450"><?php if($image) : _e('Change image','tp'); else: _e('Upload image','tp'); endif; ?></a>
 				
 				<?php if($image) : ?>
-					<a class="remove-image cta secondary"><?php _e('Remove image','tp'); ?></a>
+					<a class="remove-image button-secondary"><?php _e('Remove image','tp'); ?></a>
 				<?php endif; ?>
 				
 				<input type="hidden" name="<?php echo $this->get_field_name('image'); ?>" class="image_url" value="<?php echo $image; ?>" />
 			</p>
 		</div>
 		<p>
-			<label for="<?php echo $this->get_field_id('content'); ?>"><?php _e('Content','tp'); ?>
+			<label for="<?php echo $this->get_field_id('content'); ?>">
+				<strong><?php _e('Content','tp'); ?></strong><br />
 				<textarea class="widefat" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>" ><?php echo $content; ?></textarea>
 			</label>
 		</p>
@@ -526,17 +548,20 @@ class widget_title_image_content_button extends WP_Widget {
 		</p>
 		<div class="buttonsettings">
 			<p>
-				<label for="<?php echo $this->get_field_id('button_text'); ?>"><?php _e('Button text','tp'); ?>
+				<label for="<?php echo $this->get_field_id('button_text'); ?>">
+					<strong><?php _e('Button text','tp'); ?></strong><br />
 					<input class="widefat" id="<?php echo $this->get_field_id('button_text'); ?>" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
 				</label>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id('button_link'); ?>"><?php _e('Button link','tp'); ?>
+				<label for="<?php echo $this->get_field_id('button_link'); ?>">
+					<strong><?php _e('Button link','tp'); ?></strong><br />
 					<input class="widefat" id="<?php echo $this->get_field_id('button_link'); ?>" name="<?php echo $this->get_field_name('button_link'); ?>" type="text" value="<?php echo $button_link; ?>" />
 				</label>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id('link_type'); ?>"><?php _e('Link type','tp'); ?>
+				<label for="<?php echo $this->get_field_id('link_type'); ?>">
+					<strong><?php _e('Link type','tp'); ?></strong><br />
 					<select class="widefat" id="<?php echo $this->get_field_id('link_type'); ?>" name="<?php echo $this->get_field_name('link_type'); ?>" >
 						<option value="more-link" <?php if($link_type == 'more-link') { echo "selected"; }; ?>><?php _e('Read more link','tp'); ?></option>
 						<option value="cta primary" <?php if($link_type == 'cta primary') { echo "selected"; }; ?>><?php _e('Primary button','tp'); ?></option>
@@ -575,6 +600,7 @@ class widget_title_image_content_button extends WP_Widget {
 		$button_link = $instance['button_link'];
 		$link_type = $instance['link_type'];
 		$external = $instance['external'];
+		
 		extract($args);
 	?>
 		<?php echo $before_widget; ?>
