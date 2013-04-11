@@ -197,6 +197,15 @@ img.size-thumbnail, .wp-caption {
 	
 }
 
+/** 
+ * @slider
+ */
+
+.slider { 
+
+	
+}
+
 /**
  * @classes
  */
@@ -420,6 +429,8 @@ img.size-thumbnail, .wp-caption {
 		margin-bottom: 0;
 	}
 	
+	.search-title { font-size: 26px; }
+	
 	.page-title {
 		
 	}
@@ -523,11 +534,11 @@ img.size-thumbnail, .wp-caption {
 
 // blog
 
-.blog {
+.blog, .search-results {
 
 	#content {
 		
-		.post {
+		.hentry {
 			
 			border-bottom: 1px solid lighten(@border-color, 25%);
 			clear: both;
@@ -555,7 +566,7 @@ img.size-thumbnail, .wp-caption {
 
 // search - 404
 
-.search-no-results {
+.search-no-results, .error404 {
 
 	#main .search {
 		
