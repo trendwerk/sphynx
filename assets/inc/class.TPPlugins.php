@@ -70,8 +70,8 @@ class TPPlugins {
 			endif;
 		endforeach;
 	
+		//Setup our plugins
 		$plugins = array();
-		
 		if($this->plugins) :
 			foreach($this->plugins as $plugin) :
 				$plugins[$plugin] = get_plugin_data($plugin);
