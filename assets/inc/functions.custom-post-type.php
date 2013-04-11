@@ -9,11 +9,9 @@
  * Adds the JS for the meta box
  */
 function tp_cpt_nav_menu_js() { 
-?>
-	<script src="<?php echo get_template_directory_uri().'/assets/js/cpt/jquery.cpt-metabox.js'; ?>" type="text/javascript"></script>
-<?php
+	wp_enqueue_script('tp-cpt-meta',get_template_directory_uri().'/assets/js/TPCPTMeta/TPCPTMeta.js',array('jquery'));
 }
-add_action('admin_head','tp_cpt_nav_menu_js');
+add_action('admin_enqueue_scripts','tp_cpt_nav_menu_js');
 
 /**
  * Add a meta box to the Custom Menu page
