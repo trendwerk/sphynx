@@ -294,7 +294,7 @@ class TPNav {
 						//Multiple post types to a taxonomy. Show Home > [Taxonomy name] > [Term name]
 					} else {
 						//One post type to a taxonomy. Show Home > [Post type] > [Term name]
-						set_query_var('post_type',$taxonomy->object_type[0]);
+						//set_query_var('post_type',$taxonomy->object_type[0]);
 					}
 				}
 				
