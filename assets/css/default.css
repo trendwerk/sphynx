@@ -44,67 +44,6 @@ input, select { vertical-align: middle; }
 	TYPOGRAPHY
 	========== */
 
-/*	COMMON TYPOGRAPHY
-	----------------- */
-
-body { font: normal 14px/25px "helvetica neue", helvetica, arial, sans-serif; }
-
-p { margin: 0 0 20px 0; }
-
-h1, h2, h3, h4, h5, h6 { 
-	font-family: "helvetica neue", helvetica, arial, sans-serif; 
-	font-weight: bold; 
-}
-
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { text-decoration: underline; }
-
-h1 { 
-	font-size: 32px;
-	line-height: 40px; 
-	margin: 0 0 20px 0; 
-}
-
-h2 { 
-	font-size: 26px;
-	line-height: 30px; 
-	margin: 0 0 20px 0;
-}
-
-h3 { 
-	font-size: 20px;
-	line-height: 30px; 
-	margin: 0 0 10px 0;
-}
-
-h4 { 
-	font-size: 16px;
-	line-height: 25px; 
-	margin: 0 0 10px 0;
-}
-
-h5 { 
-	font-size: 14px;
-	line-height: 25px; 
-	margin: 0 0 10px 0;
-}
-
-h6 { 
-	font-size: 14px;
-	line-height: 25px; 
-	margin: 0;
-}
-
-/* links */
-
-a { 
-	color: #12C;
-	cursor: pointer;
-}
-
-a:hover, a:focus { color: #666; }
-
-/* other */
-
 strong, b { font-weight: bold; }
 
 em, i { font-style: italic; }
@@ -157,18 +96,8 @@ input[type="submit"] { font-weight: bold; }
 	MISC
 	==== */
 
-.mute { opacity: 0.5; }
-
-.remove { display: none; }
-
 .clear { clear: both; }
 
-.hide { 
-	display: inline-block;
-	visibility: hidden;
-}
-	
-.border { border: 1px solid red; }
 
 /*  INTERACTION 
 	-----------  */
@@ -575,9 +504,9 @@ table {
 		
 	.ie7 table caption { height: 44px;}
 
-	table tr { border-bottom: 1px solid #000000 !important; }
+	table tr { border-bottom: 1px solid #000; }
 	
-		.ie7 table td { border-bottom: 1px solid #000000 !important; }
+		.ie7 table td { border-bottom: 1px solid #000; }
 	
 		table th { 
 			padding: 5px 10px;
