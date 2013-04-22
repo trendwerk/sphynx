@@ -66,5 +66,17 @@ jQuery(document).ready(function($){
 	    $('body').addClass(match[0]);
 	
 	};
+	
+	/**
+	 * @hover sfHover alternative
+	 */
+	$('#mainnav ul > li').mouseover(function() {
+		$(this).addClass('hover');
+	});
+	
+	$('#mainnav ul > li').mouseout(function() {
+		$(this).removeClass('hover');
+	});
+	
 
 });
