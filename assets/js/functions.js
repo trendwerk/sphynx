@@ -60,15 +60,7 @@ jQuery(document).ready(function($){
     	}	
 		
 	});
-	
-	/**
-	 * @mainnav Hover state
-	 */
-	$('#mainnav li').hover(  
-		function(){$(this).addClass('hover')},
-		function(){$(this).removeClass('hover')}
-	);
-	
+
 	/**
 	 * @equal Heights and widths
 	 */
@@ -86,7 +78,6 @@ jQuery(document).ready(function($){
 	/** 
 	 * @misc
 	 */
-			
 	$('p').has('img').addClass('has-img');		
 	
 	$('#content article:last').addClass('last-child');
