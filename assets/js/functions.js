@@ -78,5 +78,11 @@ jQuery(document).ready(function($){
 		$(this).removeClass('hover');
 	});
 	
+	/**
+	 * @sub-menu class
+	 */
+	$('#mainnav ul li').has('ul.sub-menu').addClass('has-sub-menu');
+	
+
 
 });
