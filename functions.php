@@ -20,6 +20,7 @@ function tp_enqueue_scripts() {
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('cycle');
 	wp_enqueue_script('fancybox');
+	wp_enqueue_style('fancyboxcss');
 	wp_enqueue_script('less');
 	wp_enqueue_script('trendpress');
 	

@@ -49,15 +49,12 @@ jQuery(document).ready(function($){
 	});
 	
 	$('.fancybox').fancybox({
-		   
-		openEffect	: 'elastic',
-    	closeEffect	: 'elastic',
 
-    	helpers : {
-    		title : {
-    			type : 'inside'
-    		}
-    	}	
+        width      : '75%',
+        height     : '75%',
+        autoSize   : false,
+        openEffect : 'none',
+        closeEffect: 'none'
 		
 	});
 

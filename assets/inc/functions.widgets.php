@@ -86,48 +86,52 @@ class widget_tp_contact extends WP_Widget {
 	?>
 		<?php echo $before_widget; ?>
 			<?php echo $before_title . __('Contact','tp') . $after_title; ?>
-			<p>
+			<div itemscope itemtype="http://schema.org/Organization">
 				<?php 
 					if ($name = get_option('tp-company-name')) {
-						echo '<strong>'.$name.'</strong><br />';
+					echo '<span itemprop="name"><strong>'.$name.'</strong></span>';
+				?>
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">	
+					<?php
 					} if ($address = get_option('tp-address')) { 
-						echo $address.'<br />'; 
+						echo '<span itemprop="streetAddress">'.$address.'</span><br />'; 
 					} if ($postal_code = get_option('tp-postal-code')) {
-						echo $postal_code.' ';
+						echo '<span itemprop="postalCode">'.$postal_code.'</span>';
 					} if ($city = get_option('tp-city')) {
-					 echo $city; 
+					 echo ' <span itemprop="addressLocality">'.$city.'</span><br />'; 
 					} if ($country = get_option('tp-country')) {
-					 echo '<br />'.$country; 
+					 echo '<span itemprop="addressCountry">'.$country.'</span><br /><br />'; 
 					}
 				?>
+				</div>
+				<p>
+					<?php
+						if ($email = get_option('tp-email')) { 
+							echo'<span>'.__('E-mail','tp').': </span><a itemprop="email" href="mailto:'.$email.'">'.$email.'</a><br />';
+						} if ($telephone = get_option('tp-telephone')) { 
+							echo '<span>'.__('Telephone','tp').': </span><span itemprop="telephone">'.$telephone.'</span><br />';
+						} if ($fax = get_option('tp-fax')) { 
+							echo '<span>'.__('Fax','tp').': </span><span itemprop="faxNumber">'.$fax.'</span>';
+						} 
+					?>
+				</p>
+				<p>
+					<?php
+						if ($cc = get_option('tp-cc')) {
+							echo '<span>'.__('CC No','tp').': </span>'.$cc.'<br />';
+						} if ($vat = get_option('tp-vat')) {
+							echo '<span itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
+						} if ($bankno = get_option('tp-bank-no')) {
+							if ($bank = !get_option('tp-bank')) {
+								$bank = "Bank";
+							} else {
+								$bank = get_option('tp-bank');
+							}
+							echo '<span>'.$bank.': </span>'.$bankno;
+						} 
+					?>
 			</p>
-			<p>
-				<?php
-					if ($email = get_option('tp-email')) { 
-						echo'<span>'.__('E-mail','tp').': </span><a href="mailto:'.$email.'">'.$email.'</a><br />';
-					} if ($telephone = get_option('tp-telephone')) { 
-						echo '<span>'.__('Telephone','tp').': </span>'.$telephone.'<br />';
-					} if ($fax = get_option('tp-fax')) { 
-						echo '<span>'.__('Fax','tp').': </span>'.$fax;
-					} 
-				?>
-			</p>
-			<p>
-				<?php
-					if ($cc = get_option('tp-cc')) {
-						echo '<span>'.__('CC No','tp').': </span>'.$cc.'<br />';
-					} if ($vat = get_option('tp-vat')) {
-						echo '<span>'.__('VAT No','tp').': </span>'.$vat.'<br />';
-					} if ($bankno = get_option('tp-bank-no')) {
-						if ($bank = !get_option('tp-bank')) {
-							$bank = "Bank";
-						} else {
-							$bank = get_option('tp-bank');
-						}
-						echo '<span>'.$bank.': </span>'.$bankno;
-					} 
-				?>
-			</p>
+			</div>
 		<?php echo $after_widget; ?>
 	<?php
 	}
