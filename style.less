@@ -671,7 +671,7 @@ img.size-thumbnail, .wp-caption {
 		
 		}
 		
-		&#footer .sidebar, &#main .sidebar {
+		&#main .sidebar {
 			
 			padding: 0;
 			margin-left: -1.25%;
@@ -686,6 +686,25 @@ img.size-thumbnail, .wp-caption {
 				&.even { clear: left; }
 								
 			}
+			
+		}
+		
+		&#footer .sidebar {
+			clear: both;
+			float: left;
+			margin-left: -1.25%;
+			margin-bottom: 30px;
+			padding: 0;
+			width: 100%;
+			
+			.widget {
+				float: left;
+				margin: 1.25%;
+				width: 47.5%;
+				
+				&.even { clear: left; }
+								
+			}			
 			
 		}
 		
