@@ -22,7 +22,7 @@
 
 @text-font:			'Helvetica Neue', sans-serif;
 @heading-font:		'Helvetica Neue', sans-serif !important;
-	
+		
 /**
  * @typography
  */
@@ -240,13 +240,11 @@ img.size-thumbnail, .wp-caption {
 			
 	#logo {
 	
-		min-height: 80px;
-		
 		#sitename { 
 			font-family: @heading-font;
 			font-size: 38px;
 			font-weight: bold;
-			margin: 24px 0 0 0;
+			margin: 0;
 			
 			a {
 				
@@ -272,7 +270,7 @@ img.size-thumbnail, .wp-caption {
 	#topnav {
 	
 		float: right;
-		margin-top: 24px;
+		margin-top: 22px;
 	
 		ul { 
 			
@@ -296,11 +294,10 @@ img.size-thumbnail, .wp-caption {
 	
 	#search {
 		
-		margin-top: 14px;
+		margin-top: 15px;
 		
 		form { 
 			
-			margin-top: 6px;
 			float: right; 
 			
 			input[type="text"], input[type="submit"] {
@@ -396,8 +393,10 @@ img.size-thumbnail, .wp-caption {
 	}
 	
 	#breadcrumbs { 
-		color: lighten(@text-color, 20%); 
-		margin: 24px 10px 6px 10px;
+		clear: both;
+		color: lighten(@text-color, 20%);
+		float: left;
+		margin: 20px 10px 5px 10px;
 	}
 	
 }
@@ -410,7 +409,7 @@ img.size-thumbnail, .wp-caption {
 		margin: 0 0 20px 0;
 		
 		.widgettitle { 	
-			font-size: 24px; 
+			font-size: 20px; 
 			margin-top: 0;
 		}
 		
@@ -446,7 +445,6 @@ img.size-thumbnail, .wp-caption {
 	
 	#content { 
 		
-		.eightcol;
 		background: @body-background;
 		padding-bottom: 20px;
 			
@@ -471,12 +469,12 @@ img.size-thumbnail, .wp-caption {
 	
 	.sidebar { 
 		
-		.fourcol; 
 		padding: 6px 0 0 0;
+		margin-bottom: 10px;
 		
 		.widget { 
 			background: #FFFFFF;
-			padding: 20px;
+			padding: 12px 20px 20px 20px;
 			
 			ul, li {
 				border-color: #CCC;
@@ -557,7 +555,7 @@ img.size-thumbnail, .wp-caption {
 
 .home {
 
-	#main #content, #main .sidebar { margin-top: 23px; }	
+	#main #content, #main .sidebar { }	
 	
 }
 
@@ -651,7 +649,7 @@ img.size-thumbnail, .wp-caption {
 		
 		}
 		
-		#breadcrumbs { margin: 20px 0; }
+		#breadcrumbs { margin: 20px 0 0 0; }
 		
 	}
 	
@@ -676,16 +674,17 @@ img.size-thumbnail, .wp-caption {
 		&#footer .sidebar, &#main .sidebar {
 			
 			padding: 0;
-			width: 100% ;
+			margin-left: -1.25%;
+			width: 100%;
 			
 			.widget {
 				float: left;
-				margin: 2% 2.1% 2% 0.5%;
-				padding: 3.5% 3.5% 3.5% 3.7%;
-				width: 41%;
+				margin: 1.25%;
+				padding: 2.5%;
+				width: 42.5%;
 				
-				&.odd { margin-right: 0; }
-				
+				&.even { clear: left; }
+								
 			}
 			
 		}
