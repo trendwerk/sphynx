@@ -66,23 +66,4 @@ jQuery(document).ready(function($){
 	    $('body').addClass(match[0]);
 	
 	};
-	
-	/**
-	 * @hover sfHover alternative
-	 */
-	$('#mainnav ul > li').mouseover(function() {
-		$(this).addClass('hover');
-	});
-	
-	$('#mainnav ul > li').mouseout(function() {
-		$(this).removeClass('hover');
-	});
-	
-	/**
-	 * @sub-menu class
-	 */
-	$('#mainnav ul li').has('ul.sub-menu').addClass('has-sub-menu');
-	
-
-
 });

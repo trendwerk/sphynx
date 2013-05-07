@@ -16,6 +16,7 @@ include('assets/inc/class.TPJSConstants.php');
 include('assets/inc/class.TPLess.php');
 include('assets/inc/class.TPMobileNav.php');
 include('assets/inc/class.TPNav.php');
+include('assets/inc/class.TPNavMenu.php');
 include('assets/inc/class.TPPlugins.php');
 include('assets/inc/class.TPRecommendedPlugins.php');
 include('assets/inc/class.TPScripts.php');

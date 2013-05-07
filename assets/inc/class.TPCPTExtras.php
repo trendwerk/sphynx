@@ -88,10 +88,9 @@ class TPCPTExtras {
 			$nav = new TPNav();
 			
 			if(is_single() || is_tax()) { 
-				foreach($items as $key=>$item) {	
+				foreach($items as &$item) {	
 					if($nav->current_item == $item->ID) {
 						$item->classes[] = 'current-menu-parent';
-						$items[$key] = $item;
 					}
 				}
 			}
