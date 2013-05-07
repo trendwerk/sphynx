@@ -8,7 +8,6 @@
  * 
  * @param mixed $var
  */
- 
 function dbg($var) {
 	echo '<pre>';
 		print_r($var);

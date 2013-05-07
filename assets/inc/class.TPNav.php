@@ -294,12 +294,12 @@ class TPNav {
 						//Multiple post types to a taxonomy. Show Home > [Taxonomy name] > [Term name]
 					} else {
 						//One post type to a taxonomy. Show Home > [Post type] > [Term name]
-						set_query_var('post_type',$taxonomy->object_type[0]);
+						//set_query_var('post_type',$taxonomy->object_type[0]);
 					}
 				}
 				
 				//Custom post type
-				$posttype = get_post_type_object(get_query_var('post_type'));
+				if(!is_array(get_query_var('post_type'))) $posttype = get_post_type_object(get_query_var('post_type'));
 
 				if($posttype) {
 					foreach($this->menu_items as $menu_item) {

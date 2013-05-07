@@ -66,5 +66,4 @@ jQuery(document).ready(function($){
 	    $('body').addClass(match[0]);
 	
 	};
-
 });
