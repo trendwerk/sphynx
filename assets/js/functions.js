@@ -18,9 +18,15 @@ jQuery(document).ready(function($){
 
 	$('#footernav li:first-child').addClass('first-child');
 	$('#footernav li:last-child').addClass('last-child');
-
-	$('.widget').filter(':even').addClass('even');
-	$('.widget').filter(':odd').addClass('odd');
+	
+    $('.widget').removeClass('even').removeClass('odd');
+    
+    $('.sidebar').each(function() {
+    
+      $('.widget:even', $(this)).addClass('even');
+      $('.widget:odd', $(this)).addClass('odd');
+    
+    });
 
 	/**
 	 * @zebra-tables
