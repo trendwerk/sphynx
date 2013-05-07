@@ -1,7 +1,11 @@
+@charset "UTF-8";
+
 /**
  * @import 
  */ 
  
+@import '../trendpress/assets/css/default.css';
+@import 'assets/less/formalize.less'; 
 @import 'assets/less/mixins.less';
 
 /**
@@ -28,7 +32,8 @@ body {
 	background: @body-background;
 	color: @text-color;
 	font-family: @text-font;
-	line-height: 24px;
+	font-size: 14px;
+	line-height: 1.75;
 	
 	// IMPORTANT: improve these styles in default.css then remove this...
 
@@ -52,6 +57,7 @@ body {
 		
 		color: @heading-color;
 		font-family: @heading-font;
+		line-height: 1.75;
 
 		a {
 			
@@ -64,27 +70,27 @@ body {
 	}
 	
 	h1 { 
-		font-size: 38px;
-		margin-bottom: 24px;
+		font-size: 34px;
+		margin: 12px 0;
 	}
 	
 	h2 { 
-		font-size: 32px;
-		margin-bottom: 24px;
+		font-size: 26px;
+		margin: 12px 0;
 	}
 	
 	h3 { 
-		font-size: 28px; 
-		margin: 0 0 24px 0; 
+		font-size: 24px; 
+		margin: 12px 0; 
 	}
 	
 	h4 { 
-		font-size: 22px; 
-		margin: 0 0 24px 0; 
+		font-size: 18px; 
+		margin: 12px 0;
 	}
 	
 	h5 { 
-		font-size: 18px;
+		font-size: 16px;
 		margin: 0 0 12px 0; 
 	}
 
@@ -95,7 +101,13 @@ body {
 	
 	// regular text 
 	
-	p, ul, ol, address { margin: 0 0 24px 0; }
+	p, ul, ol, address { 
+		
+		margin: 0 0 24px 0; 
+		
+		&:last-child { margin-bottom: 0; }
+	
+	}
 	
 	ul, ol {
 		
@@ -110,6 +122,7 @@ body {
 	pre { 
 		margin-bottom: 24px;
 		padding: 24px; 
+		color: #000!important;
 	}
 
 }
@@ -159,7 +172,6 @@ body {
 
 .more-link {
 
-	float: left;
 	text-decoration: underline;
 
 	&:after { content: ' \00bb'; }
@@ -177,7 +189,6 @@ body {
 	float: right; 
 	text-align: right;
 }
-
 
 /**
  * @images
@@ -201,10 +212,7 @@ img.size-thumbnail, .wp-caption {
  * @slider
  */
 
-.slider { 
-
-	
-}
+.slider { }
 
 /**
  * @classes
@@ -219,11 +227,14 @@ img.size-thumbnail, .wp-caption {
 /**
  * @lay-out
  */
+ 
+body { background: @heading-color; }
 	
 // header	
 	
 #header {
-
+	
+	background: @body-background;
 	color: @text-color;
 	height: auto;
 	
@@ -237,7 +248,7 @@ img.size-thumbnail, .wp-caption {
 			font-family: @heading-font;
 			font-size: 38px;
 			font-weight: bold;
-			margin: 24px 0;
+			margin: 24px 0 0 0;
 			
 			a {
 				
@@ -341,6 +352,11 @@ img.size-thumbnail, .wp-caption {
 				display: inline;
 				line-height: 40px;
 				
+				&:hover { 
+					background: darken(@heading-color, 10%);
+					color: #FFF;
+				}
+				
 				a {
 					color: #FFFFFF;
 					display: block;
@@ -349,18 +365,25 @@ img.size-thumbnail, .wp-caption {
 					
 					&:hover { 
 						background: darken(@heading-color, 10%);
-						color: #FFFFFF;
+						color: #FFF;
 						text-decoration: none;
 					}
 				
 				}
 				
+				ul { 
+					
+					width: 220px; 	
+				
+					ul { margin-left: 95px; }
+				
+				}					
+				
 				ul li a, 
 				ul ul li a, 
 				ul ul ul li a {
 					background: @heading-color;
-					padding: 0;
-					text-indent: 15px;
+					padding: 0 0 0 15px;
 					width: 100%;
 				}			
 							
@@ -390,7 +413,7 @@ img.size-thumbnail, .wp-caption {
 		
 		.widgettitle { 	
 			font-size: 24px; 
-			margin-bottom: 20px;
+			margin-top: 0;
 		}
 		
 		ul {
@@ -418,10 +441,12 @@ img.size-thumbnail, .wp-caption {
 		
 	}
 	
+	
 }
 
 #main {
 	
+	background: @body-background;
 	padding-bottom: 20px;
 		
 	.article-title { 
@@ -545,6 +570,8 @@ img.size-thumbnail, .wp-caption {
 			float: left;
 			padding: 0 0 24px 0;
 			margin: 0 0 24px 0;
+			
+			&.last-child { border: none;	 }
 					
 		}
 	
@@ -609,14 +636,18 @@ img.size-thumbnail, .wp-caption {
 @media (max-width: 980px) {
 	
 	#header {
-	
+		
+		#topnav, .search { display: none; }
+		
 		#mainnav {
-		
-		margin: 0;
-		
+			
+			margin-left: 0; 
+				
 			select { display: none; }
 		
 		}
+		
+		#breadcrumbs { margin: 20px 0; }
 		
 	}
 	
@@ -631,7 +662,7 @@ img.size-thumbnail, .wp-caption {
 				margin: 0;
 			} 
 			
-			.sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+			.sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
 				clear: both;
 				width: 100%;
 			}
@@ -646,7 +677,7 @@ img.size-thumbnail, .wp-caption {
 			.widget {
 				float: left;
 				margin: 2% 2.1% 2% 0.5%;
-				padding: 0 3.5% 3.5% 3.7%;
+				padding: 3.5% 3.5% 3.5% 3.7%;
 				width: 41%;
 				
 				&.odd { margin-right: 0; }
@@ -667,13 +698,59 @@ img.size-thumbnail, .wp-caption {
 	#header {
 		
 		#mainnav {
+		
+			height: auto;
 					
-			select { display: block; }
+			select { 
+				display: block;
+				font-size: 14px;
+				height: 2.4em;
+				margin: 3.5% 5%;
+				padding: 0 2%;
+				width: 90%;
+			}
 		
 			ul { display: none; }
 		
 		}
 	
+	}
+	
+	#main {
+		
+		#content { 
+		
+			padding-bottom: 20px;
+			
+			p.has-img { 
+				clear: both;
+				float: left;
+				width: 100%;
+			}
+			
+			img.alignleft, img.alignright, .wp-caption { 
+				float: left;
+				margin: 0 0 12px 0;
+			}
+			
+			.wp-caption {
+			
+				background: transparent;
+				border: none;
+				clear: both;
+				width: 100%;
+				
+				img { float: left; }
+				
+				p { 
+					clear: both; 
+					text-align: left;
+				}
+			
+			}
+			
+		}
+		
 	}
 	
 	.container {
@@ -699,6 +776,15 @@ img.size-thumbnail, .wp-caption {
 		}
 		
 		&#footer {
+		
+			.sidebar {
+				
+				.widget {
+					padding: 0;
+					width: 100%
+				}
+			
+			}
 			
 			#credits {
 				
@@ -730,3 +816,120 @@ img.size-thumbnail, .wp-caption {
 	}
 		
 }
+
+//
+
+.gform_wrapper {
+	
+	.gform_heading, .gform_footer {	
+		clear: both;
+		margin-bottom: 1em;
+		width: 100%;
+	}
+	
+	.validation_error {
+		background: #FFF;
+		border: 1px solid #C44741;
+		color: #C44741;
+		display: block;
+		margin-bottom: 1em;
+		padding: 2%;
+		width: 96%;
+	}
+	
+	.gform_body {
+		
+		.gform_fields {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			
+			.gfield {
+				display: block;
+				margin-bottom: 1em;
+				width: 100%;
+				
+				.gfield_label {
+					float: left; 
+					width: 35%;
+				}
+				
+				.gfield_description, .instruction {
+					font-size: 13px;
+					margin: 1em 0 0 35%;
+					width: 50%;
+					
+					&.validation_message {
+						color: #C44741;
+					}
+					
+				}
+				
+				.small, .medium, .large { font-size: 13px; }
+				
+				.small { width: 25%; }
+				.medium { width: 40%; }
+				.large { width: 55%; }
+				
+				.gfield_checkbox, .gfield_radio {
+					
+					float: left;
+					font-size: 13px;
+					list-style-type: none;
+					margin: 0 0 2em 0;
+					padding: 0;
+					width: 65%;
+					
+					label { 
+						position: relative;
+						top: -2px; 
+					}
+	
+					label, input[type="text"] { margin-left: 10px; }
+	
+				}
+				
+				.ginput_complex {
+					
+					float: left;
+					margin: 0 0 1em 0;
+					width: 65%;
+				
+					span {
+						clear: both;
+						float: left;
+						font-size: 13px;
+						margin-bottom: 1em;
+						width: 100%;
+						
+						label { 
+							float: left; 
+							margin-left: 2.5%;
+							width: 40%;
+						}
+						
+						input[type="text"] {
+							float: left;
+							width: 50%;
+						}
+
+					}					
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	.gform_footer {
+		
+		clear: both;
+		
+		.gform_button { margin: 2em 0 0 35%; }
+		
+	}
+	
+}
+

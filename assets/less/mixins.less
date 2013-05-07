@@ -1,3 +1,8 @@
+/**
+ * @mixins
+ */
+ 
+// mobile navigation
 
 .maxDepth (@index) when (@index > 0) {
 	(~".depth@{index}") {
@@ -5,11 +10,29 @@
 	}
 	.maxDepth(@index - 1);
 }
+
 .maxDepth (0) {}
 
-#mainnav select {
-	.maxDepth(10);
+#mainnav select { .maxDepth(10); }
+
+// placeholder
+
+.placeholder(@color) {
+    &::-webkit-input-placeholder {
+       color: @color;
+    }
+    &:-moz-placeholder {
+       color: @color;  
+    }
+    &::-moz-placeholder {
+       color: @color;  
+    }
+    &:-ms-input-placeholder {  
+       color: @color; 
+    }
 }
+
+// border radius(es)
 
 .border-radius, .border-radiuses {
 	-moz-background-clip: padding;
@@ -38,11 +61,15 @@
 	border-top-left-radius: @topleft;
 }
 
+// box shadow
+
 .box-shadow (@shadow) {
 	-webkit-box-shadow: @shadow;
 	-moz-box-shadow: @shadow;
 	box-shadow: @shadow;
 }
+
+// columns
 
 .columns(@number, @gap) {
 	-moz-column-count: @number;
@@ -53,6 +80,20 @@
 	column-gap: @gap;
 }
 
+// grayscale
+
+.grayscale {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%); 
+	-o-filter: grayscale(100%); 
+	-webkit-filter: grayscale(1);
+	filter: gray;
+}
+
+// horizantal gradient
+
 .horizontal-gradient (@startColor, @endColor) {
  	background-color: @startColor;
 	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
@@ -62,17 +103,21 @@
 	background-image: -o-linear-gradient(left, @startColor, @endColor);
 }
 
+// opacity
+
 .opacity (@opacity: 0.5) {
 	-webkit-opacity: @opacity;
 	-moz-opacity: @opacity;
 	opacity: @opacity;
 }
 
+// vertical gradient
+
 .vertical-gradient (@startColor, @endColor) {
 	background-color: @startColor;
-	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
-	background: -webkit-linear-gradient(top, @startColor, @endColor);
-	background: -moz-linear-gradient(top, @startColor, @endColor);
-	background: -ms-linear-gradient(top, @startColor, @endColor);
-	background: -o-linear-gradient(top, @startColor, @endColor);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+	background-image: -moz-linear-gradient(top, @startColor, @endColor);
+	background-image: -ms-linear-gradient(top, @startColor, @endColor);
+	background-image: -o-linear-gradient(top, @startColor, @endColor);
 }
