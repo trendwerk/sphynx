@@ -5,6 +5,7 @@
  */ 
  
 @import '../trendpress/assets/css/default.css';
+@import 'assets/less/960static.less';
 @import 'assets/less/formalize.less'; 
 @import 'assets/less/mixins.less';
 
@@ -227,9 +228,7 @@ img.size-thumbnail, .wp-caption {
 /**
  * @lay-out
  */
- 
-body { background: @heading-color; }
-	
+ 	
 // header	
 	
 #header {
@@ -446,28 +445,34 @@ body { background: @heading-color; }
 
 #main {
 	
-	background: @body-background;
-	padding-bottom: 20px;
+	#content { 
 		
-	.article-title { 
-		font-size: 26px;
-		margin-bottom: 0;
-	}
-	
-	.search-title { font-size: 26px; }
-	
-	.page-title {
+		.eightcol;
+		background: @body-background;
+		padding-bottom: 20px;
+			
+		.article-title { 
+			font-size: 26px;
+			margin-bottom: 0;
+		}
 		
-	}
-	
-	.meta { 
-		color: lighten(@text-color, 20%);
-		font-size: 13px;
-		margin: 6px 0 18px 0; 
+		.search-title { font-size: 26px; }
+		
+		.page-title {
+			
+		}
+		
+		.meta { 
+			color: lighten(@text-color, 20%);
+			font-size: 13px;
+			margin: 6px 0 18px 0; 
+		}
+
 	}
 	
 	.sidebar { 
-	
+		
+		.fourcol; 
 		padding: 6px 0 0 0;
 		
 		.widget { 
