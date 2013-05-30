@@ -127,6 +127,20 @@ body {
 
 }
 
+/* Selection */
+	/* webkit, opera, IE9 */
+	::selection { 
+			background-color: @link-color; 
+			color: #fff; 
+			text-shadow: none;
+	}
+	/* mozilla firefox */
+	::-moz-selection { 
+			background-color: @link-color; 
+			color: #fff; 
+			text-shadow: none; 
+			}
+
 /** 
  * @wysiwyg styles
  */
