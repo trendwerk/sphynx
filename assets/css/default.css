@@ -1,9 +1,9 @@
 /* 	=====
 	RESET
 	===== */
-
+	
 /* 	HTML5 DOCTOR RESET 
-	------------------ */
+	------------------ */	
 
 html { overflow-y: scroll; }
 
@@ -14,57 +14,67 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	vertical-align: baseline;
-}
-
+	vertical-align: baseline; }
+	
 table, tbody, tfoot, thead, tr, th, td {
 	border-collapse: collapse;
 	font-size: 100%;
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	vertical-align: baseline;
-}
+	vertical-align: baseline; }	
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
 
-blockquote { quotes: none; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu,nav, section { display: block; }
+
+nav ul { list-style: none; }
+
+blockquote, q { quotes: none; }
 
 blockquote:before, blockquote:after, q:before, q:after {
     content: '';
-    content: none;
-}
+    content: none; }
 
 input, select { vertical-align: middle; }
 
-/* 	TYPOGRAPHY 
-	---------- */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/* 	==========
+	TYPOGRAPHY
+	========== */
 
 strong, b { font-weight: bold; }
 
 em, i { font-style: italic; }
 
-blockquote, blockquote p { font-style: italic; }
-
+blockquote, blockquote p, q { 
+	font-style: italic;
+	margin: 0 0 20px 0; }
+		
 ul, ol {
+	line-height: 25px;
 	list-style-position: outside;
-	margin: 0 0 20px 20px;
-}
+	margin: 0 0 20px 25px; }
 
 ul ul, ol ol, ul ol, ol ul { margin: 0 0 0 20px; }
 
+ol ol { list-style-type: lower-latin; }
+		
+/* obscure */
+		
 code, pre { background: #FFFFB3; }
-
+	
 pre {
 	padding: 5px 10px; 
-	margin-bottom: 22px; 
-	white-space: -moz-pre-wrap;
-	white-space: -o-pre-wrap;
-	white-space: pre-wrap;
-}
+    margin-bottom: 22px; 
+    white-space: pre-wrap;
+ 	white-space: -moz-pre-wrap;
+ 	white-space: -o-pre-wrap;
+ }
 
 hr {
-	border: 0;
+	border: 0;   
 	border-top: 1px solid #CCCCCC;
 	display: block;
 	height: 1px;
@@ -72,15 +82,24 @@ hr {
 	padding: 0;
 }
 
-/*  SUCKERFISH 
-	---------- */
-	
+
+/* 	====
+	MISC
+	==== */
+
+.clear { clear: both; }
+
+/*  INTERACTION 
+	-----------  */
+
+/* suckerfish horizontal */
+
 .sf-menu, .sf-menu * {
-	list-style: none;
+	list-style: none; 
 	margin: 0;
 	padding: 0;
 }
-
+	
 .sf-menu { line-height:	1.0; }
 
 	.sf-menu ul {
@@ -88,16 +107,16 @@ hr {
 		top: -999em;
 		width: 10em;
 	}
+		
+		.sf-menu ul li { width: 100%; }
+
+		.sf-menu li:hover { visibility: inherit; }
 
 		.sf-menu li {
 			float: left;
 			position: relative;
 		}
-
-			.sf-menu li:hover { visibility: inherit; }
-		
-		.sf-menu ul li { width: 100%; }
-
+			
 			.sf-menu a {
 				display: block;
 				position: relative;
@@ -110,13 +129,22 @@ hr {
 				z-index: 99;
 			}
 
-			.sf-menu li:hover li ul, .sf-menu li.sfHover li ul, .sf-menu li li:hover li ul, .sf-menu li li.sfHover li ul { top: -999em; }
+			ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul { top: -999em; }
 
-			.sf-menu li li:hover ul, .sf-menu li li.sfHover ul, .sf-menu li li li:hover ul, .sf-menu li li li.sfHover ul {
+			ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
 				left: 10em;
 				top: 0; 
 			}
 
+			ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul { top: -999em; }
+
+			ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
+				left: 10em;
+				top: 0;
+			}
+
+			/* skin */
+			
 			.sf-menu { float: left; }
 
 				.sf-menu a {
@@ -124,34 +152,49 @@ hr {
 					text-decoration: none;
 				}
 
+					.sf-menu li { background: none; }
+					
+						.sf-menu li li { background: none; }
+						
+							.sf-menu li li li { background: none; }
+							
+								.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+									background: none;
+								}
+	
+				/* arrows */
+				
+				.sf-sub-indicator { display: none; }
+
 /*	PAGINATION
 	---------- */
-
+				
 nav#pagination {
 	clear: both;
 	float: left;
-	font-size: 14px;
+	font-size: 14px; 
 	height: auto;
 	margin: 0 0 25px 0;
 	width: 100%;
 }
-
+	
 	nav#pagination span.pagination-title { display: none; }
 	
 	nav#pagination ul { 
 		margin: 0; 
 		text-align: center;
-		width: auto;
+		width: auto; 
 	}
-
+				
 		nav#pagination ul li { 
 			display: inline-block;
 			list-style-type: none;
 		}
-
+		
 			nav#pagination ul li a { text-decoration: none; }
-
-			nav#pagination ul li a.pagination-page, nav#pagination ul li span.pagination-current { 
+			
+			nav#pagination ul li a.pagination-page,
+			nav#pagination ul li span.pagination-current { 
 				border: 1px solid #CCC;
 				position: relative;
 				margin: 0 3px;
@@ -172,6 +215,8 @@ nav#pagination {
 			    margin: 0 3px;
 			    position: relative;
 			}
+
+			/* 	Previous and next post links */
 			
 			nav#pagination .previous-post {
 				float: left;
@@ -181,12 +226,23 @@ nav#pagination {
 			nav#pagination .next-post {
 				float: right;
 				margin: 0 0 0 10px;
-			}	
+			}
+
+/*	BUGFIXES
+	-------- */
+
+/* Fix for vertical scroll bug tweet button */
+
+#twttrHubFrame,
+#twttrHubFrameSecure { left: 0; }
+
 	
-/* 	WORDPRESS 
+/* 	---------
+	WORDPRESS 
 	--------- */
 	
-/* images */
+/* 	IMAGES
+	------ */
 
 .entry-content img { margin: 0 0 25px 0; }
 
@@ -226,11 +282,6 @@ nav#pagination {
 	margin: 0 !important;
 	max-height: 1em;
 }
-
-#wpadminbar #adminbarsearch .adminbar-input {
-	margin: 0 !important;
-	vertical-align: middle;
-}
 	
 /*	GALLERY
 	------- */
@@ -251,6 +302,7 @@ nav#pagination {
 	}
 		
 	.ie7 .gallery dt { margin-bottom: 25px; }
+	
 		
 		.gallery dt img {
 			float: left;
@@ -282,9 +334,9 @@ blockquote.right {
 /*	WIDGETS
 	------- */
 
-/* calendar widget */
-
 table#wp-calendar, .widget_archive li { text-transform: capitalize; }
+
+/* calendar */
 
 	table#wp-calendar {
 		border-right: none;
@@ -302,10 +354,9 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 			table#wp-calendar tfoot, table#wp-calendar tfoot tr, table#wp-calendar tfoot tr td { border: none !important; }
 			
 			table#wp-calendar tfoot td#prev { text-align: left; }
-			
 			table#wp-calendar tfoot td#next { text-align: right; }
 		
-/* rss widget */
+/* rss */
 
 .widget_rss ul li { padding: 10px 5px 15px 5px !important; }
 
@@ -367,32 +418,32 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 				
 	/* big icons */
 
-	.widget_tp_social li { padding: 5px 0; }
+	.social-media-widget.great-icons li { padding: 5px 0; }
 	
-		.widget_tp_social li a { 
+		.social-media-widget.great-icons li a { 
 			display: inline-block;
 			height: 36px;
 			line-height: 36px;
 			padding-left: 42px;
 		}
 
-	.widget_tp_social li.twitter a, .widget_tp_social-no-text li.twitter a { background: url('../img/social/twitter_32.png') no-repeat center left; }	
-	.widget_tp_social li.facebook a, .widget_tp_social-no-text li.facebook a { background: url('../img/social/facebook_32.png') no-repeat center left; }
-	.widget_tp_social li.linkedin a, .widget_tp_social-no-text li.linkedin a { background: url('../img/social/linkedin_32.png') no-repeat center left; }
-	.widget_tp_social li.googleplus a, .widget_tp_social-no-text li.googleplus a { background: url('../img/social/googleplus_32.png') no-repeat center left; }
-	.widget_tp_social li.youtube a, .widget_tp_social-no-text li.youtube a { background: url('../img/social/youtube_32.png') no-repeat center left; }
-	.widget_tp_social li.email a, .widget_tp_social-no-text li.email a { background: url('../img/social/email_32.png') no-repeat center left; }
-	.widget_tp_social li.rss a, .widget_tp_social-no-text li.rss a { background: url('../img/social/rss_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.twitter a, .social-media-widget.great-icons-no-text li.twitter a { background: url('../img/social/twitter_32.png') no-repeat center left; }	
+	.social-media-widget.great-icons li.facebook a, .social-media-widget.great-icons-no-text li.facebook a { background: url('../img/social/facebook_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.linkedin a, .social-media-widget.great-icons-no-text li.linkedin a { background: url('../img/social/linkedin_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.googleplus a, .social-media-widget.great-icons-no-text li.googleplus a { background: url('../img/social/googleplus_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.youtube a, .social-media-widget.great-icons-no-text li.youtube a { background: url('../img/social/youtube_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.email a, .social-media-widget.great-icons-no-text li.email a { background: url('../img/social/email_32.png') no-repeat center left; }
+	.social-media-widget.great-icons li.rss a, .social-media-widget.great-icons-no-text li.rss a { background: url('../img/social/rss_32.png') no-repeat center left; }
 		
 	/* small icons with text*/
 	
-	.widget_tp_social-no-text ul { 
+	.social-media-widget.great-icons-no-text ul { 
 		border: none;
 		display: block;
 		padding: 5px 0 40px 0;
 	}
 
-		.widget_tp_social-no-text li { 
+		.social-media-widget.great-icons-no-text li { 
 			border: none;
 			display: block;
 			float: left;
@@ -402,7 +453,7 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 			width: 32px;
 		}
 			
-			.widget_tp_social-no-text li a { 
+			.social-media-widget.great-icons-no-text li a { 
 				display: block;
 				height: 32px;
 				text-indent: -999999px;
@@ -415,36 +466,46 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 	display: inline-block;
 	font-weight: bold;
 	min-width: 75px;
-	width: 35%;
-}
+	width: 35%; }
 	
 	.contact-widget ul {
 		clear: both;
 		display: block;
 		float: left;
 		height: auto;
-		width: 100%;
-	}
+		width: 100%; }
 		
 		.contact-widget ul.other { padding-bottom: 0 !important; }
 		
 		.contact-widget li { clear: both; }
 
-/*	TABLES
-	------ */
+/* 	======
+	TABLES
+	====== */
 
 table { 
+	border: 1px solid #000000;
 	border-collapse: collapse;
 	border-spacing: 0;	
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 20px;
 	width: 100%;
 }
 	
 	table caption { 
+		font-size: 14px;
 		font-weight: bold;
+		line-height: 22px;
+		margin-bottom: 22px;
 		text-align: left;
 	}
 		
 	.ie7 table caption { height: 44px;}
+
+	table tr { border-bottom: 1px solid #000; }
+	
+		.ie7 table td { border-bottom: 1px solid #000; }
 	
 		table th { 
 			padding: 5px 10px;
@@ -454,15 +515,36 @@ table {
 		table thead { font-weight: bold; }
 			
 		table td { padding: 5px 10px; }
+		
+		table td, table th { border-right: 1px solid #000000; }
 
-/*	LAYOUT
-	------ */
+/* 	=====
+	FORMS
+	===== */
+
+/*	GRAVITYFORMS
+	------------ */
+	
+/* fix for WP adminbar search css bug */
+	
+#wpadminbar #adminbarsearch .adminbar-input {
+	margin: 0 !important;
+	vertical-align: middle;
+}
+
+/* 	======
+	LAYOUT
+	====== */
+
+/* collumns */
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
 	float: left;
 	margin: 10px;
 }
 
+/* outer container, full width */
+	
 .container {
 	display: block;
 	clear: both;
@@ -470,6 +552,8 @@ table {
 	height: auto;
 	min-width: 100%;
 }
+	
+	/* inner container, center aligned */
 
 	.container .container-inner {
 		margin: 0 auto;
@@ -477,6 +561,8 @@ table {
 		width: 960px;
 	}
 
+		/* collumn specific widths */
+		
 		.onecol { width: 60px; }
 		.twocol { width: 140px; }
 		.threecol { width: 220px; }
@@ -489,12 +575,9 @@ table {
 		.tencol { width: 780px; }
 		.elevencol { width: 860px; }
 		.twelvecol { width: 940px; }
-
-		img, object, embed { max-width: 100%; }
-
-		img { height: auto; }
 		
-/* 	MISC 
-	---- */
-
-.clear { clear: both; }
+		/* set max width for images, objects and embeds */
+		
+		img, object, embed { max-width: 100%; }
+		
+		img { height: auto; }
