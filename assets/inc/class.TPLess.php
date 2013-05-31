@@ -6,7 +6,11 @@
 include_once('lib/lessphp/lessc.inc.php');
 
 class TPLess {
+	var $force = false;
+	
 	function __construct() {
+		if($_SERVER['HTTP_HOST'] == 'localhost') $this->force = true;
+		
 		add_action('wp_enqueue_scripts',array($this,'init'),999999);
 		add_action('admin_enqueue_scripts',array($this,'init'),999999);
 	}
@@ -24,7 +28,12 @@ class TPLess {
 					$new_file = str_replace('.less','.compiled.css',$file);
 					
 					$less = new lessc;
-					$less->checkedCompile($file,$new_file);
+					
+					if($this->force) :
+						$less->compileFile($file,$new_file);
+					else :
+						$less->checkedCompile($file,$new_file);	
+					endif;
 					
 					$wp_style->src = str_replace(ABSPATH,site_url().'/',$new_file);
 				endif;

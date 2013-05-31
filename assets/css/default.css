@@ -89,7 +89,6 @@ hr {
 
 .clear { clear: both; }
 
-
 /*  INTERACTION 
 	-----------  */
 
@@ -227,7 +226,16 @@ nav#pagination {
 			nav#pagination .next-post {
 				float: right;
 				margin: 0 0 0 10px;
-			}	
+			}
+
+/*	BUGFIXES
+	-------- */
+
+/* Fix for vertical scroll bug tweet button */
+
+#twttrHubFrame,
+#twttrHubFrameSecure { left: 0; }
+
 	
 /* 	---------
 	WORDPRESS 
@@ -514,14 +522,8 @@ table {
 	FORMS
 	===== */
 
-
-
-
-
 /*	GRAVITYFORMS
 	------------ */
-
-
 	
 /* fix for WP adminbar search css bug */
 	

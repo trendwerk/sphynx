@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-07 10:34+0100\n"
-"PO-Revision-Date: 2013-05-07 10:43+0100\n"
-"Last-Translator: Harold Angenent <harold@trendwerk.nl>\n"
+"POT-Creation-Date: 2013-05-31 12:47+0100\n"
+"PO-Revision-Date: 2013-05-31 12:47+0100\n"
+"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -72,7 +72,7 @@ msgstr "Postcode"
 #: ../../assets/inc/class.TPInformation.php:41
 #: ../inc/class.TPInformation.php:41
 msgid "City"
-msgstr "Stad"
+msgstr "Plaats"
 
 #: ../../assets/inc/class.TPInformation.php:44
 #: ../inc/class.TPInformation.php:44
