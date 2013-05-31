@@ -10,7 +10,7 @@
 		<title><?php wp_title('-'); ?></title>
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php bloginfo('name'); ?> RSS Feed" />
+		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php bloginfo('name'); ?> RSS feed" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_url')?>/assets/img/favicon/favicon.ico" />
@@ -24,12 +24,13 @@
 					<p id="sitename"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></p>
 					<p id="description"><?php bloginfo('description'); ?></p>
 				</div>
-				<nav id="topnav" class="navigation sixcol">
-					<?php 
+				<nav id="topnav" class="navigation sixcol">				
+					<?php
 						wp_nav_menu( array(
+							'theme_location' => 'topnav',
+							'fallback_cb' => 'false',
 							'container' => '',
 							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'theme_location' => 'topnav',
 							'depth' => '0' 
 						)); 
 					?>
@@ -40,9 +41,9 @@
 					<nav id="mainnav" class="navigation twelvecol">				
 					<?php 
 						wp_nav_menu( array(
+							'theme_location' => 'mainnav',
 							'container' => '',
 							'items_wrap' => '<ul id="%1$s" class="%2$s sf-menu">%3$s</ul>',
-							'theme_location' => 'mainnav',
 							'depth' => '0',
 							'mobile' => true 
 						)); 
@@ -53,7 +54,7 @@
 				<?php } else { ?>
 					<nav id="breadcrumbs" class="twelvecol">
 						<?php _e('You are here:','tp') ?>
-						<?php if (function_exists('tp_breadcrumbs')) tp_breadcrumbs(); ?>
+						<?php if (function_exists('tp_breadcrumbs')) tp_breadcrumbs('»'); ?>
 					</nav>
 				<?php } ?>
 			</div>
