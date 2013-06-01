@@ -145,25 +145,23 @@ body {
 			text-decoration: underline;
 		}
 		
-		&.more,
-		&.next {
-			&:after { content: ' \00bb'; }
-		}
+		&.more:after { content: ' \00bb'; }
 		
-		&.back,
-		&.prev { 
-			&:before { content: '\00ab '; }
-		}
+		&.back:before { content: '\00ab '; }
 		
 		&.prev {
 			width: 40%; 
 			float: left;
+			
+			&:before { content: '\00ab '; }
 		}
 		
 		&.next {
 			width: 40%;
 			float: right; 
 			text-align: right;
+			
+			&:after { content: ' \00bb'; }
 		}
 		
 		&.cta {
@@ -288,6 +286,7 @@ body {
 		
 			ul {
 				float: right;
+				margin: 0;
 				
 				li { 
 					display: inline-block;
@@ -327,7 +326,7 @@ body {
 				
 				input[type="submit"] {
 					.border-radiuses(3px, 3px, 0, 0);
-					background: #FFFFFF url('assets/img/search.png') no-repeat center center;
+					background: #FFF url('assets/img/search.png') no-repeat center center;
 					border: 1px solid @border-color;
 					border-left: none;
 					text-transform: uppercase;
@@ -341,8 +340,8 @@ body {
 		
 		#mainnav {
 			background: @footer-background;
-			height: 40px;
-								
+			height: auto;
+			
 			ul { 
 				
 				li { 
@@ -355,7 +354,7 @@ body {
 					}
 					
 					a {
-						color: #FFFFFF;
+						color: #FFF;
 						display: block;
 						float: left;
 						padding: 0 15px;
@@ -384,8 +383,6 @@ body {
 			}
 		
 			ul > li.hover > a { background: darken(@heading-color, 10%); }
-			
-			select { width: auto; }
 		}
 		
 		/* Breadcrumbs  */
@@ -444,7 +441,7 @@ body {
 	.sidebar {
 	
 		.widget {
-			background: #FFFFFF;
+			background: #FFF;
 			font-size: 13px;
 			padding: 20px;
 			margin: 0 0 20px 0;
@@ -517,11 +514,15 @@ body {
 	
 	#footer {
 		background: @footer-background;
-		color: #FFFFFF;
+		color: #FFF;
 		font-size: 13px;
 		margin: 20px 0 0 0;
 		
-		a { color: #FFFFFF; }
+		a { 
+			color: #FFF; 
+			
+			&:hover { color: #CCC; }
+		}
 		
 		.sidebar {
 			.widget {
@@ -531,7 +532,7 @@ body {
 				padding: 20px 0;
 				float: left;
 				
-				h3 { color: #FFFFFF; }
+				h3 { color: #FFF; }
 			}
 		}
 		
@@ -799,8 +800,6 @@ article .search-highlight { background: #FFFFB3; }
 	#header {
 		
 		#mainnav {
-		
-			height: auto;
 	
 			select { 
 				display: block;
