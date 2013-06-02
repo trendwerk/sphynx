@@ -106,20 +106,20 @@ class widget_tp_contact extends WP_Widget {
 				<p>
 					<?php
 						if ($email = get_option('tp-email')) { 
-							echo'<span>'.__('E-mail','tp').': </span><a itemprop="email" href="mailto:'.$email.'">'.$email.'</a><br />';
+							echo'<span class="label">'.__('E-mail','tp').': </span><a itemprop="email" href="mailto:'.$email.'">'.$email.'</a><br />';
 						} if ($telephone = get_option('tp-telephone')) { 
-							echo '<span>'.__('Telephone','tp').': </span><span itemprop="telephone">'.$telephone.'</span><br />';
+							echo '<span class="label">'.__('Telephone','tp').': </span><span itemprop="telephone">'.$telephone.'</span><br />';
 						} if ($fax = get_option('tp-fax')) { 
-							echo '<span>'.__('Fax','tp').': </span><span itemprop="faxNumber">'.$fax.'</span>';
+							echo '<span class="label">'.__('Fax','tp').': </span><span itemprop="faxNumber">'.$fax.'</span>';
 						} 
 					?>
 				</p>
 				<p>
 					<?php
 						if ($cc = get_option('tp-cc')) {
-							echo '<span>'.__('CC No','tp').': </span>'.$cc.'<br />';
+							echo '<span class="label">'.__('CC No','tp').': </span>'.$cc.'<br />';
 						} if ($vat = get_option('tp-vat')) {
-							echo '<span itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
+							echo '<span class="label" itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
 						} if ($bankno = get_option('tp-bank-no')) {
 							if ($bank = !get_option('tp-bank')) {
 								$bank = "Bank";
