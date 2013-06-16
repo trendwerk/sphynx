@@ -11,7 +11,7 @@
 			<h1 id="page-title"><?php echo __('Posts by','tp').' '.get_the_author_meta('display_name',$author); ?></h1>
 			<?php get_template_part('part-author'); ?>
 		<?php else : ?>
-			<?php _e('News','tp'); ?>
+			<h1 id="page-title"><?php _e('News','tp'); ?></h1>
 		<?php endif; ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<article <?php post_class(); ?>>
