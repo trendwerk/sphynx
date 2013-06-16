@@ -25,4 +25,21 @@ function tp_add_editor_styles($settings) {
 }
 add_filter('tiny_mce_before_init','tp_add_editor_styles');
 
+/**
+ * @author Remove AIM, YIM, JABBER and add LinkedIn
+ */
+function tp_modify_profile($media) {
+	unset($media['aim']);
+	unset($media['yim']);
+	unset($media['jabber']);
+	unset($media['googleplus']);
+
+	$media['facebook'] = __('Facebook profile URL','tp');
+	$media['linkedin'] = __('LinkedIn profile URL','tp');
+	$media['googleplus'] = __('Google+ profile URL','tp');
+	
+	return $media;
+}
+add_filter('user_contactmethods','tp_modify_profile');
+
 ?>
