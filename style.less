@@ -6,8 +6,6 @@
  *
  * Contents:
  *
- * @import 			Import external files
- * @variables 		Defines presets for color, fonts, etc
  * @typography 		Defines the styling of text elements
  * @misc 			Defines miscellaneous styles
  * @layout			Defines the lay-out
@@ -48,7 +46,7 @@
 /**
  * @typography
  *
- * Defines the styling of tekst elements (e.g. font, size, colors, etc...)
+ * Defines the styling of texst elements (e.g. font, size, colors, etc...)
  * 
  * @typography Default
  */
@@ -87,7 +85,7 @@ body {
 	
 	h4 { 
 		font-size: 18px;
-		margin: 0 0 12px 0;
+		margin: 0 0 17px 0;
 	}
 	
 	h5 { 
@@ -106,7 +104,7 @@ body {
 	 * @typography Content 
 	 */
 	
-	p, ul, ol, address { margin: 0 0 25px 0; }
+	p, ul, ol, address { margin: 0 0 20px 0; }
 	
 	ul, ol {
 		line-height: 25px;
@@ -141,7 +139,7 @@ body {
 		text-decoration: underline;
 				
 		&:hover { 
-			color: lighten(@link-color, 10%);
+			color: lighten(@link-color, 20%);
 			text-decoration: underline;
 		}
 		
@@ -443,12 +441,55 @@ body {
 		.meta { 
 			color: lighten(@text-color, 20%);
 			font-size: 13px;
+			margin: 0 0 15px 0;
 			
 			a { 
 				color: @text-color;
 				
 				&:hover { color: @link-color; } 
+			}
 			
+		}
+		
+		// author
+		
+		.author {
+			background: #FFF;
+			padding: 20px;
+			margin: 0 0 20px 0;
+			
+			.author-avatar {
+				float: left;
+			}
+			
+			.author-info {
+				padding-left: 100px;
+				
+				ul.author-social {
+					list-style: none;
+					margin: 0;
+					
+					li {
+						float: left;
+						margin: 0 10px 20px 0;
+						
+						img,
+						svg {
+							height: 16px;
+							width: 16px;
+							margin: 0 5px 0 0;
+							vertical-align: middle;
+						}
+						
+					}
+					
+				}
+				
+				a.more {
+					float: right;
+					margin: 0 10px 10px 0;
+				}
+				
 			}
 			
 		}
@@ -477,7 +518,7 @@ body {
 					&:hover { text-decoration: underline; }
 					
 				 }
-				 
+			
 			}
 			
 			ul {
@@ -513,6 +554,19 @@ body {
 			/**
 			 * @widget Tagcloud
 			 */
+			
+			&.widget_tp_social {
+
+				img,
+				svg {
+					height: 16px;
+					width: 16px;
+					margin: 0 10px 0 0;
+					vertical-align: middle;
+				}
+			}
+				
+			/* @widget Tagcloud */
 			
 			&.widget_tag_cloud {
 				
@@ -567,6 +621,8 @@ body {
 				
 				h3 { color: #FFF; }
 				
+				svg { fill: #FFF; }
+
 			}
 			
 		}
@@ -646,9 +702,10 @@ body {
 		
 		.share {
 			clear: both;
-			margin: 0 0 25px 0;
+			margin: 0 0 20px 0;
 			
-			.addthis_button_facebook_like { width: 125px; }
+			.addthis_button_facebook_like,
+			.addthis_button_facebook_like iframe { width: 125px !important; }
 			.addthis_button_tweet { width: 95px; }
 			
 		}

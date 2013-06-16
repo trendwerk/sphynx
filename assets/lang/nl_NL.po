@@ -2,16 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-11 14:25+0100\n"
-"PO-Revision-Date: 2013-04-11 14:33+0100\n"
-"Last-Translator: Harold <harold@trendwerk.nl>\n"
+"POT-Creation-Date: 2013-06-16 18:28+0100\n"
+"PO-Revision-Date: 2013-06-16 18:28+0100\n"
+"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl_NL\n"
 "X-Poedit-KeywordsList: __;_e;_n\n"
 "X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
@@ -20,16 +21,23 @@ msgid "The page you are looking for doesn't exist."
 msgstr "De pagina die je zoek bestaat niet."
 
 #: ../../404.php:5
-msgid "Seems like the page you were looking for might have been moved or just didn't excist in the first place."
-msgstr "Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of helemaal niet heeft bestaan."
+msgid ""
+"Seems like the page you were looking for might have been moved or just "
+"didn't excist in the first place."
+msgstr ""
+"Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of "
+"helemaal niet heeft bestaan."
 
 #: ../../404.php:6
 #, php-format
-msgid "You might want to check out our <a href=\"%1$s\">sitemap</a> or use the searchform below to find the page you are looking for."
-msgstr "Bekijk onze <a href=\"%1$s\">sitemap</a> of gebruik het onderstaande zoekformulier om te vinden wat je zoekt."
+msgid ""
+"You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
+"searchform below to find the page you are looking for."
+msgstr ""
+"Bekijk onze <a href=\"%1$s\">sitemap</a> of gebruik het onderstaande "
+"zoekformulier om te vinden wat je zoekt."
 
-#: ../../comments.php:5
-#: ../../comments.php:14
+#: ../../comments.php:5 ../../comments.php:14
 msgid "This post is password protected. Try logging in."
 msgstr "Deze post is beschermd met een wachtwoord. Probeer in te loggen."
 
@@ -53,8 +61,7 @@ msgstr "op"
 msgid "No comments yet"
 msgstr "Nog geen reacties"
 
-#: ../../comments.php:36
-#: ../../comments.php:48
+#: ../../comments.php:36 ../../comments.php:48
 msgid "Respond"
 msgstr "Reageer"
 
@@ -94,62 +101,53 @@ msgstr "Website"
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../footer.php:27
-msgid "You are using a very old version of Internet Explorer. For the best experience please upgrade (for free) to a modern browser:"
-msgstr "Je gebruikt een verouderde versie van Internet Explorer. Voor een betere gebruikerservaring kun je (gratis) upgraden naar een betere browser:"
+#: ../../footer.php:28
+msgid ""
+"You are using a very old version of Internet Explorer. For the best "
+"experience please upgrade (for free) to a modern browser:"
+msgstr ""
+"Je gebruikt een verouderde versie van Internet Explorer. Voor een betere "
+"gebruikerservaring kun je (gratis) upgraden naar een betere browser:"
 
-#: ../../header.php:57
+#: ../../header.php:56
 msgid "You are here:"
 msgstr "U bent hier:"
 
-#: ../../index.php:6
+#: ../../index.php:5
 #, php-format
-msgid "Daily archives: %s"
-msgstr "Dag archief: %s"
+msgid "Category %s"
+msgstr "Categorie %s"
 
-#: ../../index.php:8
+#: ../../index.php:7 ../../index.php:9
 #, php-format
-msgid "Monthly archives: %s"
-msgstr "Maand archief: %s"
+msgid "Tag %s"
+msgstr "Tag %s"
 
-#: ../../index.php:10
-#, php-format
-msgid "Yearly archives: %s"
-msgstr "Jaar archief: %s"
-
-#: ../../index.php:12
-#, php-format
-msgid "Category archives: %s"
-msgstr "Categorie archief: %s"
+#: ../../index.php:11
+msgid "Posts by"
+msgstr "Berichten van"
 
 #: ../../index.php:14
-#, php-format
-msgid "Tag Archives: %s"
-msgstr "Tag archief: %s"
-
-#: ../../index.php:16
-#, php-format
-msgid "%s"
-msgstr "%s"
-
-#: ../../index.php:18
 msgid "News"
 msgstr "Nieuws"
 
-#: ../../index.php:29
-msgid "Posted on:"
-msgstr "Geplaatst op:"
+#: ../../index.php:24 ../../single.php:9
+msgid "Posted on"
+msgstr "Gepost op"
 
-#: ../../index.php:30
-msgid "in the category:"
-msgstr "in de categorie:"
+#: ../../index.php:24 ../../single.php:9
+msgid "by"
+msgstr "door"
 
-#: ../../index.php:35
-#: ../../search.php:24
+#: ../../index.php:24 ../../single.php:9
+msgid "in the category"
+msgstr "in de categorie"
+
+#: ../../index.php:30 ../../search.php:24
 msgid "Read more"
 msgstr "Lees meer"
 
-#: ../../index.php:42
+#: ../../index.php:37
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
@@ -157,12 +155,33 @@ msgstr "Geen resultaten gevonden."
 msgid "Pages"
 msgstr "Pagina's:"
 
-#: ../../page-sitemap.php:35
+#: ../../page-sitemap.php:35 ../../assets/inc/functions.sidebars.php:15
+#: ../inc/functions.sidebars.php:15
 msgid "Blog"
 msgstr "Blog"
 
-#: ../../search.php:5
-#: ../../search.php:33
+#: ../../part-author.php:16
+msgid "Written by"
+msgstr "Geschreven door"
+
+#: ../../part-author.php:34
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../../part-author.php:41
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: ../../part-author.php:48
+msgid "Google+"
+msgstr "Google+"
+
+#: ../../part-author.php:54
+#, php-format
+msgid "View all %1$s posts"
+msgstr "Bekijk alle %1$s berichten"
+
+#: ../../search.php:5 ../../search.php:33
 #, php-format
 msgid "Search Results for: %1$s"
 msgstr "Zoek resultaten voor:  %1$s"
@@ -174,290 +193,301 @@ msgstr "%2$s artikelen gevonden met de zoekterm: %1$s"
 
 #: ../../search.php:34
 #, php-format
-msgid "Your search for <em>&quot;%1$s&quot;</em> did not match any documents. Please make sure all your words are spelled correctly or try different keywords."
-msgstr "Je zoekopdracht voor <em>&quot;%1$s&quot;</em> heeft geen resultaten opgeleverd. Controleer of alle woorden correct gespeld zijn of probeer een andere zoekterm."
+msgid ""
+"Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
+"Please make sure all your words are spelled correctly or try different "
+"keywords."
+msgstr ""
+"Je zoekopdracht voor <em>&quot;%1$s&quot;</em> heeft geen resultaten "
+"opgeleverd. Controleer of alle woorden correct gespeld zijn of probeer een "
+"andere zoekterm."
 
-#: ../../searchform.php:4
-#: ../../searchform.php:5
+#: ../../searchform.php:4 ../../searchform.php:5
 msgid "Search"
 msgstr "Zoeken"
 
-#: ../../single.php:9
-msgid "Posted on"
-msgstr "Gepost op"
+#: ../../single.php:19
+msgid "Back to the overview"
+msgstr "Terug naar het overzicht"
 
-#: ../../single.php:9
-msgid "in the category"
-msgstr "in de categorie"
-
-#: ../../assets/inc/functions.menus.php:6
+#: ../../assets/inc/functions.menus.php:6 ../inc/functions.menus.php:6
 msgid "Main navigation"
 msgstr "Hoofd navigatie"
 
-#: ../../assets/inc/functions.menus.php:7
+#: ../../assets/inc/functions.menus.php:7 ../inc/functions.menus.php:7
 msgid "Top navigation"
 msgstr "Top navigatie"
 
-#: ../../assets/inc/functions.menus.php:8
+#: ../../assets/inc/functions.menus.php:8 ../inc/functions.menus.php:8
 msgid "Footer navigation"
 msgstr "Footer navigatie"
 
 #: ../../assets/inc/functions.misc.php:8
+#: ../../assets/inc/functions.widgets.php:394
+#: ../../assets/inc/functions.widgets.php:612 ../inc/functions.misc.php:8
+#: ../inc/functions.widgets.php:394 ../inc/functions.widgets.php:612
 msgid "Primary button"
 msgstr "Primaire knop"
 
 #: ../../assets/inc/functions.misc.php:13
+#: ../../assets/inc/functions.widgets.php:395
+#: ../../assets/inc/functions.widgets.php:613 ../inc/functions.misc.php:13
+#: ../inc/functions.widgets.php:395 ../inc/functions.widgets.php:613
 msgid "Secondary button"
 msgstr "Secondaire knop"
 
-#: ../../assets/inc/functions.misc.php:18
+#: ../../assets/inc/functions.misc.php:18 ../inc/functions.misc.php:18
 msgid "More link"
 msgstr "Lees meer link"
 
-#: ../../assets/inc/functions.sidebars.php:9
-#: ../inc/functions.sidebars.php:9
+#: ../../assets/inc/functions.misc.php:37 ../inc/functions.misc.php:37
+msgid "Facebook profile URL"
+msgstr "Facebook profiel URL"
+
+#: ../../assets/inc/functions.misc.php:38 ../inc/functions.misc.php:38
+msgid "LinkedIn profile URL"
+msgstr "LinkedIn profiel URL"
+
+#: ../../assets/inc/functions.misc.php:39 ../inc/functions.misc.php:39
+msgid "Google+ profile URL"
+msgstr "Google+ profiel URL"
+
+#: ../../assets/inc/functions.sidebars.php:9 ../inc/functions.sidebars.php:9
 msgid "Home"
 msgstr "Home"
 
-#: ../../assets/inc/functions.sidebars.php:12
-#: ../inc/functions.sidebars.php:12
+#: ../../assets/inc/functions.sidebars.php:12 ../inc/functions.sidebars.php:12
 msgid "Page"
 msgstr "Pagina"
 
-#: ../../assets/inc/functions.sidebars.php:18
-#: ../inc/functions.sidebars.php:18
+#: ../../assets/inc/functions.sidebars.php:18 ../inc/functions.sidebars.php:18
 msgid "Footer"
 msgstr "Footer"
 
-#: ../../assets/inc/functions.widgets.php:13
-#: ../inc/functions.widgets.php:13
+#: ../../assets/inc/functions.widgets.php:11 ../inc/functions.widgets.php:11
 msgid "Shows submenu items of current menu item or parent"
 msgstr "Geef submenu items weer van huidige (moeder) pagina"
 
-#: ../../assets/inc/functions.widgets.php:15
-#: ../inc/functions.widgets.php:15
+#: ../../assets/inc/functions.widgets.php:13 ../inc/functions.widgets.php:13
 msgid "Submenu"
 msgstr "Submenu"
 
-#: ../../assets/inc/functions.widgets.php:75
-#: ../inc/functions.widgets.php:75
+#: ../../assets/inc/functions.widgets.php:74 ../inc/functions.widgets.php:74
 msgid "Contact information"
 msgstr "Contactgegevens"
 
-#: ../../assets/inc/functions.widgets.php:75
-#: ../inc/functions.widgets.php:75
+#: ../../assets/inc/functions.widgets.php:74 ../inc/functions.widgets.php:74
 msgid "Shows the specified contact information"
 msgstr "Geeft gespecificeerde contactgegevens weer"
 
-#: ../../assets/inc/functions.widgets.php:79
-#: ../inc/functions.widgets.php:79
+#: ../../assets/inc/functions.widgets.php:78 ../inc/functions.widgets.php:78
 #, php-format
-msgid "Change the contents of this widget on the <a href=\"%1$s\">contact information</a> page."
-msgstr "Beheer de inhoud van deze widget op de <a href=\"%1$s\">contact informatie</a> pagina."
+msgid ""
+"Change the contents of this widget on the <a href=\"%1$s\">contact "
+"information</a> page."
+msgstr ""
+"Beheer de inhoud van deze widget op de <a href=\"%1$s\">contact informatie</"
+"a> pagina."
 
-#: ../../assets/inc/functions.widgets.php:88
-#: ../inc/functions.widgets.php:88
+#: ../../assets/inc/functions.widgets.php:87 ../inc/functions.widgets.php:87
 msgid "Contact"
 msgstr "Contact"
 
-#: ../../assets/inc/functions.widgets.php:105
-#: ../inc/functions.widgets.php:105
+#: ../../assets/inc/functions.widgets.php:111 ../inc/functions.widgets.php:111
 msgid "E-mail"
 msgstr "E-mail"
 
-#: ../../assets/inc/functions.widgets.php:107
-#: ../inc/functions.widgets.php:107
+#: ../../assets/inc/functions.widgets.php:113 ../inc/functions.widgets.php:113
 msgid "Telephone"
 msgstr "Telefoon"
 
-#: ../../assets/inc/functions.widgets.php:109
-#: ../inc/functions.widgets.php:109
+#: ../../assets/inc/functions.widgets.php:115 ../inc/functions.widgets.php:115
 msgid "Fax"
 msgstr "Fax"
 
-#: ../../assets/inc/functions.widgets.php:116
-#: ../inc/functions.widgets.php:116
+#: ../../assets/inc/functions.widgets.php:122 ../inc/functions.widgets.php:122
 msgid "CC No"
 msgstr "KvK Nr"
 
-#: ../../assets/inc/functions.widgets.php:118
-#: ../inc/functions.widgets.php:118
+#: ../../assets/inc/functions.widgets.php:124 ../inc/functions.widgets.php:124
 msgid "VAT No"
 msgstr "BTW Nr"
 
-#: ../../assets/inc/functions.widgets.php:140
-#: ../inc/functions.widgets.php:140
+#: ../../assets/inc/functions.widgets.php:147 ../inc/functions.widgets.php:147
 msgid "Social media links"
 msgstr "Social media links"
 
-#: ../../assets/inc/functions.widgets.php:140
-#: ../inc/functions.widgets.php:140
+#: ../../assets/inc/functions.widgets.php:147 ../inc/functions.widgets.php:147
 msgid "Shows links to specified social network profiles"
 msgstr "Geeft links naar gespecificeerde profielen op sociale netwerken weer"
 
-#: ../../assets/inc/functions.widgets.php:150
-#: ../inc/functions.widgets.php:150
+#: ../../assets/inc/functions.widgets.php:157 ../inc/functions.widgets.php:157
 msgid "Icon types"
 msgstr "Type iconen"
 
-#: ../../assets/inc/functions.widgets.php:183
-#: ../inc/functions.widgets.php:183
+#: ../../assets/inc/functions.widgets.php:190 ../inc/functions.widgets.php:190
 msgid "Social media"
 msgstr "Sociale media"
 
-#: ../../assets/inc/functions.widgets.php:185
-#: ../inc/functions.widgets.php:185
+#: ../../assets/inc/functions.widgets.php:194
+#: ../../assets/inc/functions.widgets.php:195 ../inc/functions.widgets.php:194
+#: ../inc/functions.widgets.php:195
 msgid "Follow us on Twitter"
 msgstr "Volg ons via Twitter"
 
-#: ../../assets/inc/functions.widgets.php:186
-#: ../../assets/inc/functions.widgets.php:209
-#: ../inc/functions.widgets.php:186
-#: ../inc/functions.widgets.php:209
+#: ../../assets/inc/functions.widgets.php:201
+#: ../../assets/inc/functions.widgets.php:202
+#: ../../assets/inc/functions.widgets.php:254 ../inc/functions.widgets.php:201
+#: ../inc/functions.widgets.php:202 ../inc/functions.widgets.php:254
 msgid "Like us on Facebook"
 msgstr "Vind ons leuk op Facebook"
 
-#: ../../assets/inc/functions.widgets.php:187
-#: ../inc/functions.widgets.php:187
+#: ../../assets/inc/functions.widgets.php:207
+#: ../../assets/inc/functions.widgets.php:208 ../inc/functions.widgets.php:207
+#: ../inc/functions.widgets.php:208
 msgid "Connect with us on LinkedIn"
 msgstr "Connect via LinkedIn"
 
-#: ../../assets/inc/functions.widgets.php:188
-#: ../inc/functions.widgets.php:188
+#: ../../assets/inc/functions.widgets.php:213
+#: ../../assets/inc/functions.widgets.php:214 ../inc/functions.widgets.php:213
+#: ../inc/functions.widgets.php:214
 msgid "Add us on Google+"
 msgstr "Voeg ons toe op Google+"
 
-#: ../../assets/inc/functions.widgets.php:189
-#: ../inc/functions.widgets.php:189
+#: ../../assets/inc/functions.widgets.php:219
+#: ../../assets/inc/functions.widgets.php:220 ../inc/functions.widgets.php:219
+#: ../inc/functions.widgets.php:220
 msgid "View our YouTube channel"
 msgstr "Bekijk ons YouTube kanaal"
 
-#: ../../assets/inc/functions.widgets.php:190
-#: ../inc/functions.widgets.php:190
+#: ../../assets/inc/functions.widgets.php:225
+#: ../../assets/inc/functions.widgets.php:226 ../inc/functions.widgets.php:225
+#: ../inc/functions.widgets.php:226
 msgid "E-mail newsletter"
 msgstr "E-mail nieuwsbrief"
 
-#: ../../assets/inc/functions.widgets.php:191
-#: ../inc/functions.widgets.php:191
+#: ../../assets/inc/functions.widgets.php:232
+#: ../../assets/inc/functions.widgets.php:233 ../inc/functions.widgets.php:232
+#: ../inc/functions.widgets.php:233
 msgid "Subscribe to our RSS"
 msgstr "Schrijf je in via RSS"
 
-#: ../../assets/inc/functions.widgets.php:204
-#: ../inc/functions.widgets.php:204
+#: ../../assets/inc/functions.widgets.php:249 ../inc/functions.widgets.php:249
 msgid "Facebook like box"
 msgstr "Facebook like box"
 
-#: ../../assets/inc/functions.widgets.php:204
-#: ../inc/functions.widgets.php:204
+#: ../../assets/inc/functions.widgets.php:249 ../inc/functions.widgets.php:249
 msgid "Shows the Facebook users that like your Facebook page"
 msgstr "Geeft de Facebook gebruikers weer die je Facebook pagina leuk vinden"
 
-#: ../../assets/inc/functions.widgets.php:214
-#: ../../assets/inc/functions.widgets.php:316
-#: ../../assets/inc/functions.widgets.php:519
-#: ../inc/functions.widgets.php:214
-#: ../inc/functions.widgets.php:316
-#: ../inc/functions.widgets.php:519
+#: ../../assets/inc/functions.widgets.php:259
+#: ../../assets/inc/functions.widgets.php:361
+#: ../../assets/inc/functions.widgets.php:564 ../inc/functions.widgets.php:259
+#: ../inc/functions.widgets.php:361 ../inc/functions.widgets.php:564
 msgid "Title"
 msgstr "Titel"
 
-#: ../../assets/inc/functions.widgets.php:221
-#: ../inc/functions.widgets.php:221
+#: ../../assets/inc/functions.widgets.php:266 ../inc/functions.widgets.php:266
 msgid "Facebook page URL"
 msgstr "Facebook pagina URL"
 
-#: ../../assets/inc/functions.widgets.php:265
-#: ../inc/functions.widgets.php:265
+#: ../../assets/inc/functions.widgets.php:310 ../inc/functions.widgets.php:310
 msgid "Text with button"
 msgstr "Tekst met knop"
 
-#: ../../assets/inc/functions.widgets.php:265
-#: ../inc/functions.widgets.php:265
+#: ../../assets/inc/functions.widgets.php:310 ../inc/functions.widgets.php:310
 msgid "Editable title, tekst and button"
 msgstr "Bewerkbare titel, tekst en knop"
 
-#: ../../assets/inc/functions.widgets.php:302
-#: ../../assets/inc/functions.widgets.php:420
-#: ../../assets/inc/functions.widgets.php:504
-#: ../inc/functions.widgets.php:302
-#: ../inc/functions.widgets.php:420
-#: ../inc/functions.widgets.php:504
+#: ../../assets/inc/functions.widgets.php:347
+#: ../../assets/inc/functions.widgets.php:465
+#: ../../assets/inc/functions.widgets.php:549 ../inc/functions.widgets.php:347
+#: ../inc/functions.widgets.php:465 ../inc/functions.widgets.php:549
 msgid "Text with image and button"
 msgstr "Tekst met afbeelding en knop"
 
-#: ../../assets/inc/functions.widgets.php:322
-#: ../../assets/inc/functions.widgets.php:540
-#: ../inc/functions.widgets.php:322
-#: ../inc/functions.widgets.php:540
+#: ../../assets/inc/functions.widgets.php:367
+#: ../../assets/inc/functions.widgets.php:585 ../inc/functions.widgets.php:367
+#: ../inc/functions.widgets.php:585
 msgid "Content"
 msgstr "Inhoud"
 
-#: ../../assets/inc/functions.widgets.php:328
-#: ../../assets/inc/functions.widgets.php:546
-#: ../inc/functions.widgets.php:328
-#: ../inc/functions.widgets.php:546
+#: ../../assets/inc/functions.widgets.php:373
+#: ../../assets/inc/functions.widgets.php:591 ../inc/functions.widgets.php:373
+#: ../inc/functions.widgets.php:591
 msgid "Show button / read more link"
 msgstr "Knop / lees meer link weergeven"
 
-#: ../../assets/inc/functions.widgets.php:334
-#: ../../assets/inc/functions.widgets.php:552
-#: ../inc/functions.widgets.php:334
-#: ../inc/functions.widgets.php:552
+#: ../../assets/inc/functions.widgets.php:379
+#: ../../assets/inc/functions.widgets.php:597 ../inc/functions.widgets.php:379
+#: ../inc/functions.widgets.php:597
 msgid "Button text"
 msgstr "Knop tekst"
 
-#: ../../assets/inc/functions.widgets.php:340
-#: ../../assets/inc/functions.widgets.php:558
-#: ../inc/functions.widgets.php:340
-#: ../inc/functions.widgets.php:558
+#: ../../assets/inc/functions.widgets.php:385
+#: ../../assets/inc/functions.widgets.php:603 ../inc/functions.widgets.php:385
+#: ../inc/functions.widgets.php:603
 msgid "Button link"
 msgstr "Knop link"
 
-#: ../../assets/inc/functions.widgets.php:346
-#: ../../assets/inc/functions.widgets.php:564
-#: ../inc/functions.widgets.php:346
-#: ../inc/functions.widgets.php:564
+#: ../../assets/inc/functions.widgets.php:391
+#: ../../assets/inc/functions.widgets.php:609 ../inc/functions.widgets.php:391
+#: ../inc/functions.widgets.php:609
 msgid "Link type"
 msgstr "Link type"
 
-#: ../../assets/inc/functions.widgets.php:348
-#: ../../assets/inc/functions.widgets.php:566
-#: ../inc/functions.widgets.php:348
-#: ../inc/functions.widgets.php:566
+#: ../../assets/inc/functions.widgets.php:393
+#: ../../assets/inc/functions.widgets.php:611 ../inc/functions.widgets.php:393
+#: ../inc/functions.widgets.php:611
 msgid "Read more link"
 msgstr "Lees meer link"
 
-#: ../../assets/inc/functions.widgets.php:356
-#: ../../assets/inc/functions.widgets.php:574
-#: ../inc/functions.widgets.php:356
-#: ../inc/functions.widgets.php:574
+#: ../../assets/inc/functions.widgets.php:401
+#: ../../assets/inc/functions.widgets.php:619 ../inc/functions.widgets.php:401
+#: ../inc/functions.widgets.php:619
 msgid "This link is external"
 msgstr "Dit is een externe link"
 
-#: ../../assets/inc/functions.widgets.php:420
-#: ../inc/functions.widgets.php:420
+#: ../../assets/inc/functions.widgets.php:465 ../inc/functions.widgets.php:465
 msgid "Editable title, image, text and button"
 msgstr "Bewerkbare titel, afbeelding en knop"
 
-#: ../../assets/inc/functions.widgets.php:525
-#: ../inc/functions.widgets.php:525
+#: ../../assets/inc/functions.widgets.php:570 ../inc/functions.widgets.php:570
 msgid "Image"
 msgstr "Afbeelding"
 
-#: ../../assets/inc/functions.widgets.php:529
-#: ../inc/functions.widgets.php:529
+#: ../../assets/inc/functions.widgets.php:574 ../inc/functions.widgets.php:574
 msgid "Change image"
 msgstr "Aanpassen"
 
-#: ../../assets/inc/functions.widgets.php:529
-#: ../inc/functions.widgets.php:529
+#: ../../assets/inc/functions.widgets.php:574 ../inc/functions.widgets.php:574
 msgid "Upload image"
 msgstr "Afbeelding uploaden"
 
-#: ../../assets/inc/functions.widgets.php:532
-#: ../inc/functions.widgets.php:532
+#: ../../assets/inc/functions.widgets.php:577 ../inc/functions.widgets.php:577
 msgid "Remove image"
 msgstr "Verwijderen"
+
+#~ msgid "Daily archives: %s"
+#~ msgstr "Dag archief: %s"
+
+#~ msgid "Monthly archives: %s"
+#~ msgstr "Maand archief: %s"
+
+#~ msgid "Yearly archives: %s"
+#~ msgstr "Jaar archief: %s"
+
+#~ msgid "Tag Archives: %s"
+#~ msgstr "Tag archief: %s"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "Posted on:"
+#~ msgstr "Geplaatst op:"
+
+#~ msgid "in the category:"
+#~ msgstr "in de categorie:"
 
 #~ msgid "Keep in touch"
 #~ msgstr "Blijf op de hoogte"

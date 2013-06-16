@@ -1,23 +1,18 @@
 <?php get_header(); ?>
 <div class="container-inner">		
 	<section id="content" class="eightcol">
-		<h1 id="page-title">
-			<?php if(is_day()) : ?>
-				<?php printf(__( 'Daily archives: %s','tp'),'<span>'.get_the_date().'</span>'); ?>
-			<?php elseif(is_month()) : ?>
-				<?php printf(__('Monthly archives: %s','tp'),'<span>'.get_the_date('F Y').'</span>'); ?>
-			<?php elseif(is_year()) : ?>
-				<?php printf(__( 'Yearly archives: %s','tp'),'<span>'.get_the_date('Y').'</span>'); ?>
-			<?php elseif(is_category()) : ?>
-				<?php printf(__('Category archives: %s','tp'),'<span>'.single_cat_title('',false).'</span>'); ?>
-			<?php elseif(is_tag()) : ?>
-				<?php printf( __('Tag Archives: %s','tp'),'<span>'.single_tag_title('',false).'</span>'); ?>
-			<?php elseif(is_tax()) : ?>
-				<?php printf( __('%s','tp'),'<span>'.single_tag_title('',false).'</span>'); ?>
-			<?php else : ?>
-				<?php _e('News','tp'); ?>
-			<?php endif; ?>
-		</h1>
+		<?php if(is_category()) : ?>
+			<h1 id="page-title"><?php echo __('Category %s','tp').': '.single_cat_title('',false); ?></h1>
+		<?php elseif(is_tag()) : ?>
+			<h1 id="page-title"><?php echo __('Tag %s','tp').': '.single_tag_title('',false); ?></h1>
+		<?php elseif(is_tax()) : ?>
+			<h1 id="page-title"><?php echo __('Tag %s','tp').': '.single_tag_title('',false); ?></h1>
+		<?php elseif(is_author()) : ?>
+			<h1 id="page-title"><?php echo __('Posts by','tp').' '.get_the_author_meta('display_name',$author); ?></h1>
+			<?php get_template_part('part-author'); ?>
+		<?php else : ?>
+			<?php _e('News','tp'); ?>
+		<?php endif; ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<article <?php post_class(); ?>>
 				<h2 class="article-title">
@@ -26,8 +21,7 @@
 					</a>
 				</h2>
 				<p class="meta">
-					<?php _e('Posted on','tp')?> <time datetime="<?php the_time('Y-m-d') ?>"><?php echo get_the_date(); ?></time> 
-					<?php _e('in the category','tp') ?> <?php the_category(', ') ?>
+					<?php _e('Posted on','tp')?> <time datetime="<?php the_time('Y-m-d') ?>"><?php echo get_the_date(); ?></time> <?php _e('by','tp') ?> <?php the_author_posts_link() ?> <?php _e('in the category','tp') ?> <?php the_category(', ') ?>
 				</p>
 				<?php get_the_post_thumbnail(); ?>
 				<?php tp_the_excerpt(40); ?>
