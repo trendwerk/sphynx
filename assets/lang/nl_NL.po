@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-16 18:28+0100\n"
-"PO-Revision-Date: 2013-06-16 18:28+0100\n"
+"POT-Creation-Date: 2013-06-16 19:06+0100\n"
+"PO-Revision-Date: 2013-06-16 19:06+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -160,23 +160,23 @@ msgstr "Pagina's:"
 msgid "Blog"
 msgstr "Blog"
 
-#: ../../part-author.php:16
+#: ../../part-author.php:17
 msgid "Written by"
 msgstr "Geschreven door"
 
-#: ../../part-author.php:34
+#: ../../part-author.php:35
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../../part-author.php:41
+#: ../../part-author.php:42
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: ../../part-author.php:48
+#: ../../part-author.php:49
 msgid "Google+"
 msgstr "Google+"
 
-#: ../../part-author.php:54
+#: ../../part-author.php:55
 #, php-format
 msgid "View all %1$s posts"
 msgstr "Bekijk alle %1$s berichten"
@@ -251,6 +251,10 @@ msgstr "LinkedIn profiel URL"
 #: ../../assets/inc/functions.misc.php:39 ../inc/functions.misc.php:39
 msgid "Google+ profile URL"
 msgstr "Google+ profiel URL"
+
+#: ../../assets/inc/functions.misc.php:56 ../inc/functions.misc.php:56
+msgid "Hide my profile on the website"
+msgstr "Verberg mijn profiel op de website"
 
 #: ../../assets/inc/functions.sidebars.php:9 ../inc/functions.sidebars.php:9
 msgid "Home"

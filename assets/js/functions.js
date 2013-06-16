@@ -79,7 +79,7 @@ jQuery(document).ready(function($){
 	
 	$('#content article:last').addClass('last-child');
 	
-	 /*
+	/*
      * @misc Replace all SVG images with inline SVG
      */
     jQuery('img.svg').each(function(){
