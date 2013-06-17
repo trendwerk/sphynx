@@ -85,24 +85,26 @@ class widget_tp_contact extends WP_Widget {
 	?>
 		<?php echo $before_widget; ?>
 			<?php echo $before_title.__('Contact','tp').$after_title; ?>
-			<div itemscope itemtype="http://schema.org/Organization">
-				<?php 
-					if ($name = get_option('tp-company-name')) {
-					echo '<span itemprop="name"><strong>'.$name.'</strong></span>';
-				?>
-				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">	
-					<?php
-					} if ($address = get_option('tp-address')) { 
-						echo '<span itemprop="streetAddress">'.$address.'</span><br />'; 
-					} if ($postal_code = get_option('tp-postal-code')) {
-						echo '<span itemprop="postalCode">'.$postal_code.'</span>';
-					} if ($city = get_option('tp-city')) {
-					 echo ' <span itemprop="addressLocality">'.$city.'</span><br />'; 
-					} if ($country = get_option('tp-country')) {
-					 echo '<span itemprop="addressCountry">'.$country.'</span><br /><br />'; 
-					}
-				?>
-				</div>
+			<span itemscope itemtype="http://schema.org/Organization">
+				<p>
+					<?php 
+						if ($name = get_option('tp-company-name')) {
+						echo '<span itemprop="name"><strong>'.$name.'</strong></span><br />';
+					?>
+					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">	
+						<?php
+							} if ($address = get_option('tp-address')) { 
+								echo '<span itemprop="streetAddress">'.$address.'</span><br />'; 
+							} if ($postal_code = get_option('tp-postal-code')) {
+								echo '<span itemprop="postalCode">'.$postal_code.'</span>';
+							} if ($city = get_option('tp-city')) {
+							 echo ' <span itemprop="addressLocality">'.$city.'</span><br />'; 
+							} if ($country = get_option('tp-country')) {
+							 echo '<span itemprop="addressCountry">'.$country.'</span><br /><br />'; 
+							}
+						?>
+					</span>
+				</p>
 				<p>
 					<?php
 						if ($email = get_option('tp-email')) { 
@@ -119,18 +121,18 @@ class widget_tp_contact extends WP_Widget {
 						if ($cc = get_option('tp-cc')) {
 							echo '<span class="label">'.__('CC No','tp').': </span>'.$cc.'<br />';
 						} if ($vat = get_option('tp-vat')) {
-							echo '<span class="label" itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
+							echo '<span itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
 						} if ($bankno = get_option('tp-bank-no')) {
 							if ($bank = !get_option('tp-bank')) {
 								$bank = "Bank";
 							} else {
 								$bank = get_option('tp-bank');
 							}
-							echo '<span>'.$bank.': </span>'.$bankno;
+							echo '<span class="label">'.$bank.': </span>'.$bankno;
 						} 
 					?>
 				</p>
-			</div>
+			</span>
 		<?php echo $after_widget; ?>
 	<?php
 	}
@@ -255,7 +257,7 @@ class widget_fb_like_box extends WP_Widget {
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 			
-			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-height="270" data-show-border="false" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
+			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
 		<?php echo $after_widget; ?>
 	<?php
 	}
