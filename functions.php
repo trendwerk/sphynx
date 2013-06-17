@@ -19,8 +19,8 @@ function tp_enqueue_scripts() {
 	//Enqueue used parent libraries
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('cycle');
-	wp_enqueue_script('fancybox');
 	wp_enqueue_style('fancyboxcss');
+	wp_enqueue_script('fancybox');
 	wp_enqueue_script('trendpress');
 	
 	//Register & enqueue child scripts and styles

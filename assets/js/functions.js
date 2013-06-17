@@ -50,11 +50,6 @@ jQuery(document).ready(function($){
 	
 	$('.fancybox').fancybox({
 
-        width      : '75%',
-        height     : '75%',
-        autoSize   : false,
-        openEffect : 'none',
-        closeEffect: 'none'
 		
 	});
 
