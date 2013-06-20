@@ -97,6 +97,24 @@
 }
 
 /**
+ * @mixin HEX to RGBA
+ */
+
+.rgba(@color, @alpha) {
+
+	@alphacolor: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+	@ieAlphacolor: argb(@alphacolor);
+	
+	background-color: @color;
+	background-color: @alphacolor; 
+	
+	zoom: 1;
+	background-color: transparent\9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphacolor}, endColorstr=@{ieAlphacolor})";
+    filter:  ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphacolor}, endColorstr=@{ieAlphacolor})";	
+}
+
+/**
  * @mixin Horizontal gradient
  */
 
@@ -139,16 +157,37 @@
  */
 
 .placeholder(@out, @on) {
-
+	
+	.animate {
+		
+		.animate-this(all, 0.25s, ease-in-out);
+	
+	}
+	
 	&:-moz-placeholder { color: @out; }
 	&::-moz-placeholder { color: @out; }
 	&:-ms-input-placeholder { color: @out; }
 	&::-webkit-input-placeholder { color: @out; }
 	
-	&:focus:-moz-placeholder { color: @on; }
-	&:focus::-moz-placeholder { color: @on; }
-	&:focus:-ms-input-placeholder { color: @on; }
-	&:focus::-webkit-input-placeholder { color: @on; }
+	&:focus:-moz-placeholder { 
+		.animate; 
+		color: @on; 
+	}
+	
+	&:focus::-moz-placeholder { 
+		.animate;
+		color: @on;
+	}
+	
+	&:focus:-ms-input-placeholder { 
+		.animate;
+		color: @on; 
+	}
+	
+	&:focus::-webkit-input-placeholder { 
+		.animate;
+		color: @on; 
+	}
   
 }
     
