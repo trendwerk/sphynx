@@ -655,6 +655,78 @@ body {
 		
 	}
 	
+	.commentlist {
+		 list-style-type: none;
+		 margin: 0;
+		 padding: 0;
+		 width: 100%;
+		 
+		 li {
+		 	.border-box;
+		 	border-top: 1px solid @border-color;
+		 	clear: both;
+			display: block;
+			float: left;
+			margin: 0 0 15px 0;
+			min-height: 100px;
+			padding: 15px 15px 0 15px;
+			width: 100%;
+						
+			.comment-body {
+				position: relative;
+				padding-bottom: 15px;
+			
+				.comment-author {
+					float: left;
+					margin-bottom: 10px;
+					
+					.avatar { 
+						.border-radius(999px);
+						float: left;
+						margin-right: 20px;
+					}
+					
+					cite { 
+						display: block;
+						float: left;
+						font-family: @heading-font;
+						font-size: 22px;
+						font-style: normal;
+					}
+					
+					.says { display: none; }
+				
+				}
+				
+				p {
+					clear: both;
+					display: inline-block;
+					height: auto;
+					width: 100%;
+				}
+				
+				.reply {	
+					font-size: 12px;
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+				
+				.comment-meta {
+					font-size: 12px;
+					left: 80px;
+					position: absolute;
+					top: 30px;
+				}
+				
+			}
+			
+			li .comment-body { padding-bottom: 0; }
+				
+		 }
+		 
+	}
+	
 }
 
 /**
