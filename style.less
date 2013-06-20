@@ -789,6 +789,8 @@ body {
 			 	margin-top: 25px; 
 			 	width: 100%;
 			 	
+			 	li:first-child { padding-top: 0 !important }
+			 	
 			 	li:last-child { margin-bottom: 0; }
 			 	
 			 }
@@ -870,6 +872,7 @@ body {
 			clear: both;
 			float: left;
 			padding: 25px 0;
+			position: relative;
 			margin-bottom: 25px;
 			width: 100%;
 			
@@ -883,6 +886,13 @@ body {
 					width: 25%;
 				}
 				
+			}
+			
+			small {
+				font-size: 12px;
+				position: absolute;
+				right: 0;
+				top: 20px;
 			}
 			
 			input[type="text"], input[type="email"] {
