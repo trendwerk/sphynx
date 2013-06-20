@@ -257,7 +257,7 @@ class widget_fb_like_box extends WP_Widget {
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 			
-			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
+			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-show-border="false" data-height="270px" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
 		<?php echo $after_widget; ?>
 	<?php
 	}
