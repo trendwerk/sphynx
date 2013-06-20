@@ -455,15 +455,17 @@ body {
 		
 		.author {
 			background: #FFF;
-			padding: 20px;
 			margin: 0 0 20px 0;
+			padding: 20px;
 			
-			.author-avatar {
-				float: left;
-			}
+			.author-avatar { float: left; }
 			
 			.author-info {
 				padding-left: 100px;
+				
+				.author-writtenby { font-size: 12px; }
+				
+				.author-name { font-size: 22px; }
 				
 				ul.author-social {
 					list-style: none;
@@ -765,76 +767,159 @@ body {
 		
 	}
 	
-	.commentlist {
-		 list-style-type: none;
-		 margin: 0;
-		 padding: 0;
-		 width: 100%;
-		 
-		 li {
-		 	.border-box;
-		 	border-top: 1px solid @border-color;
-		 	clear: both;
-			display: block;
+	#comments { 
+		clear: both;
+		float: left;
+		margin: 25px 0 0 0;
+		width: 100%;
+		
+		.comments-title { margin-bottom: 15px; }
+	
+		.commentlist {
+			clear: both;
 			float: left;
-			margin: 0 0 15px 0;
-			min-height: 100px;
-			padding: 15px 15px 0 15px;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
 			width: 100%;
-						
-			.comment-body {
-				position: relative;
-				padding-bottom: 15px;
 			
-				.comment-author {
+			li:first-child { padding-top: 25px; }
+			 
+			 ul.children { 
+			 	margin-top: 25px; 
+			 	width: 100%;
+			 	
+			 	li:last-child { margin-bottom: 0; }
+			 	
+			 }
+			 
+			 li {
+			 	.border-box;
+			 	clear: both;
+				display: block;
+				float: left;
+				margin: 0 0 25px 0;
+				min-height: auto;
+				padding: 0 25px 0 0;
+				width: 100%;
+							
+				.comment-body {
+					position: relative;
+				
+					.comment-author {
+						float: left;
+						margin-bottom: 15px;
+						
+						.avatar { 
+							float: left;
+							margin-right: 20px;
+						}
+						
+						cite { 
+							display: block;
+							float: left;
+							font-family: @heading-font;
+							font-size: 22px;
+							font-style: normal;
+						}
+						
+						.says { display: none; }
+					
+					}
+					
+					p {
+						clear: both;
+						display: inline-block;
+						height: auto;
+						margin-bottom: 15px;
+						width: 100%;
+					}
+					
+					.reply {	
+						font-size: 12px;
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+					
+					.comment-meta {
+						font-size: 12px;
+						left: 80px;
+						position: absolute;
+						top: 30px;
+						
+						a {
+							color: @text-color;
+							cursor: text;
+							text-decoration: none;
+						}
+						
+						.comment-edit-link { display: none; }
+						
+					}
+					
+				}
+				
+			 }
+			 
+		}
+		
+		#respond { 
+			border-top: 1px solid @border-color;
+			border-bottom: 1px solid @border-color;
+			clear: both;
+			float: left;
+			padding: 25px 0;
+			margin-bottom: 25px;
+			width: 100%;
+			
+			p {
+				clear: both;
+				float: left;
+				width: 100%;
+				
+				label { 
 					float: left;
-					margin-bottom: 10px;
-					
-					.avatar { 
-						.border-radius(999px);
-						float: left;
-						margin-right: 20px;
-					}
-					
-					cite { 
-						display: block;
-						float: left;
-						font-family: @heading-font;
-						font-size: 22px;
-						font-style: normal;
-					}
-					
-					.says { display: none; }
-				
-				}
-				
-				p {
-					clear: both;
-					display: inline-block;
-					height: auto;
-					width: 100%;
-				}
-				
-				.reply {	
-					font-size: 12px;
-					position: absolute;
-					right: 0;
-					top: 0;
-				}
-				
-				.comment-meta {
-					font-size: 12px;
-					left: 80px;
-					position: absolute;
-					top: 30px;
+					width: 25%;
 				}
 				
 			}
 			
-			li .comment-body { padding-bottom: 0; }
-				
-		 }
-		 
+			input[type="text"], input[type="email"] {
+				.border-box;
+				display: block;
+				font-size: 14px;
+				height: 30px;
+				padding: 0 5px;
+				width: 35%;
+			}
+			
+			textarea { 
+				.border-box;
+				display: block;
+				font-size: 14px;
+				padding: 5px;
+				width: 75%; 
+			}
+			
+			.form-allowed-tags { display: none; }
+			
+			input[type="submit"] {
+				float: left;
+				margin-left: 25%;
+			}
+			
+		}
+	
+	}
+	
+	#pagination {
+		float: left;
+		width: 100%;
+		
+		.prev { float: left; }
+		.next { float: right; }
+		
 	}
 	
 }
