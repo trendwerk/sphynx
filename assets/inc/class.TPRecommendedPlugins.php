@@ -92,15 +92,20 @@ class TPRecommendedPlugins {
 				'description' => __('Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter and Facebook as comments.','tp'),
 				'path' => 'social/social.php'
 			),
+			'redirection' => array(
+				'name' => 'Redirection',
+				'description' => __('Manage 301 redirections and keep track of 404 errors.','tp'),
+				'path' => 'redirection/redirection.php'
+			),
 			'capsman' => array(
 				'name' => 'Capability Manager',
 				'description' => __('A simple way to create and manage roles and capabilities.','tp'),
 				'path' => 'capsman/capsman.php'
 			),
-			'redirection' => array(
-				'name' => 'Redirection',
-				'description' => __('Manage 301 redirections and keep track of 404 errors.','tp'),
-				'path' => 'redirection/redirection.php'
+			'codestyling-localization' => array(
+				'name' => 'Codestyling Localization',
+				'description' => __('Edit theme and plugin translations, directly out of WordPress without any need of an external editor.','tp'),
+				'path' => 'codestyling-localization/codestyling-localization.php'
 			),
 			'wp-migrate-db' => array(
 				'name' => 'WP Migrate DB',
