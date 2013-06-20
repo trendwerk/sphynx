@@ -175,7 +175,7 @@ class tp_social extends WP_Widget {
 			<label>
 				<strong><?php _e('Icon types','tp'); ?></strong><br />
 				<select class="widefat" name="<?php echo $this->get_field_name('type'); ?>">
-					<option <?php if($type == 'large-icons') echo 'selected="selected"'; ?> value=""><?php _e('Large icons','tp'); ?></option>
+					<option <?php if($type == 'large-icons') echo 'selected="selected"'; ?> value="large-icons"><?php _e('Large icons','tp'); ?></option>
 					<option <?php if($type == 'small-icons') echo 'selected="selected"'; ?> value="small-icons"><?php _e('Small icons','tp'); ?></option>
 					<option <?php if($type == 'small-icons-text') echo 'selected="selected"'; ?> value="small-icons-text"><?php _e('Small icons with text','tp'); ?></option>
 				</select>
@@ -207,45 +207,45 @@ class tp_social extends WP_Widget {
 			<?php if($twitter = get_option('tp-twitter')) { ?>
 				<li class="twitter">
 					<a rel="external" href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/twitter.svg" /><?php _e('Follow us on Twitter','tp') ?>
+						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/twitter.svg" /><span><?php _e('Follow us on Twitter','tp') ?></span>
 					</a>
 				</li>
 			<?php } ?>
 			<?php if($facebook = get_option('tp-facebook')) { ?>
 				<li class="facebook">
 					<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><?php _e('Like us on Facebook','tp') ?>
+						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><span><?php _e('Like us on Facebook','tp') ?></span>
 					</a>
 				</li>
 			<?php } if($linkedin = get_option('tp-linkedin')) { ?>
 				<li class="linkedin">
 					<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/linkedin.svg" /><?php _e('Connect with us on LinkedIn','tp') ?>
+						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/linkedin.svg" /><span><?php _e('Connect with us on LinkedIn','tp') ?></span>
 					</a>
 				</li>
 				<?php } if($googleplus = get_option('tp-googleplus')) { ?>
 				<li class="googleplus">
 					<a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/google.svg" /><?php _e('Add us on Google+','tp') ?>
+						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/google.svg" /><span><?php _e('Add us on Google+','tp') ?></span>
 					</a>
 				</li>
 			<?php } if($youtube = get_option('tp-youtube')) { ?>
 				<li class="youtube">
 					<a rel="external" href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/youtube.svg" /><?php _e('View our YouTube channel','tp') ?>
+						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/youtube.svg" /><span><?php _e('View our YouTube channel','tp') ?></span>
 					</a>
 				</li>
 			<?php } if($newsletter = get_option('tp-newsletter')) { ?>
 				<li class="email">
 					<a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/email.svg" /><?php _e('E-mail newsletter','tp'); ?>
+						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/email.svg" /><span><?php _e('E-mail newsletter','tp'); ?></span>
 					</a>
 				</li>
 			<?php } ?>
 			<?php if(get_option('tp-rss') == 'true') { ?>
 				<li class="rss">
 					<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/rss.svg" /><?php _e('Subscribe to our RSS','tp') ?>
+						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/rss.svg" /><span><?php _e('Subscribe to our RSS','tp') ?></span>
 					</a>
 				</li>
 			<?php } ?>

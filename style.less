@@ -135,6 +135,7 @@ body {
 	 */
 
 	a {
+		.animate-this(color, 0.15s, ease-in-out);
 		color: @link-color;
 		text-decoration: underline;
 				
@@ -143,7 +144,7 @@ body {
 			text-decoration: underline;
 		}
 		
-		&.more:after { content: ' \00bb'; }
+		&.more:after, &.more-link:after { content: ' \00bb'; }
 		&.back:before { content: '\00ab '; }
 		
 		&.prev {
@@ -164,6 +165,7 @@ body {
 		}
 		
 		&.cta {
+			.animate-this(all, 0.15s, ease-in-out);
 			.border-radius(3px);
 			display: inline-block;
 			height: 40px;
@@ -232,8 +234,28 @@ img.size-thumbnail, .wp-caption {
 /** 
  * @misc Forms
  */
- 
 
+#main input[type="submit"] {
+	.animate-this(all, 0.15s, ease-in-out);
+	border-width: 0;
+	background: @primary-color;
+	color: #FFF;
+	display: block;
+	font-size: 14px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 15px;
+	position: relative;
+	text-shadow: 0 1px 0 darken(@primary-color, 15%);
+	
+	&:focus, &:active {
+		.box-shadow(none);
+		background: darken(@primary-color, 10%);
+		text-shadow: 0 1px 0 darken(@primary-color, 25%);
+		top: 1px;
+	}
+	
+}
 
 /**
  * @layout
@@ -598,48 +620,70 @@ body {
 			 */
 			
 			&.widget_tp_social {
-
-				img,
-				svg {
-					height: 16px;
-					width: 16px;
-					margin: 0 10px 0 0;
-					vertical-align: middle;
-				}
-			}
-				
-			/* @widget Tagcloud */
 			
-			&.widget_tp_social {
-
-				img,
-				svg {
-					height: 16px;
-					width: 16px;
-					margin: 0 10px 0 0;
-					vertical-align: middle;
-				}
-			}
-				
-			/* @widget Tagcloud */
-			
-			&.widget_tag_cloud {
-				
-				.tagcloud {
-				
-					a {
-						color: #FFF;
-						background: #CCC;
-						font-size: 12px !important;
-						line-height: 25px;
-						padding: 0 10px;
-						margin: 0 3px 5px 0;
-						display: inline-block;
-						border-radius: 3px;
-						
-						&:hover { background: @link-color; }
-					}
+				ul {	
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
 					
+					&.large-icons {
+						border-bottom: none;
+						
+						li {
+							border-top: none;
+							display: inline;
+							padding: 0;
+							
+							a { 
+								float: left;
+								height: 32px;
+								margin: 0 10px 10px 0;
+								width: 32px;	
+								
+								span { display: none; }
+								
+							}
+							
+						}
+						
+						img, svg {
+							height: 32px;
+							margin: 0 10px 0 0;
+							vertical-align: middle;
+							width: 32px;
+						}
+	
+					}
+							
+					&.small-icons {
+						border-bottom: none;
+						
+						li {
+							border-top: none;
+							display: inline;
+							
+							a { 
+								display: block;
+								float: left;
+								height: auto;
+								margin: 0 5px 5px 0;
+								width: 20px;	
+								
+								span { display: none; }
+								
+							}
+							
+						}
+						
+						img, svg {
+							display: block;
+							height: 20px;
+							vertical-align: middle;
+							width: 20px;
+						}
+						
+					}
+
 				}
 				
 			}
