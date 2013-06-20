@@ -46,8 +46,6 @@ add_filter('user_contactmethods','tp_modify_profile');
  * @author Add checkbox to hide profile on the website
  */
 
-add_action('show_user_profile', 'tp_hide_profile_edit');
-add_action('edit_user_profile', 'tp_hide_profile_edit');
 function tp_hide_profile_edit($user) {
   $checked = (isset($user->hide_profile) && $user->hide_profile) ? ' checked="checked"' : '';
 ?>
@@ -57,10 +55,13 @@ function tp_hide_profile_edit($user) {
 	</label>
 <?php 
 }
-add_action('personal_options_update', 'tp_hide_profile_update');
-add_action('edit_user_profile_update', 'tp_hide_profile_update');
+add_action('show_user_profile', 'tp_hide_profile_edit');
+add_action('edit_user_profile', 'tp_hide_profile_edit');
+
 function tp_hide_profile_update($user_id) {
 	update_user_meta($user_id, 'hide_profile', isset($_POST['hide_profile']));
 }
+add_action('personal_options_update', 'tp_hide_profile_update');
+add_action('edit_user_profile_update', 'tp_hide_profile_update');
 
 ?>

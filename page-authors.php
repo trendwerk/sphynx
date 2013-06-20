@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+	get_header();
+	/* Template name: Authors overview */
+	__('Authors overview','tp');
+?>
 <div class="container-inner">
 	<aside class="sidebar fourcol">
 		<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('page'); ?>
@@ -9,17 +13,17 @@
 			<?php the_content(); ?>
 			<?php 
 				$users = get_users('orderby=display_name'); 
-				if($users) : 
+				if($users) :
 			?>
-			<section id="authors">				
-				<?php 
-					foreach($users as $user) : 
-						$author = $user->ID;
-						include(locate_template('part-author.php'));
-					endforeach; 
-				?>
-			</section>
-			<?php endif; ?>	
+				<section id="authors">				
+					<?php 
+						foreach($users as $user) : 
+							$author = $user->ID;
+							include(locate_template('part-author.php'));
+						endforeach; 
+					?>
+				</section>
+			<?php endif; ?>
 		<?php endwhile; endif; ?>
 	</article>
 </div>
