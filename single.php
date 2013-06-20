@@ -22,11 +22,11 @@
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51a880a417084aa1"></script>
 			</section>
 			<?php get_template_part('part','author'); ?>
-			<p>
+			<div class="back">
 				<a class="back" href="<?php if( get_option('show_on_front') == 'page') echo get_permalink(get_option('page_for_posts')); else echo site_url();?>">
 					<?php _e('Back to the overview','tp'); ?>
 				</a>
-			</p>
+			</div>
 		<?php endwhile; endif; ?>
 		<?php comments_template(); ?>
 		<nav id="pagination">
