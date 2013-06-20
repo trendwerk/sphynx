@@ -1,6 +1,4 @@
 /**
- * @stylesheet
- *
  * Author: Ontwerpstudio Trendwerk
  * Author URI: http://www.www.trendwerk.nl/
  * License: GNU General Public License v2.0
@@ -8,9 +6,11 @@
  *
  * Contents:
  *
- * @typography 		Defines the styling of tekst elements
+ * @import 			Import external files
+ * @variables 		Defines presets for color, fonts, etc
+ * @typography 		Defines the styling of text elements
  * @misc 			Defines miscellaneous styles
- * @layout			Defines the layout of elements
+ * @layout			Defines the lay-out
  * @templates		Defines the template specific styling
  * @plugins 		Defines the plugin specific styling
  * @responsive		Defines responsive layout
@@ -48,7 +48,7 @@
 /**
  * @typography
  *
- * Defines the styling of tekst elements (e.g. font, size, colors, etc... )
+ * Defines the styling of tekst elements (e.g. font, size, colors, etc...)
  * 
  * @typography Default
  */
@@ -106,9 +106,7 @@ body {
 	 * @typography Content 
 	 */
 	
-	p, ul, ol, address { 
-		margin: 0 0 25px 0;
-	}
+	p, ul, ol, address { margin: 0 0 25px 0; }
 	
 	ul, ol {
 		line-height: 25px;
@@ -116,20 +114,22 @@ body {
 		margin: 0 0 25px 25px;
 		
 		ul, ol { margin-bottom: 0; }
+	
 	}
 	
 	blockquote {
+		border-left: 3px solid lighten(@text-color, 20%);
 		color: lighten(@text-color, 20%);
 		padding: 5px 0 5px 20px;
-		border-left: 3px solid lighten(@text-color, 20%);
 		
 		p { margin: 0; }
+	
 	}
 	
 	pre { 
+		color: #000 !important;
 		margin-bottom: 24px;
 		padding: 24px; 
-		color: #000!important;
 	}
 	
 	/**
@@ -146,22 +146,23 @@ body {
 		}
 		
 		&.more:after { content: ' \00bb'; }
-		
 		&.back:before { content: '\00ab '; }
 		
 		&.prev {
-			width: 40%; 
 			float: left;
+			width: 40%; 
 			
 			&:before { content: '\00ab '; }
+		
 		}
 		
 		&.next {
-			width: 40%;
 			float: right; 
 			text-align: right;
-			
+			width: 40%;			
+		
 			&:after { content: ' \00bb'; }
+		
 		}
 		
 		&.cta {
@@ -187,6 +188,7 @@ body {
 				&:hover { background: darken(@primary-color, 5%); }
 				
 				&:active, &:focus { background: lighten(@primary-color, 5%); }
+			
 			}
 			
 			&.secondary {
@@ -196,40 +198,43 @@ body {
 				&:hover { background: darken(@secondary-color, 5%); }
 				
 				&:active, &:focus { background: lighten(@secondary-color, 5%); }
+			
 			}		
+		
 		}
+	
 	}
+
 }
 
 /**
  * @misc
  *
- * Defines miscellaneous styles (e.g. images, sliders, clear, etc...  )
+ * Defines miscellaneous styles (e.g. images, form elements, etc.)
  */
 
-	/**
-	 * @misc Images
-	 */ 
-	 
-	img.alignleft, img.alignright { 
-		margin-top: 6px; 
-		margin-bottom: 12px;
-	}
-	
-	img.size-thumbnail, .wp-caption {
-		background: #F7F7F7;
-		border: 1px solid @border-color;
-		padding: 4px;
-			
-		.wp-caption-text { font-size: 12px; }
-	}
-	
-	/** 
-	 * @misc Slider
-	 */
-	
-	.slider { }
-	
+/**
+ * @misc Images
+ */ 
+ 
+img.alignleft, img.alignright {
+	margin-top: 6px; 
+	margin-bottom: 12px;
+}
+
+img.size-thumbnail, .wp-caption {
+	background: #F7F7F7;
+	border: 1px solid @border-color;
+	padding: 4px;
+		
+	.wp-caption-text { font-size: 12px; }
+
+}
+
+/** 
+ * @misc Forms
+ */
+
 /**
  * @layout
  *
@@ -255,14 +260,15 @@ body {
 			color: @text-color; 
 			
 			&:hover { color: darken(@text-color, 25%); }
+		
 		}
+		
+		// logo, sitename and description
 				
 		#logo {
 					
 			#sitename { 
-				font-family: @heading-font;
-				font-weight: bold;
-				font-size: 38px;
+				font: bold 38px @heading-font;
 				line-height: 40px;
 				margin: 0;
 				
@@ -271,15 +277,15 @@ body {
 					position: relative;
 					text-decoration: none;
 				}
+				
 			}
 			
-			#description { 
-				margin: 0;
-			}
+			#description { margin: 0; }
+			
 		}
 		
-		/* Top navigation */
-		
+		// top navigation
+				
 		#topnav {
 			float: right;
 			margin: 10px 10px 0px 10px;
@@ -296,12 +302,15 @@ body {
 					a { text-decoration: underline; }
 					
 					&:last-child, &.last-child { padding-right: 0; }				
+				
 				}
+			
 			}
+		
 		}
 		
-		/* Searchform */
-		
+		// search form
+				
 		#search {
 			
 			form { 
@@ -313,6 +322,7 @@ body {
 					height: 28px;
 					
 					&:focus, &:active { .box-shadow(none); }
+				
 				} 
 				
 				input[type="text"] { 
@@ -333,10 +343,12 @@ body {
 					text-indent: -999999px;	
 					width: 32px;
 				}
+				
 			}
+			
 		}
 		
-		/* Main navigation */
+		// main navigation	
 		
 		#mainnav {
 			background: @footer-background;
@@ -365,33 +377,37 @@ body {
 							color: #FFF;
 							text-decoration: none;
 						}
+						
 					}
 					
 					ul { 
 						width: 220px; 	
 					
 						ul { margin-left: 95px; }
+						
 					}					
 					
-					ul li a, 
-					ul ul li a, 
-					ul ul ul li a {
+					ul li a, ul ul li a, ul ul ul li a {
 						background: @heading-color;
 						padding: 0 0 0 15px;
 						width: 100%;
-					}			
+					}
+							
 				}
+				
 			}
 		
 			ul > li.hover > a { background: darken(@heading-color, 10%); }
+		
 		}
 		
-		/* Breadcrumbs  */
-		
+		// breadcrumbs
+				
 		#breadcrumbs { 
 			color: lighten(@text-color, 20%);
 			font-size: 12px;
 		}
+		
 	}
 	
 	/**
@@ -402,36 +418,38 @@ body {
 		background: @body-background;
 		padding-bottom: 20px;
 		
-		/* Content */
+		// content
 		
 		#page-title { }
 		
-		article {
-						
-			.article-title {
+		.article-title {
+			
+			a { 
+				color: @heading-color;
+				text-decoration: none;
 				
-				a { 
-					color: @heading-color;
-					text-decoration: none;
-					
-					&:hover { 
-						color: @link-color;
-						text-decoration: underline;
-					}
+				&:hover { 
+					color: @link-color;
+					text-decoration: underline;
 				}
+				
 			}
 			
-			.meta { 
-				color: lighten(@text-color, 20%);
-				font-size: 13px;
-				
-				a { 
-					color: @text-color;
-					
-					&:hover { color: @link-color; } 
-				}
-			}
 		}
+		
+		.meta { 
+			color: lighten(@text-color, 20%);
+			font-size: 13px;
+			
+			a { 
+				color: @text-color;
+				
+				&:hover { color: @link-color; } 
+			
+			}
+			
+		}
+		
 	}
 	
 	/**
@@ -443,8 +461,8 @@ body {
 		.widget {
 			background: #FFF;
 			font-size: 13px;
-			padding: 20px;
 			margin: 0 0 20px 0;
+			padding: 20px;
 			
 			.widgettitle { 	
 				margin-top: 0;
@@ -454,7 +472,9 @@ body {
 					text-decoration: none;
 					
 					&:hover { text-decoration: underline; }
+					
 				 }
+				 
 			}
 			
 			ul {
@@ -462,10 +482,10 @@ body {
 				margin: 0;
 				
 				li { 
+					border-top: 1px solid @border-color;
 					display: block;
 					line-height: 24px;
 					padding: 5px;
-					border-top: 1px solid @border-color;
 					
 					a { 
 						color: @text-color;
@@ -480,11 +500,16 @@ body {
 					 		border: none;
 					 		margin-left: 15px;
 					 	}
+					 	
 					}
+					
 				}
+				
 			}
 			
-			/* @widget Tagcloud */
+			/**
+			 * @widget Tagcloud
+			 */
 			
 			&.widget_tag_cloud {
 				
@@ -502,9 +527,13 @@ body {
 						
 						&:hover { background: @link-color; }
 					}
+					
 				}
+				
 			}
+			
 		}
+		
 	}
 	
 	/**
@@ -521,18 +550,22 @@ body {
 			color: #FFF; 
 			
 			&:hover { color: #CCC; }
+			
 		}
 		
 		.sidebar {
+		
 			.widget {
 				background: none;
-				width: 220px;
+				float: left;
 				margin: 10px;
 				padding: 20px 0;
-				float: left;
+				width: 220px;
 				
 				h3 { color: #FFF; }
+				
 			}
+			
 		}
 		
 		#credits {
@@ -556,12 +589,18 @@ body {
 						a { 
 							float: left;
 							padding: 0 5px;
-						}	
-					}		
+						}
+						
+					}
+						
 				}
+				
 			}
-		}	
+			
+		}
+		
 	}
+	
 }
 
 /**
@@ -573,20 +612,23 @@ body {
  */
 
 .home {
+
 	#header { margin-bottom: 20px; }
+	
 }
 
 /**
  * @template index.php
  */
 
-.blog,
-.archive {
+.blog, .archive {
 
 	article {
 	
 		.article-title { margin-bottom: 5px; }
+		
 	}
+	
 }
 
 /**
@@ -605,8 +647,11 @@ body {
 			
 			.addthis_button_facebook_like { width: 125px; }
 			.addthis_button_tweet { width: 95px; }
+			
 		}
+		
 	}
+	
 }
 
 /**
@@ -666,6 +711,7 @@ article .search-highlight { background: #FFFFB3; }
 					&.validation_message {
 						color: #C44741;
 					}
+					
 				}
 				
 				.small, .medium, .large { font-size: 13px; }
@@ -688,6 +734,7 @@ article .search-highlight { background: #FFFFB3; }
 					}
 	
 					label, input[type="text"] { margin-left: 10px; }
+					
 				}
 				
 				.ginput_complex {
@@ -712,17 +759,24 @@ article .search-highlight { background: #FFFFB3; }
 							float: left;
 							width: 50%;
 						}
-					}					
+						
+					}	
+									
 				}
+				
 			}
+			
 		}
+		
 	}
 	
 	.gform_footer {
 		clear: both;
 		
 		.gform_button { margin: 2em 0 0 35%; }
+		
 	}
+	
 }
 
 /**
@@ -738,7 +792,9 @@ article .search-highlight { background: #FFFFB3; }
 	#mainnav {
 	
 		select { display: none; }
+	
 	}
+	
 }
 
 /**
@@ -748,14 +804,18 @@ article .search-highlight { background: #FFFFB3; }
 @media (max-width: 980px) {
 	
 	#header {
+		
 		#topnav, .search { display: none; }
 		
 		#mainnav {
 			margin-left: 0; 
+			
 			select { display: none; }
+		
 		}
 		
 		#breadcrumbs { margin: 20px 0; }
+	
 	}
 	
 	.container {
@@ -772,6 +832,7 @@ article .search-highlight { background: #FFFFB3; }
 				clear: both;
 				width: 100%;
 			}
+		
 		}
 		
 		&#footer .sidebar, &#main .sidebar {
@@ -785,9 +846,13 @@ article .search-highlight { background: #FFFFB3; }
 				width: 41%;
 				
 				&.odd { margin-right: 0; }
+			
 			}
+		
 		}
+	
 	}	
+
 }
 
 /**
@@ -810,7 +875,9 @@ article .search-highlight { background: #FFFFB3; }
 			}
 		
 			ul { display: none; }
+		
 		}
+	
 	}
 	
 	#main {
@@ -841,8 +908,11 @@ article .search-highlight { background: #FFFFB3; }
 					clear: both; 
 					text-align: left;
 				}
+			
 			}
+		
 		}
+	
 	}
 	
 	.container {
@@ -853,6 +923,7 @@ article .search-highlight { background: #FFFFB3; }
 				clear: both;
 				width: 100%;
 			}
+		
 		}
 		
 		&#footer .sidebar, &#main .sidebar {
@@ -863,6 +934,7 @@ article .search-highlight { background: #FFFFB3; }
 				padding: 3%;
 				width: 94%;
 			}
+		
 		}
 		
 		&#footer {
@@ -873,6 +945,7 @@ article .search-highlight { background: #FFFFB3; }
 					padding: 0;
 					width: 100%
 				}
+			
 			}
 			
 			#credits {
@@ -889,9 +962,14 @@ article .search-highlight { background: #FFFFB3; }
 							
 							a { float: none; }
 						}
+					
 					}
+				
 				}
+			
 			}
+		
 		}
+	
 	}
 }
