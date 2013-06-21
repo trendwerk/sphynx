@@ -1,6 +1,6 @@
 /*!
  * fancyBox - jQuery Plugin
- * version: 2.1.4 (Thu, 10 Jan 2013)
+ * version: 2.1.4 (Thu, 17 Jan 2013)
  * @requires jQuery v1.6 or later
  *
  * Examples at http://fancyapps.com/fancybox/
@@ -18,7 +18,7 @@
 		F = $.fancybox = function () {
 			F.open.apply( this, arguments );
 		},
-		IE =  navigator.userAgent.match(/msie/),
+		IE =  navigator.userAgent.match(/msie/i),
 		didUpdate = null,
 		isTouch	  = document.createTouch !== undefined,
 
@@ -61,6 +61,7 @@
 			minHeight : 100,
 			maxWidth  : 9999,
 			maxHeight : 9999,
+			pixelRatio: 1, // Set to 2 for retina display support
 
 			autoSize   : true,
 			autoHeight : false,
@@ -438,7 +439,7 @@
 				stop = function () {
 					clear();
 
-					$('body').unbind('.player');
+					D.unbind('.player');
 
 					F.player.isActive = false;
 
@@ -448,9 +449,9 @@
 					if (F.current && (F.current.loop || F.current.index < F.group.length - 1)) {
 						F.player.isActive = true;
 
-						$('body').bind({
-							'afterShow.player onUpdate.player'   : set,
+						D.bind({
 							'onCancel.player beforeClose.player' : stop,
+							'onUpdate.player'   : set,
 							'beforeLoad.player' : clear
 						});
 
@@ -761,11 +762,11 @@
 				});
 			}
 
-			$.event.trigger(event + '.fb');
+			D.trigger(event);
 		},
 
 		isImage: function (str) {
-			return isString(str) && str.match(/(^data:image\/.*,)|(\.(jp(e|g|eg)|gif|png|bmp|webp)((\?|#).*)?$)/i);
+			return isString(str) && str.match(/(^data:image\/.*,)|(\.(jp(e|g|eg)|gif|png|bmp|webp|svg)((\?|#).*)?$)/i);
 		},
 
 		isSWF: function (str) {
@@ -942,8 +943,8 @@
 			img.onload = function () {
 				this.onload = this.onerror = null;
 
-				F.coming.width  = this.width;
-				F.coming.height = this.height;
+				F.coming.width  = this.width / F.opts.pixelRatio;
+				F.coming.height = this.height / F.opts.pixelRatio;
 
 				F._afterLoad();
 			};
@@ -1708,7 +1709,7 @@
 				this.close();
 			}
 
-			this.overlay = $('<div class="fancybox-overlay"></div>').appendTo( 'body' );
+			this.overlay = $('<div class="fancybox-overlay"></div>').appendTo( F.coming.parent );
 			this.fixed   = false;
 
 			if (opts.fixed && F.defaults.fixed) {
@@ -1752,7 +1753,7 @@
 		},
 
 		close : function() {
-			$('.fancybox-overlay').remove();
+			$('.fancybox-overlay').remove().hide();
 
 			W.unbind('resize.overlay');
 
@@ -1765,7 +1766,7 @@
 			}
 
 			if (this.el) {
-				this.el.removeClass('fancybox-lock');
+				this.el.parent().removeClass('fancybox-lock');
 			}
 		},
 
@@ -1815,7 +1816,7 @@
 
 		beforeShow : function(opts, obj) {
 			if (obj.locked) {
-				this.el.addClass('fancybox-lock');
+				this.el.parent().addClass('fancybox-lock');
 
 				if (this.margin !== false) {
 					$('body').css('margin-right', getScalar( this.margin ) + obj.scrollbarWidth);

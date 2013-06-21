@@ -381,25 +381,25 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 	
 	/* small icons with text*/
 	
-	.social-media-widget.small-icons li a { padding-left: 30px; }
+	.widget_tp_social.small-icons li a { padding-left: 30px; }
 
-	.social-media-widget.small-icons li.twitter a, .social-media-widget.small-icons-no-text li.twitter a { background: url('../img/social/twitter_16.png') no-repeat center left; }	
-	.social-media-widget.small-icons li.facebook a, .social-media-widget.small-icons-no-text li.facebook a { background: url('../img/social/facebook_16.png') no-repeat center left; }
-	.social-media-widget.small-icons li.linkedin a, .social-media-widget.small-icons-no-text li.linkedin a { background: url('../img/social/linkedin_16.png') no-repeat center left; }
-	.social-media-widget.small-icons li.googleplus a, .social-media-widget.small-icons-no-text li.googleplus a { background: url('../img/social/googleplus_16.png') no-repeat center left; }
-	.social-media-widget.small-icons li.youtube a, .social-media-widget.small-icons-no-text li.youtube a { background: url('../img/social/youtube_16.png') no-repeat center left; }
-	.social-media-widget.small-icons li.email a, .social-media-widget.small-icons-no-text li.email a { background: url('../img/social/email_16.png') no-repeat center left; }
-	.social-media-widget.small-icons li.rss a, .social-media-widget.small-icons-no-text li.rss a { background: url('../img/social/rss_16.png') no-repeat center left; }
+	.widget_tp_social.small-icons li.twitter a, .widget_tp_social.small-icons-no-text li.twitter a { background: url('../img/social/twitter_16.png') no-repeat center left; }	
+	.widget_tp_social.small-icons li.facebook a, .widget_tp_social.small-icons-no-text li.facebook a { background: url('../img/social/facebook_16.png') no-repeat center left; }
+	.widget_tp_social.small-icons li.linkedin a, .widget_tp_social.small-icons-no-text li.linkedin a { background: url('../img/social/linkedin_16.png') no-repeat center left; }
+	.widget_tp_social.small-icons li.googleplus a, .widget_tp_social.small-icons-no-text li.googleplus a { background: url('../img/social/googleplus_16.png') no-repeat center left; }
+	.widget_tp_social.small-icons li.youtube a, .widget_tp_social.small-icons-no-text li.youtube a { background: url('../img/social/youtube_16.png') no-repeat center left; }
+	.widget_tp_social.small-icons li.email a, .widget_tp_social.small-icons-no-text li.email a { background: url('../img/social/email_16.png') no-repeat center left; }
+	.widget_tp_social.small-icons li.rss a, .widget_tp_social.small-icons-no-text li.rss a { background: url('../img/social/rss_16.png') no-repeat center left; }
 
 	/* small icons with text*/
 	
-	.social-media-widget.small-icons-no-text ul { 
+	.widget_tp_social.small-icons-no-text ul { 
 		border: none;
 		display: block;
 		padding: 5px 0 20px 0;
 	}
 
-		.social-media-widget.small-icons-no-text li { 
+		.widget_tp_social.small-icons-no-text li { 
 			border: none;
 			display: block;
 			float: left;
@@ -409,7 +409,7 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 			width: 16px;
 		}
 			
-			.social-media-widget.small-icons-no-text li a { 
+			.widget_tp_social.small-icons-no-text li a { 
 				display: block;
 				height: 16px;
 				text-indent: -999999px;
@@ -418,32 +418,32 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 				
 	/* big icons */
 
-	.social-media-widget.great-icons li { padding: 5px 0; }
+	.widget_tp_social.great-icons li { padding: 5px 0; }
 	
-		.social-media-widget.great-icons li a { 
+		.widget_tp_social.great-icons li a { 
 			display: inline-block;
 			height: 36px;
 			line-height: 36px;
 			padding-left: 42px;
 		}
 
-	.social-media-widget.great-icons li.twitter a, .social-media-widget.great-icons-no-text li.twitter a { background: url('../img/social/twitter_32.png') no-repeat center left; }	
-	.social-media-widget.great-icons li.facebook a, .social-media-widget.great-icons-no-text li.facebook a { background: url('../img/social/facebook_32.png') no-repeat center left; }
-	.social-media-widget.great-icons li.linkedin a, .social-media-widget.great-icons-no-text li.linkedin a { background: url('../img/social/linkedin_32.png') no-repeat center left; }
-	.social-media-widget.great-icons li.googleplus a, .social-media-widget.great-icons-no-text li.googleplus a { background: url('../img/social/googleplus_32.png') no-repeat center left; }
-	.social-media-widget.great-icons li.youtube a, .social-media-widget.great-icons-no-text li.youtube a { background: url('../img/social/youtube_32.png') no-repeat center left; }
-	.social-media-widget.great-icons li.email a, .social-media-widget.great-icons-no-text li.email a { background: url('../img/social/email_32.png') no-repeat center left; }
-	.social-media-widget.great-icons li.rss a, .social-media-widget.great-icons-no-text li.rss a { background: url('../img/social/rss_32.png') no-repeat center left; }
+	.widget_tp_social.great-icons li.twitter a, .widget_tp_social.great-icons-no-text li.twitter a { background: url('../img/social/twitter_32.png') no-repeat center left; }	
+	.widget_tp_social.great-icons li.facebook a, .widget_tp_social.great-icons-no-text li.facebook a { background: url('../img/social/facebook_32.png') no-repeat center left; }
+	.widget_tp_social.great-icons li.linkedin a, .widget_tp_social.great-icons-no-text li.linkedin a { background: url('../img/social/linkedin_32.png') no-repeat center left; }
+	.widget_tp_social.great-icons li.googleplus a, .widget_tp_social.great-icons-no-text li.googleplus a { background: url('../img/social/googleplus_32.png') no-repeat center left; }
+	.widget_tp_social.great-icons li.youtube a, .widget_tp_social.great-icons-no-text li.youtube a { background: url('../img/social/youtube_32.png') no-repeat center left; }
+	.widget_tp_social.great-icons li.email a, .widget_tp_social.great-icons-no-text li.email a { background: url('../img/social/email_32.png') no-repeat center left; }
+	.widget_tp_social.great-icons li.rss a, .widget_tp_social.great-icons-no-text li.rss a { background: url('../img/social/rss_32.png') no-repeat center left; }
 		
 	/* small icons with text*/
 	
-	.social-media-widget.great-icons-no-text ul { 
+	.widget_tp_social.great-icons-no-text ul { 
 		border: none;
 		display: block;
 		padding: 5px 0 40px 0;
 	}
 
-		.social-media-widget.great-icons-no-text li { 
+		.widget_tp_social.great-icons-no-text li { 
 			border: none;
 			display: block;
 			float: left;
@@ -453,7 +453,7 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 			width: 32px;
 		}
 			
-			.social-media-widget.great-icons-no-text li a { 
+			.widget_tp_social.great-icons-no-text li a { 
 				display: block;
 				height: 32px;
 				text-indent: -999999px;
