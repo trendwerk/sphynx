@@ -7,7 +7,7 @@
 				<div id="credits" class="twelvecol">
 					<div id="copyright">
 						<p>
-							&copy; <?php _e('Copyright','tp'); ?> <?php echo date('Y'); ?> - <?php echo ($name = get_option('tp-naam')) ? $name : get_bloginfo('name'); ?>
+							&copy; <?php _e('Copyright','tp'); ?> <?php echo date('Y'); ?> - <?php echo ($name = get_option('tp-company-name')) ? $name : get_bloginfo('name'); ?>
 						</p>
 					</div>
 					<nav id="footernav" class="navigation">

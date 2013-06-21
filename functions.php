@@ -19,9 +19,11 @@ function tp_enqueue_scripts() {
 	//Enqueue used parent libraries
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('cycle');
-	wp_enqueue_script('fancybox');
 	wp_enqueue_style('fancyboxcss');
-	wp_enqueue_script('trendpress');
+	wp_enqueue_style('printcss');
+	wp_enqueue_script('fancybox');
+	wp_enqueue_script('trendpress');	wp_enqueue_script('comment-reply');
+
 	
 	//Register & enqueue child scripts and styles
 	wp_enqueue_script('functions',get_stylesheet_directory_uri().'/assets/js/functions.js',array('jquery'));

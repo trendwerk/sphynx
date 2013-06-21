@@ -8,9 +8,9 @@
  */
 class submenu extends WP_Widget {
 	function submenu() {
-		$widget_ops = array('classname' => 'submenu', 'description' => __('Shows submenu items of current menu item or parent','tp'));
+		$tp_ops = array('classname' => 'submenu', 'description' => __('Shows submenu items of current menu item or parent','tp'));
 		$control_ops = array('width' => 250, 'height' => 350);
-		$this->WP_Widget('submenu', __('Submenu','tp'), $widget_ops, $control_ops);
+		$this->WP_Widget('submenu', __('Submenu','tp'), $tp_ops, $control_ops);
 	}
 	
 	/**
@@ -69,55 +69,72 @@ add_action('widgets_init', create_function('','return register_widget("submenu")
 /**
  * @widget Contact info from TrendPress contact info
  */
-class widget_tp_contact extends WP_Widget {
-	function widget_tp_contact() {
-		$this->WP_Widget('widget_tp_contact', __('Contact information','tp'), 'description='.__('Shows the specified contact information','tp'));
+class tp_contact extends WP_Widget {
+	function tp_contact() {
+		$this->WP_Widget('tp_contact', __('Contact information','tp'), 'description='.__('Shows the specified contact information','tp'));
 	}
-	
+
 	function form($instance) {
-		printf(__('Change the contents of this widget on the <a href="%1$s">contact information</a> page.', 'tp'), admin_url('options-general.php?page=tp-information'));
-	
-		return 'noform';
+		$title = esc_attr($instance['title']);
+	?>
+ 		<p>
+ 			<label for="<?php echo $this->get_field_id('title'); ?>">
+ 				<strong><?php _e('Title'); ?></strong><br />
+ 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+ 			</label>
+ 		</p>
+ 		<p><?php printf(__('Change the contents of this widget on the <a href="%1$s">contact information</a> page.', 'tp'), admin_url('options-general.php?page=tp-information')); ?></p>
+	<?php
 	}
 	
-	function widget($args,$instance) {
+	function update($new_instance,$old_instance) {
+		$instance = $old_instance;
+		$instance['title'] = strip_tags($new_instance['title']);
+				
+		return $instance;
+	}
+	
+	function widget($args,$instance) {		
+		$title = apply_filters('widget_title', $instance['title']);
 		extract($args);
 	?>
-		<?php echo $before_widget; ?>
-			<?php echo $before_title.__('Contact','tp').$after_title; ?>
-			<div itemscope itemtype="http://schema.org/Organization">
-				<?php 
-					if ($name = get_option('tp-company-name')) {
-					echo '<span itemprop="name"><strong>'.$name.'</strong></span>';
-				?>
-				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">	
-					<?php
-					} if ($address = get_option('tp-address')) { 
-						echo '<span itemprop="streetAddress">'.$address.'</span><br />'; 
-					} if ($postal_code = get_option('tp-postal-code')) {
-						echo '<span itemprop="postalCode">'.$postal_code.'</span>';
-					} if ($city = get_option('tp-city')) {
-					 echo ' <span itemprop="addressLocality">'.$city.'</span><br />'; 
-					} if ($country = get_option('tp-country')) {
-					 echo '<span itemprop="addressCountry">'.$country.'</span><br /><br />'; 
-					}
-				?>
-				</div>
+ 		<?php echo $before_widget; ?>
+ 			<?php if ($title) { echo $before_title . $title . $after_title; } ?>	
+			<span itemscope itemtype="http://schema.org/Organization">
+				<p>
+					<?php 
+						if ($name = get_option('tp-company-name')) {
+						echo '<span itemprop="name"><strong>'.$name.'</strong></span><br />';
+					?>
+					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">	
+						<?php
+							} if ($address = get_option('tp-address')) { 
+								echo '<span itemprop="streetAddress">'.$address.'</span><br />'; 
+							} if ($postal_code = get_option('tp-postal-code')) {
+								echo '<span itemprop="postalCode">'.$postal_code.'</span>';
+							} if ($city = get_option('tp-city')) {
+							 echo ' <span itemprop="addressLocality">'.$city.'</span><br />'; 
+							} if ($country = get_option('tp-country')) {
+							 echo '<span itemprop="addressCountry">'.$country.'</span><br /><br />'; 
+							}
+						?>
+					</span>
+				</p>
 				<p>
 					<?php
 						if ($email = get_option('tp-email')) { 
-							echo'<span>'.__('E-mail','tp').': </span><a itemprop="email" href="mailto:'.$email.'">'.$email.'</a><br />';
+							echo'<span class="label">'.__('E-mail','tp').': </span><a itemprop="email" href="mailto:'.$email.'">'.$email.'</a><br />';
 						} if ($telephone = get_option('tp-telephone')) { 
-							echo '<span>'.__('Telephone','tp').': </span><span itemprop="telephone">'.$telephone.'</span><br />';
+							echo '<span class="label">'.__('Telephone','tp').': </span><span itemprop="telephone">'.$telephone.'</span><br />';
 						} if ($fax = get_option('tp-fax')) { 
-							echo '<span>'.__('Fax','tp').': </span><span itemprop="faxNumber">'.$fax.'</span>';
+							echo '<span class="label">'.__('Fax','tp').': </span><span itemprop="faxNumber">'.$fax.'</span>';
 						} 
 					?>
 				</p>
 				<p>
 					<?php
 						if ($cc = get_option('tp-cc')) {
-							echo '<span>'.__('CC No','tp').': </span>'.$cc.'<br />';
+							echo '<span class="label">'.__('CC No','tp').': </span>'.$cc.'<br />';
 						} if ($vat = get_option('tp-vat')) {
 							echo '<span itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
 						} if ($bankno = get_option('tp-bank-no')) {
@@ -126,92 +143,127 @@ class widget_tp_contact extends WP_Widget {
 							} else {
 								$bank = get_option('tp-bank');
 							}
-							echo '<span>'.$bank.': </span>'.$bankno;
+							echo '<span class="label">'.$bank.': </span>'.$bankno;
 						} 
 					?>
 				</p>
-			</div>
+			</span>
 		<?php echo $after_widget; ?>
 	<?php
 	}
 }
-add_action('widgets_init',create_function('','return register_widget("widget_tp_contact");'));
+add_action('widgets_init',create_function('','return register_widget("tp_contact");'));
 
 /**
  * @widget Sociale media links from TrendPress contact info
  */
-class widget_tp_social extends WP_Widget {
-	function widget_tp_social() {
-		$this->WP_Widget('widget_tp_social', __('Social media links','tp'), 'description='.__('Shows links to specified social network profiles','tp'));
+class tp_social extends WP_Widget {
+	function tp_social() {
+		$this->WP_Widget('tp_social', __('Social media links','tp'), 'description='.__('Shows links to specified social network profiles','tp'));
 	}
 	
 	function form($instance) {
+		$title = esc_attr($instance['title']);
 		$type = esc_attr($instance['type']);
-		
-		$options = array('Big icons with text', 'Small icons with text', 'Big icons without text', 'Small icons without text');
 		?>
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+				<strong><?php _e('Title'); ?></strong><br />
+				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+			</label>
+		</p>
 		<p>
 			<label>
 				<strong><?php _e('Icon types','tp'); ?></strong><br />
 				<select class="widefat" name="<?php echo $this->get_field_name('type'); ?>">
-					<?php foreach($options as $option) : ?>
-						<option <?php if($option == $type) echo 'selected="selected"'; ?>><?php echo $option; ?></option>
-					<?php endforeach; ?>
+					<option <?php if($type == 'large-icons') echo 'selected="selected"'; ?> value="large-icons"><?php _e('Large icons','tp'); ?></option>
+					<option <?php if($type == 'small-icons') echo 'selected="selected"'; ?> value="small-icons"><?php _e('Small icons','tp'); ?></option>
+					<option <?php if($type == 'small-icons-text') echo 'selected="selected"'; ?> value="small-icons-text"><?php _e('Small icons with text','tp'); ?></option>
 				</select>
 			</label>
 		</p>
+		<p><?php printf(__('Change the contents of this widget on the <a href="%1$s">contact information</a> page.', 'tp'), admin_url('options-general.php?page=tp-information')); ?></p>
 		<?php
 	}
 	
 	function update($new_instance,$old_instance) {
 		$instance = $old_instance;
-		
+		$instance['title'] = strip_tags($new_instance['title']);
 		$instance['type'] = $new_instance['type'];
 				
 		return $instance;
 	}
-
-	function widget($args,$instance) {
+	
+	function widget($args,$instance) {		
+		$title = apply_filters('widget_title', $instance['title']);
+		$type = $instance['type'];
 		extract($args);
 	?>
-		<div class="widget widget_tp_social 
-			<?php if($instance['type'] == 'Small icons with text') { 
-				echo 'small-icons'; 
-				} elseif ($instance['type'] == 'Big icons with text') {
-				echo 'great-icons';
-				} elseif ($instance['type'] == 'Big icons without text') {
-				echo 'great-icons-no-text';
-				} elseif ($instance['type'] == 'Small icons without text') {
-				echo 'small-icons-no-text';
-				}
-			?>">
-			<?php echo $before_title.__('Social media','tp').$after_title; ?>
-			<ul>
-				<?php if($twitter = get_option('tp-twitter')) { ?><li class="twitter"><a rel="external" href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>"><?php _e('Follow us on Twitter','tp') ?></a></li><?php } ?>
-				<?php if($facebook = get_option('tp-facebook')) { ?><li class="facebook"><a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>"><?php _e('Like us on Facebook','tp') ?></a></li><?php } ?>
-				<?php if($linkedin = get_option('tp-linkedin')) { ?><li class="linkedin"><a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>"><?php _e('Connect with us on LinkedIn','tp') ?></a></li><?php } ?>
-				<?php if($googleplus = get_option('tp-googleplus')) { ?><li class="googleplus"><a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>"><?php _e('Add us on Google+','tp') ?></a></li><?php } ?>
-				<?php if($youtube = get_option('tp-youtube')) { ?><li class="youtube"><a rel="external" href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>"><?php _e('View our YouTube channel','tp') ?></a></li><?php } ?>
-				<?php if($newsletter = get_option('tp-newsletter')) { ?><li class="email"><a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>"><?php _e('E-mail newsletter','tp'); ?></a></li><?php } ?>
-				<?php if(get_option('tp-rss') == 'true') { ?><li class="rss"><a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>"><?php _e('Subscribe to our RSS','tp') ?></a></li><?php } ?>
+		<?php echo $before_widget; ?>
+			<?php if ($title) { echo $before_title . $title . $after_title; } ?>
+			<ul class="social <?php echo $type; ?>">
+				<?php if($twitter = get_option('tp-twitter')) { ?>
+					<li class="twitter">
+						<a rel="external" href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/twitter.svg" /><span><?php _e('Follow us on Twitter','tp') ?></span>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if($facebook = get_option('tp-facebook')) { ?>
+					<li class="facebook">
+						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><span><?php _e('Like us on Facebook','tp') ?></span>
+						</a>
+					</li>
+				<?php } if($linkedin = get_option('tp-linkedin')) { ?>
+					<li class="linkedin">
+						<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/linkedin.svg" /><span><?php _e('Connect with us on LinkedIn','tp') ?></span>
+						</a>
+					</li>
+					<?php } if($googleplus = get_option('tp-googleplus')) { ?>
+					<li class="googleplus">
+						<a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/google.svg" /><span><?php _e('Add us on Google+','tp') ?></span>
+						</a>
+					</li>
+				<?php } if($youtube = get_option('tp-youtube')) { ?>
+					<li class="youtube">
+						<a rel="external" href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/youtube.svg" /><span><?php _e('View our YouTube channel','tp') ?></span>
+						</a>
+					</li>
+				<?php } if($newsletter = get_option('tp-newsletter')) { ?>
+					<li class="email">
+						<a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/email.svg" /><span><?php _e('E-mail newsletter','tp'); ?></span>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if(get_option('tp-rss') == 'true') { ?>
+					<li class="rss">
+						<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/rss.svg" /><span><?php _e('Subscribe to our RSS','tp') ?></span>
+						</a>
+					</li>
+				<?php } ?>
 			</ul>
 		<?php echo $after_widget; ?>
 	<?php
 	}
 }
-add_action('widgets_init',create_function('','return register_widget("widget_tp_social");'));
+add_action('widgets_init',create_function('','return register_widget("tp_social");'));
 
 /**
  * @widget Facebook like box
  */
-class widget_fb_like_box extends WP_Widget {
-	function widget_fb_like_box() {
-		$this->WP_Widget('widget_fb_like_box', __('Facebook like box','tp'), 'description='.__('Shows the Facebook users that like your Facebook page','tp'));
+class tp_fb_like_box extends WP_Widget {
+	function tp_fb_like_box() {
+		$this->WP_Widget('tp_fb_like_box', __('Facebook like box','tp'), 'description='.__('Shows the Facebook users that like your Facebook page','tp'));
 	}
 	
 	function form($instance) {
 		$title = esc_attr($instance['title']);
-		if(!$title) $title = __('Like us on Facebook','tp');
 		$url = $instance['url'];
 		?>
 		<p>
@@ -245,22 +297,24 @@ class widget_fb_like_box extends WP_Widget {
 		extract($args);
 	?>
 		<?php echo $before_widget; ?>
-			<?php echo $before_title . $title . $after_title; ?>
+			<?php if ($title) { echo $before_title . $title . $after_title; } ?>
 			<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
-			
-			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
+			<script>
+				(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}
+				(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-show-border="false" data-height="270px" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
 		<?php echo $after_widget; ?>
 	<?php
 	}
 }
-add_action('widgets_init',create_function('','return register_widget("widget_fb_like_box");'));
+add_action('widgets_init',create_function('','return register_widget("tp_fb_like_box");'));
 
 /**
  * @widget Text with button
@@ -304,7 +358,6 @@ class widget_title_content_button extends WP_Widget {
 	
 	function form($instance) {
 		$title = esc_attr($instance['title']);	
-		if(!$title) $title = __('Text with image and button','tp');
 		$image = $instance['image'];
 		$content = esc_attr($instance['content']);
 		$show_button = $instance['show_button'];
@@ -392,7 +445,7 @@ class widget_title_content_button extends WP_Widget {
 		extract($args);
 	?>
 		<?php echo $before_widget; ?>
-			<?php echo $before_title . $title . $after_title; ?>
+			<?php if ($title) { echo $before_title . $title . $after_title; } ?>
 		    <?php if($image) : ?>
 		    	<div class="featured-widget-image">
 		    		<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" />
@@ -506,7 +559,6 @@ class widget_title_image_content_button extends WP_Widget {
 	
 	function form($instance) {
 		$title = esc_attr($instance['title']);	
-		if(!$title) $title = __('Text with image and button','tp');
 		$image = $instance['image'];
 		$content = esc_attr($instance['content']);
 		$show_button = $instance['show_button'];
@@ -609,7 +661,7 @@ class widget_title_image_content_button extends WP_Widget {
 		extract($args);
 	?>
 		<?php echo $before_widget; ?>
-			<?php echo $before_title . $title . $after_title; ?>
+			<?php if ($title) { echo $before_title . $title . $after_title; } ?>
 			<?php if($image) : ?>
 		    	<div class="featured-widget-image">
 		    		<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" />

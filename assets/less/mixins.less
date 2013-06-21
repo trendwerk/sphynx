@@ -1,50 +1,35 @@
 /**
  * @mixins
  */
- 
-// mobile navigation
 
-.maxDepth (@index) when (@index > 0) {
-	(~".depth@{index}") {
-		text-indent: @index * 15px - 15px;
-	}
-	.maxDepth(@index - 1);
+/**
+ * @mixin Animate 
+ */
+
+.animate-this(@what: all, @time: 0.5s, @ease: ease-in-out) {
+	-webkit-transition: @what @time @ease;
+	-moz-transition: @what @time @ease;
+	-o-transition: @what @time @ease;
+	-ms-transition: @what @time @ease;
+	transition: @what @time @ease;
 }
 
-.maxDepth (0) {}
-
-#mainnav select { .maxDepth(10); }
-
-// placeholder
-
-.placeholder(@color) {
-    &::-webkit-input-placeholder {
-       color: @color;
-    }
-    &:-moz-placeholder {
-       color: @color;  
-    }
-    &::-moz-placeholder {
-       color: @color;  
-    }
-    &:-ms-input-placeholder {  
-       color: @color; 
-    }
-}
-
-// border radius(es)
-
-.border-radius, .border-radiuses {
-	-moz-background-clip: padding;
-	-webkit-background-clip: padding-box;
-	background-clip: padding-box;
-}
+/**
+ * @mixin Border radiuses (single)
+ */
 
 .border-radius (@radius) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 	border-radius: @radius;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
 }
+
+/**
+ * @mixin Border radiusses (multiple)
+ */
 
 .border-radiuses (@topright, @bottomright, @bottomleft, @topleft) {
 	-webkit-border-top-right-radius: @topright;
@@ -59,7 +44,14 @@
 	border-bottom-right-radius: @bottomright;
 	border-bottom-left-radius: @bottomleft;
 	border-top-left-radius: @topleft;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
 }
+
+/**
+ * @mixin Border-box
+ */
 
 .border-box {
 	-moz-box-sizing: border-box; 
@@ -67,7 +59,9 @@
 	box-sizing: border-box;
 }
 
-// box shadow
+/**
+ * @mixin Box-shadow
+ */
 
 .box-shadow (@shadow) {
 	-webkit-box-shadow: @shadow;
@@ -75,7 +69,9 @@
 	box-shadow: @shadow;
 }
 
-// columns
+/**
+ * @mixin Collumns
+ */
 
 .columns(@number, @gap) {
 	-moz-column-count: @number;
@@ -86,7 +82,19 @@
 	column-gap: @gap;
 }
 
-// grayscale
+/** 
+ * @mixin Elipsis
+ */
+ 
+.elipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/**
+ * @mixin Grayscale (for images)
+ */
 
 .grayscale {
 	filter: grayscale(100%);
@@ -98,7 +106,27 @@
 	filter: gray;
 }
 
-// horizantal gradient
+/**
+ * @mixin HEX to RGBA
+ */
+
+.rgba(@color, @alpha) {
+
+	@alphacolor: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+	@ieAlphacolor: argb(@alphacolor);
+	
+	background-color: @color;
+	background-color: @alphacolor; 
+	
+	zoom: 1;
+	background-color: transparent\9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphacolor}, endColorstr=@{ieAlphacolor})";
+    filter:  ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphacolor}, endColorstr=@{ieAlphacolor})";	
+}
+
+/**
+ * @mixin Horizontal gradient
+ */
 
 .horizontal-gradient (@startColor, @endColor) {
  	background-color: @startColor;
@@ -109,7 +137,24 @@
 	background-image: -o-linear-gradient(left, @startColor, @endColor);
 }
 
-// opacity
+/**
+ * @mixin Mobile navigation
+ */
+
+.maxDepth (@index) when (@index > 0) {
+	(~".depth@{index}") {
+		text-indent: @index * 15px - 15px;
+	}
+	.maxDepth(@index - 1);
+}
+
+.maxDepth (0) {}
+
+#mainnav select { .maxDepth(10); }
+
+/**
+ * @mixin Opacity
+ */
 
 .opacity (@opacity: 0.5) {
 	-webkit-opacity: @opacity;
@@ -117,7 +162,48 @@
 	opacity: @opacity;
 }
 
-// vertical gradient
+/**
+ * @mixin Placeholder
+ */
+
+.placeholder(@out, @on) {
+	
+	.animate {
+		
+		.animate-this(all, 0.25s, ease-in-out);
+	
+	}
+	
+	&:-moz-placeholder { color: @out; }
+	&::-moz-placeholder { color: @out; }
+	&:-ms-input-placeholder { color: @out; }
+	&::-webkit-input-placeholder { color: @out; }
+	
+	&:focus:-moz-placeholder { 
+		.animate; 
+		color: @on; 
+	}
+	
+	&:focus::-moz-placeholder { 
+		.animate;
+		color: @on;
+	}
+	
+	&:focus:-ms-input-placeholder { 
+		.animate;
+		color: @on; 
+	}
+	
+	&:focus::-webkit-input-placeholder { 
+		.animate;
+		color: @on; 
+	}
+  
+}
+    
+/**
+ * @mixin Vertical gradient
+ */
 
 .vertical-gradient (@startColor, @endColor) {
 	background-color: @startColor;
