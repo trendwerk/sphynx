@@ -163,6 +163,7 @@ class tp_social extends WP_Widget {
 	}
 	
 	function form($instance) {
+		$title = esc_attr($instance['title']);
 		$type = esc_attr($instance['type']);
 		?>
 		<p>
@@ -187,70 +188,67 @@ class tp_social extends WP_Widget {
 	
 	function update($new_instance,$old_instance) {
 		$instance = $old_instance;
-		
 		$instance['title'] = strip_tags($new_instance['title']);
 		$instance['type'] = $new_instance['type'];
 				
 		return $instance;
 	}
-
-	function widget($args,$instance) {
+	
+	function widget($args,$instance) {		
 		$title = apply_filters('widget_title', $instance['title']);
 		$type = $instance['type'];
-		
 		extract($args);
 	?>
-	
-	<?php echo $before_widget; ?>
-		<?php if ($title) { echo $before_title . $title . $after_title; } ?>
-		<ul class="social <?php echo $type; ?>">
-			<?php if($twitter = get_option('tp-twitter')) { ?>
-				<li class="twitter">
-					<a rel="external" href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/twitter.svg" /><span><?php _e('Follow us on Twitter','tp') ?></span>
-					</a>
-				</li>
-			<?php } ?>
-			<?php if($facebook = get_option('tp-facebook')) { ?>
-				<li class="facebook">
-					<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><span><?php _e('Like us on Facebook','tp') ?></span>
-					</a>
-				</li>
-			<?php } if($linkedin = get_option('tp-linkedin')) { ?>
-				<li class="linkedin">
-					<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/linkedin.svg" /><span><?php _e('Connect with us on LinkedIn','tp') ?></span>
-					</a>
-				</li>
-				<?php } if($googleplus = get_option('tp-googleplus')) { ?>
-				<li class="googleplus">
-					<a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/google.svg" /><span><?php _e('Add us on Google+','tp') ?></span>
-					</a>
-				</li>
-			<?php } if($youtube = get_option('tp-youtube')) { ?>
-				<li class="youtube">
-					<a rel="external" href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/youtube.svg" /><span><?php _e('View our YouTube channel','tp') ?></span>
-					</a>
-				</li>
-			<?php } if($newsletter = get_option('tp-newsletter')) { ?>
-				<li class="email">
-					<a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/email.svg" /><span><?php _e('E-mail newsletter','tp'); ?></span>
-					</a>
-				</li>
-			<?php } ?>
-			<?php if(get_option('tp-rss') == 'true') { ?>
-				<li class="rss">
-					<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>">
-						<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/rss.svg" /><span><?php _e('Subscribe to our RSS','tp') ?></span>
-					</a>
-				</li>
-			<?php } ?>
-		</ul>
-	<?php echo $after_widget; ?>
+		<?php echo $before_widget; ?>
+			<?php if ($title) { echo $before_title . $title . $after_title; } ?>
+			<ul class="social <?php echo $type; ?>">
+				<?php if($twitter = get_option('tp-twitter')) { ?>
+					<li class="twitter">
+						<a rel="external" href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/twitter.svg" /><span><?php _e('Follow us on Twitter','tp') ?></span>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if($facebook = get_option('tp-facebook')) { ?>
+					<li class="facebook">
+						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><span><?php _e('Like us on Facebook','tp') ?></span>
+						</a>
+					</li>
+				<?php } if($linkedin = get_option('tp-linkedin')) { ?>
+					<li class="linkedin">
+						<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/linkedin.svg" /><span><?php _e('Connect with us on LinkedIn','tp') ?></span>
+						</a>
+					</li>
+					<?php } if($googleplus = get_option('tp-googleplus')) { ?>
+					<li class="googleplus">
+						<a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/google.svg" /><span><?php _e('Add us on Google+','tp') ?></span>
+						</a>
+					</li>
+				<?php } if($youtube = get_option('tp-youtube')) { ?>
+					<li class="youtube">
+						<a rel="external" href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/youtube.svg" /><span><?php _e('View our YouTube channel','tp') ?></span>
+						</a>
+					</li>
+				<?php } if($newsletter = get_option('tp-newsletter')) { ?>
+					<li class="email">
+						<a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/email.svg" /><span><?php _e('E-mail newsletter','tp'); ?></span>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if(get_option('tp-rss') == 'true') { ?>
+					<li class="rss">
+						<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/rss.svg" /><span><?php _e('Subscribe to our RSS','tp') ?></span>
+						</a>
+					</li>
+				<?php } ?>
+			</ul>
+		<?php echo $after_widget; ?>
 	<?php
 	}
 }
@@ -301,14 +299,16 @@ class tp_fb_like_box extends WP_Widget {
 		<?php echo $before_widget; ?>
 			<?php if ($title) { echo $before_title . $title . $after_title; } ?>
 			<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
-			
+			<script>
+				(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}
+				(document, 'script', 'facebook-jssdk'));
+			</script>
 			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-show-border="false" data-height="270px" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
 		<?php echo $after_widget; ?>
 	<?php
