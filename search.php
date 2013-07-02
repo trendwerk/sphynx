@@ -18,8 +18,9 @@
 						<?php the_title(); ?>
 					</a>
 				</h2>
-				<?php tp_the_excerpt(50); ?>
 				<p>
+					<?php tp_the_excerpt(50); ?>
+					
 					<a  class="more" href="<?php echo the_permalink(); ?>">
 						<?php _e('Read more','tp'); ?>
 					</a>
