@@ -35,11 +35,23 @@ function tp_maybe_add_http($url) {
  * @param int $content Custom content you may want to shorten
  */
 function tp_the_excerpt($length=55,$more='&hellip;',$content='') {
-	if(!$content) $content = apply_filters('the_content',get_the_excerpt());
-	if(!$content) $content = apply_filters('the_content',get_the_content());
+	$func = array();
 	
-	$excerpt = wp_trim_words($content,$length,$more);
+	$func['more'] = create_function('','return "'.$more.'";');
+	add_filter('excerpt_more',$func['more']);
 	
-	echo apply_filters('the_excerpt',$excerpt);
+	$func['length'] = create_function('','return '.$length.';');
+	add_filter('excerpt_length',$func['length']);
+	
+	if($content) :
+		$excerpt = wp_trim_words($content,$length,$more);
+	else :
+		$excerpt = get_the_excerpt();
+	endif;
+	
+	remove_filter('excerpt_more',$func['more']);
+	remove_filter('excerpt_length',$func['length']);
+	
+	echo $excerpt;
 }
 ?>
