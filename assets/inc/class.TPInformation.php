@@ -127,6 +127,7 @@ class TPInformation {
 	 */
 	function save_site_name($value) {
 		update_option('blogname',$value);
+		return $value;
 	}
 	
 	/**
@@ -134,6 +135,7 @@ class TPInformation {
 	 */
 	function save_site_description($value) {
 		update_option('blogdescription',$value);
+		return $value;
 	}
 	
 	/**
