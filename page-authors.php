@@ -18,8 +18,8 @@
 				<section id="authors">				
 					<?php 
 						foreach($users as $user) : 
-							$author = $user->ID;
-							include(locate_template('part-author.php'));
+							$GLOBALS['author'] = $user->ID;
+							get_template_part('part','author');
 						endforeach; 
 					?>
 				</section>
