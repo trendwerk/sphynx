@@ -50,7 +50,8 @@ class TPRecommendedPlugins {
 			'wordpress-seo' => array(
 				'name' => 'WordPress SEO by Yoast',
 				'description' => __('Improve your SEO: Write better content and have a fully optimized WordPress site.','tp'),
-				'path' => 'wordpress-seo/wp-seo.php'
+				'path' => 'wordpress-seo/wp-seo.php',
+				'settings' => true
 			),
 			'google-analytics-for-wordpress' => array(
 				'name' => 'Google Analytics for WordPress',
@@ -251,6 +252,13 @@ class TPRecommendedPlugins {
 				update_option('tadv_btns3',$tadv_btns3);
 				update_option('tadv_btns4',$tadv_btns4);
 				update_option('tadv_allbtns',$tadv_allbtns);
+			}
+			
+			//Yoast SEO settings
+			if($_GET['settings'] == 'wordpress-seo') {
+				$options = get_option('wpseo_xml');
+				$options['enablexmlsitemap'] = 'on';
+				update_option('wpseo_xml',$options);
 			}
 		}
 	}
