@@ -504,12 +504,13 @@ class widget_title_image_content_button extends WP_Widget {
 				showbuttons_create_clicks($);
 			
 				//Upload an image				
-				$('.upload-image').click(function() {
+				$('.upload-image').live('click',function() {
 					currently_uploading = $(this);
 				});
 				
 				window.send_to_editor = function(html) {
-					imgurl = jQuery('img',html).attr('src');
+					imgurl = jQuery.parseHTML(html);
+					imgurl = $(imgurl).prop('src');
 					
 					$(currently_uploading).closest('div.upload-image-container').find('div.image').html(jQuery('img',html));
 					$(currently_uploading).closest('div.upload-image-container').find('input.image_url').val(imgurl);

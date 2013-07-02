@@ -1,7 +1,9 @@
-<?php 
-	if ( !$author ) { $author = get_the_author_ID(); }
+<?php
+	global $author;
+	if(!$author) $author = get_the_author_ID();
 	$authorurl = get_author_posts_url($author);
-	if (get_the_author_meta('hide_profile',$author) != 1 ) :
+	
+	if(get_the_author_meta('hide_profile',$author) == false) :
 ?>
 	<section class="author" itemscope itemtype="http://schema.org/Person">
 		<div class="author-avatar" itemprop="image">

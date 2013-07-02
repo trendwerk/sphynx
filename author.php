@@ -14,8 +14,9 @@
 					<?php _e('Posted on','tp')?> <time datetime="<?php the_time('Y-m-d') ?>"><?php echo get_the_date(); ?></time> <?php _e('by','tp') ?> <?php the_author_posts_link() ?> <?php _e('in the category','tp') ?> <?php the_category(', ') ?>
 				</p>
 				<?php get_the_post_thumbnail(); ?>
-				<?php tp_the_excerpt(40); ?>
 				<p>
+					<?php tp_the_excerpt(40); ?>
+					
 					<a class="more" href="<?php echo the_permalink(); ?>">
 						<?php _e('Read more','tp'); ?>
 					</a>
