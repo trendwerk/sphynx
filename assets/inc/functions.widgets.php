@@ -358,7 +358,6 @@ class widget_title_content_button extends WP_Widget {
 	
 	function form($instance) {
 		$title = esc_attr($instance['title']);	
-		$image = $instance['image'];
 		$content = esc_attr($instance['content']);
 		$show_button = $instance['show_button'];
 		if(!$show_button) $show_button = 0;
@@ -422,7 +421,6 @@ class widget_title_content_button extends WP_Widget {
 		$instance = $old_instance;
 		
 		$instance['title'] = strip_tags($new_instance['title']);
-		$instance['image'] = $new_instance['image'];
 		$instance['content'] = $new_instance['content'];
 		$instance['show_button'] = ($new_instance['show_button'] == 'true') ? true : false;
 		$instance['button_text'] = $new_instance['button_text'];
@@ -446,11 +444,6 @@ class widget_title_content_button extends WP_Widget {
 	?>
 		<?php echo $before_widget; ?>
 			<?php if ($title) { echo $before_title . $title . $after_title; } ?>
-		    <?php if($image) : ?>
-		    	<div class="featured-widget-image">
-		    		<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" />
-		    	</div>
-		    <?php endif; ?>
 			<?php if($content) : ?>
 				<p>
 					<?php echo $content; ?>
@@ -462,7 +455,7 @@ class widget_title_content_button extends WP_Widget {
 		    			<?php if($external) : echo 'rel="external"'; endif; ?>>
 		    			<?php echo $button_text; ?>
 		    		</a>
-		    	</a>
+		    	</p>
 	    	<?php } ?>
 		<?php echo $after_widget; ?>
 	<?php
@@ -679,7 +672,7 @@ class widget_title_image_content_button extends WP_Widget {
 		    			<?php if($external) : echo 'rel="external"'; endif; ?>>
 		    			<?php echo $button_text; ?>
 		    		</a>
-		    	</a>
+		    	</p>
 	    	<?php endif; ?>
     	<?php echo $after_widget; ?>
     <?php
