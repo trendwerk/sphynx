@@ -48,10 +48,7 @@ jQuery(document).ready(function($){
 	  
 	});
 	
-	$('.fancybox').fancybox({
-
-		
-	});
+	$('.fancybox').fancybox();
 
 	/**
 	 * @equal Heights and widths
