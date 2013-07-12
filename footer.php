@@ -1,15 +1,18 @@
-</section>
 		<footer id="footer" class="container">
 			<div class="container-inner">
+			
 				<aside class="sidebar">
 					<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('footerid'); ?>
 				</aside>
+				
 				<div id="credits" class="twelvecol">
+				
 					<div id="copyright">
 						<p>
 							&copy; <?php _e('Copyright','tp'); ?> <?php echo date('Y'); ?> - <?php echo ($name = get_option('tp-company-name')) ? $name : get_bloginfo('name'); ?>
 						</p>
 					</div>
+					
 					<nav id="footernav" class="navigation">
 						<?php wp_nav_menu( array(
 							'container' => '',
@@ -19,10 +22,14 @@
 							'depth' => '1'
 						));?>
 					</nav>
+					
 				</div>
+				
 			</div>
 		</footer>
+		
 		<?php wp_footer(); ?>
+		
 		<!--[if IE 6]>
 			<div class="ie6">
 				<p><?php _e('You are using a very old version of Internet Explorer. For the best experience please upgrade (for free) to a modern browser:','tp'); ?>
@@ -34,5 +41,6 @@
 				</ul>
 			</div>
 		<![endif]-->
+		
 	</body>
 </html>

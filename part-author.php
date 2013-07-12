@@ -5,7 +5,9 @@
 	
 	if(get_the_author_meta('hide_profile',$author) == false) :
 ?>
+	
 	<section class="author" itemscope itemtype="http://schema.org/Person">
+	
 		<div class="author-avatar" itemprop="image">
 			<?php if (is_author()) { ?>
 					<?php echo get_avatar($author,80); ?>
@@ -15,6 +17,7 @@
 				</a>
 			<?php } ?>
 		</div>
+		
 		<div class="author-info">
 			<?php if (is_single()) { echo '<span class="author-writtenby">'.__('Written by','tp').':</span>'; } ?>
 			<h4 class="author-name" itemprop="name">
@@ -58,5 +61,7 @@
 			<?php endif; ?>
 			<div class="clear"></div>
 		</div>
+		
 	</section>
+
 <?php endif; ?>
