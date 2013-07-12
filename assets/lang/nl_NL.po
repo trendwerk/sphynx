@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-02 14:27+0100\n"
-"PO-Revision-Date: 2013-07-02 14:27+0100\n"
-"Last-Translator: Harold Angenent <harold@trendwerk.nl>\n"
+"POT-Creation-Date: 2013-07-12 14:25+0100\n"
+"PO-Revision-Date: 2013-07-12 14:26+0100\n"
+"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -16,19 +16,19 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../../404.php:4
+#: ../../404.php:7
 msgid "The page you are looking for doesn't exist."
 msgstr "De pagina die je zoek bestaat niet."
 
-#: ../../404.php:5
+#: ../../404.php:8
 msgid ""
 "Seems like the page you were looking for might have been moved or just "
-"didn't excist in the first place."
+"didn't exist in the first place."
 msgstr ""
 "Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of "
-"helemaal niet heeft bestaan."
+"nooit heeft bestaan."
 
-#: ../../404.php:6
+#: ../../404.php:9
 #, php-format
 msgid ""
 "You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
@@ -37,44 +37,44 @@ msgstr ""
 "Bekijk onze <a href=\"%1$s\">sitemap</a> of gebruik het onderstaande "
 "zoekformulier om te vinden wat je zoekt."
 
-#: ../../author.php:4 ../../index.php:11
+#: ../../author.php:8 ../../index.php:15
 msgid "Posts by"
 msgstr "Berichten van"
 
-#: ../../author.php:14 ../../index.php:24 ../../single.php:9
+#: ../../author.php:20 ../../index.php:29 ../../single.php:12
 msgid "Posted on"
 msgstr "Gepost op"
 
-#: ../../author.php:14 ../../index.php:24 ../../single.php:9
+#: ../../author.php:20 ../../index.php:29 ../../single.php:12
 msgid "by"
 msgstr "door"
 
-#: ../../author.php:14 ../../index.php:24 ../../single.php:9
+#: ../../author.php:20 ../../index.php:29 ../../single.php:12
 msgid "in the category"
 msgstr "in de categorie"
 
-#: ../../author.php:20 ../../index.php:30 ../../search.php:24
+#: ../../author.php:27 ../../index.php:35 ../../search.php:28
 msgid "Read more"
-msgstr "Lees meer"
+msgstr "Lees verder"
 
-#: ../../author.php:27 ../../index.php:37
-msgid "No results found."
-msgstr "Geen resultaten gevonden."
+#: ../../author.php:34
+msgid "No results found"
+msgstr "Geen resultaten gevonden"
 
-#: ../../comments.php:8
+#: ../../comments.php:10
 #, php-format
 msgid "One response to &ldquo;%2$s&rdquo;"
-msgstr ""
+msgstr "Één reactie op &ldquo;%2$s&rdquo;"
 
-#: ../../comments.php:32
-msgid "Comments are closed."
-msgstr ""
+#: ../../comments.php:37
+msgid "Comments are closed"
+msgstr "Reacties zijn gesloten"
 
-#: ../../footer.php:10
+#: ../../footer.php:12
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../footer.php:28
+#: ../../footer.php:35
 msgid ""
 "You are using a very old version of Internet Explorer. For the best "
 "experience please upgrade (for free) to a modern browser:"
@@ -82,69 +82,73 @@ msgstr ""
 "Je gebruikt een verouderde versie van Internet Explorer. Voor een betere "
 "gebruikerservaring kun je (gratis) upgraden naar een betere browser:"
 
-#: ../../header.php:56
+#: ../../header.php:63
 msgid "You are here:"
 msgstr "U bent hier:"
 
-#: ../../index.php:5
+#: ../../index.php:9
 #, php-format
 msgid "Category %s"
 msgstr "Categorie %s"
 
-#: ../../index.php:7 ../../index.php:9
+#: ../../index.php:11 ../../index.php:13
 #, php-format
 msgid "Tag %s"
 msgstr "Tag %s"
 
-#: ../../index.php:14
+#: ../../index.php:18
 msgid "News"
 msgstr "Nieuws"
+
+#: ../../index.php:42
+msgid "No results found."
+msgstr "Geen resultaten gevonden."
 
 #: ../../page-authors.php:4
 msgid "Authors overview"
 msgstr "Auteurs overzicht"
 
-#: ../../page-sitemap.php:11
+#: ../../page-sitemap.php:18
 msgid "Pages"
 msgstr "Pagina's:"
 
-#: ../../page-sitemap.php:35 ../../assets/inc/functions.sidebars.php:15
+#: ../../page-sitemap.php:44 ../../assets/inc/functions.sidebars.php:15
 #: ../inc/functions.sidebars.php:15
 msgid "Blog"
 msgstr "Blog"
 
-#: ../../part-author.php:18
+#: ../../part-author.php:22
 msgid "Written by"
 msgstr "Geschreven door"
 
-#: ../../part-author.php:36
+#: ../../part-author.php:40
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../../part-author.php:43
+#: ../../part-author.php:47
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: ../../part-author.php:50
+#: ../../part-author.php:54
 msgid "Google+"
 msgstr "Google+"
 
-#: ../../part-author.php:56
+#: ../../part-author.php:60
 #, php-format
 msgid "View all %1$s posts"
 msgstr "Bekijk alle %1$s berichten"
 
-#: ../../search.php:5 ../../search.php:33
+#: ../../search.php:8 ../../search.php:37
 #, php-format
 msgid "Search Results for: %1$s"
 msgstr "Zoek resultaten voor:  %1$s"
 
-#: ../../search.php:11
+#: ../../search.php:14
 #, php-format
 msgid "Found %2$s articles containing the keyword: %1$s"
 msgstr "%2$s artikelen gevonden met de zoekterm: %1$s"
 
-#: ../../search.php:34
+#: ../../search.php:38
 #, php-format
 msgid ""
 "Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
@@ -159,7 +163,7 @@ msgstr ""
 msgid "Search"
 msgstr "Zoeken"
 
-#: ../../single.php:27
+#: ../../single.php:30
 msgid "Back to the overview"
 msgstr "Terug naar het overzicht"
 
@@ -176,16 +180,16 @@ msgid "Footer navigation"
 msgstr "Footer navigatie"
 
 #: ../../assets/inc/functions.misc.php:8
-#: ../../assets/inc/functions.widgets.php:407
-#: ../../assets/inc/functions.widgets.php:625 ../inc/functions.misc.php:8
-#: ../inc/functions.widgets.php:407 ../inc/functions.widgets.php:625
+#: ../../assets/inc/functions.widgets.php:406
+#: ../../assets/inc/functions.widgets.php:618 ../inc/functions.misc.php:8
+#: ../inc/functions.widgets.php:406 ../inc/functions.widgets.php:618
 msgid "Primary button"
 msgstr "Primaire knop"
 
 #: ../../assets/inc/functions.misc.php:13
-#: ../../assets/inc/functions.widgets.php:408
-#: ../../assets/inc/functions.widgets.php:626 ../inc/functions.misc.php:13
-#: ../inc/functions.widgets.php:408 ../inc/functions.widgets.php:626
+#: ../../assets/inc/functions.widgets.php:407
+#: ../../assets/inc/functions.widgets.php:619 ../inc/functions.misc.php:13
+#: ../inc/functions.widgets.php:407 ../inc/functions.widgets.php:619
 msgid "Secondary button"
 msgstr "Secondaire knop"
 
@@ -236,12 +240,10 @@ msgstr "Geeft gespecificeerde contactgegevens weer"
 #: ../../assets/inc/functions.widgets.php:82
 #: ../../assets/inc/functions.widgets.php:171
 #: ../../assets/inc/functions.widgets.php:271
-#: ../../assets/inc/functions.widgets.php:374
-#: ../../assets/inc/functions.widgets.php:577
-#: ../../assets/plugins/Filter/Filter.php:296 ../inc/functions.widgets.php:82
+#: ../../assets/inc/functions.widgets.php:373
+#: ../../assets/inc/functions.widgets.php:570 ../inc/functions.widgets.php:82
 #: ../inc/functions.widgets.php:171 ../inc/functions.widgets.php:271
-#: ../inc/functions.widgets.php:374 ../inc/functions.widgets.php:577
-#: ../plugins/Filter/Filter.php:296
+#: ../inc/functions.widgets.php:373 ../inc/functions.widgets.php:570
 msgid "Title"
 msgstr "Titel"
 
@@ -362,152 +364,75 @@ msgstr "Tekst met knop"
 msgid "Editable title, tekst and button"
 msgstr "Bewerkbare titel, tekst en knop"
 
-#: ../../assets/inc/functions.widgets.php:380
-#: ../../assets/inc/functions.widgets.php:598 ../inc/functions.widgets.php:380
-#: ../inc/functions.widgets.php:598
+#: ../../assets/inc/functions.widgets.php:379
+#: ../../assets/inc/functions.widgets.php:591 ../inc/functions.widgets.php:379
+#: ../inc/functions.widgets.php:591
 msgid "Content"
 msgstr "Inhoud"
 
-#: ../../assets/inc/functions.widgets.php:386
-#: ../../assets/inc/functions.widgets.php:604 ../inc/functions.widgets.php:386
-#: ../inc/functions.widgets.php:604
+#: ../../assets/inc/functions.widgets.php:385
+#: ../../assets/inc/functions.widgets.php:597 ../inc/functions.widgets.php:385
+#: ../inc/functions.widgets.php:597
 msgid "Show button / read more link"
 msgstr "Knop / lees meer link weergeven"
 
-#: ../../assets/inc/functions.widgets.php:392
-#: ../../assets/inc/functions.widgets.php:610 ../inc/functions.widgets.php:392
-#: ../inc/functions.widgets.php:610
+#: ../../assets/inc/functions.widgets.php:391
+#: ../../assets/inc/functions.widgets.php:603 ../inc/functions.widgets.php:391
+#: ../inc/functions.widgets.php:603
 msgid "Button text"
 msgstr "Knop tekst"
 
-#: ../../assets/inc/functions.widgets.php:398
-#: ../../assets/inc/functions.widgets.php:616 ../inc/functions.widgets.php:398
-#: ../inc/functions.widgets.php:616
+#: ../../assets/inc/functions.widgets.php:397
+#: ../../assets/inc/functions.widgets.php:609 ../inc/functions.widgets.php:397
+#: ../inc/functions.widgets.php:609
 msgid "Button link"
 msgstr "Knop link"
 
-#: ../../assets/inc/functions.widgets.php:404
-#: ../../assets/inc/functions.widgets.php:622 ../inc/functions.widgets.php:404
-#: ../inc/functions.widgets.php:622
+#: ../../assets/inc/functions.widgets.php:403
+#: ../../assets/inc/functions.widgets.php:615 ../inc/functions.widgets.php:403
+#: ../inc/functions.widgets.php:615
 msgid "Link type"
 msgstr "Link type"
 
-#: ../../assets/inc/functions.widgets.php:406
-#: ../../assets/inc/functions.widgets.php:624 ../inc/functions.widgets.php:406
-#: ../inc/functions.widgets.php:624
+#: ../../assets/inc/functions.widgets.php:405
+#: ../../assets/inc/functions.widgets.php:617 ../inc/functions.widgets.php:405
+#: ../inc/functions.widgets.php:617
 msgid "Read more link"
 msgstr "Lees meer link"
 
-#: ../../assets/inc/functions.widgets.php:414
-#: ../../assets/inc/functions.widgets.php:632 ../inc/functions.widgets.php:414
-#: ../inc/functions.widgets.php:632
+#: ../../assets/inc/functions.widgets.php:413
+#: ../../assets/inc/functions.widgets.php:625 ../inc/functions.widgets.php:413
+#: ../inc/functions.widgets.php:625
 msgid "This link is external"
 msgstr "Dit is een externe link"
 
-#: ../../assets/inc/functions.widgets.php:478 ../inc/functions.widgets.php:478
+#: ../../assets/inc/functions.widgets.php:471 ../inc/functions.widgets.php:471
 msgid "Text with image and button"
 msgstr "Tekst met afbeelding en knop"
 
-#: ../../assets/inc/functions.widgets.php:478 ../inc/functions.widgets.php:478
+#: ../../assets/inc/functions.widgets.php:471 ../inc/functions.widgets.php:471
 msgid "Editable title, image, text and button"
 msgstr "Bewerkbare titel, afbeelding en knop"
 
-#: ../../assets/inc/functions.widgets.php:583 ../inc/functions.widgets.php:583
+#: ../../assets/inc/functions.widgets.php:576 ../inc/functions.widgets.php:576
 msgid "Image"
 msgstr "Afbeelding"
 
-#: ../../assets/inc/functions.widgets.php:587 ../inc/functions.widgets.php:587
+#: ../../assets/inc/functions.widgets.php:580 ../inc/functions.widgets.php:580
 msgid "Change image"
 msgstr "Aanpassen"
 
-#: ../../assets/inc/functions.widgets.php:587 ../inc/functions.widgets.php:587
+#: ../../assets/inc/functions.widgets.php:580 ../inc/functions.widgets.php:580
 msgid "Upload image"
 msgstr "Afbeelding uploaden"
 
-#: ../../assets/inc/functions.widgets.php:590 ../inc/functions.widgets.php:590
+#: ../../assets/inc/functions.widgets.php:583 ../inc/functions.widgets.php:583
 msgid "Remove image"
 msgstr "Verwijderen"
 
-#: ../../assets/plugins/Filter/Filter.php:84 ../plugins/Filter/Filter.php:84
-msgid "Filters"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:85
-#: ../../assets/plugins/Filter/Filter.php:290
-#: ../../assets/plugins/Filter/Filter.php:304 ../plugins/Filter/Filter.php:85
-#: ../plugins/Filter/Filter.php:290 ../plugins/Filter/Filter.php:304
-msgid "Filter"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:86 ../plugins/Filter/Filter.php:86
-msgid "Add filter"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:87 ../plugins/Filter/Filter.php:87
-msgid "Add new filter"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:113
-#: ../../assets/plugins/Filter/Filter.php:182
-#: ../../assets/plugins/Filter/Filter.php:206 ../plugins/Filter/Filter.php:113
-#: ../plugins/Filter/Filter.php:182 ../plugins/Filter/Filter.php:206
 #, fuzzy
-msgid "Post types"
-msgstr "Type iconen"
-
-#: ../../assets/plugins/Filter/Filter.php:114
-#: ../../assets/plugins/PTOrder/PTOrder.php:48
-#: ../../assets/plugins/PTOrder/PTOrder.php:61
-#: ../plugins/Filter/Filter.php:114 ../plugins/PTOrder/PTOrder.php:48
-#: ../plugins/PTOrder/PTOrder.php:61
-msgid "Order"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:128
-#: ../../assets/plugins/Filter/Filter.php:179 ../plugins/Filter/Filter.php:128
-#: ../plugins/Filter/Filter.php:179
-msgid "Not filterable"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:143
-#: ../../assets/plugins/Filter/Filter.php:198 ../plugins/Filter/Filter.php:143
-#: ../plugins/Filter/Filter.php:198
-msgid "Filterable"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:156 ../plugins/Filter/Filter.php:156
-msgid "Drag and drop post types here to make them filterable."
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:218 ../plugins/Filter/Filter.php:218
-msgid "Drag and drop items here to make them filterable."
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:226 ../plugins/Filter/Filter.php:226
-msgid ""
-"Please select one or more post types that have taxonomies assigned to them."
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:285 ../plugins/Filter/Filter.php:285
-msgid "Filter widget"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:285 ../plugins/Filter/Filter.php:285
-msgid "A widget that filters on some taxonomies through AJAX"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:309 ../plugins/Filter/Filter.php:309
-msgid "Select a filter.."
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:316 ../plugins/Filter/Filter.php:316
-#, php-format
-msgid "You don't have any filters yet! <a href=\"%1$s\">Create one now</a>"
-msgstr ""
-
-#: ../../assets/plugins/Filter/Filter.php:426 ../plugins/Filter/Filter.php:426
-msgid "Filter by type"
-msgstr ""
+#~ msgid "Post types"
+#~ msgstr "Type iconen"
 
 #~ msgid "Hide my profile on the website"
 #~ msgstr "Verberg mijn profiel op de website"
