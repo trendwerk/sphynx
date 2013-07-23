@@ -115,7 +115,7 @@ class tp_contact extends WP_Widget {
 							} if ($city = get_option('tp-city')) {
 							 echo ' <span itemprop="addressLocality">'.$city.'</span><br />'; 
 							} if ($country = get_option('tp-country')) {
-							 echo '<span itemprop="addressCountry">'.$country.'</span><br /><br />'; 
+							 echo '<span itemprop="addressCountry">'.$country.'</span>'; 
 							}
 						?>
 					</span>
@@ -136,7 +136,7 @@ class tp_contact extends WP_Widget {
 						if ($cc = get_option('tp-cc')) {
 							echo '<span class="label">'.__('CC No','tp').': </span>'.$cc.'<br />';
 						} if ($vat = get_option('tp-vat')) {
-							echo '<span itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
+							echo '<span class="label" itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
 						} if ($bankno = get_option('tp-bank-no')) {
 							if ($bank = !get_option('tp-bank')) {
 								$bank = "Bank";
