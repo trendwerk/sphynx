@@ -211,7 +211,7 @@ class tp_social extends WP_Widget {
 				<?php } ?>
 				<?php if($facebook = get_option('tp-facebook')) { ?>
 					<li class="facebook">
-						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>">
+						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like our Facebook page','tp') ?>">
 							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><span><?php _e('Like us on Facebook','tp') ?></span>
 						</a>
 					</li>
@@ -242,7 +242,7 @@ class tp_social extends WP_Widget {
 				<?php } ?>
 				<?php if(get_option('tp-rss') == 'true') { ?>
 					<li class="rss">
-						<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>">
+						<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe via RSS','tp') ?>">
 							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/rss.svg" /><span><?php _e('Subscribe to our RSS','tp') ?></span>
 						</a>
 					</li>
