@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-23 17:47+0100\n"
-"PO-Revision-Date: 2013-07-23 17:48+0100\n"
+"PO-Revision-Date: 2013-07-24 22:06+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -108,7 +108,7 @@ msgstr "Auteurs overzicht"
 
 #: ../../page-sitemap.php:18
 msgid "Pages"
-msgstr "Pagina's:"
+msgstr "Pagina's"
 
 #: ../../page-sitemap.php:44 ../../assets/inc/functions.sidebars.php:15
 #: ../inc/functions.sidebars.php:15
