@@ -3,7 +3,7 @@
 	if(!$author) $author = get_the_author_ID();
 	$authorurl = get_author_posts_url($author);
 	
-	if(get_the_author_meta('hide_profile',$author) == false) :
+	if(get_the_author_meta('show_profile',$author) == true) :
 ?>
 	
 	<section class="author" itemscope itemtype="http://schema.org/Person">

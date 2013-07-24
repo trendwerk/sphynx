@@ -774,6 +774,8 @@ body {
 .blog, .archive {
 
 	article {
+		margin: 0 0 20px 0;
+		float: left;
 	
 		.article-title { margin-bottom: 5px; }
 		
@@ -895,11 +897,8 @@ body {
 						.comment-edit-link { display: none; }
 						
 					}
-					
 				}
-				
-			 }
-			 
+			}
 		}
 		
 		#respond { 
@@ -967,7 +966,7 @@ body {
 		.next { float: right; }
 		
 	}
-	
+
 }
 
 /**
@@ -1075,15 +1074,15 @@ article .search-highlight { background: #FFFFB3; }
 							float: left;
 							width: 50%;
 						}
-						
-					}	
-									
-				}
+					
+					}
 				
-			}
+				}
 			
-		}
+			}
 		
+		}
+	
 	}
 	
 	.gform_footer {
@@ -1092,7 +1091,7 @@ article .search-highlight { background: #FFFFB3; }
 		.gform_button { margin: 2em 0 0 35%; }
 		
 	}
-	
+
 }
 
 /**
@@ -1110,7 +1109,7 @@ article .search-highlight { background: #FFFFB3; }
 		select { display: none; }
 	
 	}
-	
+
 }
 
 /**
@@ -1121,17 +1120,15 @@ article .search-highlight { background: #FFFFB3; }
 	
 	#header {
 		
-		#topnav, .search { display: none; }
+		#topnav, 
+		#search { display: none; }
 		
 		#mainnav {
 			margin-left: 0; 
 			
 			select { display: none; }
-		
+
 		}
-		
-		#breadcrumbs { margin: 20px 0; }
-	
 	}
 	
 	.container {
@@ -1141,14 +1138,13 @@ article .search-highlight { background: #FFFFB3; }
 			width: 90%;
 			
 			.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
-				margin: 0;
+				margin: 10px 0;
 			} 
 			
 			.sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
 				clear: both;
 				width: 100%;
 			}
-		
 		}
 		
 		&#footer .sidebar, &#main .sidebar {
@@ -1193,7 +1189,6 @@ article .search-highlight { background: #FFFFB3; }
 			ul { display: none; }
 		
 		}
-	
 	}
 	
 	#main {
@@ -1239,7 +1234,6 @@ article .search-highlight { background: #FFFFB3; }
 				clear: both;
 				width: 100%;
 			}
-		
 		}
 		
 		&#footer .sidebar, &#main .sidebar {
@@ -1250,7 +1244,6 @@ article .search-highlight { background: #FFFFB3; }
 				padding: 3%;
 				width: 94%;
 			}
-		
 		}
 		
 		&#footer {
@@ -1261,7 +1254,6 @@ article .search-highlight { background: #FFFFB3; }
 					padding: 0;
 					width: 100%
 				}
-			
 			}
 			
 			#credits {
@@ -1277,6 +1269,7 @@ article .search-highlight { background: #FFFFB3; }
 							display: inline;
 							
 							a { float: none; }
+						
 						}
 					
 					}
@@ -1284,8 +1277,9 @@ article .search-highlight { background: #FFFFB3; }
 				}
 			
 			}
-		
+			
 		}
 	
 	}
+
 }
