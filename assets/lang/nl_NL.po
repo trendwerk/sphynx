@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-20 15:29+0100\n"
-"PO-Revision-Date: 2013-06-20 15:30+0100\n"
+"POT-Creation-Date: 2013-07-24 20:32+0100\n"
+"PO-Revision-Date: 2013-07-24 20:33+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -159,9 +159,9 @@ msgstr "Nieuwsbrief / mailto link"
 msgid "Show RSS feed in the social media widget"
 msgstr "Toon RSS icoon in de sociale media widget"
 
-#: ../../assets/inc/class.TPInformation.php:143
-#: ../../assets/inc/class.TPInformation.php:153
-#: ../inc/class.TPInformation.php:143 ../inc/class.TPInformation.php:153
+#: ../../assets/inc/class.TPInformation.php:145
+#: ../../assets/inc/class.TPInformation.php:155
+#: ../inc/class.TPInformation.php:145 ../inc/class.TPInformation.php:155
 msgid "Contact information"
 msgstr "Contactgegevens"
 
@@ -182,6 +182,35 @@ msgstr "Plugins in de %1$s folder worden automatisch uitgevoerd."
 msgid "TrendPress"
 msgstr "TrendPress"
 
+#: ../../assets/inc/class.TPProfile.php:23 ../inc/class.TPProfile.php:23
+msgid "Publish profile"
+msgstr "Profiel publiseren"
+
+#: ../../assets/inc/class.TPProfile.php:28 ../inc/class.TPProfile.php:28
+msgid "Show profile on website"
+msgstr "Profiel weergeven op de website"
+
+#: ../../assets/inc/class.TPProfile.php:32 ../inc/class.TPProfile.php:32
+msgid "Show my profile on the website at blogposts and author archives"
+msgstr ""
+"Geef mijn profiel weer op de website bij blogberichten en auteur archieven"
+
+#: ../../assets/inc/class.TPProfile.php:37 ../inc/class.TPProfile.php:37
+msgid "Profile picture"
+msgstr "Profielfoto"
+
+#: ../../assets/inc/class.TPProfile.php:42 ../inc/class.TPProfile.php:42
+msgid "You can change your profile picture via"
+msgstr "Je kunt je profielfoto aanpassen via"
+
+#: ../../assets/inc/class.TPProfile.php:42 ../inc/class.TPProfile.php:42
+msgid ""
+"by logging in or signing up for free with the email address associated with "
+"your profile"
+msgstr ""
+"door in te loggen of door je gratis aan te melden met het e-mailadres dat is "
+"gekoppeld aan je profiel"
+
 #: ../../assets/inc/class.TPRecommendedPlugins.php:52
 #: ../inc/class.TPRecommendedPlugins.php:52
 msgid ""
@@ -191,15 +220,15 @@ msgstr ""
 "Verbeter je SEO: Schrijf betere teksten en optimaliseer je WordPress voor "
 "zoekmachines."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:57
-#: ../inc/class.TPRecommendedPlugins.php:57
+#: ../../assets/inc/class.TPRecommendedPlugins.php:58
+#: ../inc/class.TPRecommendedPlugins.php:58
 msgid "Add Google Analytics to the website to track user statistics."
 msgstr ""
 "Google Analytics aan de website toevoegen om gebruikers statistieken bij te "
 "houden."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:62
-#: ../inc/class.TPRecommendedPlugins.php:62
+#: ../../assets/inc/class.TPRecommendedPlugins.php:63
+#: ../inc/class.TPRecommendedPlugins.php:63
 msgid ""
 "Improve site performance and user experience via caching: browser, page, "
 "object, database, minify and content delivery network support."
@@ -208,8 +237,8 @@ msgstr ""
 "(browser caching, page caching, object caching, database caching, "
 "bestandsverkleining en content delivery network ondersteuning)."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:67
-#: ../inc/class.TPRecommendedPlugins.php:67
+#: ../../assets/inc/class.TPRecommendedPlugins.php:68
+#: ../inc/class.TPRecommendedPlugins.php:68
 msgid ""
 "Reduce image file sizes and improve performance using the Smush.it API "
 "within WordPress."
@@ -217,26 +246,26 @@ msgstr ""
 "Verklein bestandsgroottes van afbeeldingen en verbetert prestaties middels "
 "de Smush.it API van WordPress."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:72
-#: ../inc/class.TPRecommendedPlugins.php:72
+#: ../../assets/inc/class.TPRecommendedPlugins.php:73
+#: ../inc/class.TPRecommendedPlugins.php:73
 msgid "Increases WordPress' default search functionality."
 msgstr "Verbeterd de WordPress basis zoek functionaliteit."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:78
-#: ../inc/class.TPRecommendedPlugins.php:78
+#: ../../assets/inc/class.TPRecommendedPlugins.php:79
+#: ../inc/class.TPRecommendedPlugins.php:79
 msgid "Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor."
 msgstr ""
 "Voegt geavanceerde functionaliteiten toe aan TinyMCE, de WYSIWYG van "
 "WordPress."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:87
-#: ../inc/class.TPRecommendedPlugins.php:87
+#: ../../assets/inc/class.TPRecommendedPlugins.php:88
+#: ../inc/class.TPRecommendedPlugins.php:88
 msgid "Display more than one content field on WordPress pages and posts."
 msgstr ""
 "Geef meer dan één inhoud blok weer bij WordPress pagina's en berichten."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:92
-#: ../inc/class.TPRecommendedPlugins.php:92
+#: ../../assets/inc/class.TPRecommendedPlugins.php:93
+#: ../inc/class.TPRecommendedPlugins.php:93
 msgid ""
 "Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter "
 "and Facebook as comments."
@@ -244,18 +273,18 @@ msgstr ""
 "Stuur berichten naar Twitter en/of Facebook, en geeft reacties via Twitter "
 "en Facebook weer als reacties."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:97
-#: ../inc/class.TPRecommendedPlugins.php:97
-msgid "A simple way to create and manage roles and capabilities."
-msgstr "Een eenvoudige manier om rollen en rechten te beheren."
-
-#: ../../assets/inc/class.TPRecommendedPlugins.php:102
-#: ../inc/class.TPRecommendedPlugins.php:102
+#: ../../assets/inc/class.TPRecommendedPlugins.php:98
+#: ../inc/class.TPRecommendedPlugins.php:98
 msgid "Manage 301 redirections and keep track of 404 errors."
 msgstr "Beheer 301 doorverwijzingen en houd 404 errors bij."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:107
-#: ../inc/class.TPRecommendedPlugins.php:107
+#: ../../assets/inc/class.TPRecommendedPlugins.php:103
+#: ../inc/class.TPRecommendedPlugins.php:103
+msgid "A simple way to create and manage roles and capabilities."
+msgstr "Een eenvoudige manier om rollen en rechten te beheren."
+
+#: ../../assets/inc/class.TPRecommendedPlugins.php:108
+#: ../inc/class.TPRecommendedPlugins.php:108
 msgid ""
 "Edit theme and plugin translations, directly out of WordPress without any "
 "need of an external editor."
@@ -263,8 +292,8 @@ msgstr ""
 "Bewerk thema en plugin vertalingen, direct vanuit WordPress zonder een "
 "extern programma nodig te hebben."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:112
-#: ../inc/class.TPRecommendedPlugins.php:112
+#: ../../assets/inc/class.TPRecommendedPlugins.php:113
+#: ../inc/class.TPRecommendedPlugins.php:113
 msgid ""
 "Exports your database, does a find and replace on URLs and file paths, then "
 "allows you to save it to your computer."
@@ -272,16 +301,16 @@ msgstr ""
 "Exporteer je database, vervangt de URLs en bestandspaden en sla hem op op je "
 "computer."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:117
-#: ../inc/class.TPRecommendedPlugins.php:117
+#: ../../assets/inc/class.TPRecommendedPlugins.php:118
+#: ../inc/class.TPRecommendedPlugins.php:118
 msgid ""
 "Rebuild all image thumbnails at once without script timeouts on your server."
 msgstr ""
 "Maak alle miniatuur afbeeldingen opnieuw aan zonder script timeouts op je "
 "server."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:122
-#: ../inc/class.TPRecommendedPlugins.php:122
+#: ../../assets/inc/class.TPRecommendedPlugins.php:123
+#: ../inc/class.TPRecommendedPlugins.php:123
 msgid ""
 "Interface to customize the permalinks (author, category, archives and "
 "pagination) and htaccess file generated by WordPress."
@@ -289,27 +318,27 @@ msgstr ""
 "Interface om de permalinks en het htaccess bestand aan te passen (auteur, "
 "category, archieven en paginatie) die door WordPress gegenereerd worden."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:136
+#: ../../assets/inc/class.TPRecommendedPlugins.php:137
 #: ../../assets/inc/admin-views/recommended-plugins.php:3
 #: ../../assets/inc/admin-views/recommended-plugins.php:7
-#: ../inc/class.TPRecommendedPlugins.php:136
+#: ../inc/class.TPRecommendedPlugins.php:137
 #: ../inc/admin-views/recommended-plugins.php:3
 #: ../inc/admin-views/recommended-plugins.php:7
 msgid "Recommended plugins"
 msgstr "Aanbevolen plugins "
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:136
-#: ../inc/class.TPRecommendedPlugins.php:136
+#: ../../assets/inc/class.TPRecommendedPlugins.php:137
+#: ../inc/class.TPRecommendedPlugins.php:137
 msgid "Recommended"
 msgstr "Aanbevolen"
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:153
-#: ../inc/class.TPRecommendedPlugins.php:153
+#: ../../assets/inc/class.TPRecommendedPlugins.php:154
+#: ../inc/class.TPRecommendedPlugins.php:154
 msgid "Recommended plugin <strong>activated</strong>."
 msgstr "Aanbevolen plugin <strong>geactiveerd</strong>."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:265
-#: ../inc/class.TPRecommendedPlugins.php:265
+#: ../../assets/inc/class.TPRecommendedPlugins.php:273
+#: ../inc/class.TPRecommendedPlugins.php:273
 #, php-format
 msgid ""
 "The plugin <strong>%1$s</strong> has been reset to the recommended "
@@ -318,8 +347,8 @@ msgstr ""
 "De settings van de plugin <strong>%1$s</strong> hebben nu de aanbevolen "
 "TrendPress instellingen."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:312
-#: ../inc/class.TPRecommendedPlugins.php:312
+#: ../../assets/inc/class.TPRecommendedPlugins.php:320
+#: ../inc/class.TPRecommendedPlugins.php:320
 #, php-format
 msgid "<a href=\"%1$s\">Return to recommended plugins</a>"
 msgstr "<a href=\"%1$s\">Ga terug naar aanbevolen plugins</a>"
@@ -378,6 +407,9 @@ msgstr ""
 #: ../inc/admin-views/recommended-plugins.php:12
 msgid "Optional plugins"
 msgstr "Optionele plugins"
+
+#~ msgid "Gravatar.com"
+#~ msgstr "Gravatar.com"
 
 #~ msgid "Shows the submenu according to the custom menu"
 #~ msgstr "Laat het submenu zien volgens het custom menu"
