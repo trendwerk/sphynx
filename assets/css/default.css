@@ -536,6 +536,8 @@ table {
 	LAYOUT
 	====== */
 
+body { position: relative; }
+
 /* collumns */
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
