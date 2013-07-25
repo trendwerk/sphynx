@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-23 17:47+0100\n"
-"PO-Revision-Date: 2013-07-24 22:06+0100\n"
+"PO-Revision-Date: 2013-07-25 17:57+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../404.php:7
 msgid "The page you are looking for doesn't exist."
-msgstr "De pagina die je zoek bestaat niet."
+msgstr "De pagina die je zoekt bestaat niet."
 
 #: ../../404.php:8
 msgid ""
