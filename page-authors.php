@@ -35,7 +35,7 @@
 			<?php endwhile; endif; ?>
 		</article>
 	
-	</div><!-- .conainer-inner -->
+	</div><!-- .container-inner -->
 </section><!-- #main -->
 
 <?php get_footer(); ?>

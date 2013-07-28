@@ -14,7 +14,7 @@
 			<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('home'); ?>
 		</aside>
 		
-	</div><!-- .conainer-inner -->
+	</div><!-- .container-inner -->
 </section><!-- #main -->
 
 <?php get_footer(); ?>
