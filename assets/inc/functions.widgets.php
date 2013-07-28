@@ -212,7 +212,7 @@ class tp_social extends WP_Widget {
 				<?php if($facebook = get_option('tp-facebook')) { ?>
 					<li class="facebook">
 						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like our Facebook page','tp') ?>">
-							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><span><?php _e('Like us on Facebook','tp') ?></span>
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><span><?php _e('Like our Facebook page','tp') ?></span>
 						</a>
 					</li>
 				<?php } if($linkedin = get_option('tp-linkedin')) { ?>
