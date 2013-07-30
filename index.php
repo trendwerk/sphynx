@@ -1,10 +1,7 @@
 <?php get_header(); ?>
-
 <section id="main" class="container">
-	<div class="container-inner">
-	
+	<div class="container-inner">	
 		<section id="content" class="eightcol">
-		
 			<?php if(is_category()) : ?>
 				<h1 id="page-title"><?php _e('Category','tp'); ?>: <?php echo single_cat_title('',false); ?></h1>
 			<?php elseif(is_tag() || is_tax()) : ?>
@@ -15,7 +12,6 @@
 			<?php else : ?>
 				<h1 id="page-title"><?php _e('News','tp'); ?></h1>
 			<?php endif; ?>
-			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article <?php post_class(); ?>>
 					<h2 class="article-title">
@@ -39,14 +35,10 @@
 			<?php else : ?>
 				<p><?php _e('No results found.','tp'); ?></p>
 			<?php endif; ?>
-			
-		</section><!-- #content -->
-			
+		</section><!-- #content -->			
 		<aside class="sidebar fourcol">
 			<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('blog'); ?>
 		</aside>
-				
 	</div><!-- .container-inner -->
 </section><!-- #main -->
-
 <?php get_footer(); ?>

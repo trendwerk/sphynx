@@ -8,7 +8,6 @@ function tp_register_post_types() {
 	 */
 	add_theme_support('post-thumbnails');
 	remove_post_type_support('page','thumbnail');
-	remove_post_type_support('post','thumbnail');
 	
 	/**
 	 * @register Post types and taxonomies
