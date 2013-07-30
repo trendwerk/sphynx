@@ -17,17 +17,13 @@
 		<link rel="stylesheet" type="text/css" media="print" href="<?php echo get_template_directory_uri() ?>/assets/css/print.css" />
 		<?php wp_head();?>
 	</head>
-	
-	<body <?php body_class(); ?>>
-	
+	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 		<header id="header" class="container">
 			<div class="container-inner">
-			
 				<div id="logo" class="sixcol">
 					<p id="sitename"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></p>
 					<p id="description"><?php bloginfo('description'); ?></p>
 				</div>
-				
 				<nav id="topnav" class="navigation sixcol">				
 					<?php
 						wp_nav_menu( array(
@@ -39,11 +35,9 @@
 						)); 
 					?>
 				</nav>
-				
 				<div id="search" class="sixcol">
 					<?php get_search_form(); ?>
 				</div>
-				
 				<nav id="mainnav" class="navigation twelvecol">				
 					<?php 
 						wp_nav_menu( array(
@@ -55,7 +49,6 @@
 						)); 
 					?>						
 				</nav>
-				
 				<?php if ( is_front_page() ) { ?>
 					<!-- Enter code here for custom homepage header -->
 				<?php } else { ?>
@@ -64,6 +57,5 @@
 						<?php if (function_exists('tp_breadcrumbs')) tp_breadcrumbs('»'); ?>
 					</nav>
 				<?php } ?>
-				
 			</div><!-- .container-inner -->
 		</header><!-- #header -->

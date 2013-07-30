@@ -473,7 +473,7 @@ body {
 		
 		#page-title { }
 		
-		.article-title {
+		.article-title, .search-title {
 			
 			a { 
 				color: @heading-color;
@@ -569,6 +569,14 @@ body {
 			
 			}
 			
+			p {
+				line-height: 20px;
+				margin-bottom: 20px;
+				
+				&:last-child { margin-bottom: 0; }
+				
+			}
+			
 			ul {
 				border-bottom: 1px solid @border-color;
 				margin: 0;
@@ -608,6 +616,23 @@ body {
 				span.label { 
 					width: 80px;
 					display: inline-block;
+				}
+				
+			}
+			
+			/**
+			 * @widget Search
+			 */
+			 
+			&.widget_search {
+				
+				input[type="text"] {
+					float: left;
+					font-size: 14px;
+					height: 36px;
+					margin-right: 10px;
+					padding-left: 10px;
+					width: 170px;
 				}
 				
 			}
@@ -705,14 +730,15 @@ body {
 				.tagcloud {
 				
 					a {
+						.border-radius(3px);
 						color: #FFF;
 						background: #CCC;
+						display: inline-block;
 						font-size: 12px !important;
 						line-height: 25px;
-						padding: 0 10px;
 						margin: 0 3px 5px 0;
-						display: inline-block;
-						border-radius: 3px;
+						padding: 0 10px;
+						text-decoration: none;
 						
 						&:hover { background: @link-color; }
 					}
@@ -812,13 +838,30 @@ body {
  * @template index.php
  */
 
-.blog, .archive {
+.archive, .blog, .search {
 
 	article {
-		margin: 0 0 20px 0;
+		border-bottom: 1px solid @border-color;
 		float: left;
-	
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+				
 		.article-title { margin-bottom: 5px; }
+		
+		.search-title { margin-bottom: 15px; }
+		
+		.article-thumbnail {
+			float: right;
+			margin: 0 0 0 20px;
+			
+			img { 
+				height: 125px;
+				width: 125px;
+			}
+			
+		}
+		
+		p { margin-bottom: 0; }
 		
 	}
 	
@@ -830,8 +873,8 @@ body {
 
 .single {
 
-	article {
-
+	#content {
+			
 		#page-title { margin-bottom: 5px; }
 		
 		.share {
