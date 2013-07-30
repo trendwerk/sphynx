@@ -48,7 +48,7 @@ class TPLess {
 	 */
 	function is_less($wp_style) {
 		$info = pathinfo($wp_style->src);
-		if($info['extension'] == 'less') return true;
+		if(isset($info['extension']) && $info['extension'] == 'less') return true;
 		
 		return false;
 	}
