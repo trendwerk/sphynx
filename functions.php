@@ -24,20 +24,20 @@ function tp_enqueue_scripts() {
 	wp_enqueue_script('trendpress');
 	wp_enqueue_script('comment-reply');
 	wp_enqueue_style('fancyboxcss');
-	
+		
 	//Register & enqueue child scripts and styles
 	wp_enqueue_script('functions',get_stylesheet_directory_uri().'/assets/js/functions.js',array('jquery'));
 	wp_enqueue_style('style',get_stylesheet_directory_uri().'/style.less');
 	
-	//Deregister WordPress includes jQuery, register and enqueue latest + 
-	if( !is_admin() ){
-		wp_deregister_script('jquery');
-		wp_register_script('jquery', ('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'), false, '');
-		wp_register_script('jquery-migrate', ('http://code.jquery.com/jquery-migrate-1.2.1.min.js'));
-		wp_enqueue_script('jquery');
-		wp_enqueue_script('jquery-migrate');
-	}	
-	
+	//De-register jQuery. Register en enqueue CDN version
+	if( !is_admin() ) {
+	    wp_deregister_script('jquery');
+	    wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false, 'latest', false);
+	    wp_register_script('jquery-migrate', ("http://code.jquery.com/jquery-migrate-1.2.1.js"));
+	    wp_enqueue_script('jquery');
+	    wp_enqueue_script('jquery-migrate');
+	}
+
 }
 add_action('wp_enqueue_scripts','tp_enqueue_scripts');
 

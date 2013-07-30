@@ -65,5 +65,5 @@
 					</nav>
 				<?php } ?>
 				
-			</div><!-- .conainer-inner -->
-		</header><!-- #main -->
+			</div><!-- .container-inner -->
+		</header><!-- #header -->

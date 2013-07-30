@@ -6,13 +6,11 @@
 		<section id="content" class="eightcol">
 		
 			<?php if(is_category()) : ?>
-				<h1 id="page-title"><?php echo __('Category %s','tp').': '.single_cat_title('',false); ?></h1>
-			<?php elseif(is_tag()) : ?>
-				<h1 id="page-title"><?php echo __('Tag %s','tp').': '.single_tag_title('',false); ?></h1>
-			<?php elseif(is_tax()) : ?>
-				<h1 id="page-title"><?php echo __('Tag %s','tp').': '.single_tag_title('',false); ?></h1>
+				<h1 id="page-title"><?php _e('Category','tp'); ?>: <?php echo single_cat_title('',false); ?></h1>
+			<?php elseif(is_tag() || is_tax()) : ?>
+				<h1 id="page-title"><?php _e('Tag','tp'); ?>: <?php echo single_tag_title('',false); ?></h1>
 			<?php elseif(is_author()) : ?>
-				<h1 id="page-title"><?php echo __('Posts by','tp').' '.get_the_author_meta('display_name',$author); ?></h1>
+				<h1 id="page-title"><?php _e('Posts by','tp'); ?>: <?php echo get_the_author_meta('display_name',$author); ?></h1>
 				<?php get_template_part('part-author'); ?>
 			<?php else : ?>
 				<h1 id="page-title"><?php _e('News','tp'); ?></h1>
@@ -48,7 +46,7 @@
 			<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('blog'); ?>
 		</aside>
 				
-	</div><!-- .conainer-inner -->
+	</div><!-- .container-inner -->
 </section><!-- #main -->
 
 <?php get_footer(); ?>

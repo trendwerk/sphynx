@@ -40,7 +40,7 @@
 			<?php if(function_exists('dynamic_sidebar')) dynamic_sidebar('blog'); ?>
 		</aside>
 		
-	</div><!-- .conainer-inner -->
+	</div><!-- .container-inner -->
 </section><!-- #main -->
 
 <?php get_footer(); ?>

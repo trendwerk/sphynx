@@ -14,13 +14,13 @@
  * @responsive		Defines responsive layout
  *
  */
-
+ 
 @charset "UTF-8";
 
 /**
  * @import
  */ 
- 
+
 @import '../trendpress/assets/css/default.min.css';
 @import 'assets/less/formalize.less'; 
 @import 'assets/less/mixins.less';
@@ -29,16 +29,16 @@
  * @variables
  */
 
-@body-background:	#EEE;
-@footer-background:	#333;
-@border-color:		#CCC;
+@body-background:	#EEEEEE;
+@footer-background:	#333333;
+@border-color:		#CCCCCC;
 
 @primary-color:		#1F6FD1;
-@secondary-color:	#666;
+@secondary-color:	#666666;
 
 @heading-color:		#333;
 @text-color:		#666;
-@link-color:		#4ca6cf;
+@link-color:		#1F6FD1;
 
 @heading-font:		'Helvetica Neue', sans-serif;
 @text-font:			'Helvetica Neue', sans-serif;
@@ -90,11 +90,13 @@ body {
 	
 	h5 { 
 		font-size: 16px;
+		font-weight: bold;
 		margin: 0 0 25px 0;
 	}
 
 	h6 { 
 		font-size: 14px;
+		font-weight: bold;
 		margin: 0 0 25px 0;
 	}
 	
@@ -112,27 +114,19 @@ body {
 	
 	}
 	
-	ol { 
-		list-style-type: decimal;
-		margin: 0 0 25px 20px;
-		
-		ol { list-style-type: lower-alpha; }
-		
-	}
-	
-	ul {
-		list-style-type: square;
-		margin: 0 0 25px 16px;
+	ul { 
+		list-style-type: square; 
+		margin-left: 16px;
 		
 		ul { list-style-type: circle; }
 		
 	}
 	
-	acronym, abbr {
-		border-bottom: 1px dotted @text-color;
-		cursor: help;
+	ol {
+		list-style-type: decimal;
+		margin-left: 20px;
 		
-		&:hover { border-bottom: 1px solid @text-color; }
+		ol { list-style-type: lower-alpha; }
 		
 	}
 	
@@ -145,20 +139,24 @@ body {
 	
 	}
 	
-	sup, sub { 
-		display: inline-block;
-		margin-right: 2px;
-		font-size: 9px;
-	}
-	
-	sup { vertical-align: super; }
-	sub { vertical-align: sub; }
-	
-	code, pre { 
+	pre { 
 		color: #000 !important;
 		margin-bottom: 24px;
 		padding: 24px; 
 	}
+	
+	abbr, acronym {
+		border-bottom: 1px dotted @text-color;
+		cursor: help;
+		
+		&:hover { border-bottom-style: solid; }
+		
+	}
+	
+	sub, sup { font-size: 8px; }
+	
+	sub { vertical-align: sub; }
+	sup { vertical-align: super; }
 	
 	del { color: red; }
 	ins { color: green; }
@@ -168,22 +166,15 @@ body {
 	 */
 
 	a {
-		.animate-this(color, 0.075s, ease-in-out);
 		color: @link-color;
 		text-decoration: underline;
 				
 		&:hover { 
-			color: saturate(@link-color, 30%);
-			text-decoration: underline; }
-		
-		&:active, &:visited { color: desaturate(@link-color, 30%); }
-		
-		&:focus {
-			outline: 1px solid @link-color;
-			padding: 3px 6px; }
+			color: lighten(@link-color, 20%);
+			text-decoration: underline;
+		}
 		
 		&.more:after, &.more-link:after { content: ' \00bb'; }
-		
 		&.back:before { content: '\00ab '; }
 		
 		&.prev {
@@ -204,7 +195,6 @@ body {
 		}
 		
 		&.cta {
-			.animate-this(all, 0.15s, ease-in-out);
 			.border-radius(3px);
 			display: inline-block;
 			height: 40px;
@@ -275,7 +265,6 @@ img.size-thumbnail, .wp-caption {
  */
 
 #main input[type="submit"] {
-	.animate-this(all, 0.15s, ease-in-out);
 	border-width: 0;
 	background: @primary-color;
 	color: #FFF;
@@ -387,7 +376,7 @@ body {
 				} 
 				
 				input[type="text"] { 
-					.placeholder(#999, #CCC);
+					.placeholder(#666, #EEE);
 					.border-radiuses(0, 0, 3px, 3px);
 					border: 1px solid @border-color;
 					border-right: none;
@@ -511,52 +500,7 @@ body {
 			}
 			
 		}
-		
-		// author
-		
-		.author {
-			background: #FFF;
-			margin: 0 0 20px 0;
-			padding: 20px;
-			
-			.author-avatar { float: left; }
-			
-			.author-info {
-				padding-left: 100px;
 				
-				.author-writtenby { font-size: 12px; }
-				
-				.author-name { font-size: 22px; }
-				
-				ul.author-social {
-					list-style: none;
-					margin: 0;
-					
-					li {
-						float: left;
-						margin: 0 10px 20px 0;
-						
-						img,
-						svg {
-							height: 16px;
-							width: 16px;
-							margin: 0 5px 0 0;
-							vertical-align: middle;
-						}
-						
-					}
-					
-				}
-				
-				a.more {
-					float: right;
-					margin: 0 10px 10px 0;
-				}
-				
-			}
-			
-		}
-		
 		/* Author */
 		
 		.author {
@@ -566,6 +510,7 @@ body {
 			
 			.author-avatar {
 				float: left;
+				margin: 5px 0 0 0;
 			}
 			
 			.author-info {
@@ -654,27 +599,17 @@ body {
 				
 			}
 			
-				/* @widget Tagcloud */
+			/**
+			 * @widget Contact
+			 */
 			
-			&.widget_tag_cloud {
+			&.widget_tp_contact {
 			
-				.tagcloud {
-				
-					a {
-						color: #FFF;
-						background: #CCC;
-						font-size: 12px !important;
-						line-height: 25px;
-						padding: 0 10px;
-						margin: 0 3px 5px 0;
-						display: inline-block;
-						border-radius: 3px;
-						
-						&:hover { background: @link-color; }
-					}
-				
+				span.label { 
+					width: 80px;
+					display: inline-block;
 				}
-			
+				
 			}
 			
 			/**
@@ -683,13 +618,11 @@ body {
 			
 			&.widget_tp_social {
 			
-				svg { fill: red; }
-			
 				ul {	
 					list-style-type: none;
 					margin: 0;
 					padding: 0;
-										
+					
 					&.large-icons {
 						border-bottom: none;
 						
@@ -741,28 +674,51 @@ body {
 						
 						img, svg {
 							display: block;
-							height: 20px;
+							height: 16px;
 							vertical-align: middle;
-							width: 20px;
+							width: 16px;
 						}
 						
 					}
 					
 					&.small-icons-text {
-						
+					
 						img, svg {
 							display: block;
 							float: left;
-							height: 20px;
-							margin-right: 10px;
+							height: 16px;
+							margin: 4px 12px 0 0;
 							vertical-align: middle;
-							width: 20px;
+							width: 16px;
 						}
 						
 					}
 
 				}
 				
+			}
+			
+			/* @widget Tagcloud */
+			
+			&.widget_tag_cloud {
+			
+				.tagcloud {
+				
+					a {
+						color: #FFF;
+						background: #CCC;
+						font-size: 12px !important;
+						line-height: 25px;
+						padding: 0 10px;
+						margin: 0 3px 5px 0;
+						display: inline-block;
+						border-radius: 3px;
+						
+						&:hover { background: @link-color; }
+					}
+				
+				}
+			
 			}
 			
 		}
@@ -859,6 +815,8 @@ body {
 .blog, .archive {
 
 	article {
+		margin: 0 0 20px 0;
+		float: left;
 	
 		.article-title { margin-bottom: 5px; }
 		
@@ -980,11 +938,8 @@ body {
 						.comment-edit-link { display: none; }
 						
 					}
-					
 				}
-				
-			 }
-			 
+			}
 		}
 		
 		#respond { 
@@ -1052,7 +1007,7 @@ body {
 		.next { float: right; }
 		
 	}
-	
+
 }
 
 /**
@@ -1160,15 +1115,15 @@ article .search-highlight { background: #FFFFB3; }
 							float: left;
 							width: 50%;
 						}
-						
-					}	
-									
-				}
+					
+					}
 				
-			}
+				}
 			
-		}
+			}
 		
+		}
+	
 	}
 	
 	.gform_footer {
@@ -1177,7 +1132,7 @@ article .search-highlight { background: #FFFFB3; }
 		.gform_button { margin: 2em 0 0 35%; }
 		
 	}
-	
+
 }
 
 /**
@@ -1195,7 +1150,7 @@ article .search-highlight { background: #FFFFB3; }
 		select { display: none; }
 	
 	}
-	
+
 }
 
 /**
@@ -1206,17 +1161,15 @@ article .search-highlight { background: #FFFFB3; }
 	
 	#header {
 		
-		#topnav, .search { display: none; }
+		#topnav, 
+		#search { display: none; }
 		
 		#mainnav {
 			margin-left: 0; 
 			
 			select { display: none; }
-		
+
 		}
-		
-		#breadcrumbs { margin: 20px 0; }
-	
 	}
 	
 	.container {
@@ -1226,14 +1179,13 @@ article .search-highlight { background: #FFFFB3; }
 			width: 90%;
 			
 			.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
-				margin: 0;
+				margin: 10px 0;
 			} 
 			
 			.sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
 				clear: both;
 				width: 100%;
 			}
-		
 		}
 		
 		&#footer .sidebar, &#main .sidebar {
@@ -1278,7 +1230,6 @@ article .search-highlight { background: #FFFFB3; }
 			ul { display: none; }
 		
 		}
-	
 	}
 	
 	#main {
@@ -1324,7 +1275,6 @@ article .search-highlight { background: #FFFFB3; }
 				clear: both;
 				width: 100%;
 			}
-		
 		}
 		
 		&#footer .sidebar, &#main .sidebar {
@@ -1335,7 +1285,6 @@ article .search-highlight { background: #FFFFB3; }
 				padding: 3%;
 				width: 94%;
 			}
-		
 		}
 		
 		&#footer {
@@ -1346,7 +1295,6 @@ article .search-highlight { background: #FFFFB3; }
 					padding: 0;
 					width: 100%
 				}
-			
 			}
 			
 			#credits {
@@ -1362,6 +1310,7 @@ article .search-highlight { background: #FFFFB3; }
 							display: inline;
 							
 							a { float: none; }
+						
 						}
 					
 					}
@@ -1369,8 +1318,9 @@ article .search-highlight { background: #FFFFB3; }
 				}
 			
 			}
-		
+			
 		}
 	
 	}
+
 }

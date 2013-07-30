@@ -115,7 +115,7 @@ class tp_contact extends WP_Widget {
 							} if ($city = get_option('tp-city')) {
 							 echo ' <span itemprop="addressLocality">'.$city.'</span><br />'; 
 							} if ($country = get_option('tp-country')) {
-							 echo '<span itemprop="addressCountry">'.$country.'</span><br /><br />'; 
+							 echo '<span itemprop="addressCountry">'.$country.'</span>'; 
 							}
 						?>
 					</span>
@@ -136,7 +136,7 @@ class tp_contact extends WP_Widget {
 						if ($cc = get_option('tp-cc')) {
 							echo '<span class="label">'.__('CC No','tp').': </span>'.$cc.'<br />';
 						} if ($vat = get_option('tp-vat')) {
-							echo '<span itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
+							echo '<span class="label" itemprop="vatID">'.__('VAT No','tp').': </span>'.$vat.'<br />';
 						} if ($bankno = get_option('tp-bank-no')) {
 							if ($bank = !get_option('tp-bank')) {
 								$bank = "Bank";
@@ -211,8 +211,8 @@ class tp_social extends WP_Widget {
 				<?php } ?>
 				<?php if($facebook = get_option('tp-facebook')) { ?>
 					<li class="facebook">
-						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like us on Facebook','tp') ?>">
-							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><span><?php _e('Like us on Facebook','tp') ?></span>
+						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like our Facebook page','tp') ?>">
+							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><span><?php _e('Like our Facebook page','tp') ?></span>
 						</a>
 					</li>
 				<?php } if($linkedin = get_option('tp-linkedin')) { ?>
@@ -242,7 +242,7 @@ class tp_social extends WP_Widget {
 				<?php } ?>
 				<?php if(get_option('tp-rss') == 'true') { ?>
 					<li class="rss">
-						<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe to our RSS','tp') ?>">
+						<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe via RSS','tp') ?>">
 							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/rss.svg" /><span><?php _e('Subscribe to our RSS','tp') ?></span>
 						</a>
 					</li>
