@@ -14,13 +14,13 @@
  * @responsive		Defines responsive layout
  *
  */
-
+ 
 @charset "UTF-8";
 
 /**
  * @import
  */ 
- 
+
 @import '../trendpress/assets/css/default.min.css';
 @import 'assets/less/formalize.less'; 
 @import 'assets/less/mixins.less';
@@ -36,8 +36,8 @@
 @primary-color:		#1F6FD1;
 @secondary-color:	#666666;
 
-@heading-color:		#333333;
-@text-color:		#666666;
+@heading-color:		#333;
+@text-color:		#666;
 @link-color:		#1F6FD1;
 
 @heading-font:		'Helvetica Neue', sans-serif;
@@ -64,40 +64,40 @@ body {
 	h1, h2, h3, h4, h5, h6 {
 		color: @heading-color;
 		font-family: @heading-font;
-		font-weight: normal;
+		font-weight: bold;
 		line-height: 1;
 	}
 	
 	h1 { 
 		font-size: 36px;
-		margin: 0 0 24px 0;
+		margin: 0 0 25px 0;
 	}
 	
 	h2 { 
 		font-size: 24px;
-		margin: 0 0 21px 0;
+		margin: 0 0 25px 0;
 	}
 	
 	h3 { 
 		font-size: 20px; 
-		margin: 0 0 20px 0;
+		margin: 0 0 25px 0;
 	}
 	
 	h4 { 
 		font-size: 18px;
-		margin: 0 0 17px 0;
+		margin: 0 0 25px 0;
 	}
 	
 	h5 { 
 		font-size: 16px;
 		font-weight: bold;
-		margin: 0 0 9px 0;
+		margin: 0 0 25px 0;
 	}
 
 	h6 { 
 		font-size: 14px;
 		font-weight: bold;
-		margin: 0 0 11px 0;
+		margin: 0 0 25px 0;
 	}
 	
 	/**
@@ -109,10 +109,25 @@ body {
 	ul, ol {
 		line-height: 25px;
 		list-style-position: outside;
-		margin: 0 0 25px 25px;
 		
 		ul, ol { margin-bottom: 0; }
 	
+	}
+	
+	ul { 
+		list-style-type: square; 
+		margin-left: 16px;
+		
+		ul { list-style-type: circle; }
+		
+	}
+	
+	ol {
+		list-style-type: decimal;
+		margin-left: 20px;
+		
+		ol { list-style-type: lower-alpha; }
+		
 	}
 	
 	blockquote {
@@ -129,6 +144,23 @@ body {
 		margin-bottom: 24px;
 		padding: 24px; 
 	}
+	
+	abbr, acronym {
+		border-bottom: 1px dotted @text-color;
+		cursor: help;
+		
+		&:hover { border-bottom-style: solid; }
+		
+	}
+	
+	sub, sup { font-size: 8px; }
+	
+	sub { vertical-align: sub; }
+	sup { vertical-align: super; }
+	
+	del { color: red; }
+	
+	ins { color: green; }
 	
 	/**
 	 * @typography Links 
@@ -613,10 +645,10 @@ body {
 						}
 						
 						img, svg {
-							width: 32px;
 							height: 32px;
 							margin: 0 10px 0 0;
 							vertical-align: middle;
+							width: 32px;
 						}
 	
 					}
@@ -642,10 +674,23 @@ body {
 						}
 						
 						img, svg {
-							width: 16px;
-							height: 16px;
 							display: block;
+							height: 16px;
 							vertical-align: middle;
+							width: 16px;
+						}
+						
+					}
+					
+					&.small-icons-text {
+					
+						img, svg {
+							display: block;
+							float: left;
+							height: 16px;
+							margin: 4px 12px 0 0;
+							vertical-align: middle;
+							width: 16px;
 						}
 						
 					}
