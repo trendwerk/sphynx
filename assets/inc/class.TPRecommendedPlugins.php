@@ -113,10 +113,10 @@ class TPRecommendedPlugins {
 				'description' => __('Exports your database, does a find and replace on URLs and file paths, then allows you to save it to your computer.','tp'),
 				'path' => 'wp-migrate-db/wp-migrate-db.php'
 			),
-			'ajax-thumbnail-rebuild' => array(
-				'name' => 'AJAX Thumbnail Rebuild',
-				'description' => __('Rebuild all image thumbnails at once without script timeouts on your server.','tp'),
-				'path' => 'ajax-thumbnail-rebuild/ajax-thumbnail-rebuild.php'
+			'regenerate-thumbnails' => array(
+				'name' => 'Regenerate Thumbnails',
+				'description' => __('Allows you to regenerate your thumbnails after changing the thumbnail sizes.','tp'),
+				'path' => 'regenerate-thumbnails/regenerate-thumbnails.php'
 			),
 			'wp-htaccess-control' => array(
 				'name' => 'WP htaccess Control',

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-30 21:54+0100\n"
-"PO-Revision-Date: 2013-07-30 22:53+0100\n"
+"POT-Creation-Date: 2013-08-01 09:40+0100\n"
+"PO-Revision-Date: 2013-08-01 09:40+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_n\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
@@ -304,10 +304,10 @@ msgstr ""
 #: ../../assets/inc/class.TPRecommendedPlugins.php:118
 #: ../inc/class.TPRecommendedPlugins.php:118
 msgid ""
-"Rebuild all image thumbnails at once without script timeouts on your server."
+"Allows you to regenerate your thumbnails after changing the thumbnail sizes."
 msgstr ""
-"Maak alle miniatuur afbeeldingen opnieuw aan zonder script timeouts op je "
-"server."
+"Maakt het mogelijk om de thumbnails te regenereren nadat de afmetingen zijn "
+"veranderd."
 
 #: ../../assets/inc/class.TPRecommendedPlugins.php:123
 #: ../inc/class.TPRecommendedPlugins.php:123
@@ -416,6 +416,13 @@ msgstr ""
 #: ../inc/admin-views/recommended-plugins.php:12
 msgid "Optional plugins"
 msgstr "Optionele plugins"
+
+#~ msgid ""
+#~ "Rebuild all image thumbnails at once without script timeouts on your "
+#~ "server."
+#~ msgstr ""
+#~ "Maak alle miniatuur afbeeldingen opnieuw aan zonder script timeouts op je "
+#~ "server."
 
 #~ msgid "Gravatar.com"
 #~ msgstr "Gravatar.com"
