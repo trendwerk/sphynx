@@ -134,6 +134,7 @@ class TPPlugins {
 	 * Get plugins
 	 */
 	function get_plugins() {
+		$plugins = array();
 		$folder = STYLESHEETPATH.'/assets/plugins/';
 		if(is_dir($folder)) :
 			foreach(scandir($folder) as $plugin) :
