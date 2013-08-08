@@ -303,7 +303,7 @@ class TPNav {
 
 				if($posttype) {
 					foreach($this->menu_items as $menu_item) {
-						if(basename($menu_item->url) == $posttype->rewrite['slug']) {
+						if($menu_item->url == get_post_type_archive_link($posttype->name)) {
 							$this->current_item = $menu_item->ID;
 							break;
 						}

@@ -27,7 +27,7 @@ class TPCPTExtras {
 	 * Add a meta box to the Custom Menu page
 	 */
 	function add_meta_boxes() {
-		add_meta_box('custom-post-types',__('Custom post types','tp'),array($this,'nav_menu_meta'),'nav-menus','side','high');
+		add_meta_box('custom-post-types',__('Archive pages','tp'),array($this,'nav_menu_meta'),'nav-menus','side','high');
 	}
 	
 	/**
@@ -45,8 +45,7 @@ class TPCPTExtras {
 					if(count($cpts) > 5) {
 						foreach($cpts as $cpt) { 
 							$cpt_obj = get_post_type_object($cpt);
-							
-							$url = get_option('siteurl').'/'.$cpt_obj->rewrite['slug'].'/';
+							$url = get_post_type_archive_link($cpt);
 							
 							if($cpt_obj->_builtin) continue;
 							?>

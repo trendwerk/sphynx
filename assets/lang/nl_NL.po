@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-01 09:40+0100\n"
-"PO-Revision-Date: 2013-08-01 09:40+0100\n"
-"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
+"POT-Creation-Date: 2013-08-08 15:58+0100\n"
+"PO-Revision-Date: 2013-08-08 15:58+0100\n"
+"Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_n\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
@@ -22,14 +22,14 @@ msgstr ""
 "Om dit thema te gebruiken dient u een TrendPress child-theme te activeren."
 
 #: ../../assets/inc/class.TPCPTExtras.php:30 ../inc/class.TPCPTExtras.php:30
-msgid "Custom post types"
-msgstr "Custom post types"
+msgid "Archive pages"
+msgstr "Archiefpagina's"
 
-#: ../../assets/inc/class.TPCPTExtras.php:65 ../inc/class.TPCPTExtras.php:65
+#: ../../assets/inc/class.TPCPTExtras.php:64 ../inc/class.TPCPTExtras.php:64
 msgid "There are no Custom Post Types at the moment."
 msgstr "Er zijn geen Custom Post Types op dit moment."
 
-#: ../../assets/inc/class.TPCPTExtras.php:75 ../inc/class.TPCPTExtras.php:75
+#: ../../assets/inc/class.TPCPTExtras.php:74 ../inc/class.TPCPTExtras.php:74
 msgid "Add to Menu"
 msgstr "Voeg toe aan menu"
 
@@ -417,6 +417,9 @@ msgstr ""
 msgid "Optional plugins"
 msgstr "Optionele plugins"
 
+#~ msgid "Custom post types"
+#~ msgstr "Custom post types"
+
 #~ msgid ""
 #~ "Rebuild all image thumbnails at once without script timeouts on your "
 #~ "server."
@@ -597,9 +600,6 @@ msgstr "Optionele plugins"
 
 #~ msgid "Category archives: %s"
 #~ msgstr "Categorie archief: %s"
-
-#~ msgid "Tag Archives: %s"
-#~ msgstr "Tag archief: %s"
 
 #~ msgid "News"
 #~ msgstr "Nieuws"
