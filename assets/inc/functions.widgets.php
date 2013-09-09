@@ -497,7 +497,7 @@ class widget_title_image_content_button extends WP_Widget {
 				showbuttons_create_clicks($);
 			
 				//Upload an image				
-				$('.upload-image').live('click',function() {
+				$('.upload-image').on('click',function() {
 					currently_uploading = $(this);
 				});
 				
