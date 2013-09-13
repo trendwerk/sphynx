@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-12 16:08+0100\n"
-"PO-Revision-Date: 2013-09-12 16:09+0100\n"
+"POT-Creation-Date: 2013-09-13 18:40+0100\n"
+"PO-Revision-Date: 2013-09-13 18:43+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -447,30 +447,29 @@ msgstr "Verwijderen"
 
 #: ../../assets/plugins/Filter/Filter.php:84 ../plugins/Filter/Filter.php:84
 msgid "Filters"
-msgstr ""
+msgstr "Filters"
 
 #: ../../assets/plugins/Filter/Filter.php:85
 #: ../../assets/plugins/Filter/Filter.php:290
 #: ../../assets/plugins/Filter/Filter.php:304 ../plugins/Filter/Filter.php:85
 #: ../plugins/Filter/Filter.php:290 ../plugins/Filter/Filter.php:304
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: ../../assets/plugins/Filter/Filter.php:86 ../plugins/Filter/Filter.php:86
 msgid "Add filter"
-msgstr ""
+msgstr "Nieuwe filter"
 
 #: ../../assets/plugins/Filter/Filter.php:87 ../plugins/Filter/Filter.php:87
 msgid "Add new filter"
-msgstr ""
+msgstr "Nieuwe filter toevoegen"
 
 #: ../../assets/plugins/Filter/Filter.php:113
 #: ../../assets/plugins/Filter/Filter.php:182
 #: ../../assets/plugins/Filter/Filter.php:206 ../plugins/Filter/Filter.php:113
 #: ../plugins/Filter/Filter.php:182 ../plugins/Filter/Filter.php:206
-#, fuzzy
 msgid "Post types"
-msgstr "Type iconen"
+msgstr "Post types"
 
 #: ../../assets/plugins/Filter/Filter.php:114
 #: ../../assets/plugins/PTOrder/PTOrder.php:52
@@ -478,75 +477,93 @@ msgstr "Type iconen"
 #: ../plugins/Filter/Filter.php:114 ../plugins/PTOrder/PTOrder.php:52
 #: ../plugins/PTOrder/PTOrder.php:67
 msgid "Order"
-msgstr ""
+msgstr "Volgorde"
 
 #: ../../assets/plugins/Filter/Filter.php:128
 #: ../../assets/plugins/Filter/Filter.php:179 ../plugins/Filter/Filter.php:128
 #: ../plugins/Filter/Filter.php:179
 msgid "Not filterable"
-msgstr ""
+msgstr "Niet filterbaar"
 
 #: ../../assets/plugins/Filter/Filter.php:143
 #: ../../assets/plugins/Filter/Filter.php:198 ../plugins/Filter/Filter.php:143
 #: ../plugins/Filter/Filter.php:198
 msgid "Filterable"
-msgstr ""
+msgstr "Filterbaar"
 
 #: ../../assets/plugins/Filter/Filter.php:156 ../plugins/Filter/Filter.php:156
 msgid "Drag and drop post types here to make them filterable."
-msgstr ""
+msgstr "Sleep post types hier naar toe om ze filterbaar te maken."
 
 #: ../../assets/plugins/Filter/Filter.php:218 ../plugins/Filter/Filter.php:218
 msgid "Drag and drop items here to make them filterable."
-msgstr ""
+msgstr "Sleep items hier naar toe om ze filterbaar te maken."
 
 #: ../../assets/plugins/Filter/Filter.php:226 ../plugins/Filter/Filter.php:226
 msgid ""
 "Please select one or more post types that have taxonomies assigned to them."
-msgstr ""
+msgstr "Selecteer a.u.b. één of meerdere post types die taxonomieën hebben."
 
 #: ../../assets/plugins/Filter/Filter.php:285 ../plugins/Filter/Filter.php:285
 msgid "Filter widget"
-msgstr ""
+msgstr "Filter widget"
 
 #: ../../assets/plugins/Filter/Filter.php:285 ../plugins/Filter/Filter.php:285
 msgid "A widget that filters on some taxonomies through AJAX"
-msgstr ""
+msgstr "Een widget die taxonomieën filtert door AJAX"
 
 #: ../../assets/plugins/Filter/Filter.php:309 ../plugins/Filter/Filter.php:309
 msgid "Select a filter.."
-msgstr ""
+msgstr "Selecteer een filter.."
 
 #: ../../assets/plugins/Filter/Filter.php:316 ../plugins/Filter/Filter.php:316
 #, php-format
 msgid "You don't have any filters yet! <a href=\"%1$s\">Create one now</a>"
-msgstr ""
+msgstr "Je hebt nog geen filters! <a href=\"%1$s\">Maak een filter</a>"
 
 #: ../../assets/plugins/Filter/Filter.php:426 ../plugins/Filter/Filter.php:426
 msgid "Filter by type"
-msgstr ""
+msgstr "Filter op type"
 
-#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:67
-#: ../plugins/RichTaxonomy/RichTaxonomy.php:67
+#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:72
+#: ../plugins/RichTaxonomy/RichTaxonomy.php:72
 msgid "Enrich"
-msgstr ""
+msgstr "Verrijk"
 
-#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:100
-#: ../plugins/RichTaxonomy/RichTaxonomy.php:100
-#, fuzzy
-msgid "Back to spotlights overview"
-msgstr "Terug naar het overzicht"
+#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:106
+#: ../plugins/RichTaxonomy/RichTaxonomy.php:106
+#, php-format
+msgid "Back to %1$s overview"
+msgstr "Terug naar het %1$s overzicht"
 
-#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:111
-#: ../plugins/RichTaxonomy/RichTaxonomy.php:111
+#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:117
+#: ../plugins/RichTaxonomy/RichTaxonomy.php:117
 msgid "Enriched"
-msgstr ""
+msgstr "Verrijkt"
 
-#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:113
-#: ../plugins/RichTaxonomy/RichTaxonomy.php:113
-#, fuzzy
+#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:119
+#: ../plugins/RichTaxonomy/RichTaxonomy.php:119
 msgid "Remove enrichment"
-msgstr "Verwijderen"
+msgstr "Verwijder verrijking"
+
+#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:154
+#: ../plugins/RichTaxonomy/RichTaxonomy.php:154
+msgid "Show all"
+msgstr "Toon alle"
+
+#: ../../assets/plugins/RichTaxonomy/RichTaxonomy.php:156
+#: ../plugins/RichTaxonomy/RichTaxonomy.php:156
+msgid "Only show enriched"
+msgstr "Toon verrijkt"
+
+#: ../../assets/plugins/StickyPosts/StickyPosts.php:36
+#: ../plugins/StickyPosts/StickyPosts.php:36
+msgid "Make this post sticky"
+msgstr "Maak dit bericht sticky"
+
+#, fuzzy
+#~ msgid "Back to spotlights overview"
+#~ msgstr "Terug naar het overzicht"
 
 #~ msgid "Like us on Facebook"
 #~ msgstr "Vind ons leuk op Facebook"
