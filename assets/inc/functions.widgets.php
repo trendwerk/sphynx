@@ -566,8 +566,9 @@ class widget_title_image_content_button extends WP_Widget {
 				});
 				
 				window.send_to_editor = function(html) {
+					html = '<div>'+html+'</div>';
 					imgurl = jQuery.parseHTML(html);
-					imgurl = $(imgurl).prop('src');
+					imgurl = $(imgurl).find('img').prop('src');
 					
 					$(currently_uploading).closest('div.upload-image-container').find('div.image').html(jQuery('img',html));
 					$(currently_uploading).closest('div.upload-image-container').find('input.image_url').val(imgurl);
