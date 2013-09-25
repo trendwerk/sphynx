@@ -29,7 +29,7 @@ class TPLess {
 					
 					$less = new lessc;
 					
-					do_action('tp-less-pre-compile',$lessc);
+					do_action('tp-less-pre-compile',array(&$less));
 					
 					if($this->force) :
 						$less->compileFile($file,$new_file);
