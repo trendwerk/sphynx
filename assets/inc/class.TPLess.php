@@ -9,7 +9,7 @@ class TPLess {
 	var $force = false;
 	
 	function __construct() {
-		if($_SERVER['HTTP_HOST'] == 'localhost') $this->force = true;
+		if($_SERVER['HTTP_HOST'] == 'localhost' || get_option('tp-less-rebuild') === true) $this->force = true;
 		
 		add_action('wp_enqueue_scripts',array($this,'init'),999999);
 		add_action('admin_enqueue_scripts',array($this,'init'),999999);
