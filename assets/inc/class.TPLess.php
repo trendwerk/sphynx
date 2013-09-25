@@ -9,7 +9,7 @@ class TPLess {
 	var $force = false;
 	
 	function __construct() {
-		if($_SERVER['HTTP_HOST'] == 'localhost' || get_option('tp-less-rebuild') === true) $this->force = true;
+		if($_SERVER['HTTP_HOST'] == 'localhost' || get_option('tp-less-rebuild') == true) $this->force = true;
 		
 		add_action('wp_enqueue_scripts',array($this,'init'),999999);
 		add_action('admin_enqueue_scripts',array($this,'init'),999999);
@@ -33,6 +33,7 @@ class TPLess {
 					
 					if($this->force) :
 						$less->compileFile($file,$new_file);
+						update_option('tp-less-rebuild',false);
 					else :
 						$less->checkedCompile($file,$new_file);	
 					endif;
@@ -50,7 +51,7 @@ class TPLess {
 	 */
 	function is_less($wp_style) {
 		$info = pathinfo($wp_style->src);
-		if(isset($info['extension']) && $info['extension'] == 'less') return true;
+		if($info['extension'] == 'less') return true;
 		
 		return false;
 	}
