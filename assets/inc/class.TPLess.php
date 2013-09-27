@@ -25,7 +25,7 @@ class TPLess {
 			foreach($wp_styles->registered as &$wp_style) :
 				if($base = $this->is_less($wp_style)) :
 					$file = str_replace(site_url().'/', ABSPATH, $wp_style->src);
-					$new_file = str_replace('.less','.compiled.css',$file);
+					$new_file = apply_filters('tp-less-filename',str_replace('.less','.compiled.css',$file));
 					
 					$less = new lessc;
 					
