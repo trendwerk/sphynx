@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-08 15:58+0100\n"
-"PO-Revision-Date: 2013-08-08 15:58+0100\n"
-"Last-Translator: Harold <harold@trendwerk.nl>\n"
+"POT-Creation-Date: 2013-10-01 14:50+0100\n"
+"PO-Revision-Date: 2013-10-01 14:51+0100\n"
+"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -248,15 +248,18 @@ msgstr ""
 
 #: ../../assets/inc/class.TPRecommendedPlugins.php:73
 #: ../inc/class.TPRecommendedPlugins.php:73
-msgid "Increases WordPress' default search functionality."
-msgstr "Verbeterd de WordPress basis zoek functionaliteit."
-
-#: ../../assets/inc/class.TPRecommendedPlugins.php:79
-#: ../inc/class.TPRecommendedPlugins.php:79
 msgid "Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor."
 msgstr ""
 "Voegt geavanceerde functionaliteiten toe aan TinyMCE, de WYSIWYG van "
 "WordPress."
+
+#: ../../assets/inc/class.TPRecommendedPlugins.php:79
+#: ../inc/class.TPRecommendedPlugins.php:79
+msgid ""
+" Replaces your WordPress comment system with your comments hosted and "
+"powered by Disqus."
+msgstr ""
+"Vervangt het WordPress reactie systeem door het reactie systeem van Disqus."
 
 #: ../../assets/inc/class.TPRecommendedPlugins.php:88
 #: ../inc/class.TPRecommendedPlugins.php:88
@@ -416,6 +419,9 @@ msgstr ""
 #: ../inc/admin-views/recommended-plugins.php:12
 msgid "Optional plugins"
 msgstr "Optionele plugins"
+
+#~ msgid "Increases WordPress' default search functionality."
+#~ msgstr "Verbeterd de WordPress basis zoek functionaliteit."
 
 #~ msgid "Custom post types"
 #~ msgstr "Custom post types"

@@ -68,17 +68,16 @@ class TPRecommendedPlugins {
 				'description' => __('Reduce image file sizes and improve performance using the Smush.it API within WordPress.','tp'),
 				'path' => 'wp-smushit/wp-smushit.php'
 			),
-			'search-everything' => array(
-				'name' => 'Search everything',
-				'description' => __('Increases WordPress\' default search functionality.','tp'),
-				'path' => 'search-everything/search-everything.php',
-				'settings' => true
-			),
 			'tinymce-advanced' => array(
 				'name' => 'TinyMCE Advanced',
 				'description' => __('Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor.','tp'),
 				'path' => 'tinymce-advanced/tinymce-advanced.php',
 				'settings' => true
+			),
+			'disqus-comment-system' => array(
+				'name' => 'Disqus',
+				'description' => __(' Replaces your WordPress comment system with your comments hosted and powered by Disqus.','tp'),
+				'path' => 'disqus-comment-system/disqus.php',
 			)
 		);
 		
