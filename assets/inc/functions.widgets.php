@@ -751,5 +751,3 @@ class widget_title_image_content_button extends WP_Widget {
 	}
 }
 add_action('widgets_init',create_function('','return register_widget("widget_title_image_content_button");'));
-
-?>

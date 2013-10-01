@@ -3,7 +3,6 @@
 /**
  * @sidebars Register the sidebars
  */
-
 function tp_register_sidebars() {
 	new TPSidebar('home',array(
 		'name' => __('Home','tp')
@@ -19,4 +18,3 @@ function tp_register_sidebars() {
 	));
 }
 add_action('init','tp_register_sidebars');
-?>
