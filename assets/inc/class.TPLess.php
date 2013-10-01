@@ -9,7 +9,7 @@ class TPLess {
 	var $force = false;
 	
 	function __construct() {
-		if($_SERVER['HTTP_HOST'] == 'localhost') $this->force = true;
+		if($_SERVER['HTTP_HOST'] == 'localhost' || get_option('tp-less-rebuild') == true) $this->force = true;
 		
 		add_action('wp_enqueue_scripts',array($this,'init'),999999);
 		add_action('admin_enqueue_scripts',array($this,'init'),999999);
@@ -25,12 +25,15 @@ class TPLess {
 			foreach($wp_styles->registered as &$wp_style) :
 				if($base = $this->is_less($wp_style)) :
 					$file = str_replace(site_url().'/', ABSPATH, $wp_style->src);
-					$new_file = str_replace('.less','.compiled.css',$file);
+					$new_file = apply_filters('tp-less-filename',str_replace('.less','.compiled.css',$file));
 					
 					$less = new lessc;
 					
+					do_action('tp-less-pre-compile',array(&$less));
+					
 					if($this->force) :
 						$less->compileFile($file,$new_file);
+						update_option('tp-less-rebuild',false);
 					else :
 						$less->checkedCompile($file,$new_file);	
 					endif;
