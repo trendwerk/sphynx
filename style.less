@@ -68,7 +68,12 @@ body {
 	 * @typography Headings 
 	 */
 	
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		color: @heading-color;
 		font-family: @heading-font;
 		font-weight: normal;
@@ -111,21 +116,32 @@ body {
 	 * @typography Content 
 	 */
 	
-	p, ul, ol, address { margin: 0 0 20px 0; }
+	p,
+	ul,
+	ol,
+	address {
+		margin: 0 0 20px 0;
+	}
 
-	ul, ol {
+	ul,
+	ol {
 		line-height: 25px;
 		list-style-position: outside;
 		
-		ul, ol { margin-bottom: 0; }
-	
+		ul,
+		ol {
+			margin-bottom: 0;
+		}
+		
 	}
 	
 	ul { 
 		list-style-type: square; 
 		margin-left: 16px;
 		
-		ul { list-style-type: circle; }
+		ul {
+			list-style-type: circle;
+		}
 		
 	}
 	
@@ -133,7 +149,9 @@ body {
 		list-style-type: decimal;
 		margin-left: 20px;
 		
-		ol { list-style-type: lower-alpha; }
+		ol {
+			list-style-type: lower-alpha;
+		}
 		
 	}
 	
@@ -142,7 +160,9 @@ body {
 		color: lighten(@text-color, 20%);
 		padding: 5px 0 5px 20px;
 		
-		p { margin: 0; }
+		p {
+			margin: 0;
+		}
 	
 	}
 	
@@ -152,21 +172,37 @@ body {
 		padding: 24px; 
 	}
 	
-	abbr, acronym {
+	abbr,
+	acronym {
 		border-bottom: 1px dotted @text-color;
 		cursor: help;
 		
-		&:hover { border-bottom-style: solid; }
+		&:hover {
+			border-bottom-style: solid;
+		}
 		
 	}
 	
-	sub, sup { font-size: 8px; }
+	sub,
+	sup {
+		font-size: 8px;
+	}
 	
-	sub { vertical-align: sub; }
-	sup { vertical-align: super; }
+	sub {
+		vertical-align: sub;
+	}
 	
-	del { color: red; }
-	ins { color: green; }
+	sup {
+		vertical-align: super;
+	}
+	
+	del {
+		color: red;
+	}
+	
+	ins {
+		color: green;
+	}
 	
 	/**
 	 * @typography Links 
@@ -181,14 +217,22 @@ body {
 			text-decoration: underline;
 		}
 		
-		&.more:after, &.more-link:after { content: " \00bb"; }
-		&.back:before { content: "\00ab "; }
+		&.more:after,
+		&.more-link:after {
+			content: " \00bb";
+		}
+		
+		&.back:before {
+			content: "\00ab ";
+		}
 		
 		&.prev {
 			float: left;
 			width: 40%; 
 			
-			&:before { content: "\00ab "; }
+			&:before {
+				content: "\00ab ";
+			}
 		
 		}
 		
