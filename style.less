@@ -21,34 +21,34 @@
  * @import
  */ 
 
-@import 'assets/less/formalize.less'; 
-@import 'assets/less/grid.less'; 
-@import 'assets/less/misc.less'; 
-@import 'assets/less/mixins.less'; 
-@import 'assets/less/navigation.less'; 
-@import 'assets/less/reset.less'; 
-@import 'assets/less/table.less'; 
-@import 'assets/less/typography.less'; 
-@import 'assets/less/wordpress.less'; 
-@import 'assets/less/genericons.less'; 
+@import "assets/less/formalize.less"; 
+@import "assets/less/grid.less"; 
+@import "assets/less/misc.less"; 
+@import "assets/less/mixins.less"; 
+@import "assets/less/navigation.less"; 
+@import "assets/less/reset.less"; 
+@import "assets/less/table.less"; 
+@import "assets/less/typography.less"; 
+@import "assets/less/wordpress.less"; 
+@import "assets/less/genericons.less"; 
 
 /**
  * @variables
  */
 
-@body-background:	#FFF;
+@body-background:	#fff;
 @footer-background:	#333;
-@border-color:		#CCC;
+@border-color:		#ccc;
 
-@primary-color:		#1F6FD1;
+@primary-color:		#1f6fd1;
 @secondary-color:	#999;
 
 @heading-color:		#333;
 @text-color:		#666;
-@link-color:		#1F6FD1;
+@link-color:		#1f6fd1;
 
-@heading-font:		'Helvetica Neue', sans-serif;
-@text-font:			'Helvetica Neue', sans-serif;
+@heading-font:		"Helvetica Neue", sans-serif;
+@text-font:			"Helvetica Neue", sans-serif;
 	
 /**
  * @typography
@@ -181,14 +181,14 @@ body {
 			text-decoration: underline;
 		}
 		
-		&.more:after, &.more-link:after { content: ' \00bb'; }
-		&.back:before { content: '\00ab '; }
+		&.more:after, &.more-link:after { content: " \00bb"; }
+		&.back:before { content: "\00ab "; }
 		
 		&.prev {
 			float: left;
 			width: 40%; 
 			
-			&:before { content: '\00ab '; }
+			&:before { content: "\00ab "; }
 		
 		}
 		
@@ -197,7 +197,7 @@ body {
 			text-align: right;
 			width: 40%;			
 		
-			&:after { content: ' \00bb'; }
+			&:after { content: " \00bb"; }
 		
 		}
 		
@@ -394,7 +394,7 @@ body {
 				
 				input[type="submit"] {
 					.border-radiuses(3px, 3px, 0, 0);
-					background: #FFF url('assets/img/search.png') no-repeat center center;
+					background: #FFF url(assets/img/search.png) no-repeat center center;
 					border: 1px solid @border-color;
 					border-left: none;
 					text-transform: uppercase;
@@ -511,7 +511,7 @@ body {
 		/* Author */
 		
 		.author {
-			background: #FFF;
+			background: #fff;
 			padding: 20px;
 			margin: 0 0 20px 0;
 			
@@ -559,7 +559,7 @@ body {
 	
 		.widget {
 			.border-box;
-			background: #EEE;
+			background: #eee;
 			clear: both;
 			float: left;
 			font-size: 13px;
@@ -1115,9 +1115,9 @@ article .search-highlight { background: #FFFFB3; }
 	}
 	
 	.validation_error {
-		background: #FFF;
-		border: 1px solid #C44741;
-		color: #C44741;
+		background: #fff;
+		border: 1px solid #c44741;
+		color: #c44741;
 		display: block;
 		margin-bottom: 1em;
 		padding: 2%;
@@ -1147,7 +1147,7 @@ article .search-highlight { background: #FFFFB3; }
 					width: 50%;
 					
 					&.validation_message {
-						color: #C44741;
+						color: #c44741;
 					}
 					
 				}
