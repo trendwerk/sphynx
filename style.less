@@ -408,55 +408,83 @@ body {
 		
 		// main navigation	
 		
-		#mainnav {
+		#main-navigation {
 			background: #333;
+			font-size: 13px;
 			height: auto;
 			
-			ul { 
-				margin: 0;
-				
-				li { 
-					display: inline;
+			li {
+							
+				a { 
+					background: #222;
+					color: #fff;
+					height: 40px;
 					line-height: 40px;
+					padding: 0 20px;
+					text-decoration: none;
 					
 					&:hover { 
-						background: darken(@heading-color, 10%);
-						color: #FFF;
+						background: #111;
 					}
+				
+				}
+				
+				li {
 					
 					a {
-						color: #FFF;
-						display: block;
-						float: left;
-						padding: 0 15px;
+						background: #111;
+						height: 30px;
+						line-height: 30px;
+						padding: 0;
+						text-indent: 20px;
 						
-						&:hover { 
-							background: darken(@heading-color, 10%);
-							color: #FFF;
-							text-decoration: none;
+						&:hover {
+						 	background: #000;
 						}
 						
 					}
 					
-					ul { 
-						width: 220px; 	
+				}
+								
+				// current navigation ancestor parent, item
+
+				&.current-menu-ancestor,
+				&.current-page-parent,
+				&.current-menu-item {
 					
-						ul { margin-left: 95px; }
-						
-					}					
-					
-					ul li a, ul ul li a, ul ul ul li a {
-						background: @heading-color;
-						padding: 0 0 0 15px;
-						width: 100%;
+					> a { 
+						background: #111; 
 					}
-							
+					
+					.current-menu-ancestor,
+					.current-page-parent,
+					.current-menu-item {
+					
+						> a { 
+							background: #111;
+							text-decoration: underline;
+						}
+					
+					}
+				
 				}
 				
-			}
-		
-			ul > li.hover > a { background: darken(@heading-color, 10%); }
-		
+				// sfhover alternative
+				
+				&.hover {
+					
+					> a { 
+						background: #111; 
+					}
+					
+					&:hover > a { 
+						background: #000; 
+					}
+					
+				}
+				
+			}			
+						
 		}
 		
 		// breadcrumbs
@@ -1227,7 +1255,7 @@ article .search-highlight { background: #FFFFB3; }
 
 @media (min-width: 980px) {
 		
-	#mainnav {
+	#main-navigation {
 	
 		select { display: none; }
 	
