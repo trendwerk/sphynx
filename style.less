@@ -36,14 +36,12 @@
  * @variables
  */
 
-@body-background:	#fff;
-@footer-background:	#333;
-@border-color:		#ccc;
-
-@primary-color:		#1f6fd1;
+@footer-background: #333;
 @secondary-color:	#999;
-
+@body-background:	#fff;
+@primary-color:		#1f6fd1;
 @heading-color:		#333;
+@border-color:		#ccc;
 @text-color:		#666;
 @link-color:		#1f6fd1;
 
@@ -61,8 +59,9 @@
 body {
 	color: @text-color;
 	font-family: @text-font;
-	font-size: 14px;
-	line-height: 25px;
+	font-size: 15px;
+	line-height: 24px;
+	-webkit-font-smoothing: antialiased;
 	
 	/**
 	 * @typography Headings 
@@ -77,39 +76,38 @@ body {
 		color: @heading-color;
 		font-family: @heading-font;
 		font-weight: normal;
-		line-height: 1;
 	}
 	
 	h1 { 
 		font-size: 36px;
-		margin: 0 0 25px 0;
+		margin: 0 0 32px 0;
 	}
 	
 	h2 { 
 		font-size: 24px;
-		margin: 0 0 25px 0;
+		margin: 0 0 24px 0;		
 	}
 	
 	h3 { 
 		font-size: 20px; 
-		margin: 0 0 25px 0;
+		margin: 0 0 24px 0;		
 	}
 	
 	h4 { 
 		font-size: 18px;
-		margin: 0 0 25px 0;
+		margin: 0 0 24px 0;		
 	}
 	
 	h5 { 
 		font-size: 16px;
 		font-weight: bold;
-		margin: 0 0 25px 0;
+		margin: 0 0 24px 0;
 	}
 
 	h6 { 
 		font-size: 14px;
 		font-weight: bold;
-		margin: 0 0 25px 0;
+		margin: 0 0 24px 0;		
 	}
 	
 	/**
@@ -120,12 +118,11 @@ body {
 	ul,
 	ol,
 	address {
-		margin: 0 0 20px 0;
+		margin: 0 0 24px 0;
 	}
 
 	ul,
 	ol {
-		line-height: 25px;
 		list-style-position: outside;
 		
 		ul,
@@ -167,7 +164,6 @@ body {
 	}
 	
 	pre { 
-		color: #000 !important;
 		margin-bottom: 24px;
 		padding: 24px; 
 	}
@@ -241,13 +237,16 @@ body {
 			text-align: right;
 			width: 40%;			
 		
-			&:after { content: " \00bb"; }
+			&:after { 
+				content: " \00bb";
+			}
 		
 		}
 		
 		&.cta {
 			.border-radius(3px);
 			display: inline-block;
+			font-weight: bold;
 			height: 40px;
 			line-height: 40px;
 			padding: 0 20px;
@@ -265,9 +264,14 @@ body {
 				background: @primary-color;
 				color: #FFF;
 				
-				&:hover { background: darken(@primary-color, 5%); }
+				&:hover { 
+					background: darken(@primary-color, 5%);
+				}
 				
-				&:active, &:focus { background: lighten(@primary-color, 5%); }
+				&:active,
+				&:focus  { 
+					background: lighten(@primary-color, 5%); 
+				}
 			
 			}
 			
@@ -275,9 +279,14 @@ body {
 				background: @secondary-color;
 				color: #FFF;
 				
-				&:hover { background: darken(@secondary-color, 5%); }
+				&:hover { 
+					background: darken(@secondary-color, 5%);
+				}
 				
-				&:active, &:focus { background: lighten(@secondary-color, 5%); }
+				&:active,
+				&:focus { 
+					background: lighten(@secondary-color, 5%);
+				}
 			
 			}		
 		
@@ -296,18 +305,22 @@ body {
 /**
  * @misc Images
  */ 
- 
-img.alignleft, img.alignright {
+
+img.alignright, 
+img.alignleft {
 	margin-top: 6px; 
 	margin-bottom: 12px;
 }
 
-img.size-thumbnail, .wp-caption {
+img.size-thumbnail, 
+.wp-caption {
 	background: #F7F7F7;
 	border: 1px solid @border-color;
 	padding: 4px;
 		
-	.wp-caption-text { font-size: 12px; }
+	.wp-caption-text { 
+		font-size: 12px;
+	}
 
 }
 
@@ -315,22 +328,30 @@ img.size-thumbnail, .wp-caption {
  * @misc Forms
  */
 
+input,
+select,
+textarea {
+	border: 1px solid @border-color;
+	-webkit-font-smoothing: antialiased;
+}
+
 #main input[type="submit"] {
+	.border-radius(3px);
 	border-width: 0;
 	background: @primary-color;
 	color: #FFF;
 	display: block;
 	font-size: 14px;
+	font-weight: bold;
 	height: 35px;
 	line-height: 35px;
 	padding: 0 15px;
 	position: relative;
-	text-shadow: 0 1px 0 darken(@primary-color, 15%);
 	
-	&:focus, &:active {
+	&:focus, 
+	&:active {
 		.box-shadow(none);
 		background: darken(@primary-color, 10%);
-		text-shadow: 0 1px 0 darken(@primary-color, 25%);
 		top: 1px;
 	}
 	
@@ -354,13 +375,14 @@ body {
 	#header {
 		background: @body-background;
 		color: @text-color;
-		height: auto;
-		margin: 10px 0;
+		margin: 20px 0 10px 0;
 		
 		a { 
 			color: @text-color; 
 			
-			&:hover { color: darken(@text-color, 25%); }
+			&:hover { 
+				color: darken(@text-color, 25%);
+			}
 		
 		}
 		
@@ -369,7 +391,7 @@ body {
 		#logo {
 					
 			#sitename { 
-				font: bold 38px @heading-font;
+				font: bold 44px @heading-font;
 				line-height: 40px;
 				margin: 0;
 				
@@ -381,7 +403,9 @@ body {
 				
 			}
 			
-			#description { margin: 0; }
+			#description {
+				margin: 10px 0 0 0;
+			}
 			
 		}
 		
@@ -389,7 +413,7 @@ body {
 				
 		#topnav {
 			float: right;
-			margin: 10px 10px 0px 10px;
+			margin: 10px 10px 0 10px;
 		
 			ul {
 				float: right;
@@ -399,11 +423,12 @@ body {
 					display: inline-block;
 					font-size: 12px;
 					padding: 0 5px;
-					
-					a { text-decoration: underline; }
-					
-					&:last-child, &.last-child { padding-right: 0; }				
-				
+										
+					&:last-child, 
+					&.last-child { 
+						padding-right: 0; 
+					}
+										
 				}
 			
 			}
@@ -416,29 +441,31 @@ body {
 			
 			form { 
 				float: right; 
+				margin: 10px 0;
 				
 				input[type="text"], input[type="submit"] {
 					display: block;
 					float: left;
 					height: 28px;
 					
-					&:focus, &:active { .box-shadow(none); }
+					&:focus, &:active { 
+						.box-shadow(none); 
+					}
 				
 				} 
 				
 				input[type="text"] { 
-					.placeholder(#666, #EEE);
+					.placeholder(#666, #eee);
 					.border-radiuses(0, 0, 3px, 3px);
 					border: 1px solid @border-color;
 					border-right: none;
-					margin-top: 0 !important; 
 					padding-left: 10px;
 					width: 188px; 
 				}
 				
 				input[type="submit"] {
 					.border-radiuses(3px, 3px, 0, 0);
-					background: #FFF url(assets/img/search.png) no-repeat center center;
+					background: #fff url(assets/img/search.png) no-repeat center center;
 					border: 1px solid @border-color;
 					border-left: none;
 					text-transform: uppercase;
@@ -462,8 +489,9 @@ body {
 				a { 
 					background: #222;
 					color: #fff;
-					height: 40px;
-					line-height: 40px;
+					font-size: 14px;
+					height: 50px;
+					line-height: 50px;
 					padding: 0 20px;
 					text-decoration: none;
 					
@@ -477,6 +505,7 @@ body {
 					
 					a {
 						background: #111;
+						font-size: 13px;
 						height: 30px;
 						line-height: 30px;
 						padding: 0;
@@ -498,6 +527,7 @@ body {
 					
 					> a { 
 						background: #111; 
+						text-decoration: underline;
 					}
 					
 					.current-menu-ancestor,
@@ -535,7 +565,7 @@ body {
 				
 		#breadcrumbs { 
 			color: lighten(@text-color, 20%);
-			font-size: 12px;
+			font-size: 13px;
 		}
 		
 	}
@@ -550,75 +580,85 @@ body {
 		
 		// content
 		
-		#page-title { }
-		
-		.article-title, .search-title {
-			
-			a { 
-				color: @heading-color;
-				text-decoration: none;
-				
-				&:hover { 
-					color: @link-color;
-					text-decoration: underline;
-				}
-				
-			}
-			
-		}
-		
-		.meta { 
-			color: lighten(@text-color, 20%);
-			font-size: 13px;
-			margin: 0 0 15px 0;
-			
-			a { 
-				color: @text-color;
-				
-				&:hover { color: @link-color; } 
-			}
-			
-		}
-				
-		/* Author */
-		
-		.author {
-			background: #fff;
-			padding: 20px;
-			margin: 0 0 20px 0;
-			
-			.author-avatar {
-				float: left;
-				margin: 5px 0 0 0;
-			}
-			
-			.author-info {
-				padding-left: 100px;
-				
-				ul.author-social {
-					list-style: none;
-					margin: 0;
+		#content {
+			.border-box;
+			padding-right: 20px;
 					
-					li {
-						float: left;
-						margin: 0 10px 20px 0;
-						
-						img,
-						svg {
-							height: 16px;
-							width: 16px;
-							margin: 0 5px 0 0;
-							vertical-align: middle;
-						}
+			.article-title, .search-title {
+				
+				a { 
+					color: @heading-color;
+					text-decoration: none;
+					
+					&:hover { 
+						color: @link-color;
+						text-decoration: underline;
 					}
-				}
-				a.more {
-					float: right;
-					margin: 0 10px 10px 0;
+					
 				}
 				
 			}
 			
+			.meta { 
+				color: lighten(@text-color, 20%);
+				font-size: 13px;
+				margin: 0 0 15px 0;
+				
+				a { 
+					color: @text-color;
+					
+					&:hover { 
+						color: @link-color; 
+					}
+					
+				}
+				
+			}
+					
+			/* Author */
+			
+			.author {
+				background: #fff;
+				padding: 20px;
+				margin: 0 0 20px 0;
+				
+				.author-avatar {
+					float: left;
+					margin: 5px 0 0 0;
+				}
+				
+				.author-info {
+					padding-left: 100px;
+					
+					ul.author-social {
+						list-style: none;
+						margin: 0;
+						
+						li {
+							float: left;
+							margin: 0 10px 20px 0;
+							
+							img,
+							svg {
+								height: 16px;
+								width: 16px;
+								margin: 0 5px 0 0;
+								vertical-align: middle;
+							}
+
+						}
+
+					}
+
+					a.more {
+						float: right;
+						margin: 0 10px 10px 0;
+					}
+					
+				}
+				
+			}
+	
 		}
 
 	}
@@ -640,23 +680,26 @@ body {
 			width: 100%;
 			
 			.widgettitle { 	
+				font-weight: bold;
 				margin-top: 0;
 				
 				a { 
 					color: @heading-color;
 					text-decoration: none;
 					
-					&:hover { text-decoration: underline; }
+					&:hover { 
+						text-decoration: underline; 
+					}
 					
 				 }
 			
 			}
 			
 			p {
-				line-height: 20px;
-				margin-bottom: 20px;
 				
-				&:last-child { margin-bottom: 0; }
+				&:last-child { 
+					margin-bottom: 0;
+				}
 				
 			}
 			
@@ -697,8 +740,8 @@ body {
 			&.widget_tp_contact {
 			
 				span.label { 
-					width: 80px;
 					display: inline-block;
+					width: 80px;
 				}
 				
 			}
@@ -710,12 +753,14 @@ body {
 			&.widget_search {
 				
 				input[type="text"] {
+					.border-radius(3px);
+					.placeholder(#666, #fff);
 					float: left;
 					font-size: 14px;
 					height: 36px;
 					margin-right: 10px;
 					padding-left: 10px;
-					width: 170px;
+					width: 164px;
 				}
 				
 			}
@@ -769,7 +814,7 @@ body {
 						li {
 							clear: both;
 							float: left;
-							padding: 0 5px;
+							padding: 0;
 							width: 100%;
 							
 							a { 
@@ -788,6 +833,7 @@ body {
 																
 								.title { 
 									font-style: normal;
+									text-decoration: underline;
 								}
 																
 							}
@@ -801,7 +847,7 @@ body {
 						li {
 							border-top: none;
 							float: left;
-							padding: 7px 2px;
+							padding: 5px 2px;
 							width: auto;
 							
 							a { 
@@ -841,8 +887,8 @@ body {
 				
 					a {
 						.border-radius(3px);
-						color: #FFF;
-						background: #CCC;
+						color: #fff;
+						background: @primary-color;
 						display: inline-block;
 						font-size: 12px !important;
 						line-height: 25px;
@@ -850,7 +896,9 @@ body {
 						padding: 0 10px;
 						text-decoration: none;
 						
-						&:hover { background: @link-color; }
+						&:hover {
+							background: @link-color;
+						}
 						
 					}
 				
@@ -868,30 +916,35 @@ body {
 	
 	#footer {
 		background: @footer-background;
-		color: #FFF;
+		color: #fff;
 		font-size: 13px;
 		margin: 20px 0 0 0;
 		
 		a { 
-			color: #FFF; 
+			color: #fff; 
 			
-			&:hover { color: #CCC; }
+			&:hover { 
+				color: #ccc;
+			}
 			
 		}
 		
 		.sidebar {
+			float: left;
+			width: 100%;
 		
 			.widget {
 				background: none;
+				clear: none;
 				float: left;
 				margin: 10px;
 				padding: 20px 0;
 				width: 220px;
 				
-				h3 { color: #FFF; }
-				
-				svg { fill: #FFF; }
-
+				h3 { 
+					color: #FFF; 
+				}
+	
 			}
 			
 		}
@@ -900,9 +953,13 @@ body {
 			border-top: 1px solid @border-color;
 			padding: 10px 0;
 			
-			p {	margin: 0; }
+			p {	
+				margin: 0; 
+			}
 			
-			#copyright { float: left; }
+			#copyright { 
+				float: left;
+			}
 			
 			#footernav { 
 				float: right; 
@@ -912,7 +969,10 @@ body {
 					li {
 						display: inline;
 						
-						&:last-child a, &.last-child a { padding-right: 0; }
+						&:last-child a, 
+						&.last-child a { 
+							padding-right: 0;
+						}
 
 						a { 
 							float: left;
@@ -986,7 +1046,7 @@ body {
 
 	#content {
 			
-		#page-title { margin-bottom: 5px; }
+		#page-title { margin-bottom: 10px; }
 		
 		.share {
 			clear: both;
