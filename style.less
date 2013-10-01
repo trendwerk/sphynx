@@ -30,6 +30,7 @@
 @import 'assets/less/table.less'; 
 @import 'assets/less/typography.less'; 
 @import 'assets/less/wordpress.less'; 
+@import 'assets/less/genericons.less'; 
 
 /**
  * @variables
@@ -557,10 +558,14 @@ body {
 	.sidebar {
 	
 		.widget {
+			.border-box;
 			background: #EEE;
+			clear: both;
+			float: left;
 			font-size: 13px;
 			margin: 0 0 20px 0;
 			padding: 20px;
+			width: 100%;
 			
 			.widgettitle { 	
 				margin-top: 0;
@@ -650,77 +655,104 @@ body {
 			&.widget_tp_social {
 			
 				ul {	
+					border: none;
+					display: block;
 					list-style-type: none;
 					margin: 0;
 					padding: 0;
 					
+					li {
+						border-top: none;
+					}
+										
 					&.large-icons {
-						border-bottom: none;
 						
 						li {
-							border-top: none;
 							display: inline;
 							padding: 0;
 							
 							a { 
 								float: left;
-								height: 32px;
-								margin: 0 10px 10px 0;
-								width: 32px;	
+								text-decoration: none;
+								height: 34px;
+								width: 34px;
 								
-								span { display: none; }
-								
+								.genericon { 
+									display: inline-block;
+									font-size: 25px;
+								}
+																
+								.title { 
+									display: none;
+								}
+																
 							}
 							
-						}
-						
-						img, svg {
-							height: 32px;
-							margin: 0 10px 0 0;
-							vertical-align: middle;
-							width: 32px;
 						}
 	
 					}
 							
-					&.small-icons {
-						border-bottom: none;
+					&.small-icons-text {
 						
 						li {
-							border-top: none;
-							display: inline;
+							clear: both;
+							float: left;
+							padding: 0 5px;
+							width: 100%;
 							
 							a { 
-								display: block;
 								float: left;
-								height: auto;
-								margin: 0 5px 5px 0;
-								width: 20px;	
+								text-decoration: none;
 								
-								span { display: none; }
+								span {
+									line-height: 30px;
+								}
 								
+								.genericon { 
+									display: inline-block;
+									font-size: 18px;
+									margin-right: 10px;
+								}
+																
+								.title { 
+									font-style: normal;
+								}
+																
 							}
 							
 						}
 						
-						img, svg {
-							display: block;
-							height: 16px;
-							vertical-align: middle;
-							width: 16px;
-						}
-						
 					}
 					
-					&.small-icons-text {
-					
-						img, svg {
-							display: block;
+					&.small-icons {
+
+						li {
+							border-top: none;
 							float: left;
-							height: 16px;
-							margin: 4px 12px 0 0;
-							vertical-align: middle;
-							width: 16px;
+							padding: 7px 2px;
+							width: auto;
+							
+							a { 
+								float: left;
+								text-decoration: none;
+								
+								span {
+									line-height: 30px;
+								}
+								
+								.genericon { 
+									display: inline-block;
+									float: left;
+									font-size: 18px;
+									margin-right: 3px;
+								}
+																
+								.title { 
+									display: none;
+								}
+																
+							}
+							
 						}
 						
 					}
@@ -747,6 +779,7 @@ body {
 						text-decoration: none;
 						
 						&:hover { background: @link-color; }
+						
 					}
 				
 				}
