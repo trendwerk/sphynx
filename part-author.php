@@ -6,7 +6,7 @@
 	if(get_the_author_meta('show_profile',$author) == true) :
 ?>
 	
-	<section class="author" itemscope itemtype="http://schema.org/Person">
+	<section class="author-card" itemscope itemtype="http://schema.org/Person">
 	
 		<div class="author-avatar" itemprop="image">
 			<?php if (is_author()) { ?>

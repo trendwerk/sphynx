@@ -3,7 +3,6 @@
 <!--[if IE 7]><html class="no-js ie ie8> <![endif]-->
 <!--[if IE 8]><html class="no-js ie ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
-
 	<head>
 		<title><?php wp_title('-'); ?></title>
 		<meta charset="<?php bloginfo('charset'); ?>" />
@@ -42,6 +41,7 @@
 				<div id="search" class="sixcol">
 					<?php get_search_form(); ?>
 				</div>
+				
 				<nav id="main-navigation" class=" twelvecol">				
 					<?php 
 						wp_nav_menu( array(
@@ -57,14 +57,14 @@
 				<?php if ( is_front_page() ) { ?>
 					<!-- Enter code here for custom homepage header -->
 				<?php } else { ?>
-				
-					<nav id="breadcrumbs" class="twelvecol">
+
+					<nav id="breadcrumbs" itemprop="breadcrumb" class="twelvecol">
 						<?php _e('You are here:','tp') ?>
 						<?php if (function_exists('tp_breadcrumbs')) tp_breadcrumbs('»'); ?>
 					</nav>
-					
+
 				<?php } ?>
-				
+
 			</div><!-- .container-inner -->
-			
+
 		</header><!-- #header -->

@@ -36,25 +36,25 @@
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-				<article <?php post_class(); ?>>
+				<article <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
 				
-					<h2 class="article-title">
+					<h2 class="entry-title" itemprop="name">
 						<a href="<?php the_permalink() ?>">
 							<?php the_title(); ?>
 						</a>
 					</h2>
 					
 					<p class="meta">
-						<?php _e('Posted on','tp')?> <time datetime="<?php the_time('Y-m-d') ?>"><?php echo get_the_date(); ?></time> <?php _e('by','tp') ?> <?php the_author_posts_link() ?> <?php _e('in the category','tp') ?> <?php the_category(', ') ?>
+						<?php _e('Posted on','tp')?> <span class="date updated" itemprop="dateCreated"><time datetime="<?php the_time('Y-m-d') ?>"><?php echo get_the_date(); ?></time></span> <?php _e('by','tp'); ?> <span class="vcard author" itemprop="author"><span class="fn"><?php the_author_posts_link(); ?></span></span> <?php _e('in the category','tp'); ?> <span itemprop="genre"><?php the_category(', '); ?></span>
 					</p>
 					
 					<div class="article-thumbnail">
 						<a href="<?php echo the_permalink(); ?>">
-							<?php the_post_thumbnail('thumbnail'); ?>
+							<?php the_post_thumbnail('thumbnail', array('itemprop' => 'thumbnailUrl')); ?>
 						</a>
 					</div>
 					
-					<p>
+					<p itemprop="description">
 						<?php tp_the_excerpt(50); ?>
 						<a class="more" href="<?php echo the_permalink(); ?>">
 							<?php _e('Read more','tp'); ?>
