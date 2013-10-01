@@ -45,4 +45,3 @@ add_action('wp_enqueue_scripts','tp_enqueue_scripts');
  * @languages Add the language domain
  */
 load_theme_textdomain('tp',STYLESHEETPATH.'/assets/lang');
-?>

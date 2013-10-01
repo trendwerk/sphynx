@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 /**
  * @posttype Register post types, taxonomies and setup support
  */
@@ -14,4 +15,3 @@ function tp_register_post_types() {
 	 */
 }
 add_action('init','tp_register_post_types');
-?>

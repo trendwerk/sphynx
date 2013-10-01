@@ -41,4 +41,3 @@ function tp_modify_profile($media) {
 	return $media;
 }
 add_filter('user_contactmethods','tp_modify_profile');
-?>
