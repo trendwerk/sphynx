@@ -21,6 +21,7 @@
 		<div class="author-info">
 		
 			<?php if (is_single()) { echo '<span class="author-writtenby">'.__('Written by','tp').':</span>'; } ?>
+			
 			<h4 class="author-name" itemprop="name">
 				<?php the_author_meta('display_name',$author); ?>
 			</h4>
@@ -77,7 +78,8 @@
 				<a class="more" href="<?php echo $authorurl; ?>" rel="author"><?php printf(__('View all %1$s posts','tp'),count_user_posts($author)); ?></a>
 			<?php endif; ?>
 			
-			<div class="clear"></div>
+			<div class="clear">
+			</div>
 			
 		</div>
 		

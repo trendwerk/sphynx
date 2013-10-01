@@ -2,6 +2,7 @@
     if ( post_password_required() )
     	return;
 ?>
+
 <div id="comments">
 
     <?php if ( have_comments() ) : ?>
@@ -34,7 +35,11 @@
     <?php endif; ?>
     
     <?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-    	<p class="no-comments"><?php _e( 'Comments are closed', 'tp' ); ?>.</p>
+    
+    	<p class="no-comments">
+    		<?php _e( 'Comments are closed', 'tp' ); ?>.
+    	</p>
+    	
     <?php endif; ?>
     
     <?php comment_form(); ?>

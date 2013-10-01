@@ -16,6 +16,7 @@ include('assets/inc/functions.misc.php');
  * @scripts Enqueue scripts
  */
 function tp_enqueue_scripts() {
+
 	//Enqueue used parent libraries
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('cycle');
@@ -39,6 +40,7 @@ function tp_enqueue_scripts() {
 	}
 
 }
+
 add_action('wp_enqueue_scripts','tp_enqueue_scripts');
 
 /**

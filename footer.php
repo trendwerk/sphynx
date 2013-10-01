@@ -1,4 +1,5 @@
 		<footer id="footer" class="container">
+		
 			<div class="container-inner">
 			
 				<aside class="sidebar">
@@ -26,6 +27,7 @@
 				</div>
 				
 			</div><!-- .container-inner -->
+			
 		</footer><!-- #footer -->
 		
 		<?php wp_footer(); ?>
@@ -43,4 +45,5 @@
 		<![endif]-->
 		
 	</body>
+	
 </html>

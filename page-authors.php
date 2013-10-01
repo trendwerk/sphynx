@@ -5,6 +5,7 @@
 ?>
 
 <section id="main" class="container">
+
 	<div class="container-inner">
 	
 		<aside class="sidebar fourcol">
@@ -12,9 +13,12 @@
 		</aside>
 		
 		<article id="content" class="eightcol">
+		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				
-				<h1 id="page-title"><?php the_title(); ?></h1>
+				<h1 id="page-title">
+					<?php the_title(); ?>
+				</h1>
 				
 				<?php the_content(); ?>
 				
@@ -22,6 +26,7 @@
 					$users = get_users('orderby=display_name'); 
 					if($users) :
 				?>
+				
 					<section id="authors">				
 						<?php 
 							foreach($users as $user) : 
@@ -30,12 +35,15 @@
 							endforeach; 
 						?>
 					</section>
+					
 				<?php endif; ?>
 				
 			<?php endwhile; endif; ?>
+			
 		</article>
 	
 	</div><!-- .container-inner -->
+	
 </section><!-- #main -->
 
 <?php get_footer(); ?>
