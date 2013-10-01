@@ -1,0 +1,132 @@
+/**
+ * @navigation base
+ */
+ 
+/**
+ * @main-navigation
+ */
+ 
+.sf-menu, .sf-menu * {
+	list-style: none; 
+	margin: 0;
+	padding: 0;
+}
+	
+.sf-menu { line-height:	1.0; }
+
+	.sf-menu ul {
+		position: absolute;
+		top: -999em;
+		width: 10em;
+	}
+		
+		.sf-menu ul li { width: 100%; }
+
+			.sf-menu li:hover { visibility: inherit; }
+
+		.sf-menu li {
+			float: left;
+			position: relative;
+		}
+			
+			.sf-menu a {
+				display: block;
+				position: relative;
+			}
+
+			.sf-menu li:hover ul,
+			.sf-menu li.sfHover ul {
+				left: 0;
+				top: 40px;
+				z-index: 99;
+			}
+
+			ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul { top: -999em; }
+
+			ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
+				left: 10em;
+				top: 0; 
+			}
+
+			ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul { top: -999em; }
+
+			ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
+				left: 10em;
+				top: 0;
+			}
+
+			.sf-menu { float: left; }
+
+				.sf-menu a {
+					border: none;
+					text-decoration: none;
+				}
+
+					.sf-menu li { background: none; }
+					
+						.sf-menu li li { background: none; }
+						
+							.sf-menu li li li { background: none; }
+							
+								.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active { background: none; }
+								
+
+/**
+ * @pagination
+ */
+ 
+nav#pagination {
+	clear: both;
+	float: left;
+	font-size: 14px; 
+	height: auto;
+	margin: 0 0 25px 0;
+	width: 100%;
+}
+	
+	nav#pagination span.pagination-title { display: none; }
+	
+	nav#pagination ul { 
+		margin: 0; 
+		text-align: center;
+		width: auto; 
+	}
+				
+		nav#pagination ul li { 
+			display: inline-block;
+			list-style-type: none;
+		}
+		
+			nav#pagination ul li a { text-decoration: none; }
+			
+			nav#pagination ul li a.pagination-page, nav#pagination ul li span.pagination-current { 
+				border: 1px solid #CCC;
+				position: relative;
+				margin: 0 3px;
+				padding: 2px 6px;
+			}
+			
+			nav#pagination ul li a.pagination-prev { 
+				border: none;
+				margin: 0 5px 0 0;
+			}
+			
+			nav#pagination ul li a.pagination-next { 
+				border: none;
+				margin: 0 0 0 5px;
+			}
+			
+			nav#pagination .pagination-gap {
+			    margin: 0 3px;
+			    position: relative;
+			}
+			
+			nav#pagination .previous-post {
+				float: left;
+				margin: 0 10px 0 0;
+			}
+				
+			nav#pagination .next-post {
+				float: right;
+				margin: 0 0 0 10px;
+			}
