@@ -5,6 +5,7 @@
 	<div class="container-inner">
 	
 		<article id="content" class="eightcol">
+		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				
 				<h1 id="page-title">
