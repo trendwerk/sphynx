@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 7 ]><html class="no-js ie ie7" lang="nl"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="nl"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie ie9" lang="nl"><![endif]-->
-<!--[if gt IE 9]><html class="no-js ie" lang="nl"><![endif]-->
-<!--[if !IE]><!-->
-<html class="no-js" <?php language_attributes(); ?>>
-<!--<![endif]-->
+<!--[if lt IE 7]><html class="no-js ie ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie8> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
 	<head>
 		<title><?php wp_title('-'); ?></title>
 		<meta charset="<?php bloginfo('charset'); ?>" />
