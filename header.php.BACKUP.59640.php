@@ -42,7 +42,12 @@
 				<div id="search" class="sixcol">
 					<?php get_search_form(); ?>
 				</div>
+<<<<<<< HEAD
 				<nav id="main-navigation" class=" twelvecol">				
+=======
+				
+				<nav id="mainnav" class="navigation twelvecol">				
+>>>>>>> dcccf8fb968312c03239ae2e075d04e5f8fd99ad
 					<?php 
 						wp_nav_menu( array(
 							'theme_location' => 'mainnav',

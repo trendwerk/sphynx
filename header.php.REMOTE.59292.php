@@ -42,12 +42,13 @@
 				<div id="search" class="sixcol">
 					<?php get_search_form(); ?>
 				</div>
-				<nav id="main-navigation" class=" twelvecol">				
+				
+				<nav id="mainnav" class="navigation twelvecol">				
 					<?php 
 						wp_nav_menu( array(
 							'theme_location' => 'mainnav',
 							'container' => '',
-							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'items_wrap' => '<ul id="%1$s" class="%2$s sf-menu">%3$s</ul>',
 							'depth' => '0',
 							'mobile' => true 
 						)); 
