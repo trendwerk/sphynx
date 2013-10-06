@@ -30,7 +30,7 @@
 @import "assets/less/table.less"; 
 @import "assets/less/typography.less"; 
 @import "assets/less/wordpress.less"; 
-@import "assets/less/genericons.less"; 
+@import "assets/less/fontawesome.less"; 
 
 /**
  * @variables
@@ -780,9 +780,12 @@ body {
 					
 					li {
 						border-top: none;
+						-webkit-font-smoothing: subpixel-antialiased;
 					}
 										
 					&.large-icons {
+						
+						i { font-size: 30px; }
 						
 						li {
 							display: inline;
@@ -793,11 +796,6 @@ body {
 								text-decoration: none;
 								height: 34px;
 								width: 34px;
-								
-								.genericon { 
-									display: inline-block;
-									font-size: 25px;
-								}
 																
 								.title { 
 									display: none;
@@ -810,11 +808,19 @@ body {
 					}
 							
 					&.small-icons-text {
+					
+						i { 	
+							display: inline-block;
+							font-size: 20px;
+							margin-right: 6px;
+							position: relative;
+							top: 3px; 
+						}
 						
 						li {
 							clear: both;
 							float: left;
-							padding: 0;
+							padding: 0 2px 0 0;
 							width: 100%;
 							
 							a { 
@@ -823,12 +829,6 @@ body {
 								
 								span {
 									line-height: 30px;
-								}
-								
-								.genericon { 
-									display: inline-block;
-									font-size: 18px;
-									margin-right: 10px;
 								}
 																
 								.title { 
@@ -843,6 +843,10 @@ body {
 					}
 					
 					&.small-icons {
+					
+						i { 
+							font-size: 18px;
+						}
 
 						li {
 							border-top: none;
@@ -856,13 +860,6 @@ body {
 								
 								span {
 									line-height: 30px;
-								}
-								
-								.genericon { 
-									display: inline-block;
-									float: left;
-									font-size: 18px;
-									margin-right: 3px;
 								}
 																
 								.title { 
@@ -887,8 +884,9 @@ body {
 				
 					a {
 						.border-radius(3px);
-						color: #fff;
-						background: @primary-color;
+						background: #fff;
+						border: 1px solid @link-color;
+						color: @link-color;
 						display: inline-block;
 						font-size: 12px !important;
 						line-height: 25px;
@@ -897,7 +895,9 @@ body {
 						text-decoration: none;
 						
 						&:hover {
-							background: @link-color;
+							background: darken(@link-color, 15%);
+							border-color: darken(@link-color, 15%);
+							color: #fff;
 						}
 						
 					}
@@ -1061,12 +1061,14 @@ body {
 	}
 	
 	#comments { 
+		border-top: 1px solid @border-color;
 		clear: both;
 		float: left;
-		margin: 25px 0 0 0;
+		margin: 46px 0 24px 0;
+		padding: 24px 0 0 0;
 		width: 100%;
 		
-		.comments-title { margin-bottom: 15px; }
+		.comments-title { margin-bottom: 12px; }
 	
 		.commentlist {
 			clear: both;
@@ -1076,10 +1078,10 @@ body {
 			padding: 0;
 			width: 100%;
 			
-			li:first-child { padding-top: 25px; }
+			li:first-child { padding-top: 24px; }
 			 
 			 ul.children { 
-			 	margin-top: 25px; 
+			 	margin-top: 24px; 
 			 	width: 100%;
 			 	
 			 	li:first-child { padding-top: 0 !important }
@@ -1093,19 +1095,30 @@ body {
 			 	clear: both;
 				display: block;
 				float: left;
-				margin: 0 0 25px 0;
+				margin: 0;
 				min-height: auto;
-				padding: 0 25px 0 0;
+				padding: 0;
 				width: 100%;
+							
+				ul {
+					margin: 0;
+					
+					li { padding: 0; 
+						margin: 0;
+					}
+					
+				}			
 							
 				.comment-body {
 					position: relative;
 				
 					.comment-author {
 						float: left;
-						margin-bottom: 15px;
+						margin-bottom: 12px;
 						
 						.avatar { 
+							.border-radius(999999px);
+							.box-shadow(0 0 1px rgba(0,0,0,0.5));
 							float: left;
 							margin-right: 20px;
 						}
@@ -1152,8 +1165,11 @@ body {
 						.comment-edit-link { display: none; }
 						
 					}
+					
 				}
+				
 			}
+			
 		}
 		
 		#respond { 
@@ -1164,6 +1180,7 @@ body {
 			padding: 25px 0;
 			position: relative;
 			margin-bottom: 25px;
+			margin-top: 24px;
 			width: 100%;
 			
 			p {
@@ -1229,6 +1246,18 @@ body {
  */
 
 article .search-highlight { background: #FFFFB3; }
+
+.search-no-results {
+	
+	#content input[type="text"] {
+		.border-radius(3px);
+		float: left;
+		margin-right: 10px;
+		padding: 0 0 0 10px;
+		height: 35px;
+	}
+	
+}
 
 /**
  * @plugins

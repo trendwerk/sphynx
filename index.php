@@ -38,7 +38,7 @@
 			
 				<article <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
 				
-					<h2 class="entry-title" itemprop="name">
+					<h2 class="entry-title" itemprop="headline">
 						<a href="<?php the_permalink() ?>">
 							<?php the_title(); ?>
 						</a>
@@ -55,7 +55,7 @@
 					</div>
 					
 					<p itemprop="description">
-						<?php tp_the_excerpt(50); ?>
+						<?php tp_the_excerpt(65); ?>
 						<a class="more" href="<?php echo the_permalink(); ?>">
 							<?php _e('Read more','tp'); ?>
 						</a>
