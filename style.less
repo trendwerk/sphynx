@@ -60,7 +60,7 @@ body {
 	color: @text-color;
 	font-family: @text-font;
 	font-size: 15px;
-	line-height: 24px;
+	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
 	
 	/**
@@ -76,38 +76,35 @@ body {
 		color: @heading-color;
 		font-family: @heading-font;
 		font-weight: normal;
+		margin: 0 0 24px 0;
 	}
 	
 	h1 { 
 		font-size: 36px;
-		margin: 0 0 32px 0;
 	}
 	
 	h2 { 
-		font-size: 24px;
-		margin: 0 0 24px 0;		
+		font-size: 24px; 
 	}
 	
 	h3 { 
-		font-size: 20px; 
-		margin: 0 0 24px 0;		
+		font-size: 20px;
+		font-weight: bold;
 	}
 	
 	h4 { 
 		font-size: 18px;
-		margin: 0 0 24px 0;		
+		font-weight: bold;
 	}
 	
 	h5 { 
 		font-size: 16px;
 		font-weight: bold;
-		margin: 0 0 24px 0;
 	}
 
 	h6 { 
 		font-size: 14px;
 		font-weight: bold;
-		margin: 0 0 24px 0;		
 	}
 	
 	/**
@@ -1015,7 +1012,9 @@ body {
 		border-bottom: 1px solid @border-color;
 		float: left;
 		margin-bottom: 20px;
-		padding: 20px 0 40px 0;
+		padding: 0 0 40px 0;
+		
+		&:first-child { border-bottom: 0; }
 				
 		.entry-title { margin-bottom: 5px; }
 		
@@ -1266,15 +1265,9 @@ article .search-highlight { background: #FFFFB3; }
  *
  * @plugin Gravity forms
  */
-
+ 
 .gform_wrapper {
-	
-	.gform_heading, .gform_footer {	
-		clear: both;
-		margin-bottom: 1em;
-		width: 100%;
-	}
-	
+
 	.validation_error {
 		background: #fff;
 		border: 1px solid #c44741;
@@ -1284,7 +1277,17 @@ article .search-highlight { background: #FFFFB3; }
 		padding: 2%;
 		width: 96%;
 	}
+ 
+}
+
+#content .gform_wrapper {
 	
+	.gform_heading, .gform_footer {	
+		clear: both;
+		margin-bottom: 1em;
+		width: 100%;
+	}
+		
 	.gform_body {
 		
 		.gform_fields {
@@ -1376,6 +1379,63 @@ article .search-highlight { background: #FFFFB3; }
 		
 	}
 
+}
+
+.gform_widget {
+	
+	.validation_message {
+		clear: both;
+		color: #c44741;
+		display: block;
+		padding: 10px 0;
+		float: left;
+	}
+	
+	form {
+		position: relative;	
+		
+		ul {
+			clear: both;
+			display: block;
+			float: left;
+			width: 100%;
+		
+			li {
+				border: none !important; 
+				display: block;
+				margin: 0 !important;
+				padding: 0 !important;
+				width: 100%;
+			}
+		
+		}
+				
+		.gform_body, .gform_footer {
+			width: 100%;
+			position: relative;
+		}
+		
+		input[type="text"], input[type="email"] {
+			.border-radiuses(0, 0, 3px, 3px) !important;
+			float: left;
+			height: 35px;
+			width: 85% !important;
+		}
+		
+		input[type="submit"] {
+			.border-radiuses(3px, 3px, 0, 0) !important;
+			background: @primary-color;
+			float: left;
+			height: 40px;
+			position: absolute !important;
+			top: 0;
+			right: 0;
+			text-transform: uppercase;
+			width: 15%;			
+		}
+	
+	}
+	
 }
 
 /**
