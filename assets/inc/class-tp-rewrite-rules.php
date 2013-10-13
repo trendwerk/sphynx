@@ -10,7 +10,7 @@ class TP_Rewrite_Rules {
 	}
 
 	/**
-	 * Redirect images from uploads to placehold.it on localhost and dev.trendwerk.nl if they don't exist
+	 * Redirect images from uploads to placehold.it on develop and release environments if they don't exist
 	 * 
 	 * @param  string $rules WordPress' own rules
 	 * @return string        New rules
