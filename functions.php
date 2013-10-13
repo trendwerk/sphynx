@@ -8,6 +8,7 @@
  * @includes Include the following PHP files
  */
  
+include('assets/inc/class-tp-rewrite-rules.php');
 include('assets/inc/class.TPCapabilities.php');
 include('assets/inc/class.TPCleanUp.php');
 include('assets/inc/class.TPCPTExtras.php');
