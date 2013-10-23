@@ -21,7 +21,9 @@ class submenu extends WP_Widget {
 	function show_children($item) {
 		if($item->children) :
 			?>
+
 			<ul>
+
 				<?php foreach($item->children as $child) :
 					$class = '';
 					if($child->is_current) {
@@ -30,14 +32,18 @@ class submenu extends WP_Widget {
 						$class = 'class="parent"';
 					}
 				?>
+
 					<li <?php echo $class; ?>>
 						<a href="<?php echo $child->url; ?>">
 							<?php echo $child->title; ?>	
 						</a>
 						<?php $this->show_children($child); ?>
 					</li>
+
 				<?php endforeach;?>
+
 			</ul>
+
 		<?php endif; ?>
 	<?php
 	}
@@ -77,6 +83,7 @@ class tp_taxonomy_terms extends WP_Widget {
 	function form($instance) {
 		$title = esc_attr($instance['title']);
 		?>
+
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>">
 				<strong><?php _e('Title'); ?></strong><br />
@@ -85,6 +92,7 @@ class tp_taxonomy_terms extends WP_Widget {
 		</p>
 		
 		<?php if($taxonomies = get_taxonomies()) : ?>
+
 		<p>
 			<label>
 				<strong><?php _e('Taxonomy'); ?></strong><br />
@@ -95,6 +103,7 @@ class tp_taxonomy_terms extends WP_Widget {
 				</select>
 			</label>
 		</p>
+
 		<?php endif; ?>
 		<?php
 	}
@@ -141,13 +150,16 @@ class tp_contact extends WP_Widget {
 	function form($instance) {
 		$title = esc_attr($instance['title']);
 	?>
+
  		<p>
  			<label for="<?php echo $this->get_field_id('title'); ?>">
  				<strong><?php _e('Title'); ?></strong><br />
  				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
  			</label>
  		</p>
+
  		<p><?php printf(__('Change the contents of this widget on the <a href="%1$s">contact information</a> page.', 'tp'), admin_url('options-general.php?page=tp-information')); ?></p>
+
 	<?php
 	}
 	
@@ -163,8 +175,10 @@ class tp_contact extends WP_Widget {
 		extract($args);
 	?>
  		<?php echo $before_widget; ?>
- 			<?php if ($title) { echo $before_title . $title . $after_title; } ?>	
+ 			<?php if ($title) { echo $before_title . $title . $after_title; } ?>
+
 			<span itemscope itemtype="http://schema.org/Organization">
+
 				<p>
 					<?php 
 						if ($name = get_option('tp-company-name')) {
@@ -184,6 +198,7 @@ class tp_contact extends WP_Widget {
 						?>
 					</span>
 				</p>
+
 				<p>
 					<?php
 						if ($email = get_option('tp-email')) { 
@@ -195,6 +210,7 @@ class tp_contact extends WP_Widget {
 						} 
 					?>
 				</p>
+
 				<p>
 					<?php
 						if ($cc = get_option('tp-cc')) {
@@ -211,7 +227,9 @@ class tp_contact extends WP_Widget {
 						} 
 					?>
 				</p>
+
 			</span>
+
 		<?php echo $after_widget; ?>
 	<?php
 	}
@@ -230,12 +248,14 @@ class tp_social extends WP_Widget {
 		$title = esc_attr($instance['title']);
 		$type = esc_attr($instance['type']);
 		?>
+
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>">
 				<strong><?php _e('Title'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
+
 		<p>
 			<label>
 				<strong><?php _e('Icon types','tp'); ?></strong><br />
@@ -246,7 +266,9 @@ class tp_social extends WP_Widget {
 				</select>
 			</label>
 		</p>
+
 		<p><?php printf(__('Change the contents of this widget on the <a href="%1$s">contact information</a> page.', 'tp'), admin_url('options-general.php?page=tp-information')); ?></p>
+
 		<?php
 	}
 	
@@ -269,7 +291,7 @@ class tp_social extends WP_Widget {
 				<?php if($twitter = get_option('tp-twitter')) { ?>
 					<li class="twitter">
 						<a rel="external" href="<?php echo $twitter; ?>" title="<?php _e('Follow us on Twitter','tp') ?>">
-							<span class="genericon genericon-twitter"></span>
+							<i class="icon-twitter-sign"></i>
 							<span class="title"><?php _e('Follow us on Twitter','tp') ?></span>
 						</a>
 					</li>
@@ -277,35 +299,35 @@ class tp_social extends WP_Widget {
 				<?php if($facebook = get_option('tp-facebook')) { ?>
 					<li class="facebook">
 						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e('Like our Facebook page','tp') ?>">
-							<span class="genericon genericon-facebook-alt"></span>
+							<i class="icon-facebook-sign"></i>
 							<span class="title"><?php _e('Like our Facebook page','tp') ?></span>
 						</a>
 					</li>
 				<?php } if($linkedin = get_option('tp-linkedin')) { ?>
 					<li class="linkedin">
 						<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e('Connect with us on LinkedIn','tp') ?>">
-							<span class="genericon genericon-linkedin-alt"></span>
+							<i class="icon-linkedin-sign"></i>
 							<span class="title"><?php _e('Connect with us on LinkedIn','tp') ?></span>
 						</a>
 					</li>
 					<?php } if($googleplus = get_option('tp-googleplus')) { ?>
 					<li class="googleplus">
 						<a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e('Add us on Google+','tp') ?>">
-							<span class="genericon genericon-googleplus-alt"></span>
+							<i class="icon-google-plus-sign"></i>
 							<span class="title"><?php _e('Add us on Google+','tp') ?></span>
 						</a>
 					</li>
 				<?php } if($youtube = get_option('tp-youtube')) { ?>
 					<li class="youtube">
 						<a rel="external" href="<?php echo $youtube; ?>" title="<?php _e('View our YouTube channel','tp') ?>">
-							<span class="genericon genericon-youtube"></span>
+							<i class="icon-youtube-sign"></i>
 							<span class="title"><?php _e('View our YouTube channel','tp') ?></span>
 						</a>
 					</li>
 				<?php } if($newsletter = get_option('tp-newsletter')) { ?>
 					<li class="email">
 						<a href="<?php echo $newsletter; ?>" title="<?php _e('E-mail newsletter','tp'); ?>">
-							<span class="genericon genericon-mail"></span>
+							<i class="icon-envelope"></i>
 							<span class="title"><?php _e('E-mail newsletter','tp'); ?></span>
 						</a>
 					</li>
@@ -313,7 +335,7 @@ class tp_social extends WP_Widget {
 				<?php if(get_option('tp-rss') == 'true') { ?>
 					<li class="rss">
 						<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Subscribe via RSS','tp') ?>">
-							<span class="genericon genericon-feed"></span>
+							<i class="icon-rss-sign"></i>
 							<span class="title"><?php _e('Subscribe to our RSS','tp') ?></span>
 						</a>
 					</li>
@@ -337,6 +359,7 @@ class tp_fb_like_box extends WP_Widget {
 		$title = esc_attr($instance['title']);
 		$url = $instance['url'];
 		?>
+
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>">
 				<strong><?php _e('Title'); ?></strong><br />
@@ -350,6 +373,7 @@ class tp_fb_like_box extends WP_Widget {
 				<input class="widefat" name="<?php echo $this->get_field_name('url'); ?>" type="text" value="<?php echo $url; ?>" />
 			</label>
 		</p>
+
 		<?php
 	}
 	
@@ -386,6 +410,66 @@ class tp_fb_like_box extends WP_Widget {
 	}
 }
 add_action('widgets_init',create_function('','return register_widget("tp_fb_like_box");'));
+
+/**
+ * @widget Tweets from a Twitter account
+ */
+class tp_tweets extends WP_Widget {
+	function tp_tweets() {
+		$this->WP_Widget( 'tp_tweets', __( 'Tweets', 'tp' ), 'description=' . __( 'Shows latest tweets from a Twitter account', 'tp' ) );
+	}
+	
+	function form( $instance ) {
+		$title = esc_attr( isset( $instance['title'] ) ? $instance['title'] : '' );
+		$username = isset( $instance['username'] ) ? $instance['username'] : '';
+		?>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
+				<strong><?php _e( 'Title' ); ?></strong><br />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+			</label>
+		</p>
+		
+		<p>
+			<label>
+				<strong><?php _e( 'Twitter username', 'tp' ); ?></strong><br />
+				<input class="widefat" name="<?php echo $this->get_field_name( 'username' ); ?>" type="text" value="<?php echo $username; ?>" />
+			</label>
+		</p>
+
+		<?php
+	}
+	
+	function update($new_instance,$old_instance) {
+		$instance = $old_instance;
+		
+		$instance['title'] = esc_attr( $new_instance['title'] );
+		$instance['username'] = $new_instance['username'];
+				
+		return $instance;
+	}
+	
+	function widget($args,$instance) {		
+		$title = apply_filters( 'widget_title', $instance['title'] );
+		$username = $instance['username'];
+		extract( $args );
+		
+		echo $before_widget;
+			if( $title )
+				echo $before_title . $title . $after_title;
+			?>
+			<a class="twitter-timeline" data-chrome="noheader nofooter noscrollbar transparent" data-tweet-limit="3" data-dnt="true" href="https://twitter.com/<?php echo $username; ?>" data-screen-name="<?php echo $username; ?>" data-widget-id="387581823514972160">
+				<?php printf( __( 'Tweets from @%1$s', 'tp' ), $username ); ?>
+			</a>
+			
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<?php
+			
+		echo $after_widget;
+	}
+}
+add_action( 'widgets_init', create_function( '', 'return register_widget("tp_tweets");' ) );
 
 /**
  * @widget Text with button
@@ -439,36 +523,43 @@ class widget_title_content_button extends WP_Widget {
 
 		$this->add_js();
 	?>
+
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>">
 				<strong><?php _e('Title'); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
+
 		<p>
 			<label>
 				<strong><?php _e('Content','tp'); ?></strong><br />
 				<textarea class="widefat" name="<?php echo $this->get_field_name('content'); ?>" ><?php echo $content; ?></textarea>
 			</label>
 		</p>
+
 		<p class="show_button">
 			<label>
 				<input onclick="showbuttons_create_clicks();" type="checkbox" name="<?php echo $this->get_field_name('show_button'); ?>" value="true" <?php if($show_button) echo 'checked'; ?>> <?php _e('Show button / read more link','tp'); ?>
 			</label>
 		</p>
+
 		<div class="buttonsettings">
+
 			<p>
 				<labe>
 					<strong><?php _e('Button text','tp'); ?></strong><br />
 					<input class="widefat" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
 				</label>
 			</p>
+
 			<p>
 				<label>
 					<strong><?php _e('Button link','tp'); ?></strong><br />
 					<input class="widefat" name="<?php echo $this->get_field_name('button_link'); ?>" type="text" value="<?php echo $button_link; ?>" />
 				</label>
 			</p>
+
 			<p>
 				<label>
 					<strong><?php _e('Link type','tp'); ?></strong><br />
@@ -479,12 +570,15 @@ class widget_title_content_button extends WP_Widget {
 					</select>
 				</label>
 			</p>
+
 			<p>
 				<label>
 					<input type="checkbox" name="<?php echo $this->get_field_name('external'); ?>" value="true" <?php if($external) echo 'checked'; ?>> <?php _e('This link is external','tp'); ?>
 				</label>
 			</p>
+
 		</div>
+
 		<?php
 	}
 	
@@ -521,12 +615,14 @@ class widget_title_content_button extends WP_Widget {
 				</p>
 			<?php endif; ?>		
 		    <?php if($show_button) { ?>
+
 		    	<p>
 		    		<a class="<?php echo $link_type; ?>" href="<?php echo $button_link; ?>"
 		    			<?php if($external) : echo 'rel="external"'; endif; ?>>
 		    			<?php echo $button_text; ?>
 		    		</a>
 		    	</p>
+
 	    	<?php } ?>
 		<?php echo $after_widget; ?>
 	<?php
@@ -643,11 +739,15 @@ class widget_title_image_content_button extends WP_Widget {
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
+
 		<div class="upload-image-container">
+
 			<p class="label-upload-image-p">
 				<label class="label-upload-image"><strong><?php _e('Image'); ?></strong><br /></label>
 			</p>
+
 			<div class="image"><?php if($image) : ?><img src="<?php echo $image; ?>" alt="Image" /><?php endif; ?></div>
+
 			<p class="upload-buttons">
 				<a onclick="return false;" title="Upload image" class="thickbox button-secondary upload-image" id="add_image" href="media-upload.php?type=image&amp;TB_iframe=true&amp;width=640&amp;height=450"><?php if($image) : _e('Change image','tp'); else: _e('Upload image','tp'); endif; ?></a>
 				
@@ -657,31 +757,38 @@ class widget_title_image_content_button extends WP_Widget {
 				
 				<input type="hidden" name="<?php echo $this->get_field_name('image'); ?>" class="image_url" value="<?php echo $image; ?>" />
 			</p>
+
 		</div>
+
 		<p>
 			<label>
 				<strong><?php _e('Content','tp'); ?></strong><br />
 				<textarea class="widefat" name="<?php echo $this->get_field_name('content'); ?>" ><?php echo $content; ?></textarea>
 			</label>
 		</p>
+
 		<p class="show_button">
 			<label>
 				<input onclick="showbuttons_create_clicks();" type="checkbox" name="<?php echo $this->get_field_name('show_button'); ?>" value="true" <?php if($show_button) echo 'checked'; ?>> <?php _e('Show button / read more link','tp'); ?>
 			</label>
 		</p>
+
 		<div class="buttonsettings">
+
 			<p>
 				<label>
 					<strong><?php _e('Button text','tp'); ?></strong><br />
 					<input class="widefat" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
 				</label>
 			</p>
+
 			<p>
 				<label>
 					<strong><?php _e('Button link','tp'); ?></strong><br />
 					<input class="widefat" name="<?php echo $this->get_field_name('button_link'); ?>" type="text" value="<?php echo $button_link; ?>" />
 				</label>
 			</p>
+
 			<p>
 				<label>
 					<strong><?php _e('Link type','tp'); ?></strong><br />
@@ -692,12 +799,15 @@ class widget_title_image_content_button extends WP_Widget {
 					</select>
 				</label>
 			</p>
+
 			<p>
 				<label>
 					<input type="checkbox" name="<?php echo $this->get_field_name('external'); ?>" value="true" <?php if($external) echo 'checked'; ?>> <?php _e('This link is external','tp'); ?>
 				</label>
 			</p>
+
 		</div>
+
 		<?php
 	}
 	
@@ -714,7 +824,7 @@ class widget_title_image_content_button extends WP_Widget {
 		return $instance;
 	}
 	
-	function widget($args,$instance) {		
+	function widget($args,$instance) {
 		$title = $instance['title'];
 		$image = $instance['image'];
 		$content = nl2br($instance['content']);
@@ -751,3 +861,176 @@ class widget_title_image_content_button extends WP_Widget {
 	}
 }
 add_action('widgets_init',create_function('','return register_widget("widget_title_image_content_button");'));
+
+/**
+ * @widget Telephone number and button
+ */
+class tp_title_content extends WP_Widget {
+	function tp_title_content() {
+		$this->WP_Widget('tp_title_content', __('Telephone number and button','tp'), 'description='.__('Telephone number and button','tp'));
+	}
+
+	function add_js() {
+		?>
+		<script type="text/javascript">
+			//Show / hide button fields
+			jQuery(document).ready(function($) {
+				var currently_uploading;
+				
+				showbuttons_create_clicks($);
+			
+				//Upload an image				
+				$('.upload-image').on('click',function() {
+					currently_uploading = $(this);
+				});
+				
+				window.send_to_editor = function(html) {
+					html = '<div>'+html+'</div>';
+					imgurl = jQuery.parseHTML(html);
+					imgurl = $(imgurl).find('img').prop('src');
+					
+					$(currently_uploading).closest('div.upload-image-container').find('div.image').html(jQuery('img',html));
+					$(currently_uploading).closest('div.upload-image-container').find('input.image_url').val(imgurl);
+					
+					tb_remove();
+					save_widget($(currently_uploading));
+					currently_uploading = null;
+				}
+				
+				//Remove the image
+				$('.remove-image').click(function() {
+					$(this).closest('div.upload-image-container').find('div.image').html('');
+					$(this).closest('div.upload-image-container').find('input.image_url').val('');
+					
+					save_widget($(this));
+				});
+				
+				function save_widget(obj) {
+					$(obj).closest('form').find('.widget-control-save').trigger('click');
+				}
+			});
+			
+			//Show or hide extra settings
+			function showbuttons_create_clicks($) {
+				if(!$) $ = jQuery.noConflict();
+				
+				$('p.show_button input').each(function() {					
+					//Extra fields
+					show_or_hide_extras(this);
+					
+					$(this).change(function() {
+						show_or_hide_extras(this);
+					});
+					
+					function show_or_hide_extras(obj) {
+						if($(obj).attr('checked')) {
+							$(obj).closest('div').find('.buttonsettings').show();
+						} else {
+							$(obj).closest('div').find('.buttonsettings').hide();
+						}
+					}
+				});
+			}
+		</script>		
+		<?php
+	}
+	
+	function form($instance) {
+		$title = esc_attr($instance['title']);
+		$content = esc_attr($instance['content']);
+		$show_button = esc_attr($instance['show_button']);
+		$button_text = esc_attr($instance['button_text']);
+		$button_link = esc_attr($instance['button_link']);
+		?>
+
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+				<strong><?php _e('Title'); ?></strong><br />
+				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+			</label>
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id('content'); ?>">
+				<strong><?php _e('Content'); ?></strong><br />
+				<textarea  class="widefat" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>"><?php echo $content; ?></textarea>
+			</label>
+		</p>
+
+		<p><?php printf(__('Change the telephone number on the <a href="%1$s">contact information</a> page.', 'tp'), admin_url('options-general.php?page=tp-information')); ?></p>
+
+		<p class="show_button">
+			<label>
+				<input onclick="showbuttons_create_clicks();" type="checkbox" name="<?php echo $this->get_field_name('show_button'); ?>" value="true" <?php if($show_button) echo 'checked'; ?>> <?php _e('Show button','tp'); ?>
+			</label>
+		</p>
+
+		<div class="buttonsettings">
+
+			<p>
+				<label>
+					<strong><?php _e('Button text','tp'); ?></strong><br />
+					<input class="widefat" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
+				</label>
+			</p>
+
+			<p>
+				<label>
+					<strong><?php _e('Button link','tp'); ?></strong><br />
+					<input class="widefat" name="<?php echo $this->get_field_name('button_link'); ?>" type="text" value="<?php echo $button_link; ?>" />
+				</label>
+			</p>
+
+		</div>
+
+		<?php
+	}
+	
+	function update($new_instance,$old_instance) {
+		$instance = $old_instance;
+		
+		$instance['title'] = strip_tags($new_instance['title']);
+		$instance['content'] = strip_tags($new_instance['content']);
+		$instance['show_button'] = strip_tags($new_instance['show_button']);
+		$instance['button_text'] = strip_tags($new_instance['button_text']);
+		$instance['button_link'] = strip_tags($new_instance['button_link']);
+				
+		return $instance;
+	}
+	
+	function widget($args,$instance) {
+		$title = $instance['title'];
+		$content = nl2br($instance['content']);
+		$show_button = $instance['show_button'];
+		$button_text = $instance['button_text'];
+		$button_link = $instance['button_link'];
+		extract($args);
+		
+		echo $before_widget;
+			echo $before_title.$instance['title'].$after_title; 
+			?>
+
+				<?php if ($instance['content']) { ?>
+					<p><?php echo $instance['content']; ?></p>
+				<?php } ?>
+
+				<?php if ($telephone = get_option('tp-telephone')) { ?>
+					<p class="telephone">
+						<i class="icon-phone"></i> 
+						<?php echo $telephone; ?>
+					</p>
+				<?php } ?>
+
+				<?php if ($instance['show_button']) { ?>
+					<p>
+						<a class="cta primary" href="<?php echo $instance['button_link']; ?>">
+							<?php echo $instance['button_text']; ?>
+						</a>
+					</p>
+				<?php } ?>
+
+			<?php 
+		echo $after_widget;
+	}
+}
+add_action('widgets_init',create_function('','return register_widget("tp_title_content");'));
