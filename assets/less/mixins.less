@@ -200,6 +200,27 @@
 	}
   
 }
+
+/**
+ * @mixin Sprites
+ */
+    
+.sprite(@top, @left) {
+	background-image: url('assets/img/sprite-x1.png');
+	background-repeat: no-repeat;
+	background-position: @top @left;
+	
+	/* 	note: important! make sure the width and height are the same. 
+		otherwise the retina version will look extremely crappy.
+	*/	
+	
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+		background-image: url('assets/img/sprite-x2.png');
+		background-position: @top x 2 @left x 2;
+		background-size: 500px 500px;
+	}
+	
+}
     
 /**
  * @mixin Vertical gradient

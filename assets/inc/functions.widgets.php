@@ -865,9 +865,9 @@ add_action('widgets_init',create_function('','return register_widget("widget_tit
 /**
  * @widget Telephone number and button
  */
-class tp_title_content extends WP_Widget {
-	function tp_title_content() {
-		$this->WP_Widget('tp_title_content', __('Telephone number and button','tp'), 'description='.__('Telephone number and button','tp'));
+class tp_telephone_button extends WP_Widget {
+	function tp_telephone_button() {
+		$this->WP_Widget('tp_telephone_button', __('Telephone number and button','tp'), 'description='.__('Telephone number and button','tp'));
 	}
 
 	function add_js() {
@@ -1033,4 +1033,4 @@ class tp_title_content extends WP_Widget {
 		echo $after_widget;
 	}
 }
-add_action('widgets_init',create_function('','return register_widget("tp_title_content");'));
+add_action('widgets_init',create_function('','return register_widget("tp_telephone_button");'));

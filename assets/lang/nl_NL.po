@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-01 18:07+0100\n"
-"PO-Revision-Date: 2013-10-01 18:07+0100\n"
+"POT-Creation-Date: 2013-10-08 16:44+0100\n"
+"PO-Revision-Date: 2013-10-08 16:44+0100\n"
 "Last-Translator: Harold Angenent <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -45,11 +45,11 @@ msgstr "Berichten van"
 msgid "Posted on"
 msgstr "Gepost op"
 
-#: ../../author.php:26 ../../index.php:48 ../../single.php:16
+#: ../../author.php:26 ../../index.php:48 ../../single.php:17
 msgid "by"
 msgstr "door"
 
-#: ../../author.php:26 ../../index.php:48 ../../single.php:16
+#: ../../author.php:26 ../../index.php:48 ../../single.php:17
 msgid "in the category"
 msgstr "in de categorie"
 
@@ -161,7 +161,7 @@ msgstr ""
 msgid "Search"
 msgstr "Zoeken"
 
-#: ../../single.php:31
+#: ../../single.php:34
 msgid "Back to the overview"
 msgstr "Terug naar het overzicht"
 
@@ -178,16 +178,16 @@ msgid "Footer navigation"
 msgstr "Footer navigatie"
 
 #: ../../assets/inc/functions.misc.php:8
-#: ../../assets/inc/functions.widgets.php:477
-#: ../../assets/inc/functions.widgets.php:690 ../inc/functions.misc.php:8
-#: ../inc/functions.widgets.php:477 ../inc/functions.widgets.php:690
+#: ../../assets/inc/functions.widgets.php:535
+#: ../../assets/inc/functions.widgets.php:748 ../inc/functions.misc.php:8
+#: ../inc/functions.widgets.php:535 ../inc/functions.widgets.php:748
 msgid "Primary button"
 msgstr "Primaire knop"
 
 #: ../../assets/inc/functions.misc.php:13
-#: ../../assets/inc/functions.widgets.php:478
-#: ../../assets/inc/functions.widgets.php:691 ../inc/functions.misc.php:13
-#: ../inc/functions.widgets.php:478 ../inc/functions.widgets.php:691
+#: ../../assets/inc/functions.widgets.php:536
+#: ../../assets/inc/functions.widgets.php:749 ../inc/functions.misc.php:13
+#: ../inc/functions.widgets.php:536 ../inc/functions.widgets.php:749
 msgid "Secondary button"
 msgstr "Secondaire knop"
 
@@ -239,12 +239,14 @@ msgstr "Lijst van termen uit een bepaalde taxonomie"
 #: ../../assets/inc/functions.widgets.php:146
 #: ../../assets/inc/functions.widgets.php:235
 #: ../../assets/inc/functions.widgets.php:342
-#: ../../assets/inc/functions.widgets.php:444
-#: ../../assets/inc/functions.widgets.php:642
+#: ../../assets/inc/functions.widgets.php:404
+#: ../../assets/inc/functions.widgets.php:502
+#: ../../assets/inc/functions.widgets.php:700
 #: ../../assets/plugins/Filter/Filter.php:299 ../inc/functions.widgets.php:82
 #: ../inc/functions.widgets.php:146 ../inc/functions.widgets.php:235
-#: ../inc/functions.widgets.php:342 ../inc/functions.widgets.php:444
-#: ../inc/functions.widgets.php:642 ../plugins/Filter/Filter.php:299
+#: ../inc/functions.widgets.php:342 ../inc/functions.widgets.php:404
+#: ../inc/functions.widgets.php:502 ../inc/functions.widgets.php:700
+#: ../plugins/Filter/Filter.php:299
 msgid "Title"
 msgstr "Titel"
 
@@ -372,78 +374,95 @@ msgid "Facebook page URL"
 msgstr "Facebook pagina URL"
 
 #: ../../assets/inc/functions.widgets.php:395 ../inc/functions.widgets.php:395
+msgid "Tweets"
+msgstr "Tweets"
+
+#: ../../assets/inc/functions.widgets.php:395 ../inc/functions.widgets.php:395
+msgid "Shows latest tweets from a Twitter account"
+msgstr "Toont de laatste tweets van een Twitter account"
+
+#: ../../assets/inc/functions.widgets.php:411 ../inc/functions.widgets.php:411
+msgid "Twitter username"
+msgstr "Twitter gebruikersnaam"
+
+#: ../../assets/inc/functions.widgets.php:437 ../inc/functions.widgets.php:437
+#, php-format
+msgid "Tweets from @%1$s"
+msgstr "Tweets van @%1$s"
+
+#: ../../assets/inc/functions.widgets.php:453 ../inc/functions.widgets.php:453
 msgid "Text with button"
 msgstr "Tekst met knop"
 
-#: ../../assets/inc/functions.widgets.php:395 ../inc/functions.widgets.php:395
+#: ../../assets/inc/functions.widgets.php:453 ../inc/functions.widgets.php:453
 msgid "Editable title, tekst and button"
 msgstr "Bewerkbare titel, tekst en knop"
 
-#: ../../assets/inc/functions.widgets.php:450
-#: ../../assets/inc/functions.widgets.php:663
+#: ../../assets/inc/functions.widgets.php:508
+#: ../../assets/inc/functions.widgets.php:721
 #: ../../assets/plugins/GlobalContent/GlobalContent.php:27
-#: ../inc/functions.widgets.php:450 ../inc/functions.widgets.php:663
+#: ../inc/functions.widgets.php:508 ../inc/functions.widgets.php:721
 #: ../plugins/GlobalContent/GlobalContent.php:27
 msgid "Content"
 msgstr "Inhoud"
 
-#: ../../assets/inc/functions.widgets.php:456
-#: ../../assets/inc/functions.widgets.php:669 ../inc/functions.widgets.php:456
-#: ../inc/functions.widgets.php:669
+#: ../../assets/inc/functions.widgets.php:514
+#: ../../assets/inc/functions.widgets.php:727 ../inc/functions.widgets.php:514
+#: ../inc/functions.widgets.php:727
 msgid "Show button / read more link"
 msgstr "Knop / lees meer link weergeven"
 
-#: ../../assets/inc/functions.widgets.php:462
-#: ../../assets/inc/functions.widgets.php:675 ../inc/functions.widgets.php:462
-#: ../inc/functions.widgets.php:675
+#: ../../assets/inc/functions.widgets.php:520
+#: ../../assets/inc/functions.widgets.php:733 ../inc/functions.widgets.php:520
+#: ../inc/functions.widgets.php:733
 msgid "Button text"
 msgstr "Knop tekst"
 
-#: ../../assets/inc/functions.widgets.php:468
-#: ../../assets/inc/functions.widgets.php:681 ../inc/functions.widgets.php:468
-#: ../inc/functions.widgets.php:681
+#: ../../assets/inc/functions.widgets.php:526
+#: ../../assets/inc/functions.widgets.php:739 ../inc/functions.widgets.php:526
+#: ../inc/functions.widgets.php:739
 msgid "Button link"
 msgstr "Knop link"
 
-#: ../../assets/inc/functions.widgets.php:474
-#: ../../assets/inc/functions.widgets.php:687 ../inc/functions.widgets.php:474
-#: ../inc/functions.widgets.php:687
+#: ../../assets/inc/functions.widgets.php:532
+#: ../../assets/inc/functions.widgets.php:745 ../inc/functions.widgets.php:532
+#: ../inc/functions.widgets.php:745
 msgid "Link type"
 msgstr "Link type"
 
-#: ../../assets/inc/functions.widgets.php:476
-#: ../../assets/inc/functions.widgets.php:689 ../inc/functions.widgets.php:476
-#: ../inc/functions.widgets.php:689
+#: ../../assets/inc/functions.widgets.php:534
+#: ../../assets/inc/functions.widgets.php:747 ../inc/functions.widgets.php:534
+#: ../inc/functions.widgets.php:747
 msgid "Read more link"
 msgstr "Lees meer link"
 
-#: ../../assets/inc/functions.widgets.php:484
-#: ../../assets/inc/functions.widgets.php:697 ../inc/functions.widgets.php:484
-#: ../inc/functions.widgets.php:697
+#: ../../assets/inc/functions.widgets.php:542
+#: ../../assets/inc/functions.widgets.php:755 ../inc/functions.widgets.php:542
+#: ../inc/functions.widgets.php:755
 msgid "This link is external"
 msgstr "Dit is een externe link"
 
-#: ../../assets/inc/functions.widgets.php:542 ../inc/functions.widgets.php:542
+#: ../../assets/inc/functions.widgets.php:600 ../inc/functions.widgets.php:600
 msgid "Text with image and button"
 msgstr "Tekst met afbeelding en knop"
 
-#: ../../assets/inc/functions.widgets.php:542 ../inc/functions.widgets.php:542
+#: ../../assets/inc/functions.widgets.php:600 ../inc/functions.widgets.php:600
 msgid "Editable title, image, text and button"
 msgstr "Bewerkbare titel, afbeelding en knop"
 
-#: ../../assets/inc/functions.widgets.php:648 ../inc/functions.widgets.php:648
+#: ../../assets/inc/functions.widgets.php:706 ../inc/functions.widgets.php:706
 msgid "Image"
 msgstr "Afbeelding"
 
-#: ../../assets/inc/functions.widgets.php:652 ../inc/functions.widgets.php:652
+#: ../../assets/inc/functions.widgets.php:710 ../inc/functions.widgets.php:710
 msgid "Change image"
 msgstr "Aanpassen"
 
-#: ../../assets/inc/functions.widgets.php:652 ../inc/functions.widgets.php:652
+#: ../../assets/inc/functions.widgets.php:710 ../inc/functions.widgets.php:710
 msgid "Upload image"
 msgstr "Afbeelding uploaden"
 
-#: ../../assets/inc/functions.widgets.php:655 ../inc/functions.widgets.php:655
+#: ../../assets/inc/functions.widgets.php:713 ../inc/functions.widgets.php:713
 msgid "Remove image"
 msgstr "Verwijderen"
 
