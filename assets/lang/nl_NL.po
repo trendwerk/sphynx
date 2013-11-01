@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-01 14:50+0100\n"
-"PO-Revision-Date: 2013-10-01 14:51+0100\n"
+"POT-Creation-Date: 2013-11-01 14:01+0100\n"
+"PO-Revision-Date: 2013-11-01 14:02+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -211,8 +211,8 @@ msgstr ""
 "door in te loggen of door je gratis aan te melden met het e-mailadres dat is "
 "gekoppeld aan je profiel"
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:52
-#: ../inc/class.TPRecommendedPlugins.php:52
+#: ../../assets/inc/class.TPRecommendedPlugins.php:59
+#: ../inc/class.TPRecommendedPlugins.php:59
 msgid ""
 "Improve your SEO: Write better content and have a fully optimized WordPress "
 "site."
@@ -220,15 +220,15 @@ msgstr ""
 "Verbeter je SEO: Schrijf betere teksten en optimaliseer je WordPress voor "
 "zoekmachines."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:58
-#: ../inc/class.TPRecommendedPlugins.php:58
+#: ../../assets/inc/class.TPRecommendedPlugins.php:65
+#: ../inc/class.TPRecommendedPlugins.php:65
 msgid "Add Google Analytics to the website to track user statistics."
 msgstr ""
 "Google Analytics aan de website toevoegen om gebruikers statistieken bij te "
 "houden."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:63
-#: ../inc/class.TPRecommendedPlugins.php:63
+#: ../../assets/inc/class.TPRecommendedPlugins.php:70
+#: ../inc/class.TPRecommendedPlugins.php:70
 msgid ""
 "Improve site performance and user experience via caching: browser, page, "
 "object, database, minify and content delivery network support."
@@ -237,8 +237,8 @@ msgstr ""
 "(browser caching, page caching, object caching, database caching, "
 "bestandsverkleining en content delivery network ondersteuning)."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:68
-#: ../inc/class.TPRecommendedPlugins.php:68
+#: ../../assets/inc/class.TPRecommendedPlugins.php:75
+#: ../inc/class.TPRecommendedPlugins.php:75
 msgid ""
 "Reduce image file sizes and improve performance using the Smush.it API "
 "within WordPress."
@@ -246,29 +246,29 @@ msgstr ""
 "Verklein bestandsgroottes van afbeeldingen en verbetert prestaties middels "
 "de Smush.it API van WordPress."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:73
-#: ../inc/class.TPRecommendedPlugins.php:73
+#: ../../assets/inc/class.TPRecommendedPlugins.php:80
+#: ../inc/class.TPRecommendedPlugins.php:80
 msgid "Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor."
 msgstr ""
 "Voegt geavanceerde functionaliteiten toe aan TinyMCE, de WYSIWYG van "
 "WordPress."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:79
-#: ../inc/class.TPRecommendedPlugins.php:79
+#: ../../assets/inc/class.TPRecommendedPlugins.php:89
+#: ../inc/class.TPRecommendedPlugins.php:89
+msgid "Display more than one content field on WordPress pages and posts."
+msgstr ""
+"Geef meer dan één inhoud blok weer bij WordPress pagina's en berichten."
+
+#: ../../assets/inc/class.TPRecommendedPlugins.php:94
+#: ../inc/class.TPRecommendedPlugins.php:94
 msgid ""
 " Replaces your WordPress comment system with your comments hosted and "
 "powered by Disqus."
 msgstr ""
 "Vervangt het WordPress reactie systeem door het reactie systeem van Disqus."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:88
-#: ../inc/class.TPRecommendedPlugins.php:88
-msgid "Display more than one content field on WordPress pages and posts."
-msgstr ""
-"Geef meer dan één inhoud blok weer bij WordPress pagina's en berichten."
-
-#: ../../assets/inc/class.TPRecommendedPlugins.php:93
-#: ../inc/class.TPRecommendedPlugins.php:93
+#: ../../assets/inc/class.TPRecommendedPlugins.php:99
+#: ../inc/class.TPRecommendedPlugins.php:99
 msgid ""
 "Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter "
 "and Facebook as comments."
@@ -276,53 +276,8 @@ msgstr ""
 "Stuur berichten naar Twitter en/of Facebook, en geeft reacties via Twitter "
 "en Facebook weer als reacties."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:98
-#: ../inc/class.TPRecommendedPlugins.php:98
-msgid "Manage 301 redirections and keep track of 404 errors."
-msgstr "Beheer 301 doorverwijzingen en houd 404 errors bij."
-
-#: ../../assets/inc/class.TPRecommendedPlugins.php:103
-#: ../inc/class.TPRecommendedPlugins.php:103
-msgid "A simple way to create and manage roles and capabilities."
-msgstr "Een eenvoudige manier om rollen en rechten te beheren."
-
-#: ../../assets/inc/class.TPRecommendedPlugins.php:108
-#: ../inc/class.TPRecommendedPlugins.php:108
-msgid ""
-"Edit theme and plugin translations, directly out of WordPress without any "
-"need of an external editor."
-msgstr ""
-"Bewerk thema en plugin vertalingen, direct vanuit WordPress zonder een "
-"extern programma nodig te hebben."
-
-#: ../../assets/inc/class.TPRecommendedPlugins.php:113
-#: ../inc/class.TPRecommendedPlugins.php:113
-msgid ""
-"Exports your database, does a find and replace on URLs and file paths, then "
-"allows you to save it to your computer."
-msgstr ""
-"Exporteer je database, vervangt de URLs en bestandspaden en sla hem op op je "
-"computer."
-
-#: ../../assets/inc/class.TPRecommendedPlugins.php:118
-#: ../inc/class.TPRecommendedPlugins.php:118
-msgid ""
-"Allows you to regenerate your thumbnails after changing the thumbnail sizes."
-msgstr ""
-"Maakt het mogelijk om de thumbnails te regenereren nadat de afmetingen zijn "
-"veranderd."
-
-#: ../../assets/inc/class.TPRecommendedPlugins.php:123
-#: ../inc/class.TPRecommendedPlugins.php:123
-msgid ""
-"Interface to customize the permalinks (author, category, archives and "
-"pagination) and htaccess file generated by WordPress."
-msgstr ""
-"Interface om de permalinks en het htaccess bestand aan te passen (auteur, "
-"category, archieven en paginatie) die door WordPress gegenereerd worden."
-
-#: ../../assets/inc/class.TPRecommendedPlugins.php:128
-#: ../inc/class.TPRecommendedPlugins.php:128
+#: ../../assets/inc/class.TPRecommendedPlugins.php:104
+#: ../inc/class.TPRecommendedPlugins.php:104
 msgid ""
 "Adds HTML5 placeholder support to Gravity Forms fields with a Javascript "
 "fallback. Javascript & jQuery are required."
@@ -330,27 +285,54 @@ msgstr ""
 "Voegt HTML5 placeholders support toe aan Gravity Forms formulieren met een "
 "JavaScript fallback."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:142
-#: ../../assets/inc/admin-views/recommended-plugins.php:3
-#: ../../assets/inc/admin-views/recommended-plugins.php:7
-#: ../inc/class.TPRecommendedPlugins.php:142
-#: ../inc/admin-views/recommended-plugins.php:3
-#: ../inc/admin-views/recommended-plugins.php:7
+#: ../../assets/inc/class.TPRecommendedPlugins.php:109
+#: ../inc/class.TPRecommendedPlugins.php:109
+msgid "Manage 301 redirections and keep track of 404 errors."
+msgstr "Beheer 301 doorverwijzingen en houd 404 errors bij."
+
+#: ../../assets/inc/class.TPRecommendedPlugins.php:114
+#: ../inc/class.TPRecommendedPlugins.php:114
+msgid "A simple way to create and manage roles and capabilities."
+msgstr "Een eenvoudige manier om rollen en rechten te beheren."
+
+#: ../../assets/inc/class.TPRecommendedPlugins.php:123
+#: ../inc/class.TPRecommendedPlugins.php:123
+msgid ""
+"Allows you to regenerate your thumbnails after changing the thumbnail sizes."
+msgstr ""
+"Maakt het mogelijk om de thumbnails te regenereren nadat de afmetingen zijn "
+"veranderd."
+
+#: ../../assets/inc/class.TPRecommendedPlugins.php:128
+#: ../inc/class.TPRecommendedPlugins.php:128
+msgid ""
+"Interface to customize the permalinks (author, category, archives and "
+"pagination) and htaccess file generated by WordPress."
+msgstr ""
+"Interface om de permalinks en het htaccess bestand aan te passen (auteur, "
+"category, archieven en paginatie) die door WordPress gegenereerd worden."
+
+#: ../../assets/inc/class.TPRecommendedPlugins.php:143
+#: ../../assets/inc/admin-views/recommended-plugins.php:5
+#: ../../assets/inc/admin-views/recommended-plugins.php:9
+#: ../inc/class.TPRecommendedPlugins.php:143
+#: ../inc/admin-views/recommended-plugins.php:5
+#: ../inc/admin-views/recommended-plugins.php:9
 msgid "Recommended plugins"
 msgstr "Aanbevolen plugins "
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:142
-#: ../inc/class.TPRecommendedPlugins.php:142
+#: ../../assets/inc/class.TPRecommendedPlugins.php:143
+#: ../inc/class.TPRecommendedPlugins.php:143
 msgid "Recommended"
 msgstr "Aanbevolen"
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:159
-#: ../inc/class.TPRecommendedPlugins.php:159
+#: ../../assets/inc/class.TPRecommendedPlugins.php:160
+#: ../inc/class.TPRecommendedPlugins.php:160
 msgid "Recommended plugin <strong>activated</strong>."
 msgstr "Aanbevolen plugin <strong>geactiveerd</strong>."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:278
-#: ../inc/class.TPRecommendedPlugins.php:278
+#: ../../assets/inc/class.TPRecommendedPlugins.php:279
+#: ../inc/class.TPRecommendedPlugins.php:279
 #, php-format
 msgid ""
 "The plugin <strong>%1$s</strong> has been reset to the recommended "
@@ -359,8 +341,8 @@ msgstr ""
 "De settings van de plugin <strong>%1$s</strong> hebben nu de aanbevolen "
 "TrendPress instellingen."
 
-#: ../../assets/inc/class.TPRecommendedPlugins.php:325
-#: ../inc/class.TPRecommendedPlugins.php:325
+#: ../../assets/inc/class.TPRecommendedPlugins.php:326
+#: ../inc/class.TPRecommendedPlugins.php:326
 #, php-format
 msgid "<a href=\"%1$s\">Return to recommended plugins</a>"
 msgstr "<a href=\"%1$s\">Ga terug naar aanbevolen plugins</a>"
@@ -406,19 +388,38 @@ msgstr "Pas instellingen toe"
 msgid "Activate"
 msgstr "Activeer"
 
-#: ../../assets/inc/admin-views/recommended-plugins.php:5
-#: ../inc/admin-views/recommended-plugins.php:5
+#: ../../assets/inc/admin-views/recommended-plugins.php:7
+#: ../inc/admin-views/recommended-plugins.php:7
 msgid ""
-"On this page, you can install recommended plugins and apply recommended "
-"settings to them after installing."
+"On this page, you can install plugins recommended by Trendwerk and apply "
+"recommended settings to them after installing."
 msgstr ""
-"Op deze pagina kun je aanbevolen plugins installeren en aanbevolen settings "
-"toepassen na installatie."
+"Op deze pagina kun je door Trendwerk aanbevolen plugins installeren en "
+"aanbevolen instellingen toepassen na installatie."
 
-#: ../../assets/inc/admin-views/recommended-plugins.php:12
-#: ../inc/admin-views/recommended-plugins.php:12
+#: ../../assets/inc/admin-views/recommended-plugins.php:14
+#: ../inc/admin-views/recommended-plugins.php:14
 msgid "Optional plugins"
 msgstr "Optionele plugins"
+
+#: ../../assets/inc/admin-views/recommended-plugins.php:19
+#: ../inc/admin-views/recommended-plugins.php:19
+msgid "Developer tools"
+msgstr "Ontwikkelaars tools"
+
+#~ msgid ""
+#~ "Edit theme and plugin translations, directly out of WordPress without any "
+#~ "need of an external editor."
+#~ msgstr ""
+#~ "Bewerk thema en plugin vertalingen, direct vanuit WordPress zonder een "
+#~ "extern programma nodig te hebben."
+
+#~ msgid ""
+#~ "Exports your database, does a find and replace on URLs and file paths, "
+#~ "then allows you to save it to your computer."
+#~ msgstr ""
+#~ "Exporteer je database, vervangt de URLs en bestandspaden en sla hem op op "
+#~ "je computer."
 
 #~ msgid "Increases WordPress' default search functionality."
 #~ msgstr "Verbeterd de WordPress basis zoek functionaliteit."
