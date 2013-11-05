@@ -141,8 +141,8 @@ class TP_Plugins {
 		$plugins = array();
 		$folder = STYLESHEETPATH . '/assets/plugins/';
 
-		if( is_dir( $folder ) ) :
-			foreach( scandir( $folder ) as $plugin ) :
+		if( is_dir( $folder ) ) {
+			foreach( scandir( $folder ) as $plugin ) {
 				if( '.' == substr( $plugin, 0, 1 ) ) continue;
 				
 				/**
@@ -170,8 +170,8 @@ class TP_Plugins {
 				if( ! is_readable( $plugin ) ) continue;
 
 				$plugins[] = $plugin;
-			endforeach;
-		endif;
+			}
+		}
 		
 		return $plugins;
 	}
