@@ -8,7 +8,6 @@
  */
 include('assets/inc/functions.menus.php');
 include('assets/inc/functions.sidebars.php');
-include('assets/inc/functions.widgets.php');
 include('assets/inc/functions.posttypes.php');
 include('assets/inc/functions.misc.php');
 
