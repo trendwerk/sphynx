@@ -30,7 +30,7 @@ function tp_enqueue_scripts() {
 	wp_enqueue_script('functions',get_stylesheet_directory_uri().'/assets/js/functions.js',array('jquery'));
 	wp_enqueue_style('style',get_stylesheet_directory_uri().'/style.less');
 	
-	//De-register jQuery. Register en enqueue CDN version
+	//De-register jQuery. Register and enqueue CDN version
 	if( !is_admin() ) {
 	    wp_deregister_script('jquery');
 	    wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false, 'latest', false);
