@@ -1,7 +1,6 @@
 <?php
 /**
- * 
- * Also allows static widgets
+ * Extra widget functionality
  *
  * @package TrendPress
  */
