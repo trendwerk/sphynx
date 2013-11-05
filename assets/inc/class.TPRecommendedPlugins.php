@@ -80,7 +80,7 @@ class TPRecommendedPlugins {
 				'description' => __('Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor.','tp'),
 				'path' => 'tinymce-advanced/tinymce-advanced.php',
 				'settings' => true
-			),
+			)
 		);
 		
 		$this->optional = array(
