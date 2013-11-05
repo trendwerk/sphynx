@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 14:01+0100\n"
-"PO-Revision-Date: 2013-11-01 14:02+0100\n"
+"POT-Creation-Date: 2013-11-05 16:43+0100\n"
+"PO-Revision-Date: 2013-11-05 16:43+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -178,7 +178,7 @@ msgstr "404"
 msgid "Plugins in the %1$s folder are executed automatically."
 msgstr "Plugins in de %1$s folder worden automatisch uitgevoerd."
 
-#: ../../assets/inc/class.TPPlugins.php:117 ../inc/class.TPPlugins.php:117
+#: ../../assets/inc/class.TPPlugins.php:121 ../inc/class.TPPlugins.php:121
 msgid "TrendPress"
 msgstr "TrendPress"
 
@@ -240,11 +240,11 @@ msgstr ""
 #: ../../assets/inc/class.TPRecommendedPlugins.php:75
 #: ../inc/class.TPRecommendedPlugins.php:75
 msgid ""
-"Reduce image file sizes and improve performance using the Smush.it API "
-"within WordPress."
+"Limits the maximum number of login attempts to increase security and protect "
+"the website against brute force attacks. "
 msgstr ""
-"Verklein bestandsgroottes van afbeeldingen en verbetert prestaties middels "
-"de Smush.it API van WordPress."
+"Limiteert het maximum aantal inlogpogingen om de veiligheid te verhogen en "
+"de website te beschermen tegen \"brute force\" aanvallen."
 
 #: ../../assets/inc/class.TPRecommendedPlugins.php:80
 #: ../inc/class.TPRecommendedPlugins.php:80
@@ -406,6 +406,13 @@ msgstr "Optionele plugins"
 #: ../inc/admin-views/recommended-plugins.php:19
 msgid "Developer tools"
 msgstr "Ontwikkelaars tools"
+
+#~ msgid ""
+#~ "Reduce image file sizes and improve performance using the Smush.it API "
+#~ "within WordPress."
+#~ msgstr ""
+#~ "Verklein bestandsgroottes van afbeeldingen en verbetert prestaties "
+#~ "middels de Smush.it API van WordPress."
 
 #~ msgid ""
 #~ "Edit theme and plugin translations, directly out of WordPress without any "
