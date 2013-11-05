@@ -118,7 +118,6 @@ class TP_Plugins {
 		global $status;
 		
 		$class = ( $status == 'tp' ) ? 'current' : '';
-		
 		$views['tp'] = '<a class="' . $class . '" href="' . admin_url('plugins.php?plugin_status=tp') . '">' . __('TrendPress','tp') . ' <span class="count">(' . count( $this->plugins ) . ')</span></a>';
 		
 		return $views;
@@ -169,7 +168,7 @@ class TP_Plugins {
 				}
 
 				if( ! is_readable( $plugin ) ) continue;
-				
+
 				$plugins[] = $plugin;
 			endforeach;
 		endif;
