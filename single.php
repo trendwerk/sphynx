@@ -47,7 +47,7 @@
 		</article>
 		
 		<aside class="sidebar fourcol">
-			<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('blog'); ?>
+			<?php dynamic_sidebar('blog'); ?>
 		</aside>
 		
 	</div><!-- .container-inner -->

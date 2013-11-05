@@ -69,7 +69,7 @@
 
 					<nav id="breadcrumbs" itemprop="breadcrumb" class="twelvecol">
 						<?php _e('You are here:','tp') ?>
-						<?php if (function_exists('tp_breadcrumbs')) tp_breadcrumbs('»'); ?>
+						<?php tp_breadcrumbs('»'); ?>
 					</nav>
 
 				<?php } ?>
