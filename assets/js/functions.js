@@ -1,21 +1,7 @@
 jQuery(document).ready(function($){  
-		
+
 	/** 
-	 * @responsive Remove the width and height added to images by WordPress for responsive design
-	 */			
-	$(window).load(function() {
-
-		$('.wp-caption').removeAttr('style');
-
-		var pic = $('img');
-
-			pic.removeAttr('width'); 
-			pic.removeAttr('height');
-
-	});
-	
-	/** 
-	 * @responsive place sidebars after content for responsive design purposes
+	 * Re-order sidebars responsive site
 	 */
 	var bodyWidth = window.innerWidth;
 		
@@ -26,7 +12,7 @@ jQuery(document).ready(function($){
 	}
 						
 	/** 
-	 * @fancybox
+	 * Fancybox
 	 */		
 	var thumbnails = jQuery('a:has(img)').filter( function() { 
 				
@@ -51,14 +37,29 @@ jQuery(document).ready(function($){
 	$('.fancybox').fancybox();
 	
 	/**
-	 * @sfhover
+	 * Hover
 	 */
-	 
-	$("#main-navigation li").mouseover(function() {
-		$(this).addClass("hover");
+	$('#main-navigation li').mouseover(function() {
+		$(this).addClass('hover');
 	});
-	$("#main-navigation li").mouseout(function() {
-		$(this).removeClass("hover");
+
+	$('#main-navigation li').mouseout(function() {
+		$(this).removeClass('hover');
 	});	
+
+	/**
+	 * Toggle Navigation
+	 */
+	$('.toggle-main-navigation, .toggle-search').click(function() {
+		$(this).toggleClass('active');
+	});
+
+	$('.toggle-main-navigation').click(function() {
+		$('#main-navigation').slideToggle('fast');
+	});
+
+	$('.toggle-search').click(function() {
+		$('#header #search').slideToggle('fast');
+	});
     
 });

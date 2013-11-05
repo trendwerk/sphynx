@@ -37,6 +37,15 @@
 						)); 
 					?>
 				</nav>
+
+				<div class="toggle-wrap">
+					<div class="toggle-main-navigation">
+						<i class="icon-reorder"></i>
+					</div>
+					<div class="toggle-search">
+						<i class="icon-search"></i>
+					</div>
+				</div>
 				
 				<div id="search" class="sixcol">
 					<?php get_search_form(); ?>
