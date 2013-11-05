@@ -93,6 +93,36 @@
 }
 
 /**
+ * @mixin Font Awesome
+ */
+
+.font-awesome-before(@glyph) {
+	position: relative;
+ 
+	&:before {
+		content: @glyph;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: inherit;
+	}
+
+}
+
+.font-awesome-after(@glyph) {
+    position: relative;
+ 
+	&:after {
+		content: @glyph;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: inherit;
+	}
+
+}
+
+/**
  * @mixin Grayscale (for images)
  */
 

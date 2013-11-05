@@ -81,6 +81,7 @@ body {
 		color: @heading-color;
 		font-family: @heading-font;
 		font-weight: normal;
+		line-height: 1.3;
 		margin: 0 0 24px 0;
 	}
 	
@@ -214,39 +215,44 @@ body {
 			color: lighten(@link-color, 20%);
 			text-decoration: underline;
 		}
-		
-		&.more:after,
-		&.more-link:after {
-			content: " \00bb";
+
+		&:active,
+		&:focus {
+			color: lighten(@link-color, 20%);
+		}
+
+		&.more-link, &.more {
+			.font-awesome-after(" \f0da");
 		}
 		
-		&.back:before {
-			content: "\00ab ";
+		&.back {
+			.font-awesome-before("\f0d9 ");
 		}
 		
 		&.prev {
+			.font-awesome-after(" \f0da");
 			float: left;
 			width: 40%; 
-			
-			&:before {
-				content: "\00ab ";
-			}
-		
 		}
 		
 		&.next {
+			.font-awesome-after(" \f0d9");
 			float: right; 
 			text-align: right;
-			width: 40%;			
-		
-			&:after { 
-				content: " \00bb";
-			}
-		
+			width: 40%;		
+		}
+
+		&.pagination-prev {
+			.font-awesome-before("\f0d9 ");
+		}
+
+		&.pagination-next {
+			.font-awesome-after(" \f0da");
 		}
 		
 		&.cta {
 			.border-radius(3px);
+			.font-awesome-after(" \f054");
 			display: inline-block;
 			font-weight: bold;
 			height: 40px;
@@ -254,6 +260,11 @@ body {
 			padding: 0 20px;
 			position: relative;
 			text-decoration: none;
+
+			&:after {
+				font-size: 12px;
+				padding-left: 10px;
+			}
 			
 			&:hover { 
 				color: #FFF;
@@ -506,11 +517,12 @@ body {
 					
 					input[type="submit"] {
 						.border-radiuses(3px, 3px, 0, 0);
-						background: #fff url(assets/img/search.png) no-repeat center center;
+						background-color: #ffffff;
+						background-image: none;
 						border: 1px solid @border-color;
 						border-left: none;
-						text-transform: uppercase;
-						text-indent: -999999px;	
+						font-family: FontAwesome;
+						text-align: right;
 						width: 32px;
 					}
 					
@@ -536,11 +548,11 @@ body {
 						width: 100%;
 
 						input[type="text"] {
-							width: 92%;
+							width: 88%;
 						}
 
 						input[type="submit"] {
-							width: 8%;
+							width: 12%;
 						}
 
 					}
@@ -739,6 +751,14 @@ body {
 		background: @body-background;
 		padding-bottom: 20px;
 		
+		.search {
+
+			input[type="submit"] {
+				font-family: FontAwesome;
+			}
+		
+		}
+
 		// content
 		
 		#content {
@@ -1837,7 +1857,7 @@ article .search-highlight { background: #FFFFB3; }
 				padding-top: 30px;
 
 				.widget {
-					padding: 2% 5% 5% 5% !important;
+					padding: 5% !important;
 				}
 
 			}
