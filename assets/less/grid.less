@@ -2,11 +2,35 @@
  * @grid
  */
  
-body { position: relative; }
+body { 
+	position: relative;
+}
 
-.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+.onecol, 
+.twocol, 
+.threecol, 
+.fourcol, 
+.fivecol, 
+.sixcol, 
+.sevencol, 
+.eightcol, 
+.ninecol,
+.tencol, 
+.elevencol, 
+.twelvecol {
 	float: left;
 	margin: 10px;
+}
+
+img, 
+object, 
+embed { 
+	max-width: 100%;
+}
+
+img { 
+	height: auto;
+	width: auto;
 }
 
 .container {
@@ -14,28 +38,125 @@ body { position: relative; }
 	clear: both;
 	float: left;
 	height: auto;
-	min-width: 100%;
-}
-	
-	.container .container-inner {
+	width: 100%;
+
+	.container-inner {
 		margin: 0 auto;
 		padding: 0 10px;
-		width: 960px;
 	}
 
-		.onecol { width: 60px; }
-		.twocol { width: 140px; }
-		.threecol { width: 220px; }
-		.fourcol { width: 300px; }
-		.fivecol { width: 380px; }
-		.sixcol { width: 460px; }
-		.sevencol { width: 540px; }
-		.eightcol { width: 620px; }
-		.ninecol { width: 700px; }
-		.tencol { width: 780px; }
-		.elevencol { width: 860px; }
-		.twelvecol { width: 940px; }
-				
-		img, object, embed { max-width: 100%; }
-		
-		img { height: auto; }
+}
+	
+@media(min-width: 1180px) {
+
+.container .container-inner {
+	width: 1140px;
+}
+
+	.onecol { 
+		width: 75px; 
+	}
+
+	.twocol { 
+		width: 170px; 
+	}
+
+	.threecol { 
+		width: 265px; 
+	}
+
+	.fourcol { 
+		width: 360px; 
+	}
+
+	.fivecol { 
+		idth: 455px; 
+	}
+
+	.sixcol { 
+		width: 550px; 
+	}
+
+	.sevencol { 
+		width: 645px; 
+	}
+
+	.eightcol { 
+		width: 740px; 
+	}
+
+	.ninecol { 
+		width: 835px; 
+	}
+
+	.tencol { 
+		width: 930px; 
+	}
+
+	.elevencol { 
+		width: 1025px; 
+	}
+
+	.twelvecol { 
+		width: 1120px; 
+	}
+
+}
+
+@media(max-width: 1179px) {
+
+.container .container-inner {
+	width: 960px;
+}
+
+	.onecol { 
+		width: 60px; 
+	}
+	
+	.twocol { 
+		width: 140px; 
+	}
+	
+	.threecol { 
+		width: 220px; 
+	}
+	
+	.fourcol { 
+		width: 300px; 
+	}
+	
+	.fivecol { 
+		width: 380px; 
+	}
+	
+	.sixcol { 
+		width: 460px; 
+	}
+	
+	.sevencol { 
+		width: 540px; 
+	}
+	
+	.eightcol { 
+		width: 620px; 
+	}
+	
+	.ninecol { 
+		width: 700px; 
+	}
+	
+	.tencol { 
+		width: 780px; 
+	}
+	
+	.elevencol { 
+		width: 860px; 
+	}
+	
+	.twelvecol { 
+		width: 940px; 
+	}
+
+}
+
+
