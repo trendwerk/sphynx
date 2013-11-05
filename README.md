@@ -102,7 +102,7 @@ Functions.breadcrumbs.php is a functions for displaying the breadcrumbs of the c
 
 You can show the breadcrumbs by including the following script:
 
-`<?php if (function_exists('tp_breadcrumbs')) tp_breadcrumbs(); ?>`
+`<?php tp_breadcrumbs(); ?>`
 
 This gives you something like  _You are here: Home > Example page_.
 
