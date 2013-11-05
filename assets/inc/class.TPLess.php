@@ -5,11 +5,12 @@
 
 include_once('lib/lessphp/lessc.inc.php');
 
-class TPLess {
+class TP_Less {
 	var $force = false;
 	
 	function __construct() {
-		if($_SERVER['HTTP_HOST'] == 'localhost' || get_option('tp-less-rebuild') == true) $this->force = true;
+		if( ( defined( 'TP_ENV' ) && TP_ENV == 'develop' ) || get_option( 'tp-less-rebuild' ) == true )
+			$this->force = true;
 		
 		add_action('wp_enqueue_scripts',array($this,'init'),999999);
 		add_action('admin_enqueue_scripts',array($this,'init'),999999);
@@ -55,5 +56,4 @@ class TPLess {
 		
 		return false;
 	}
-} new TPLess;
-?>
+} new TP_Less;
