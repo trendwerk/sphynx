@@ -19,7 +19,7 @@
 		</article>
 		
 		<aside class="sidebar fourcol">
-			<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('home'); ?>
+			<?php dynamic_sidebar('home'); ?>
 		</aside>
 		
 	</div><!-- .container-inner -->
