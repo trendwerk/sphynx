@@ -70,10 +70,10 @@ class TPRecommendedPlugins {
 				'description' => __('Improve site performance and user experience via caching: browser, page, object, database, minify and content delivery network support.','tp'),
 				'path' => 'w3-total-cache/w3-total-cache.php'
 			),
-			'wp-smushit' => array(
-				'name' => 'WP Smush.it',
-				'description' => __('Reduce image file sizes and improve performance using the Smush.it API within WordPress.','tp'),
-				'path' => 'wp-smushit/wp-smushit.php'
+			'limit-login-attempts' => array(
+				'name' => 'Limit login attempts',
+				'description' => __('Limits the maximum number of login attempts to increase security and protect the website against brute force attacks. ','tp'),
+				'path' => 'limit-login-attempts/limit-login-attempts.php'
 			),
 			'tinymce-advanced' => array(
 				'name' => 'TinyMCE Advanced',
