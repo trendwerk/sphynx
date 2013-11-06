@@ -138,6 +138,9 @@ class TP_Plugins {
 	 * Get plugins
 	 */
 	function get_plugins() {
+		if( ! function_exists( 'get_plugin_data' ) )
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
 		$plugins = array();
 		$folder = STYLESHEETPATH . '/assets/plugins/';
 
@@ -149,7 +152,7 @@ class TP_Plugins {
 				 * Determine plugin dir
 				 */
 				$plugin_dir = $folder . $plugin;
-				
+
 				/**
 				 * Determine plugin file
 				 */
