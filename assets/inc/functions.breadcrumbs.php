@@ -15,7 +15,7 @@ function tp_breadcrumbs($separator='>',$menu='mainnav') {
 	global $post;
 	
 	$nav = new TPNav($menu);
-	$breadcrumbs = $nav->get_breadcrumb_items();
+	$breadcrumbs = apply_filters( 'tp-breadcrumbs', $nav->get_breadcrumb_items() );
 	
 	//Home
 	echo '<a href="'.get_option('siteurl').'">'.__('Home','tp').'</a>';
