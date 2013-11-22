@@ -84,10 +84,15 @@ class TPCPTExtras {
 	 */
 	function highlight($items) {
 		if($items) {
+			foreach( $items as $item ) {
+				if( in_array( 'current-menu-item', $item->classes ) )
+					return $items;
+			}
+			
 			$nav = new TPNav();
 			
 			if(is_single() || is_tax()) { 
-				foreach($items as &$item) {	
+				foreach($items as &$item) {
 					if($nav->current_item == $item->ID) {
 						$item->classes[] = 'current-menu-parent';
 					}
