@@ -6,15 +6,15 @@
  *
  * Contents:
  *
- * Import 			Import files
- * Variable 		Defines colors and fonts
- * Typography 		Defines the styling of text elements
- * Misc 			Defines miscellaneous styles
- * Layout			Defines the lay-out
- * Templates		Defines the template specific styling
- * Plugins 			Defines the plugin specific styling
- * Responsive		Defines responsive layout
- *
+ * @import 			Import files
+ * @variable 		Defines colors and fonts
+ * @typography 		Defines the styling of text elements
+ * @misc 			Defines miscellaneous styles
+ * @layout			Defines the lay-out
+ * @templates		Defines the template specific styling
+ * @plugins 		Defines the plugin specific styling
+ * @responsive		Defines responsive layout
+ * 
  */
  
 @charset "UTF-8";
@@ -401,7 +401,7 @@ body {
 			
 			}
 			
-			// logo, sitename and description
+			/* logo, sitename and description */
 					
 			#logo {
 						
@@ -428,7 +428,7 @@ body {
 				
 			}
 			
-			// top navigation
+			/* top navigation */
 					
 			#topnav {
 				float: right;
@@ -453,7 +453,7 @@ body {
 			
 			}
 
-			// toggle nav
+			/* toggle navigation */
 
 			.toggle-wrap {
 				position: absolute;
@@ -485,7 +485,7 @@ body {
 
 			}
 			
-			// search form
+			/* search form */
 					
 			#search {
 				
@@ -559,14 +559,14 @@ body {
 				
 			}
 			
-			// main navigation	
+			/* main navigation */	
 			
 			#main-navigation {
 				background: #333;
 				font-size: 13px;
 				height: auto;
 
-				// desktop
+				/* desktop */
 
 				@media (min-width: 721px) {
 					display: block !important;
@@ -608,7 +608,7 @@ body {
 								
 							}
 											
-							// current navigation ancestor parent, item
+							/* current navigation ancestor parent, item */
 
 							&.current-menu-ancestor,
 							&.current-page-parent,
@@ -632,7 +632,7 @@ body {
 							
 							}
 							
-							// sfhover alternative
+							/* sfhover alternative */
 							
 							&.hover {
 								
@@ -652,7 +652,7 @@ body {
 								
 				}
 
-				// tablet and smartphone 
+				/* tablet and smartphone */
 
 				@media (max-width: 720px) {
 
@@ -700,7 +700,7 @@ body {
 
 							}
 											
-							// current navigation ancestor parent, item
+							/* current navigation ancestor parent, item */
 
 							&.current-menu-ancestor,
 							&.current-page-parent,
@@ -730,8 +730,8 @@ body {
 
 			}
 			
-			// breadcrumbs
-					
+			/* breadcrumbs */
+				
 			#breadcrumbs { 
 				color: lighten(@text-color, 20%);
 				font-size: 13px;
@@ -742,7 +742,7 @@ body {
 	}
 	
 	/**
-	 * @layout Main
+	 * @layout Main section
 	 */
 	
 	#main {
@@ -757,7 +757,7 @@ body {
 		
 		}
 
-		// content
+		/* content */
 		
 		#content {
 			.border-box;
@@ -794,7 +794,7 @@ body {
 				
 			}
 					
-			/* Author */
+			/* author */
 			
 			.author-card {
 				background: #fff;
@@ -1053,7 +1053,7 @@ body {
 			/**
 			 * @widget Telephone number and button
 			 */
-			 
+			
 			&.widget_tp_telephone_button {
 				
 				p.telephone {
@@ -1063,7 +1063,9 @@ body {
 				
 			}
 			
-			/* @widget Tagcloud */
+			/**
+			 * @widget Tagcloud 
+			 */
 			
 			&.widget_tag_cloud {
 			
@@ -1180,7 +1182,7 @@ body {
  *
  * Defines the template specific styling
  *
- * @template front-page.php
+ * @templates front-page.php
  */
 
 .home {
@@ -1190,7 +1192,7 @@ body {
 }
 
 /**
- * @template index.php
+ * @templates index.php
  */
 
 .archive, .blog, .search {
@@ -1230,7 +1232,7 @@ body {
 }
 
 /**
- * @template single.php
+ * @templates single.php
  */
 
 .single {
@@ -1244,7 +1246,7 @@ body {
 			margin: 0 0 20px 0;
 			
 			.addthis_button_facebook_like,
-			.addthis_button_facebook_like iframe { width: 125px !important; }
+			.addthis_button_facebook_like iframe { min-width: 125px !important; }
 			.addthis_button_tweet { width: 95px; }
 			
 		}
@@ -1433,7 +1435,7 @@ body {
 }
 
 /**
- * @template search.php
+ * @templates search.php
  */
 
 article .search-highlight { background: #FFFFB3; }
