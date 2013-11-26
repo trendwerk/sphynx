@@ -7,6 +7,8 @@ class TPInformation {
 	function __construct() {
 		add_action('admin_init',array($this,'add_settings'));
 		add_action('admin_menu',array($this,'add_menu'),1);
+
+		add_filter( 'option_page_capability_tp-information', array( $this, 'get_capability' ) );
 	}
 	
 	/**
@@ -142,13 +144,13 @@ class TPInformation {
 	 * Add contact information page to menu
 	 */
 	function add_menu() {
-		add_options_page(__('Contact information','tp'),__('Contact information','tp'),'publish_pages','tp-information',array($this,'display'));
+		add_options_page(__('Contact information','tp'),__('Contact information','tp'), $this->get_capability(),'tp-information',array($this,'display'));
 	}
 	
 	/**
 	 * Display admin page
 	 */
-	function display($iets) {
+	function display() {
 		?>
 		<div class="wrap">
 			<div class="icon32" id="icon-themes"><br></div>
@@ -164,5 +166,11 @@ class TPInformation {
 		</div>
 		<?php
 	}
+
+	/**
+	 * Get capability
+	 */
+	function get_capability() {
+		return 'publish_pages';
+	}
 } new TPInformation;
-?>
