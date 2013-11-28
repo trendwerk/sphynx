@@ -58,7 +58,7 @@ class TPCapabilities {
 				}
 			}
 		} else if($cap == 'delete_users' || $cap == 'edit_user') {
-			if(!isset($args[0])) return;
+			if(!isset($args[0])) return $caps;
 			if(isset($args[0]) && $args[0] == $user_id) return $caps;
 			
 			$other = new WP_User(absint($args[0]));
