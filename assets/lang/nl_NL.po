@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-29 12:44+0100\n"
-"PO-Revision-Date: 2013-11-29 12:46+0100\n"
-"Last-Translator: Harold <harold@trendwerk.nl>\n"
+"POT-Creation-Date: 2013-11-29 16:10+0100\n"
+"PO-Revision-Date: 2013-11-29 16:10+0100\n"
+"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -77,6 +77,10 @@ msgid "One response to &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
 msgstr[0] "Één reactie op &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
+
+#: ../../comments.php:23
+msgid "Reply"
+msgstr "Reageer"
 
 #: ../../comments.php:40
 msgid "Comments are closed"
@@ -249,7 +253,7 @@ msgstr "Geeft gespecificeerde contactgegevens weer"
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:59
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:109
 #: ../../assets/inc/widgets/class-tp-tweets.php:19
-#: ../../assets/plugins/filter/class-tp-filter.php:299
+#: ../../assets/plugins/Filter/class-tp-filter.php:299
 #: ../inc/widgets/class-tp-contact.php:18
 #: ../inc/widgets/class-tp-fb-like-box.php:20
 #: ../inc/widgets/class-tp-social.php:19
@@ -258,7 +262,7 @@ msgstr "Geeft gespecificeerde contactgegevens weer"
 #: ../inc/widgets/class-tp-title-content-button.php:59
 #: ../inc/widgets/class-tp-title-image-content-button.php:109
 #: ../inc/widgets/class-tp-tweets.php:19
-#: ../plugins/filter/class-tp-filter.php:299
+#: ../plugins/Filter/class-tp-filter.php:299
 msgid "Title"
 msgstr "Titel"
 
@@ -555,101 +559,101 @@ msgstr "Twitter gebruikersnaam"
 msgid "Tweets from @%1$s"
 msgstr "Tweets van @%1$s"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:84
-#: ../plugins/filter/class-tp-filter.php:84
+#: ../../assets/plugins/Filter/class-tp-filter.php:84
+#: ../plugins/Filter/class-tp-filter.php:84
 msgid "Filters"
 msgstr "Filters"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:85
-#: ../../assets/plugins/filter/class-tp-filter.php:293
-#: ../../assets/plugins/filter/class-tp-filter.php:307
-#: ../plugins/filter/class-tp-filter.php:85
-#: ../plugins/filter/class-tp-filter.php:293
-#: ../plugins/filter/class-tp-filter.php:307
+#: ../../assets/plugins/Filter/class-tp-filter.php:85
+#: ../../assets/plugins/Filter/class-tp-filter.php:293
+#: ../../assets/plugins/Filter/class-tp-filter.php:307
+#: ../plugins/Filter/class-tp-filter.php:85
+#: ../plugins/Filter/class-tp-filter.php:293
+#: ../plugins/Filter/class-tp-filter.php:307
 msgid "Filter"
 msgstr "Filter"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:86
-#: ../plugins/filter/class-tp-filter.php:86
+#: ../../assets/plugins/Filter/class-tp-filter.php:86
+#: ../plugins/Filter/class-tp-filter.php:86
 msgid "Add filter"
 msgstr "Nieuwe filter"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:87
-#: ../plugins/filter/class-tp-filter.php:87
+#: ../../assets/plugins/Filter/class-tp-filter.php:87
+#: ../plugins/Filter/class-tp-filter.php:87
 msgid "Add new filter"
 msgstr "Nieuwe filter toevoegen"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:113
-#: ../../assets/plugins/filter/class-tp-filter.php:182
-#: ../../assets/plugins/filter/class-tp-filter.php:206
-#: ../plugins/filter/class-tp-filter.php:113
-#: ../plugins/filter/class-tp-filter.php:182
-#: ../plugins/filter/class-tp-filter.php:206
+#: ../../assets/plugins/Filter/class-tp-filter.php:113
+#: ../../assets/plugins/Filter/class-tp-filter.php:182
+#: ../../assets/plugins/Filter/class-tp-filter.php:206
+#: ../plugins/Filter/class-tp-filter.php:113
+#: ../plugins/Filter/class-tp-filter.php:182
+#: ../plugins/Filter/class-tp-filter.php:206
 msgid "Post types"
 msgstr "Post types"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:114
+#: ../../assets/plugins/Filter/class-tp-filter.php:114
 #: ../../assets/plugins/pt-order/class-tp-pt-order.php:52
 #: ../../assets/plugins/pt-order/class-tp-pt-order.php:67
-#: ../plugins/filter/class-tp-filter.php:114
+#: ../plugins/Filter/class-tp-filter.php:114
 #: ../plugins/pt-order/class-tp-pt-order.php:52
 #: ../plugins/pt-order/class-tp-pt-order.php:67
 msgid "Order"
 msgstr "Volgorde"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:128
-#: ../../assets/plugins/filter/class-tp-filter.php:179
-#: ../plugins/filter/class-tp-filter.php:128
-#: ../plugins/filter/class-tp-filter.php:179
+#: ../../assets/plugins/Filter/class-tp-filter.php:128
+#: ../../assets/plugins/Filter/class-tp-filter.php:179
+#: ../plugins/Filter/class-tp-filter.php:128
+#: ../plugins/Filter/class-tp-filter.php:179
 msgid "Not filterable"
 msgstr "Niet filterbaar"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:143
-#: ../../assets/plugins/filter/class-tp-filter.php:198
-#: ../plugins/filter/class-tp-filter.php:143
-#: ../plugins/filter/class-tp-filter.php:198
+#: ../../assets/plugins/Filter/class-tp-filter.php:143
+#: ../../assets/plugins/Filter/class-tp-filter.php:198
+#: ../plugins/Filter/class-tp-filter.php:143
+#: ../plugins/Filter/class-tp-filter.php:198
 msgid "Filterable"
 msgstr "Filterbaar"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:156
-#: ../plugins/filter/class-tp-filter.php:156
+#: ../../assets/plugins/Filter/class-tp-filter.php:156
+#: ../plugins/Filter/class-tp-filter.php:156
 msgid "Drag and drop post types here to make them filterable."
 msgstr "Sleep post types hier naar toe om ze filterbaar te maken."
 
-#: ../../assets/plugins/filter/class-tp-filter.php:218
-#: ../plugins/filter/class-tp-filter.php:218
+#: ../../assets/plugins/Filter/class-tp-filter.php:218
+#: ../plugins/Filter/class-tp-filter.php:218
 msgid "Drag and drop items here to make them filterable."
 msgstr "Sleep items hier naar toe om ze filterbaar te maken."
 
-#: ../../assets/plugins/filter/class-tp-filter.php:226
-#: ../plugins/filter/class-tp-filter.php:226
+#: ../../assets/plugins/Filter/class-tp-filter.php:226
+#: ../plugins/Filter/class-tp-filter.php:226
 msgid ""
 "Please select one or more post types that have taxonomies assigned to them."
 msgstr "Selecteer a.u.b. één of meerdere post types die taxonomieën hebben."
 
-#: ../../assets/plugins/filter/class-tp-filter.php:288
-#: ../plugins/filter/class-tp-filter.php:288
+#: ../../assets/plugins/Filter/class-tp-filter.php:288
+#: ../plugins/Filter/class-tp-filter.php:288
 msgid "Filter widget"
 msgstr "Filter widget"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:288
-#: ../plugins/filter/class-tp-filter.php:288
+#: ../../assets/plugins/Filter/class-tp-filter.php:288
+#: ../plugins/Filter/class-tp-filter.php:288
 msgid "A widget that filters on some taxonomies through AJAX"
 msgstr "Een widget die taxonomieën filtert door AJAX"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:312
-#: ../plugins/filter/class-tp-filter.php:312
+#: ../../assets/plugins/Filter/class-tp-filter.php:312
+#: ../plugins/Filter/class-tp-filter.php:312
 msgid "Select a filter.."
 msgstr "Selecteer een filter.."
 
-#: ../../assets/plugins/filter/class-tp-filter.php:319
-#: ../plugins/filter/class-tp-filter.php:319
+#: ../../assets/plugins/Filter/class-tp-filter.php:319
+#: ../plugins/Filter/class-tp-filter.php:319
 #, php-format
 msgid "You don't have any filters yet! <a href=\"%1$s\">Create one now</a>"
 msgstr "Je hebt nog geen filters! <a href=\"%1$s\">Maak een filter</a>"
 
-#: ../../assets/plugins/filter/class-tp-filter.php:429
-#: ../plugins/filter/class-tp-filter.php:429
+#: ../../assets/plugins/Filter/class-tp-filter.php:429
+#: ../plugins/Filter/class-tp-filter.php:429
 msgid "Filter by type"
 msgstr "Filter op type"
 

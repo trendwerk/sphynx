@@ -20,7 +20,7 @@
 				'callback'          => null,
 				'end-callback'      => null,
 				'type'              => 'all',
-				'reply_text'        => 'Reply',
+				'reply_text'        => __( 'Reply', 'tp'),
 				'page'              => '',
 				'per_page'          => '',
 				'avatar_size'       => 60,
