@@ -1,27 +1,62 @@
 /**
- * @typography base
+ * Default typography styles
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Ontwerpstudio Trendwerk
+ * @license   		GPL v3
+ *
+ * Contents:
+ *
+ * @import 			Imports other less files
+ * @typography 		Defines the default styling of text elements
+ * 
  */
+
+/**
+ * @import other less files
+ */
+
+@import "fontawesome.less"; 
+
+/**
+ * @typography lists
+ */
+
+ ul, 
+ ol {
+ 	line-height: 25px;
+ 	list-style-position: outside;
+ 	margin: 0 0 20px 25px; 
+ }
+
+ ol ol { list-style-type: lower-latin; }
+
+ ul ul, 
+ ol ol, 
+ ul ol, 
+ ol ul { 
+ 	margin: 0 0 0 20px;
+ }
+
+ /**
+  * @typography other
+  */
 
 strong, b { font-weight: bold; }
 
 em, i { font-style: italic; }
 
-blockquote, blockquote p, q { 
+blockquote, 
+blockquote p, 
+q { 
 	font-style: italic;
 	margin: 0 0 20px 0; 
 }
 		
-ul, ol {
-	line-height: 25px;
-	list-style-position: outside;
-	margin: 0 0 20px 25px; 
+code, pre { 
+	background: #FFFFB3; 
 }
-
-ul ul, ol ol, ul ol, ol ul { margin: 0 0 0 20px; }
-
-ol ol { list-style-type: lower-latin; }
-				
-code, pre { background: #FFFFB3; }
 	
 pre {
     margin-bottom: 22px; 

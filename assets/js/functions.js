@@ -36,16 +36,7 @@ jQuery(document).ready(function($){
 	
 	$('.fancybox').fancybox();
 	
-	/**
-	 * Hover
-	 */
-	$('#main-navigation li').mouseover(function() {
-		$(this).addClass('hover');
-	});
 
-	$('#main-navigation li').mouseout(function() {
-		$(this).removeClass('hover');
-	});	
 
 	/**
 	 * Toggle Navigation

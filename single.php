@@ -29,11 +29,11 @@
 				
 				<?php get_template_part('part','author'); ?>
 				
-				<div class="back">
+				<p>
 					<a class="back" href="<?php if( get_option('show_on_front') == 'page') echo get_permalink(get_option('page_for_posts')); else echo site_url();?>">
 						<?php _e('Back to the overview','tp'); ?>
 					</a>
-				</div>
+				</p>
 				
 			<?php endwhile; endif; ?>
 			

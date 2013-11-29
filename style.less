@@ -1,8 +1,10 @@
 /**
- * Author: Ontwerpstudio Trendwerk
- * Author URI: http://www.www.trendwerk.nl/
- * License: GNU General Public License v2.0
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Main stylesheet for TrendPress child theme
+ *
+ * @package   		WordPress
+ * @subpackage 	TrendPress
+ * @author    		Ontwerpstudio Trendwerk
+ * @license   		GPL v3
  *
  * Contents:
  *
@@ -23,33 +25,34 @@
  * @import
  */ 
 
-@import "assets/less/formalize.less"; 
-@import "assets/less/grid.less"; 
-@import "assets/less/misc.less"; 
-@import "assets/less/mixins.less"; 
-@import "assets/less/navigation.less"; 
-@import "assets/less/reset.less"; 
-@import "assets/less/table.less"; 
+@import "assets/less/reset.less";
+@import "assets/less/mixins.less";
+@import "assets/less/grid.less";
 @import "assets/less/typography.less"; 
+@import "assets/less/forms.less";
+@import "assets/less/table.less"; 
+@import "assets/less/navigation.less";
 @import "assets/less/wordpress.less"; 
-@import "assets/less/fontawesome.less"; 
+@import "assets/less/misc.less";
 
 /**
  * @variables
  */
 
-@footer-background: #333;
-@secondary-color:	#999;
+@primary-color:     #1f6fd1;
+@secondary-color:   #999;
+
 @body-background:	#fff;
-@primary-color:		#1f6fd1;
-@heading-color:		#333;
+@footer-background: #333;
 @border-color:		#ccc;
+
+@heading-color:		#333;
 @text-color:		#666;
-@link-color:		#1f6fd1;
+@link-color:		@primary-color;
 
 @heading-font:		"Helvetica Neue", sans-serif;
 @text-font:			"Helvetica Neue", sans-serif;
-	
+
 /**
  * @typography
  *
@@ -502,7 +505,7 @@ body {
 							.box-shadow(none); 
 						}
 					
-					} 
+					}
 					
 					input[type="text"] { 
 						.placeholder(#666, #eee);
@@ -572,6 +575,8 @@ body {
 					display: block !important;
 
 					ul {
+
+						/* level 1 */
 					
 						li {
 										
@@ -589,25 +594,7 @@ body {
 								}
 							
 							}
-							
-							li {
-								
-								a {
-									background: #111;
-									font-size: 13px;
-									height: 30px;
-									line-height: 30px;
-									padding: 0;
-									text-indent: 20px;
-									
-									&:hover {
-									 	background: #000;
-									}
-									
-								}
-								
-							}
-											
+
 							/* current navigation ancestor parent, item */
 
 							&.current-menu-ancestor,
@@ -632,16 +619,37 @@ body {
 							
 							}
 							
-							/* sfhover alternative */
+							/* hover states */
 							
-							&.hover {
+							&:hover {
 								
 								> a { 
-									background: #111; 
+									background: #111;
 								}
 								
 								&:hover > a { 
 									background: #000; 
+								}
+								
+							}
+
+							
+							/* level 2 */
+
+							li {
+								
+								a {
+									background: #111;
+									font-size: 13px;
+									height: 30px;
+									line-height: 30px;
+									padding: 0;
+									text-indent: 20px;
+									
+									&:hover {
+									 	background: #000;
+									}
+									
 								}
 								
 							}
@@ -1735,15 +1743,6 @@ article .search-highlight { background: #FFFFB3; }
 				margin: 0 0 30px 0;
 				width: 46%;
 
-				&.even {
-					clear: left;
-					margin-right: 2%;
-				}
-				
-				&.odd {
-					margin-left: 2%;
-				}
-
 			}
 		
 		}
@@ -1866,12 +1865,6 @@ article .search-highlight { background: #FFFFB3; }
 				margin: 0 0 30px 0;
 				padding: 0%;
 				width: 100%;
-			}
-
-			.widget.even,
-			.widget.odd {
-				margin-right: 0;
-				margin-left: 0;
 			}
 
 		}
