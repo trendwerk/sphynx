@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-05 16:43+0100\n"
-"PO-Revision-Date: 2013-11-05 16:43+0100\n"
+"POT-Creation-Date: 2013-11-29 17:00+0100\n"
+"PO-Revision-Date: 2013-11-29 17:03+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../../index.php:1
+#: ../../index.php:9
 msgid "Please activate a TrendPress child-theme to use this theme."
 msgstr ""
 "Om dit thema te gebruiken dient u een TrendPress child-theme te activeren."
@@ -292,8 +292,12 @@ msgstr "Beheer 301 doorverwijzingen en houd 404 errors bij."
 
 #: ../../assets/inc/class.TPRecommendedPlugins.php:114
 #: ../inc/class.TPRecommendedPlugins.php:114
-msgid "A simple way to create and manage roles and capabilities."
-msgstr "Een eenvoudige manier om rollen en rechten te beheren."
+msgid ""
+"Send e-mails form the website using your preferred SMTP server to prevent e-"
+"mails from getting blocked by spam filter."
+msgstr ""
+"Verstuurt e-mails vanuit de website via een SMTP server om te voorkomen dat "
+"e-mails worden geblokkeerd door een spam filter."
 
 #: ../../assets/inc/class.TPRecommendedPlugins.php:123
 #: ../inc/class.TPRecommendedPlugins.php:123
@@ -406,6 +410,9 @@ msgstr "Optionele plugins"
 #: ../inc/admin-views/recommended-plugins.php:19
 msgid "Developer tools"
 msgstr "Ontwikkelaars tools"
+
+#~ msgid "A simple way to create and manage roles and capabilities."
+#~ msgstr "Een eenvoudige manier om rollen en rechten te beheren."
 
 #~ msgid ""
 #~ "Reduce image file sizes and improve performance using the Smush.it API "

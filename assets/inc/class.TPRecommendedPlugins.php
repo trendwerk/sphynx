@@ -109,10 +109,10 @@ class TPRecommendedPlugins {
 				'description' => __('Manage 301 redirections and keep track of 404 errors.','tp'),
 				'path' => 'redirection/redirection.php'
 			),
-			'capsman' => array(
-				'name' => 'Capability Manager',
-				'description' => __('A simple way to create and manage roles and capabilities.','tp'),
-				'path' => 'capsman/capsman.php'
+			'easy-wp-smtp' => array(
+				'name' => 'Easy WP SMTP',
+				'description' => __('Send e-mails form the website using your preferred SMTP server to prevent e-mails from getting blocked by spam filter.','tp'),
+				'path' => 'easy-wp-smtp/easy-wp-smtp.php'
 			)
 
 		);
