@@ -35,6 +35,12 @@ class TPNav {
 	 * @var bool
 	 */
 	public $is_single;
+
+	/**
+	 * Defines if the current item is a post type
+	 * @var bool
+	 */
+	public $is_post_type;
 	
 	/**
 	 * Constructor
@@ -56,6 +62,10 @@ class TPNav {
 		
 		$this->menu = $menu;
 		$this->menu_items = wp_get_nav_menu_items($this->menu);
+
+		//Defaults
+		$this->is_post_type = false;
+		$this->is_single = false;
 
 		if(is_array($this->menu_items)) $this->set_current_item();
 	}
@@ -113,7 +123,31 @@ class TPNav {
 			$breadcrumb->is_current = true;
 			
 			$breadcrumbs = array($breadcrumb);
-		} else if(!is_tax()) {
+		} else if( $this->is_post_type && 1 >= count( $breadcrumbs ) ) {
+			$post_type = get_post_type_object( get_query_var( 'post_type' ) );
+
+			$breadcrumb = new stdClass;
+			$breadcrumb->title = $post_type->labels->name;
+			$breadcrumb->url = get_post_type_archive_link( $post_type->name );
+
+			if( is_post_type_archive( $post_type->name ) )
+				$breadcrumb->is_current = true;
+
+			$breadcrumbs = array( $breadcrumb );
+
+			if( $this->is_single ) {
+				global $post;
+				
+				$breadcrumb = new stdClass;
+				$breadcrumb->ID = $post->ID;
+				$breadcrumb->title = $post->post_title;
+				$breadcrumb->url = get_permalink($post->ID);
+				
+				$breadcrumb->is_current = true;
+				
+				$breadcrumbs[] = $breadcrumb;
+			}
+		} else if( ! is_tax() ) {
 			//There are no breadcrumbs, show Home > {Current item}
 			global $post;
 			
@@ -302,6 +336,8 @@ class TPNav {
 				if(!is_array(get_query_var('post_type'))) $posttype = get_post_type_object(get_query_var('post_type'));
 
 				if($posttype) {
+					$this->is_post_type = true;
+
 					foreach($this->menu_items as $menu_item) {
 						if($menu_item->url == get_post_type_archive_link($posttype->name)) {
 							$this->current_item = $menu_item->ID;
