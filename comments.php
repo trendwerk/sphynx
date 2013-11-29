@@ -27,7 +27,7 @@
 				'reverse_top_level' => null,
 				'reverse_children'  => '',
 				'format'            => 'html5',
-				'short_ping'        => false
+				'short_ping'        => false,
 			));
             ?>
         </ol>
