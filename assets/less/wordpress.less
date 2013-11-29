@@ -1,4 +1,19 @@
 /**
+ * Default WordPress specific styles
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ *
+ * Contents:
+ *
+ * @wordpress 		Defines the the default style for WordPress specific ID's and classes
+ * @widget 			Defines the the default style for WordPress native widgets
+ * 
+ */
+
+/**
  * @wordpress images
  */
 
@@ -73,12 +88,11 @@
 
 
 /**
- * @wordpress widgets 
+ * @widget calendar 
  */
 
-table#wp-calendar, .widget_archive li { text-transform: capitalize; }
-
-/* calendar */
+table#wp-calendar, 
+.widget_archive li { text-transform: capitalize; }
 
 	table#wp-calendar {
 		border-right: none;
@@ -98,7 +112,9 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 			table#wp-calendar tfoot td#prev { text-align: left; }
 			table#wp-calendar tfoot td#next { text-align: right; }
 		
-/* rss */
+/**
+ * @widget RSS 
+ */
 
 .widget_rss ul li { padding: 10px 5px 15px 5px !important; }
 
@@ -119,7 +135,9 @@ table#wp-calendar, .widget_archive li { text-transform: capitalize; }
 		
 	div.widget_rss ul li span.rss-date, div.widget_rss ul li cite { display: block; }
 			
-/* widget contact-widget */
+/**
+ * @widget contact 
+ */
 
 .contact-widget span { 
 	display: inline-block;

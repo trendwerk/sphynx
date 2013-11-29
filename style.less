@@ -2,17 +2,17 @@
  * Main stylesheet for TrendPress child theme
  *
  * @package   		WordPress
- * @subpackage 	TrendPress
- * @author    		Ontwerpstudio Trendwerk
- * @license   		GPL v3
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
  *
  * Contents:
  *
- * @import 			Import files
- * @variable 		Defines colors and fonts
+ * @import 			Import other less files
+ * @variable 		Defines recurring colors and fonts
  * @typography 		Defines the styling of text elements
  * @misc 			Defines miscellaneous styles
- * @layout			Defines the lay-out
+ * @layout			Defines the standard layout for a regular page 
  * @templates		Defines the template specific styling
  * @plugins 		Defines the plugin specific styling
  * @responsive		Defines responsive layout
@@ -23,20 +23,24 @@
 
 /**
  * @import
+ *
+ * Import other less files
  */ 
 
 @import "assets/less/reset.less";
-@import "assets/less/mixins.less";
 @import "assets/less/grid.less";
+@import "assets/less/mixins.less";
+
 @import "assets/less/typography.less"; 
 @import "assets/less/forms.less";
-@import "assets/less/table.less"; 
 @import "assets/less/navigation.less";
 @import "assets/less/wordpress.less"; 
 @import "assets/less/misc.less";
 
 /**
  * @variables
+ *
+ * Defines recurring colors and fonts
  */
 
 @primary-color:     #1f6fd1;
@@ -383,7 +387,7 @@ textarea {
 /**
  * @layout
  *
- * Defines the layout of elements (e.g. position, size, margin, etc...)
+ * Defines the standard layout for a regular page (e.g. position, size, margin, etc...)
  * 
  * @layout Default
  */

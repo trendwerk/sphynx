@@ -1,6 +1,27 @@
 /**
- * @grid
+ * Grid
+ * 
+ * This document defines the width of grid classes like .onecol, .twocol,
+ * .threecol and so on. These classes make sure the website aligns to the 
+ * 960 grid (http://960.gs/) or 1140 grid (http://www.1140px.com/) for larger 
+ * screens.
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ *
+ * Contents:
+ *
+ * @grid 			Defines the width of grid classes
+ * 
  */
+
+/**
+ * @grid default grid styling
+ *
+ * Defines the width of grid classes (e.g. .onecol, .twocol, .threecol, etc...)
+ */ 
  
 body { 
 	position: relative;
@@ -46,62 +67,10 @@ img {
 	}
 
 }
-	
-@media(min-width: 1180px) {
 
-.container .container-inner {
-	width: 1140px;
-}
-
-	.onecol { 
-		width: 75px; 
-	}
-
-	.twocol { 
-		width: 170px; 
-	}
-
-	.threecol { 
-		width: 265px; 
-	}
-
-	.fourcol { 
-		width: 360px; 
-	}
-
-	.fivecol { 
-		idth: 455px; 
-	}
-
-	.sixcol { 
-		width: 550px; 
-	}
-
-	.sevencol { 
-		width: 645px; 
-	}
-
-	.eightcol { 
-		width: 740px; 
-	}
-
-	.ninecol { 
-		width: 835px; 
-	}
-
-	.tencol { 
-		width: 930px; 
-	}
-
-	.elevencol { 
-		width: 1025px; 
-	}
-
-	.twelvecol { 
-		width: 1120px; 
-	}
-
-}
+/**
+ * @grid 960 pixel grid for regular displays
+ */ 
 
 @media(max-width: 1179px) {
 
@@ -159,4 +128,62 @@ img {
 
 }
 
+/**
+ * @grid 1140 pixel grid for larger displays
+ */ 
+	
+@media(min-width: 1180px) {
 
+.container .container-inner {
+	width: 1140px;
+}
+
+	.onecol { 
+		width: 75px; 
+	}
+
+	.twocol { 
+		width: 170px; 
+	}
+
+	.threecol { 
+		width: 265px; 
+	}
+
+	.fourcol { 
+		width: 360px; 
+	}
+
+	.fivecol { 
+		idth: 455px; 
+	}
+
+	.sixcol { 
+		width: 550px; 
+	}
+
+	.sevencol { 
+		width: 645px; 
+	}
+
+	.eightcol { 
+		width: 740px; 
+	}
+
+	.ninecol { 
+		width: 835px; 
+	}
+
+	.tencol { 
+		width: 930px; 
+	}
+
+	.elevencol { 
+		width: 1025px; 
+	}
+
+	.twelvecol { 
+		width: 1120px; 
+	}
+
+}
