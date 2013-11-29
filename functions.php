@@ -5,11 +5,11 @@
  */
 
 /**
- * @includes Include the following PHP files
+ * Include the following PHP files
  */
- 
 include('assets/inc/class-tp-rewrite-rules.php');
 include('assets/inc/class-tp-widgets.php');
+include('assets/inc/class-tp-libraries.php');
 include('assets/inc/class.TPCapabilities.php');
 include('assets/inc/class.TPCleanUp.php');
 include('assets/inc/class.TPCPTExtras.php');
@@ -21,7 +21,6 @@ include('assets/inc/class.TPNavMenu.php');
 include('assets/inc/class.TPPlugins.php');
 include('assets/inc/class.TPProfile.php');
 include('assets/inc/class.TPRecommendedPlugins.php');
-include('assets/inc/class.TPScripts.php');
 include('assets/inc/class.TPSearch.php');
 include('assets/inc/class.TPSidebar.php');
 
