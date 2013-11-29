@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js ie ie7"> <![endif]-->
-<!--[if IE 7]><html class="no-js ie ie8> <![endif]-->
-<!--[if IE 8]><html class="no-js ie ie9"> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
+
+<!--[if lte IE 8]>
+	<html class="ie ie8" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if gt IE 8]>
+	<html <?php language_attributes(); ?>>
+<![endif]-->
+
 	<head>
 		<title><?php wp_title('-'); ?></title>
 		<meta charset="<?php bloginfo('charset'); ?>" />
@@ -39,10 +43,10 @@
 				</nav>
 
 				<div class="toggle-wrap">
-					<div class="toggle-main-navigation">
+					<div class="toggle-main-navigation" data-toggle="#main-navigation">
 						<i class="icon-reorder"></i>
 					</div>
-					<div class="toggle-search">
+					<div class="toggle-search" data-toggle="#search">
 						<i class="icon-search"></i>
 					</div>
 				</div>
