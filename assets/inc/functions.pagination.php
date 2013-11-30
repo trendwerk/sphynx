@@ -35,10 +35,10 @@ function tp_pagination($args = null) {
 	if ($pages > 1) {
 		$output = '<nav id="pagination" itemscope itemtype="http://schema.org/SiteNavigationElement/"><ul>';
 		
-		$ellipsis = "<li class='pagination-gap'>&hellip;</li>";
+		$ellipsis = "<li class='gap'>&hellip;</li>";
 
 		if ($page > 1 && !empty($previouspage)) {
-			$output .= "<li><a href='" . get_pagenum_link($page - 1) . "' class='pagination-prev'>$previouspage</a></li>";
+			$output .= "<li><a href='" . get_pagenum_link($page - 1) . "' class='prev'>$previouspage</a></li>";
 		}
 		
 		$min_links = $range * 2 + 1;
@@ -75,7 +75,7 @@ function tp_pagination($args = null) {
 		}
 
 		if ($page < $pages && !empty($nextpage)) {
-			$output .= "<li><a href='" . get_pagenum_link($page + 1) . "' class='pagination-next'>$nextpage</a></li>";
+			$output .= "<li><a href='" . get_pagenum_link($page + 1) . "' class='next'>$nextpage</a></li>";
 		}
 
 		$output .= '</ul></nav>';
@@ -99,8 +99,8 @@ function tp_pagination_loop($start, $max, $page = 0) {
 	$output = "";
 	for ($i = $start; $i <= $max; $i++) {
 		$output .= ($page === intval($i)) 
-			? "<li><span class='pagination-page pagination-current'>$i</span></li>" 
-			: "<li><a href='" . get_pagenum_link($i) . "' class='pagination-page'>$i</a></li>";
+			? "<li><span class='page current'>$i</span></li>" 
+			: "<li><a href='" . get_pagenum_link($i) . "' class='page'>$i</a></li>";
 	}
 	return $output;
 }
