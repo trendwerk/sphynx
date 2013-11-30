@@ -1,94 +1,21 @@
 /**
- * Default WordPress specific styles
+ * @widgets
+ *
+ * Defines the default styling of widgets
  *
  * @package   		WordPress
  * @subpackage 		TrendPress
  * @author    		Trendwerk
  * @license   		GPL v2
- *
- * Contents:
- *
- * @wordpress 		Defines the the default style for WordPress specific ID's and classes
- * @widget 			Defines the the default style for WordPress native widgets
  * 
  */
 
-/**
- * @wordpress images
- */
-
-.entry-content img { margin: 0 0 25px 0; }
-
-.alignleft, img.alignleft {
-	display: inline;
-	float: left; 
-	margin-right: 20px;
-}
-	
-.alignright, img.alignright {
-	display: inline;
-	float: right;
-	margin-left: 20px;
-}
-	
-.aligncenter, img.aligncenter {
-	clear: both;
-	display: block;
-	margin: 0px auto;
-}
-	
-.wp-caption {
-	margin-bottom: 10px;
-	padding-top: 5px;
-	text-align: center;
-}
-	
-.wp-caption img {
-	border: 0 none;
-	margin: 0;
-	padding: 0;
-}
-	
-.wp-caption p.wp-caption-text { margin: 0; }
-	
-.wp-smiley {
-	margin: 0 !important;
-	max-height: 1em;
-}
-
-/**
- * @wordpress gallery
- */
-
-.gallery { 
-	margin-bottom: 25px;
-	overflow: auto;
-	padding: 9px;
-	width: auto;
-}
-
-	.gallery dl {
-		display: block;
-		float: left;
-		height: auto;
-		margin: 10px;
-		width: auto;
-	}
-		
-	.ie7 .gallery dt { margin-bottom: 25px; }
-	
-		
-		.gallery dt img {
-			float: left;
-			height: auto; 
-			width: auto;
-		}
-		
-		.gallery dd, .gallery br { display: none; }
-
+// ADD @package TO ALL WIDGETS
 
 /**
  * @widget calendar 
+ *
+ * @package wordpress
  */
 
 table#wp-calendar, 
@@ -113,8 +40,8 @@ table#wp-calendar,
 			table#wp-calendar tfoot td#next { text-align: right; }
 		
 /**
- * @widget RSS 
- */
+* @widget RSS 
+*/
 
 .widget_rss ul li { padding: 10px 5px 15px 5px !important; }
 
@@ -136,8 +63,8 @@ table#wp-calendar,
 	div.widget_rss ul li span.rss-date, div.widget_rss ul li cite { display: block; }
 			
 /**
- * @widget contact 
- */
+* @widget contact 
+*/
 
 .contact-widget span { 
 	display: inline-block;

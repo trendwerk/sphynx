@@ -1,0 +1,289 @@
+/**
+ * @responsive
+ *
+ * Defines responsive layout
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ *
+ */
+
+
+/**
+ * @responsive Desktop
+ */
+
+ @media (min-width: 1081px) {
+
+ 	.toggle-wrap {
+ 		display: none;
+ 	}
+
+ 	#main-navigation, 
+ 	#search {
+ 		display: block;
+ 	}
+
+ }
+
+/**
+ * @responsive Landscape phone to portrait tablet
+ */
+
+ @media (max-width: 1080px) {
+ 	
+ 	#header {
+
+ 		.toggle-wrap {
+ 			display: none;
+ 		}
+
+ 		#topnav {
+ 			display: none;
+ 		}
+
+ 		#main-navigation, 
+ 		#search {
+ 			display: block;
+ 		}
+
+ 		#main-navigation {
+ 			margin-left: 0; 
+ 		}
+
+ 	}
+ 	
+ 	.container {
+ 			
+ 		.container-inner {
+ 			padding: 0 5%;
+ 			width: 90%;
+ 			
+ 			.onecol, 
+ 			.twocol, 
+ 			.threecol, 
+ 			.fourcol, 
+ 			.fivecol, 
+ 			.sixcol, 
+ 			.sevencol, 
+ 			.sevencol, 
+ 			.eightcol, 
+ 			.ninecol, 
+ 			.tencol, 
+ 			.elevencol, 
+ 			.twelvecol {
+ 				margin: 10px 0;
+ 			} 
+ 			
+ 			.sixcol, 
+ 			.sevencol, 
+ 			.eightcol, 
+ 			.ninecol, 
+ 			.tencol, 
+ 			.elevencol,
+ 			.twelvecol {
+ 				clear: both;
+ 				width: 100%;
+ 			}
+
+ 		}
+
+ 		&#main {
+ 			padding-bottom: 0;
+ 		}
+ 		
+ 		&#footer {
+ 			margin-top: 0;
+ 		}
+ 		
+ 		&#footer .sidebar, 
+ 		&#main .sidebar {
+ 			padding: 0;
+ 			width: 100% ;
+ 			
+ 			.widget {
+ 				.border-box;
+ 				clear: none;
+ 				float: left;
+ 				margin: 0 0 30px 0;
+ 				width: 46%;
+
+ 				&.even {
+ 					clear: left;
+ 					margin-right: 2%;
+ 				}
+ 				
+ 				&.odd {
+ 					margin-left: 2%;
+ 				}
+
+ 			}
+ 		
+ 		}
+
+ 		&#main .sidebar {
+
+ 			.widget {
+ 				padding: 3%;
+ 			}
+
+ 		}
+
+ 		&#footer .sidebar {
+ 			padding-top: 30px;
+
+ 			.widget {
+ 				padding: 0;
+ 			}
+
+ 		}
+ 	
+ 	}	
+
+ }
+
+/**
+ * Responsive Mobile
+ */
+
+ @media (max-width: 720px) {	
+ 	
+ 	.container {
+ 			
+ 		.container-inner {
+ 		
+ 			.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol {
+ 				clear: both;
+ 				width: 100%;
+ 			}
+
+ 		}
+
+ 		&#header {
+ 			margin-top: 10px !important;
+ 			border-bottom: 1px solid @border-color;
+ 			padding-bottom: 10px;
+ 			margin-bottom: 10px !important;
+
+ 			.toggle-wrap {
+ 				display: block;
+ 			}
+
+ 			#topnav, #search {
+ 				display: none;
+ 			}
+ 			
+ 			#main-navigation {
+ 				display: none;
+ 				margin-left: 0; 
+ 			}
+
+ 		}
+ 		
+ 		&#main {
+ 			margin-bottom: 0;
+ 			padding-bottom: 0;
+
+ 			#content {
+ 				margin-bottom: 0;
+ 				padding-right: 0;
+ 				padding-bottom: 0;
+
+ 				img.alignleft, 
+ 				img.alignright, 
+ 				.wp-caption { 
+ 					clear: both;
+ 					float: left !important;
+ 					margin: 0 20px 20px 0;
+ 				}
+
+ 				.wp-caption {
+ 					background: transparent;
+ 					border: none;
+ 					clear: both;
+ 					padding: 0;
+ 					width: 100%;
+
+ 					img { 
+ 						float: left; 
+ 					}
+
+ 					p { 
+ 						clear: both; 
+ 						text-align: left;
+ 					}
+
+ 				}
+
+ 			}
+
+ 			.sidebar {
+ 				border-top: 1px solid @border-color;
+ 				padding-top: 30px;
+
+ 				.widget {
+ 					padding: 5% !important;
+ 				}
+
+ 			}
+
+ 		}
+
+ 		&#footer .sidebar,
+ 		&#main .sidebar {
+ 			margin-bottom: 0;
+ 			padding-bottom: 0;
+ 		
+ 			.widget { 
+ 				.border-box;
+ 				clear: both;
+ 				margin: 0 0 30px 0;
+ 				padding: 0%;
+ 				width: 100%;
+ 			}
+
+ 			.widget.even,
+ 			.widget.odd {
+ 				margin-right: 0;
+ 				margin-left: 0;
+ 			}
+
+ 		}
+ 		
+ 		&#footer {
+ 			margin-top: 0;
+ 			padding-top: 0;
+
+ 			#credits {
+ 				padding-top: 30px;
+ 				
+ 				#copyright,
+ 				#footernav {
+ 					text-align: center;
+ 					width: 100%;
+ 				
+ 					ul {
+ 						text-align: center;
+ 						
+ 						li {
+ 							display: inline;
+ 							
+ 							a { 
+ 								float: none; 
+ 							}
+ 						
+ 						}
+ 					
+ 					}
+ 				
+ 				}
+ 			
+ 			}
+ 			
+ 		}
+ 	
+ 	}
+
+ }

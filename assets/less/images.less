@@ -1,0 +1,89 @@
+/**
+ * @border-image-source
+ * 
+ * Defines the default styling of images
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+
+ img {
+ 	.border-radius(3px);
+ }
+
+ /**
+  * @images Alignment
+  */
+
+ .alignleft {
+ 	float: left;
+ 	margin: 5px 20px 10px 0; 
+ }
+
+ .alignright {
+ 	float: right;
+ 	margin: 5px 0 10px 20px; 
+ }
+
+ /**
+  * @images Captions
+  */
+
+ .wp-caption {
+ 	background: @light-background;
+ 	margin-bottom: 20px;
+ 	max-width: 100%;
+ 	.border-radius(3px);
+ 	text-align: center;
+
+ 	img { margin: 5px 5px 0 5px; }
+ 		
+ 	.wp-caption-text { 
+ 		display: inline-block;
+ 		font-size: 12px;
+ 		line-height: 20px;
+ 		margin: 0 10px 10px 10px;	
+ 	}
+
+ }
+
+ /**
+  * @images gallery
+  */
+
+ .gallery { 
+ 	margin-bottom: 25px;
+ 	overflow: auto;
+ 	padding: 9px;
+ 	width: auto;
+	
+	dl {
+ 		display: block;
+ 		float: left;
+ 		height: auto;
+ 		margin: 10px;
+ 		width: auto;
+ 	} 	
+ 		
+	dt img {
+		float: left;
+		height: auto; 
+		width: auto;
+	}
+	
+	.gallery dd, 
+	.gallery br { display: none; }
+
+}
+
+ /**
+  * @images WordPress smileys
+  */
+
+ .wp-smiley {
+ 	margin: 0 !important;
+ 	max-height: 1em;
+ }

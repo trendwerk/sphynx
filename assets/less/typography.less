@@ -1,129 +1,347 @@
 /**
- * Default typography styles
+ * @typography
+ * 
+ * Defines the default styling of text elements
  *
  * @package   		WordPress
  * @subpackage 		TrendPress
  * @author    		Trendwerk
  * @license   		GPL v2
- *
- * Contents:
- *
- * @import 			Imports other less files
- * @typography 		Defines the default styling of text elements
  * 
  */
 
 /**
- * @import other less files
+ * @import Import Font Awesome
  */
 
 @import "libs/fontawesome.less"; 
 
 /**
- * @typography headings
+ * @typography render settings
  */
 
-// WE SHOULD ADD DEFAULT HEADING STYLING HERE
+html {
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-text-size-adjust: none;
+}
 
 /**
- * @typography headings
+ * @typography Content
  */
 
-// WE SHOULD ADD DEFAULT CONTENT HERE
+body {
+	color: @text-color;
+	font-family: @text-font;
+	font-size: 14px;
+	line-height: 25px;	
+}
+
+p {
+	margin: 0 0 20px 0;
+}
 
 /**
- * @typography links
+ * @typography Headings
  */
 
- // WE SHOULD ADD DEFAULT LINK HERE
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: @heading-color;
+	font-family: @heading-font;
+	font-weight: normal;
+	line-height: 1em;
+	margin: 0 0 20px 0;
+}
+
+h1 { 
+	font-size: 36px;
+}
+
+h2 { 
+	font-size: 24px; 
+}
+
+h3 { 
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h4 { 
+	font-size: 18px;
+	font-weight: bold;
+}
+
+h5 { 
+	font-size: 16px;
+	font-weight: bold;
+}
+
+h6 { 
+	font-size: 14px;
+	font-weight: bold;
+}
 
 /**
- * @typography lists
+ * @typography Links
  */
 
- ul, 
- ol {
- 	line-height: 25px;
- 	list-style-position: outside;
- 	margin: 0 0 20px 25px; 
+ a {
+ 	color: @link-color;
+ 	text-decoration: underline;
+ 			
+ 	&:hover { 
+ 		color: darken(@link-color, 10%);
+ 		text-decoration: underline;
+ 	}
+
+ 	/* add characters to links */
+ 	
+ 	&.back:after,
+ 	&.prev:after {
+ 		content: "\00ab ";
+ 	}
+ 	
+ 	&.more:after,
+ 	&.next:after {
+ 		content: " \00bb";
+ 	}
+	
+	/* call to action buttons */
+
+ 	&.cta {
+ 		.border-radius(3px);
+ 		.font-awesome-after(" \f054");
+ 		display: inline-block;
+ 		font-weight: bold;
+ 		height: 40px;
+ 		line-height: 40px;
+ 		margin: 0 10px 0 0;
+ 		padding: 0 20px;
+ 		position: relative;
+ 		text-decoration: none;
+
+ 		&:after {
+ 			font-size: 10px;
+ 			padding-left: 10px;
+ 		}
+ 		
+ 		&:active {
+ 			top: 1px;
+ 		}	
+
+ 		/* primary button */
+ 		
+ 		&.primary {
+ 			background: @primary-color;
+ 			box-shadow: 0 2px 0 darken(@primary-color, 10%);
+ 			color: #fff;
+ 			text-shadow: 0 1px 0 darken(@primary-color, 10%);
+ 			
+ 			&:hover { 
+ 				background: lighten(@primary-color, 5%);
+ 			}
+ 		
+ 		}
+
+ 		/* secondary button */
+ 		
+ 		&.secondary {
+ 			background: @secondary-color;
+ 			box-shadow: 0 2px 0 darken(@secondary-color, 10%);
+ 			color: #fff;
+ 			text-shadow: 0 1px 0 darken(@secondary-color, 10%);
+ 			
+ 			&:hover { 
+ 				background: lighten(@secondary-color, 5%);
+ 			}
+ 		
+ 		}		
+ 	
+ 	}
+
  }
 
- ol ol { list-style-type: lower-latin; }
+/**
+ * @typography Lists
+ */
 
- ul ul, 
- ol ol, 
- ul ol, 
- ol ul { 
- 	margin: 0 0 0 20px;
- }
+ul { 
+	list-style-position: outside;
+	list-style-type: square; 
+	margin: 0 0 20px 20px;
+	
+	ul {
+		list-style-type: circle;
+		margin: 0;
+	}
+	
+}
+
+ol {
+	list-style-position: outside;
+	list-style-type: decimal;
+	margin: 0 0 20px 20px;
+	
+	ol {
+		list-style-type: lower-alpha;
+		margin: 0;
+	}
+	
+}
 
 /**
- * @typography tables
+ * @typography Tables
  */
 
 table { 
-	border: 1px solid #000000;
+	border: 1px solid @border-color;
 	border-collapse: collapse;
 	border-spacing: 0;	
 	font-size: 14px;
 	line-height: 22px;
-	margin-bottom: 20px;
+	margin: 0 0 20px 0;
 	width: 100%;
-}
-	
-	table caption { 
-		font-size: 14px;
-		font-weight: bold;
-		line-height: 22px;
-		margin-bottom: 22px;
-		text-align: left;
-	}
 		
-	table tr { border-bottom: 1px solid #000; }
+	tr { 
+		border-bottom: 1px solid @border-color;
+		border-right: 1px solid @border-color;
 		
-		table th { 
+		&:nth-child(even) {
+			background: @light-background;
+		}
+
+		td,
+		th { 
+			border-right: 1px solid @border-color;
 			padding: 5px 10px;
 			text-align: left;
 		}
-			
-		table thead { font-weight: bold; }
-			
-		table td { padding: 5px 10px; }
-		
-		table td, table th { border-right: 1px solid #000000; }
+
+		th { 
+			font-weight: bold;
+		}
+
+	}
+
+	thead tr { background: @light-background; }
+
+}
 
 /**
- * @typography other
+ * @typography Quotes
  */
 
-strong, b { font-weight: bold; }
-
-em, i { font-style: italic; }
-
 blockquote, 
-blockquote p, 
-q { 
+q {
+	background: @light-background;
+	color: @text-light;
+	display: inline-block;
 	font-style: italic;
 	margin: 0 0 20px 0; 
+	padding: 20px 20px 10px 20px;
+	.border-radius(3px);
+
+	p { margin: 0 0 10px 0; }
+
 }
-		
-code, pre { 
+
+cite { 
+	color: @text-color;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	margin: 0 0 10px 0; 
+
+	a {
+		color: @text-color;
+	}
+
+}
+
+/**
+ * @typography Code snippets
+ */
+
+code, 
+pre { 
 	background: #FFFFB3; 
 }
 	
 pre {
-    margin-bottom: 22px; 
-	padding: 5px 10px; 
+    margin-bottom: 20px; 
+	padding: 20px; 
     white-space: pre-wrap;
  	white-space: -moz-pre-wrap;
  	white-space: -o-pre-wrap;
 }
 
+/* abbreviations */
+
+abbr,
+acronym {
+	border-bottom: 1px dotted @text-color;
+	cursor: help;
+	
+	&:hover {
+		border-bottom-style: solid;
+	}
+	
+}
+
+/**
+ * @typography Subscripts and superscripts
+ */
+
+sub,
+sup {
+	font-size: 10px;
+}
+
+sub {
+	vertical-align: sub;
+}
+
+sup {
+	vertical-align: super;
+}
+
+/**
+ * @typography Deleted and inserted text 
+ */
+
+del {
+	color: @text-light;
+}
+
+ins {
+	text-decoration: none;
+}
+
+/**
+ * @typography Selection 
+ */
+
+.selection(@primary-color, @body-background);
+
+/**
+ * @typography Other
+ */
+
+strong, 
+b { font-weight: bold; }
+
+em, 
+i { font-style: italic; }
+
 hr {
 	border: 0;   
-	border-top: 1px solid #CCC;
+	border-top: 1px solid @border-color;
 	display: block;
 	height: 1px;
-	margin: 1em 0;
+	margin: 0 0 20px 0;
 	padding: 0;
 }

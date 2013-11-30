@@ -1,0 +1,203 @@
+/**
+ * @plugins
+ *
+ * Defines the default plugin specific styling
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+
+/**
+* @plugin Gravity forms
+*/
+
+.gform_wrapper {
+
+	.validation_error {
+		background: #fff;
+		border: 1px solid #c44741;
+		color: #c44741;
+		display: block;
+		margin-bottom: 1em;
+		padding: 2%;
+		width: 96%;
+	}
+
+}
+
+#content .gform_wrapper {
+	
+	.gform_heading,
+	.gform_footer {	
+		clear: both;
+		margin-bottom: 1em;
+		width: 100%;
+	}
+		
+	.gform_body {
+		
+		.gform_fields {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			
+			.gfield {
+				display: block;
+				margin-bottom: 1em;
+				width: 100%;
+				
+				.gfield_label {
+					float: left; 
+					width: 35%;
+				}
+				
+				.gfield_description,
+				.instruction {
+					font-size: 13px;
+					margin: 1em 0 0 35%;
+					width: 50%;
+					
+					&.validation_message {
+						color: #c44741;
+					}
+					
+				}
+				
+				.small,
+				.medium,
+				.large {
+					font-size: 13px;
+				}
+				
+				.small {
+					width: 25%;
+				}
+
+				.medium {
+					width: 40%;
+				}
+
+				.large {
+					width: 55%;
+				}
+				
+				.gfield_checkbox, .gfield_radio {
+					float: left;
+					font-size: 13px;
+					list-style-type: none;
+					margin: 0 0 2em 0;
+					padding: 0;
+					width: 65%;
+					
+					label { 
+						position: relative;
+						top: -2px; 
+					}
+	
+					label, input[type="text"] { margin-left: 10px; }
+					
+				}
+				
+				.ginput_complex {
+					float: left;
+					margin: 0 0 1em 0;
+					width: 65%;
+				
+					span {
+						clear: both;
+						float: left;
+						font-size: 13px;
+						margin-bottom: 1em;
+						width: 100%;
+						
+						label { 
+							float: left; 
+							margin-left: 2.5%;
+							width: 40%;
+						}
+						
+						input[type="text"] {
+							float: left;
+							width: 50%;
+						}
+					
+					}
+				
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	.gform_footer {
+		clear: both;
+		
+		.gform_button {
+			margin: 2em 0 0 35%;
+		}
+		
+	}
+
+}
+
+.gform_widget {
+	
+	.validation_message {
+		clear: both;
+		color: #c44741;
+		display: block;
+		padding: 10px 0;
+		float: left;
+	}
+	
+	form {
+		position: relative;	
+		
+		ul {
+			clear: both;
+			display: block;
+			float: left;
+			width: 100%;
+		
+			li {
+				border: none !important; 
+				display: block;
+				margin: 0 !important;
+				padding: 0 !important;
+				width: 100%;
+			}
+		
+		}
+				
+		.gform_body, .gform_footer {
+			position: relative;
+			width: 100%;
+		}
+		
+		input[type="text"], input[type="email"] {
+			.border-radiuses(0, 0, 3px, 3px) !important;
+			float: left;
+			height: 35px;
+			width: 85% !important;
+		}
+		
+		input[type="submit"] {
+			.border-radiuses(3px, 3px, 0, 0) !important;
+			background: @primary-color;
+			float: left;
+			height: 40px;
+			position: absolute !important;
+			right: 0;
+			text-transform: uppercase;
+			top: 0;
+			width: 15%;			
+		}
+	
+	}
+	
+}

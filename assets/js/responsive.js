@@ -7,7 +7,7 @@ jQuery( function( $ ) {
 	/**
 	 * Sidebar should fall below the content
 	 */
-	if( window.innerWidth < 1080 )
+	if( window.innerWidth < 960 )
 		$( '#main .sidebar' ).insertAfter( '#main #content' );
 
 	/**

@@ -1,5 +1,9 @@
 /**
- * Main stylesheet for TrendPress child theme
+ * Main stylesheet
+ *
+ * Main stylesheet for TrendPress child theme. This stylesheet overrides all 
+ * imported default styles. All child theme specific styling should be placed
+ * in this file.
  *
  * @package   		WordPress
  * @subpackage 		TrendPress
@@ -8,13 +12,19 @@
  *
  * Contents:
  *
- * @import 			Import other less files
- * @variable 		Defines recurring colors and fonts
+ * @variables 		Defines recurring colors and fonts
+ * @import 			Import other LESS files
+ * 
  * @typography 		Defines the styling of text elements
- * @misc 			Defines miscellaneous styles
- * @layout			Defines the standard layout for a regular page 
- * @templates		Defines the template specific styling
+ * @images 			Defines the styling of images
+ * @forms 			Defines the styling of forms
+ * @widgets 		Defines the styling of widgets
  * @plugins 		Defines the plugin specific styling
+ * @misc 			Defines miscellaneous styles
+ * 
+ * @layout			Defines the layout for a regular page, archive and post
+ * @parts 			Defines the styling for recurring template parts
+ * @templates		Defines the template specific styling
  * @responsive		Defines responsive layout
  * 
  */
@@ -22,1967 +32,275 @@
 @charset "UTF-8";
 
 /**
- * @import
- *
- * Import other less files
- */ 
-
-@import "assets/less/reset.less";
-@import "assets/less/grid.less";
-@import "assets/less/mixins.less";
-
-@import "assets/less/typography.less"; 
-@import "assets/less/forms.less";
-@import "assets/less/navigation.less";
-@import "assets/less/wordpress.less"; 
-@import "assets/less/misc.less";
-
-/**
  * @variables
  *
  * Defines recurring colors and fonts
  */
 
-@primary-color:     #1f6fd1;
+@primary-color:     #1f6fd1; // Trendwerk blue
 @secondary-color:   #999;
 
 @body-background:	#fff;
 @footer-background: #333;
+@light-background: 	#eee;
 @border-color:		#ccc;
 
 @heading-color:		#333;
 @text-color:		#666;
+@text-light:		#999;
 @link-color:		@primary-color;
 
 @heading-font:		"Helvetica Neue", sans-serif;
 @text-font:			"Helvetica Neue", sans-serif;
 
 /**
- * @typography
+ * @import
  *
- * Defines the styling of texst elements (e.g. font, size, colors, etc...) 
- */
-
-html {
-	-webkit-font-smoothing: subpixel-antialiased;
-	-webkit-text-size-adjust: none;
-}
-
-body {
-	color: @text-color;
-	font-family: @text-font;
-	font-size: 15px;
-	line-height: 1.6;
-	
-	/**
-	 * @typography Headings 
-	 */
-	
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		color: @heading-color;
-		font-family: @heading-font;
-		font-weight: normal;
-		line-height: 1.3;
-		margin: 0 0 24px 0;
-	}
-	
-	h1 { 
-		font-size: 36px;
-	}
-	
-	h2 { 
-		font-size: 24px; 
-	}
-	
-	h3 { 
-		font-size: 20px;
-		font-weight: bold;
-	}
-	
-	h4 { 
-		font-size: 18px;
-		font-weight: bold;
-	}
-	
-	h5 { 
-		font-size: 16px;
-		font-weight: bold;
-	}
-
-	h6 { 
-		font-size: 14px;
-		font-weight: bold;
-	}
-	
-	/**
-	 * @typography Content 
-	 */
-	
-	p,
-	ul,
-	ol,
-	address {
-		margin: 0 0 24px 0;
-	}
-
-	ul,
-	ol {
-		list-style-position: outside;
-		
-		ul,
-		ol {
-			margin-bottom: 0;
-		}
-		
-	}
-	
-	ul { 
-		list-style-type: square; 
-		margin-left: 16px;
-		
-		ul {
-			list-style-type: circle;
-		}
-		
-	}
-	
-	ol {
-		list-style-type: decimal;
-		margin-left: 20px;
-		
-		ol {
-			list-style-type: lower-alpha;
-		}
-		
-	}
-	
-	blockquote {
-		border-left: 3px solid lighten(@text-color, 20%);
-		color: lighten(@text-color, 20%);
-		padding: 5px 0 5px 20px;
-		
-		p {
-			margin: 0;
-		}
-	
-	}
-	
-	pre { 
-		margin-bottom: 24px;
-		padding: 24px; 
-	}
-	
-	abbr,
-	acronym {
-		border-bottom: 1px dotted @text-color;
-		cursor: help;
-		
-		&:hover {
-			border-bottom-style: solid;
-		}
-		
-	}
-	
-	sub,
-	sup {
-		font-size: 8px;
-	}
-	
-	sub {
-		vertical-align: sub;
-	}
-	
-	sup {
-		vertical-align: super;
-	}
-	
-	del {
-		color: red;
-	}
-	
-	ins {
-		color: green;
-	}
-
-	/**
-	 * @typography Selection 
-	 */
-
-	.selection(@primary-color, @body-background);
-	
-	/**
-	 * @typography Links 
-	 */
-
-	a {
-		color: @link-color;
-		text-decoration: underline;
-				
-		&:hover { 
-			color: lighten(@link-color, 20%);
-			text-decoration: underline;
-		}
-
-		&:active,
-		&:focus {
-			color: lighten(@link-color, 20%);
-		}
-
-		&.more-link, &.more {
-			.font-awesome-after(" \f0da");
-		}
-		
-		&.back {
-			.font-awesome-before("\f0d9 ");
-		}
-		
-		&.prev {
-			.font-awesome-after(" \f0da");
-			float: left;
-			width: 40%; 
-		}
-		
-		&.next {
-			.font-awesome-after(" \f0d9");
-			float: right; 
-			text-align: right;
-			width: 40%;		
-		}
-
-		&.pagination-prev {
-			.font-awesome-before("\f0d9  ");
-		}
-
-		&.pagination-next {
-			.font-awesome-after(" \f0da");
-		}
-		
-		&.cta {
-			.border-radius(3px);
-			.font-awesome-after(" \f054");
-			display: inline-block;
-			font-weight: bold;
-			height: 40px;
-			line-height: 40px;
-			padding: 0 20px;
-			position: relative;
-			text-decoration: none;
-
-			&:after {
-				font-size: 12px;
-				padding-left: 10px;
-			}
-			
-			&:hover { 
-				color: #FFF;
-				text-decoration: none;
-			}
-			
-			&:active {
-				top: 1px;
-			}	
-			
-			&.primary {
-				background: @primary-color;
-				color: #FFF;
-				
-				&:hover { 
-					background: darken(@primary-color, 5%);
-				}
-				
-				&:active,
-				&:focus  { 
-					background: lighten(@primary-color, 5%); 
-				}
-			
-			}
-			
-			&.secondary {
-				background: @secondary-color;
-				color: #FFF;
-				
-				&:hover { 
-					background: darken(@secondary-color, 5%);
-				}
-				
-				&:active,
-				&:focus { 
-					background: lighten(@secondary-color, 5%);
-				}
-			
-			}		
-		
-		}
-	
-	}
-
-}
-
-/**
- * @misc
- *
- * Defines miscellaneous styles (e.g. images, form elements, etc.)
- */
-
-/**
- * @misc Images
+ * Import other LESS files
  */ 
 
-img.alignright, 
-img.alignleft {
-	margin-bottom: 12px;
-	margin-top: 6px;
+@import "assets/less/reset.less";
+@import "assets/less/grid.less";
+@import "assets/less/mixins.less";
+
+@import "assets/less/typography.less";
+@import "assets/less/images.less";
+@import "assets/less/forms.less";
+@import "assets/less/widgets.less";
+@import "assets/less/plugins.less";
+@import "assets/less/misc.less";
+
+@import "assets/less/layout.less";
+@import "assets/less/parts.less";
+@import "assets/less/templates.less";
+@import "assets/less/responsive.less"; 
+
+/**
+ * @typography
+ *
+ * Defines the styling of text elements (e.g. font, size, colors, etc...) 
+ */
+
+/**
+ * @typography Content 
+ */
+
+body { }
+
+p { }
+
+/**
+ * @typography Headings 
+ */
+
+h1 { }
+
+h2 { }
+
+h3 { }
+
+h4 { }
+
+h5 { }
+
+h6 { }
+
+/**
+ * @typography Links
+ */
+
+ a {
+ 			
+ 	&:hover { }
+
+ 	/* add characters to links */
+ 	
+ 	&.back:after,
+ 	&.prev:after { }
+ 	
+ 	&.more:after,
+ 	&.next:after { }
+	
+	/* call to action buttons */
+
+ 	&.cta {
+
+ 		&:after { }
+ 		
+ 		&:active { }	
+
+ 		/* primary button */
+ 		
+ 		&.primary {
+ 			
+ 			&:hover { }
+ 		
+ 		}
+
+ 		/* secondary button */
+ 		
+ 		&.secondary {
+
+ 			&:hover { }
+ 		
+ 		}
+ 	
+ 	}
+
+ }
+
+/**
+ * @typography Lists
+ */
+
+ul { 
+
+	li { }
+
+	ul { }
+
 }
 
-img.size-thumbnail, 
+ol { 
+
+	li { }
+
+	ol { }
+
+}
+
+/**
+ * @typography Tables
+ */
+
+ table { 
+ 		
+ 	tr { 
+
+ 		&:nth-child(even) { }
+
+ 		td,
+ 		th { }
+
+ 		th { }
+
+ 	}
+
+ 	thead tr { }
+
+ }
+
+/**
+ * @typography Quotes
+ */
+
+blockquote, 
+q {
+
+	p { }
+
+}
+
+cite { 
+
+	a { }
+
+}
+
+/**
+ * @typography Other
+ */
+
+hr { }
+
+/**
+ * @images
+ *
+ * Defines the styling of images (e.g. alignment, captions, etc...)
+ */
+
+img { }
+
+/**
+ * @images Alignment
+ */
+
+.alignleft { }
+
+.alignright { }
+
+/**
+ * @images Captions
+ */
+
 .wp-caption {
-	background: #F7F7F7;
-	border: 1px solid @border-color;
-	padding: 4px;
+
+	img { }
 		
-	.wp-caption-text { 
-		font-size: 12px;
-	}
+	.wp-caption-text { }
 
-}
-
-/** 
- * @misc Forms
- */
-
-input,
-select,
-textarea {
-	border: 1px solid @border-color;
-	-webkit-font-smoothing: antialiased;
-}
-
-#main input[type="submit"] {
-	.border-radius(3px);
-	border-width: 0;
-	background: @primary-color;
-	color: #FFF;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: 35px;
-	line-height: 35px;
-	padding: 0 15px;
-	position: relative;
-	
-	&:active,
-	&:focus {
-		.box-shadow(none);
-		background: darken(@primary-color, 10%);
-		top: 1px;
-	}
-	
 }
 
 /**
- * @layout
+ * @forms
  *
- * Defines the standard layout for a regular page (e.g. position, size, margin, etc...)
- * 
- * @layout Default
+ * Defines the styling of forms
  */
- 
-body {
-	background: @body-background;
-	
-	/**
-	 * @layout Header
-	 */
 
-	#header {
-		background: @body-background;
-		color: @text-color;
-		margin: 20px 0 10px 0;
-
-		.container-inner { 
-			position: relative;
-
-			a { 
-				color: @text-color; 
-				
-				&:hover { 
-					color: darken(@text-color, 25%);
-				}
-			
-			}
-			
-			/* logo, sitename and description */
-					
-			#logo {
-						
-				#sitename { 
-					font: bold 44px @heading-font;
-					line-height: 40px;
-					margin: 0;
-
-					@media (max-width: 660px) {
-						font-size: 32px;
-					}
-					
-					a {
-						color: @heading-color;
-						position: relative;
-						text-decoration: none;
-					}
-					
-				}
-				
-				#description {
-					margin: 10px 0 0 0;
-				}
-				
-			}
-			
-			/* top navigation */
-					
-			#topnav {
-				float: right;
-				margin: 10px 10px 0 10px;
-
-				ul {
-					float: right;
-					margin: 0;
-					
-					li { 
-						display: inline-block;
-						font-size: 12px;
-						padding: 0 5px;
-											
-						&:last-child { 
-							padding-right: 0; 
-						}
-											
-					}
-				
-				}
-			
-			}
-
-			/* toggle navigation */
-
-			.toggle-wrap {
-				position: absolute;
-				right: 5%;
-				top: 15px;
-
-				.toggle-main-navigation, 
-				.toggle-search {
-					background-color: @primary-color;
-					color: #ffffff;
-					cursor: pointer;
-					float: left;
-					font-size: 22px;
-					height: 34px;
-					line-height: 34px;
-					text-align: center;
-					width: 34px;
-
-					&.active,
-					&:hover {
-						background-color: darken(@primary-color, 10%);
-					}
-
-				}
-
-				.toggle-search {
-					margin-left: 10px;
-				}
-
-			}
-			
-			/* search form */
-					
-			#search {
-				
-				form { 
-					float: right; 
-					margin: 10px 0;
-					
-					input[type="text"], input[type="submit"] {
-						display: block;
-						float: left;
-						height: 28px;
-						
-						&:active,
-						&:focus {
-							.box-shadow(none); 
-						}
-					
-					} 
-					
-					input[type="text"] { 
-						.placeholder(#666, #eee);
-						.border-radiuses(0, 0, 3px, 3px);
-						border: 1px solid @border-color;
-						border-right: none;
-						padding-left: 10px;
-						width: 188px; 
-					}
-					
-					input[type="submit"] {
-						.border-radiuses(3px, 3px, 0, 0);
-						background-color: #ffffff;
-						background-image: none;
-						border: 1px solid @border-color;
-						border-left: none;
-						font-family: FontAwesome;
-						text-align: right;
-						width: 32px;
-					}
-					
-				}
-
-				@media (max-width: 1080px) and (min-width: 720px) {
-					position: absolute;
-					right: 5%;
-					top: 0;
-				}
-
-				@media (min-width: 721px) {
-					display: block !important;
-				}
-
-				@media (max-width: 720px) {
-					background: #333;
-
-					form {
-						.border-box;
-						float: left;
-						padding: 0 10px;
-						width: 100%;
-
-						input[type="text"] {
-							width: 88%;
-						}
-
-						input[type="submit"] {
-							width: 12%;
-						}
-
-					}
-
-				}
-				
-			}
-			
-			/* main navigation */	
-			
-			#main-navigation {
-				background: #333;
-				font-size: 13px;
-				height: auto;
-
-				/* desktop */
-
-				@media (min-width: 721px) {
-					display: block !important;
-
-					ul {
-					
-						li {
-										
-							a { 
-								background: #222;
-								color: #fff;
-								font-size: 14px;
-								height: 50px;
-								line-height: 50px;
-								padding: 0 20px;
-								text-decoration: none;
-								
-								&:hover { 
-									background: #111;
-								}
-							
-							}
-							
-							li {
-								
-								a {
-									background: #111;
-									font-size: 13px;
-									height: 30px;
-									line-height: 30px;
-									padding: 0;
-									text-indent: 20px;
-									
-									&:hover {
-									 	background: #000;
-									}
-									
-								}
-								
-							}
-											
-							/* current navigation ancestor parent, item */
-
-							&.current-menu-ancestor,
-							&.current-page-parent,
-							&.current-menu-item {
-								
-								> a { 
-									background: #111; 
-									text-decoration: underline;
-								}
-								
-								.current-menu-ancestor,
-								.current-page-parent,
-								.current-menu-item {
-								
-									> a { 
-										background: #111;
-										text-decoration: underline;
-									}
-								
-								}
-							
-							}
-							
-							/* sfhover alternative */
-							
-							&.hover {
-								
-								> a { 
-									background: #111; 
-								}
-								
-								&:hover > a { 
-									background: #000; 
-								}
-								
-							}
-							
-						}
-
-					}		
-								
-				}
-
-				/* tablet and smartphone */
-
-				@media (max-width: 720px) {
-
-					ul {
-						clear: both;
-						display: block;
-						float: left;
-						padding: 10px 0;
-				
-						li {
-							clear: both;
-							width: 100%;
-										
-							a { 
-								.border-box;
-								color: #fff;
-								display: block;
-								font-size: 14px;
-								height: 34px;
-								line-height: 34px;
-								padding: 0 20px;
-								text-decoration: none;
-								
-							}
-
-							ul {
-								left: 0;
-								padding: 5px 0;
-								position: relative;
-								visibility: visible;
-								width: 100%;
-							
-								li {
-									
-									a {
-										display: block;
-										font-size: 13px;
-										height: 30px;
-										line-height: 30px;
-										padding: 0 0 0 20px;
-										text-indent: 20px;						
-									}
-									
-								}
-
-							}
-											
-							/* current navigation ancestor parent, item */
-
-							&.current-menu-ancestor,
-							&.current-page-parent,
-							&.current-menu-item {
-								
-								> a { 
-									text-decoration: underline;
-								}
-								
-								.current-menu-ancestor,
-								.current-page-parent,
-								.current-menu-item {
-								
-									> a { 
-										text-decoration: underline;
-									}
-								
-								}
-							
-							}
-							
-						}			
-									
-					}
-
-				}			
-
-			}
-			
-			/* breadcrumbs */
-				
-			#breadcrumbs { 
-				color: lighten(@text-color, 20%);
-				font-size: 13px;
-			}
-
-		}
-		
-	}
-	
-	/**
-	 * @layout Main section
-	 */
-	
-	#main {
-		background: @body-background;
-		padding-bottom: 20px;
-		
-		.search {
-
-			input[type="submit"] {
-				font-family: FontAwesome;
-			}
-		
-		}
-
-		/* content */
-		
-		#content {
-			.border-box;
-			padding-right: 20px;
-					
-			.entry-title, .search-title {
-				
-				a { 
-					color: @heading-color;
-					text-decoration: none;
-					
-					&:hover { 
-						color: @link-color;
-						text-decoration: underline;
-					}
-					
-				}
-				
-			}
-			
-			.meta { 
-				color: lighten(@text-color, 20%);
-				font-size: 13px;
-				margin: 0 0 15px 0;
-				
-				a { 
-					color: @text-color;
-					
-					&:hover { 
-						color: @link-color; 
-					}
-					
-				}
-				
-			}
-					
-			/* author */
-			
-			.author-card {
-				background: #fff;
-				padding: 20px;
-				margin: 0 0 20px 0;
-				
-				.author-avatar {
-					float: left;
-					margin: 5px 0 0 0;
-				}
-				
-				.author-info {
-					padding-left: 100px;
-					
-					ul.author-social {
-						list-style: none;
-						margin: 0;
-						
-						li {
-							float: left;
-							margin: 0 10px 20px 0;
-							
-							img,
-							svg {
-								height: 16px;
-								margin: 0 5px 0 0;
-								vertical-align: middle;
-								width: 16px;
-							}
-
-						}
-
-					}
-
-					a.more {
-						float: right;
-						margin: 0 10px 10px 0;
-					}
-					
-				}
-				
-			}
-	
-		}
-
-	}
-	
-	/**
-	 * @layout Sidebar
-	 */
-
-	#main .sidebar .widget {
-		clear: both;
-		margin: 0 0 20px 0;
-		padding: 20px;
-		width: 100%;
-	}
-	
-	.sidebar {
-	
-		.widget {
-			.border-box;
-			background: #eee;
-			float: left;
-			font-size: 13px;
-			
-			.widgettitle { 	
-				font-weight: bold;
-				margin-top: 0;
-				margin-bottom: 10px;
-				
-				a { 
-					color: @heading-color;
-					text-decoration: none;
-					
-					&:hover { 
-						text-decoration: underline; 
-					}
-					
-				 }
-			
-			}
-			
-			ul {
-				border-bottom: 1px solid @border-color;
-				margin: 0;
-				
-				li { 
-					border-top: 1px solid @border-color;
-					display: block;
-					line-height: 24px;
-					padding: 5px;
-					
-					a { 
-						color: @text-color;
-						
-						&:hover {
-							color: @link-color;
-						}
-					 }
-					 
-					 ul {  
-					 	border: none;
-
-					 	li {
-					 		border: none;
-					 		margin-left: 15px;
-					 	}
-					 	
-					}
-					
-				}
-				
-			}
-			
-			/**
-			 * @widget Contact
-			 */
-			
-			&.widget_tp_contact {
-			
-				span.label { 
-					display: inline-block;
-					width: 80px;
-				}
-				
-			}
-			
-			/**
-			 * @widget Search
-			 */
-			 
-			&.widget_search {
-				
-				input[type="text"] {
-					.border-radius(3px);
-					.placeholder(#666, #fff);
-					float: left;
-					font-size: 14px;
-					height: 36px;
-					margin-right: 10px;
-					padding-left: 10px;
-					width: 164px;
-				}
-				
-			}
-			
-			/**
-			 * @widget Social links
-			 */
-			
-			&.widget_tp_social {
-			
-				ul {	
-					border: none;
-					display: block;
-					list-style-type: none;
-					margin: 0;
-					padding: 0;
-					
-					li {
-						border-top: none;
-					}
-										
-					&.large-icons {
-						
-						i {
-							font-size: 30px;
-						}
-						
-						li {
-							display: inline;
-							padding: 0;
-							
-							a { 
-								float: left;
-								height: 34px;
-								text-decoration: none;
-								width: 34px;
-																
-								.title { 
-									display: none;
-								}
-																
-							}
-							
-						}
-	
-					}
-							
-					&.small-icons-text {
-					
-						i { 	
-							display: inline-block;
-							font-size: 20px;
-							margin-right: 6px;
-							position: relative;
-							top: 3px; 
-						}
-						
-						li {
-							clear: both;
-							float: left;
-							padding: 0 2px 0 0;
-							width: 100%;
-							
-							a { 
-								float: left;
-								text-decoration: none;
-								
-								span {
-									line-height: 30px;
-								}
-																
-								.title {
-									text-decoration: underline;
-									font-style: normal;
-								}
-																
-							}
-							
-						}
-						
-					}
-					
-					&.small-icons {
-					
-						i { 
-							font-size: 18px;
-						}
-
-						li {
-							border-top: none;
-							float: left;
-							padding: 5px 2px;
-							width: auto;
-							
-							a { 
-								float: left;
-								text-decoration: none;
-								
-								span {
-									line-height: 30px;
-								}
-																
-								.title { 
-									display: none;
-								}
-																
-							}
-							
-						}
-						
-					}
-
-				}
-				
-			}
-			
-			/**
-			 * @widget Telephone number and button
-			 */
-			
-			&.widget_tp_telephone_button {
-				
-				p.telephone {
-					font-size: 20px;
-					font-weight: bold;
-				}
-				
-			}
-			
-			/**
-			 * @widget Tagcloud 
-			 */
-			
-			&.widget_tag_cloud {
-			
-				.tagcloud {
-				
-					a {
-						.border-radius(3px);
-						background: #fff;
-						border: 1px solid @link-color;
-						color: @link-color;
-						display: inline-block;
-						font-size: 12px !important;
-						line-height: 25px;
-						margin: 0 3px 5px 0;
-						padding: 0 10px;
-						text-decoration: none;
-						
-						&:hover {
-							background: darken(@link-color, 15%);
-							border-color: darken(@link-color, 15%);
-							color: #fff;
-						}
-						
-					}
-				
-				}
-			
-			}
-			
-		}
-		
-	}
-	
-	/**
-	 * @layout Footer
-	 */
-	
-	#footer {
-		background: @footer-background;
-		color: #fff;
-		font-size: 13px;
-		margin: 20px 0 0 0;
-		
-		a { 
-			color: #fff; 
-			
-			&:hover { 
-				color: #ccc;
-			}
-			
-		}
-		
-		.sidebar {
-			float: left;
-			width: 100%;
-		
-			.widget {
-				background: none;
-				clear: none;
-				float: left;
-				padding: 20px 0;
-				
-				h3 { 
-					color: #FFF; 
-				}
-	
-			}
-			
-		}
-		
-		#credits {
-			border-top: 1px solid @border-color;
-			padding: 10px 0;
-			
-			p {	
-				margin: 0; 
-			}
-			
-			#copyright { 
-				float: left;
-			}
-			
-			#footernav { 
-				float: right; 
-				
-				ul {
-				
-					li {
-						display: inline;
-						
-						&:last-child a { 
-							padding-right: 0;
-						}
-
-						a { 
-							float: left;
-							padding: 0 5px;
-						}
-						
-					}
-						
-				}
-				
-			}
-			
-		}
-		
-	}
-	
-}
+// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
 
 /**
- * @templates
+ * @widgets
  *
- * Defines the template specific styling
- *
- * @templates front-page.php
+ * Defines the styling of widgets
  */
 
-.home {
-
-	#header {
-		margin-bottom: 20px;
-	}
-	
-}
-
-/**
- * @templates index.php
- */
-
-.archive,
-.blog,
-.search {
-
-	article {
-		border-bottom: 1px solid @border-color;
-		float: left;
-		margin-bottom: 20px;
-		padding: 0 0 40px 0;
-		
-		&:first-child {
-			border-bottom: 0;
-		}
-
-		&:last-child {
-			border-bottom: 0;
-			padding-bottom: 0 !important;
-		}
-				
-		.entry-title {
-			margin-bottom: 5px;
-		}
-		
-		.search-title {
-			margin-bottom: 15px;
-		}
-		
-		.article-thumbnail {
-			float: right;
-			margin: 0 0 0 20px;
-			
-			img { 
-				height: 125px;
-				width: 125px;
-			}
-			
-		}
-		
-		p {
-			margin-bottom: 0;
-		}
-		
-	}
-	
-}
-
-/**
- * @templates single.php
- */
-
-.single {
-
-	#content {
-			
-		#page-title {
-			margin-bottom: 10px;
-		}
-		
-		.share {
-			clear: both;
-			margin: 0 0 20px 0;
-			
-			.addthis_button_facebook_like,
-			.addthis_button_facebook_like iframe {
-				min-width: 125px !important;
-			}
-
-			.addthis_button_tweet {
-				width: 95px;
-			}
-			
-		}
-		
-	}
-	
-	#comments { 
-		border-top: 1px solid @border-color;
-		clear: both;
-		float: left;
-		margin: 46px 0 24px 0;
-		padding: 24px 0 0 0;
-		width: 100%;
-		
-		.comments-title {
-			margin-bottom: 12px;
-		}
-	
-		.commentlist {
-			clear: both;
-			float: left;
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			
-			li:first-child {
-				padding-top: 24px;
-			}
-			 
-			 ul.children { 
-			 	margin-top: 24px; 
-			 	width: 100%;
-			 	
-			 	li:first-child {
-			 		padding-top: 0 !important;
-			 	}
-			 	
-			 	li:last-child {
-			 		margin-bottom: 0;
-			 	}
-			 	
-			 }
-			 
-			 li {
-			 	.border-box;
-			 	clear: both;
-				display: block;
-				float: left;
-				margin: 0;
-				min-height: auto;
-				padding: 0;
-				width: 100%;
-							
-				ul {
-					margin: 0;
-					
-					li {
-						margin: 0;
-						padding: 0;
-					}
-					
-				}			
-							
-				.comment-body {
-					position: relative;
-				
-					.comment-author {
-						float: left;
-						margin-bottom: 12px;
-						
-						.avatar { 
-							.border-radius(999999px);
-							.box-shadow(0 0 1px rgba(0,0,0,0.5));
-							float: left;
-							margin-right: 20px;
-						}
-						
-						cite { 
-							display: block;
-							float: left;
-							font-family: @heading-font;
-							font-size: 22px;
-							font-style: normal;
-						}
-						
-						.says {
-							display: none;
-						}
-					
-					}
-					
-					p {
-						clear: both;
-						display: inline-block;
-						height: auto;
-						margin-bottom: 15px;
-						width: 100%;
-					}
-					
-					.reply {	
-						font-size: 12px;
-						position: absolute;
-						right: 0;
-						top: 0;
-					}
-					
-					.comment-meta {
-						font-size: 12px;
-						left: 80px;
-						position: absolute;
-						top: 30px;
-						
-						a {
-							color: @text-color;
-							cursor: text;
-							text-decoration: none;
-						}
-						
-						.comment-edit-link {
-							display: none;
-						}
-						
-					}
-					
-				}
-				
-			}
-			
-		}
-		
-		#respond {
-			border-bottom: 1px solid @border-color;
-			border-top: 1px solid @border-color;
-			clear: both;
-			float: left;
-			padding: 25px 0;
-			position: relative;
-			margin-bottom: 25px;
-			margin-top: 24px;
-			width: 100%;
-			
-			p {
-				clear: both;
-				float: left;
-				width: 100%;
-				
-				label { 
-					float: left;
-					width: 25%;
-				}
-				
-			}
-			
-			small {
-				font-size: 12px;
-				position: absolute;
-				right: 0;
-				top: 20px;
-			}
-			
-			input[type="text"], input[type="email"] {
-				.border-box;
-				display: block;
-				font-size: 14px;
-				height: 30px;
-				padding: 0 5px;
-				width: 35%;
-			}
-			
-			textarea { 
-				.border-box;
-				display: block;
-				font-size: 14px;
-				padding: 5px;
-				width: 75%; 
-			}
-			
-			.form-allowed-tags {
-				display: none;
-			}
-			
-			input[type="submit"] {
-				float: left;
-				margin-left: 25%;
-			}
-			
-		}
-	
-	}
-	
-	#pagination {
-		float: left;
-		width: 100%;
-		
-		.prev {
-			float: left;
-		}
-		.next {
-			float: right;
-		}
-		
-	}
-
-}
-
-/**
- * @templates search.php
- */
-
-article .search-highlight { background: #FFFFB3; }
-
-.search-no-results {
-	
-	#content input[type="text"] {
-		.border-radius(3px);
-		float: left;
-		height: 35px;
-		margin-right: 10px;
-		padding: 0 0 0 10px;
-	}
-	
-}
+// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
 
 /**
  * @plugins
  *
  * Defines the plugin specific styling
- *
- * @plugin Gravity forms
  */
- 
-.gform_wrapper {
 
-	.validation_error {
-		background: #fff;
-		border: 1px solid #c44741;
-		color: #c44741;
-		display: block;
-		margin-bottom: 1em;
-		padding: 2%;
-		width: 96%;
-	}
- 
-}
+// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
 
-#content .gform_wrapper {
-	
-	.gform_heading,
-	.gform_footer {	
-		clear: both;
-		margin-bottom: 1em;
-		width: 100%;
-	}
-		
-	.gform_body {
-		
-		.gform_fields {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			
-			.gfield {
-				display: block;
-				margin-bottom: 1em;
-				width: 100%;
-				
-				.gfield_label {
-					float: left; 
-					width: 35%;
-				}
-				
-				.gfield_description,
-				.instruction {
-					font-size: 13px;
-					margin: 1em 0 0 35%;
-					width: 50%;
-					
-					&.validation_message {
-						color: #c44741;
-					}
-					
-				}
-				
-				.small,
-				.medium,
-				.large {
-					font-size: 13px;
-				}
-				
-				.small {
-					width: 25%;
-				}
+/**
+ * @misc
+ *
+ * Defines miscellaneous styles
+ */
 
-				.medium {
-					width: 40%;
-				}
+// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
 
-				.large {
-					width: 55%;
-				}
-				
-				.gfield_checkbox, .gfield_radio {
-					float: left;
-					font-size: 13px;
-					list-style-type: none;
-					margin: 0 0 2em 0;
-					padding: 0;
-					width: 65%;
-					
-					label { 
-						position: relative;
-						top: -2px; 
-					}
-	
-					label, input[type="text"] { margin-left: 10px; }
-					
-				}
-				
-				.ginput_complex {
-					float: left;
-					margin: 0 0 1em 0;
-					width: 65%;
-				
-					span {
-						clear: both;
-						float: left;
-						font-size: 13px;
-						margin-bottom: 1em;
-						width: 100%;
-						
-						label { 
-							float: left; 
-							margin-left: 2.5%;
-							width: 40%;
-						}
-						
-						input[type="text"] {
-							float: left;
-							width: 50%;
-						}
-					
-					}
-				
-				}
-			
-			}
-		
-		}
-	
-	}
-	
-	.gform_footer {
-		clear: both;
-		
-		.gform_button {
-			margin: 2em 0 0 35%;
-		}
-		
-	}
+/**
+ * @layout
+ *
+ * Defines the layout for a regular page, archive and post
+ */
 
-}
+// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
 
-.gform_widget {
-	
-	.validation_message {
-		clear: both;
-		color: #c44741;
-		display: block;
-		padding: 10px 0;
-		float: left;
-	}
-	
-	form {
-		position: relative;	
-		
-		ul {
-			clear: both;
-			display: block;
-			float: left;
-			width: 100%;
-		
-			li {
-				border: none !important; 
-				display: block;
-				margin: 0 !important;
-				padding: 0 !important;
-				width: 100%;
-			}
-		
-		}
-				
-		.gform_body, .gform_footer {
-			position: relative;
-			width: 100%;
-		}
-		
-		input[type="text"], input[type="email"] {
-			.border-radiuses(0, 0, 3px, 3px) !important;
-			float: left;
-			height: 35px;
-			width: 85% !important;
-		}
-		
-		input[type="submit"] {
-			.border-radiuses(3px, 3px, 0, 0) !important;
-			background: @primary-color;
-			float: left;
-			height: 40px;
-			position: absolute !important;
-			right: 0;
-			text-transform: uppercase;
-			top: 0;
-			width: 15%;			
-		}
-	
-	}
-	
-}
+/**
+ * @parts
+ *
+ * Defines the styling for recurring template parts
+ */
+
+// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
+
+/**
+ * @templates
+ *
+ * Defines the template specific styling
+ */
+
+// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
 
 /**
  * @responsive
  *
- * Defines media queries for responsive layout on desktop, tablets and mobile devices
- *
- * @responsive Desktop
+ * Defines responsive layout
  */
 
-@media (min-width: 1081px) {
-
-	.toggle-wrap {
-		display: none;
-	}
-
-	#main-navigation, 
-	#search {
-		display: block;
-	}
-
-}
-
-/**
- * @responsive Landscape phone to portrait tablet
- */
-
-@media (max-width: 1080px) {
-	
-	#header {
-
-		.toggle-wrap {
-			display: none;
-		}
-
-		#topnav {
-			display: none;
-		}
-
-		#main-navigation, 
-		#search {
-			display: block;
-		}
-
-		#main-navigation {
-			margin-left: 0; 
-		}
-
-	}
-	
-	.container {
-			
-		.container-inner {
-			padding: 0 5%;
-			width: 90%;
-			
-			.onecol, 
-			.twocol, 
-			.threecol, 
-			.fourcol, 
-			.fivecol, 
-			.sixcol, 
-			.sevencol, 
-			.sevencol, 
-			.eightcol, 
-			.ninecol, 
-			.tencol, 
-			.elevencol, 
-			.twelvecol {
-				margin: 10px 0;
-			} 
-			
-			.sixcol, 
-			.sevencol, 
-			.eightcol, 
-			.ninecol, 
-			.tencol, 
-			.elevencol,
-			.twelvecol {
-				clear: both;
-				width: 100%;
-			}
-
-		}
-
-		&#main {
-			padding-bottom: 0;
-		}
-		
-		&#footer {
-			margin-top: 0;
-		}
-		
-		&#footer .sidebar, 
-		&#main .sidebar {
-			padding: 0;
-			width: 100% ;
-			
-			.widget {
-				.border-box;
-				clear: none;
-				float: left;
-				margin: 0 0 30px 0;
-				width: 46%;
-
-				&.even {
-					clear: left;
-					margin-right: 2%;
-				}
-				
-				&.odd {
-					margin-left: 2%;
-				}
-
-			}
-		
-		}
-
-		&#main .sidebar {
-
-			.widget {
-				padding: 3%;
-			}
-
-		}
-
-		&#footer .sidebar {
-			padding-top: 30px;
-
-			.widget {
-				padding: 0;
-			}
-
-		}
-	
-	}	
-
-}
-
-/**
- * Responsive Mobile
- */
-
-@media (max-width: 720px) {	
-	
-	.container {
-			
-		.container-inner {
-		
-			.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol {
-				clear: both;
-				width: 100%;
-			}
-
-		}
-
-		&#header {
-			margin-top: 10px !important;
-			border-bottom: 1px solid @border-color;
-			padding-bottom: 10px;
-			margin-bottom: 10px !important;
-
-			.toggle-wrap {
-				display: block;
-			}
-
-			#topnav, #search {
-				display: none;
-			}
-			
-			#main-navigation {
-				display: none;
-				margin-left: 0; 
-			}
-
-		}
-		
-		&#main {
-			margin-bottom: 0;
-			padding-bottom: 0;
-
-			#content {
-				margin-bottom: 0;
-				padding-right: 0;
-				padding-bottom: 0;
-
-				img.alignleft, 
-				img.alignright, 
-				.wp-caption { 
-					clear: both;
-					float: left !important;
-					margin: 0 20px 20px 0;
-				}
-
-				.wp-caption {
-					background: transparent;
-					border: none;
-					clear: both;
-					padding: 0;
-					width: 100%;
-
-					img { 
-						float: left; 
-					}
-
-					p { 
-						clear: both; 
-						text-align: left;
-					}
-
-				}
-
-			}
-
-			.sidebar {
-				border-top: 1px solid @border-color;
-				padding-top: 30px;
-
-				.widget {
-					padding: 5% !important;
-				}
-
-			}
-
-		}
-
-		&#footer .sidebar,
-		&#main .sidebar {
-			margin-bottom: 0;
-			padding-bottom: 0;
-		
-			.widget { 
-				.border-box;
-				clear: both;
-				margin: 0 0 30px 0;
-				padding: 0%;
-				width: 100%;
-			}
-
-			.widget.even,
-			.widget.odd {
-				margin-right: 0;
-				margin-left: 0;
-			}
-
-		}
-		
-		&#footer {
-			margin-top: 0;
-			padding-top: 0;
-
-			#credits {
-				padding-top: 30px;
-				
-				#copyright,
-				#footernav {
-					text-align: center;
-					width: 100%;
-				
-					ul {
-						text-align: center;
-						
-						li {
-							display: inline;
-							
-							a { 
-								float: none; 
-							}
-						
-						}
-					
-					}
-				
-				}
-			
-			}
-			
-		}
-	
-	}
-
-}
+// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
