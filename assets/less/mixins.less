@@ -1,5 +1,5 @@
 /**
- * @mixins
+ * @section Mixins
  *
  * Mixins allow you to embed all the properties of a class into another class 
  * by simply including the class name as one of its properties. It’s just like 
@@ -14,7 +14,8 @@
  */
 
 /**
- * @mixin Animate 
+ * @section    Mixins
+ * @subsection Animate 
  */
 
 .animate-this(@what: all, @time: 0.5s, @ease: ease-in-out) {
@@ -26,7 +27,8 @@
 }
 
 /**
- * @mixin Border radiuses (single)
+ * @section    Mixins
+ * @subsection Border radiuses (single)
  */
 
 .border-radius (@radius) {
@@ -39,7 +41,8 @@
 }
 
 /**
- * @mixin Border radiusses (multiple)
+ * @section    Mixins
+ * @subsection Border radiusses (multiple)
  */
 
 .border-radiuses (@topright, @bottomright, @bottomleft, @topleft) {
@@ -61,7 +64,8 @@
 }
 
 /**
- * @mixin Border-box
+ * @section    Mixins
+ * @subsection Border-box
  */
 
 .border-box {
@@ -71,7 +75,8 @@
 }
 
 /**
- * @mixin Box-shadow
+ * @section    Mixins
+ * @subsection Box-shadow
  */
 
 .box-shadow (@shadow) {
@@ -81,7 +86,8 @@
 }
 
 /**
- * @mixin Collumns
+ * @section    Mixins
+ * @subsection Collumns
  */
 
 .columns(@number, @gap) {
@@ -94,7 +100,8 @@
 }
 
 /** 
- * @mixin Elipsis
+ * @section    Mixins
+ * @subsection Elipsis
  */
  
 .elipsis {
@@ -104,7 +111,8 @@
 }
 
 /**
- * @mixin Font Awesome
+ * @section    Mixins
+ * @subsection Font Awesome
  * 
  * website: http://fontawesome.io/icons/
  * cheatsheet: http://fortawesome.github.io/Font-Awesome/cheatsheet/
@@ -137,7 +145,8 @@
 }
 
 /**
- * @mixin Grayscale (for images)
+ * @section    Mixins
+ * @subsection Grayscale (for images)
  */
 
 .grayscale {
@@ -151,7 +160,8 @@
 }
 
 /**
- * @mixin HEX to RGBA
+ * @section    Mixins
+ * @subsection HEX to RGBA
  */
 
 .rgba(@color, @alpha) {
@@ -169,7 +179,8 @@
 }
 
 /**
- * @mixin Horizontal gradient
+ * @section    Mixins
+ * @subsection Horizontal gradient
  */
 
 .horizontal-gradient (@startColor, @endColor) {
@@ -182,7 +193,8 @@
 }
 
 /**
- * @mixin Mobile navigation
+ * @section    Mixins
+ * @subsection Mobile navigation
  */
 
 .maxDepth (@index) when (@index > 0) {
@@ -197,7 +209,8 @@
 #mainnav select { .maxDepth(10); }
 
 /**
- * @mixin Opacity
+ * @section    Mixins
+ * @subsection Opacity
  */
 
 .opacity (@opacity: 0.5) {
@@ -207,7 +220,8 @@
 }
 
 /**
- * @mixin Placeholder
+ * @section    Mixins
+ * @subsection Placeholder
  */
 
 .placeholder(@out, @on) {
@@ -246,7 +260,8 @@
 }
 
 /**
- * @mixin Selection
+ * @section    Mixins
+ * @subsection Selection
  */
 
 .selection(@background-color, @text-color) {
@@ -263,7 +278,8 @@
 }
 
 /**
- * @mixin Sprites
+ * @section    Mixins
+ * @subsection Sprites
  */
     
 .sprite(@top, @left) {
@@ -287,7 +303,8 @@
 }
     
 /**
- * @mixin Vertical gradient
+ * @section    Mixins
+ * @subsection Vertical gradient
  */
 
 .vertical-gradient (@startColor, @endColor) {

@@ -1,38 +1,17 @@
 /**
  * Main stylesheet
  *
- * Main stylesheet for TrendPress child theme. This stylesheet overrides all 
- * imported default styles. All child theme specific styling should be placed
- * in this file.
- *
  * @package   		WordPress
  * @subpackage 		TrendPress
  * @author    		Trendwerk
  * @license   		GPL v2
- *
- * Contents:
- *
- * @variables 		Defines recurring colors and fonts
- * @import 			Import other LESS files
- * 
- * @typography 		Defines the styling of text elements
- * @images 			Defines the styling of images
- * @forms 			Defines the styling of forms
- * @widgets 		Defines the styling of widgets
- * @plugins 		Defines the plugin specific styling
- * @misc 			Defines miscellaneous styles
- * 
- * @layout			Defines the layout for a regular page, archive and post
- * @parts 			Defines the styling for recurring template parts
- * @templates		Defines the template specific styling
- * @responsive		Defines responsive layout
  * 
  */
  
 @charset "UTF-8";
 
 /**
- * @variables
+ * @section Variables
  *
  * Defines recurring colors and fonts
  */
@@ -54,7 +33,7 @@
 @text-font:			"Helvetica Neue", sans-serif;
 
 /**
- * @import
+ * @section Import
  *
  * Import other LESS files
  */ 
@@ -74,233 +53,3 @@
 @import "assets/less/parts.less";
 @import "assets/less/templates.less";
 @import "assets/less/responsive.less"; 
-
-/**
- * @typography
- *
- * Defines the styling of text elements (e.g. font, size, colors, etc...) 
- */
-
-/**
- * @typography Content 
- */
-
-body { }
-
-p { }
-
-/**
- * @typography Headings 
- */
-
-h1 { }
-
-h2 { }
-
-h3 { }
-
-h4 { }
-
-h5 { }
-
-h6 { }
-
-/**
- * @typography Links
- */
-
- a {
- 			
- 	&:hover { }
-
- 	/* add characters to links */
- 	
- 	&.back:after,
- 	&.prev:after { }
- 	
- 	&.more:after,
- 	&.next:after { }
-	
-	/* call to action buttons */
-
- 	&.cta {
-
- 		&:after { }
- 		
- 		&:active { }	
-
- 		/* primary button */
- 		
- 		&.primary {
- 			
- 			&:hover { }
- 		
- 		}
-
- 		/* secondary button */
- 		
- 		&.secondary {
-
- 			&:hover { }
- 		
- 		}
- 	
- 	}
-
- }
-
-/**
- * @typography Lists
- */
-
-ul { 
-
-	li { }
-
-	ul { }
-
-}
-
-ol { 
-
-	li { }
-
-	ol { }
-
-}
-
-/**
- * @typography Tables
- */
-
- table { 
- 		
- 	tr { 
-
- 		&:nth-child(even) { }
-
- 		td,
- 		th { }
-
- 		th { }
-
- 	}
-
- 	thead tr { }
-
- }
-
-/**
- * @typography Quotes
- */
-
-blockquote, 
-q {
-
-	p { }
-
-}
-
-cite { 
-
-	a { }
-
-}
-
-/**
- * @typography Other
- */
-
-hr { }
-
-/**
- * @images
- *
- * Defines the styling of images (e.g. alignment, captions, etc...)
- */
-
-img { }
-
-/**
- * @images Alignment
- */
-
-.alignleft { }
-
-.alignright { }
-
-/**
- * @images Captions
- */
-
-.wp-caption {
-
-	img { }
-		
-	.wp-caption-text { }
-
-}
-
-/**
- * @forms
- *
- * Defines the styling of forms
- */
-
-// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
-
-/**
- * @widgets
- *
- * Defines the styling of widgets
- */
-
-// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
-
-/**
- * @plugins
- *
- * Defines the plugin specific styling
- */
-
-// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
-
-/**
- * @misc
- *
- * Defines miscellaneous styles
- */
-
-// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
-
-/**
- * @layout
- *
- * Defines the layout for a regular page, archive and post
- */
-
-// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
-
-/**
- * @parts
- *
- * Defines the styling for recurring template parts
- */
-
-// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
-
-/**
- * @templates
- *
- * Defines the template specific styling
- */
-
-// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE
-
-/**
- * @responsive
- *
- * Defines responsive layout
- */
-
-// WE SOULD ADD ALL IMPORTANT CSS SELECTORS HERE FOR FAST REFERENCE

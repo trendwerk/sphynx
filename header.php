@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--[if lte IE 8]>
-	<html class="ie ie8" <?php language_attributes(); ?>>
+	<html class="ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if gt IE 8]>
 	<html <?php language_attributes(); ?>>
