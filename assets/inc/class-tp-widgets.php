@@ -6,7 +6,7 @@
  */
 
 /**
- * Allows users to create widgets in seperate files in 'trendpress-child/assets/inc/widgets/filename.php'
+ * Automatically include files in 'trendpress-child/assets/inc/widgets/'
  */
 class TP_Widgets {
 	function __construct() {
@@ -32,13 +32,13 @@ function tp_static_widget( $class, $args = array(), $instance = array() ) {
 
 	$widget = new $class;
 
-	$default = array(
+	$defaults = array(
 		'before_widget' => '<div class="widget ' . $widget->widget_options['classname'] . '">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widgettitle">',
 		'after_title'   => '</h3>',
 	);
-	$args = wp_parse_args( $args, $default );
+	$args = wp_parse_args( $args, $defaults );
 
 	$widget->widget( $args, $instance );
 }

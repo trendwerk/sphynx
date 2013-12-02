@@ -3,9 +3,11 @@
  * A class that edits some user capabilities. Editors can
  * edit theme options and anyone but admins are refrained
  * from editing/creating/removing admins.
+ *
+ * @package TrendPress
  */
 
-class TPCapabilities {
+class TP_Capabilities {
 	function __construct() {
 		//Editors can edit theme options
 		add_action('init',array($this,'set_editor_capabilities'));
@@ -71,7 +73,4 @@ class TPCapabilities {
 		
 		return $caps;
 	}
-}
-
-new TPCapabilities;
-?>
+} new TP_Capabilities;

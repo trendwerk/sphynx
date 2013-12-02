@@ -4,6 +4,7 @@
  *
  * @package TrendPress
  */
+
 class TP_Rewrite_Rules {
 	function __construct() {
 		add_filter( 'mod_rewrite_rules', array( $this, 'replace_404_images' ) );

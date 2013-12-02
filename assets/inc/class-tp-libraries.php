@@ -1,6 +1,8 @@
 <?php
 /**
  * Register parent theme scripts that can be used
+ *
+ * @package TrendPress
  */
  
 class TP_Libraries {

@@ -8,9 +8,9 @@
  * 
  * @param mixed $var
  */
-function dbg($var) {
+function dbg( $var ) {
 	echo '<pre>';
-		print_r($var);
+	print_r( $var );
 	echo '</pre>';
 }
 
@@ -19,10 +19,11 @@ function dbg($var) {
  *
  * @param string $url
  */
-function tp_maybe_add_http($url) {
-	if(!$url) return;
+function tp_maybe_add_http( $url ) {
+	if( ! $url ) 
+		return;
 	
-	if(!strstr($url,'http://') && !strstr($url,'https://')) $url = 'http://'.$url;
+	if( ! strstr($url,'http://') && !strstr($url,'https://')) $url = 'http://'.$url;
 	
 	return $url;
 }

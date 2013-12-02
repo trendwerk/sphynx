@@ -3,10 +3,10 @@
  * Add contact information
  */
 
-class TPInformation {
+class TP_Information {
 	function __construct() {
-		add_action('admin_init',array($this,'add_settings'));
-		add_action('admin_menu',array($this,'add_menu'),1);
+		add_action( 'admin_init', array( $this, 'add_settings' ) );
+		add_action( 'admin_menu', array( $this, 'add_menu' ), 1);
 
 		add_filter( 'option_page_capability_tp-information', array( $this, 'get_capability' ) );
 	}
@@ -173,4 +173,4 @@ class TPInformation {
 	function get_capability() {
 		return 'publish_pages';
 	}
-} new TPInformation;
+} new TP_Information;
