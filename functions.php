@@ -1,36 +1,19 @@
 <?php
 /**
- * This is the core of TrendPress.
- * The includes to all different added functionalities are done here.
+ * This is the core of TrendPress
  */
 
 /**
- * Include the following PHP files
+ * Include PHP files in /assets/inc/
+ * Include PHP files in trendpress-child/assets/inc/
  */
-include('assets/inc/class-tp-rewrite-rules.php');
-include('assets/inc/class-tp-widgets.php');
-include('assets/inc/class-tp-libraries.php');
-include('assets/inc/class.TPCapabilities.php');
-include('assets/inc/class.TPCleanUp.php');
-include('assets/inc/class.TPCPTExtras.php');
-include('assets/inc/class.TPInformation.php');
-include('assets/inc/class.TPJSConstants.php');
-include('assets/inc/class.TPLess.php');
-include('assets/inc/class.TPNav.php');
-include('assets/inc/class.TPNavMenu.php');
-include('assets/inc/class.TPPlugins.php');
-include('assets/inc/class.TPProfile.php');
-include('assets/inc/class.TPRecommendedPlugins.php');
-include('assets/inc/class.TPSearch.php');
-include('assets/inc/class.TPSidebar.php');
 
-include('assets/inc/functions.breadcrumbs.php');
-include('assets/inc/functions.pagination.php');
-include('assets/inc/functions.php');
+include_once( 'assets/inc/class-tp-includer.php' );
+
+new TP_Includer( dirname( __FILE__ ) . '/assets/inc/' );
+new TP_Includer( STYLESHEETPATH . '/assets/inc/' );
 
 /**
- * @language Load the textdomain 'tp'
+ * Load the textdomain 'tp'
  */
-load_theme_textdomain('tp',TEMPLATEPATH.'/assets/lang');
-
-?>
+load_theme_textdomain( 'tp', TEMPLATEPATH . '/assets/lang' );
