@@ -20,7 +20,7 @@ class TPProfile {
 	function edit($user) {
 		?>
 		
-		<h3 id="wordpress-seo"><?php _e('Publish profile','tp'); ?></h3>
+		<h3><?php _e('Publish profile','tp'); ?></h3>
 		
 		<table class="form-table">
 			<tbody>
