@@ -16,12 +16,15 @@ class TP_Rewrite_Rules {
 	 * @return string        New rules
 	 */
 	function replace_404_images( $rules ) {
-		if(TP_ENV == 'develop' || TP_ENV == 'release') {
+		if( 'develop' == TP_ENV || 'release' == TP_ENV ) {
+
 			$tp_images_rules = array(
+				'#BEGIN TrendPress placeholder images',
 				'RewriteCond %{REQUEST_FILENAME} !-f',
 				'RewriteRule ^wp-content/uploads/(.*)-([0-9]+)x([0-9]+).(gif|jpe?g|png|bmp)$ http://placehold.it/$2x$3 [NC,L]',
 				'RewriteCond %{REQUEST_FILENAME} !-f',
 				'RewriteRule ^wp-content/uploads/(.*)(gif|jpe?g|png|bmp)$ http://placehold.it/600x600 [NC,L]',
+				'#END TrendPress placeholder images',
 				'',
 			);
 
@@ -30,6 +33,6 @@ class TP_Rewrite_Rules {
 			$rules = implode( "\n", $rules );
 		}
 
-		return $rules;
+		return $addition . $rules;
 	}
 } new TP_Rewrite_Rules;
