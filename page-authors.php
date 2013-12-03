@@ -23,20 +23,21 @@
 				<?php the_content(); ?>
 				
 				<?php 
-					$users = get_users('orderby=display_name'); 
-					if($users) :
+					$users = get_users( array( 'orderby' => 'display_name' );
+
+					if( $users ) {
 				?>
 				
 					<section id="authors">				
 						<?php 
-							foreach($users as $user) : 
+							foreach( $users as $user ) {
 								$GLOBALS['author'] = $user->ID;
-								get_template_part('part','author');
-							endforeach; 
+								get_template_part( 'part', 'author' );
+							}
 						?>
 					</section>
 					
-				<?php endif; ?>
+				<?php } ?>
 				
 			<?php endwhile; endif; ?>
 			

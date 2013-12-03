@@ -7,31 +7,31 @@
 		<section id="content" class="eightcol">
 		
 			<h1 id="page-title">
-				<?php echo __('Posts by','tp').' '.get_the_author_meta('display_name',$author); ?>
+				<?php echo __( 'Posts by', 'tp' ) . ' ' . get_the_author_meta( 'display_name', $author ); ?>
 			</h1>
 			
-			<?php get_template_part('part','author'); ?>
+			<?php get_template_part( 'part', 'author' ); ?>
 			
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
 				<article <?php post_class(); ?>>
 				
 					<h2 class="article-title">
-						<a href="<?php the_permalink() ?>">
+						<a href="<?php the_permalink(); ?>">
 							<?php the_title(); ?>
 						</a>
 					</h2>
 					
 					<p class="meta">
-						<?php _e('Posted on','tp')?> <time datetime="<?php the_time('Y-m-d') ?>"><?php echo get_the_date(); ?></time> <?php _e('by','tp') ?> <?php the_author_posts_link() ?> <?php _e('in the category','tp') ?> <?php the_category(', ') ?>
+						<?php _e( 'Posted on', 'tp' )?> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time> <?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link() ?> <?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
 					</p>
 					
 					<?php get_the_post_thumbnail(); ?>
 					
 					<p>
-						<?php tp_the_excerpt(40); ?>
-						<a class="more" href="<?php echo the_permalink(); ?>">
-							<?php _e('Read more','tp'); ?>
+						<?php tp_the_excerpt( 40 ); ?>
+						<a class="more" href="<?php the_permalink(); ?>">
+							<?php _e( 'Read more', 'tp' ); ?>
 						</a>
 					</p>
 					
@@ -44,7 +44,7 @@
 			<?php else : ?>
 			
 				<p>
-					<?php _e('No results found','tp'); ?>.
+					<?php _e( 'No results found', 'tp' ); ?>.
 				</p>
 				
 			<?php endif; ?>
@@ -52,7 +52,7 @@
 		</section><!-- #content -->
 		
 		<aside class="sidebar fourcol">
-			<?php dynamic_sidebar('blog'); ?>
+			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		
 	</div><!-- .container-inner -->

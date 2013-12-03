@@ -18,7 +18,7 @@
 								
 				<div class="back">
 					<a class="back" href="<?php echo get_post_type_archive_link( 'posttype' ); ?>">
-						<?php _e('Back to the overview','tp'); ?>
+						<?php _e( 'Back to the overview', 'tp' ); ?>
 					</a>
 				</div>
 				

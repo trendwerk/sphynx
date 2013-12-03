@@ -6,58 +6,58 @@
 	
 		<section id="content" class="eightcol">
 		
-			<?php if (have_posts()) : ?>
+			<?php if ( have_posts() ) : ?>
 			
 				<h1>
-					<?php printf(__( 'Search Results for: %1$s','tp'),'<span class="search-highlight">'.get_search_query().'</span>'); ?>
+					<?php printf( __( 'Search Results for: %1$s', 'tp' ), '<span class="search-highlight">' . get_search_query() . '</span>' ); ?>
 				</h1>
 				
 				<p>
 					<?php 
-						$allsearch = &new WP_Query('s='.get_search_query().'&showposts=-1');
+						$allsearch = &new WP_Query( 's=' . get_search_query() . '&showposts=-1' );
 						$count = $allsearch->post_count;
 						wp_reset_query();
-						printf(__('Found %2$s articles containing the keyword: %1$s','tp'), '<span class="search-highlight">'.get_search_query().'</span>', $count);
+						printf( __( 'Found %2$s articles containing the keyword: %1$s', 'tp' ), '<span class="search-highlight">' . get_search_query() . '</span>', $count );
 					?>
 				</p>
 				
-			<?php while (have_posts()) : the_post(); ?>
-			
-				<article <?php post_class(); ?>>
+				<?php while ( have_posts() ) : the_post(); ?>
 				
-					<h2 class="search-title">
-						<a href="<?php the_permalink() ?>">
-							<?php the_title(); ?>
-						</a>
-					</h2>
+					<article <?php post_class(); ?>>
 					
-					<p>
-						<?php tp_the_excerpt(50); ?>
-						<a  class="more" href="<?php echo the_permalink(); ?>">
-							<?php _e('Read more','tp'); ?>
-						</a>
-					</p>
+						<h2 class="search-title">
+							<a href="<?php the_permalink(); ?>">
+								<?php the_title(); ?>
+							</a>
+						</h2>
+						
+						<p>
+							<?php tp_the_excerpt( 50 ); ?>
+							<a  class="more" href="<?php echo the_permalink(); ?>">
+								<?php _e( 'Read more', 'tp' ); ?>
+							</a>
+						</p>
+						
+					</article>
 					
-				</article>
-				
-			<?php endwhile; ?>
+				<?php endwhile; ?>
 			
 				<nav id="pagination">
-					<?php tp_pagination('&laquo;','&raquo;'); ?>
+					<?php tp_pagination( '&laquo;', '&raquo;' ); ?>
 				</nav>
 				
 			<?php else : ?>
 			
 				<h1>
-					<?php printf(__( 'Search Results for: %1$s','tp'),'<strong class="search-highlight">'.get_search_query().'</strong>'); ?>
+					<?php printf( __( 'Search Results for: %1$s', 'tp' ), '<strong class="search-highlight">' . get_search_query() . '</strong>' ); ?>
 				</h1>
 				
 				<p>
-					<?php printf(__('Your search for <em>&quot;%1$s&quot;</em> did not match any documents. Please make sure all your words are spelled correctly or try different keywords.','tp'),get_search_query() );?>
+					<?php printf( __('Your search for <em>&quot;%1$s&quot;</em> did not match any documents. Please make sure all your words are spelled correctly or try different keywords.', 'tp' ), get_search_query() ); ?>
 				</p>
 				
 				<p>
-					<?php get_search_form();?>
+					<?php get_search_form(); ?>
 				</p>
 				
 			<?php endif; ?>	   
@@ -65,7 +65,7 @@
 		</section>
 			
 		<aside class="sidebar fourcol">
-			<?php dynamic_sidebar('blog'); ?>
+			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 				
 	</div><!-- .container-inner -->

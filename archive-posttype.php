@@ -10,28 +10,28 @@
 				<?php _e( 'Posttype name', 'tp' ); ?>
 			</h1>
 
-			<?php if( have_posts() ) : ?>
+			<?php if ( have_posts() ) : ?>
 
-				<?php while( have_posts() ) : the_post(); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 			
 					<article <?php post_class(); ?>>
 					
 						<h2 class="entry-title">
-							<a href="<?php the_permalink() ?>">
+							<a href="<?php the_permalink(); ?>">
 								<?php the_title(); ?>
 							</a>
 						</h2>
 						
 						<div class="article-thumbnail">
 							<a href="<?php echo the_permalink(); ?>">
-								<?php the_post_thumbnail( 'thumbnail'); ?>
+								<?php the_post_thumbnail( 'thumbnail' ); ?>
 							</a>
 						</div>
 						
 						<p>
-							<?php tp_the_excerpt(80); ?>
+							<?php tp_the_excerpt( 80 ); ?>
 							<a class="more" href="<?php echo the_permalink(); ?>">
-								<?php _e('Read more','tp'); ?>
+								<?php _e( 'Read more', 'tp' ); ?>
 							</a>
 						</p>
 						

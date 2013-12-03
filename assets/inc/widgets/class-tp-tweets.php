@@ -6,7 +6,7 @@
  */
 class TP_Tweets extends WP_Widget {
 	function TP_Tweets() {
-		$this->WP_Widget( 'TP_Tweets', __( 'Tweets', 'tp' ), 'description=' . __( 'Shows latest tweets from a Twitter account', 'tp' ) );
+		$this->WP_Widget( 'TP_Tweets', __( 'Tweets', 'tp' ), array( 'description' => __( 'Shows latest tweets from a Twitter account', 'tp' ) ) );
 	}
 	
 	function form( $instance ) {
@@ -31,7 +31,7 @@ class TP_Tweets extends WP_Widget {
 		<?php
 	}
 	
-	function update($new_instance,$old_instance) {
+	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		
 		$instance['title'] = esc_attr( $new_instance['title'] );
@@ -40,23 +40,26 @@ class TP_Tweets extends WP_Widget {
 		return $instance;
 	}
 	
-	function widget($args,$instance) {		
+	function widget( $args, $instance ) {		
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$username = $instance['username'];
+
 		extract( $args );
 		
 		echo $before_widget;
 			if( $title )
 				echo $before_title . $title . $after_title;
 			?>
+
 			<a class="twitter-timeline" data-chrome="noheader nofooter noscrollbar transparent" data-tweet-limit="3" data-dnt="true" href="https://twitter.com/<?php echo $username; ?>" data-screen-name="<?php echo $username; ?>" data-widget-id="387581823514972160">
 				<?php printf( __( 'Tweets from @%1$s', 'tp' ), $username ); ?>
 			</a>
 			
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 			<?php
 			
 		echo $after_widget;
 	}
 }
-add_action( 'widgets_init', create_function( '', 'return register_widget("TP_Tweets");' ) );
+add_action( 'widgets_init', create_function( '', 'return register_widget( "TP_Tweets" );' ) );

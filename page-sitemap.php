@@ -20,32 +20,32 @@
 				
 				<div class="post-type-page">
 					<h2>
-						<?php _e('Pages','tp'); ?>
+						<?php _e( 'Pages', 'tp' ); ?>
 					</h2>
 					
 					<ul>
-						<?php wp_list_pages("title_li="); ?>
+						<?php wp_list_pages( array( 'title_li' => '' ) ); ?>
 					</ul>
 				</div>
 				
-				<?php if($post_types = get_post_types(array('public' => true,'_builtin' => false),'objects')) : ?>
+				<?php if( $post_types = get_post_types( array( 'public' => true, '_builtin' => false ), 'objects' ) ) { ?>
 				
 					<div class="custom-post-types">
 					
-						<?php foreach($post_types as $post_type) :  ?>
+						<?php foreach( $post_types as $post_type ) {  ?>
 						
-							<div class="post-type-<?php echo $post_type->query_var; ?>">
+							<div class="post-type-<?php echo $post_type->name; ?>">
 							
 								<h2>
 									<?php echo $post_type->labels->name; ?>
 								</h2>
 								
-								<?php $entries = new WP_Query(array('post_type' => $post_type->query_var,'posts_per_page' => -1)); ?>
+								<?php $entries = new WP_Query( array( 'post_type' => $post_type->name, 'posts_per_page' => -1 ) ); ?>
 								
-								<?php if($entries->have_posts()) : ?>
+								<?php if( $entries->have_posts() ) : ?>
 								
 									<ul>
-										<?php while($entries->have_posts()) : $entries->the_post(); ?>
+										<?php while( $entries->have_posts() ) : $entries->the_post(); ?>
 											<li>
 												<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 											</li>
@@ -56,24 +56,24 @@
 								
 							</div>
 							
-						<?php endforeach; ?>
+						<?php } ?>
 						
 					</div>
 					
-				<?php endif; ?>
+				<?php } ?>
 				
-				<?php $nieuws = new WP_Query(array('posts_per_page' => -1)); ?>
+				<?php $nieuws = new WP_Query( array( 'posts_per_page' => -1 ) ); ?>
 				
-				<?php if($nieuws->have_posts()) : ?>
+				<?php if( $nieuws->have_posts() ) { ?>
 				
 					<div class="post-type-post">
 					
 						<h2>
-							<?php _e('Blog','tp'); ?>
+							<?php _e( 'Blog', 'tp' ); ?>
 						</h2>
 						
 						<ul>
-							<?php while($nieuws->have_posts()) : $nieuws->the_post(); ?>
+							<?php while( $nieuws->have_posts() ) : $nieuws->the_post(); ?>
 								<li>
 									<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 								</li>
@@ -82,7 +82,7 @@
 						
 					</div>
 					
-				<?php endif; ?>
+				<?php } ?>
 				
 			<?php endwhile; endif; ?>
 			
