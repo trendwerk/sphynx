@@ -1,6 +1,8 @@
 <?php
 /**
  * Some general functions and template tags
+ *
+ * @package TrendPress
  */
 
 /**
@@ -23,7 +25,8 @@ function tp_maybe_add_http( $url ) {
 	if( ! $url ) 
 		return;
 	
-	if( ! strstr($url,'http://') && !strstr($url,'https://')) $url = 'http://'.$url;
+	if( ! strstr( $url, 'http://' ) && ! strstr( $url, 'https://' ) )
+		$url = 'http://' . $url;
 	
 	return $url;
 }
@@ -35,24 +38,22 @@ function tp_maybe_add_http( $url ) {
  * @param int $more The more text in case there's more to read
  * @param int $content Custom content you may want to shorten
  */
-function tp_the_excerpt($length=55,$more='&hellip;',$content='') {
+function tp_the_excerpt( $length=55, $more='&hellip;', $content='' ) {
 	$func = array();
 	
-	$func['more'] = create_function('','return "'.$more.'";');
-	add_filter('excerpt_more',$func['more']);
+	$func['more'] = create_function( '', 'return "' . $more . '";' );
+	add_filter( 'excerpt_more', $func['more'] );
 	
-	$func['length'] = create_function('','return '.$length.';');
-	add_filter('excerpt_length',$func['length']);
+	$func['length'] = create_function( '', 'return ' . $length . ';' );
+	add_filter( 'excerpt_length', $func['length'] );
 	
-	if($content) :
-		$excerpt = wp_trim_words($content,$length,$more);
-	else :
+	if( $content ) 
+		$excerpt = wp_trim_words( $content, $length, $more );
+	else
 		$excerpt = get_the_excerpt();
-	endif;
 	
-	remove_filter('excerpt_more',$func['more']);
-	remove_filter('excerpt_length',$func['length']);
+	remove_filter( 'excerpt_more', $func['more'] );
+	remove_filter( 'excerpt_length', $func['length'] );
 	
 	echo $excerpt;
 }
-?>

@@ -2,7 +2,8 @@
 /**
  * Template tags for displaying the breadcrumbs of the current menu
  *
- * @uses TPNav
+ * @uses TP_Nav
+ * @package TrendPress
  */
 
 /**
@@ -14,7 +15,7 @@
 function tp_breadcrumbs($separator='>',$menu='mainnav') {
 	global $post;
 	
-	$nav = new TPNav($menu);
+	$nav = new TP_Nav($menu);
 	$breadcrumbs = apply_filters( 'tp-breadcrumbs', $nav->get_breadcrumb_items() );
 	
 	//Home

@@ -4,6 +4,8 @@
  *
  * Put your plugin (<name>/<name>.php) in <child-theme>/assets/plugins. 
  * Name it and let's go!
+ *
+ * @package TrendPress
  */
 
 class TP_Plugins {
@@ -37,7 +39,7 @@ class TP_Plugins {
 		
 		$theme = wp_get_theme();		
 		wp_localize_script( 'tp-plugins', 'TPPluginsL10n', array(
-			'tp-plugins-explanation' => sprintf( __( 'Plugins in the %1$s folder are executed automatically.', 'tp' ), '<code>' . $theme->get_stylesheet() . '/assets/plugins/</code>' )
+			'tp-plugins-explanation' => sprintf( __( 'Plugins in the %1$s folder are executed automatically.', 'tp' ), '<code>' . $theme->get_stylesheet() . '/assets/plugins/</code>' ),
 		) );
 	}
 	
@@ -80,9 +82,8 @@ class TP_Plugins {
 		//Setup our plugins
 		$plugins = array();
 		if( $this->plugins ) {
-			foreach( $this->plugins as $plugin ) {
+			foreach( $this->plugins as $plugin )
 				$plugins[ $plugin ] = get_plugin_data( $plugin );
-			}
 		}
 		
 		return $plugins;
@@ -118,7 +119,7 @@ class TP_Plugins {
 		global $status;
 		
 		$class = ( $status == 'tp' ) ? 'current' : '';
-		$views['tp'] = '<a class="' . $class . '" href="' . admin_url('plugins.php?plugin_status=tp') . '">' . __('TrendPress','tp') . ' <span class="count">(' . count( $this->plugins ) . ')</span></a>';
+		$views['tp'] = '<a class="' . $class . '" href="' . admin_url( 'plugins.php?plugin_status=tp' ) . '">' . __('TrendPress','tp') . ' <span class="count">(' . count( $this->plugins ) . ')</span></a>';
 		
 		return $views;
 	}
@@ -128,9 +129,8 @@ class TP_Plugins {
 	 */
 	function activate() {
 		if( $this->plugins = $this->get_plugins() ) {
-			foreach( $this->plugins as $plugin ) {
+			foreach( $this->plugins as $plugin )
 				include_once( $plugin );
-			}
 		}
 	}
 	
@@ -159,7 +159,7 @@ class TP_Plugins {
 				if( is_dir( $plugin_dir ) ) {
 					foreach( scandir( $plugin_dir ) as $plugin_file ) {
 						if( '.' == substr( $plugin_file, 0, 1 ) ) continue;
-						if( substr( $plugin_file, -4 ) != '.php' ) continue;
+						if( '.php' != substr( $plugin_file, -4 ) ) continue;
 
 						$plugin_data = get_plugin_data( $plugin_dir . '/' . $plugin_file, false, false );
 

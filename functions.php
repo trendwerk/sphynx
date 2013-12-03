@@ -1,6 +1,8 @@
 <?php
 /**
  * This is the core of TrendPress
+ *
+ * @package TrendPress
  */
 
 /**

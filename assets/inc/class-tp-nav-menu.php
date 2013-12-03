@@ -1,6 +1,8 @@
 <?php
 /**
  * Additions to WP Nav Menu's
+ *
+ * @package TrendPress
  */
 class TPNavMenu {
 	function __construct() {

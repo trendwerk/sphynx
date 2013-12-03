@@ -4,6 +4,8 @@
  *
  * Adds a meta box to Custom Menu's, so you can add post type archives easily.
  * Sets up the right menu item to an active state.
+ *
+ * @package TrendPress
  */
 
 class TP_CPT_Extras {
@@ -100,7 +102,7 @@ class TP_CPT_Extras {
 					return $items;
 			}
 			
-			$nav = new TPNav();
+			$nav = new TP_Nav();
 			
 			if( is_single() || is_tax() ) { 
 				foreach( $items as &$item ) {

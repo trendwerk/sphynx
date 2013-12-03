@@ -2,6 +2,8 @@
 	/**
 	 * TrendPress Maintenance mode
 	 * @see wp_maintenance() in wp-includes/load.php
+	 *
+	 * @package TrendPress
 	 */
 	
 	$protocol = $_SERVER["SERVER_PROTOCOL"];

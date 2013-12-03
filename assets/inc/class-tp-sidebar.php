@@ -2,9 +2,12 @@
 /**
  * Register a sidebar
  *
+ * @package TrendPress
+ *
  * @param string $id Unique sidebar ID
  * @param array $args
  */
+
 class TP_Sidebar {
 	function __construct( $id, $args ) {
 		$default = array(
