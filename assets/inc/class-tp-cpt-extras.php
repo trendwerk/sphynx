@@ -20,7 +20,7 @@ class TP_CPT_Extras {
 	 * Add scripts
 	 */
 	function add_scripts() { 
-		wp_enqueue_script( 'tp-cpt-meta', get_template_directory_uri() . '/assets/js/TPCPTMeta/TPCPTMeta.js', array( 'jquery' ) );
+		wp_enqueue_script( 'tp-cpt-meta', get_template_directory_uri() . '/assets/js/tp-cpt-meta/tp-cpt-meta.js', array( 'jquery' ) );
 	}
 	
 	/**

@@ -35,7 +35,7 @@ class TP_Plugins {
 	 * Add scripts
 	 */
 	function add_scripts() {
-		wp_enqueue_script( 'tp-plugins', get_template_directory_uri() . '/assets/js/TPPlugins/TPPlugins.js' );
+		wp_enqueue_script( 'tp-plugins', get_template_directory_uri() . '/assets/js/tp-plugins/tp-plugins.js' );
 		
 		$theme = wp_get_theme();		
 		wp_localize_script( 'tp-plugins', 'TPPluginsL10n', array(
