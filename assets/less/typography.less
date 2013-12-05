@@ -15,7 +15,7 @@
  * @subsection Import Font Awesome
  */
 
-@import "lib/fontawesome.less"; 
+@import "assets/less/lib/fontawesome.less"; 
 
 /**
  * @section    Typography
@@ -40,7 +40,7 @@ body {
 }
 
 p {
-	margin: 0 0 20px 0;
+	margin: 0 0 25px 0;
 }
 
 /**
@@ -58,7 +58,7 @@ h6 {
 	font-family: @heading-font;
 	font-weight: normal;
 	line-height: 1em;
-	margin: 0 0 20px 0;
+	margin: 0 0 25px 0;
 }
 
 h1 { 
@@ -105,8 +105,8 @@ h6 {
 
  	/* add characters to links */
  	
- 	&.back:after,
- 	&.prev:after {
+ 	&.back:before,
+ 	&.prev:before {
  		content: "\00ab ";
  	}
  	
