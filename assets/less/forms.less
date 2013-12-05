@@ -12,56 +12,72 @@
 
 /**
  * @section    Forms
- * @subsection Import formalize form reset stylesheet
- */
-
-@import "assets/less/lib/formalize.less"; 
-
-/**
- * @section    Forms
  * @subsection Default form styling
  */
 
- input,
- select,
- textarea {
+input,
+select,
+textarea {
  	border: 1px solid @border-color;
- }
+ 	font-family: @text-font;
+ 	font-size: 13px;
+ 	display: block;
+ 	height: 38px;
+ 	margin: 0 10px 20px 0;
+ 	min-width: 220px;
+ 	outline: none;
+ 	padding: 0 10px;
+ 	.border-radius(3px);
+ 	.placeholder(#666, #ccc);
 
- /* submit buttons */
+	&:focus {
+		border: 1px solid darken(@border-color, 20%);
+	}
 
- input[type="submit"] {
+}
+
+/* submit buttons */
+
+input[type="submit"] {
  	background: @primary-color;
  	border: 0;
  	color: #fff;
+ 	cursor: pointer;
  	box-shadow: 0 2px 0 darken(@primary-color, 10%);
  	display: inline-block;
  	font-weight: bold;
- 	height: 30px;
- 	line-height: 30px;
- 	margin: 0 10px 0 0;
+ 	height: 38px;
+ 	margin-right: 10px;
+ 	min-width: 0;
  	padding: 0 20px;
  	position: relative;
  	text-decoration: none;
  	text-shadow: 0 1px 0 darken(@primary-color, 10%);
- 	.border-radius(3px);
 
  	&:hover { 
  		background: lighten(@primary-color, 5%);
  	}
 
- 	&:active {
- 		top: 1px;
- 	}
-
- }
+}
 
 /**
  * @section    Forms
  * @subsection Searchform
  */
 
-// WE SHOULD ADD STYLING FOR THE SEARCH FORM HERE
+.search {
+
+	input[type="text"] { 
+		float: left;
+	}
+
+	input[type="submit"] { 
+		float: left;
+		font-family: fontawesome;
+		width: 50px;
+	}
+
+}
 
 /**
  * @section    Forms
@@ -69,3 +85,12 @@
  */
 
 // WE SHOULD ADD STYLING FOR THE WORDPRESS COMMENT FORM HERE
+
+/**
+ * @section    Forms
+ * @subsection Fix for admin bar search form 
+ */
+
+input#adminbar-search {
+	min-width: 0;
+}

@@ -38,6 +38,7 @@ body {
 .twelvecol {
 	float: left;
 	margin: 10px;
+	position: relative;
 }
 
 img, 
@@ -52,8 +53,8 @@ img {
 }
 
 .container {
-	display: block;
 	clear: both;
+	display: block;
 	float: left;
 	height: auto;
 	width: 100%;
@@ -67,122 +68,132 @@ img {
 
 /**
  * @section    Grid
- * @subsection 960 pixel grid for regular displays
+ * @subsection Standard (960 pixel grid)
  */ 
-
-@media(max-width: 1179px) {
 
 .container .container-inner {
 	width: 960px;
+
+	.onecol { width: 60px; }
+	
+	.twocol { width: 140px; }
+	
+	.threecol { width: 220px; }
+	
+	.fourcol { width: 300px; }
+	
+	.fivecol { width: 380px; }
+	
+	.sixcol { width: 460px; }
+	
+	.sevencol { width: 540px; }
+	
+	.eightcol { width: 620px; }
+	
+	.ninecol { width: 700px; }
+	
+	.tencol { width: 780px; }
+	
+	.elevencol { width: 860px; }
+	
+	.twelvecol { width: 940px; }
+
 }
 
-	.onecol { 
-		width: 60px; 
-	}
+/**
+ * @section    Grid
+ * @subsection Large desktops (1140 pixel grid)
+ */ 
 	
-	.twocol { 
-		width: 140px; 
-	}
-	
-	.threecol { 
-		width: 220px; 
-	}
-	
-	.fourcol { 
-		width: 300px; 
-	}
-	
-	.fivecol { 
-		width: 380px; 
-	}
-	
-	.sixcol { 
-		width: 460px; 
-	}
-	
-	.sevencol { 
-		width: 540px; 
-	}
-	
-	.eightcol { 
-		width: 620px; 
-	}
-	
-	.ninecol { 
-		width: 700px; 
-	}
-	
-	.tencol { 
-		width: 780px; 
-	}
-	
-	.elevencol { 
-		width: 860px; 
-	}
-	
-	.twelvecol { 
-		width: 940px; 
+@media(min-width: 1200px) {
+
+	.container .container-inner {
+		width: 1140px;
+
+		.onecol { width: 75px; }
+
+		.twocol { width: 170px; }
+
+		.threecol { width: 265px; }
+
+		.fourcol { width: 360px; }
+
+		.fivecol { width: 455px; }
+
+		.sixcol { width: 550px; }
+
+		.sevencol { width: 645px; }
+
+		.eightcol { width: 740px; }
+
+		.ninecol { width: 835px; }
+
+		.tencol { width: 930px; }
+
+		.elevencol { width: 1025px; }
+
+		.twelvecol { width: 1120px; }
+
 	}
 
 }
 
 /**
  * @section    Grid
- * @subsection 1140 pixel grid for larger displays
+ * @subsection Tablets (fluid layout)
  */ 
 	
-@media(min-width: 1180px) {
+@media(max-width: 980px) {
 
-.container .container-inner {
-	width: 1140px;
+	.container .container-inner {
+		padding: 0 5%;
+		width: 90%;
+		
+		.onecol, 
+		.twocol, 
+		.threecol, 
+		.fourcol, 
+		.fivecol, 
+		.sixcol, 
+		.sevencol, 
+		.sevencol, 
+		.eightcol, 
+		.ninecol, 
+		.tencol, 
+		.elevencol, 
+		.twelvecol {
+			margin: 10px 0;
+		} 
+		
+		.sixcol, 
+		.sevencol, 
+		.eightcol, 
+		.ninecol, 
+		.tencol, 
+		.elevencol,
+		.twelvecol {
+			clear: both;
+			width: 100%;
+		}
+
+	}
+
 }
 
-	.onecol { 
-		width: 75px; 
-	}
+/**
+ * @section    Grid
+ * @subsection Mobile (fluid layout)
+ */ 
+	
+@media(max-width: 640px) {
 
-	.twocol { 
-		width: 170px; 
-	}
+	.container .container-inner {
+		
+		.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol {
+			clear: both;
+			width: 100%;
+		}
 
-	.threecol { 
-		width: 265px; 
-	}
-
-	.fourcol { 
-		width: 360px; 
-	}
-
-	.fivecol { 
-		idth: 455px; 
-	}
-
-	.sixcol { 
-		width: 550px; 
-	}
-
-	.sevencol { 
-		width: 645px; 
-	}
-
-	.eightcol { 
-		width: 740px; 
-	}
-
-	.ninecol { 
-		width: 835px; 
-	}
-
-	.tencol { 
-		width: 930px; 
-	}
-
-	.elevencol { 
-		width: 1025px; 
-	}
-
-	.twelvecol { 
-		width: 1120px; 
 	}
 
 }

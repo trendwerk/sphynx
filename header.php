@@ -24,38 +24,36 @@
 		<header id="header" class="container">
 		
 			<div class="container-inner">
-			
-				<div id="logo" class="sixcol">
+				
+				<div id="logo" class="eightcol">
 					<p id="sitename"><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></p>
 					<p id="description"><?php bloginfo( 'description' ); ?></p>
 				</div>
+
+				<div id="mobile-navigation" data-toggle="#main-navigation">
+					<i class="icon-reorder"></i>
+				</div>
+				<div id="mobile-search" data-toggle="#search">
+					<i class="icon-search"></i>
+				</div>
 				
-				<nav id="topnav" class="navigation sixcol">				
+				<nav id="topnav" class="navigation fourcol">				
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'topnav',
 							'fallback_cb' => 'false',
 							'container' => '',
 							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'depth' => '0',
+							'depth' => '1',
 						) ); 
 					?>
 				</nav>
 
-				<div class="toggle-wrap">
-					<div class="toggle-main-navigation" data-toggle="#main-navigation">
-						<i class="icon-reorder"></i>
-					</div>
-					<div class="toggle-search" data-toggle="#search">
-						<i class="icon-search"></i>
-					</div>
-				</div>
-				
-				<div id="search" class="sixcol">
+				<div id="search" class="fourcol">
 					<?php get_search_form(); ?>
 				</div>
 				
-				<nav id="main-navigation" class=" twelvecol">				
+				<nav id="main-navigation" class="twelvecol">				
 					<?php 
 						wp_nav_menu( array(
 							'theme_location' => 'mainnav',
@@ -72,7 +70,7 @@
 					<nav id="breadcrumbs" itemprop="breadcrumb" class="twelvecol">
 						<?php 
 							_e( 'You are here: ', 'tp' );
-							tp_breadcrumbs('/'); 
+							tp_breadcrumbs('»'); 
 						?>
 					</nav>
 
