@@ -2,9 +2,13 @@
 
 <section id="main" class="container">
 
-	<div class="container-inner">	
+	<div class="container-inner">
+
+		<aside class="sidebar fourcol">
+			<?php dynamic_sidebar( 'page' ); ?>
+		</aside>
 	
-		<section id="content" class="eightcol">
+		<section id="content" class="content-right eightcol">
 		
 			<h1 id="page-title">
 				<?php _e( 'Posttype name', 'tp' ); ?>
@@ -50,10 +54,6 @@
 			<?php endif; ?>
 			
 		</section><!-- #content -->	
-				
-		<aside class="sidebar fourcol">
-			<?php dynamic_sidebar( 'page' ); ?>
-		</aside>
 		
 	</div><!-- .container-inner -->
 	

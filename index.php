@@ -4,7 +4,7 @@
 
 	<div class="container-inner">	
 	
-		<section id="content" class="eightcol">
+		<section id="content" class="content-left eightcol">
 		
 			<?php if( is_category() ) { ?>
 			

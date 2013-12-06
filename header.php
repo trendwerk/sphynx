@@ -29,14 +29,16 @@
 					<p id="sitename"><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></p>
 					<p id="description"><?php bloginfo( 'description' ); ?></p>
 				</div>
-
-				<div id="mobile-navigation" data-toggle="#main-navigation">
-					<i class="icon-reorder"></i>
-				</div>
-				<div id="mobile-search" data-toggle="#search">
-					<i class="icon-search"></i>
-				</div>
 				
+				<div id="mobile">
+					<div id="mobile-navigation" data-toggle="#main-navigation">
+						<i class="icon-reorder"></i>
+					</div>
+					<div id="mobile-search" data-toggle="#search">
+						<i class="icon-search"></i>
+					</div>
+				</div>
+
 				<nav id="topnav" class="navigation fourcol">				
 					<?php
 						wp_nav_menu( array(

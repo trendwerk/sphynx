@@ -8,7 +8,7 @@
 			<?php dynamic_sidebar('page'); ?>
 		</aside>
 		
-		<article id="content" class="eightcol">	
+		<article id="content" class="content-right eightcol">	
 			
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			

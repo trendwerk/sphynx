@@ -4,7 +4,7 @@
 
 	<div class="container-inner">
 	
-		<article id="content" class="eightcol">
+		<article id="content" class="content-left eightcol">
 		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			

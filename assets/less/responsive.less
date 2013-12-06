@@ -22,32 +22,26 @@
  * @subsection Tablets
  */
 
- @media (max-width: 960px) {
+ @media (max-width: 980px) {
  	
  	#header {
 
- 		.toggle-wrap {
- 			display: none;
- 		}
+		#logo { width: 50%; }
 
  		#topnav {
- 			display: none;
+ 			width: 50%;
+ 			margin: 0;
  		}
 
- 		#main-navigation, 
- 		#search {
- 			display: block;
- 		}
-
- 		#main-navigation {
- 			margin-left: 0; 
- 		}
+		#search { width: 50%; }
 
  	}
- 	
- 	.container {
 
- 		&#main {
+
+
+
+ 	
+ 	#main {
  			padding-bottom: 0;
  		}
  		
@@ -97,7 +91,6 @@
 
  		}
  	
- 	}	
 
  }
 
@@ -107,153 +100,231 @@
  */
 
  @media (max-width: 640px) {	
- 	
- 	.container {
  			
- 		&#header {
- 			margin-top: 10px !important;
- 			border-bottom: 1px solid @border-color;
- 			padding-bottom: 10px;
- 			margin-bottom: 10px !important;
+ 	#header {
+ 		border-bottom: 1px solid @border-color;
 
- 			/* mobile navigation and search buttons */
+		#logo {
+			width: 100%;
+		}
 
- 			#mobile-navigation, 
- 			#mobile-search {
- 				background-color: @primary-color;
- 				color: #fff;
- 				cursor: pointer;
- 				display: block;
- 				float: right;
- 				font-size: 12px;
- 				height: 20px;
- 				line-height: 20px;
- 				margin: 5px;
- 				padding: 5px;
- 				text-align: center;
- 				width: 20px;
- 				.border-radius(3px);
+		/* mobile navigation and mobile search toggle buttons */
 
- 				&.active,
- 				&:hover {
- 					background-color: darken(@primary-color, 10%);
- 				}
+		#mobile {
+			display: block;
+			margin: 0;
+			position: absolute;
+			right: 5%;
+			top: 50px;
 
- 			}
+			#mobile-navigation, 
+			#mobile-search {
+				background-color: @primary-color;
+				color: #fff;
+				cursor: pointer;
+				float: left;
+				font-size: 12px;
+				height: 20px;
+				line-height: 20px;
+				margin-left: 10px;
+				padding: 5px;
+				text-align: center;
+				width: 20px;
+				.border-radius(3px);
 
- 			#topnav, #search {
- 				display: none;
- 			}
- 			
- 			#main-navigation {
- 				display: none;
- 				margin-left: 0; 
- 			}
+				&.active,
+				&:hover {
+					background-color: darken(@primary-color, 10%);
+				}
 
- 		}
- 		
- 		&#main {
- 			margin-bottom: 0;
- 			padding-bottom: 0;
+			}
 
- 			#content {
- 				margin-bottom: 0;
- 				padding-right: 0;
- 				padding-bottom: 0;
+		}
 
- 				img.alignleft, 
- 				img.alignright, 
- 				.wp-caption { 
- 					clear: both;
- 					float: left !important;
- 					margin: 0 20px 20px 0;
- 				}
+ 		#topnav { display: none; }
 
- 				.wp-caption {
- 					background: transparent;
- 					border: none;
- 					clear: both;
- 					padding: 0;
- 					width: 100%;
+		#search { display: none; }
 
- 					img { 
- 						float: left; 
- 					}
+		#main-navigation { 
+			display: none;
 
- 					p { 
- 						clear: both; 
- 						text-align: left;
- 					}
 
- 				}
+				ul {
+					clear: both;
+				
+					float: left;
+					padding: 10px 0;
+			
+					li {
+						clear: both;
+						width: 100%;
+									
+						a { 
+							.border-box;
+							color: #fff;
+							display: block;
+							font-size: 14px;
+							height: 34px;
+							line-height: 34px;
+							padding: 0 20px;
+							text-decoration: none;
+							
+						}
 
- 			}
+						ul {
+							left: 0;
+							padding: 5px 0;
+							position: relative;
+							visibility: visible;
+							width: 100%;
+						
+							li {
+								
+								a {
+									display: block;
+									font-size: 13px;
+									height: 30px;
+									line-height: 30px;
+									padding: 0 0 0 20px;
+									text-indent: 20px;						
+								}
+								
+							}
 
- 			.sidebar {
- 				border-top: 1px solid @border-color;
- 				padding-top: 30px;
+						}
+										
+						/* current navigation ancestor parent, item */
 
- 				.widget {
- 					padding: 5% !important;
- 				}
+						&.current-menu-ancestor,
+						&.current-menu-parent,
+						&.current-menu-item {
+							
+							> a { 
+								text-decoration: underline;
+							}
+							
+							.current-menu-ancestor,
+							.current-menu-parent,
+							.current-menu-item {
+							
+								> a { 
+									text-decoration: underline;
+								}
+							
+							}
+						
+						}
+						
+					}			
+								
+				}
 
- 			}
+			}	
 
- 		}
+		#breadcrumbs { display: none; }
 
- 		&#footer .sidebar,
- 		&#main .sidebar {
- 			margin-bottom: 0;
- 			padding-bottom: 0;
- 		
- 			.widget { 
- 				.border-box;
- 				clear: both;
- 				margin: 0 0 30px 0;
- 				padding: 0%;
- 				width: 100%;
- 			}
+	}
+	
+	#main {
+		
 
- 			.widget.even,
- 			.widget.odd {
- 				margin-right: 0;
- 				margin-left: 0;
- 			}
 
- 		}
- 		
- 		&#footer {
- 			margin-top: 0;
- 			padding-top: 0;
+		#content {
+			margin-bottom: 0;
+			padding-right: 0;
+			padding-bottom: 0;
 
- 			#credits {
- 				padding-top: 30px;
- 				
- 				#copyright,
- 				#footernav {
- 					text-align: center;
- 					width: 100%;
- 				
- 					ul {
- 						text-align: center;
- 						
- 						li {
- 							display: inline;
- 							
- 							a { 
- 								float: none; 
- 							}
- 						
- 						}
- 					
- 					}
- 				
- 				}
- 			
- 			}
- 			
- 		}
- 	
- 	}
+			img.alignleft, 
+			img.alignright, 
+			.wp-caption { 
+				clear: both;
+				float: left !important;
+				margin: 0 20px 20px 0;
+			}
+
+			.wp-caption {
+				background: transparent;
+				border: none;
+				clear: both;
+				padding: 0;
+				width: 100%;
+
+				img { 
+					float: left; 
+				}
+
+				p { 
+					clear: both; 
+					text-align: left;
+				}
+
+			}
+
+		}
+
+		.sidebar {
+			border-top: 1px solid @border-color;
+			padding-top: 30px;
+
+			.widget {
+				padding: 5% !important;
+			}
+
+		}
+
+	}
+
+	&#footer .sidebar,
+	&#main .sidebar {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	
+		.widget { 
+			.border-box;
+			clear: both;
+			margin: 0 0 30px 0;
+			padding: 0%;
+			width: 100%;
+		}
+
+		.widget.even,
+		.widget.odd {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+	}
+	
+	&#footer {
+		margin-top: 0;
+		padding-top: 0;
+
+		#credits {
+			padding-top: 30px;
+			
+			#copyright,
+			#footernav {
+				text-align: center;
+				width: 100%;
+			
+				ul {
+					text-align: center;
+					
+					li {
+						display: inline;
+						
+						a { 
+							float: none; 
+						}
+					
+					}
+				
+				}
+			
+			}
+		
+		}
+		
+	}
 
  }

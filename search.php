@@ -2,9 +2,13 @@
 
 <section id="main" class="container">
 
-	<div class="container-inner">	
+	<div class="container-inner">
+
+		<aside class="sidebar fourcol">
+			<?php dynamic_sidebar( 'page' ); ?>
+		</aside>
 	
-		<section id="content" class="eightcol">
+		<section id="content" class="content-right eightcol">
 		
 			<?php if ( have_posts() ) : ?>
 			
@@ -63,10 +67,6 @@
 			<?php endif; ?>	   
 			 
 		</section>
-			
-		<aside class="sidebar fourcol">
-			<?php dynamic_sidebar( 'blog' ); ?>
-		</aside>
 				
 	</div><!-- .container-inner -->
 	

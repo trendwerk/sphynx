@@ -28,8 +28,7 @@ body { background: @body-background; }
 	background: @body-background;
 	color: @text-color;
 	padding: 10px 0;
-
-	background: #ccc;
+	z-index: 1;
 
 	/* logo, sitename and description */
 			
@@ -57,8 +56,7 @@ body { background: @body-background; }
 
 	/* mobile navigation and search buttons */
 
-	#mobile-navigation, 
-	#mobile-search { display: none; }
+	#mobile { display: none; }
 	
 	/* top navigation */
 			
@@ -124,174 +122,114 @@ body { background: @body-background; }
 		
 	}
 	
-	/* main navigation */	
+	/* main navigation */
+
+	/**
+	 * @navigation main-navigation
+	 */
 	
 	#main-navigation {
-		background: @footer-background;
-		font-size: 13px;
-		height: auto;
 		.border-radius(3px);
+		background: @footer-background;
+		z-index: 1;		
 
-		/* desktop */
+		ul {
+			list-style-type: none;
+			margin: 0 10px;
+			padding: 0;
+			position: relative;
 
-		@media (min-width: 721px) {
-			display: block !important;
+			/* level 1 */
 
-			ul {
-			
-				li {
-								
-					a { 
-						color: #fff;
-						font-size: 14px;
-						height: 50px;
-						line-height: 50px;
-						padding: 0 20px;
-						text-decoration: none;
-						
-						&:hover { 
-							background: #111;
-						}
-					
-					}
-					
-					li {
-						
-						a {
-							background: #111;
-							font-size: 13px;
-							height: 30px;
-							line-height: 30px;
-							padding: 0;
-							text-indent: 20px;
-							
-							&:hover {
-							 	background: #000;
-							}
-							
-						}
-						
-					}
-									
-					/* current navigation ancestor parent, item */
+			li { 
+				float: left;
+				position: relative;
 
-					&.current-menu-ancestor,
-					&.current-menu-parent,
-					&.current-menu-item {
-						
-						> a { 
-							background: #111; 
-							text-decoration: underline;
-						}
-						
-						.current-menu-ancestor,
-						.current-menu-parent,
-						.current-menu-item {
-						
-							> a { 
-								background: #111;
-								text-decoration: underline;
-							}
-						
-						}
-					
-					}
-					
-					/* sfhover alternative */
-					
-					&.hover {
-						
-						> a { 
-							background: #111; 
-						}
-						
-						&:hover > a { 
-							background: #000; 
-						}
-						
-					}
-					
+				a { 
+					color: #fff;
+					display: block;
+					font-size: 14px;
+					height: 30px;
+					line-height: 30px;
+					padding: 10px 20px;
+					text-decoration: none;
+				
+				}
+				
+				&:hover > a { background: darken(@footer-background, 5%); }
+				
+				&.has-children > a:after,
+				&.page_item_has_children > a:after { 
+					content: "\f0d7";
+					font-family: FontAwesome;
+					font-size: 10px;
+					margin-left: 5px;
+					text-decoration: none !important;
 				}
 
-			}		
+				&:hover > ul { visibility: visible; }
+
+				/* level 2 */
+
+				ul {
+					left: -10px;
+					position: absolute;
+					top: 100%;
+					visibility: hidden; 
+					width: 220px;   
+
+					li {
+						float: none;
 						
-		}
+						a {
+							background: darken(@footer-background, 5%);
+							display: inline-block;	
+							font-size: 12px;
+							height: 25px;
+							line-height: 25px;
+							padding: 5px;
+							text-indent: 20px;
+							width: 100%;
+						}
 
-		/* tablet and smartphone */
+						&:hover > a { background: darken(@footer-background, 10%); }
 
-		@media (max-width: 720px) {
+						&.has-children > a:after,
+						&.page_item_has_children > a:after { 
+							content: "\f0da";
+							font-family: FontAwesome;
+							font-size: 10px;
+							margin-left: 5px;
+							text-decoration: none !important;
+						}
 
-			ul {
-				clear: both;
-				display: block;
-				float: left;
-				padding: 10px 0;
-		
-				li {
-					clear: both;
-					width: 100%;
-								
-					a { 
-						.border-box;
-						color: #fff;
-						display: block;
-						font-size: 14px;
-						height: 34px;
-						line-height: 34px;
-						padding: 0 20px;
-						text-decoration: none;
+						/* level 3 */
+						
+						ul { 
+							left: 100%;
+							top: 0;
+						}
 						
 					}
 
-					ul {
-						left: 0;
-						padding: 5px 0;
-						position: relative;
-						visibility: visible;
-						width: 100%;
-					
-						li {
-							
-							a {
-								display: block;
-								font-size: 13px;
-								height: 30px;
-								line-height: 30px;
-								padding: 0 0 0 20px;
-								text-indent: 20px;						
-							}
-							
-						}
+				}
 
-					}
-									
-					/* current navigation ancestor parent, item */
+				/* current, parent and ancestor menu item */
 
-					&.current-menu-ancestor,
-					&.current-menu-parent,
-					&.current-menu-item {
-						
-						> a { 
-							text-decoration: underline;
-						}
-						
-						.current-menu-ancestor,
-						.current-menu-parent,
-						.current-menu-item {
-						
-							> a { 
-								text-decoration: underline;
-							}
-						
-						}
+				&.current-menu-item,
+				&.current-menu-parent,
+				&.current-menu-ancestor,
+				&.current_page_item,
+				&.current_page_parent,
+				&.current_page_ancestor {
 					
-					}
-					
-				}			
-							
+					a { background: darken(@footer-background, 5%); }
+				
+				}
+
 			}
-
-		}			
+			
+		}		
 
 	}
 	
@@ -300,6 +238,13 @@ body { background: @body-background; }
 	#breadcrumbs { 
 		color: @text-light;
 		font-size: 13px;
+
+		a { 
+			color: @text-color; 
+
+			&:hover { color: @link-color; }
+
+		}
 	}
 	
 }
@@ -311,7 +256,8 @@ body { background: @body-background; }
 
 #main {
 	background: @body-background;
-	padding-bottom: 20px;
+	padding: 10px 0;
+	z-index: 0;
 	
 	.search {
 
@@ -325,7 +271,10 @@ body { background: @body-background; }
 	
 	#content {
 		.border-box;
-		padding-right: 20px;
+
+		&.content-left { padding-right: 20px; }
+
+		&.content-right { padding-left: 20px; }
 				
 		.entry-title, .search-title {
 			
@@ -422,7 +371,8 @@ body { background: @body-background; }
 
 	.widget {
 		.border-box;
-		background: #eee;
+		.border-radius(3px);
+		background: @light-background;
 		float: left;
 		font-size: 13px;
 		
@@ -809,73 +759,4 @@ nav#pagination ul {
 
 
 
-		/**
-		 * @navigation main-navigation
-		 */
-
-		#main-navigation {
-			
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				position: relative;
-				
-				/* level 1 */
-
-
-				li { 
-					float: left;
-					zoom: 1;
-					
-					a {
-						display: block;
-					}
-					
-					&.hover, 
-					&:hover { 
-						position: relative;
-					}
-					
-					&.hover >, &:hover > {
-						
-						ul { 
-							visibility: visible; 
-						}
-						
-					}
-
-					/* level 2 */
-					
-					ul {
-						left: 0;
-						position: absolute;
-						top: 100%;
-						visibility: hidden; 
-						width: 220px;   
-						
-						li {
-							
-							float: none; 
-							
-							a { 
-								display: inline-block;	
-								width: 100%;
-							}
-							
-						}
-						
-					}
-					
-					/* level 3 */
-
-					ul ul {
-						left: 100%; 
-						top: 0;
-					}
-							
-				}
-				
-			}
-				
-		}
+		
