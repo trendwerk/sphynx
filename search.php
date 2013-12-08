@@ -29,15 +29,15 @@
 				
 					<article <?php post_class(); ?>>
 					
-						<h2 class="search-title">
+						<h2 class="article-title">
 							<a href="<?php the_permalink(); ?>">
 								<?php the_title(); ?>
 							</a>
 						</h2>
 						
-						<p>
-							<?php tp_the_excerpt( 50 ); ?>
-							<a  class="more" href="<?php echo the_permalink(); ?>">
+						<p class="article-content">
+							<?php tp_the_excerpt( 80 ); ?>
+							<a class="more" href="<?php the_permalink(); ?>">
 								<?php _e( 'Read more', 'tp' ); ?>
 							</a>
 						</p>

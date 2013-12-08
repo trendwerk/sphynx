@@ -20,19 +20,17 @@
 			
 					<article <?php post_class(); ?>>
 					
-						<h2 class="entry-title">
+						<h2 class="article-title">
 							<a href="<?php the_permalink(); ?>">
 								<?php the_title(); ?>
 							</a>
 						</h2>
 						
-						<div class="article-thumbnail">
-							<a href="<?php echo the_permalink(); ?>">
-								<?php the_post_thumbnail( 'thumbnail' ); ?>
-							</a>
-						</div>
+						<a class="article-thumbnail" href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail( 'thumbnail', array( 'itemprop' => 'thumbnailUrl' ) ); ?>
+						</a>
 						
-						<p>
+						<p class="article-content">
 							<?php tp_the_excerpt( 80 ); ?>
 							<a class="more" href="<?php echo the_permalink(); ?>">
 								<?php _e( 'Read more', 'tp' ); ?>

@@ -40,23 +40,21 @@
 			
 					<article <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
 					
-						<h2 class="entry-title" itemprop="headline">
+						<h2 class="article-title" itemprop="headline">
 							<a href="<?php the_permalink(); ?>">
 								<?php the_title(); ?>
 							</a>
 						</h2>
 						
-						<p class="meta">
+						<p class="article-meta">
 							<?php _e( 'Posted on', 'tp' ); ?> <span class="date updated" itemprop="dateCreated"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time></span> <?php _e( 'by', 'tp' ); ?> <span class="vcard author" itemprop="author"><span class="fn"><?php the_author_posts_link(); ?></span></span> <?php _e( 'in the category', 'tp' ); ?> <span itemprop="genre"><?php the_category( ', ' ); ?></span>
 						</p>
 						
-						<div class="article-thumbnail">
-							<a href="<?php the_permalink(); ?>">
-								<?php the_post_thumbnail( 'thumbnail', array( 'itemprop' => 'thumbnailUrl' ) ); ?>
-							</a>
-						</div>
+						<a class="article-thumbnail" href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail( 'thumbnail', array( 'itemprop' => 'thumbnailUrl' ) ); ?>
+						</a>
 						
-						<p itemprop="description">
+						<p class="article-content" itemprop="description">
 							<?php tp_the_excerpt( 80 ); ?>
 							<a class="more" href="<?php the_permalink(); ?>">
 								<?php _e( 'Read more', 'tp' ); ?>

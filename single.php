@@ -8,20 +8,20 @@
 		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				
-				<h1 id="page-title" itemprop="headline">
+				<h1 id="article-title" itemprop="headline">
 					<?php the_title(); ?>
 				</h1>
 				
-				<p class="meta">
+				<p class="article-metameta">
 					<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>" itemprop="dateCreated"><?php echo get_the_date(); ?></time>
 					<span itemprop="author"><?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?></span> <?php _e( 'in the category', 'tp' ) ?> <span itemprop="genre"><?php the_category( ', ' ) ?></span>
 				</p>
 				
-				<div itemprop="text">
+				<div class="article-content" itemprop="text">
 					<?php the_content(); ?>
 				</div>
 				
-				<p class="meta">
+				<p class="article-meta">
 					<?php the_tags( 'Tags: ', ', ' ); ?>
 				</p>
 				

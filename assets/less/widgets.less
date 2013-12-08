@@ -10,76 +10,367 @@
  * 
  */
 
-// @todo add @subpackage to widgets from plugins or TrendPress
-
 /**
- * @section 	Widgets
- * @subsection 	Calendar 
+ * @section    Widget
+ * @subsection Default wigdet styling
  */
 
-table#wp-calendar, 
-.widget_archive li { text-transform: capitalize; }
+.widget {
+	.border-box;
+	.border-radius(3px);
+	background: @light-background;
+	clear: both;
+	float: left;
+	font-size: 13px;
+	margin: 0 0 15px 0;
+	padding: 20px;
+	width: 100%;
 
-	table#wp-calendar {
+	.widgettitle { 	
+		margin: 0 0 20px 0;
+		
+		a { 
+			color: @heading-color;
+			text-decoration: none;
+			
+			&:hover { 
+				color: @link-color;
+				text-decoration: underline; 
+			}
+			
+		 }
+	
+	}
+
+	p { margin: 0 0 15px 0; }
+	
+	ul {
+		border-bottom: 1px solid @border-color;
+		margin: 0;
+		
+		li { 
+			border-top: 1px solid @border-color;
+			display: block;
+			line-height: 24px;
+			padding: 5px;
+			
+			a { 
+				color: @text-color;
+				
+				&:hover {
+					color: @link-color;
+				}
+			 }
+			 
+			 ul {  
+			 	border: none;
+
+			 	li {
+			 		border: none;
+			 		margin-left: 15px;
+			 	}
+			 	
+			}
+			
+		}
+		
+	}
+
+}
+
+/**
+ * @section    Widget
+ * @subsection Contact
+ *
+ * @package    WordPress
+ * @subpackage TrendPress
+ */
+
+.widget_tp_contact {
+
+	span.label { 
+		display: inline-block;
+		width: 80px;
+	}
+	
+}
+
+/**
+ * @section    Widget
+ * @subsection Social
+ *
+ * @package    WordPress
+ * @subpackage TrendPress
+ */
+
+.widget_tp_social {
+
+	ul {	
+		border: none;
+
+		/* large icons with text */
+
+		li {
+			border-top: none;
+			padding: 0;
+
+			a {
+				clear: both;
+				display: block;
+				float: left;
+				margin: 0 0 10px 0;
+
+				i { 
+					.border-radius(3px);
+					background: @text-color;
+					color: #fff;
+					display: block;
+					font-size: 20px;
+					float: left;
+					margin: 0 10px 0 0;
+					height: 20px;
+					width: 20px;
+					padding: 6px;
+					text-align: center;
+					text-decoration: none;
+				}
+
+				span.title { 
+					line-height: 32px;
+					text-decoration: none;
+				}
+
+				&:hover {
+
+					i { background: @link-color; }
+
+					span {
+						color: @text-color;
+						text-decoration: underline;
+					}
+
+				} 
+
+			}
+			
+			/* rollover colors */
+
+			&.twitter a:hover i { background: #00aced; }
+
+			&.facebook a:hover i { background: #3b5998; }
+
+			&.linkedin a:hover i { background: #007bb6; }
+
+			&.googleplus a:hover i { background: #dd4b39; }
+
+			&.youtube a:hover i { background: #bb0000; }
+
+			&.rss a:hover i { background: #ff6600; }
+
+		}
+		
+		/* small icons with text */
+
+		&.small-icons,
+		&.small-icons-text {
+
+			li a {
+				margin: 0 0 5px 0;
+
+				i { 
+					.border-radius(2px);
+					font-size: 10px;
+					height: 10px;
+					margin: 5px 10px 0 0;
+					width: 10px;
+					padding: 3px;
+				}
+
+				span.title { line-height: 24px; }
+
+			}
+
+		}
+
+		/* large icons without text */
+
+		&.large-icons {
+
+			li a {
+				clear: none;
+
+				span.title { display: none; }
+
+			}
+
+		}
+
+		/* small icons without text */
+
+		&.small-icons {
+
+			li a {
+				clear: none;
+
+				i { margin: 0 5px 0 0; }
+
+				span.title { display: none; }
+
+			}
+
+		}
+
+	}
+	
+}
+
+/**
+ * @section    Widget
+ * @subsection Telephone number and button
+ *
+ * @package    WordPress
+ * @subpackage TrendPress
+ */
+
+.widget_tp_telephone_button {
+	
+	p.telephone {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	
+}
+
+/**
+ * @section    Widget
+ * @subsection Tag cloud
+ *
+ * @package    WordPress
+ */
+
+.widget_tag_cloud {
+
+	.tagcloud {
+	
+		a {
+			.border-radius(3px);
+			background: #fff;
+			border: 1px solid @link-color;
+			color: @link-color;
+			display: inline-block;
+			font-size: 12px !important;
+			line-height: 25px;
+			margin: 0 3px 5px 0;
+			padding: 0 10px;
+			text-decoration: none;
+			
+			&:hover {
+				background: @link-color;
+				color: #fff;
+			}
+			
+		}
+	
+	}
+
+}
+
+/**
+ * @section    Widget
+ * @subsection Calendar
+ *
+ * @package    WordPress
+ */
+
+.widget_calendar {
+
+	table {
 		border-right: none;
 		border-bottom: none; 
 		border-left: none;
-	}
 	
-		table#wp-calendar tr th, table#wp-calendar tr td { 
+		tr th, 
+		tr td { 
 			text-align: center;
 			vertical-align: center;
 		}
 					
-			table#wp-calendar thead tr th:first-child, table#wp-calendar tbody tr td:first-child { border-left: 1px solid #000000; }
-			
-			table#wp-calendar tfoot, table#wp-calendar tfoot tr, table#wp-calendar tfoot tr td { border: none !important; }
-			
-			table#wp-calendar tfoot td#prev { text-align: left; }
-			table#wp-calendar tfoot td#next { text-align: right; }
+		thead tr th:first-child, 
+		tbody tr td:first-child { border-left: 1px solid #000000; }
 		
+		tfoot, 
+		tfoot tr, 
+		tfoot tr td { border: none !important; }
+		
+		tfoot td#prev { text-align: left; }
+
+		tfoot td#next { text-align: right; }
+
+	}
+
+}
+
 /**
- * @section    Forms
- * @subsection RSS 
+ * @section    Widget
+ * @subsection Search
+ *
+ * @package    WordPress
  */
 
-.widget_rss ul li { padding: 10px 5px 15px 5px !important; }
-
-	div.widget_rss ul li a.rsswidget { 
-		display: block; 
-		font-weight: bold;
-		font-size: 16px;
-		line-height: 25px;
-		margin: 0;
-	}
-		
-	div.widget_rss h3 img { display: none; }
-
-	div.widget_rss ul li span.rss-date { 
-		font-size: 12px; 
-		margin: 0 0 10px 0;
-	}
-		
-	div.widget_rss ul li span.rss-date, div.widget_rss ul li cite { display: block; }
-			
-/**
- * @section    Forms
- * @subsection Contact 
- */
-
-.contact-widget span { 
-	display: inline-block;
-	font-weight: bold;
-	min-width: 75px;
-	width: 35%; }
+.widget_search {
 	
-	.contact-widget ul {
-		clear: both;
-		display: block;
-		float: left;
-		height: auto;
-		width: 100%; }
+	input[type="text"] {
+		margin-bottom: 5px;
+		min-width: 0;
+		width: 188px;
+	}
+
+	input[type="submit"] {
+		margin-bottom: 5px;
+		margin-right: 0;
+		width: 40px;
+	}
+	
+}
 		
-		.contact-widget ul.other { padding-bottom: 0 !important; }
-		
-		.contact-widget li { clear: both; }
+/**
+ * @section    Widget
+ * @subsection RSS
+ *
+ * @package    WordPress
+ */
+
+.widget_rss {
+
+	h3 img { display: none; }
+
+	ul {
+
+		li { padding: 15px 0; 
+
+			a.rsswidget { 
+				color: @heading-color;
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 25px;
+				margin: 0;
+				text-decoration: none;
+
+				&:hover {
+					color: @link-color;
+					text-decoration: underline;
+				}
+
+			}
+
+			span.rss-date { 
+				color: @text-light; 
+				display: block;
+				margin: 0 0 10px 0;
+			}
+
+		}
+
+	}
+
+}

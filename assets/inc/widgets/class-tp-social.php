@@ -10,6 +10,7 @@ class TP_Social extends WP_Widget {
 
 		$this->types = array(
 			'large-icons' => __( 'Large icons', 'tp' ),
+			'large-icons-text' => __( 'Large icons with text', 'tp' ),
 			'small-icons' => __( 'Small icons', 'tp' ),
 			'small-icons-text' => __( 'Small icons with text', 'tp' ),
 		);
@@ -69,7 +70,7 @@ class TP_Social extends WP_Widget {
 				<?php if( $twitter = get_option( 'tp-twitter' ) ) { ?>
 					<li class="twitter">
 						<a rel="external" href="<?php echo $twitter; ?>" title="<?php _e( 'Follow us on Twitter', 'tp' ); ?>">
-							<i class="icon-twitter-sign"></i>
+							<i class="icon-twitter"></i>
 							<span class="title"><?php _e( 'Follow us on Twitter', 'tp' ); ?></span>
 						</a>
 					</li>
@@ -78,7 +79,7 @@ class TP_Social extends WP_Widget {
 				<?php if( $facebook = get_option( 'tp-facebook' ) ) { ?>
 					<li class="facebook">
 						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e( 'Like our Facebook page', 'tp' ); ?>">
-							<i class="icon-facebook-sign"></i>
+							<i class="icon-facebook"></i>
 							<span class="title"><?php _e( 'Like our Facebook page', 'tp' ); ?></span>
 						</a>
 					</li>
@@ -87,7 +88,7 @@ class TP_Social extends WP_Widget {
 				<?php if( $linkedin = get_option( 'tp-linkedin' ) ) { ?>
 					<li class="linkedin">
 						<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e( 'Connect with us on LinkedIn', 'tp' ); ?>">
-							<i class="icon-linkedin-sign"></i>
+							<i class="icon-linkedin"></i>
 							<span class="title"><?php _e('Connect with us on LinkedIn','tp'); ?></span>
 						</a>
 					</li>
@@ -96,7 +97,7 @@ class TP_Social extends WP_Widget {
 				<?php if( $googleplus = get_option( 'tp-googleplus' ) ) { ?>
 					<li class="googleplus">
 						<a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e( 'Add us on Google+', 'tp' ); ?>">
-							<i class="icon-google-plus-sign"></i>
+							<i class="icon-google-plus"></i>
 							<span class="title"><?php _e( 'Add us on Google+', 'tp' ); ?></span>
 						</a>
 					</li>
@@ -105,7 +106,7 @@ class TP_Social extends WP_Widget {
 				<?php if( $youtube = get_option( 'tp-youtube' ) ) { ?>
 					<li class="youtube">
 						<a rel="external" href="<?php echo $youtube; ?>" title="<?php _e( 'View our YouTube channel', 'tp' ); ?>">
-							<i class="icon-youtube-sign"></i>
+							<i class="icon-youtube"></i>
 							<span class="title"><?php _e( 'View our YouTube channel', 'tp' ); ?></span>
 						</a>
 					</li>
@@ -123,7 +124,7 @@ class TP_Social extends WP_Widget {
 				<?php if( 'true' == get_option('tp-rss') ) { ?>
 					<li class="rss">
 						<a href="<?php bloginfo( 'rss2_url' ); ?>" title="<?php _e( 'Subscribe via RSS', 'tp' ); ?>">
-							<i class="icon-rss-sign"></i>
+							<i class="icon-rss"></i>
 							<span class="title"><?php _e( 'Subscribe to our RSS', 'tp' ); ?></span>
 						</a>
 					</li>
