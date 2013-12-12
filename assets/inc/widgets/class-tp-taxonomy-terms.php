@@ -10,49 +10,40 @@ class TP_Taxonomy_Terms extends WP_Widget {
 	}
 	
 	function form( $instance ) {
-		$title = esc_attr( $instance['title'] );
+		$taxonomies = get_taxonomies( array(
+			'public'   => true,
+			'_builtin' => false,
+		), 'objects' );
 		?>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
 				<strong><?php _e( 'Title' ); ?></strong><br />
-				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
 			</label>
 		</p>
 		
-		<?php
-		if( $taxonomies = get_taxonomies() ) { 
-			?>
+		<?php if( $taxonomies ) { ?>
 			<p>
 				<label>
 					<strong><?php _e( 'Taxonomy' ); ?></strong><br />
 					<select class="widefat" name="<?php echo $this->get_field_name( 'taxonomy' ); ?>">
-						<?php foreach( $taxonomies as $taxonomy ) { $taxonomy = get_taxonomy( $taxonomy ); ?>
+						<?php foreach( $taxonomies as $taxonomy ) { ?>
 							<option <?php selected( $taxonomy->name, $instance['taxonomy'] ); ?> value="<?php echo $taxonomy->name; ?>"><?php echo $taxonomy->label; ?> (<?php echo $taxonomy->name; ?>)</option>
 						<?php } ?>
 					</select>
 				</label>
 			</p>
-			<?php 
+		<?php
 		}
 	}
 	
-	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		
-		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['taxonomy'] = $new_instance['taxonomy'];
-
-		return $instance;
-	}
-	
 	function widget( $args, $instance ) {
-		$title = $instance['title'];
 		extract( $args );
 		
 		if( $terms = get_terms( $instance['taxonomy'] ) ) {
 			echo $before_widget;
-				echo $before_title . $title . $after_title;
+				echo $before_title . $instance['title'] . $after_title;
 				?>
 
 			    <div class="widget-inner">

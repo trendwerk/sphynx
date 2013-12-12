@@ -28,19 +28,19 @@ class TP_Submenu extends WP_Widget {
 						} elseif( $child->is_parent ) {
 							$class = 'class="parent"';
 						}
-					?>
+						?>
 
-					<li <?php echo $class; ?>>
+						<li <?php echo $class; ?>>
 
-						<a href="<?php echo $child->url; ?>">
-							<?php echo $child->title; ?>	
-						</a>
+							<a href="<?php echo $child->url; ?>">
+								<?php echo $child->title; ?>	
+							</a>
 
-						<?php $this->show_children( $child ); ?>
+							<?php $this->show_children( $child ); ?>
 
-					</li>
+						</li>
 
-					<?php
+						<?php
 					}
 				?>
 

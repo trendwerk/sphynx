@@ -16,14 +16,12 @@ class TP_Social extends WP_Widget {
 	}
 	
 	function form( $instance ) {
-		$title = esc_attr( $instance['title'] );
-		$type = $instance['type'];
 		?>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
 				<strong><?php _e( 'Title' ); ?></strong><br />
-				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
 			</label>
 		</p>
 
@@ -33,7 +31,7 @@ class TP_Social extends WP_Widget {
 				<select class="widefat" name="<?php echo $this->get_field_name( 'type' ); ?>">
 					<?php 
 						foreach( $this->types as $size_type => $label )
-							echo '<option value="' . $size_type . '" ' . selected( $size_type, $type ) . '>' . $label . '</option>';
+							echo '<option value="' . $size_type . '" ' . selected( $size_type, $instance['type'] ) . '>' . $label . '</option>';
 					?>
 				</select>
 			</label>
@@ -44,27 +42,17 @@ class TP_Social extends WP_Widget {
 		<?php
 	}
 	
-	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['type'] = $new_instance['type'];
-				
-		return $instance;
-	}
-	
 	function widget( $args, $instance ) {
-		$title = apply_filters( 'widget_title', $instance['title'] );
-		$type = $instance['type'];
 		extract( $args );
 
 		echo $before_widget;
 
-			if( $title ) 
-				echo $before_title . $title . $after_title; 
+			if( $instance['title'] ) 
+				echo $before_title . $instance['title'] . $after_title; 
 
 			?>
 
-			<ul class="social <?php echo $type; ?>">
+			<ul class="social <?php echo $instance['type']; ?>">
 
 				<?php if( $twitter = get_option( 'tp-twitter' ) ) { ?>
 					<li class="twitter">

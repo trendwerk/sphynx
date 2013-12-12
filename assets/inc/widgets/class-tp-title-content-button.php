@@ -51,10 +51,6 @@ class TP_Title_Content_Button extends WP_Widget {
 		$title = esc_attr( $instance['title'] );	
 		$content = esc_attr( $instance['content'] );
 		$show_button = $instance['show_button'];
-
-		if( ! $show_button ) 
-			$show_button = 0;
-
 		$button_text = esc_attr( $instance['button_text'] );
 		$button_link = esc_attr( $instance['button_link'] );
 		$link_type = esc_attr( $instance['link_type'] );
@@ -123,21 +119,21 @@ class TP_Title_Content_Button extends WP_Widget {
 		<?php
 	}
 	
-	function update($new_instance,$old_instance) {
+	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		
 		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['content'] = $new_instance['content'];
-		$instance['show_button'] = ( $new_instance['show_button'] == 'true' ) ? true : false;
+		$instance['show_button'] = isset( $new_instance['show_button'] );
 		$instance['button_text'] = $new_instance['button_text'];
 		$instance['button_link'] = tp_maybe_add_http( $new_instance['button_link'] );
 		$instance['link_type'] = $new_instance['link_type'];
-		$instance['external'] = ( $new_instance['external'] == 'true' ) ? true : false;
+		$instance['external'] = isset( $new_instance['external'] );
 		
 		return $instance;
 	}
 	
-	function widget($args,$instance) {		
+	function widget( $args, $instance ) {
 		$title = $instance['title'];
 		$image = $instance['image'];
 		$content = nl2br( $instance['content'] );

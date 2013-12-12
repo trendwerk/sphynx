@@ -11,44 +11,37 @@ class TP_FB_Like_Box extends WP_Widget {
 	}
 	
 	function form( $instance ) {
-		$title = esc_attr( $instance['title'] );
-		$url = $instance['url'];
 		?>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
 				<strong><?php _e( 'Title' ); ?></strong><br />
-				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
 			</label>
 		</p>
 		
 		<p>
 			<label>
 				<strong><?php _e( 'Facebook page URL', 'tp' ); ?></strong><br />
-				<input class="widefat" name="<?php echo $this->get_field_name( 'url' ); ?>" type="text" value="<?php echo $url; ?>" />
+				<input class="widefat" name="<?php echo $this->get_field_name( 'url' ); ?>" type="text" value="<?php echo $instance['url']; ?>" />
 			</label>
 		</p>
 
 		<?php
 	}
 	
-	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
+	function update( $new_instance ) {		
+		$new_instance['url'] = tp_maybe_add_http( $new_instance['url'] );
 		
-		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['url'] = tp_maybe_add_http( $new_instance['url'] );
-				
-		return $instance;
+		return $new_instance;
 	}
 	
 	function widget( $args, $instance ) {
-		$title = apply_filters( 'widget_title', $instance['title'] );
-		$url = $instance['url'];
 		extract( $args );
 		
 		echo $before_widget; 
-			if ($title) 
-				echo $before_title . $title . $after_title;
+			if( $instance['title'] )
+				echo $before_title . $instance['title'] . $after_title;
 
 			?>
 
@@ -63,7 +56,7 @@ class TP_FB_Like_Box extends WP_Widget {
 				}
 				(document, 'script', 'facebook-jssdk'));
 			</script>
-			<div class="fb-like-box" data-href="<?php echo $url; ?>" data-show-border="false" data-height="270px" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
+			<div class="fb-like-box" data-href="<?php echo $instance['url']; ?>" data-show-border="false" data-height="270px" data-width="260px" data-show-faces="true" data-stream="false" data-header="false"></div>
 
 			<?php 
 		echo $after_widget;
