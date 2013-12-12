@@ -26,7 +26,7 @@ class TP_Taxonomy_Terms extends WP_Widget {
 			<p>
 				<label>
 					<strong><?php _e( 'Taxonomy' ); ?></strong><br />
-					<select name="<?php echo $this->get_field_name( 'taxonomy' ); ?>">
+					<select class="widefat" name="<?php echo $this->get_field_name( 'taxonomy' ); ?>">
 						<?php foreach( $taxonomies as $taxonomy ) { $taxonomy = get_taxonomy( $taxonomy ); ?>
 							<option <?php selected( $taxonomy->name, $instance['taxonomy'] ); ?> value="<?php echo $taxonomy->name; ?>"><?php echo $taxonomy->label; ?> (<?php echo $taxonomy->name; ?>)</option>
 						<?php } ?>
