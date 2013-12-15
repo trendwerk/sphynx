@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-12-03 12:04+0100\n"
-"PO-Revision-Date: 2013-12-03 12:04+0100\n"
-"Last-Translator: Harold Angenent <harold@trendwerk.nl>\n"
+"PO-Revision-Date: 2013-12-15 23:06+0100\n"
+"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -17,13 +17,14 @@ msgstr ""
 "X-Poedit-SearchPath-1: ..\n"
 
 #: ../../index.php:20
-#, fuzzy
 msgid "Maintenance"
-msgstr "Sitenaam"
+msgstr "Onderhoud"
 
 #: ../../index.php:24
 msgid "Briefly unavailable for scheduled maintenance. Check back in a minute."
 msgstr ""
+"Tijdelijk niet beschikbaar vanwege gepland onderhoud. Probeer het over "
+"enkele minuten nog een keer."
 
 #: ../../assets/inc/class.TPCPTExtras.php:30 ../inc/class.TPCPTExtras.php:30
 msgid "Archive pages"
@@ -184,7 +185,7 @@ msgstr "TrendPress"
 
 #: ../../assets/inc/class.TPProfile.php:25 ../inc/class.TPProfile.php:25
 msgid "Publish profile"
-msgstr "Profiel publiseren"
+msgstr "Profiel publiceren"
 
 #: ../../assets/inc/class.TPProfile.php:33 ../inc/class.TPProfile.php:33
 msgid "Show profile on website"
