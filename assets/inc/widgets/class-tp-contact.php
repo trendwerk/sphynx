@@ -10,36 +10,27 @@ class TP_Contact extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$title = esc_attr( $instance['title'] );
-	?>
+		?>
 
  		<p>
  			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
  				<strong><?php _e( 'Title' ); ?></strong><br />
- 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+ 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
  			</label>
  		</p>
 
  		<p><?php printf( __( 'Change the contents of this widget on the <a href="%1$s">contact information</a> page.', 'tp' ), admin_url( 'options-general.php?page=tp-information' ) ); ?></p>
 
-	<?php
-	}
-	
-	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		$instance['title'] = strip_tags( $new_instance['title'] );
-				
-		return $instance;
+		<?php
 	}
 	
 	function widget( $args, $instance ) {
-		$title = apply_filters( 'widget_title', $instance['title'] );
 		extract( $args );
 
  		echo $before_widget;
 
- 			if( $title ) 
- 				echo $before_title . $title . $after_title; 
+ 			if( $instance['title'] ) 
+ 				echo $before_title . $instance['title'] . $after_title; 
 
  			?>
 
