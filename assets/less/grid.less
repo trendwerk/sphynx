@@ -19,10 +19,6 @@
  *
  * Defines the width of grid classes (e.g. .onecol, .twocol, .threecol, etc...)
  */ 
- 
-body { 
-	position: relative;
-}
 
 .onecol, 
 .twocol, 
@@ -57,6 +53,7 @@ img {
 	display: block;
 	float: left;
 	height: auto;
+	position: relative; // fix abolute elements conflicting with the WordPress admin bar
 	width: 100%;
 
 	.container-inner {
