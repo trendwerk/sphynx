@@ -181,10 +181,8 @@ body { background: @body-background; }
 							background: darken(@footer-background, 5%);
 							display: inline-block;	
 							font-size: 12px;
-							height: 25px;
 							line-height: 25px;
 							padding: 5px;
-							text-indent: 20px;
 							width: 100%;
 						}
 
@@ -284,16 +282,38 @@ body { background: @body-background; }
 	.sidebar {
 		float: left;
 		width: 100%;
-		background: red;
 	
 		.widget {
 			background: none;
 			clear: none;
 			float: left;
-			padding: 20px 0;
+			margin: 10px;
+			padding: 40px 0 0 0;
 			
 			h3 { 
 				color: #FFF; 
+			}
+
+			ul {
+				border: none;
+				
+				li { 
+					border: none;
+					line-height: 25px;
+					margin: 0 0 5px 0;
+					padding: 0;
+					
+					a { 
+						text-decoration: none;
+						
+						&:hover {
+							text-decoration: underline;
+						}
+
+					 }
+					
+				}
+
 			}
 
 		}
@@ -301,11 +321,10 @@ body { background: @body-background; }
 	}
 	
 	#credits {
+		font-size: 12px;
 		padding: 10px 0;
 		
-		p {	
-			margin: 0; 
-		}
+		p {	margin: 0; }
 		
 		#copyright { 
 			float: left;

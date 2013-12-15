@@ -31,11 +31,11 @@
 				</div>
 				
 				<div id="mobile">
-					<div id="mobile-navigation" data-toggle="#main-navigation">
-						<i class="icon-reorder"></i>
-					</div>
 					<div id="mobile-search" data-toggle="#search">
 						<i class="icon-search"></i>
+					</div>
+					<div id="mobile-navigation" data-toggle="#main-navigation">
+						<i class="icon-reorder"></i>
 					</div>
 				</div>
 
