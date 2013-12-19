@@ -3,148 +3,69 @@
  * Telephone number and button
  *
  * @package TrendPress
+ * @subpackage Widgets
  */
-class TP_Telephone_Button extends WP_Widget {
+
+include_once( 'class-tp-title-content-button.php' );
+
+class TP_Telephone_Button extends TP_Title_Content_Button {
 	function TP_Telephone_Button() {
 		$this->WP_Widget( 'TP_Telephone_Button', __( 'Telephone number and button', 'tp' ), array( 'description' => __( 'Telephone number and button', 'tp' ) ) );
+
+		$this->setup();
+
+		add_action( 'tp_widget_after_content_form', array( $this, 'add_telephone_field' ) );
+		add_action( 'tp_widget_after_content_widget', array( $this, 'show_telephone_field' ) );
 	}
 
-	function add_js() {
-		?>
-		<script type="text/javascript">
-			//Show / hide button fields
-			jQuery( document ).ready(function( $ ) {				
-				showbuttons_create_clicks( $ );
-			});
+	function add_telephone_field( $instance ) {
+		global $tp_add_telephone;
+
+		if( true === $tp_add_telephone ) {
+			?>
 			
-			//Show or hide extra settings
-			function showbuttons_create_clicks( $ ) {
-				if( ! $ ) $ = jQuery.noConflict();
-				
-				$('p.show_button input').each(function() {					
-					//Extra fields
-					show_or_hide_extras( this );
-					
-					$( this ).change( function() {
-						show_or_hide_extras( this );
-					} );
-					
-					function show_or_hide_extras( obj ) {
-						if( $( obj ).attr( 'checked' ) ) {
-							$( obj ).closest( 'div' ).find( '.buttonsettings' ).show();
-						} else {
-							$( obj ).closest( 'div' ).find( '.buttonsettings' ).hide();
-						}
-					}
-				});
-			}
-		</script>		
-		<?php
+			<p>
+				<label>
+					<strong><?php _e( 'Telephone number', 'tp' ); ?></strong><br />
+					<input class="widefat" name="<?php echo $this->get_field_name( 'telephone' ); ?>" type="text" value="<?php echo $instance['telephone']; ?>" />
+				</label>
+			</p>
+
+			<?php
+		}
 	}
-	
+
 	function form( $instance ) {
-		$title = esc_attr( $instance['title'] );
-		$content = esc_attr( $instance['content'] );
-		$show_button = esc_attr( $instance['show_button'] );
-		$button_text = esc_attr( $instance['button_text'] );
-		$button_link = esc_attr( $instance['button_link'] );
-		?>
+		global $tp_add_telephone;
+		$tp_add_telephone = true;
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<strong><?php _e( 'Title' ); ?></strong><br />
-				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
-			</label>
-		</p>
+		parent::form( $instance );
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'content' ); ?>">
-				<strong><?php _e( 'Content' ); ?></strong><br />
-				<textarea  class="widefat" id="<?php echo $this->get_field_id( 'content' ); ?>" name="<?php echo $this->get_field_name( 'content' ); ?>"><?php echo $content; ?></textarea>
-			</label>
-		</p>
-
-		<p><?php printf( __( 'Change the telephone number on the <a href="%1$s">contact information</a> page.', 'tp' ), admin_url( 'options-general.php?page=tp-information' ) ); ?></p>
-
-		<p class="show_button">
-			<label>
-				<input onclick="showbuttons_create_clicks();" type="checkbox" name="<?php echo $this->get_field_name( 'show_button' ); ?>" value="true" <?php checked( $show_button, true ); ?>>
-				<?php _e( 'Show button', 'tp' ); ?>
-			</label>
-		</p>
-
-		<div class="buttonsettings">
-
-			<p>
-				<label>
-					<strong><?php _e( 'Button text', 'tp' ); ?></strong><br />
-					<input class="widefat" name="<?php echo $this->get_field_name( 'button_text' ); ?>" type="text" value="<?php echo $button_text; ?>" />
-				</label>
-			</p>
-
-			<p>
-				<label>
-					<strong><?php _e( 'Button link', 'tp' ); ?></strong><br />
-					<input class="widefat" name="<?php echo $this->get_field_name( 'button_link' ); ?>" type="text" value="<?php echo $button_link; ?>" />
-				</label>
-			</p>
-
-		</div>
-
-		<?php
+		$tp_add_telephone = false;
 	}
-	
-	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		
-		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['content'] = strip_tags( $new_instance['content'] );
-		$instance['show_button'] = strip_tags( $new_instance['show_button'] );
-		$instance['button_text'] = strip_tags( $new_instance['button_text'] );
-		$instance['button_link'] = tp_maybe_add_http( $new_instance['button_link'] );
-				
-		return $instance;
+
+	function show_telephone_field( $instance ) {
+		global $tp_add_telephone;
+
+		if( true === $tp_add_telephone ) {
+			?>
+			
+			<p class="telephone">
+				<i class="icon-phone"></i> 
+				<?php echo $instance['telephone']; ?>
+			</p>
+
+			<?php
+		}
 	}
 	
 	function widget( $args, $instance ) {
-		$title = $instance['title'];
-		$content = nl2br( $instance['content'] );
-		$show_button = $instance['show_button'];
-		$button_text = $instance['button_text'];
-		$button_link = $instance['button_link'];
+		global $tp_add_telephone;
+		$tp_add_telephone = true;
 
-		extract( $args );
-		
-		echo $before_widget;
-			echo $before_title . $title . $after_title; 
+		parent::widget( $args, $instance );
 
-			if( $instance['content'] )
-				echo '<p>' . $instance['content'] . '</p>';
-
-			if( $telephone = get_option('tp-telephone') ) {
-				?>
-
-				<p class="telephone">
-					<i class="icon-phone"></i> 
-					<?php echo $telephone; ?>
-				</p>
-
-				<?php 
-			}
-
-			if ($instance['show_button']) {
-				?>
-
-				<p>
-					<a class="cta primary" href="<?php echo $instance['button_link']; ?>">
-						<?php echo $instance['button_text']; ?>
-					</a>
-				</p>
-
-				<?php
-			}
-
-		echo $after_widget;
+		$tp_add_telephone = false;
 	}
 }
 add_action( 'widgets_init', create_function( '', 'return register_widget( "TP_Telephone_Button" );' ) );

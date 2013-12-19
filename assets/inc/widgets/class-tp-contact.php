@@ -3,6 +3,7 @@
  * Contact information
  *
  * @package TrendPress
+ * @subpackage Widgets
  */
 class TP_Contact extends WP_Widget {
 	function TP_Contact() {

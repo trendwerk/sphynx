@@ -3,6 +3,7 @@
  * Post type posts
  *
  * @package TrendPress
+ * @subpackage Widgets
  */
 class TP_Post_Type_Posts extends WP_Widget {
 	function TP_Post_Type_Posts() {

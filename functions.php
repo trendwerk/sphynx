@@ -35,6 +35,11 @@ add_action( 'wp_enqueue_scripts', 'tp_enqueue_scripts' );
  * Admin style and script
  */
 function tp_admin_enqueue_scripts() {
+	global $current_screen;
+	
+	if( 'widgets' == $current_screen->base )
+		wp_enqueue_media();
+
 	wp_enqueue_script( 'admin', get_stylesheet_directory_uri() . '/assets/js/admin.js', array( 'jquery' ) );
 	wp_enqueue_style( 'admin', get_stylesheet_directory_uri() . '/assets/less/admin.less' );
 }

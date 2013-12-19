@@ -3,6 +3,7 @@
  * Taxonomy terms
  *
  * @package TrendPress
+ * @subpackage Widgets
  */
 class TP_Taxonomy_Terms extends WP_Widget {
 	function TP_Taxonomy_Terms() {

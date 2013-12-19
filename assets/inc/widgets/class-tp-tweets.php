@@ -3,6 +3,7 @@
  * Latest tweets
  *
  * @package TrendPress
+ * @subpackage Widgets
  */
 class TP_Tweets extends WP_Widget {
 	function TP_Tweets() {

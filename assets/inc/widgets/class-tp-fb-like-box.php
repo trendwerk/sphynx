@@ -3,6 +3,7 @@
  * Facebook like box
  *
  * @package TrendPress
+ * @subpackage Widgets
  */
 
 class TP_FB_Like_Box extends WP_Widget {

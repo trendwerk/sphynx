@@ -3,6 +3,7 @@
  * Social media links
  *
  * @package TrendPress
+ * @subpackage Widgets
  */
 class TP_Social extends WP_Widget {
 	function TP_Social() {

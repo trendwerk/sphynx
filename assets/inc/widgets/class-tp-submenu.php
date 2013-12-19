@@ -3,6 +3,7 @@
  * Submenu widget based on WP Nav menu's
  *
  * @package TrendPress
+ * @subpackage Widgets
  */
 class TP_Submenu extends WP_Widget {
 	function TP_Submenu() {
