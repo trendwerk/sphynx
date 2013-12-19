@@ -38,12 +38,33 @@ class TP_Less {
 						$less->compileFile( $file, $new_file );
 						update_option( 'tp-less-rebuild', false );
 					} else {
-						$less->checkedCompile( $file, $new_file );
+						$dependencies = $this->get_dependencies();
+						$less->checkedCompile( array_merge( array( $file ), $dependencies ), $new_file, $file );
 					}
 					
 					$wp_style->src = str_replace( ABSPATH, site_url() . '/', $new_file );
 				}
 			}
+		}
+	}
+
+	/**
+	 * Get LESS dependencies. All less files from trendpress-child/assets/less/
+	 */
+	function get_dependencies() {
+		$folder = STYLESHEETPATH . '/assets/less/';
+
+		if( is_dir( $folder ) ) {
+			$files = array_diff( scandir( $folder ), array( '.', '..' ) );
+
+			foreach( $files as $i => &$file ) {
+				if( 'less' != end( explode( '.', $file ) ) )
+					unset( $files[ $i ] );
+				else 
+					$file = $folder . $file;
+			}
+
+			return $files;
 		}
 	}
 	
