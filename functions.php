@@ -15,10 +15,8 @@ function tp_enqueue_scripts() {
  	wp_enqueue_script( 'cycle' );
 	wp_enqueue_script( 'fancybox' );
 	wp_enqueue_script( 'trendpress' );
-	wp_enqueue_script( 'comment-reply' );
-
+	wp_enqueue_script( 'comment-reply' )
 	wp_enqueue_style( 'fancybox' );
-	wp_enqueue_style( 'print' );
 		
 	//Register & enqueue child scripts and styles
 	wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/assets/js/functions.js', array( 'jquery' ) );
