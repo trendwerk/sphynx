@@ -22,7 +22,7 @@ class TP_Libraries {
 		wp_register_script( 'trendpress', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery' ) );
 
 		//Styles
-		wp_register_style( 'printcss', get_template_directory_uri() . '/assets/css/print.css', null, null, array( 'print' ) );
-		wp_register_style( 'fancyboxcss', get_template_directory_uri() . '/assets/js/fancybox/jquery.fancybox.css' );
+		wp_register_style( 'print', get_template_directory_uri() . '/assets/css/print.css', null, null, array( 'print' ) );
+		wp_register_style( 'fancybox', get_template_directory_uri() . '/assets/js/fancybox/jquery.fancybox.css' );
 	}
 } new TP_Libraries;
