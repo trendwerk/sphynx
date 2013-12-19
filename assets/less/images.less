@@ -1,93 +1,93 @@
 /**
- * @section Images
- * 
- * Defines the default styling of images
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
+* @section Images
+* 
+* Defines the default styling of images
+*
+* @package     WordPress
+* @subpackage  TrendPress
+* @author      Trendwerk
+* @license     GPL v2
+*
+*/
+
+/**
+ * @section     Images
+ * @subsection  Alignment
  */
 
- img {
- 	.border-radius(3px);
- }
+.alignleft {
+    float: left;
+    margin: 5px 20px 10px 0; 
+}
 
- /**
-  * @section    Images
-  * @subsection Alignment
-  */
+.alignright {
+	float: right;
+	margin: 5px 0 10px 20px; 
+}
 
- .alignleft {
- 	float: left;
- 	margin: 5px 20px 10px 0; 
- }
+/**
+ * @section    Images
+ * @subsection Captions
+ */
 
- .alignright {
- 	float: right;
- 	margin: 5px 0 10px 20px; 
- }
+.wp-caption {
+	.border-radius(3px);
+    background: @light-background;
+	margin-bottom: 20px;
+	max-width: 100%;
+	text-align: center;
 
- /**
-  * @section    Images
-  * @subsection Captions
-  */
-
- .wp-caption {
- 	background: @light-background;
- 	margin-bottom: 20px;
- 	max-width: 100%;
- 	.border-radius(3px);
- 	text-align: center;
-
- 	img { margin: 5px 5px 0 5px; }
- 		
- 	.wp-caption-text { 
- 		display: inline-block;
- 		font-size: 12px;
- 		line-height: 20px;
- 		margin: 0 10px 10px 10px;	
- 	}
-
- }
-
- /**
-  * @section    Images
-  * @subsection gallery
-  */
-
- .gallery { 
- 	margin-bottom: 25px;
- 	overflow: auto;
- 	padding: 9px;
- 	width: auto;
-	
-	dl {
- 		display: block;
- 		float: left;
- 		height: auto;
- 		margin: 10px;
- 		width: auto;
- 	} 	
- 		
-	dt img {
-		float: left;
-		height: auto; 
-		width: auto;
+	img { 
+        margin: 5px 5px 0 5px; 
+    }
+		
+	.wp-caption-text { 
+		display: inline-block;
+		font-size: 12px;
+		line-height: 20px;
+		margin: 0 10px 10px 10px;	
 	}
-	
-	.gallery dd, 
-	.gallery br { display: none; }
 
 }
 
- /**
-  * @section    Images
-  * @subsection WordPress smileys
-  */
+/**
+ * @section     Images
+ * @subsection  Gallery
+ */
 
- .wp-smiley {
- 	margin: 0 !important;
- 	max-height: 1em;
- }
+.gallery { 
+	margin-bottom: 25px;
+	overflow: auto;
+	padding: 9px;
+	width: auto;
+
+    dl {
+        display: block;
+        float: left;
+        height: auto;
+        margin: 10px;
+        width: auto;
+    } 	
+    		
+    dt img {
+    	float: left;
+    	height: auto; 
+    	width: auto;
+    }
+
+    .gallery dd, 
+    .gallery br { 
+        display: none;
+    }
+
+}
+
+/**
+ * @section     Images
+ * @subsection  WordPress smileys
+ */
+
+.wp-smiley {
+	margin: 0 !important;
+	max-height: 1em;
+}
