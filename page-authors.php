@@ -23,7 +23,7 @@
 				<?php the_content(); ?>
 				
 				<?php 
-					$users = get_users( array( 'orderby' => 'display_name' );
+					$users = get_users( array( 'orderby' => 'display_name' ) );
 
 					if( $users ) {
 				?>
