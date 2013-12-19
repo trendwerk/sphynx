@@ -64,73 +64,29 @@
   */
 
 #comments { 
-	border-top: 1px solid @border-color;
 	clear: both;
 	float: left;
-	margin: 46px 0 24px 0;
-	padding: 24px 0 0 0;
+	margin: 25px 0 25px; 0;
 	width: 100%;
-	
-	.comments-title {
-		margin-bottom: 12px;
-	}
 
-	.commentlist {
-		clear: both;
-		float: left;
-		list-style-type: none;
+	ol.commentlist {
 		margin: 0;
-		padding: 0;
-		width: 100%;
-		
-		li:first-child {
-			padding-top: 24px;
-		}
 		 
-		 ul.children { 
-		 	margin-top: 24px; 
-		 	width: 100%;
-		 	
-		 	li:first-child {
-		 		padding-top: 0 !important;
-		 	}
-		 	
-		 	li:last-child {
-		 		margin-bottom: 0;
-		 	}
-		 	
-		 }
-		 
-		 li {
-		 	.border-box;
-		 	clear: both;
-			display: block;
-			float: left;
-			margin: 0;
-			min-height: auto;
-			padding: 0;
-			width: 100%;
-						
-			ul {
-				margin: 0;
-				
-				li {
-					margin: 0;
-					padding: 0;
-				}
-				
-			}			
+		li.comment {
+			border-top: 1px solid @border-color;
+			list-style: none;
+			padding: 25px 0 0 0;		
 						
 			.comment-body {
 				position: relative;
 			
 				.comment-author {
-					float: left;
-					margin-bottom: 12px;
+					height: 80px;
+
 					
 					.avatar { 
-						.border-radius(999999px);
-						.box-shadow(0 0 1px rgba(0,0,0,0.5));
+						.border-radius(1000px);
+						border: 1px solid @border-color;
 						float: left;
 						margin-right: 20px;
 					}
@@ -138,37 +94,21 @@
 					cite { 
 						display: block;
 						float: left;
-						font-family: @heading-font;
-						font-size: 22px;
+						font: 20px @heading-font;
 						font-style: normal;
+						margin: 10px 0;
 					}
 					
-					.says {
-						display: none;
-					}
+					.says { display: none; }
 				
 				}
-				
-				p {
-					clear: both;
-					display: inline-block;
-					height: auto;
-					margin-bottom: 15px;
-					width: 100%;
-				}
-				
-				.reply {	
-					font-size: 12px;
-					position: absolute;
-					right: 0;
-					top: 0;
-				}
-				
+
 				.comment-meta {
+					clear: both;
 					font-size: 12px;
 					left: 80px;
 					position: absolute;
-					top: 30px;
+					top: 35px;
 					
 					a {
 						color: @text-color;
@@ -182,21 +122,26 @@
 					
 				}
 				
+				.reply {	
+					font-size: 12px;
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+				
 			}
-			
+
 		}
-		
+
 	}
 	
 	#respond {
-		border-bottom: 1px solid @border-color;
 		border-top: 1px solid @border-color;
 		clear: both;
 		float: left;
-		padding: 25px 0;
+		padding: 0;
 		position: relative;
-		margin-bottom: 25px;
-		margin-top: 24px;
+		padding: 25px 0 0 0;
 		width: 100%;
 		
 		p {
@@ -233,6 +178,8 @@
 			font-size: 14px;
 			padding: 5px;
 			width: 75%; 
+			height: 200px;
+			margin: 0;
 		}
 		
 		.form-allowed-tags {
