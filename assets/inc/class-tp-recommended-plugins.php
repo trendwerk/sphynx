@@ -106,11 +106,6 @@ class TP_Recommended_Plugins {
 				'description' => __( 'Adds HTML5 placeholder support to Gravity Forms fields with a Javascript fallback. Javascript & jQuery are required.', 'tp' ),
 				'path' => 'gravity-forms-placeholders/gravityforms-placeholders.php',
 			),
-			'redirection' => array(
-				'name' => 'Redirection',
-				'description' => __( 'Manage 301 redirections and keep track of 404 errors.', 'tp' ),
-				'path' => 'redirection/redirection.php',
-			),
 			'easy-wp-smtp' => array(
 				'name' => 'Easy WP SMTP',
 				'description' => __( 'Send e-mails form the website using your preferred SMTP server to prevent e-mails from getting blocked by spam filter.', 'tp' ),
