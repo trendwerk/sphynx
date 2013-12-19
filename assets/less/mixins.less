@@ -28,7 +28,7 @@
 
 /**
  * @section    Mixins
- * @subsection Border radiuses (single)
+ * @subsection Border radius (single)
  */
 
 .border-radius (@radius) {
@@ -214,6 +214,9 @@
  */
 
 .opacity (@opacity: 0.5) {
+	@ieOpacity: @opacity * 100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";
+	filter: ~"alpha(opacity=@{ieOpacity})";	
 	-webkit-opacity: @opacity;
 	-moz-opacity: @opacity;
 	opacity: @opacity;
