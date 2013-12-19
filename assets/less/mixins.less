@@ -146,21 +146,6 @@
 
 /**
  * @section    Mixins
- * @subsection Grayscale (for images)
- */
-
-.grayscale {
-	filter: grayscale(100%);
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%); 
-	-o-filter: grayscale(100%); 
-	-webkit-filter: grayscale(1);
-	filter: gray;
-}
-
-/**
- * @section    Mixins
  * @subsection HEX to RGBA
  */
 
@@ -278,6 +263,7 @@
 		background: @background-color;
 		color: @text-color;
 	}
+	
 }
 
 /**
@@ -289,10 +275,6 @@
 	background-image: url('assets/images/sprite-x1.png');
 	background-repeat: no-repeat;
 	background-position: @top @left;
-	
-	/* 	note: important! make sure the width and height are the same. 
-		otherwise the retina version will look extremely crappy.
-	*/	
 	
 	@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
 	only screen and (min--moz-device-pixel-ratio: 2),
