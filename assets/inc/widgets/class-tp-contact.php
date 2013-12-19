@@ -34,7 +34,7 @@ class TP_Contact extends WP_Widget {
 
  			?>
 
-			<span itemscope itemtype="http://schema.org/Organization">
+			<div itemscope itemtype="http://schema.org/Organization">
 
 				<p>
 					<?php 
@@ -88,7 +88,7 @@ class TP_Contact extends WP_Widget {
 					?>
 				</p>
 
-			</span>
+			</div>
 
 			<?php 
 
