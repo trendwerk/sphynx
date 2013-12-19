@@ -17,8 +17,8 @@ function tp_enqueue_scripts() {
 	wp_enqueue_script( 'trendpress' );
 	wp_enqueue_script( 'comment-reply' );
 
-	wp_enqueue_style( 'fancyboxcss' );
-	wp_enqueue_style( 'printcss' );
+	wp_enqueue_style( 'fancybox' );
+	wp_enqueue_style( 'print' );
 		
 	//Register & enqueue child scripts and styles
 	wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/assets/js/functions.js', array( 'jquery' ) );
@@ -26,12 +26,19 @@ function tp_enqueue_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.less' );
 	
 	//Get jQuery from Google CDN
-	if( ! is_admin() ) {
-	    wp_deregister_script( 'jquery' );
-	    wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' );
-	}
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' );
 }
 add_action( 'wp_enqueue_scripts', 'tp_enqueue_scripts' );
+
+/**
+ * Admin style and script
+ */
+function tp_admin_enqueue_scripts() {
+	wp_enqueue_script( 'admin', get_stylesheet_directory_uri() . '/assets/js/admin.js', array( 'jquery' ) );
+	wp_enqueue_style( 'admin', get_stylesheet_directory_uri() . '/assets/less/admin.less' );
+}
+add_action( 'admin_enqueue_scripts', 'tp_admin_enqueue_scripts' );
 
 /**
  * Add the language domain
