@@ -14,7 +14,7 @@
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo( 'rss2_url' ); ?>" title="<?php bloginfo( 'name' ); ?> RSS feed" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="shortcut icon" type="image/png" href="<?php bloginfo( 'template_url' ); ?>/assets/img/favicon/favicon.ico" />
+		<link rel="shortcut icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/favicon.ico" />
 		<?php wp_head();?>
 	</head>
 	
