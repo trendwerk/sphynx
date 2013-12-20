@@ -33,32 +33,36 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 			</p>
 			
 			<ul class="author-social">
-			
-				<?php if( $twitter = get_the_author_meta( 'twitter', $author ) ) { ?>
-				
-					<li class="twitter">
-						<a href="https://twitter.com/<?php echo $twitter; ?>" itemprop="url" rel="me external">
-							<img class="svg" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/social/twitter.svg" />@<?php echo $twitter; ?>
-						</a>
-					</li>
-					
-				<?php } ?>
-				
+
+				<li>
+					<span class="label"><?php _e('Follow me on:', 'tp'); ?></span>
+				</li>
+
 				<?php if( $facebook = get_the_author_meta( 'facebook', $author ) ) { ?>
 				
-					<li class="facebook">
-						<a href="<?php echo $facebook; ?>" itemprop="url" rel="me external">
-							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/facebook.svg" /><?php _e( 'Facebook', 'tp' ); ?>
+					<li>
+						<a class="facebook" href="<?php echo $facebook; ?>" itemprop="url" rel="me external">
+							<i class="icon-facebook"></i>
 						</a>
 					</li>
 					
 				<?php } ?>
+
+				<?php if( $twitter = get_the_author_meta( 'twitter', $author ) ) { ?>
 				
+					<li >
+						<a class="twitter" href="https://twitter.com/<?php echo $twitter; ?>" itemprop="url" rel="me external">
+							<i class="icon-twitter"></i>
+						</a>
+					</li>
+					
+				<?php } ?>
+								
 				<?php if( $linkedin = get_the_author_meta( 'linkedin', $author ) ) { ?>
 				
-					<li class="linkedin">
-						<a href="<?php echo $linkedin; ?>" itemprop="url" rel="me external">
-							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/linkedin.svg" /><?php _e( 'LinkedIn', 'tp' ); ?>
+					<li>
+						<a class="linkedin" href="<?php echo $linkedin; ?>" itemprop="url" rel="me external">
+							<i class="icon-linkedin"></i>
 						</a>
 					</li>
 					
@@ -66,9 +70,9 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 				
 				<?php if( $googleplus = get_the_author_meta( 'googleplus', $author ) ) { ?>
 				
-					<li class="googleplus">
-						<a href="<?php echo $googleplus; ?>" itemprop="url" rel="me external">
-							<img class="svg" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/social/google.svg" /><?php _e( 'Google+', 'tp' ); ?>
+					<li>
+						<a class="google-plus" href="<?php echo $googleplus; ?>" itemprop="url" rel="me external">
+							<i class="icon-google-plus"></i>
 						</a>
 					</li>
 					
