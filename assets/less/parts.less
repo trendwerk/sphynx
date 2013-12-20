@@ -82,7 +82,6 @@
 			
 				.comment-author {
 					height: 80px;
-
 					
 					.avatar { 
 						.border-radius(1000px);
@@ -99,7 +98,9 @@
 						margin: 10px 0;
 					}
 					
-					.says { display: none; }
+					.says {
+						display: none;
+					}
 				
 				}
 
@@ -139,9 +140,8 @@
 		border-top: 1px solid @border-color;
 		clear: both;
 		float: left;
-		padding: 0;
-		position: relative;
 		padding: 25px 0 0 0;
+		position: relative;
 		width: 100%;
 		
 		p {
@@ -163,7 +163,8 @@
 			top: 20px;
 		}
 		
-		input[type="text"], input[type="email"] {
+		input[type="email"],
+		input[type="text"] {
 			.border-box;
 			display: block;
 			font-size: 14px;
@@ -176,10 +177,10 @@
 			.border-box;
 			display: block;
 			font-size: 14px;
-			padding: 5px;
-			width: 75%; 
 			height: 200px;
 			margin: 0;
+			padding: 5px;
+			width: 75%; 
 		}
 		
 		.form-allowed-tags {

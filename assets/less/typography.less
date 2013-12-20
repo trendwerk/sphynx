@@ -235,7 +235,9 @@ table {
 
 	}
 
-	thead tr { background: @light-background; }
+	thead tr {
+		background: @light-background;
+	}
 
 }
 
@@ -246,15 +248,17 @@ table {
 
 blockquote, 
 q {
+	.border-radius(3px);
 	background: @light-background;
 	color: @text-light;
 	display: inline-block;
 	font-style: italic;
 	margin: 0 0 20px 0; 
 	padding: 20px 20px 10px 20px;
-	.border-radius(3px);
 
-	p { margin: 0 0 10px 0; }
+	p {
+		margin: 0 0 10px 0;
+	}
 
 }
 
@@ -346,10 +350,14 @@ ins {
  */
 
 strong, 
-b { font-weight: bold; }
+b {
+	font-weight: bold;
+}
 
 em, 
-i { font-style: italic; }
+i {
+	font-style: italic;
+}
 
 hr {
 	border: 0;   

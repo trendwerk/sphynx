@@ -17,7 +17,9 @@
 
  @media (min-width: 1200px) {
 
-	.widget_search input[type="text"] { width: 248px; }
+	.widget_search input[type="text"] {
+		width: 248px;
+	}
 
  }
 
@@ -30,14 +32,18 @@
  	
  	#header {
 
-		#logo { width: 48%; }
+		#logo {
+			width: 48%;
+		}
 
  		#topnav {
  			margin: 0 1%;
  			width: 48%;
  		}
 
-		#search { width: 48%; }
+		#search {
+			width: 48%;
+		}
 
  	}
  	
@@ -69,7 +75,9 @@
 
  		}
 
- 		#credits { }
+ 		#credits {
+
+ 		}
  		
  	}
 
@@ -102,6 +110,7 @@
 
 			#mobile-navigation, 
 			#mobile-search {
+				.border-radius(3px);
 				background-color: @primary-color;
 				color: #fff;
 				cursor: pointer;
@@ -113,7 +122,6 @@
 				padding: 5px;
 				text-align: center;
 				width: 20px;
-				.border-radius(3px);
 
 				&.active,
 				&:hover {
@@ -126,7 +134,9 @@
 
 		/* top navigation */
 
- 		#topnav { display: none; }
+ 		#topnav {
+ 			display: none;
+ 		}
 
 		/* search form */
 				
@@ -173,10 +183,14 @@
 						width: 100%;
 					}
 					
-					&:hover > a { background: inherit; }
+					&:hover > a {
+						background: inherit;
+					}
 					
 					&.has-children > a:after,
-					&.page_item_has_children > a:after { content: ""; }
+					&.page_item_has_children > a:after {
+						content: "";
+					}
 
 					/* level 2 */
 
@@ -195,18 +209,26 @@
 								padding: 5px 15px 5px 30px;
 								width: 100%;
 								
-								&:before { content: "- "; }
+								&:before {
+									content: "- ";
+								}
 
 							}
 
-							&:hover > a { background: inherit; }
+							&:hover > a {
+								background: inherit;
+							}
 
 							&.has-children > a:after,
-							&.page_item_has_children > a:after { content: ""; }
+							&.page_item_has_children > a:after {
+								content: "";
+							}
 
 							/* level 3 */
 							
-							ul { left: 0; }
+							ul {
+								left: 0;
+							}
 							
 						}
 
@@ -221,14 +243,18 @@
 					&.current_page_parent,
 					&.current_page_ancestor {
 						
-						a { background: none; }
+						a {
+							background: none;
+						}
 					
 					}
 
 					&.current-menu-item,
 					&.current_page_item {
 
-						> a { font-weight: bold; }
+						> a {
+							font-weight: bold;
+						}
 					
 					}
 
@@ -238,7 +264,9 @@
 
 		}
 
-		#breadcrumbs { display: none; }
+		#breadcrumbs {
+			display: none;
+		}
 
 	}
 	
@@ -257,7 +285,9 @@
 	
  	#footer {
 
- 		.sidebar { display: none; }
+ 		.sidebar {
+ 			display: none;
+ 		}
 
 		#credits {
 			
@@ -266,9 +296,13 @@
 				text-align: center;
 				width: 100%;
 			
-				ul { margin: 0;	}
+				ul {
+					margin: 0;
+				}
 			
-				ul li a { float: none; }
+				ul li a {
+					float: none;
+				}
 			
 			}
 		

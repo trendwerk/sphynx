@@ -42,7 +42,9 @@
 	
 	}
 
-	p { margin: 0 0 15px 0; }
+	p {
+		margin: 0 0 15px 0;
+	}
 	
 	ul {
 		border-bottom: 1px solid @border-color;
@@ -127,12 +129,12 @@
 					display: block;
 					font-size: 20px;
 					float: left;
-					margin: 0 10px 0 0;
 					height: 20px;
-					width: 20px;
+					margin: 0 10px 0 0;
 					padding: 6px;
 					text-align: center;
 					text-decoration: none;
+					width: 20px;
 				}
 
 				span.title { 
@@ -142,7 +144,9 @@
 
 				&:hover {
 
-					i { background: @link-color; }
+					i {
+						background: @link-color;
+					}
 
 					span {
 						color: @text-color;
@@ -155,17 +159,29 @@
 			
 			/* rollover colors */
 
-			&.twitter a:hover i { background: #00aced; }
+			&.twitter a:hover i {
+				background: #00aced;
+			}
 
-			&.facebook a:hover i { background: #3b5998; }
+			&.facebook a:hover i {
+				background: #3b5998;
+			}
 
-			&.linkedin a:hover i { background: #007bb6; }
+			&.linkedin a:hover i {
+				background: #007bb6;
+			}
 
-			&.googleplus a:hover i { background: #dd4b39; }
+			&.googleplus a:hover i {
+				background: #dd4b39;
+			}
 
-			&.youtube a:hover i { background: #bb0000; }
+			&.youtube a:hover i {
+				background: #bb0000;
+			}
 
-			&.rss a:hover i { background: #ff6600; }
+			&.rss a:hover i {
+				background: #ff6600;
+			}
 
 		}
 		
@@ -182,11 +198,13 @@
 					font-size: 10px;
 					height: 10px;
 					margin: 5px 10px 0 0;
-					width: 10px;
 					padding: 3px;
+					width: 10px;
 				}
 
-				span.title { line-height: 24px; }
+				span.title {
+					line-height: 24px;
+				}
 
 			}
 
@@ -199,7 +217,9 @@
 			li a {
 				clear: none;
 
-				span.title { display: none; }
+				span.title {
+					display: none;
+				}
 
 			}
 
@@ -212,9 +232,13 @@
 			li a {
 				clear: none;
 
-				i { margin: 0 5px 0 0; }
+				i {
+					margin: 0 5px 0 0;
+				}
 
-				span.title { display: none; }
+				span.title {
+					display: none;
+				}
 
 			}
 
@@ -296,15 +320,23 @@
 		}
 					
 		thead tr th:first-child, 
-		tbody tr td:first-child { border-left: 1px solid #000000; }
+		tbody tr td:first-child {
+			border-left: 1px solid #000000;
+		}
 		
 		tfoot, 
 		tfoot tr, 
-		tfoot tr td { border: none !important; }
+		tfoot tr td {
+			border: none !important;
+		}
 		
-		tfoot td#prev { text-align: left; }
+		tfoot td#prev {
+			text-align: left;
+		}
 
-		tfoot td#next { text-align: right; }
+		tfoot td#next {
+			text-align: right;
+		}
 
 	}
 
@@ -342,16 +374,19 @@
 
 .widget_rss {
 
-	h3 img { display: none; }
+	h3 img {
+		display: none;
+	}
 
 	ul {
 
-		li { padding: 15px 0; 
+		li {
+			padding: 15px 0; 
 
 			a.rsswidget { 
 				color: @heading-color;
-				font-weight: bold;
 				font-size: 16px;
+				font-weight: bold;
 				line-height: 25px;
 				margin: 0;
 				text-decoration: none;

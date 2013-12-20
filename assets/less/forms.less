@@ -18,17 +18,17 @@
 input,
 select,
 textarea {
+	.border-radius(3px);
+ 	.placeholder(#666, #ccc);
  	border: 1px solid @border-color;
+ 	display: block;
  	font-family: @text-font;
  	font-size: 13px;
- 	display: block;
  	height: 38px;
  	margin: 0 10px 20px 0;
  	min-width: 220px;
  	outline: none;
  	padding: 0 10px;
- 	.border-radius(3px);
- 	.placeholder(#666, #ccc);
 
 	&:focus {
 		border: 1px solid darken(@border-color, 20%);
@@ -41,9 +41,9 @@ textarea {
 input[type="submit"] {
  	background: @primary-color;
  	border: 0;
+ 	box-shadow: 0 2px 0 darken(@primary-color, 10%);
  	color: #fff;
  	cursor: pointer;
- 	box-shadow: 0 2px 0 darken(@primary-color, 10%);
  	display: inline-block;
  	font-weight: bold;
  	height: 38px;
