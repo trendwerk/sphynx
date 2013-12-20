@@ -139,15 +139,15 @@ body { background: @body-background; }
 
 			/* level 1 */
 
-			li { 
+			li {
 				float: left;
+				max-height: 50px;
 				position: relative;
 
 				a { 
 					color: #fff;
 					display: block;
 					font-size: 14px;
-					height: 30px;
 					line-height: 30px;
 					padding: 10px 20px;
 					text-decoration: none;
@@ -177,17 +177,19 @@ body { background: @body-background; }
 					left: -10px;
 					position: absolute;
 					top: 100%;
-					width: 220px;   
+					width: 220px;
+					z-index: 1;
 
 					li {
 						float: none;
+						max-height: none;
 						
 						a {
 							background: darken(@footer-background, 5%);
 							display: inline-block;	
 							font-size: 12px;
 							line-height: 25px;
-							padding: 5px;
+							padding: 10px 15px 10px 20px;
 							width: 100%;
 						}
 
@@ -204,11 +206,41 @@ body { background: @body-background; }
 							text-decoration: none !important;
 						}
 
+						&:last-child {
+							
+							a {
+								.border-radiuses(0px, 3px, 3px, 0px);
+							}
+
+						}
+
 						/* level 3 */
 						
 						ul { 
 							left: 100%;
+							margin-left: 35px;
 							top: 0;
+
+							li {
+
+								&:first-child {
+								
+									a {
+										.border-radiuses(3px, 0px, 0px, 0px);
+									}
+
+								}
+
+								&:last-child {
+								
+									a {
+										.border-radiuses(0px, 3px, 0px, 0px);
+									}
+
+								}
+
+							}
+
 						}
 						
 					}
