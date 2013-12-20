@@ -58,6 +58,7 @@ function tp_modify_profile( $media ) {
 	$media['facebook']   = __( 'Facebook profile URL', 'tp' );
 	$media['linkedin']   = __( 'LinkedIn profile URL', 'tp' );
 	$media['googleplus'] = __( 'Google+ profile URL', 'tp' );
+    $media['twitter']    = __( 'Twitter @username', 'tp' );
 	
 	return $media;
 }
