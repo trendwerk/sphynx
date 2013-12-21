@@ -48,7 +48,7 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 						echo '</a>';
 					} else {
 						echo '<div class="tp-edit-image">';
-							echo wp_get_attachment_image( $instance['image'], array( 346, 500 ) );
+							echo wp_get_attachment_image( $instance['image'], array( 400, 600 ) );
 						echo '</div>';
 
 						echo '<a class="tp-edit-image button-secondary">';

@@ -1,10 +1,14 @@
 .hide {
   display: none;
 }
-.tp-edit-image.button-secondary,
-.tp-remove-image.button-secondary {
+.widget .tp-edit-image.button-secondary,
+.widget .tp-remove-image.button-secondary {
   margin: 5px 5px 0 0;
 }
-.tp-edit-image {
+.widget .tp-edit-image {
   cursor: pointer;
+}
+.widget .tp-edit-image img {
+  max-width: 100%;
+  height: auto;
 }
