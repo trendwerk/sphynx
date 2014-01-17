@@ -137,6 +137,8 @@
 		 */
 		$( document ).ready( function() {
 			self.events();
+
+			$( 'input#tp-redirects-search' ).focus();
 		} );
 	}
 	
