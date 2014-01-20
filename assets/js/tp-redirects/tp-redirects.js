@@ -5,6 +5,9 @@
 		var nothingFound = false;
 
 		this.events = function() {
+			/**
+			 * Search
+			 */
 			$( el ).on( 'keyup', 'input#tp-redirects-search', function( event ) {
 				var term = self.correct( $( this ).val() );
 				if( term != $( this ).val() )
@@ -20,12 +23,32 @@
 					self.search( '' );
 			} );
 
+			/**
+			 * Edit
+			 */
 			$( el ).on( 'click', '.tp-redirects-edit', function() {
 				self.edit( $( this ).closest( 'tr' ).data( 'source' ) );
 			} );
 
+			/**
+			 * Save
+			 */
+			$( el ).on( 'click', '.tp-redirects-edit-finish', function() {
+				self.save( $( this ).closest( 'tr' ).data( 'source' ), $( this ).closest( 'tr' ).find( 'td.source input' ).val(), $( this ).closest( 'tr' ).find( 'td.destination input' ).val() );
+			} );
+
+			/**
+			 * Dismiss changes
+			 */
 			$( el ).on( 'click', '.tp-redirects-edit-dismiss', function() {
 				self.dismiss( $( this ).closest( 'tr' ).data( 'source' ) );
+			} );
+
+			/**
+			 * Remove
+			 */
+			$( el ).on( 'click', '.tp-redirects-remove', function() {
+				self.remove( $( this ).closest( 'tr' ).data( 'source' ) );
 			} );
 		}
 
@@ -114,12 +137,54 @@
 			row.find( 'td.destination' ).html( '<input type="text" value="' + row.data( 'destination' ) + '" class="widefat" />' );
 
 			row.find( 'td.actions' ).html( '<a class="dashicons dashicons-yes tp-redirects-edit-finish" title="' + TP_Redirects_Labels['edit_finish'] + '"></a>');
-			row.find( 'td.actions' ).append( '<a class="dashicons dashicons-dismiss tp-redirects-edit-dismiss" title="' + TP_Redirects_Labels['edit_dismiss'] + '"></a>' );
+			row.find( 'td.actions' ).append( '<a class="dashicons dashicons-no-alt tp-redirects-edit-dismiss" title="' + TP_Redirects_Labels['edit_dismiss'] + '"></a>' );
 
 			if( 'destination' == focus )
 				row.find( 'td.destination input' ).focus();
 			else if( 'source' == focus )
 				row.find( 'td.source input' ).focus();
+		}
+
+		/**
+		 * Save edited redirect
+		 */
+		this.save = function( refSource, source, destination ) {
+			if( self.waiting )
+				return;
+
+			self.waiting = true;
+			data =  {
+				action: 'tp_redirects_save',
+				refSource: refSource,
+				source: source,
+				destination: destination
+			}
+
+			$.post( ajaxurl, data, function( response ) {
+				console.log( response );
+				self.parse( response );
+			} );
+		}
+
+		/**
+		 * Remove redirect
+		 */
+		this.remove = function( source ) {			
+			if( self.waiting )
+				return;
+
+			self.waiting = true;
+			data =  {
+				action: 'tp_redirects_remove',
+				source: source
+			}
+
+			$.post( ajaxurl, data, function( response ) {
+				if( response.removed ) {
+					var row = $( el ).find( 'tr[data-source="' + source + '"]');
+					row.remove();
+				}
+			} );
 		}
 
 		/**

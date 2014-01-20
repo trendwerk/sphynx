@@ -95,8 +95,10 @@ class TP_Manage_Redirects {
 	function __construct() {
 		add_action( 'wp_ajax_tp_redirects_get', array( $this, '_get' ) );
 		add_action( 'wp_ajax_tp_redirects_create', array( $this, '_create' ) );
+		add_action( 'wp_ajax_tp_redirects_remove', array( $this, '_remove' ) );
+		add_action( 'wp_ajax_tp_redirects_save', array( $this, '_save' ) );
 
-		add_action( 'admin_menu', array( $this, 'add_menu' ) );	
+		add_action( 'admin_menu', array( $this, 'add_menu' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 
@@ -105,7 +107,7 @@ class TP_Manage_Redirects {
 	 *
 	 * @return json Object data, containing HTML output
 	 */
-	function _get( $edit ) {
+	function _get( $edit = null ) {
 		global $wpdb;
 
 		$replace = false;
@@ -158,7 +160,41 @@ class TP_Manage_Redirects {
 
 		$this->_get( $redirect['source'] );
 	}
-	
+
+	/**
+	 * AJAX: Save
+	 *
+	 * @return json Object data, containing HTML output
+	 */
+	function _save() {
+		global $wpdb;
+
+		$reference = esc_attr( $_POST['refSource'] );
+		$source = esc_attr( $_POST['source'] );
+		$destination = esc_attr( $_POST['destination'] );
+
+		if( $reference )
+			$wpdb->query( "UPDATE " . $wpdb->prefix . "redirects SET source = '" . $source . "', destination = '" . $destination . "' WHERE source = '" . $reference . "'" );
+
+		$_POST['type'] = 'search';
+		$_POST['term'] = $reference;
+
+		$this->_get();
+	}
+
+	/**
+	 * AJAX: Remove redirect
+	 */
+	function _remove() {
+		global $wpdb;
+
+		$source = esc_attr( $_POST['source'] );
+		$redirect = $wpdb->query( "DELETE FROM " . $wpdb->prefix . "redirects WHERE source = '" . $source . "'" );
+
+		wp_send_json( array(
+			'removed' => true,
+		) );
+	}
 
 	/**
 	 * Add admin menu
@@ -248,7 +284,7 @@ class TP_Manage_Redirects {
 
 				<td class="actions">
 					<a class="dashicons dashicons-edit tp-redirects-edit" title="<?php _e( 'Edit' ); ?>"></a>
-					<a class="dashicons dashicons-no-alt tp-redirects-remove" title="<?php _e( 'Remove' ); ?>"></a>
+					<a class="dashicons dashicons-post-trash tp-redirects-remove" title="<?php _e( 'Remove' ); ?>"></a>
 				</td>
 
 			</tr>
