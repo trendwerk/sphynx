@@ -60,16 +60,15 @@
 							'theme_location' => 'mainnav',
 							'container' => '',
 							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'depth' => '0',
-							'mobile' => true,
-						) ); 
-					?>						
+							'depth' => '0'
+						) );
+					?>
 				</nav>
 				
 				<?php if ( ! is_front_page() ) { ?>
 
 					<nav id="breadcrumbs" itemprop="breadcrumb" class="twelvecol">
-						<?php 
+						<?php
 							_e( 'You are here: ', 'tp' );
 							tp_breadcrumbs('»'); 
 						?>
