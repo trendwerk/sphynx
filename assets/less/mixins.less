@@ -179,6 +179,18 @@
 
 /**
  * @section    Mixins
+ * @subsection Padding box
+ */
+
+.padding-box {
+	-webkit-appearance: none;
+	-webkit-background-clip: padding;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+/**
+ * @section    Mixins
  * @subsection Mobile navigation
  */
 
@@ -246,6 +258,18 @@
 	}
   
 }
+
+/**
+ * @section    Mixins
+ * @subsection User select
+ */
+
+ .user-select-none {
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+ }
 
 /**
  * @section    Mixins
