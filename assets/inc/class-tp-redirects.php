@@ -34,8 +34,12 @@ class TP_Redirects {
 
 		$destination = $wpdb->get_results( "SELECT * FROM wp_redirects WHERE source='" . $source . "'" );
 
-		if( 0 < count( $destination ) && isset( $destination[0]->destination ) && 0 < strlen( $destination[0]->destination ) )
-			return trailingslashit( site_url() . $destination[0]->destination );
+		if( 0 < count( $destination ) && isset( $destination[0]->destination ) && 0 < strlen( $destination[0]->destination ) ) {
+			if( filter_var( $destination[0]->destination, FILTER_VALIDATE_URL ) === false )
+				return trailingslashit( site_url() . $destination[0]->destination );
+			else
+				return trailingslashit( $destination[0]->destination ); //External
+		}
 
 		return false;
 	}
@@ -116,24 +120,38 @@ class TP_Manage_Redirects {
 			$term = esc_attr( $_POST['term'] );
 			$replace = true;
 
-			if( $term )
-				$redirects = $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "redirects WHERE source LIKE '%" . $term . "%' OR destination LIKE '%" . $term . "%'" );
-			else
-				$redirects = $this->get_redirects();
+			if( $term ) {
+				$redirects = $wpdb->get_results( "
+					SELECT * FROM " . $wpdb->prefix . "redirects 
+					WHERE source LIKE '%" . $term . "%' OR destination LIKE '%" . $term . "%'
+					ORDER BY CASE
+						WHEN (source LIKE '%" . $term . "%' AND destination LIKE '%" . $term . "%') THEN 1
+						WHEN source LIKE '%" . $term . "%' THEN 2
+						WHEN destination LIKE '%" . $term . "%' THEN 3
+					END
+				" );
+			} else {
+				$page = intval( $_POST['page'] );
+				$redirects = $this->get_redirects( 1, $page );
+			}
 
 		} elseif( 'paged' == $_POST['type'] ) {
-
+			$page = intval( $_POST['page'] );
+			$redirects = $this->get_redirects( $page );
 		}
 
-		//Redirects > HTML
-		ob_start();
-		$this->display_redirects( $redirects );
-		$output = ob_get_clean();
+		if( $redirects ) {
+			//Redirects > HTML
+			ob_start();
+			$this->display_redirects( $redirects );
+			$output = ob_get_clean();
+		}
 
 		wp_send_json( array(
 			'replace' => $replace,
 			'html'    => $output,
 			'edit'    => $edit,
+			'page'    => $page,
 		) );
 	}
 
@@ -172,12 +190,13 @@ class TP_Manage_Redirects {
 		$reference = esc_attr( $_POST['refSource'] );
 		$source = esc_attr( $_POST['source'] );
 		$destination = esc_attr( $_POST['destination'] );
+		$search = esc_attr( $_POST['search'] );
 
 		if( $reference )
 			$wpdb->query( "UPDATE " . $wpdb->prefix . "redirects SET source = '" . $source . "', destination = '" . $destination . "' WHERE source = '" . $reference . "'" );
 
 		$_POST['type'] = 'search';
-		$_POST['term'] = $reference;
+		$_POST['term'] = $search;
 
 		$this->_get();
 	}
@@ -230,7 +249,7 @@ class TP_Manage_Redirects {
 	 * Show redirects table
 	 */
 	function display_redirect_table() {
-		$redirects = $this->get_redirects();
+		$redirects = $this->get_redirects( 1 );
 		
 		if( $redirects ) {
 			?>
@@ -258,6 +277,20 @@ class TP_Manage_Redirects {
 					<?php $this->display_redirects( $redirects ); ?>
 
 				</tbody>
+
+				<tfoot>
+					
+					<tr class="tp-redirects-more">
+					
+						<td colspan="3">
+							<img src="<?php echo admin_url( 'images/wpspin_light.gif' ); ?>" />
+
+							<?php _e( 'Loading more redirects', 'tp' ); ?>
+						</td>
+
+					</tr>
+
+				</tfoot>
 
 			</table>
 
@@ -296,12 +329,22 @@ class TP_Manage_Redirects {
 	/**
 	 * Retrieve redirects
 	 * 
+	 * @param int $page
+	 * @param int $to_page Maybe we want to return data for multiple pages
 	 * @return array
 	 */
-	function get_redirects() {
+	function get_redirects( $page, $to_page = null ) {
 		global $wpdb;
 
-		return $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "redirects LIMIT 0,50" );
+		if( ! $to_page )
+			$to_page = ( $page + 1 );
+
+		$limit = ( ( $page - 1 ) * 100 ) . ',' . ( $to_page - $page ) * 100;
+
+		// if( $to_page-1 > $page )
+			// dbg( $limit );
+
+		return $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "redirects LIMIT " . $limit );
 	}
 
 	/**
@@ -312,7 +355,7 @@ class TP_Manage_Redirects {
 
 		wp_localize_script( 'tp-redirects', 'TP_Redirects_Labels', array(
 			'not_found'      => __( 'This redirect doesn\'t exist yet. Press &ldquo;Enter&rdquo; to create it.', 'tp' ),
-			'create_confirm' => __( 'Are you sure you want to create this redirect?', 'tp' ),
+			'delete_confirm' => __( 'Are you sure you want to delete this redirect?', 'tp' ),
 			'edit_finish'    => __( 'Save', 'tp' ),
 			'edit_dismiss'   => __( 'Dismiss', 'tp' ),
 			'site_url'       => get_site_url(),

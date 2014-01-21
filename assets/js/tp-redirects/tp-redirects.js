@@ -2,7 +2,7 @@
 	var TP_Redirects = function( el ) {
 		var self = this;
 		var waiting = false;
-		var nothingFound = false;
+		var page = 1;
 
 		this.events = function() {
 			/**
@@ -13,9 +13,14 @@
 				if( term != $( this ).val() )
 					$( this ).val( term );
 
-
 				if( 13 == event.which && 0 < term.length )
 					self.create( term );
+
+				if( 8 == event.which )
+					self.waiting = false; //Always listen to backspace
+
+				if( 91 == event.which && 0 == term.length )
+					return;
 
 				if( 2 < term.length )
 					self.search( term );
@@ -28,6 +33,13 @@
 			 */
 			$( el ).on( 'click', '.tp-redirects-edit', function() {
 				self.edit( $( this ).closest( 'tr' ).data( 'source' ) );
+			} );
+
+			$( el ).on( 'keyup', 'td.source input, td.destination input', function( event ) {
+				if( 13 == event.which )
+					self.save( $( this ).closest( 'tr' ).data( 'source' ), $( this ).closest( 'tr' ).find( 'td.source input' ).val(), $( this ).closest( 'tr' ).find( 'td.destination input' ).val() );
+				else if( 27 == event.which )
+					self.dismiss( $( this ).closest( 'tr' ).data( 'source' ) );
 			} );
 
 			/**
@@ -49,6 +61,15 @@
 			 */
 			$( el ).on( 'click', '.tp-redirects-remove', function() {
 				self.remove( $( this ).closest( 'tr' ).data( 'source' ) );
+			} );
+
+			/**
+			 * Lazy loading
+			 */
+			$( window ).scroll( function() {
+			    if( '' == $( el ).find( '#tp-redirects-search').val() && $( window ).scrollTop() == $( document ).height() - $( window ).height() ) {
+			    	self.loadMore();
+			    }
 			} );
 		}
 
@@ -109,19 +130,24 @@
 		 * Parse AJAX response
 		 */
 		this.parse = function( response ) {
-			self.nothingFound = false;
-
 			if( response.html ) {
 				if( response.replace )
 					$( el ).find( 'table.tp-redirects-table tbody' ).html( response.html );
 				else
 					$( el ).find( 'table.tp-redirects-table tbody' ).append( response.html );
-			} else {
+			} else if( response.replace ) {
 				$( el ).find( 'table.tp-redirects-table tbody' ).html( '<tr><td colspan="3">' + TP_Redirects_Labels['not_found'] + '</td></tr>' );
-				self.nothingFound = true;
 			}
 
+			if( response.page )
+				self.page = response.page;
+
 			self.waiting = false;
+
+			if( self.page <= 1 )
+				$( el ).find( 'input#tp-redirects-search' ).focus();
+
+			$( el ).find( 'tr.tp-redirects-more' ).hide();
 		}
 
 		/**
@@ -153,15 +179,16 @@
 				return;
 
 			self.waiting = true;
-			data =  {
-				action: 'tp_redirects_save',
-				refSource: refSource,
-				source: source,
-				destination: destination
+			data = {
+				action:      'tp_redirects_save',
+				refSource:   refSource,
+				source:      source,
+				destination: destination,
+				search:      $( el ).find( '#tp-redirects-search' ).val(),
+				page:        self.page
 			}
 
 			$.post( ajaxurl, data, function( response ) {
-				console.log( response );
 				self.parse( response );
 			} );
 		}
@@ -169,7 +196,10 @@
 		/**
 		 * Remove redirect
 		 */
-		this.remove = function( source ) {			
+		this.remove = function( source ) {
+			if( ! confirm( TP_Redirects_Labels['delete_confirm'] ) )
+				return;
+
 			if( self.waiting )
 				return;
 
@@ -184,6 +214,11 @@
 					var row = $( el ).find( 'tr[data-source="' + source + '"]');
 					row.remove();
 				}
+
+				self.waiting = false;
+
+				if( self.page <= 1 )
+					$( el ).find( 'input#tp-redirects-search' ).focus();
 			} );
 		}
 
@@ -195,6 +230,24 @@
 
 			row.removeClass( 'editing' );
 			row.html( row.data( 'html-before' ) );
+
+			if( self.page <= 1 )
+				$( el ).find( 'input#tp-redirects-search' ).focus();
+		}
+
+		/**
+		 * Load more (pagination)
+		 */
+		this.loadMore = function() {
+			if( ! self.page )
+				self.page = 1;
+
+			$( el ).find( 'tr.tp-redirects-more' ).show();
+
+			self.get( {
+				type:   'paged',
+				page:   self.page + 1
+			} );
 		}
 		
 		/**
