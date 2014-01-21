@@ -7,7 +7,7 @@ textarea:focus,
 button:focus,
 select:focus,
 input:focus {
-	.box-shadow(none);
+	.box-shadow(0);
 	z-index: 1;
 }
 
@@ -22,7 +22,7 @@ textarea:invalid,
 button:invalid,
 select:invalid,
 input:invalid {
-	.box-shadow(none);
+	.box-shadow(0);
 }
 
 input[type="submit"],
@@ -33,17 +33,12 @@ button {
 	.border-radius(4px);
 	.padding-box
 	.vertical-gradient(@primary-color, darken(@primary-color, 5%));
-	border: none;
-	color: #FFF;
 	cursor: pointer;
-	display: inline-block;
-	font-family: @text-font;
-	font-size: 14px;
-	font-weight: bold;
 	outline: 0;
 	overflow: visible;
 	margin: 0;
-	padding: 4px 12px;
+ 	min-width: 0;
+ 	position: relative;
 	text-decoration: none;
 	vertical-align: top;
 	width: auto;
@@ -53,8 +48,9 @@ button {
 		text-decoration: none;
 	}
 
+	&:focus,
 	&:active {
-		.vertical-gradient(darken(@primary-color, 5%), darken(@primary-color, 5%));
+		.box-shadow(0);
 	}
 
 }
@@ -84,17 +80,7 @@ input[type="url"],
 textarea,
 select {
 	.border-box;
-	.border-radius(0);
 	.padding-box;
-	background-color: #FFF;
-	border: 1px solid @border-color;
-	color: @text-color;
-	font-size: 14px;
-	font-family: @text-font;
-	height: 1.8em;
-	margin: 0;
-	outline: 0;
-	padding: 2px 3px;
 	text-align: left;
 	vertical-align: top;	
 	-webkit-appearance: none;
@@ -144,7 +130,7 @@ a.button_disabled,
 button[disabled],
 select[disabled],
 input[disabled] {
-	.box-shadow(none);
+	.box-shadow(0);
 	.user-select-none;
 	color: #888;
 	cursor: default;
@@ -178,7 +164,6 @@ select[size="1"] {
 		background-image: none;
 		padding-right: 3px;
 	}
-
 	
 	select[size="0"],
 	select[size="1"],

@@ -15,11 +15,24 @@
  * @subsection Default form styling
  */
 
-input,
-select,
-textarea {
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="month"],
+input[type="email"],
+input[type="date"],
+input[type="text"],
+input[type="time"],
+input[type="week"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
 	.border-radius(3px);
  	.placeholder(#666, #ccc);
+	background-color: #FFF;
  	border: 1px solid @border-color;
  	display: block;
  	font-family: @text-font;
@@ -38,24 +51,33 @@ textarea {
 
 /* submit buttons */
 
-input[type="submit"] {
- 	background: @primary-color;
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+a.button,
+button {
+	.border-radius(3px);
+	.box-shadow(0 2px 0 darken(@primary-color, 10%));
+ 	background-color: @primary-color;
  	border: 0;
- 	box-shadow: 0 2px 0 darken(@primary-color, 10%);
- 	color: #fff;
- 	cursor: pointer;
- 	display: inline-block;
+ 	color: #FFF;
+	font-family: @text-font;
+	font-size: 14px;
+	font-weight: bold;
  	height: 38px;
  	margin-right: 10px;
- 	min-width: 0;
  	padding: 0 20px;
- 	position: relative;
- 	text-decoration: none;
  	text-shadow: 0 1px 0 darken(@primary-color, 10%);
 
  	&:hover { 
- 		background: lighten(@primary-color, 5%);
+ 		background-color: lighten(@primary-color, 5%);
  	}
+
+ 	&:active,
+ 	&:focus {
+		background-color: darken(@primary-color, 5%);
+		outline: none;
+	}
 
 }
 
