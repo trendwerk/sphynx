@@ -116,7 +116,7 @@ class TP_Title_Content_Button extends WP_Widget {
 		    		</a>
 		    	</p>
 
-	    		<?php 
+	    		<?php
 	    	} 
 		echo $after_widget;
 	}
