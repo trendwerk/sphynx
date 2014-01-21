@@ -383,6 +383,28 @@ body { background: @body-background; }
  * @subsection Archive
  */
 
+
+		.article-meta { 
+			color: @text-light;
+			font-size: 13px;
+			margin: 0 0 20px 0;
+			
+			a { 
+				color: @text-color;
+				
+				&:hover { 
+					color: @link-color; 
+				}
+				
+			}
+			
+		}
+
+		#article-title {
+			margin-bottom: 10px;
+		}
+
+
 .archive,
 .blog,
 .search {
@@ -403,22 +425,6 @@ body { background: @body-background; }
 				&:hover { 
 					color: @link-color;
 					text-decoration: underline;
-				}
-				
-			}
-			
-		}
-
-		.article-meta { 
-			color: @text-light;
-			font-size: 13px;
-			margin: 0 0 20px 0;
-			
-			a { 
-				color: @text-color;
-				
-				&:hover { 
-					color: @link-color; 
 				}
 				
 			}

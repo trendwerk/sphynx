@@ -17,125 +17,110 @@
  */
 
  .author-card {
- 	background: #fff;
- 	padding: 20px;
+ 	background: #FFF;
+ 	border-top: 1px solid @border-color;
  	margin: 0 0 20px 0;
+ 	padding: 20px 0;
  	
  	.author-avatar {
  		float: left;
  		margin: 5px 0 0 0;
+
+		img {
+			.border-radius(999px);
+		}
+
  	}
  	
  	.author-info {
  		padding-left: 100px;
- 		
- 		ul.author-social {
- 			list-style: none;
- 			margin: 0;
- 			
- 			li {
- 				float: left;
-
-
- 				&.facebook {
-
- 				}
-
-  				&.twitter {
-
- 				}
-
- 				&.linkedin {
-
- 				}
-
- 				&.googleplus {
-
- 				}
-
- 			}
-
- 		}
 
  		a.more {
  			float: right;
- 			margin: 0 10px 10px 0;
+ 			margin: -1px 10px 10px 0;
  		}
 
-		 .author-social {
+		.author-social {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
 
-		 	.label {
-		 		display: inline-block;
-		 		margin-right: 10px;
-		 	}
-
-			a {
-				color: #FFFFFF;
-				display: block;
-				float: left;
-				font-size: 18px;
-				height: 24px;
-				margin: 0 4px 4px 0;
-				position: relative;
-				text-align: center;
-				text-decoration: none;
-
-				&:active,
-				&:focus {
-					top: 1px;
+			li {
+				display: inline;
+				
+				.label {
+				 	display: inline-block;
+				 	float: left;
+				 	margin-top: -1px;
+				 	margin-right: 10px;
 				}
-			
-				&.google-plus {
-					color: #dd4B39;
-					line-height: 24px;
-					width: 22px;
-					
+
+				a {
+					.border-radius(2px);
+					font-size: 14px;
+					height: 14px;
+					padding: 4px;
+					width: 14px;
+					line-height: 14px;
+					color: #FFF;
+					display: block;
+					float: left;
+					margin: 0 4px 4px 0;
+					position: relative;
+					text-align: center;
+					text-decoration: none;
+
+
 					&:active,
-					&:focus,
-					&:hover {
-						color: darken(#dd4B39, 12%);
+					&:focus {
+						top: 1px;
+					}
+				
+					&.google-plus {
+						background-color: #dd4B39;
+						
+						&:active,
+						&:focus,
+						&:hover {
+							background-color: darken(#dd4B39, 12%);
+						}
+
+					}
+
+					&.twitter {
+						background-color: #2ca8d2;
+
+						&:active,
+						&:focus,
+						&:hover {
+							background-color: darken(#2ca8d2, 12%);
+						}
+
+					}
+
+					&.facebook {
+						background-color: #305891;
+
+						&:active,
+						&:focus,
+						&:hover {
+							background-color: darken(#305891, 12%);
+						}
+
+					}
+
+					&.linkedin {
+						background-color: #4498c8;
+
+						&:active,
+						&:focus,
+						&:hover {
+							background-color: darken(#4498c8, 12%);
+						}
+						
 					}
 
 				}
-
-				&.twitter {
-					color: #2ca8d2;
-					line-height: 26px;
-					width: 22px;
-
-					&:active,
-					&:focus,
-					&:hover {
-						color: darken(#2ca8d2, 12%);
-					}
-
-				}
-
-				&.facebook {
-					color: #305891;
-					line-height: 26px;
-					width: 18px;
-
-					&:active,
-					&:focus,
-					&:hover {
-						color: darken(#305891, 12%);
-					}
-
-				}
-
-				&.linkedin {
-					color: #4498c8;
-					line-height: 24px;
-					width: 22px;
-
-					&:active,
-					&:focus,
-					&:hover {
-						color: darken(#4498c8, 12%);
-					}
-					
-				}		
 
 			}
 
