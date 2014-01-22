@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-21 14:14+0100\n"
-"PO-Revision-Date: 2014-01-21 14:15+0100\n"
+"POT-Creation-Date: 2014-01-22 20:06+0100\n"
+"PO-Revision-Date: 2014-01-22 21:20+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,6 @@ msgid "The page you are looking for doesn't exist."
 msgstr "La page que vous recherchez n'existe pas."
 
 #: ../../404.php:15
-#, fuzzy
 msgid ""
 "Seems like the page you were looking for might have been moved or just "
 "didn't exist in the first place."
@@ -40,12 +39,11 @@ msgstr ""
 
 #: ../../404.php:20
 msgid "sitemap"
-msgstr ""
+msgstr "plan du site"
 
 #: ../../archive-posttype.php:14
-#, fuzzy
 msgid "Posttype name"
-msgstr "Posté le"
+msgstr "Nom du type d'article"
 
 #: ../../archive-posttype.php:36 ../../author.php:34 ../../index.php:60
 #: ../../search.php:41
@@ -58,7 +56,7 @@ msgstr "Aucun résultat trouvé."
 
 #: ../../author.php:10 ../../index.php:24
 msgid "Posts by"
-msgstr ""
+msgstr "Articles par"
 
 #: ../../author.php:26 ../../index.php:50 ../../single.php:16
 msgid "Posted on"
@@ -66,27 +64,26 @@ msgstr "Posté le"
 
 #: ../../author.php:26 ../../index.php:50 ../../single.php:17
 msgid "by"
-msgstr ""
+msgstr "par"
 
 #: ../../author.php:26 ../../index.php:50 ../../single.php:17
 msgid "in the category"
 msgstr "dans la catégorie"
 
 #: ../../author.php:47
-#, fuzzy
 msgid "No results found"
-msgstr "Aucun résultat trouvé."
+msgstr "Aucun résultat trouvé"
 
 #: ../../comments.php:11
 #, php-format
 msgid "One response to &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Une réponse à &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s réponses à &ldquo;%2$s&rdquo;"
 
 #: ../../footer.php:13
 msgid "Copyright"
-msgstr ""
+msgstr "Droit d'auteur"
 
 #: ../../footer.php:39
 msgid ""
@@ -97,19 +94,17 @@ msgstr ""
 "meilleure expérience veuillez effectuer une mise à jour (gratuite) vers un "
 "navigateur plus moderne :"
 
-#: ../../header.php:73
-#, fuzzy
+#: ../../header.php:72
 msgid "You are here: "
 msgstr "Vous êtes ici :"
 
 #: ../../index.php:12
-#, fuzzy
 msgid "Category"
-msgstr "dans la catégorie"
+msgstr "Catégorie"
 
 #: ../../index.php:18
 msgid "Tag"
-msgstr ""
+msgstr "Étiquette"
 
 #: ../../index.php:32
 msgid "News"
@@ -117,69 +112,64 @@ msgstr "Nouvelles"
 
 #: ../../page-authors.php:4
 msgid "Authors overview"
-msgstr ""
+msgstr "Vue d'ensemble des auteurs"
 
-#: ../../page-sitemap.php:23
+#: ../../page-sitemap.php:21
 msgid "Pages"
 msgstr "Pages"
 
-#: ../../page-sitemap.php:72 ../../assets/inc/sidebars.php:19
+#: ../../page-sitemap.php:74 ../../assets/inc/sidebars.php:19
 #: ../inc/sidebars.php:19
 msgid "Blog"
 msgstr "Blog"
 
 #: ../../part-author.php:25
-#, fuzzy
 msgid "Written by"
-msgstr "écrit par"
+msgstr "Écrit par"
 
 #: ../../part-author.php:38
-#, fuzzy
 msgid "Follow me on:"
-msgstr "Suivez-nous sur Twitter"
+msgstr "Suivez-moi sur :"
 
 #: ../../part-author.php:85
 #, php-format
 msgid "View 1 post"
 msgid_plural "View all %1$s posts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Voir 1 article"
+msgstr[1] "Voir tous les %1$s articles"
 
 #: ../../part-share.php:5
 msgid "Share this article"
-msgstr ""
+msgstr "Partager cet article"
 
 #: ../../part-share.php:7
 msgid "Share this on Facebook"
-msgstr ""
+msgstr "Partager sur Facebook"
 
 #: ../../part-share.php:11
-#, fuzzy
 msgid "Share this on Twitter"
-msgstr "Suivez-nous sur Twitter"
+msgstr "Partager sur Twitter"
 
 #: ../../part-share.php:15
-#, fuzzy
 msgid "Share this on LinkedIn"
-msgstr "Rejoignez-nous sur LinkedIn"
+msgstr "Partager sur LinkedIn"
 
 #: ../../part-share.php:19
 msgid "Share this on Google Plus"
-msgstr ""
+msgstr "Partager sur Google Plus"
 
 #: ../../part-share.php:23
 msgid "Share this on Pinterest"
-msgstr ""
+msgstr "Partager sur Pinterest"
 
 #: ../../part-share.php:27
-#, fuzzy
 msgid "Email this"
-msgstr "Email :"
+msgstr "Envoyer par email"
 
 #: ../../search.php:16 ../../search.php:56
 #, php-format
 msgid "Search Results for: %1$s"
-msgstr "Rechercher des résultats pour : %1$s"
+msgstr "Résultats de recherche pour : %1$s"
 
 #: ../../search.php:24
 #, php-format
@@ -203,7 +193,7 @@ msgstr "Rechercher"
 
 #: ../../single-posttype.php:25 ../../single.php:34
 msgid "Back to the overview"
-msgstr ""
+msgstr "Retour à la vue d'ensemble"
 
 #: ../../assets/inc/menus.php:7 ../inc/menus.php:7
 msgid "Main navigation"
@@ -217,13 +207,17 @@ msgstr "Navigation en-tête"
 msgid "Footer navigation"
 msgstr "Navigation bas de page"
 
+#: ../../assets/inc/menus.php:10 ../inc/menus.php:10
+msgid "Sitemap"
+msgstr "Plan du site"
+
 #: ../../assets/inc/misc.php:14
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:18
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:14
 #: ../inc/misc.php:14 ../inc/widgets/class-tp-title-content-button.php:18
 #: ../inc/widgets/class-tp-title-image-content-button.php:14
 msgid "Primary button"
-msgstr ""
+msgstr "Bouton principal"
 
 #: ../../assets/inc/misc.php:19
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:19
@@ -231,40 +225,39 @@ msgstr ""
 #: ../inc/misc.php:19 ../inc/widgets/class-tp-title-content-button.php:19
 #: ../inc/widgets/class-tp-title-image-content-button.php:15
 msgid "Secondary button"
-msgstr ""
+msgstr "Bouton secondaire"
 
 #: ../../assets/inc/misc.php:24 ../inc/misc.php:24
 msgid "More link"
-msgstr ""
+msgstr "Lien plus"
 
 #: ../../assets/inc/misc.php:58 ../inc/misc.php:58
 msgid "Facebook profile URL"
-msgstr ""
+msgstr "URL du profil Facebook"
 
 #: ../../assets/inc/misc.php:59 ../inc/misc.php:59
 msgid "LinkedIn profile URL"
-msgstr ""
+msgstr "URL du profil LinkedIn"
 
 #: ../../assets/inc/misc.php:60 ../inc/misc.php:60
 msgid "Google+ profile URL"
-msgstr ""
+msgstr "URL du profil Google+"
 
 #: ../../assets/inc/misc.php:61 ../inc/misc.php:61
 msgid "Twitter @username"
-msgstr ""
+msgstr "@nom d'utilisateur Twitter"
 
 #: ../../assets/inc/sidebars.php:11 ../inc/sidebars.php:11
 msgid "Home"
-msgstr ""
+msgstr "Accueil"
 
 #: ../../assets/inc/sidebars.php:15 ../inc/sidebars.php:15
-#, fuzzy
 msgid "Page"
-msgstr "Pages"
+msgstr "Page"
 
 #: ../../assets/inc/sidebars.php:23 ../inc/sidebars.php:23
 msgid "Footer"
-msgstr ""
+msgstr "Bas de page"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:10
 #: ../inc/widgets/class-tp-contact.php:10
@@ -273,12 +266,12 @@ msgstr "Informations contact"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:10
 #: ../inc/widgets/class-tp-contact.php:10
-#, fuzzy
 msgid "Shows the specified contact information"
-msgstr "Widget affichant les données contact spécifiées par l'utilisateur"
+msgstr "Affiche les informations contact spécifiées par l'utilisateur"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:18
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:19
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:23
 #: ../../assets/inc/widgets/class-tp-social.php:25
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:22
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:28
@@ -287,6 +280,7 @@ msgstr "Widget affichant les données contact spécifiées par l'utilisateur"
 #: ../../assets/plugins/Filter/class-tp-filter.php:299
 #: ../inc/widgets/class-tp-contact.php:18
 #: ../inc/widgets/class-tp-fb-like-box.php:19
+#: ../inc/widgets/class-tp-post-type-posts.php:23
 #: ../inc/widgets/class-tp-social.php:25
 #: ../inc/widgets/class-tp-taxonomy-terms.php:22
 #: ../inc/widgets/class-tp-title-content-button.php:28
@@ -294,18 +288,18 @@ msgstr "Widget affichant les données contact spécifiées par l'utilisateur"
 #: ../inc/widgets/class-tp-tweets.php:18
 #: ../plugins/Filter/class-tp-filter.php:299
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:23
 #: ../../assets/inc/widgets/class-tp-social.php:42
 #: ../inc/widgets/class-tp-contact.php:23
 #: ../inc/widgets/class-tp-social.php:42
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Change the contents of this widget on the <a href=\"%1$s\">contact "
 "information</a> page."
 msgstr ""
-"Modifiez le contenu de ce widget sur la page <a href=\"%1$s\">informations "
+"Modifiez les contenus de ce widget sur la page <a href=\"%1$s\">informations "
 "contact</a>."
 
 #: ../../assets/inc/widgets/class-tp-contact.php:66
@@ -336,39 +330,52 @@ msgstr "N° TVA"
 #: ../../assets/inc/widgets/class-tp-contact.php:85
 #: ../inc/widgets/class-tp-contact.php:85
 msgid "Bank"
-msgstr ""
+msgstr "Banque"
 
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:11
 #: ../inc/widgets/class-tp-fb-like-box.php:11
 msgid "Facebook like box"
-msgstr ""
+msgstr "Facebook like box"
 
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:11
 #: ../inc/widgets/class-tp-fb-like-box.php:11
 msgid "Shows the Facebook users that like your Facebook page"
-msgstr ""
+msgstr "Affiche les utilisateurs Facebook qui ont aimé votre page"
 
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:26
 #: ../inc/widgets/class-tp-fb-like-box.php:26
 msgid "Facebook page URL"
-msgstr ""
+msgstr "URL de la page Facebook"
 
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:10
 #: ../inc/widgets/class-tp-post-type-posts.php:10
-#, fuzzy
 msgid "Post type posts"
-msgstr "Posté le"
+msgstr "Articles de type article"
 
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:10
 #: ../inc/widgets/class-tp-post-type-posts.php:10
 msgid "List of posts from a given post type"
-msgstr ""
+msgstr "Listes d'articles d'un type d'articles donné"
 
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:25
-#: ../inc/widgets/class-tp-post-type-posts.php:25
-#, fuzzy
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:30
+#: ../inc/widgets/class-tp-post-type-posts.php:30
 msgid "Post type"
-msgstr "Posté le"
+msgstr "Type d'article"
+
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:50
+#: ../inc/widgets/class-tp-post-type-posts.php:50
+msgid "Number of posts to show:"
+msgstr "Nombre d'articles à afficher :"
+
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:58
+#: ../inc/widgets/class-tp-post-type-posts.php:58
+msgid "Show link to post type archive"
+msgstr "Afficher le lien vers l'archive du type d'article"
+
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:110
+#: ../inc/widgets/class-tp-post-type-posts.php:110
+msgid "View all"
+msgstr "Voir tous"
 
 #: ../../assets/inc/widgets/class-tp-social.php:10
 #: ../inc/widgets/class-tp-social.php:10
@@ -378,32 +385,32 @@ msgstr "Liens médias sociaux"
 #: ../../assets/inc/widgets/class-tp-social.php:10
 #: ../inc/widgets/class-tp-social.php:10
 msgid "Shows links to specified social network profiles"
-msgstr ""
+msgstr "Affiche les liens vers des profils de réseaux sociaux spécifiés"
 
 #: ../../assets/inc/widgets/class-tp-social.php:13
 #: ../inc/widgets/class-tp-social.php:13
 msgid "Large icons"
-msgstr ""
+msgstr "Grandes icônes"
 
 #: ../../assets/inc/widgets/class-tp-social.php:14
 #: ../inc/widgets/class-tp-social.php:14
 msgid "Large icons with text"
-msgstr ""
+msgstr "Grandes icônes avec texte"
 
 #: ../../assets/inc/widgets/class-tp-social.php:15
 #: ../inc/widgets/class-tp-social.php:15
 msgid "Small icons"
-msgstr ""
+msgstr "Petites icônes"
 
 #: ../../assets/inc/widgets/class-tp-social.php:16
 #: ../inc/widgets/class-tp-social.php:16
 msgid "Small icons with text"
-msgstr ""
+msgstr "Petites icônes avec texte"
 
 #: ../../assets/inc/widgets/class-tp-social.php:32
 #: ../inc/widgets/class-tp-social.php:32
 msgid "Icon types"
-msgstr ""
+msgstr "Types d'icônes"
 
 #: ../../assets/inc/widgets/class-tp-social.php:61
 #: ../../assets/inc/widgets/class-tp-social.php:63
@@ -414,9 +421,8 @@ msgstr "Suivez-nous sur Twitter"
 #: ../../assets/inc/widgets/class-tp-social.php:70
 #: ../../assets/inc/widgets/class-tp-social.php:72
 #: ../inc/widgets/class-tp-social.php:70 ../inc/widgets/class-tp-social.php:72
-#, fuzzy
 msgid "Like our Facebook page"
-msgstr "Rejoignez-nous sur Facebook"
+msgstr "Aimez notre page Facebook"
 
 #: ../../assets/inc/widgets/class-tp-social.php:79
 #: ../../assets/inc/widgets/class-tp-social.php:81
@@ -434,7 +440,7 @@ msgstr "Ajoutez-nous à Google+"
 #: ../../assets/inc/widgets/class-tp-social.php:99
 #: ../inc/widgets/class-tp-social.php:97 ../inc/widgets/class-tp-social.php:99
 msgid "View our YouTube channel"
-msgstr ""
+msgstr "Voir votre canal Youtube"
 
 #: ../../assets/inc/widgets/class-tp-social.php:106
 #: ../../assets/inc/widgets/class-tp-social.php:108
@@ -445,9 +451,8 @@ msgstr "Newsletter email"
 
 #: ../../assets/inc/widgets/class-tp-social.php:115
 #: ../inc/widgets/class-tp-social.php:115
-#, fuzzy
 msgid "Subscribe via RSS"
-msgstr "Souscrivez à notre flux RSS"
+msgstr "Souscrivez par flux RSS"
 
 #: ../../assets/inc/widgets/class-tp-social.php:117
 #: ../inc/widgets/class-tp-social.php:117
@@ -457,56 +462,54 @@ msgstr "Souscrivez à notre flux RSS"
 #: ../../assets/inc/widgets/class-tp-submenu.php:10
 #: ../inc/widgets/class-tp-submenu.php:10
 msgid "Submenu"
-msgstr ""
+msgstr "Sous-menu"
 
 #: ../../assets/inc/widgets/class-tp-submenu.php:10
 #: ../inc/widgets/class-tp-submenu.php:10
 msgid "Shows submenu items of current menu item or parent"
-msgstr ""
+msgstr "Affiche des objets du sous-menu de l'objet du menu actuel ou parent"
 
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
 #: ../inc/widgets/class-tp-taxonomy-terms.php:10
 msgid "Term list"
-msgstr ""
+msgstr "Liste de termes"
 
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
 #: ../inc/widgets/class-tp-taxonomy-terms.php:10
 msgid "List of terms from a given taxonomy"
-msgstr ""
+msgstr "Liste de termes d'une taxonomie donnée"
 
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:30
 #: ../inc/widgets/class-tp-taxonomy-terms.php:30
 msgid "Taxonomy"
-msgstr ""
+msgstr "Taxonomie"
 
 #: ../../assets/inc/widgets/class-tp-telephone-button.php:13
 #: ../inc/widgets/class-tp-telephone-button.php:13
 msgid "Telephone number and button"
-msgstr ""
+msgstr "Numéro de téléphone et bouton"
 
 #: ../../assets/inc/widgets/class-tp-telephone-button.php:29
 #: ../inc/widgets/class-tp-telephone-button.php:29
-#, fuzzy
 msgid "Telephone number"
-msgstr "Téléphone"
+msgstr "Numéro de téléphone"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:10
 #: ../inc/widgets/class-tp-title-content-button.php:10
 msgid "Text with button"
-msgstr ""
+msgstr "Texte avec bouton"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:10
 #: ../inc/widgets/class-tp-title-content-button.php:10
 msgid "Editable title, text and button"
-msgstr ""
+msgstr "Titre, texte et bouton modifiables"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:17
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:13
 #: ../inc/widgets/class-tp-title-content-button.php:17
 #: ../inc/widgets/class-tp-title-image-content-button.php:13
-#, fuzzy
 msgid "Read more link"
-msgstr "Lire davantage"
+msgstr "Lien lire plus"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:35
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:69
@@ -514,114 +517,113 @@ msgstr "Lire davantage"
 #: ../inc/widgets/class-tp-title-content-button.php:35
 #: ../inc/widgets/class-tp-title-image-content-button.php:69
 #: ../plugins/global-content/class-tp-global-content.php:27
-#, fuzzy
 msgid "Content"
-msgstr "Contact"
+msgstr "Contenu"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:45
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:77
 #: ../inc/widgets/class-tp-title-content-button.php:45
 #: ../inc/widgets/class-tp-title-image-content-button.php:77
 msgid "Show button / read more link"
-msgstr ""
+msgstr "Afficher le bouton / lien lire plus"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:53
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:85
 #: ../inc/widgets/class-tp-title-content-button.php:53
 #: ../inc/widgets/class-tp-title-image-content-button.php:85
 msgid "Button text"
-msgstr ""
+msgstr "Texte bouton"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:60
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:92
 #: ../inc/widgets/class-tp-title-content-button.php:60
 #: ../inc/widgets/class-tp-title-image-content-button.php:92
 msgid "Button link"
-msgstr ""
+msgstr "Lien bouton"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:68
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:100
 #: ../inc/widgets/class-tp-title-content-button.php:68
 #: ../inc/widgets/class-tp-title-image-content-button.php:100
 msgid "Link type"
-msgstr ""
+msgstr "Type de lien"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:81
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:113
 #: ../inc/widgets/class-tp-title-content-button.php:81
 #: ../inc/widgets/class-tp-title-image-content-button.php:113
 msgid "This link is external"
-msgstr ""
+msgstr "Ce lien est externe"
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:10
 #: ../inc/widgets/class-tp-title-image-content-button.php:10
 msgid "Text with image and button"
-msgstr ""
+msgstr "Texte avec image et bouton"
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:10
 #: ../inc/widgets/class-tp-title-image-content-button.php:10
 msgid "Editable title, image text and button"
-msgstr ""
+msgstr "Titre, texte image et bouton modifiables"
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:24
 #: ../inc/widgets/class-tp-title-image-content-button.php:24
 msgid "Choose an image"
-msgstr ""
+msgstr "Choisir une image"
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:25
 #: ../inc/widgets/class-tp-title-image-content-button.php:25
 msgid "Insert into widget"
-msgstr ""
+msgstr "Inséser dans le widget"
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:42
 #: ../../assets/plugins/term-image/class-tp-term-image.php:51
 #: ../inc/widgets/class-tp-title-image-content-button.php:42
 #: ../plugins/term-image/class-tp-term-image.php:51
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:47
 #: ../inc/widgets/class-tp-title-image-content-button.php:47
 msgid "Upload"
-msgstr ""
+msgstr "Télécharger"
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:55
 #: ../inc/widgets/class-tp-title-image-content-button.php:55
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:59
 #: ../../assets/plugins/term-image/class-tp-term-image.php:66
 #: ../inc/widgets/class-tp-title-image-content-button.php:59
 #: ../plugins/term-image/class-tp-term-image.php:66
 msgid "Remove"
-msgstr ""
+msgstr "Supprimer"
 
 #: ../../assets/inc/widgets/class-tp-tweets.php:10
 #: ../inc/widgets/class-tp-tweets.php:10
 msgid "Tweets"
-msgstr ""
+msgstr "Tweets"
 
 #: ../../assets/inc/widgets/class-tp-tweets.php:10
 #: ../inc/widgets/class-tp-tweets.php:10
 msgid "Shows latest tweets from a Twitter account"
-msgstr ""
+msgstr "Affiche les derniers tweets d'un compte Twitter"
 
 #: ../../assets/inc/widgets/class-tp-tweets.php:25
 #: ../inc/widgets/class-tp-tweets.php:25
 msgid "Twitter username"
-msgstr ""
+msgstr "Nom d'utilisateur Twitter"
 
 #: ../../assets/inc/widgets/class-tp-tweets.php:42
 #: ../inc/widgets/class-tp-tweets.php:42
 #, php-format
 msgid "Tweets from @%1$s"
-msgstr ""
+msgstr "Tweets de @%1$s"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:84
 #: ../plugins/Filter/class-tp-filter.php:84
 msgid "Filters"
-msgstr ""
+msgstr "Filtres"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:85
 #: ../../assets/plugins/Filter/class-tp-filter.php:293
@@ -630,17 +632,17 @@ msgstr ""
 #: ../plugins/Filter/class-tp-filter.php:293
 #: ../plugins/Filter/class-tp-filter.php:307
 msgid "Filter"
-msgstr ""
+msgstr "Filtre"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:86
 #: ../plugins/Filter/class-tp-filter.php:86
 msgid "Add filter"
-msgstr ""
+msgstr "Ajouter un filtre"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:87
 #: ../plugins/Filter/class-tp-filter.php:87
 msgid "Add new filter"
-msgstr ""
+msgstr "Ajouter un nouveau filtre"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:113
 #: ../../assets/plugins/Filter/class-tp-filter.php:182
@@ -649,7 +651,7 @@ msgstr ""
 #: ../plugins/Filter/class-tp-filter.php:182
 #: ../plugins/Filter/class-tp-filter.php:206
 msgid "Post types"
-msgstr ""
+msgstr "Types d'articles"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:114
 #: ../../assets/plugins/pt-order/class-tp-pt-order.php:52
@@ -658,129 +660,133 @@ msgstr ""
 #: ../plugins/pt-order/class-tp-pt-order.php:52
 #: ../plugins/pt-order/class-tp-pt-order.php:67
 msgid "Order"
-msgstr ""
+msgstr "Commander"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:128
 #: ../../assets/plugins/Filter/class-tp-filter.php:179
 #: ../plugins/Filter/class-tp-filter.php:128
 #: ../plugins/Filter/class-tp-filter.php:179
 msgid "Not filterable"
-msgstr ""
+msgstr "Non filtrable"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:143
 #: ../../assets/plugins/Filter/class-tp-filter.php:198
 #: ../plugins/Filter/class-tp-filter.php:143
 #: ../plugins/Filter/class-tp-filter.php:198
 msgid "Filterable"
-msgstr ""
+msgstr "Filtrable"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:156
 #: ../plugins/Filter/class-tp-filter.php:156
 msgid "Drag and drop post types here to make them filterable."
-msgstr ""
+msgstr "Glisser-déposer des types d'articles ici pour les rendre filtrables"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:218
 #: ../plugins/Filter/class-tp-filter.php:218
 msgid "Drag and drop items here to make them filterable."
-msgstr ""
+msgstr "Glisser-déposer des objets ici pour les rendre filtrables"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:226
 #: ../plugins/Filter/class-tp-filter.php:226
 msgid ""
 "Please select one or more post types that have taxonomies assigned to them."
 msgstr ""
+"Veuillez sélectionner un ou plusieurs types d'articles qui ont des "
+"taxonomies assignés"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:288
 #: ../plugins/Filter/class-tp-filter.php:288
 msgid "Filter widget"
-msgstr ""
+msgstr "Widget filtre"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:288
 #: ../plugins/Filter/class-tp-filter.php:288
 msgid "A widget that filters on some taxonomies through AJAX"
-msgstr ""
+msgstr "Un widget qui filtre selon certaines taxonomies par le biais d'AJAX"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:312
 #: ../plugins/Filter/class-tp-filter.php:312
 msgid "Select a filter.."
-msgstr ""
+msgstr "Sélectionner un filtre.."
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:319
 #: ../plugins/Filter/class-tp-filter.php:319
 #, php-format
 msgid "You don't have any filters yet! <a href=\"%1$s\">Create one now</a>"
 msgstr ""
+"Vous n'avez pas encore de filtres ! <a href=\"%1$s\">En créer un maintenant</"
+"a>"
 
 #: ../../assets/plugins/Filter/class-tp-filter.php:429
 #: ../plugins/Filter/class-tp-filter.php:429
 msgid "Filter by type"
-msgstr ""
+msgstr "Filtrer par type"
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:26
 #: ../plugins/global-content/class-tp-global-content.php:26
 msgid "General"
-msgstr ""
+msgstr "Général"
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:28
 #: ../plugins/global-content/class-tp-global-content.php:28
 msgid "Add content"
-msgstr ""
+msgstr "Ajouter du contenu"
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:29
 #: ../plugins/global-content/class-tp-global-content.php:29
 msgid "Add new content"
-msgstr ""
+msgstr "Ajouter un nouveau contenu"
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:47
 #: ../plugins/global-content/class-tp-global-content.php:47
 msgid "Template tag"
-msgstr ""
+msgstr "Étiquette modèle"
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:48
 #: ../plugins/global-content/class-tp-global-content.php:48
 msgid "Shortcode"
-msgstr ""
+msgstr "Code simple"
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
 msgid "Enrich"
-msgstr ""
+msgstr "Enrichir"
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:106
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:106
 #, php-format
 msgid "Back to %1$s overview"
-msgstr ""
+msgstr "Retour à la vue d'ensemble %1$s"
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:117
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:117
 msgid "Enriched"
-msgstr ""
+msgstr "Enrichi"
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:119
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:119
 msgid "Remove enrichment"
-msgstr ""
+msgstr "Supprimer l'enrichissement"
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
 msgid "Show all"
-msgstr ""
+msgstr "Afficher tous"
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
 msgid "Only show enriched"
-msgstr ""
+msgstr "Afficher seulement les enrichis"
 
 #: ../../assets/plugins/sticky-posts/class-tp-sticky-posts.php:36
 #: ../plugins/sticky-posts/class-tp-sticky-posts.php:36
 msgid "Make this post sticky"
-msgstr ""
+msgstr "Rendre cet article adhésif"
 
 #: ../../assets/plugins/term-image/class-tp-term-image.php:64
 #: ../plugins/term-image/class-tp-term-image.php:64
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #, fuzzy
 #~ msgid ""
