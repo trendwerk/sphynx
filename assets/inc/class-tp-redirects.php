@@ -136,8 +136,7 @@ class TP_Manage_Redirects {
 					END
 				" );
 			} else {
-				$page = intval( $_POST['page'] );
-				$redirects = $this->get_redirects( 1, $page );
+				$redirects = $this->get_redirects( 1 );
 			}
 
 		} elseif( 'paged' == $_POST['type'] ) {
@@ -195,15 +194,20 @@ class TP_Manage_Redirects {
 		$reference = esc_attr( $_POST['refSource'] );
 		$source = esc_attr( $_POST['source'] );
 		$destination = esc_attr( $_POST['destination'] );
-		$search = esc_attr( $_POST['search'] );
 
 		if( $reference )
 			$wpdb->query( "UPDATE " . $wpdb->prefix . "redirects SET source = '" . $source . "', destination = '" . $destination . "' WHERE source = '" . $reference . "'" );
 
-		$_POST['type'] = 'search';
-		$_POST['term'] = $search;
+		//Retrieve new HTML
+		$redirect = $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix. "redirects WHERE source = '" . $source . "'" );
+		
+		ob_start();
+		$this->display_redirects( $redirect );
+		$output = ob_get_clean();
 
-		$this->_get();
+		wp_send_json( array(
+			'html' => $output,
+		) );
 	}
 
 	/**
@@ -339,13 +343,10 @@ class TP_Manage_Redirects {
 	function get_redirects( $page, $to_page = null ) {
 		global $wpdb;
 
-		if( ! $to_page )
-			$to_page = ( $page + 1 );
+		$limit = '0,100';
 
-		$limit = ( ( $page - 1 ) * 100 ) . ',' . ( $to_page - $page ) * 100;
-
-		// if( $to_page-1 > $page )
-			// dbg( $limit );
+		if( 1 < $page )
+			$limit = ( ( $page - 1 ) * 100 ) . ',100';
 
 		return $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "redirects LIMIT " . $limit );
 	}

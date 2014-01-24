@@ -36,10 +36,14 @@
 			} );
 
 			$( el ).on( 'keyup', 'td.source input, td.destination input', function( event ) {
-				if( 13 == event.which )
-					self.save( $( this ).closest( 'tr' ).data( 'source' ), $( this ).closest( 'tr' ).find( 'td.source input' ).val(), $( this ).closest( 'tr' ).find( 'td.destination input' ).val() );
-				else if( 27 == event.which )
+				if( 13 == event.which ) {
+					self.save( $( this ).closest( 'tr' ).data( 'source' ), $( this ).closest( 'tr' ).find( 'td.source input' ).val(), $( this ).closest( 'tr' ).find( 'td.destination input' ).val(), function() {
+						$( 'input#tp-redirects-search' ).focus();
+					} );
+				} else if( 27 == event.which ) {
 					self.dismiss( $( this ).closest( 'tr' ).data( 'source' ) );
+					$( 'input#tp-redirects-search' ).focus();
+				}
 			} );
 
 			/**
@@ -68,7 +72,7 @@
 			 */
 			$( window ).scroll( function() {
 			    if( '' == $( el ).find( '#tp-redirects-search').val() && $( window ).scrollTop() == $( document ).height() - $( window ).height() ) {
-			    	self.loadMore();
+			    	self.next();
 			    }
 			} );
 		}
@@ -142,10 +146,7 @@
 			if( response.page )
 				self.page = response.page;
 
-			self.waiting = false;
-
-			if( self.page <= 1 )
-				$( el ).find( 'input#tp-redirects-search' ).focus();
+			self.waiting = false;				
 
 			$( el ).find( 'tr.tp-redirects-more' ).hide();
 		}
@@ -174,7 +175,7 @@
 		/**
 		 * Save edited redirect
 		 */
-		this.save = function( refSource, source, destination ) {
+		this.save = function( refSource, source, destination, callback ) {
 			if( self.waiting )
 				return;
 
@@ -183,13 +184,16 @@
 				action:      'tp_redirects_save',
 				refSource:   refSource,
 				source:      source,
-				destination: destination,
-				search:      $( el ).find( '#tp-redirects-search' ).val(),
-				page:        self.page
+				destination: destination
 			}
 
 			$.post( ajaxurl, data, function( response ) {
-				self.parse( response );
+				if( response.html )
+					$( el ).find( 'tr[data-source="' + refSource + '"]').after( response.html ).remove();
+
+				self.waiting = false;
+
+				callback();
 			} );
 		}
 
@@ -210,15 +214,10 @@
 			}
 
 			$.post( ajaxurl, data, function( response ) {
-				if( response.removed ) {
-					var row = $( el ).find( 'tr[data-source="' + source + '"]');
-					row.remove();
-				}
+				if( response.removed )
+					$( el ).find( 'tr[data-source="' + source + '"]').remove();
 
 				self.waiting = false;
-
-				if( self.page <= 1 )
-					$( el ).find( 'input#tp-redirects-search' ).focus();
 			} );
 		}
 
@@ -230,15 +229,12 @@
 
 			row.removeClass( 'editing' );
 			row.html( row.data( 'html-before' ) );
-
-			if( self.page <= 1 )
-				$( el ).find( 'input#tp-redirects-search' ).focus();
 		}
 
 		/**
 		 * Load more (pagination)
 		 */
-		this.loadMore = function() {
+		this.next = function() {
 			if( ! self.page )
 				self.page = 1;
 
