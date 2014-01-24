@@ -35,10 +35,15 @@ class TP_Redirects {
 		$destination = $wpdb->get_results( "SELECT * FROM wp_redirects WHERE source='" . $source . "'" );
 
 		if( 0 < count( $destination ) && isset( $destination[0]->destination ) && 0 < strlen( $destination[0]->destination ) ) {
-			if( filter_var( $destination[0]->destination, FILTER_VALIDATE_URL ) === false )
-				return trailingslashit( site_url() . $destination[0]->destination );
+			$destination = $destination[0]->destination;
+
+			if( $destination == end( explode( '.', $destination ) ) ) //No extension (e.g. .html)
+				$destination = trailingslashit( $destination );
+				
+			if( filter_var( $destination, FILTER_VALIDATE_URL ) === false )
+				return site_url() . $destination;
 			else
-				return trailingslashit( $destination[0]->destination ); //External
+				return $destination; //External
 		}
 
 		return false;
@@ -283,9 +288,7 @@ class TP_Manage_Redirects {
 					<tr class="tp-redirects-more">
 					
 						<td colspan="3">
-							<img src="<?php echo admin_url( 'images/wpspin_light.gif' ); ?>" />
-
-							<?php _e( 'Loading more redirects', 'tp' ); ?>
+							<span class="spinner"></span>
 						</td>
 
 					</tr>
