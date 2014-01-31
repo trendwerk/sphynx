@@ -104,7 +104,7 @@ class TP_CPT_Extras {
 			
 			$nav = new TP_Nav();
 			
-			if( is_single() || is_tax() || is_paged() ) {
+			if( is_single() || is_tax() || is_paged() || is_author() ) {
 				foreach( $items as &$item ) {
 					if( $nav->current_item == $item->ID )
 						$item->classes[] = 'current-menu-parent';
