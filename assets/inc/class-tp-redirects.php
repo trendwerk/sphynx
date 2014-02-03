@@ -137,6 +137,7 @@ class TP_Manage_Redirects {
 				" );
 			} else {
 				$redirects = $this->get_redirects( 1 );
+				$page = 1;
 			}
 
 		} elseif( 'paged' == $_POST['type'] ) {
@@ -324,7 +325,7 @@ class TP_Manage_Redirects {
 
 				<td class="actions">
 					<a class="dashicons dashicons-edit tp-redirects-edit" title="<?php _e( 'Edit' ); ?>"></a>
-					<a class="dashicons dashicons-post-trash tp-redirects-remove" title="<?php _e( 'Remove' ); ?>"></a>
+					<a class="dashicons dashicons-trash tp-redirects-remove" title="<?php _e( 'Remove' ); ?>"></a>
 				</td>
 
 			</tr>
@@ -355,6 +356,9 @@ class TP_Manage_Redirects {
 	 * Enqueue scripts
 	 */
 	function enqueue_scripts() {
+		wp_enqueue_style( 'wp-pointer' );
+		wp_enqueue_script( 'wp-pointer' );
+
 		wp_enqueue_script( 'tp-redirects', get_template_directory_uri() . '/assets/js/tp-redirects/tp-redirects.js' );
 
 		wp_localize_script( 'tp-redirects', 'TP_Redirects_Labels', array(
@@ -364,5 +368,25 @@ class TP_Manage_Redirects {
 			'edit_dismiss'   => __( 'Dismiss', 'tp' ),
 			'site_url'       => get_site_url(),
 		) );
+
+		/**
+		 * Add pointers
+		 */
+		$dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
+
+		$pointers = array(
+			'tp-redirects-search' => array(
+				'element'         => '#tp-redirects-search',
+				'header'          => __( '“Enter” to create', 'tp' ),
+				'text'            => __( 'Press “Enter” to create or edit the redirect you\'re searching for.', 'tp' ),
+			),
+		);
+
+		foreach( $pointers as $pointer => $settings ) {
+			if( in_array( $pointer, $dismissed ) )
+				unset( $pointers[ $pointer ] );
+		}
+
+		wp_localize_script( 'tp-redirects', 'TP_Redirects_Pointers', $pointers );
 	}
 } new TP_Manage_Redirects;

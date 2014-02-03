@@ -3,8 +3,12 @@
 		var self = this;
 		var waiting = false;
 		var page = 1;
+		var tryLater = '';
+		var closedPointers = [];
 
 		this.events = function() {
+			self.prevTerm = '';
+
 			/**
 			 * Search
 			 */
@@ -13,19 +17,23 @@
 				if( term != $( this ).val() )
 					$( this ).val( term );
 
-				if( 13 == event.which && 0 < term.length )
+				if( 13 == event.which && 0 < term.length ) {
 					self.create( term );
+					self.point( 'tp-redirects-search', 'close', true );
+				}
 
 				if( 8 == event.which )
 					self.waiting = false; //Always listen to backspace
 
-				if( 91 == event.which && 0 == term.length )
+				if( term == self.prevTerm && 0 == term.length )
 					return;
 
 				if( 2 < term.length )
 					self.search( term );
 				else if( 0 == term.length )
 					self.search( '' );
+
+				self.prevTerm = term;
 			} );
 
 			/**
@@ -38,11 +46,14 @@
 			$( el ).on( 'keyup', 'td.source input, td.destination input', function( event ) {
 				if( 13 == event.which ) {
 					self.save( $( this ).closest( 'tr' ).data( 'source' ), $( this ).closest( 'tr' ).find( 'td.source input' ).val(), $( this ).closest( 'tr' ).find( 'td.destination input' ).val(), function() {
-						$( 'input#tp-redirects-search' ).focus();
+						if( $( 'input#tp-redirects-search' ).val() != '' )
+							$( 'input#tp-redirects-search' ).focus();
 					} );
 				} else if( 27 == event.which ) {
 					self.dismiss( $( this ).closest( 'tr' ).data( 'source' ) );
-					$( 'input#tp-redirects-search' ).focus();
+
+					if( $( 'input#tp-redirects-search' ).val() != '' )
+						$( 'input#tp-redirects-search' ).focus();
 				}
 			} );
 
@@ -81,6 +92,11 @@
 		 * Search redirects for a term
 		 */
 		this.search = function( term ) {
+			if( 0 < term.length )
+				self.point( 'tp-redirects-search' );
+			else
+				self.point( 'tp-redirects-search', 'close' );
+
 			self.get( {
 				type:   'search',
 				term:   term
@@ -100,15 +116,31 @@
 		 * Get redirects HTML and show them
 		 */
 		this.get = function( data ) {
-			if( self.waiting )
+			if( self.waiting && 'search' == data.type ) {
+				self.tryLater = data.term;
 				return;
+			}
 
 			self.waiting = true;
 			data.action = 'tp_redirects_get';
 
 			$.post( ajaxurl, data, function( response ) {
 				self.parse( response );
+				self.catchup();
 			} );
+		}
+
+		/**
+		 * Get redirects that might've been requested while waiting
+		 */
+		this.catchup = function() {
+			if( ! self.tryLater || $( el ).find( 'input#tp-redirects-search' ).val() != self.tryLater ) {
+				self.tryLater = '';
+				return;
+			}
+
+			self.search( self.tryLater );
+			self.tryLater = '';
 		}
 
 		/**
@@ -146,7 +178,7 @@
 			if( response.page )
 				self.page = response.page;
 
-			self.waiting = false;				
+			self.waiting = false;
 
 			$( el ).find( 'tr.tp-redirects-more' ).hide();
 		}
@@ -244,6 +276,36 @@
 				type:   'paged',
 				page:   self.page + 1
 			} );
+		}
+
+		/**
+		 * Show pointer
+		 */
+		this.point = function( to, action, dismiss ) {
+			if( ! action )
+				action = 'open';
+
+			if( TP_Redirects_Pointers[ to ] ) {
+				if( closedPointers[ to ] )
+					return;
+
+				var pointer = TP_Redirects_Pointers[ to ];
+
+				var pointer_el = $( pointer[ 'element']  ).pointer( {
+					content : '<h3>' + pointer[ 'header' ] + '</h3><p>' + pointer[ 'text' ] + '</p>',
+					close   : function() {
+						closedPointers[ to ] = true;
+
+						$.post( ajaxurl, {
+							pointer : to,
+							action  : 'dismiss-wp-pointer'
+						} );
+					}
+				} ).pointer( action );
+
+				if( dismiss )
+					pointer_el.close();
+			}
 		}
 		
 		/**
