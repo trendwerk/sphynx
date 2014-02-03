@@ -225,7 +225,8 @@
 
 				self.waiting = false;
 
-				callback();
+				if( typeof callback == 'function' )
+					callback();
 			} );
 		}
 
