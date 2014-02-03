@@ -325,7 +325,7 @@ class TP_Manage_Redirects {
 
 				<td class="actions">
 					<a class="dashicons dashicons-edit tp-redirects-edit" title="<?php _e( 'Edit' ); ?>"></a>
-					<a class="dashicons dashicons-trash tp-redirects-remove" title="<?php _e( 'Remove' ); ?>"></a>
+					<a class="dashicons dashicons-trash dashicons-post-trash tp-redirects-remove" title="<?php _e( 'Remove' ); ?>"></a>
 				</td>
 
 			</tr>

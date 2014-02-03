@@ -296,6 +296,9 @@
 					close   : function() {
 						closedPointers[ to ] = true;
 
+						if( action == 'close' && ! dismiss )
+							closedPointers[ to ] = false;
+
 						$.post( ajaxurl, {
 							pointer : to,
 							action  : 'dismiss-wp-pointer'
