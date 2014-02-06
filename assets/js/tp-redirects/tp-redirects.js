@@ -37,6 +37,13 @@
 			} );
 
 			/**
+			 * Add
+			 */
+			$( el ).on( 'click', '#tp-redirects-add', function() {
+				self.create( $( el ).find( '#tp-redirects-search' ).val() );
+			} );
+
+			/**
 			 * Edit
 			 */
 			$( el ).on( 'click', '.tp-redirects-edit', function() {

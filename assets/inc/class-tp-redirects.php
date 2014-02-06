@@ -116,7 +116,7 @@ class TP_Manage_Redirects {
 	 *
 	 * @return json Object data, containing HTML output
 	 */
-	function _get( $edit = null ) {
+	function _get() {
 		global $wpdb;
 
 		$replace = false;
@@ -155,7 +155,6 @@ class TP_Manage_Redirects {
 		wp_send_json( array(
 			'replace' => $replace,
 			'html'    => $output,
-			'edit'    => $edit,
 			'page'    => $page,
 		) );
 	}
@@ -168,7 +167,7 @@ class TP_Manage_Redirects {
 	function _create() {
 		global $wpdb;
 
-		$source = esc_attr( $_POST['source'] );
+		$source = $this->correct( $_POST['source'] );
 
 		if( $source )
 			$redirect = $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "redirects WHERE source = '" . $source . "'" );
@@ -181,7 +180,7 @@ class TP_Manage_Redirects {
 		$_POST['type'] = 'search';
 		$_POST['term'] = $source;
 
-		$this->_get( $redirect['source'] );
+		$this->_get();
 	}
 
 	/**
@@ -193,8 +192,8 @@ class TP_Manage_Redirects {
 		global $wpdb;
 
 		$reference = esc_attr( $_POST['refSource'] );
-		$source = esc_attr( $_POST['source'] );
-		$destination = esc_attr( $_POST['destination'] );
+		$source = $this->correct( $_POST['source'] );
+		$destination = $this->correct( $_POST['destination'] );
 
 		if( $reference )
 			$wpdb->query( "UPDATE " . $wpdb->prefix . "redirects SET source = '" . $source . "', destination = '" . $destination . "' WHERE source = '" . $reference . "'" );
@@ -209,6 +208,16 @@ class TP_Manage_Redirects {
 		wp_send_json( array(
 			'html' => $output,
 		) );
+	}
+
+	/**
+	 * Correct url
+	 * 
+	 * @param  string $url 
+	 * @return string
+	 */
+	function correct( $url ) {
+		return str_replace( get_site_url(), '', esc_attr( $url ) );
 	}
 
 	/**
@@ -246,6 +255,7 @@ class TP_Manage_Redirects {
 
 			<p>
 				<input type="text" id="tp-redirects-search" placeholder="<?php _e( 'Find or create redirect..', 'tp' ); ?>" />
+				<input type="button" id="tp-redirects-add" class="button-primary" value="<?php _e( 'Add' ); ?>" />
 			</p>
 			
 			<?php $this->display_redirect_table(); ?>
