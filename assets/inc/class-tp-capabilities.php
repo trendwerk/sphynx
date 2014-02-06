@@ -51,6 +51,8 @@ class TP_Capabilities {
 				$caps[] = 'do_not_allow';
 
 		} else if( $cap == 'delete_users' || $cap == 'edit_user' ) {
+			if( ! isset( $_GET['user'] ) )
+				return $caps;
 
 			$other_id = absint( $_GET['user'] );
 			

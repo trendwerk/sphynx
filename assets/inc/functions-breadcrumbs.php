@@ -25,7 +25,7 @@ function tp_breadcrumbs($separator='>',$menu='mainnav') {
 	$i=0;
 	if($breadcrumbs) {
 		foreach($breadcrumbs as $breadcrumb) {
-			if(!$breadcrumb->is_current) {
+			if( ! isset( $breadcrumb->is_current ) || !$breadcrumb->is_current) {
 				echo '<a href="'.$breadcrumb->url.'">';
 					echo $breadcrumb->title;
 				echo '</a>';
@@ -41,7 +41,7 @@ function tp_breadcrumbs($separator='>',$menu='mainnav') {
 	}
 	
 	//Single post or CPT and author pages or taxonomy pages have some
-	if(is_single() && !is_single($breadcrumbs[0]->ID)) {
+	if(is_single() && isset( $breadcrumbs[0]->ID ) && !is_single($breadcrumbs[0]->ID)) {
 		tp_separator($separator);
 		echo '<span class="current">'.$post->post_title.'</span>';
 	} else if(is_category()) {
