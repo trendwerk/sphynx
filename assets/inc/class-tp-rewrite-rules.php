@@ -34,6 +34,6 @@ class TP_Rewrite_Rules {
 			$rules = implode( "\n", $rules );
 		}
 
-		return $addition . $rules;
+		return $rules;
 	}
 } new TP_Rewrite_Rules;
