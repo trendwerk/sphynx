@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 22:41+0100\n"
-"PO-Revision-Date: 2012-12-10 22:41+0100\n"
+"POT-Creation-Date: 2014-01-22 21:20+0100\n"
+"PO-Revision-Date: 2014-01-22 21:21+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "MIME-Version: 1.0\n"
@@ -11,55 +11,222 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_n\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../../index.php:1
-msgid "Please activate a TrendPress child-theme to use this theme."
-msgstr "Veuillez activer un thème-enfant TrendPress pour utiliser ce thème."
+#: ../../index.php:21
+#, fuzzy
+msgid "Maintenance"
+msgstr "Nom de site"
 
-#: ../../assets/inc/class.TPNav.php:101 ../inc/class.TPNav.php:101
-msgid "Search for"
-msgstr "Rechercher"
+#: ../../index.php:24
+msgid "Briefly unavailable for scheduled maintenance. Check back in a minute."
+msgstr ""
 
-#: ../../assets/inc/class.TPNav.php:246
-#: ../../assets/inc/admin-views/theme-options.php:20
-#: ../inc/class.TPNav.php:246 ../inc/admin-views/theme-options.php:20
+#: ../../assets/inc/class-tp-cpt-extras.php:30
+#: ../inc/class-tp-cpt-extras.php:30
+msgid "Archive pages"
+msgstr ""
+
+#: ../../assets/inc/class-tp-cpt-extras.php:84
+#: ../inc/class-tp-cpt-extras.php:84
+msgid "Add to Menu"
+msgstr "Ajouter au menu"
+
+#: ../../assets/inc/class-tp-information.php:23
+#: ../inc/class-tp-information.php:23
+msgid "General settings"
+msgstr "Paramètres généraux"
+
+#: ../../assets/inc/class-tp-information.php:25
+#: ../inc/class-tp-information.php:25
+msgid "Sitename"
+msgstr "Nom de site"
+
+#: ../../assets/inc/class-tp-information.php:32
+#: ../inc/class-tp-information.php:32
+msgid "Description"
+msgstr "Description"
+
+#: ../../assets/inc/class-tp-information.php:42
+#: ../../assets/inc/class-tp-nav.php:307 ../inc/class-tp-information.php:42
+#: ../inc/class-tp-nav.php:307
 msgid "Contact"
 msgstr "Contact"
 
-#: ../../assets/inc/class.TPPlugins.php:36 ../inc/class.TPPlugins.php:36
-msgid "WordPress SEO by Yoast"
-msgstr "WordPress SEO by Yoast"
+#: ../../assets/inc/class-tp-information.php:44
+#: ../inc/class-tp-information.php:44
+msgid "Company name"
+msgstr "Nom d'entreprise"
 
-#: ../../assets/inc/class.TPPlugins.php:37 ../inc/class.TPPlugins.php:37
+#: ../../assets/inc/class-tp-information.php:50
+#: ../inc/class-tp-information.php:50
+msgid "Address"
+msgstr "Adresse"
+
+#: ../../assets/inc/class-tp-information.php:56
+#: ../inc/class-tp-information.php:56
+msgid "Postal code"
+msgstr "Code postal"
+
+#: ../../assets/inc/class-tp-information.php:62
+#: ../inc/class-tp-information.php:62
+msgid "City"
+msgstr "Ville"
+
+#: ../../assets/inc/class-tp-information.php:68
+#: ../inc/class-tp-information.php:68
+msgid "Country"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:74
+#: ../inc/class-tp-information.php:74
+msgid "E-mail"
+msgstr "Email"
+
+#: ../../assets/inc/class-tp-information.php:80
+#: ../inc/class-tp-information.php:80
+msgid "Telephone"
+msgstr "Téléphone"
+
+#: ../../assets/inc/class-tp-information.php:86
+#: ../inc/class-tp-information.php:86
+msgid "Fax"
+msgstr "Fax"
+
+#: ../../assets/inc/class-tp-information.php:95
+#: ../inc/class-tp-information.php:95
+#, fuzzy
+msgid "Registration numbers & financial"
+msgstr "Numéros d'enregistrement &amp; financier"
+
+#: ../../assets/inc/class-tp-information.php:97
+#: ../inc/class-tp-information.php:97
+msgid "CC No."
+msgstr "N° CCI"
+
+#: ../../assets/inc/class-tp-information.php:103
+#: ../inc/class-tp-information.php:103
+msgid "VAT No."
+msgstr "N° TVA"
+
+#: ../../assets/inc/class-tp-information.php:109
+#: ../inc/class-tp-information.php:109
+msgid "Bank name"
+msgstr "Nom de la banque"
+
+#: ../../assets/inc/class-tp-information.php:115
+#: ../inc/class-tp-information.php:115
+msgid "Bank No."
+msgstr "N° de la banque"
+
+#: ../../assets/inc/class-tp-information.php:124
+#: ../inc/class-tp-information.php:124
+msgid "Social media links"
+msgstr "Liens médias sociaux"
+
+#: ../../assets/inc/class-tp-information.php:126
+#: ../inc/class-tp-information.php:126
+msgid "Twitter URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:132
+#: ../inc/class-tp-information.php:132
+msgid "Facebook URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:138
+#: ../inc/class-tp-information.php:138
+msgid "LinkedIn URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:144
+#: ../inc/class-tp-information.php:144
+msgid "Google Plus URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:150
+#: ../inc/class-tp-information.php:150
+msgid "YouTube URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:156
+#: ../inc/class-tp-information.php:156
+msgid "Newsletter / mailto link"
+msgstr "Lien newsletter / mailto"
+
+#: ../../assets/inc/class-tp-information.php:163
+#: ../inc/class-tp-information.php:163
+msgid "Show RSS feed in the social media widget"
+msgstr "Montrer les flux RSS dans le widget medias sociaux"
+
+#: ../../assets/inc/class-tp-information.php:215
+#: ../../assets/inc/class-tp-information.php:227
+#: ../inc/class-tp-information.php:215 ../inc/class-tp-information.php:227
+msgid "Contact information"
+msgstr "Informations contact"
+
+#: ../../assets/inc/class-tp-nav.php:114 ../inc/class-tp-nav.php:114
+msgid "Search for"
+msgstr "Rechercher"
+
+#: ../../assets/inc/class-tp-nav.php:123 ../inc/class-tp-nav.php:123
+msgid "404"
+msgstr "404"
+
+#: ../../assets/inc/class-tp-plugins.php:42 ../inc/class-tp-plugins.php:42
+#, php-format
+msgid "Plugins in the %1$s folder are executed automatically."
+msgstr ""
+
+#: ../../assets/inc/class-tp-plugins.php:122 ../inc/class-tp-plugins.php:122
+msgid "TrendPress"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:25 ../inc/class-tp-profile.php:25
+msgid "Publish profile"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:33 ../inc/class-tp-profile.php:33
+msgid "Show profile on website"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:38 ../inc/class-tp-profile.php:38
+msgid "Show my profile on the website at blogposts and author archives"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:46 ../inc/class-tp-profile.php:46
+msgid "Profile picture"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:54 ../inc/class-tp-profile.php:54
+msgid "You can change your profile picture via"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:54 ../inc/class-tp-profile.php:54
 msgid ""
-"Improve your WordPress SEO: Write better content and have a fully optimized "
-"WordPress site using the WordPress SEO plugin by Yoast."
+"by logging in or signing up for free with the email address associated with "
+"your profile"
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:61
+#: ../inc/class-tp-recommended-plugins.php:61
+#, fuzzy
+msgid ""
+"Improve your SEO: Write better content and have a fully optimized WordPress "
+"site."
 msgstr ""
 "Améliorez votre WordPress SEO : rédigez un meilleur contenu and obtenez un "
 "site WordPress entièrement optimisé grâce au plugin WordPress SEO by Yoast."
 
-#: ../../assets/inc/class.TPPlugins.php:41 ../inc/class.TPPlugins.php:41
-msgid "Google Analytics for WordPress"
-msgstr "Google Analytics pour WordPress"
-
-#: ../../assets/inc/class.TPPlugins.php:42 ../inc/class.TPPlugins.php:42
-msgid ""
-"This plugin makes it simple to add Google Analytics to your WordPress blog, "
-"adding lots of features, eg. custom variables and automatic clickout and "
-"download tracking."
+#: ../../assets/inc/class-tp-recommended-plugins.php:67
+#: ../inc/class-tp-recommended-plugins.php:67
+msgid "Add Google Analytics to the website to track user statistics."
 msgstr ""
-"Ce plugin permet d'ajouter facilement Google Analytics à votre blog "
-"WordPress, ajoutant de nombreuses fonctions, par exemple des variables "
-"personnalisées et des suivis de clickouts et de téléchargements automatiques."
 
-#: ../../assets/inc/class.TPPlugins.php:46 ../inc/class.TPPlugins.php:46
-msgid "W3 Total Cache"
-msgstr "W3 Total Cache"
-
-#: ../../assets/inc/class.TPPlugins.php:47 ../inc/class.TPPlugins.php:47
+#: ../../assets/inc/class-tp-recommended-plugins.php:72
+#: ../inc/class-tp-recommended-plugins.php:72
 msgid ""
 "Improve site performance and user experience via caching: browser, page, "
 "object, database, minify and content delivery network support."
@@ -68,86 +235,87 @@ msgstr ""
 "caching : navigateur, page, objet, base de données, minify et support pour "
 "le réseau de distribution de contenu."
 
-#: ../../assets/inc/class.TPPlugins.php:51 ../inc/class.TPPlugins.php:51
-msgid "WP Smush.it"
-msgstr "WP Smush.it"
-
-#: ../../assets/inc/class.TPPlugins.php:52 ../inc/class.TPPlugins.php:52
+#: ../../assets/inc/class-tp-recommended-plugins.php:77
+#: ../inc/class-tp-recommended-plugins.php:77
 msgid ""
-"Reduce image file sizes and improve performance using the Smush.it API "
-"within WordPress."
+"Limits the maximum number of login attempts to increase security and protect "
+"the website against brute force attacks."
 msgstr ""
-"Réduisez la taille des fichiers images et améliorez la performance en "
-"utilisant l'API de Smush.it dans WordPress."
 
-#: ../../assets/inc/class.TPPlugins.php:56 ../inc/class.TPPlugins.php:56
-msgid "Search everything"
-msgstr "Tout rechercher"
-
-#: ../../assets/inc/class.TPPlugins.php:57 ../inc/class.TPPlugins.php:57
-msgid "Increases WordPress' default search functionality in three easy steps."
-msgstr ""
-"Améliore la fonctionalité de recherche par défaut de WordPress grâce à trois "
-"étapes faciles."
-
-#: ../../assets/inc/class.TPPlugins.php:62 ../inc/class.TPPlugins.php:62
-msgid "TinyMCE Advanced"
-msgstr "TinyMCE Advanced"
-
-#: ../../assets/inc/class.TPPlugins.php:63 ../inc/class.TPPlugins.php:63
+#: ../../assets/inc/class-tp-recommended-plugins.php:82
+#: ../inc/class-tp-recommended-plugins.php:82
 msgid "Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor."
 msgstr ""
 "Permet l'utilisation des fonctions avancées de TinyMCE, l'éditeur WordPress "
 "WYSIWYG."
 
-#: ../../assets/inc/class.TPPlugins.php:71 ../inc/class.TPPlugins.php:71
-msgid "Multiple content blocks"
-msgstr "Blocks contenu multiple"
-
-#: ../../assets/inc/class.TPPlugins.php:72 ../inc/class.TPPlugins.php:72
-msgid "Allow for more content blocks in WordPress than just the one."
+#: ../../assets/inc/class-tp-recommended-plugins.php:91
+#: ../inc/class-tp-recommended-plugins.php:91
+msgid "Display more than one content field on WordPress pages and posts."
 msgstr ""
 
-#: ../../assets/inc/class.TPPlugins.php:76 ../inc/class.TPPlugins.php:76
-msgid "Redirection"
-msgstr "Redirection"
-
-#: ../../assets/inc/class.TPPlugins.php:77 ../inc/class.TPPlugins.php:77
+#: ../../assets/inc/class-tp-recommended-plugins.php:96
+#: ../inc/class-tp-recommended-plugins.php:96
 msgid ""
-"Redirection is a WordPress plugin to manage 301 redirections and keep track "
-"of 404 errors without requiring knowledge of Apache .htaccess files."
-msgstr ""
-"Redirection est un plugin WordPress qui permet de gérer 301 redirections et "
-"de retracer les erreurs 404 sans avoir besoin de la connaissance de "
-"fichiers .htccess de Apache."
-
-#: ../../assets/inc/class.TPPlugins.php:81 ../inc/class.TPPlugins.php:81
-msgid "WP Migrate DB"
+"Replaces your WordPress comment system with your comments hosted and powered "
+"by Disqus."
 msgstr ""
 
-#: ../../assets/inc/class.TPPlugins.php:82 ../inc/class.TPPlugins.php:82
+#: ../../assets/inc/class-tp-recommended-plugins.php:101
+#: ../inc/class-tp-recommended-plugins.php:101
 msgid ""
-"Exports your database, does a find and replace on URLs and file paths, then "
-"allows you to save it to your computer."
+"Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter "
+"and Facebook as comments."
 msgstr ""
 
-#: ../../assets/inc/class.TPPlugins.php:109
-#: ../../assets/inc/admin-views/recommended-plugins.php:3
-#: ../../assets/inc/admin-views/recommended-plugins.php:7
-#: ../inc/class.TPPlugins.php:109 ../inc/admin-views/recommended-plugins.php:3
-#: ../inc/admin-views/recommended-plugins.php:7
+#: ../../assets/inc/class-tp-recommended-plugins.php:106
+#: ../inc/class-tp-recommended-plugins.php:106
+msgid ""
+"Adds HTML5 placeholder support to Gravity Forms fields with a Javascript "
+"fallback. Javascript & jQuery are required."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:111
+#: ../inc/class-tp-recommended-plugins.php:111
+msgid ""
+"Send e-mails form the website using your preferred SMTP server to prevent e-"
+"mails from getting blocked by spam filter."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:119
+#: ../inc/class-tp-recommended-plugins.php:119
+msgid ""
+"Allows you to regenerate your thumbnails after changing the thumbnail sizes."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:124
+#: ../inc/class-tp-recommended-plugins.php:124
+msgid ""
+"Interface to customize the permalinks (author, category, archives and "
+"pagination) and htaccess file generated by WordPress."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:138
+#: ../../assets/inc/views/recommended-plugins.php:13
+#: ../../assets/inc/views/recommended-plugins.php:21
+#: ../inc/class-tp-recommended-plugins.php:138
+#: ../inc/views/recommended-plugins.php:13
+#: ../inc/views/recommended-plugins.php:21
 msgid "Recommended plugins"
 msgstr "Plugins recommandés"
 
-#: ../../assets/inc/class.TPPlugins.php:109 ../inc/class.TPPlugins.php:109
+#: ../../assets/inc/class-tp-recommended-plugins.php:138
+#: ../inc/class-tp-recommended-plugins.php:138
 msgid "Recommended"
 msgstr "Recommandés"
 
-#: ../../assets/inc/class.TPPlugins.php:126 ../inc/class.TPPlugins.php:126
+#: ../../assets/inc/class-tp-recommended-plugins.php:158
+#: ../inc/class-tp-recommended-plugins.php:158
 msgid "Recommended plugin <strong>activated</strong>."
 msgstr "Plugin recommandé <strong>activaté</strong>."
 
-#: ../../assets/inc/class.TPPlugins.php:238 ../inc/class.TPPlugins.php:238
+#: ../../assets/inc/class-tp-recommended-plugins.php:249
+#: ../inc/class-tp-recommended-plugins.php:249
 #, php-format
 msgid ""
 "The plugin <strong>%1$s</strong> has been reset to the recommended "
@@ -156,203 +324,152 @@ msgstr ""
 "Le plugin <strong>%1$s</strong> a été réinitialisé aux paramètres TrendPress "
 "recommandés."
 
-#: ../../assets/inc/class.TPPlugins.php:285 ../inc/class.TPPlugins.php:285
+#: ../../assets/inc/class-tp-recommended-plugins.php:299
+#: ../inc/class-tp-recommended-plugins.php:299
 #, php-format
 msgid "<a href=\"%1$s\">Return to recommended plugins</a>"
 msgstr "<a href=\"%1$s\">Revenir aux plugins recommandés</a>"
 
-#: ../../assets/inc/functions.breadcrumbs.php:20
-#: ../inc/functions.breadcrumbs.php:20
+#: ../../assets/inc/functions-breadcrumbs.php:22
+#: ../inc/functions-breadcrumbs.php:22
 msgid "Home"
 msgstr "Accueil"
 
-#: ../../assets/inc/functions.custom-post-type.php:22
-#: ../inc/functions.custom-post-type.php:22
-msgid "Custom post types"
-msgstr "Types de poste personnalisés"
-
-#: ../../assets/inc/functions.custom-post-type.php:58
-#: ../inc/functions.custom-post-type.php:58
-msgid "There are no Custom Post Types at the moment."
-msgstr "Il n'y a pas de types de poste personnalisés pour le moment."
-
-#: ../../assets/inc/functions.custom-post-type.php:68
-#: ../inc/functions.custom-post-type.php:68
-msgid "Add to Menu"
-msgstr "Ajouter au menu"
-
-#: ../../assets/inc/functions.pagination.php:16
-#: ../inc/functions.pagination.php:16
+#: ../../assets/inc/functions-pagination.php:22
+#: ../inc/functions-pagination.php:22
 msgid "Pagination"
 msgstr "Pagination"
 
-#: ../../assets/inc/functions.pagination.php:17
-#: ../inc/functions.pagination.php:17
+#: ../../assets/inc/functions-pagination.php:23
+#: ../inc/functions-pagination.php:23
 msgid "Next"
 msgstr "Suivant"
 
-#: ../../assets/inc/functions.pagination.php:18
-#: ../inc/functions.pagination.php:18
+#: ../../assets/inc/functions-pagination.php:24
+#: ../inc/functions-pagination.php:24
 msgid "Previous"
 msgstr "Précédent"
 
-#: ../../assets/inc/functions.theme-options.php:10
-#: ../inc/functions.theme-options.php:10
-msgid "Contact information"
-msgstr "Informations contact"
-
-#: ../../assets/inc/widget.submenu.php:10 ../inc/widget.submenu.php:10
-msgid "Shows the submenu according to the custom menu"
-msgstr "Affiche le sous-menu d'après le menu personnalisé"
-
-#: ../../assets/inc/widget.submenu.php:12 ../inc/widget.submenu.php:12
-msgid "Submenu"
-msgstr "Sous-menu"
-
-#: ../../assets/inc/admin-views/plugin-table.php:20
-#: ../inc/admin-views/plugin-table.php:20
+#: ../../assets/inc/views/plugin-table.php:34 ../inc/views/plugin-table.php:34
 msgid "Install now"
 msgstr "Installer maintenant"
 
-#: ../../assets/inc/admin-views/plugin-table.php:22
-#: ../inc/admin-views/plugin-table.php:22
+#: ../../assets/inc/views/plugin-table.php:36 ../inc/views/plugin-table.php:36
 msgid "Are you sure you want to reset to the recommended TrendPress settings?"
 msgstr ""
 "Etes-vous sûr de vouloir réinitialiser aux paramètres TrendPress "
 "recommandés ?"
 
-#: ../../assets/inc/admin-views/plugin-table.php:22
-#: ../inc/admin-views/plugin-table.php:22
+#: ../../assets/inc/views/plugin-table.php:36 ../inc/views/plugin-table.php:36
 msgid "Apply settings"
 msgstr "Appliquer les paramètres"
 
-#: ../../assets/inc/admin-views/plugin-table.php:24
-#: ../inc/admin-views/plugin-table.php:24
+#: ../../assets/inc/views/plugin-table.php:38 ../inc/views/plugin-table.php:38
 msgid "Activate"
 msgstr "Activer"
 
-#: ../../assets/inc/admin-views/recommended-plugins.php:5
-#: ../inc/admin-views/recommended-plugins.php:5
+#: ../../assets/inc/views/recommended-plugins.php:17
+#: ../inc/views/recommended-plugins.php:17
+#, fuzzy
 msgid ""
-"On this page, you can install recommended plugins and apply recommended "
-"settings to them after installing."
+"On this page, you can install plugins recommended by Trendwerk and apply "
+"recommended settings to them after installing."
 msgstr ""
 "Sur cette page, vous pouvez installer des plugins recommandés et leur "
 "appliquer des paramètres recommandés après installation."
 
-#: ../../assets/inc/admin-views/recommended-plugins.php:12
-#: ../inc/admin-views/recommended-plugins.php:12
+#: ../../assets/inc/views/recommended-plugins.php:28
+#: ../inc/views/recommended-plugins.php:28
 msgid "Optional plugins"
 msgstr "Plugins optionnels"
 
-#: ../../assets/inc/admin-views/theme-options.php:3
-#: ../inc/admin-views/theme-options.php:3
-msgid "Contact info"
-msgstr "Informations contact"
-
-#: ../../assets/inc/admin-views/theme-options.php:6
-#: ../inc/admin-views/theme-options.php:6
-msgid "General settings"
-msgstr "Paramètres généraux"
-
-#: ../../assets/inc/admin-views/theme-options.php:10
-#: ../inc/admin-views/theme-options.php:10
-msgid "Sitename"
-msgstr "Nom de site"
-
-#: ../../assets/inc/admin-views/theme-options.php:14
-#: ../inc/admin-views/theme-options.php:14
-msgid "Description"
-msgstr "Description"
-
-#: ../../assets/inc/admin-views/theme-options.php:24
-#: ../inc/admin-views/theme-options.php:24
-msgid "Company name"
-msgstr "Nom d'entreprise"
-
-#: ../../assets/inc/admin-views/theme-options.php:28
-#: ../inc/admin-views/theme-options.php:28
-msgid "Address"
-msgstr "Adresse"
-
-#: ../../assets/inc/admin-views/theme-options.php:32
-#: ../inc/admin-views/theme-options.php:32
-msgid "Postal code"
-msgstr "Code postal"
-
-#: ../../assets/inc/admin-views/theme-options.php:36
-#: ../inc/admin-views/theme-options.php:36
-msgid "City"
-msgstr "Ville"
-
-#: ../../assets/inc/admin-views/theme-options.php:40
-#: ../inc/admin-views/theme-options.php:40
-msgid "E-mail"
-msgstr "Email"
-
-#: ../../assets/inc/admin-views/theme-options.php:44
-#: ../inc/admin-views/theme-options.php:44
-msgid "Telephone"
-msgstr "Téléphone"
-
-#: ../../assets/inc/admin-views/theme-options.php:48
-#: ../inc/admin-views/theme-options.php:48
-msgid "Fax"
-msgstr "Fax"
-
-#: ../../assets/inc/admin-views/theme-options.php:54
-#: ../inc/admin-views/theme-options.php:54
-msgid "Registration numbers &amp; financial"
-msgstr "Numéros d'enregistrement &amp; financier"
-
-#: ../../assets/inc/admin-views/theme-options.php:58
-#: ../inc/admin-views/theme-options.php:58
-msgid "CC No."
-msgstr "N° CCI"
-
-#: ../../assets/inc/admin-views/theme-options.php:62
-#: ../inc/admin-views/theme-options.php:62
-msgid "VAT No."
-msgstr "N° TVA"
-
-#: ../../assets/inc/admin-views/theme-options.php:66
-#: ../inc/admin-views/theme-options.php:66
-msgid "Bank name"
-msgstr "Nom de la banque"
-
-#: ../../assets/inc/admin-views/theme-options.php:70
-#: ../inc/admin-views/theme-options.php:70
-msgid "Bank No."
-msgstr "N° de la banque"
-
-#: ../../assets/inc/admin-views/theme-options.php:76
-#: ../inc/admin-views/theme-options.php:76
-msgid "Social media links"
-msgstr "Liens médias sociaux"
-
-#: ../../assets/inc/admin-views/theme-options.php:77
-#: ../inc/admin-views/theme-options.php:77
-msgid ""
-"Please provide full URLs to your profile pages (e.g. http://twitter.com/"
-"trendwerk/)"
+#: ../../assets/inc/views/recommended-plugins.php:35
+#: ../inc/views/recommended-plugins.php:35
+msgid "Developer tools"
 msgstr ""
-"Veuillez fournir les URLs complets vers vos pages de profil (par exemple "
-"http://twitter.com/trendwerk/)"
 
-#: ../../assets/inc/admin-views/theme-options.php:101
-#: ../inc/admin-views/theme-options.php:101
-msgid "Newsletter / mailto link"
-msgstr "Lien newsletter / mailto"
+#~ msgid "Please activate a TrendPress child-theme to use this theme."
+#~ msgstr "Veuillez activer un thème-enfant TrendPress pour utiliser ce thème."
 
-#: ../../assets/inc/admin-views/theme-options.php:106
-#: ../inc/admin-views/theme-options.php:106
-msgid "Show RSS feed in the social media widget"
-msgstr "Montrer les flux RSS dans le widget medias sociaux"
+#~ msgid "WordPress SEO by Yoast"
+#~ msgstr "WordPress SEO by Yoast"
 
-#: ../../assets/inc/admin-views/theme-options.php:111
-#: ../inc/admin-views/theme-options.php:111
-msgid "Save"
-msgstr "Enregistrer"
+#~ msgid "Google Analytics for WordPress"
+#~ msgstr "Google Analytics pour WordPress"
+
+#~ msgid ""
+#~ "This plugin makes it simple to add Google Analytics to your WordPress "
+#~ "blog, adding lots of features, eg. custom variables and automatic "
+#~ "clickout and download tracking."
+#~ msgstr ""
+#~ "Ce plugin permet d'ajouter facilement Google Analytics à votre blog "
+#~ "WordPress, ajoutant de nombreuses fonctions, par exemple des variables "
+#~ "personnalisées et des suivis de clickouts et de téléchargements "
+#~ "automatiques."
+
+#~ msgid "W3 Total Cache"
+#~ msgstr "W3 Total Cache"
+
+#~ msgid "WP Smush.it"
+#~ msgstr "WP Smush.it"
+
+#~ msgid ""
+#~ "Reduce image file sizes and improve performance using the Smush.it API "
+#~ "within WordPress."
+#~ msgstr ""
+#~ "Réduisez la taille des fichiers images et améliorez la performance en "
+#~ "utilisant l'API de Smush.it dans WordPress."
+
+#~ msgid "Search everything"
+#~ msgstr "Tout rechercher"
+
+#~ msgid ""
+#~ "Increases WordPress' default search functionality in three easy steps."
+#~ msgstr ""
+#~ "Améliore la fonctionalité de recherche par défaut de WordPress grâce à "
+#~ "trois étapes faciles."
+
+#~ msgid "TinyMCE Advanced"
+#~ msgstr "TinyMCE Advanced"
+
+#~ msgid "Multiple content blocks"
+#~ msgstr "Blocks contenu multiple"
+
+#~ msgid "Redirection"
+#~ msgstr "Redirection"
+
+#~ msgid ""
+#~ "Redirection is a WordPress plugin to manage 301 redirections and keep "
+#~ "track of 404 errors without requiring knowledge of Apache .htaccess files."
+#~ msgstr ""
+#~ "Redirection est un plugin WordPress qui permet de gérer 301 redirections "
+#~ "et de retracer les erreurs 404 sans avoir besoin de la connaissance de "
+#~ "fichiers .htccess de Apache."
+
+#~ msgid "Custom post types"
+#~ msgstr "Types de poste personnalisés"
+
+#~ msgid "There are no Custom Post Types at the moment."
+#~ msgstr "Il n'y a pas de types de poste personnalisés pour le moment."
+
+#~ msgid "Shows the submenu according to the custom menu"
+#~ msgstr "Affiche le sous-menu d'après le menu personnalisé"
+
+#~ msgid "Submenu"
+#~ msgstr "Sous-menu"
+
+#~ msgid "Contact info"
+#~ msgstr "Informations contact"
+
+#~ msgid ""
+#~ "Please provide full URLs to your profile pages (e.g. http://twitter.com/"
+#~ "trendwerk/)"
+#~ msgstr ""
+#~ "Veuillez fournir les URLs complets vers vos pages de profil (par exemple "
+#~ "http://twitter.com/trendwerk/)"
+
+#~ msgid "Save"
+#~ msgstr "Enregistrer"
 
 #~ msgid ""
 #~ "Lets you use more than one content \"block\" on a template. You only have "

@@ -303,8 +303,8 @@ class TP_Nav {
 			//Single page, base the current item on the custom menu
 			$this->current_item = $this->get_nav_id_by_page_id( $post->ID );
 		} else if( get_query_var( 'author' ) ) {
-			//Author page, use contact page
-			$this->current_item = $this->get_nav_id_by_page_title( __( 'Contact', 'tp' ) );
+			//Author page, use blog page
+			$this->current_item = $this->get_nav_id_by_page_title( __( 'Blog', 'tp' ) );
 			$this->is_single = true;
 		} else if( get_query_var( 's' ) ) {
 			//Search page
