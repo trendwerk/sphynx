@@ -29,7 +29,9 @@ class TP_Redirects {
 		 */
 		$source = str_replace( site_url(), '', $source );
 
-		if( $source == end( explode( '.', $source ) ) ) //No extension (e.g. .html)
+		$extension = explode( '.', $source );
+
+		if( $source == end( $extension ) ) //No extension (e.g. .html)
 			$source = trailingslashit( $source );
 
 		$destination = $wpdb->get_results( "SELECT * FROM wp_redirects WHERE source='" . $source . "'" );
@@ -37,7 +39,9 @@ class TP_Redirects {
 		if( 0 < count( $destination ) && isset( $destination[0]->destination ) && 0 < strlen( $destination[0]->destination ) ) {
 			$destination = $destination[0]->destination;
 
-			if( $destination == end( explode( '.', $destination ) ) ) //No extension (e.g. .html)
+			$extension = explode( '.', $destination );
+
+			if( $destination == end( $extension ) ) //No extension (e.g. .html)
 				$destination = trailingslashit( $destination );
 				
 			if( filter_var( $destination, FILTER_VALIDATE_URL ) === false )
