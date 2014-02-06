@@ -2,7 +2,7 @@
 global $author;
 
 if( ! $author ) 
-	$author = get_the_author_ID();
+	$author = get_the_author_meta( 'ID' );
 
 if( get_the_author_meta( 'show_profile', $author ) ) {
 

@@ -119,7 +119,7 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 		<?php
 	}
 	
-	function update( $new_instance ) {
+	function update( $new_instance, $old_instance ) {
 		$new_instance['show_button'] = isset( $new_instance['show_button'] );
 		$new_instance['button_link'] = tp_maybe_add_http( $new_instance['button_link'] );
 		$new_instance['external'] = isset( $new_instance['external'] );

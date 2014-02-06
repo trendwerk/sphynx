@@ -31,7 +31,7 @@ class TP_FB_Like_Box extends WP_Widget {
 		<?php
 	}
 	
-	function update( $new_instance ) {		
+	function update( $new_instance, $old_instance ) {		
 		$new_instance['url'] = tp_maybe_add_http( $new_instance['url'] );
 		
 		return $new_instance;

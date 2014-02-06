@@ -63,7 +63,7 @@ class TP_Post_Type_Posts extends WP_Widget {
 		}
 	}
 
-	function update( $new_instance ) {
+	function update( $new_instance, $old_instance ) {
 		$new_instance['number'] = absint( $new_instance['number'] );
 		$new_instance['archive_link'] = isset( $new_instance['archive_link'] );
 		
