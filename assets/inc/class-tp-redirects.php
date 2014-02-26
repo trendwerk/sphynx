@@ -219,8 +219,10 @@ class TP_Manage_Redirects {
 	 * 
 	 * @param  string $url 
 	 * @return string
+	 *
+	 * @abstract
 	 */
-	function correct( $url ) {
+	static function correct( $url ) {
 		return str_replace( get_site_url(), '', esc_attr( $url ) );
 	}
 
@@ -404,3 +406,35 @@ class TP_Manage_Redirects {
 		wp_localize_script( 'tp-redirects', 'TP_Redirects_Pointers', $pointers );
 	}
 } new TP_Manage_Redirects;
+
+/**
+ * API
+ *
+ * @package TrendPress
+ * @subpackage Redirects
+ */
+
+/**
+ * Update a redirect. Creates one if it doesnt exist yet.
+ *
+ * @param string $source Source URL
+ * @param string $destination Destination URL
+ */
+function tp_update_redirect( $source, $destination ) {
+	global $wpdb;
+
+	$source = TP_Manage_Redirects::correct( $source );
+	$destination = TP_Manage_Redirects::correct( $destination );
+
+	if( ! $source )
+		return;
+
+	$redirect = $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "redirects WHERE source = '" . $source . "'" );
+
+	if( 0 == count( $redirect ) )
+		$redirect = $wpdb->query( "INSERT INTO " . $wpdb->prefix . "redirects VALUES( '" . $source . "', '' );");
+	else
+		$redirect = $wpdb->query( "UPDATE " . $wpdb->prefix . "redirects SET destination = '" . $destination . "' WHERE source = '" . $source . "'" );
+
+	return $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "redirects WHERE source = '" . $source . "'" );
+}
