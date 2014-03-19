@@ -24,10 +24,17 @@
 		
 			<div class="container-inner">
 				
-				<div id="logo" class="eightcol">
-					<p id="sitename"><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></p>
-					<p id="description"><?php bloginfo( 'description' ); ?></p>
-				</div>
+				<div id="logo" class="eightcol" itemscope itemtype="http://schema.org/Organization">
+					<p id="sitename">
+						<a itemprop="url" href="<?php bloginfo( 'url' ); ?>">
+							<?php bloginfo( 'name' ); ?>
+							<?php /* <img alt="<?php bloginfo('name'); ?> logo" itemprop="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.png" /> */ ?>
+						</a>
+					</p>
+					<p id="description">
+						<?php bloginfo( 'description' ); ?>
+					</p>
+				</div>	
 				
 				<div id="mobile">
 					<div id="mobile-search" data-toggle="#search">

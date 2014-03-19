@@ -79,7 +79,7 @@ class TP_Contact extends WP_Widget {
 							echo '<span class="label">' . __( 'CC No', 'tp' ) . ': </span>' . $cc . '<br />';
 
 						if( $vat = get_option( 'tp-vat' ) )
-							echo '<span class="label" itemprop="vatID">' . __( 'VAT No', 'tp' ) . ': </span>' . $vat . '<br />';
+							echo '<span class="label">' . __( 'VAT No', 'tp' ) . ': </span>' . '<span itemprop="vatID">' . $vat . '</span>' . '<br />';
 						
 						if( $bankno = get_option( 'tp-bank-no' ) ) {
 							$bank = ( 0 < strlen( get_option( 'tp-bank' ) ) ) ? get_option( 'tp-bank' ) : __( 'Bank', 'tp' );
