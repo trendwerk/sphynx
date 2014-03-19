@@ -34,18 +34,6 @@
 		
 		<?php wp_footer(); ?>
 		
-		<!--[if IE 6]>
-			<div class="ie6">
-				<p><?php _e( 'You are using a very old version of Internet Explorer. For the best experience please upgrade (for free) to a modern browser:', 'tp' ); ?>
-				<ul>
-					<li><a href="http://www.mozilla.com/" rel="nofollow external">Firefox</a></li>
-					<li><a href="http://www.google.com/chrome/" rel="nofollow external">Google Chrome</a></li>
-					<li><a href="http://www.apple.com/safari/" rel="nofollow external">Safari</a></li>
-					<li><a href="http://www.microsoft.com/windows/internet-explorer/" rel="nofollow external">Internet Explorer</a></li>
-				</ul>
-			</div>
-		<![endif]-->
-		
 	</body>
 	
 </html>
