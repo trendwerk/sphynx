@@ -5,7 +5,7 @@
 	<div class="container-inner">
 	
 		<aside class="sidebar fourcol">
-			<?php dynamic_sidebar('page'); ?>
+			<?php dynamic_sidebar( 'page' ); ?>
 		</aside>
 		
 		<article id="content" class="content-right eightcol">	
