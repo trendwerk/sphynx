@@ -191,22 +191,6 @@
 
 /**
  * @section    Mixins
- * @subsection Mobile navigation
- */
-
-.maxDepth (@index) when (@index > 0) {
-	(~".depth@{index}") {
-		text-indent: @index * 15px - 15px;
-	}
-	.maxDepth(@index - 1);
-}
-
-.maxDepth (0) {}
-
-#mainnav select { .maxDepth(10); }
-
-/**
- * @section    Mixins
  * @subsection Opacity
  */
 
@@ -226,34 +210,24 @@
 
 .placeholder(@out, @on) {
 	
-	.animate {
-		
-		.animate-this(all, 0.25s, ease-in-out);
-	
-	}
-	
 	&:-moz-placeholder { color: @out; }
 	&::-moz-placeholder { color: @out; }
 	&:-ms-input-placeholder { color: @out; }
 	&::-webkit-input-placeholder { color: @out; }
 	
 	&:focus:-moz-placeholder { 
-		.animate; 
 		color: @on; 
 	}
 	
 	&:focus::-moz-placeholder { 
-		.animate;
 		color: @on;
 	}
 	
 	&:focus:-ms-input-placeholder { 
-		.animate;
 		color: @on; 
 	}
 	
 	&:focus::-webkit-input-placeholder { 
-		.animate;
 		color: @on; 
 	}
   
@@ -302,7 +276,7 @@
  */
     
 .sprite(@top, @left) {
-	background-image: url('assets/images/sprite-x1.png');
+	background-image: url('assets/img/sprite-x1.png');
 	background-repeat: no-repeat;
 	background-position: @top @left;
 	
@@ -310,7 +284,7 @@
 	only screen and (min--moz-device-pixel-ratio: 2),
 	only screen and (-o-min-device-pixel-ratio: 2/1),
 	only screen and (min-device-pixel-ratio: 2) {
-		background-image: url('assets/images/sprite-x2.png');
+		background-image: url('assets/img/sprite-x2.png');
 		background-position: @top x 2 @left x 2;
 		background-size: 500px 500px;
 	}

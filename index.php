@@ -24,8 +24,8 @@
 					<?php _e( 'Posts by', 'tp' ); ?>: <?php echo get_the_author_meta( 'display_name', $author ); ?>
 				</h1>
 				
-				<?php get_template_part( 'part-author' ); ?>
-				
+				<?php get_template_part( 'part', 'author' ); ?>
+
 			<?php } else { ?>
 			
 				<h1 id="page-title">
