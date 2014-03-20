@@ -21,11 +21,11 @@ class TP_Redirects {
 	/**
 	 * Maybe redirect someone to the right URL
 	 */
-	function get_maybe_redirect_url( $source ) {
+	function get_maybe_redirect_url( $source, $parameters = '' ) {
 		global $wpdb;
 
 		/**
-		 * Find the destination
+		 * Rectify source
 		 */
 		$source = str_replace( site_url(), '', $source );
 
@@ -34,6 +34,12 @@ class TP_Redirects {
 		if( $source == end( $extension ) ) //No extension (e.g. .html)
 			$source = trailingslashit( $source );
 
+		if( 0 < strlen( $parameters ) )
+			$source .= '?' . $parameters;
+
+		/**
+		 * Find the destination
+		 */
 		$destination = $wpdb->get_results( "SELECT * FROM wp_redirects WHERE source='" . $source . "'" );
 
 		if( 0 < count( $destination ) && isset( $destination[0]->destination ) && 0 < strlen( $destination[0]->destination ) ) {
@@ -60,7 +66,9 @@ class TP_Redirects {
 		global $wp;
 
 		if( is_404() ) {
-			$url = $this->get_maybe_redirect_url( home_url( $wp->request ) );
+			$parameters = parse_url( $_SERVER['REQUEST_URI'] );
+
+			$url = $this->get_maybe_redirect_url( home_url( $wp->request ), $parameters['query'] );
 
 			if( $url ) {
 				wp_redirect( $url, 301 );
@@ -277,49 +285,50 @@ class TP_Manage_Redirects {
 	function display_redirect_table() {
 		$redirects = $this->get_redirects( 1 );
 		
-		if( $redirects ) {
-			?>
+		?>
+		
+		<table class="tp-redirects-table widefat">
+
+			<thead>
+
+				<tr>
+
+					<th>
+						<?php _e( 'Source', 'tp' ); ?>
+					</th>
+
+					<th colspan="2">
+						<?php _e( 'Destination', 'tp' ); ?>
+					</th>
+
+				</tr>
+
+			</thead>
 			
-			<table class="tp-redirects-table widefat">
+			<tbody>
 
-				<thead>
+				<?php 
+					if( $redirects )
+						$this->display_redirects( $redirects );
+				?>
 
-					<tr>
+			</tbody>
 
-						<th>
-							<?php _e( 'Source', 'tp' ); ?>
-						</th>
+			<tfoot>
+				
+				<tr class="tp-redirects-more">
+				
+					<td colspan="3">
+						<span class="spinner"></span>
+					</td>
 
-						<th colspan="2">
-							<?php _e( 'Destination', 'tp' ); ?>
-						</th>
+				</tr>
 
-					</tr>
+			</tfoot>
 
-				</thead>
+		</table>
 
-				<tbody>
-					
-					<?php $this->display_redirects( $redirects ); ?>
-
-				</tbody>
-
-				<tfoot>
-					
-					<tr class="tp-redirects-more">
-					
-						<td colspan="3">
-							<span class="spinner"></span>
-						</td>
-
-					</tr>
-
-				</tfoot>
-
-			</table>
-
-			<?php
-		}
+		<?php
 	}
 
 	/**
