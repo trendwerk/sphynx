@@ -55,10 +55,13 @@
 						</a>
 						
 						<p class="article-content" itemprop="description">
+
 							<?php tp_the_excerpt( 80 ); ?>
-							<a class="more" href="<?php the_permalink(); ?>">
+
+							<a class="more-link" href="<?php the_permalink(); ?>">
 								<?php _e( 'Read more', 'tp' ); ?>
 							</a>
+							
 						</p>
 						
 					</article>
