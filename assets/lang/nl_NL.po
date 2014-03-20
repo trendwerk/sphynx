@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-21 16:21+0100\n"
-"PO-Revision-Date: 2014-01-21 16:21+0100\n"
-"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
+"POT-Creation-Date: 2014-03-20 17:59+0100\n"
+"PO-Revision-Date: 2014-03-20 18:00+0100\n"
+"Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -46,12 +46,12 @@ msgstr "sitemap"
 msgid "Posttype name"
 msgstr "Naam bericht type"
 
-#: ../../archive-posttype.php:36 ../../author.php:34 ../../index.php:60
+#: ../../archive-posttype.php:36 ../../author.php:34 ../../index.php:62
 #: ../../search.php:41
 msgid "Read more"
 msgstr "Lees verder"
 
-#: ../../archive-posttype.php:49 ../../index.php:73
+#: ../../archive-posttype.php:49 ../../index.php:76
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
@@ -61,7 +61,7 @@ msgstr "Berichten van"
 
 #: ../../author.php:26 ../../index.php:50 ../../single.php:16
 msgid "Posted on"
-msgstr "Gepost op"
+msgstr "Geplaatst op"
 
 #: ../../author.php:26 ../../index.php:50 ../../single.php:17
 msgid "by"
@@ -86,15 +86,7 @@ msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../footer.php:39
-msgid ""
-"You are using a very old version of Internet Explorer. For the best "
-"experience please upgrade (for free) to a modern browser:"
-msgstr ""
-"Je gebruikt een verouderde versie van Internet Explorer. Voor een betere "
-"gebruikerservaring kun je (gratis) upgraden naar een betere browser:"
-
-#: ../../header.php:72
+#: ../../header.php:79
 msgid "You are here: "
 msgstr "U bent hier: "
 
@@ -247,31 +239,6 @@ msgstr "Google+ profiel URL"
 msgid "Twitter @username"
 msgstr "Twitter @gebruikersnaam"
 
-#: ../../assets/inc/post-types.php:23 ../inc/post-types.php:23
-msgid "Testimonials"
-msgstr ""
-
-#: ../../assets/inc/post-types.php:24 ../inc/post-types.php:24
-msgid "Testimonial"
-msgstr ""
-
-#: ../../assets/inc/post-types.php:25 ../inc/post-types.php:25
-msgid "Add testimonial"
-msgstr ""
-
-#: ../../assets/inc/post-types.php:26 ../inc/post-types.php:26
-#, fuzzy
-msgid "Add new testimonial"
-msgstr "Nieuwe inhoud toevoegen"
-
-#: ../../assets/inc/post-types.php:27 ../inc/post-types.php:27
-msgid "Edit testimonial"
-msgstr ""
-
-#: ../../assets/inc/post-types.php:33 ../inc/post-types.php:33
-msgid "testimonials"
-msgstr ""
-
 #: ../../assets/inc/sidebars.php:11 ../inc/sidebars.php:11
 msgid "Home"
 msgstr "Home"
@@ -296,20 +263,22 @@ msgstr "Geeft gespecificeerde contactgegevens weer"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:18
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:19
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:23
 #: ../../assets/inc/widgets/class-tp-social.php:25
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:22
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:28
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:35
 #: ../../assets/inc/widgets/class-tp-tweets.php:18
-#: ../../assets/plugins/Filter/class-tp-filter.php:299
+#: ../../assets/plugins/filter/class-tp-filter.php:299
 #: ../inc/widgets/class-tp-contact.php:18
 #: ../inc/widgets/class-tp-fb-like-box.php:19
+#: ../inc/widgets/class-tp-post-type-posts.php:23
 #: ../inc/widgets/class-tp-social.php:25
 #: ../inc/widgets/class-tp-taxonomy-terms.php:22
 #: ../inc/widgets/class-tp-title-content-button.php:28
 #: ../inc/widgets/class-tp-title-image-content-button.php:35
 #: ../inc/widgets/class-tp-tweets.php:18
-#: ../plugins/Filter/class-tp-filter.php:299
+#: ../plugins/filter/class-tp-filter.php:299
 msgid "Title"
 msgstr "Titel"
 
@@ -380,35 +349,23 @@ msgstr "Post type berichten"
 msgid "List of posts from a given post type"
 msgstr "Lijst met berichten uit een bepaalde post type"
 
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:26
-#: ../inc/widgets/class-tp-post-type-posts.php:26
-#, fuzzy
-msgid "Title:"
-msgstr "Titel"
-
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:34
-#: ../inc/widgets/class-tp-post-type-posts.php:34
-#, fuzzy
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:30
+#: ../inc/widgets/class-tp-post-type-posts.php:30
 msgid "Post type"
-msgstr "Berichttype"
+msgstr "Bericht type"
 
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:48
-#: ../inc/widgets/class-tp-post-type-posts.php:48
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:50
+#: ../inc/widgets/class-tp-post-type-posts.php:50
 msgid "Number of posts to show:"
-msgstr ""
+msgstr "Aantal berichten:"
 
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:57
-#: ../inc/widgets/class-tp-post-type-posts.php:57
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:58
+#: ../inc/widgets/class-tp-post-type-posts.php:58
 msgid "Show link to post type archive"
 msgstr "Link naar berichten overzicht weergeven"
 
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:68
-#: ../inc/widgets/class-tp-post-type-posts.php:68
-msgid "Recent Posts"
-msgstr ""
-
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:104
-#: ../inc/widgets/class-tp-post-type-posts.php:104
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:110
+#: ../inc/widgets/class-tp-post-type-posts.php:110
 msgid "View all"
 msgstr "Bekijk alle"
 
@@ -655,101 +612,101 @@ msgstr "Twitter gebruikersnaam"
 msgid "Tweets from @%1$s"
 msgstr "Tweets van @%1$s"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:84
-#: ../plugins/Filter/class-tp-filter.php:84
+#: ../../assets/plugins/filter/class-tp-filter.php:84
+#: ../plugins/filter/class-tp-filter.php:84
 msgid "Filters"
 msgstr "Filters"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:85
-#: ../../assets/plugins/Filter/class-tp-filter.php:293
-#: ../../assets/plugins/Filter/class-tp-filter.php:307
-#: ../plugins/Filter/class-tp-filter.php:85
-#: ../plugins/Filter/class-tp-filter.php:293
-#: ../plugins/Filter/class-tp-filter.php:307
+#: ../../assets/plugins/filter/class-tp-filter.php:85
+#: ../../assets/plugins/filter/class-tp-filter.php:293
+#: ../../assets/plugins/filter/class-tp-filter.php:307
+#: ../plugins/filter/class-tp-filter.php:85
+#: ../plugins/filter/class-tp-filter.php:293
+#: ../plugins/filter/class-tp-filter.php:307
 msgid "Filter"
 msgstr "Filter"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:86
-#: ../plugins/Filter/class-tp-filter.php:86
+#: ../../assets/plugins/filter/class-tp-filter.php:86
+#: ../plugins/filter/class-tp-filter.php:86
 msgid "Add filter"
 msgstr "Nieuwe filter"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:87
-#: ../plugins/Filter/class-tp-filter.php:87
+#: ../../assets/plugins/filter/class-tp-filter.php:87
+#: ../plugins/filter/class-tp-filter.php:87
 msgid "Add new filter"
 msgstr "Nieuwe filter toevoegen"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:113
-#: ../../assets/plugins/Filter/class-tp-filter.php:182
-#: ../../assets/plugins/Filter/class-tp-filter.php:206
-#: ../plugins/Filter/class-tp-filter.php:113
-#: ../plugins/Filter/class-tp-filter.php:182
-#: ../plugins/Filter/class-tp-filter.php:206
+#: ../../assets/plugins/filter/class-tp-filter.php:113
+#: ../../assets/plugins/filter/class-tp-filter.php:182
+#: ../../assets/plugins/filter/class-tp-filter.php:206
+#: ../plugins/filter/class-tp-filter.php:113
+#: ../plugins/filter/class-tp-filter.php:182
+#: ../plugins/filter/class-tp-filter.php:206
 msgid "Post types"
 msgstr "Post types"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:114
+#: ../../assets/plugins/filter/class-tp-filter.php:114
 #: ../../assets/plugins/pt-order/class-tp-pt-order.php:52
 #: ../../assets/plugins/pt-order/class-tp-pt-order.php:67
-#: ../plugins/Filter/class-tp-filter.php:114
+#: ../plugins/filter/class-tp-filter.php:114
 #: ../plugins/pt-order/class-tp-pt-order.php:52
 #: ../plugins/pt-order/class-tp-pt-order.php:67
 msgid "Order"
 msgstr "Volgorde"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:128
-#: ../../assets/plugins/Filter/class-tp-filter.php:179
-#: ../plugins/Filter/class-tp-filter.php:128
-#: ../plugins/Filter/class-tp-filter.php:179
+#: ../../assets/plugins/filter/class-tp-filter.php:128
+#: ../../assets/plugins/filter/class-tp-filter.php:179
+#: ../plugins/filter/class-tp-filter.php:128
+#: ../plugins/filter/class-tp-filter.php:179
 msgid "Not filterable"
 msgstr "Niet filterbaar"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:143
-#: ../../assets/plugins/Filter/class-tp-filter.php:198
-#: ../plugins/Filter/class-tp-filter.php:143
-#: ../plugins/Filter/class-tp-filter.php:198
+#: ../../assets/plugins/filter/class-tp-filter.php:143
+#: ../../assets/plugins/filter/class-tp-filter.php:198
+#: ../plugins/filter/class-tp-filter.php:143
+#: ../plugins/filter/class-tp-filter.php:198
 msgid "Filterable"
 msgstr "Filterbaar"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:156
-#: ../plugins/Filter/class-tp-filter.php:156
+#: ../../assets/plugins/filter/class-tp-filter.php:156
+#: ../plugins/filter/class-tp-filter.php:156
 msgid "Drag and drop post types here to make them filterable."
 msgstr "Sleep post types hier naar toe om ze filterbaar te maken."
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:218
-#: ../plugins/Filter/class-tp-filter.php:218
+#: ../../assets/plugins/filter/class-tp-filter.php:218
+#: ../plugins/filter/class-tp-filter.php:218
 msgid "Drag and drop items here to make them filterable."
 msgstr "Sleep items hier naar toe om ze filterbaar te maken."
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:226
-#: ../plugins/Filter/class-tp-filter.php:226
+#: ../../assets/plugins/filter/class-tp-filter.php:226
+#: ../plugins/filter/class-tp-filter.php:226
 msgid ""
 "Please select one or more post types that have taxonomies assigned to them."
 msgstr "Selecteer a.u.b. één of meerdere post types die taxonomieën hebben."
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:288
-#: ../plugins/Filter/class-tp-filter.php:288
+#: ../../assets/plugins/filter/class-tp-filter.php:288
+#: ../plugins/filter/class-tp-filter.php:288
 msgid "Filter widget"
 msgstr "Filter widget"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:288
-#: ../plugins/Filter/class-tp-filter.php:288
+#: ../../assets/plugins/filter/class-tp-filter.php:288
+#: ../plugins/filter/class-tp-filter.php:288
 msgid "A widget that filters on some taxonomies through AJAX"
 msgstr "Een widget die taxonomieën filtert door AJAX"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:312
-#: ../plugins/Filter/class-tp-filter.php:312
+#: ../../assets/plugins/filter/class-tp-filter.php:312
+#: ../plugins/filter/class-tp-filter.php:312
 msgid "Select a filter.."
 msgstr "Selecteer een filter.."
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:319
-#: ../plugins/Filter/class-tp-filter.php:319
+#: ../../assets/plugins/filter/class-tp-filter.php:319
+#: ../plugins/filter/class-tp-filter.php:319
 #, php-format
 msgid "You don't have any filters yet! <a href=\"%1$s\">Create one now</a>"
 msgstr "Je hebt nog geen filters! <a href=\"%1$s\">Maak een filter</a>"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:429
-#: ../plugins/Filter/class-tp-filter.php:429
+#: ../../assets/plugins/filter/class-tp-filter.php:429
+#: ../plugins/filter/class-tp-filter.php:429
 msgid "Filter by type"
 msgstr "Filter op type"
 
@@ -777,6 +734,42 @@ msgstr "Template tag"
 #: ../plugins/global-content/class-tp-global-content.php:48
 msgid "Shortcode"
 msgstr "Shortcode"
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:98
+#: ../plugins/migrate/class-tp-migrate.php:98
+msgid "Migrate"
+msgstr "Migratie"
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:108
+#: ../plugins/migrate/class-tp-migrate.php:108
+msgid "Migrate data"
+msgstr "Migreer data"
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:111
+#: ../plugins/migrate/class-tp-migrate.php:111
+#, php-format
+msgid "Data is being migrated from %1$s."
+msgstr "Data wordt gemigreerd vanuit %1$s."
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:117
+#: ../plugins/migrate/class-tp-migrate.php:117
+msgid "Start migration"
+msgstr "Start migratie"
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:140
+#: ../plugins/migrate/class-tp-migrate.php:140
+msgid "Data migration complete."
+msgstr "Data migratie voltooid."
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:141
+#: ../plugins/migrate/class-tp-migrate.php:141
+msgid "Initializing posts"
+msgstr "Berichten initialiseren"
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:142
+#: ../plugins/migrate/class-tp-migrate.php:142
+msgid "Migrating posts (%i of %t)"
+msgstr "Berichten migreren (%i van %t)"
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
@@ -818,6 +811,21 @@ msgstr "Maak dit bericht sticky"
 #: ../plugins/term-image/class-tp-term-image.php:64
 msgid "or"
 msgstr "of"
+
+#~ msgid ""
+#~ "You are using a very old version of Internet Explorer. For the best "
+#~ "experience please upgrade (for free) to a modern browser:"
+#~ msgstr ""
+#~ "Je gebruikt een verouderde versie van Internet Explorer. Voor een betere "
+#~ "gebruikerservaring kun je (gratis) upgraden naar een betere browser:"
+
+#, fuzzy
+#~ msgid "Add new testimonial"
+#~ msgstr "Nieuwe inhoud toevoegen"
+
+#, fuzzy
+#~ msgid "Title:"
+#~ msgstr "Titel"
 
 #~ msgid "Facebook"
 #~ msgstr "Facebook"
