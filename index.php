@@ -9,13 +9,13 @@
 			<?php if( is_category() ) { ?>
 			
 				<h1 id="page-title">
-					<?php _e( 'Category', 'tp' ); ?>: <?php echo single_cat_title( '', false ); ?>
+					<?php _e( 'Category', 'tp' ); ?>: <?php single_cat_title(); ?>
 				</h1>
 				
 			<?php } elseif( is_tag() || is_tax() ) { ?>
 			
 				<h1 id="page-title">
-					<?php _e( 'Tag', 'tp' ); ?>: <?php echo single_tag_title( '', false ); ?>
+					<?php _e( 'Tag', 'tp' ); ?>: <?php single_tag_title(); ?>
 				</h1>
 				
 			<?php } elseif( is_author() ) { ?>
