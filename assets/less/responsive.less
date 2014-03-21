@@ -281,6 +281,53 @@
  		
  		}
 
+	 	#content {
+	 	
+	 		.gform_wrapper form {
+
+				.gform_body .gform_fields .gfield {
+					margin-bottom: 20px;
+
+					.gfield_description,
+					.instruction {
+						margin-left: 0;
+						width: 100%;				
+					}
+						
+					.gfield_label {
+						clear: both;
+						float: left;
+						margin-bottom: 10px;
+						width: 100%;
+					}
+
+					.ginput_complex,
+					.clear-multi,
+					.ginput_list,
+					.medium,
+					.large,		
+					.small {
+						width: 100%;
+					}		
+
+					.ginput_list .gfield_list td.gfield_list_icons{
+						left: 52%;
+					}
+
+				}	
+
+				.gform_footer {
+					
+					.gform_button {
+						margin: 0;
+					}
+					
+				}
+
+			}
+
+		}
+
  	}
 	
  	#footer {
@@ -311,3 +358,50 @@
 	}
 
  }
+
+ /**
+  * @section    Responsive
+  * @subsection Small mobile
+  */
+ 
+ @media(max-width: 440px) {
+
+	#content .gform_wrapper form .gform_body .gform_fields .gfield {
+
+		.ginput_complex,
+		.clear-multi,
+		.ginput_list {
+			width: 100%;
+
+			input[type="text"],
+			select {
+				width: 100% !important;
+			}
+
+			label {
+				padding-left: 0 !important;
+				width: 100%;
+			}
+
+		}
+		
+		.ginput_list .gfield_list td.gfield_list_icons{
+			left: auto !important;
+			right: 20px;
+		}
+
+		.clear-multi {
+
+			input {
+				margin-bottom: 0 !important;
+			}
+
+			label {
+				margin-bottom: 10px !important;
+			}
+
+		}
+
+	}
+
+}

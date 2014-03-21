@@ -12,8 +12,10 @@
 
 /**
  * @section    Plugins
- * @subsection Gravity forms
+ * @subsection Gravity Forms
  */
+
+/* error messages */
 
 .gform_wrapper {
 
@@ -23,23 +25,30 @@
 		border: 1px solid #c44741;
 		color: #c44741;
 		display: block;
-		margin-bottom: 14px;
-		padding: 2%;
+		margin-bottom: 20px;
+		padding: 10px 15px;
 		width: 100%;
+	}
+
+	.validation_message {
+		clear: both;
+		color: #c44741;
+		float: left;
+		padding: 5px 0;
 	}
 
 }
 
 #content .gform_wrapper {
-	
+
 	.gform_heading,
 	.gform_footer {	
 		clear: both;
-		margin-bottom: 14px;
+		margin-bottom: 15px;
 		width: 100%;
 	}
 		
-	.gform_body {
+	.gform_body {		
 		
 		.gform_fields {
 			list-style-type: none;
@@ -47,8 +56,8 @@
 			padding: 0;
 			
 			.gfield {
-				display: block;
-				margin-bottom: 14px;
+				float: left;
+				margin-bottom: 20px;
 				width: 100%;
 				
 				.gfield_label {
@@ -60,12 +69,7 @@
 				.instruction {
 					font-size: 13px;
 					margin: 14px 0 0 35%;
-					width: 50%;
-					
-					&.validation_message {
-						color: #c44741;
-					}
-					
+					width: 50%;				
 				}
 				
 				.medium,
@@ -85,49 +89,150 @@
 				.large {
 					width: 55%;
 				}
+
+				.gfield_select {
+					float: left;
+				}
 				
 				.gfield_checkbox,
 				.gfield_radio {
 					float: left;
 					font-size: 13px;
 					list-style-type: none;
-					margin: 0 0 2em 0;
+					margin: 0;
 					padding: 0;
 					width: 65%;
 					
 					label { 
 						position: relative;
-						top: -2px; 
+						top: 2px; 
 					}
 	
-					label, 
-					input[type="text"] { 
+					input[type="text"],
+					label { 
 						margin-left: 10px;
 					}
 					
 				}
+
+				.clear-multi {
+					float: left;
+					width: 65%;
+					
+					.gfield_time_minute,
+					.gfield_time_ampm, 
+					.gfield_time_hour {
+						clear: both;
+						position: relative;
+
+						input[type="text"],
+						select {
+							float: left;
+							margin-bottom: 20px;
+							width: 61.6%;
+						}
+
+						select {
+							margin-bottom: 0;
+						}
+
+						label {
+							.border-box;
+							float: left;
+							padding: 7px 0 0 10px;
+							width: 38.4%;					
+						}
+
+					}
+
+					.gfield_time_hour {
+						text-indent: -999999px;
+
+						label {
+							text-indent: 0;
+						}
+
+					}
+
+				}
+
+				.ginput_list {
+					float: left;
+					width: 65%;
+
+					table {
+						margin-bottom: 0;
+					}
+
+					.gfield_list {
+						border: none;
+						padding: 0;
+
+						tr,
+						th,
+						td {
+							border: none;
+							padding: 0;
+						}
+
+						tr {
+							position: relative;
+							width: 100%;
+						}
+
+						td.gfield_list_cell {
+							width: 100%;
+						}
+
+						td.gfield_list_icons {
+							position: absolute;
+							left: 69%;
+							margin-top: 11px;
+							width: 40px;
+							
+							img {
+								float: right;
+								width: auto;
+							}
+
+						}
+
+						input[type="text"] {
+							margin-bottom: 20px;
+							width: 61.6%;
+						}
+
+					}
+
+				}
 				
 				.ginput_complex {
 					float: left;
-					margin: 0 0 14px 0;
 					width: 65%;
 				
 					span {
 						clear: both;
 						float: left;
 						font-size: 13px;
-						margin-bottom: 14px;
+						margin-bottom: 20px;
 						width: 100%;
-						
-						label { 
-							float: left; 
-							margin-left: 2.5%;
-							width: 40%;
+
+						&:last-of-type {
+							margin-bottom: 0;
 						}
 						
-						input[type="text"] {
+						label { 
+							.border-box;
+							.elipsis;
+							float: left; 
+							padding: 7px 0 0 10px;
+							width: 38.4%;
+						}
+						
+						input[type="text"],
+						select {
 							float: left;
-							width: 50%;
+							width: 61.6%;
 						}
 					
 					}
@@ -151,59 +256,41 @@
 
 }
 
+/**
+ * @section    Plugins
+ * @subsection Gravity Forms widget
+ */
+
 .gform_widget {
 	
-	.validation_message {
-		clear: both;
-		color: #c44741;
-		display: block;
-		float: left;
-		padding: 10px 0;
-	}
-	
 	form {
-		position: relative;	
 		
 		ul {
-			clear: both;
+			border-bottom: none;
 			display: block;
 			float: left;
 			width: 100%;
 		
 			li {
-				border: none !important; 
+				border: none; 
 				display: block;
-				margin: 0 !important;
-				padding: 0 !important;
+				padding: 0;
 				width: 100%;
+
+				label {
+					clear: both;
+					float: left;
+					padding: 5px 0;
+				}
+
 			}
 		
 		}
-		
-		.gform_footer,
-		.gform_body {
-			position: relative;
-			width: 100%;
-		}
 
-		input[type="email"],
-		input[type="text"] {
-			.border-radiuses(0, 0, 3px, 3px) !important;
-			float: left;
-			height: 35px;
-			width: 85% !important;
-		}
-		
-		input[type="submit"] {
-			.border-radiuses(3px, 3px, 0, 0) !important;
-			background: @primary-color;
-			float: left;
-			height: 40px;
-			position: absolute !important;
-			right: 0;
-			text-transform: uppercase;
-			top: 0;
-			width: 15%;			
+		.medium,
+		.large,
+		.small {
+			width: 100%;
 		}
 	
 	}
