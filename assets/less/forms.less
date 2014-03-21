@@ -56,17 +56,15 @@ input[type="reset"],
 a.button,
 button {
 	.border-radius(3px);
-	.box-shadow(0 2px 0 darken(@primary-color, 10%));
- 	background-color: @primary-color;
+	background-color: @primary-color;
  	border: 0;
  	color: #FFF;
 	font-family: @text-font;
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: normal;
  	height: 38px;
  	margin-right: 10px;
- 	padding: 0 20px;
- 	text-shadow: 0 1px 0 darken(@primary-color, 10%);
+ 	padding: 0 15px;
 
  	&:hover { 
  		background-color: lighten(@primary-color, 5%);
@@ -89,12 +87,12 @@ button {
 
 	input[type="text"] { 
 		float: left;
+		margin-right: 10px;
 	}
 
 	input[type="submit"] { 
 		float: left;
 		font-family: FontAwesome;
-		width: 50px;
 	}
 
 }
