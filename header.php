@@ -31,7 +31,7 @@
 				
 				<div id="logo" class="eightcol" itemscope itemtype="http://schema.org/Organization">
 					<p id="sitename">
-						<a itemprop="url" href="<?php site_url(); ?>">
+						<a itemprop="url" href="<?php echo site_url(); ?>">
 							<?php bloginfo( 'name' ); ?>
 						</a>
 					</p>
