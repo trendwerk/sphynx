@@ -39,11 +39,6 @@
 			
 			<?php comments_template(); ?>
 			
-			<nav id="pagination" itemprop="breadcrumb">
-				<div class="prev"><?php previous_post_link(); ?></div>
-				<div class="next"><?php next_post_link(); ?></div>
-			</nav>
-			
 		</article>
 		
 		<aside class="sidebar fourcol">
