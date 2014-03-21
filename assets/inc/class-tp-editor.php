@@ -36,5 +36,4 @@ class TP_Editor {
 	function remove() {
 		wp_dequeue_style( 'editor' );
 	}
-}
-new TP_Editor;
+} new TP_Editor;
