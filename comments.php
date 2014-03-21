@@ -14,7 +14,7 @@
         <ol class="commentlist">
             <?php 
                 wp_list_comments( array(
-    				'avatar_size'       => 60,
+    				'avatar_size' => 60,
     			) );
             ?>
         </ol>

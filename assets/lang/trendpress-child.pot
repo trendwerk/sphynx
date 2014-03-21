@@ -2,32 +2,29 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-21 14:01+0100\n"
-"PO-Revision-Date: 2014-03-21 14:01+0100\n"
+"POT-Creation-Date: 2014-03-21 15:10+0100\n"
+"PO-Revision-Date: 2014-03-21 15:11+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
-"Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
-"Language: nl_NL\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:2c,1\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
 #: ../../404.php:10
 msgid "The page you are looking for doesn't exist."
-msgstr "De pagina die je zoekt bestaat niet."
+msgstr ""
 
 #: ../../404.php:15
 msgid ""
 "Seems like the page you were looking for might have been moved or just "
 "didn't exist in the first place."
 msgstr ""
-"Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of "
-"nooit heeft bestaan."
 
 #: ../../404.php:20
 #, php-format
@@ -35,159 +32,149 @@ msgid ""
 "You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
 "searchform below to find the page you are looking for."
 msgstr ""
-"Bekijk onze <a href=\"%1$s\">sitemap</a> of gebruik het onderstaande "
-"zoekformulier om te vinden wat je zoekt."
 
 #: ../../404.php:20
 msgid "sitemap"
-msgstr "sitemap"
+msgstr ""
 
 #: ../../comments.php:11
 #, php-format
 msgid "One response to &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
-msgstr[0] "Één reactie op &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../footer.php:13
 msgid "Copyright"
-msgstr "Copyright"
+msgstr ""
 
-#: ../../header.php:79
+#: ../../header.php:81
 msgid "You are here: "
-msgstr "U bent hier: "
+msgstr ""
 
 #: ../../index.php:12
 msgid "Category"
-msgstr "Categorie"
+msgstr ""
 
 #: ../../index.php:18
 msgid "Tag"
-msgstr "Tag"
+msgstr ""
 
 #: ../../index.php:24
 msgid "Posts by"
-msgstr "Berichten van"
+msgstr ""
 
-#: ../../index.php:32 ../../page-sitemap.php:95
+#: ../../index.php:32 ../../page-sitemap.php:93
 msgid "News"
-msgstr "Nieuws"
+msgstr ""
 
 #: ../../index.php:50 ../../single.php:16
 msgid "Posted on"
-msgstr "Geplaatst op"
+msgstr ""
 
-#: ../../index.php:50 ../../single.php:17
+#: ../../index.php:51 ../../single.php:17
 msgid "by"
-msgstr "door"
+msgstr ""
 
-#: ../../index.php:50 ../../single.php:17
+#: ../../index.php:51 ../../single.php:17
 msgid "in the category"
-msgstr "in de categorie"
+msgstr ""
 
-#: ../../index.php:62 ../../search.php:41
+#: ../../index.php:63 ../../search.php:36
 msgid "Read more"
-msgstr "Lees verder"
+msgstr ""
 
-#: ../../index.php:76
+#: ../../index.php:77
 msgid "No results found."
-msgstr "Geen resultaten gevonden."
+msgstr ""
 
 #: ../../page-authors.php:4
 msgid "Authors overview"
-msgstr "Auteurs overzicht"
+msgstr ""
 
 #: ../../page-sitemap.php:24
 msgid "Pages"
-msgstr "Pagina's"
+msgstr ""
 
 #: ../../part-author.php:32
 msgid "Written by"
-msgstr "Geschreven door"
+msgstr ""
 
 #: ../../part-author.php:46
 msgid "Follow me on"
-msgstr "Volg mij via"
+msgstr ""
 
-#: ../../part-author.php:93
+#: ../../part-author.php:94
 #, php-format
 msgid "View 1 post"
 msgid_plural "View all %1$s posts"
-msgstr[0] "Bekijk %1$s bericht"
-msgstr[1] "Bekijk alle %1$s berichten"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../part-share.php:5
 msgid "Share this article"
-msgstr "Deel dit artikel"
+msgstr ""
 
 #: ../../part-share.php:7
 msgid "Share this on Facebook"
-msgstr "Deel dit artikel op Facebook"
+msgstr ""
 
 #: ../../part-share.php:11
 msgid "Share this on Twitter"
-msgstr "Deel dit artikel op Twitter"
+msgstr ""
 
 #: ../../part-share.php:15
 msgid "Share this on LinkedIn"
-msgstr "Deel dut artikel op LinkedIn"
+msgstr ""
 
 #: ../../part-share.php:19
 msgid "Share this on Google Plus"
-msgstr "Deel dit artikel op Google Plus"
+msgstr ""
 
 #: ../../part-share.php:23
 msgid "Share this on Pinterest"
-msgstr "Deel dit artikel op Pinterest"
+msgstr ""
 
 #: ../../part-share.php:27
 msgid "Email this"
-msgstr "Email dit artikel"
+msgstr ""
 
-#: ../../search.php:16 ../../search.php:56
+#: ../../search.php:14
 #, php-format
 msgid "Search Results for: %1$s"
-msgstr "Zoek resultaten voor:  %1$s"
+msgstr ""
 
-#: ../../search.php:24
-#, php-format
-msgid "Found %2$s articles containing the keyword: %1$s"
-msgstr "%2$s artikelen gevonden met de zoekterm: %1$s"
-
-#: ../../search.php:60
+#: ../../search.php:50
 #, php-format
 msgid ""
 "Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
 "Please make sure all your words are spelled correctly or try different "
 "keywords."
 msgstr ""
-"Je zoekopdracht voor <em>&quot;%1$s&quot;</em> heeft geen resultaten "
-"opgeleverd. Controleer of alle woorden correct gespeld zijn of probeer een "
-"andere zoekterm."
 
 #: ../../searchform.php:6
 msgid "Search"
-msgstr "Zoeken"
+msgstr ""
 
 #: ../../single.php:34
 msgid "Back to the overview"
-msgstr "Terug naar het overzicht"
+msgstr ""
 
 #: ../../assets/inc/menus.php:7 ../inc/menus.php:7
 msgid "Main navigation"
-msgstr "Hoofd navigatie"
+msgstr ""
 
 #: ../../assets/inc/menus.php:8 ../inc/menus.php:8
 msgid "Top navigation"
-msgstr "Top navigatie"
+msgstr ""
 
 #: ../../assets/inc/menus.php:9 ../inc/menus.php:9
 msgid "Footer navigation"
-msgstr "Footer navigatie"
+msgstr ""
 
 #: ../../assets/inc/menus.php:10 ../inc/menus.php:10
 msgid "Sitemap"
-msgstr "Sitemap"
+msgstr ""
 
 #: ../../assets/inc/misc.php:14
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:18
@@ -195,7 +182,7 @@ msgstr "Sitemap"
 #: ../inc/misc.php:14 ../inc/widgets/class-tp-title-content-button.php:18
 #: ../inc/widgets/class-tp-title-image-content-button.php:14
 msgid "Primary button"
-msgstr "Primaire knop"
+msgstr ""
 
 #: ../../assets/inc/misc.php:19
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:19
@@ -203,53 +190,53 @@ msgstr "Primaire knop"
 #: ../inc/misc.php:19 ../inc/widgets/class-tp-title-content-button.php:19
 #: ../inc/widgets/class-tp-title-image-content-button.php:15
 msgid "Secondary button"
-msgstr "Secondaire knop"
+msgstr ""
 
 #: ../../assets/inc/misc.php:24 ../inc/misc.php:24
 msgid "More link"
-msgstr "Lees meer link"
+msgstr ""
 
 #: ../../assets/inc/misc.php:58 ../inc/misc.php:58
 msgid "Facebook profile URL"
-msgstr "Facebook profiel URL"
+msgstr ""
 
 #: ../../assets/inc/misc.php:59 ../inc/misc.php:59
 msgid "LinkedIn profile URL"
-msgstr "LinkedIn profiel URL"
+msgstr ""
 
 #: ../../assets/inc/misc.php:60 ../inc/misc.php:60
 msgid "Google+ profile URL"
-msgstr "Google+ profiel URL"
+msgstr ""
 
 #: ../../assets/inc/misc.php:61 ../inc/misc.php:61
 msgid "Twitter @username"
-msgstr "Twitter @gebruikersnaam"
+msgstr ""
 
 #: ../../assets/inc/sidebars.php:11 ../inc/sidebars.php:11
 msgid "Home"
-msgstr "Home"
+msgstr ""
 
 #: ../../assets/inc/sidebars.php:15 ../inc/sidebars.php:15
 msgid "Page"
-msgstr "Pagina"
+msgstr ""
 
 #: ../../assets/inc/sidebars.php:19 ../inc/sidebars.php:19
 msgid "Blog"
-msgstr "Blog"
+msgstr ""
 
 #: ../../assets/inc/sidebars.php:23 ../inc/sidebars.php:23
 msgid "Footer"
-msgstr "Footer"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-contact.php:10
 #: ../inc/widgets/class-tp-contact.php:10
 msgid "Contact information"
-msgstr "Contactgegevens"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-contact.php:10
 #: ../inc/widgets/class-tp-contact.php:10
 msgid "Shows the specified contact information"
-msgstr "Geeft gespecificeerde contactgegevens weer"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-contact.php:18
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:19
@@ -270,7 +257,7 @@ msgstr "Geeft gespecificeerde contactgegevens weer"
 #: ../inc/widgets/class-tp-tweets.php:18
 #: ../plugins/filter/class-tp-filter.php:299
 msgid "Title"
-msgstr "Titel"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-contact.php:23
 #: ../../assets/inc/widgets/class-tp-social.php:42
@@ -281,217 +268,215 @@ msgid ""
 "Change the contents of this widget on the <a href=\"%1$s\">contact "
 "information</a> page."
 msgstr ""
-"Beheer de inhoud van deze widget op de <a href=\"%1$s\">contact informatie</"
-"a> pagina."
 
 #: ../../assets/inc/widgets/class-tp-contact.php:66
 #: ../inc/widgets/class-tp-contact.php:66
 msgid "E-mail"
-msgstr "E-mail"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-contact.php:69
 #: ../inc/widgets/class-tp-contact.php:69
 msgid "Telephone"
-msgstr "Telefoon"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-contact.php:72
 #: ../inc/widgets/class-tp-contact.php:72
 msgid "Fax"
-msgstr "Fax"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-contact.php:79
 #: ../inc/widgets/class-tp-contact.php:79
 msgid "CC No"
-msgstr "KvK Nr"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-contact.php:82
 #: ../inc/widgets/class-tp-contact.php:82
 msgid "VAT No"
-msgstr "BTW Nr"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-contact.php:85
 #: ../inc/widgets/class-tp-contact.php:85
 msgid "Bank"
-msgstr "Bank"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:11
 #: ../inc/widgets/class-tp-fb-like-box.php:11
 msgid "Facebook like box"
-msgstr "Facebook like box"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:11
 #: ../inc/widgets/class-tp-fb-like-box.php:11
 msgid "Shows the Facebook users that like your Facebook page"
-msgstr "Geeft de Facebook gebruikers weer die je Facebook pagina leuk vinden"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:26
 #: ../inc/widgets/class-tp-fb-like-box.php:26
 msgid "Facebook page URL"
-msgstr "Facebook pagina URL"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:10
 #: ../inc/widgets/class-tp-post-type-posts.php:10
 msgid "Post type posts"
-msgstr "Post type berichten"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:10
 #: ../inc/widgets/class-tp-post-type-posts.php:10
 msgid "List of posts from a given post type"
-msgstr "Lijst met berichten uit een bepaalde post type"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:30
 #: ../inc/widgets/class-tp-post-type-posts.php:30
 msgid "Post type"
-msgstr "Bericht type"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:50
 #: ../inc/widgets/class-tp-post-type-posts.php:50
 msgid "Number of posts to show:"
-msgstr "Aantal berichten:"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:58
 #: ../inc/widgets/class-tp-post-type-posts.php:58
 msgid "Show link to post type archive"
-msgstr "Link naar berichten overzicht weergeven"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:110
 #: ../inc/widgets/class-tp-post-type-posts.php:110
 msgid "View all"
-msgstr "Bekijk alle"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:10
 #: ../inc/widgets/class-tp-social.php:10
 msgid "Social media links"
-msgstr "Social media links"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:10
 #: ../inc/widgets/class-tp-social.php:10
 msgid "Shows links to specified social network profiles"
-msgstr "Geeft links naar gespecificeerde profielen op sociale netwerken weer"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:13
 #: ../inc/widgets/class-tp-social.php:13
 msgid "Large icons"
-msgstr "Grote iconen"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:14
 #: ../inc/widgets/class-tp-social.php:14
 msgid "Large icons with text"
-msgstr "Grote iconen met tekst"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:15
 #: ../inc/widgets/class-tp-social.php:15
 msgid "Small icons"
-msgstr "Kleine iconen"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:16
 #: ../inc/widgets/class-tp-social.php:16
 msgid "Small icons with text"
-msgstr "Kleine iconen met tekst"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:32
 #: ../inc/widgets/class-tp-social.php:32
 msgid "Icon types"
-msgstr "Type iconen"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:61
 #: ../../assets/inc/widgets/class-tp-social.php:63
 #: ../inc/widgets/class-tp-social.php:61 ../inc/widgets/class-tp-social.php:63
 msgid "Follow us on Twitter"
-msgstr "Volg ons via Twitter"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:70
 #: ../../assets/inc/widgets/class-tp-social.php:72
 #: ../inc/widgets/class-tp-social.php:70 ../inc/widgets/class-tp-social.php:72
 msgid "Like our Facebook page"
-msgstr "Like onze Facebook pagina"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:79
 #: ../../assets/inc/widgets/class-tp-social.php:81
 #: ../inc/widgets/class-tp-social.php:79 ../inc/widgets/class-tp-social.php:81
 msgid "Connect with us on LinkedIn"
-msgstr "Connect via LinkedIn"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:88
 #: ../../assets/inc/widgets/class-tp-social.php:90
 #: ../inc/widgets/class-tp-social.php:88 ../inc/widgets/class-tp-social.php:90
 msgid "Add us on Google+"
-msgstr "Voeg ons toe op Google+"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:97
 #: ../../assets/inc/widgets/class-tp-social.php:99
 #: ../inc/widgets/class-tp-social.php:97 ../inc/widgets/class-tp-social.php:99
 msgid "View our YouTube channel"
-msgstr "Bekijk ons YouTube kanaal"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:106
 #: ../../assets/inc/widgets/class-tp-social.php:108
 #: ../inc/widgets/class-tp-social.php:106
 #: ../inc/widgets/class-tp-social.php:108
 msgid "E-mail newsletter"
-msgstr "E-mail nieuwsbrief"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:115
 #: ../inc/widgets/class-tp-social.php:115
 msgid "Subscribe via RSS"
-msgstr "Abonneer via RSS"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-social.php:117
 #: ../inc/widgets/class-tp-social.php:117
 msgid "Subscribe to our RSS"
-msgstr "Schrijf je in via RSS"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-submenu.php:10
 #: ../inc/widgets/class-tp-submenu.php:10
 msgid "Submenu"
-msgstr "Submenu"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-submenu.php:10
 #: ../inc/widgets/class-tp-submenu.php:10
 msgid "Shows submenu items of current menu item or parent"
-msgstr "Geef submenu items weer van huidige (moeder) pagina"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
 #: ../inc/widgets/class-tp-taxonomy-terms.php:10
 msgid "Term list"
-msgstr "Term lijst"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
 #: ../inc/widgets/class-tp-taxonomy-terms.php:10
 msgid "List of terms from a given taxonomy"
-msgstr "Lijst met termen uit een bepaalde taxonomie"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:30
 #: ../inc/widgets/class-tp-taxonomy-terms.php:30
 msgid "Taxonomy"
-msgstr "Taxonomie"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-telephone-button.php:13
 #: ../inc/widgets/class-tp-telephone-button.php:13
 msgid "Telephone number and button"
-msgstr "Telefoonnummer en knop"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-telephone-button.php:29
 #: ../inc/widgets/class-tp-telephone-button.php:29
 msgid "Telephone number"
-msgstr "Telefoonnummer"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:10
 #: ../inc/widgets/class-tp-title-content-button.php:10
 msgid "Text with button"
-msgstr "Tekst met knop"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:10
 #: ../inc/widgets/class-tp-title-content-button.php:10
 msgid "Editable title, text and button"
-msgstr "Bewerkbare titel, tekst en knop"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:17
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:13
 #: ../inc/widgets/class-tp-title-content-button.php:17
 #: ../inc/widgets/class-tp-title-image-content-button.php:13
 msgid "Read more link"
-msgstr "Lees meer link"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:35
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:69
@@ -500,112 +485,112 @@ msgstr "Lees meer link"
 #: ../inc/widgets/class-tp-title-image-content-button.php:69
 #: ../plugins/global-content/class-tp-global-content.php:27
 msgid "Content"
-msgstr "Inhoud"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:45
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:77
 #: ../inc/widgets/class-tp-title-content-button.php:45
 #: ../inc/widgets/class-tp-title-image-content-button.php:77
 msgid "Show button / read more link"
-msgstr "Knop / lees meer link weergeven"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:53
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:85
 #: ../inc/widgets/class-tp-title-content-button.php:53
 #: ../inc/widgets/class-tp-title-image-content-button.php:85
 msgid "Button text"
-msgstr "Knop tekst"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:60
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:92
 #: ../inc/widgets/class-tp-title-content-button.php:60
 #: ../inc/widgets/class-tp-title-image-content-button.php:92
 msgid "Button link"
-msgstr "Knop link"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:68
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:100
 #: ../inc/widgets/class-tp-title-content-button.php:68
 #: ../inc/widgets/class-tp-title-image-content-button.php:100
 msgid "Link type"
-msgstr "Link type"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:81
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:113
 #: ../inc/widgets/class-tp-title-content-button.php:81
 #: ../inc/widgets/class-tp-title-image-content-button.php:113
 msgid "This link is external"
-msgstr "Dit is een externe link"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:10
 #: ../inc/widgets/class-tp-title-image-content-button.php:10
 msgid "Text with image and button"
-msgstr "Tekst met afbeelding en knop"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:10
 #: ../inc/widgets/class-tp-title-image-content-button.php:10
 msgid "Editable title, image text and button"
-msgstr "Bewerkbare titel, afbeelding en knop"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:24
 #: ../inc/widgets/class-tp-title-image-content-button.php:24
 msgid "Choose an image"
-msgstr "Kies een afbeelding"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:25
 #: ../inc/widgets/class-tp-title-image-content-button.php:25
 msgid "Insert into widget"
-msgstr "Voeg toe aan widget"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:42
 #: ../../assets/plugins/term-image/class-tp-term-image.php:51
 #: ../inc/widgets/class-tp-title-image-content-button.php:42
 #: ../plugins/term-image/class-tp-term-image.php:51
 msgid "Image"
-msgstr "Afbeelding"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:47
 #: ../inc/widgets/class-tp-title-image-content-button.php:47
 msgid "Upload"
-msgstr "Uploaden"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:55
 #: ../inc/widgets/class-tp-title-image-content-button.php:55
 msgid "Edit"
-msgstr "Bewerken"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:59
 #: ../../assets/plugins/term-image/class-tp-term-image.php:66
 #: ../inc/widgets/class-tp-title-image-content-button.php:59
 #: ../plugins/term-image/class-tp-term-image.php:66
 msgid "Remove"
-msgstr "Verwijder"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-tweets.php:10
 #: ../inc/widgets/class-tp-tweets.php:10
 msgid "Tweets"
-msgstr "Tweets"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-tweets.php:10
 #: ../inc/widgets/class-tp-tweets.php:10
 msgid "Shows latest tweets from a Twitter account"
-msgstr "Toont de laatste tweets van een Twitter account"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-tweets.php:25
 #: ../inc/widgets/class-tp-tweets.php:25
 msgid "Twitter username"
-msgstr "Twitter gebruikersnaam"
+msgstr ""
 
 #: ../../assets/inc/widgets/class-tp-tweets.php:42
 #: ../inc/widgets/class-tp-tweets.php:42
 #, php-format
 msgid "Tweets from @%1$s"
-msgstr "Tweets van @%1$s"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:84
 #: ../plugins/filter/class-tp-filter.php:84
 msgid "Filters"
-msgstr "Filters"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:85
 #: ../../assets/plugins/filter/class-tp-filter.php:293
@@ -614,17 +599,17 @@ msgstr "Filters"
 #: ../plugins/filter/class-tp-filter.php:293
 #: ../plugins/filter/class-tp-filter.php:307
 msgid "Filter"
-msgstr "Filter"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:86
 #: ../plugins/filter/class-tp-filter.php:86
 msgid "Add filter"
-msgstr "Nieuwe filter"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:87
 #: ../plugins/filter/class-tp-filter.php:87
 msgid "Add new filter"
-msgstr "Nieuwe filter toevoegen"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:113
 #: ../../assets/plugins/filter/class-tp-filter.php:182
@@ -633,7 +618,7 @@ msgstr "Nieuwe filter toevoegen"
 #: ../plugins/filter/class-tp-filter.php:182
 #: ../plugins/filter/class-tp-filter.php:206
 msgid "Post types"
-msgstr "Post types"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:114
 #: ../../assets/plugins/pt-order/class-tp-pt-order.php:52
@@ -642,389 +627,162 @@ msgstr "Post types"
 #: ../plugins/pt-order/class-tp-pt-order.php:52
 #: ../plugins/pt-order/class-tp-pt-order.php:67
 msgid "Order"
-msgstr "Volgorde"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:128
 #: ../../assets/plugins/filter/class-tp-filter.php:179
 #: ../plugins/filter/class-tp-filter.php:128
 #: ../plugins/filter/class-tp-filter.php:179
 msgid "Not filterable"
-msgstr "Niet filterbaar"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:143
 #: ../../assets/plugins/filter/class-tp-filter.php:198
 #: ../plugins/filter/class-tp-filter.php:143
 #: ../plugins/filter/class-tp-filter.php:198
 msgid "Filterable"
-msgstr "Filterbaar"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:156
 #: ../plugins/filter/class-tp-filter.php:156
 msgid "Drag and drop post types here to make them filterable."
-msgstr "Sleep post types hier naar toe om ze filterbaar te maken."
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:218
 #: ../plugins/filter/class-tp-filter.php:218
 msgid "Drag and drop items here to make them filterable."
-msgstr "Sleep items hier naar toe om ze filterbaar te maken."
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:226
 #: ../plugins/filter/class-tp-filter.php:226
 msgid ""
 "Please select one or more post types that have taxonomies assigned to them."
-msgstr "Selecteer a.u.b. één of meerdere post types die taxonomieën hebben."
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:288
 #: ../plugins/filter/class-tp-filter.php:288
 msgid "Filter widget"
-msgstr "Filter widget"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:288
 #: ../plugins/filter/class-tp-filter.php:288
 msgid "A widget that filters on some taxonomies through AJAX"
-msgstr "Een widget die taxonomieën filtert door AJAX"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:312
 #: ../plugins/filter/class-tp-filter.php:312
 msgid "Select a filter.."
-msgstr "Selecteer een filter.."
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:319
 #: ../plugins/filter/class-tp-filter.php:319
 #, php-format
 msgid "You don't have any filters yet! <a href=\"%1$s\">Create one now</a>"
-msgstr "Je hebt nog geen filters! <a href=\"%1$s\">Maak een filter</a>"
+msgstr ""
 
 #: ../../assets/plugins/filter/class-tp-filter.php:429
 #: ../plugins/filter/class-tp-filter.php:429
 msgid "Filter by type"
-msgstr "Filter op type"
+msgstr ""
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:26
 #: ../plugins/global-content/class-tp-global-content.php:26
 msgid "General"
-msgstr "Algemeen"
+msgstr ""
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:28
 #: ../plugins/global-content/class-tp-global-content.php:28
 msgid "Add content"
-msgstr "Nieuwe inhoud"
+msgstr ""
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:29
 #: ../plugins/global-content/class-tp-global-content.php:29
 msgid "Add new content"
-msgstr "Nieuwe inhoud toevoegen"
+msgstr ""
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:47
 #: ../plugins/global-content/class-tp-global-content.php:47
 msgid "Template tag"
-msgstr "Template tag"
+msgstr ""
 
 #: ../../assets/plugins/global-content/class-tp-global-content.php:48
 #: ../plugins/global-content/class-tp-global-content.php:48
 msgid "Shortcode"
-msgstr "Shortcode"
+msgstr ""
 
 #: ../../assets/plugins/migrate/class-tp-migrate.php:98
 #: ../plugins/migrate/class-tp-migrate.php:98
 msgid "Migrate"
-msgstr "Migratie"
+msgstr ""
 
 #: ../../assets/plugins/migrate/class-tp-migrate.php:108
 #: ../plugins/migrate/class-tp-migrate.php:108
 msgid "Migrate data"
-msgstr "Migreer data"
+msgstr ""
 
 #: ../../assets/plugins/migrate/class-tp-migrate.php:111
 #: ../plugins/migrate/class-tp-migrate.php:111
 #, php-format
 msgid "Data is being migrated from %1$s."
-msgstr "Data wordt gemigreerd vanuit %1$s."
+msgstr ""
 
 #: ../../assets/plugins/migrate/class-tp-migrate.php:117
 #: ../plugins/migrate/class-tp-migrate.php:117
 msgid "Start migration"
-msgstr "Start migratie"
+msgstr ""
 
 #: ../../assets/plugins/migrate/class-tp-migrate.php:140
 #: ../plugins/migrate/class-tp-migrate.php:140
 msgid "Data migration complete."
-msgstr "Data migratie voltooid."
+msgstr ""
 
 #: ../../assets/plugins/migrate/class-tp-migrate.php:141
 #: ../plugins/migrate/class-tp-migrate.php:141
 msgid "Initializing posts"
-msgstr "Berichten initialiseren"
+msgstr ""
 
 #: ../../assets/plugins/migrate/class-tp-migrate.php:142
 #: ../plugins/migrate/class-tp-migrate.php:142
 msgid "Migrating posts (%i of %t)"
-msgstr "Berichten migreren (%i van %t)"
+msgstr ""
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
 msgid "Enrich"
-msgstr "Verrijk"
+msgstr ""
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:106
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:106
 #, php-format
 msgid "Back to %1$s overview"
-msgstr "Terug naar het %1$s overzicht"
+msgstr ""
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:117
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:117
 msgid "Enriched"
-msgstr "Verrijkt"
+msgstr ""
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:119
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:119
 msgid "Remove enrichment"
-msgstr "Verwijder verrijking"
+msgstr ""
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
 msgid "Show all"
-msgstr "Toon alle"
+msgstr ""
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
 msgid "Only show enriched"
-msgstr "Toon verrijkt"
+msgstr ""
 
 #: ../../assets/plugins/sticky-posts/class-tp-sticky-posts.php:36
 #: ../plugins/sticky-posts/class-tp-sticky-posts.php:36
 msgid "Make this post sticky"
-msgstr "Maak dit bericht sticky"
+msgstr ""
 
 #: ../../assets/plugins/term-image/class-tp-term-image.php:64
 #: ../plugins/term-image/class-tp-term-image.php:64
 msgid "or"
-msgstr "of"
-
-#~ msgid "Posttype name"
-#~ msgstr "Naam bericht type"
-
-#~ msgid "No results found"
-#~ msgstr "Geen resultaten gevonden"
-
-#~ msgid ""
-#~ "You are using a very old version of Internet Explorer. For the best "
-#~ "experience please upgrade (for free) to a modern browser:"
-#~ msgstr ""
-#~ "Je gebruikt een verouderde versie van Internet Explorer. Voor een betere "
-#~ "gebruikerservaring kun je (gratis) upgraden naar een betere browser:"
-
-#, fuzzy
-#~ msgid "Add new testimonial"
-#~ msgstr "Nieuwe inhoud toevoegen"
-
-#, fuzzy
-#~ msgid "Title:"
-#~ msgstr "Titel"
-
-#~ msgid "Facebook"
-#~ msgstr "Facebook"
-
-#~ msgid "LinkedIn"
-#~ msgstr "LinkedIn"
-
-#~ msgid "Google+"
-#~ msgstr "Google+"
-
-#~ msgid ""
-#~ "Change the telephone number on the <a href=\"%1$s\">contact information</"
-#~ "a> page."
-#~ msgstr ""
-#~ "Beheer het telefoonnummer op de <a href=\"%1$s\">contact informatie</a> "
-#~ "pagina."
-
-#~ msgid "Show button"
-#~ msgstr "Knop weergeven"
-
-#~ msgid "Remove image"
-#~ msgstr "Verwijderen"
-
-#~ msgid "Custom post type posts"
-#~ msgstr "Custom post type berichten"
-
-#~ msgid "Reply"
-#~ msgstr "Reageer"
-
-#~ msgid "Comments are closed"
-#~ msgstr "Reacties zijn gesloten"
-
-#, fuzzy
-#~ msgid "Back to spotlights overview"
-#~ msgstr "Terug naar het overzicht"
-
-#~ msgid "Hide my profile on the website"
-#~ msgstr "Verberg mijn profiel op de website"
-
-#~ msgid "This post is password protected. Try logging in."
-#~ msgstr "Deze post is beschermd met een wachtwoord. Probeer in te loggen."
-
-#~ msgid "Responses"
-#~ msgstr "Reacties"
-
-#~ msgid "Your comment needs te be approved by us"
-#~ msgstr "Je reactie moet nog door ons worden goedgekeurd"
-
-#~ msgid "written by"
-#~ msgstr "geschreven door"
-
-#~ msgid "on"
-#~ msgstr "op"
-
-#~ msgid "No comments yet"
-#~ msgstr "Nog geen reacties"
-
-#~ msgid "Respond"
-#~ msgstr "Reageer"
-
-#~ msgid "You must be"
-#~ msgstr "Je moet"
-
-#~ msgid "logged in"
-#~ msgstr "ingelogd zijn"
-
-#~ msgid "to post a comment."
-#~ msgstr "om een reactie achter te laten"
-
-#~ msgid "Logged in as"
-#~ msgstr "Ingelogd als"
-
-#~ msgid "Log out"
-#~ msgstr "Log uit"
-
-#~ msgid "Name:"
-#~ msgstr "Naam:"
-
-#~ msgid "Website:"
-#~ msgstr "Website"
-
-#~ msgid "Contact"
-#~ msgstr "Contact"
-
-#~ msgid "Social media"
-#~ msgstr "Sociale media"
-
-#~ msgid "Daily archives: %s"
-#~ msgstr "Dag archief: %s"
-
-#~ msgid "Monthly archives: %s"
-#~ msgstr "Maand archief: %s"
-
-#~ msgid "Yearly archives: %s"
-#~ msgstr "Jaar archief: %s"
-
-#~ msgid "Tag Archives: %s"
-#~ msgstr "Tag archief: %s"
-
-#~ msgid "%s"
-#~ msgstr "%s"
-
-#~ msgid "Posted on:"
-#~ msgstr "Geplaatst op:"
-
-#~ msgid "in the category:"
-#~ msgstr "in de categorie:"
-
-#~ msgid "Keep in touch"
-#~ msgstr "Blijf op de hoogte"
-
-#~ msgid "Call to action"
-#~ msgstr "Call to action"
-
-#~ msgid "Log out &raquo;"
-#~ msgstr "Log uit &raquo;"
-
-#~ msgid ""
-#~ "Social media widget that shows a list of social media network sites that "
-#~ "the user specified."
-#~ msgstr ""
-#~ "Social media widget die een lijst van social media netwerk sites toont "
-#~ "gespecificeerd door de gebruiker."
-
-#~ msgid "Read more &raquo;"
-#~ msgstr "Lees meer &raquo;"
-
-#~ msgid "Sorry, no posts matched your criteria. Try refining your search"
-#~ msgstr ""
-#~ "Sorry, we hebben geen posts gevonden die voldoen aan deze criteria. "
-#~ "Probeer het opnieuw met andere"
-
-#~ msgid "Keyword"
-#~ msgstr "Zoeken"
-
-#~ msgid "Go"
-#~ msgstr "Ga"
-
-#~ msgid "You might want to check out our "
-#~ msgstr "Misschien wil je onze"
-
-#~ msgid "No results found. Try it again using different words."
-#~ msgstr "Geen resultaten gevonden. Probeer het opnieuw met andere woorden."
-
-#~ msgid "Permanent Link to:"
-#~ msgstr "Permanente link naar:"
-
-#~ msgid "News categories:"
-#~ msgstr "Nieuws categorieën:"
-
-#~ msgid "Found"
-#~ msgstr "Gevonden"
-
-#~ msgid " articles "
-#~ msgstr "artikelen"
-
-#~ msgid "containing the keyword: "
-#~ msgstr "met het keyword:"
-
-#~ msgid "<strong>"
-#~ msgstr "<strong>"
-
-#~ msgid "</strong>"
-#~ msgstr "</strong>"
-
-#~ msgid "There are no Custom Post Types at the moment."
-#~ msgstr "Er zijn geen Custom Post Types op dit moment."
-
-#~ msgid "Next"
-#~ msgstr "Volgende"
-
-#~ msgid "Previous"
-#~ msgstr "Vorige"
-
-#~ msgid "Theme options"
-#~ msgstr "Thema opties"
-
-#~ msgid "Page %s"
-#~ msgstr "Pagina's %s"
-
-#~ msgid "Subpages of the active page"
-#~ msgstr "Subpaginas van de actieve pagina"
-
-#~ msgid "Contact data, as used in the \"Contact data\" widget"
-#~ msgstr ""
-#~ "Contact gegevens die worden gebruikt ik de \"Contact gegevens\" widget"
-
-#~ msgid "Name"
-#~ msgstr "Naam"
-
-#~ msgid "Adres"
-#~ msgstr "Adres"
-
-#~ msgid "City"
-#~ msgstr "Stad"
-
-#~ msgid "Bank No"
-#~ msgstr "Bank nummer"
-
-#~ msgid "Social media accounts, as used in the \"Stay tuned\" widget."
-#~ msgstr ""
-#~ "Social media account die worden gebruikt in de \"Blijf op de hoogte\" "
-#~ "widget"
-
-#~ msgid "Send"
-#~ msgstr "Verstuurd"
+msgstr ""

@@ -21,25 +21,27 @@ a.cta {
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-}
-	
-	a.cta.primary { 
+
+	&.primary {
 		background: #005FCC;
 		border: 1px solid #0042B8;
 		color: #FFF;
 		text-shadow: 0 1px 0 #000;
 	}
-	
-	a.cta.secondary { 
+
+	&.secondary {
 		background: #F0F0F0;
 		border: 1px solid #B3B3B3;
 		color: #666;
 		text-shadow: 0 1px 0 #FFF;
 	}
+}
 
 a.more-link { 
 	font-size: 14px;
 	text-decoration: underline; 
-}
 
-	a.read-more:after { content: '...'; }
+	&:after {
+		content: " \00bb";
+	}
+}

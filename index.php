@@ -21,7 +21,7 @@
 			<?php } elseif( is_author() ) { ?>
 			
 				<h1 id="page-title">
-					<?php _e( 'Posts by', 'tp' ); ?>: <?php echo get_the_author_meta( 'display_name', $author ); ?>
+					<?php _e( 'Posts by', 'tp' ); ?> <?php echo get_the_author_meta( 'display_name', $author ); ?>
 				</h1>
 				
 				<?php get_template_part( 'part', 'author' ); ?>
@@ -47,7 +47,8 @@
 						</h2>
 						
 						<p class="article-meta">
-							<?php _e( 'Posted on', 'tp' ); ?> <span class="date updated" itemprop="dateCreated"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time></span> <?php _e( 'by', 'tp' ); ?> <span class="vcard author" itemprop="author"><span class="fn"><?php the_author_posts_link(); ?></span></span> <?php _e( 'in the category', 'tp' ); ?> <span itemprop="genre"><?php the_category( ', ' ); ?></span>
+							<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>" itemprop="dateCreated"><?php echo get_the_date(); ?></time>
+							<span itemprop="author"><?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?></span> <?php _e( 'in the category', 'tp' ) ?> <span itemprop="genre"><?php the_category( ', ' ) ?></span>
 						</p>
 						
 						<a class="article-thumbnail" href="<?php the_permalink(); ?>">
