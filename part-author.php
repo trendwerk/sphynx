@@ -5,24 +5,32 @@ if( ! $author )
 	$author = get_the_author_meta( 'ID' );
 
 if( get_the_author_meta( 'show_profile', $author ) ) {
-
 	?>
 
 	<section class="author-card" itemscope itemtype="http://schema.org/Person">
 	
 		<div class="author-avatar" itemprop="image">
-			<?php if( is_author() ) { ?>
-					<?php echo get_avatar( $author, 80 ); ?>
-			<?php } else { ?>
-				<a href="<?php echo get_author_posts_url( $author ); ?>" rel="author">
-					<?php echo get_avatar( $author, 80 ); ?>
-				</a>
-			<?php } ?>
+			<?php 
+				if( is_author() ) {
+					echo get_avatar( $author, 80 ); 
+				} else {
+					?>
+
+					<a href="<?php echo get_author_posts_url( $author ); ?>" rel="author">
+						<?php echo get_avatar( $author, 80 ); ?>
+					</a>
+
+					<?php 
+				} 
+			?>
 		</div>
 		
 		<div class="author-info">
 		
-			<?php if( is_single() ) echo '<span class="author-writtenby">' . __( 'Written by', 'tp' ) . ':</span>'; ?>
+			<?php 
+				if( is_single() ) 
+					echo '<span class="author-writtenby">' . __( 'Written by', 'tp' ) . ':</span>'; 
+			?>
 			
 			<h4 class="author-name" itemprop="name">
 				<?php the_author_meta( 'display_name', $author ); ?>
@@ -35,7 +43,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 			<ul class="author-social">
 
 				<li>
-					<span class="label"><?php _e('Follow me on:', 'tp'); ?></span>
+					<span class="label"><?php _e('Follow me on', 'tp'); ?>:</span>
 				</li>
 
 				<?php if( $facebook = get_the_author_meta( 'facebook', $author ) ) { ?>
@@ -81,9 +89,11 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 			</ul>
 			
 			<?php if( ! is_author() ) { ?>
+
 				<a class="more-link" href="<?php echo get_author_posts_url( $author ); ?>" rel="author">
 					<?php printf( _n( 'View 1 post', 'View all %1$s posts', count_user_posts( $author ), 'tp' ), count_user_posts( $author ) ); ?>
 				</a>
+				
 			<?php } ?>
 			
 			<div class="clear"></div>
