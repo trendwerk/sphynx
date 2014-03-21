@@ -135,13 +135,12 @@ body {
 	/* main navigation */
 	
 	#main-navigation {
-		.border-radius(3px);
 		background: @footer-background;
 		z-index: 1;
 
 		ul {
 			list-style-type: none;
-			margin: 0 10px;
+			margin: 0;
 			padding: 0;
 			position: relative;
 
@@ -181,15 +180,20 @@ body {
 					text-decoration: none !important;
 				}
 
-				&:hover > ul {
-					display: block;
+				&:active,
+				&:focus,
+				&:hover {
+
+					> ul {
+						display: block;
+					}
+
 				}
 
 				/* level 2 */
 
 				ul {
 					display: none;
-					left: -10px;
 					position: absolute;
 					top: 100%;
 					width: 220px;
