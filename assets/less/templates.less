@@ -19,19 +19,6 @@
 	
 }
 
- /**
-  * @section    Templates
-  * @subsection search.php
-  */
- 
- .search {
-
-	article .search-highlight {
-		background: #FFFFB3;
-	}
-
- }
-
 /**
  * @section    Templates
  * @subsection index.php
@@ -39,8 +26,8 @@
  */
 
 .archive,
-.blog,
-.search {
+.search,
+.blog {
 
 	article {
 		border-bottom: 1px solid @border-color;
@@ -75,73 +62,8 @@
 			margin: 5px 0 25px 25px;
 		}
 
-	}
-
-	/* Pagination */
-	
-	#pagination {
-		border-top: 1px solid @border-color;
-		clear: both;
-		font-size: 14px;
-		padding: 25px 0 25px 0;
-		width: 100%;
-
-		ul { 
-			margin: 0; 
-			text-align: center;
-			width: auto; 
-
-			li { 
-				display: inline-block;
-				list-style-type: none;
-
-				a { 
-					text-decoration: none;
-					
-					&:active,
-					&:focus,
-					&:hover {
-						text-decoration: underline;
-					}
-
-				}
-				
-				a.page, 
-				span.current { 
-					.border-radius(3px);
-					border: 1px solid @border-color;
-					margin: 0 3px;
-					padding: 6px 10px;
-					position: relative;
-				}
-				
-				a.prev { 
-					border: none;
-					margin: 0 5px 0 0;
-				}
-				
-				a.next { 
-					border: none;
-					margin: 0 0 0 5px;
-				}
-
-			}
-			
-			.gap {
-			    margin: 0 3px;
-			    position: relative;
-			}
-			
-			.previous-post {
-				float: left;
-				margin: 0 10px 0 0;
-			}
-				
-			.next-post {
-				float: right;
-				margin: 0 0 0 10px;
-			}
-
+		.search-highlight {
+			background: #FFFFB3;
 		}
 
 	}
