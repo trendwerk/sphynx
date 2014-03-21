@@ -1,0 +1,444 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TrendPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-21 15:07+0100\n"
+"PO-Revision-Date: 2014-03-21 15:08+0100\n"
+"Last-Translator: Harold <harold@trendwerk.nl>\n"
+"Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: ../..\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../../index.php:21
+msgid "Maintenance"
+msgstr ""
+
+#: ../../index.php:24
+msgid "Briefly unavailable for scheduled maintenance. Check back in a minute."
+msgstr ""
+
+#: ../../assets/inc/class-tp-cpt-extras.php:30
+#: ../inc/class-tp-cpt-extras.php:30
+msgid "Archive pages"
+msgstr ""
+
+#: ../../assets/inc/class-tp-cpt-extras.php:84
+#: ../inc/class-tp-cpt-extras.php:84
+msgid "Add to Menu"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:23
+#: ../inc/class-tp-information.php:23
+msgid "General settings"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:25
+#: ../inc/class-tp-information.php:25
+msgid "Sitename"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:32
+#: ../inc/class-tp-information.php:32
+msgid "Description"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:42
+#: ../inc/class-tp-information.php:42
+msgid "Contact"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:44
+#: ../inc/class-tp-information.php:44
+msgid "Company name"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:50
+#: ../inc/class-tp-information.php:50
+msgid "Address"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:56
+#: ../inc/class-tp-information.php:56
+msgid "Postal code"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:62
+#: ../inc/class-tp-information.php:62
+msgid "City"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:68
+#: ../inc/class-tp-information.php:68
+msgid "Country"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:74
+#: ../inc/class-tp-information.php:74
+msgid "E-mail"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:80
+#: ../inc/class-tp-information.php:80
+msgid "Telephone"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:86
+#: ../inc/class-tp-information.php:86
+msgid "Fax"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:95
+#: ../inc/class-tp-information.php:95
+msgid "Registration numbers & financial"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:97
+#: ../inc/class-tp-information.php:97
+msgid "CC No."
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:103
+#: ../inc/class-tp-information.php:103
+msgid "VAT No."
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:109
+#: ../inc/class-tp-information.php:109
+msgid "Bank name"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:115
+#: ../inc/class-tp-information.php:115
+msgid "Bank No."
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:124
+#: ../inc/class-tp-information.php:124
+msgid "Social media links"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:126
+#: ../inc/class-tp-information.php:126
+msgid "Twitter URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:132
+#: ../inc/class-tp-information.php:132
+msgid "Facebook URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:138
+#: ../inc/class-tp-information.php:138
+msgid "LinkedIn URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:144
+#: ../inc/class-tp-information.php:144
+msgid "Google Plus URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:150
+#: ../inc/class-tp-information.php:150
+msgid "YouTube URL"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:156
+#: ../inc/class-tp-information.php:156
+msgid "Newsletter / mailto link"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:163
+#: ../inc/class-tp-information.php:163
+msgid "Show RSS feed in the social media widget"
+msgstr ""
+
+#: ../../assets/inc/class-tp-information.php:215
+#: ../../assets/inc/class-tp-information.php:227
+#: ../inc/class-tp-information.php:215 ../inc/class-tp-information.php:227
+msgid "Contact information"
+msgstr ""
+
+#: ../../assets/inc/class-tp-nav.php:114 ../inc/class-tp-nav.php:114
+msgid "Search for"
+msgstr ""
+
+#: ../../assets/inc/class-tp-nav.php:123 ../inc/class-tp-nav.php:123
+msgid "404"
+msgstr ""
+
+#: ../../assets/inc/class-tp-nav.php:307 ../inc/class-tp-nav.php:307
+msgid "Blog"
+msgstr ""
+
+#: ../../assets/inc/class-tp-plugins.php:42 ../inc/class-tp-plugins.php:42
+#, php-format
+msgid "Plugins in the %1$s folder are executed automatically."
+msgstr ""
+
+#: ../../assets/inc/class-tp-plugins.php:122 ../inc/class-tp-plugins.php:122
+msgid "TrendPress"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:25 ../inc/class-tp-profile.php:25
+msgid "Publish profile"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:33 ../inc/class-tp-profile.php:33
+msgid "Show profile on website"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:38 ../inc/class-tp-profile.php:38
+msgid "Show my profile on the website at blogposts and author archives"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:46 ../inc/class-tp-profile.php:46
+msgid "Profile picture"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:54 ../inc/class-tp-profile.php:54
+msgid "You can change your profile picture via"
+msgstr ""
+
+#: ../../assets/inc/class-tp-profile.php:54 ../inc/class-tp-profile.php:54
+msgid ""
+"by logging in or signing up for free with the email address associated with "
+"your profile"
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:61
+#: ../inc/class-tp-recommended-plugins.php:61
+msgid ""
+"Improve your SEO: Write better content and have a fully optimized WordPress "
+"site."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:67
+#: ../inc/class-tp-recommended-plugins.php:67
+msgid "Add Google Analytics to the website to track user statistics."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:72
+#: ../inc/class-tp-recommended-plugins.php:72
+msgid ""
+"Improve site performance and user experience via caching: browser, page, "
+"object, database, minify and content delivery network support."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:77
+#: ../inc/class-tp-recommended-plugins.php:77
+msgid ""
+"Limits the maximum number of login attempts to increase security and protect "
+"the website against brute force attacks."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:82
+#: ../inc/class-tp-recommended-plugins.php:82
+msgid "Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:91
+#: ../inc/class-tp-recommended-plugins.php:91
+msgid "Display more than one content field on WordPress pages and posts."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:96
+#: ../inc/class-tp-recommended-plugins.php:96
+msgid ""
+"Replaces your WordPress comment system with your comments hosted and powered "
+"by Disqus."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:101
+#: ../inc/class-tp-recommended-plugins.php:101
+msgid ""
+"Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter "
+"and Facebook as comments."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:106
+#: ../inc/class-tp-recommended-plugins.php:106
+msgid ""
+"Adds HTML5 placeholder support to Gravity Forms fields with a Javascript "
+"fallback. Javascript & jQuery are required."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:111
+#: ../inc/class-tp-recommended-plugins.php:111
+msgid ""
+"Send e-mails form the website using your preferred SMTP server to prevent e-"
+"mails from getting blocked by spam filter."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:119
+#: ../inc/class-tp-recommended-plugins.php:119
+msgid ""
+"Allows you to regenerate your thumbnails after changing the thumbnail sizes."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:124
+#: ../inc/class-tp-recommended-plugins.php:124
+msgid ""
+"Interface to customize the permalinks (author, category, archives and "
+"pagination) and htaccess file generated by WordPress."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:138
+#: ../../assets/inc/views/recommended-plugins.php:13
+#: ../../assets/inc/views/recommended-plugins.php:21
+#: ../inc/class-tp-recommended-plugins.php:138
+#: ../inc/views/recommended-plugins.php:13
+#: ../inc/views/recommended-plugins.php:21
+msgid "Recommended plugins"
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:138
+#: ../inc/class-tp-recommended-plugins.php:138
+msgid "Recommended"
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:158
+#: ../inc/class-tp-recommended-plugins.php:158
+msgid "Recommended plugin <strong>activated</strong>."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:249
+#: ../inc/class-tp-recommended-plugins.php:249
+#, php-format
+msgid ""
+"The plugin <strong>%1$s</strong> has been reset to the recommended "
+"TrendPress settings."
+msgstr ""
+
+#: ../../assets/inc/class-tp-recommended-plugins.php:299
+#: ../inc/class-tp-recommended-plugins.php:299
+#, php-format
+msgid "<a href=\"%1$s\">Return to recommended plugins</a>"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:255
+#: ../../assets/inc/class-tp-redirects.php:267
+#: ../inc/class-tp-redirects.php:255 ../inc/class-tp-redirects.php:267
+msgid "Redirects"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:271
+#: ../inc/class-tp-redirects.php:271
+msgid "Find or create redirect.."
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:272
+#: ../inc/class-tp-redirects.php:272
+msgid "Add"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:297
+#: ../inc/class-tp-redirects.php:297
+msgid "Source"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:301
+#: ../inc/class-tp-redirects.php:301
+msgid "Destination"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:352
+#: ../inc/class-tp-redirects.php:352
+msgid "Edit"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:353
+#: ../inc/class-tp-redirects.php:353
+msgid "Remove"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:390
+#: ../inc/class-tp-redirects.php:390
+msgid ""
+"This redirect doesn't exist yet. Press &ldquo;Enter&rdquo; to create it."
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:391
+#: ../inc/class-tp-redirects.php:391
+msgid "Are you sure you want to delete this redirect?"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:392
+#: ../inc/class-tp-redirects.php:392
+msgid "Save"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:393
+#: ../inc/class-tp-redirects.php:393
+msgid "Dismiss"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:405
+#: ../inc/class-tp-redirects.php:405
+msgid "&ldquo;Enter&rdquo; to create"
+msgstr ""
+
+#: ../../assets/inc/class-tp-redirects.php:406
+#: ../inc/class-tp-redirects.php:406
+msgid ""
+"Press &ldquo;Enter&rdquo; to create or edit the redirect you're searching "
+"for."
+msgstr ""
+
+#: ../../assets/inc/functions-breadcrumbs.php:22
+#: ../inc/functions-breadcrumbs.php:22
+msgid "Home"
+msgstr ""
+
+#: ../../assets/inc/functions-pagination.php:22
+#: ../inc/functions-pagination.php:22
+msgid "Pagination"
+msgstr ""
+
+#: ../../assets/inc/functions-pagination.php:23
+#: ../inc/functions-pagination.php:23
+msgid "Next"
+msgstr ""
+
+#: ../../assets/inc/functions-pagination.php:24
+#: ../inc/functions-pagination.php:24
+msgid "Previous"
+msgstr ""
+
+#: ../../assets/inc/views/plugin-table.php:34 ../inc/views/plugin-table.php:34
+msgid "Install now"
+msgstr ""
+
+#: ../../assets/inc/views/plugin-table.php:36 ../inc/views/plugin-table.php:36
+msgid "Are you sure you want to reset to the recommended TrendPress settings?"
+msgstr ""
+
+#: ../../assets/inc/views/plugin-table.php:36 ../inc/views/plugin-table.php:36
+msgid "Apply settings"
+msgstr ""
+
+#: ../../assets/inc/views/plugin-table.php:38 ../inc/views/plugin-table.php:38
+msgid "Activate"
+msgstr ""
+
+#: ../../assets/inc/views/recommended-plugins.php:17
+#: ../inc/views/recommended-plugins.php:17
+msgid ""
+"On this page, you can install plugins recommended by Trendwerk and apply "
+"recommended settings to them after installing."
+msgstr ""
+
+#: ../../assets/inc/views/recommended-plugins.php:28
+#: ../inc/views/recommended-plugins.php:28
+msgid "Optional plugins"
+msgstr ""
+
+#: ../../assets/inc/views/recommended-plugins.php:35
+#: ../inc/views/recommended-plugins.php:35
+msgid "Developer tools"
+msgstr ""

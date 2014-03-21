@@ -402,8 +402,8 @@ class TP_Manage_Redirects {
 		$pointers = array(
 			'tp-redirects-search' => array(
 				'element'         => '#tp-redirects-search',
-				'header'          => __( '“Enter” to create', 'tp' ),
-				'text'            => __( 'Press “Enter” to create or edit the redirect you\'re searching for.', 'tp' ),
+				'header'          => __( '&ldquo;Enter&rdquo; to create', 'tp' ),
+				'text'            => __( 'Press &ldquo;Enter&rdquo; to create or edit the redirect you\'re searching for.', 'tp' ),
 			),
 		);
 
