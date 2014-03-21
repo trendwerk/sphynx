@@ -77,12 +77,6 @@ class TP_Recommended_Plugins {
 				'description' => __( 'Limits the maximum number of login attempts to increase security and protect the website against brute force attacks.', 'tp' ),
 				'path' => 'limit-login-attempts/limit-login-attempts.php',
 			),
-			'tinymce-advanced' => array(
-				'name' => 'TinyMCE Advanced',
-				'description' => __( 'Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor.', 'tp' ),
-				'path' => 'tinymce-advanced/tinymce-advanced.php',
-				'settings' => true,
-			),
 		);
 		
 		$this->optional = array(
@@ -198,34 +192,6 @@ class TP_Recommended_Plugins {
 			//Apply settings, different each plugin
 			$plugins = array_merge( $this->recommended, $this->optional, $this->development );
 			$plugin = $plugins[ $_GET['settings'] ];
-			
-			//TinyMCE Advanced settings
-			if( 'tinymce-advanced' == $_GET['settings'] ) {
-				$tadv_options = array( 'advlink1' => 0, 'advimage' => 1, 'editorstyle' => 1, 'hideclasses' => 0, 'contextmenu' => 0, 'no_autop' => 0 );
-				$tadv_plugins = array( 'style', 'emotions', 'print', 'searchreplace', 'xhtmlxtras', 'advimage', 'table' );
-				$tadv_toolbars = array( 
-					'toolbar_1' => array( 'bold', 'italic', 'separator1', 'bullist', 'numlist', 'separator2', 'link', 'unlink', 'separator3', 'styleprops', 'separator4', 'wp_more', 'wp_page', 'separator5', 'spellchecker', 'search', 'separator6', 'fullscreen' ), 
-					'toolbar_2' => array( 'formatselect', 'styleselect', 'pastetext', 'pasteword', 'removeformat', 'separator7', 'charmap', 'print', 'separator8', 'undo', 'redo', 'attribs', 'wp_help', 'wp_adv' ), 
-					'toolbar_3' => array( 'tablecontrols' ), 
-					'toolbar_4' => array() 
-				);
-				
-				$tadv_btns1 = array( 'bold', 'italic', 'separator', 'bullist', 'numlist', 'separator', 'link', 'unlink', 'separator', 'styleprops', 'separator', 'wp_more', 'wp_page', 'separator', 'spellchecker', 'search', 'separator', 'fullscreen' );
-				$tadv_btns2 = array( 'formatselect', 'styleselect', 'pastetext', 'pasteword', 'removeformat', 'separator', 'charmap', 'print', 'separator', 'undo', 'redo', 'attribs', 'wp_help', 'wp_adv' );
-				$tadv_btns3 = array( 'tablecontrols' );
-				$tadv_btns4 = array();
-				
-				$tadv_allbtns = array( 'wp_adv', 'bold', 'italic', 'strikethrough', 'underline', 'bullist', 'numlist', 'outdent', 'indent', 'justifyleft', 'justifycenter', 'justifyright', 'justifyfull', 'cut', 'copy', 'paste', 'link', 'unlink', 'image', 'wp_more', 'wp_page', 'search', 'replace', 'fontselect', 'fontsizeselect', 'wp_help', 'fullscreen', 'styleselect', 'formatselect', 'forecolor', 'backcolor', 'pastetext', 'pasteword', 'removeformat', 'cleanup', 'spellchecker', 'charmap', 'print', 'undo', 'redo', 'tablecontrols', 'cite', 'ins', 'del', 'abbr', 'acronym', 'attribs', 'layer', 'advhr', 'code', 'visualchars', 'nonbreaking', 'sub', 'sup', 'visualaid', 'insertdate', 'inserttime', 'anchor', 'styleprops', 'emotions', 'media', 'blockquote', 'separator', '|' );
-				
-				update_option( 'tadv_options', $tadv_options );
-				update_option( 'tadv_toolbars', $tadv_toolbars );
-				update_option( 'tadv_plugins', $tadv_plugins );
-				update_option( 'tadv_btns1', $tadv_btns1 );
-				update_option( 'tadv_btns2', $tadv_btns2 );
-				update_option( 'tadv_btns3', $tadv_btns3 );
-				update_option( 'tadv_btns4', $tadv_btns4 );
-				update_option( 'tadv_allbtns', $tadv_allbtns );
-			}
 			
 			//Yoast SEO settings
 			if( 'wordpress-seo' == $_GET['settings'] ) {
