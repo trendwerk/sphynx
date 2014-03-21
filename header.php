@@ -55,11 +55,9 @@
 				<nav id="topnav" class="navigation fourcol">				
 					<?php
 						wp_nav_menu( array(
+							'depth'          => 1,
+							'fallback_cb'    => null,
 							'theme_location' => 'topnav',
-							'fallback_cb'    => 'false',
-							'container'      => '',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'depth'          => '1',
 						) ); 
 					?>
 				</nav>
@@ -72,9 +70,6 @@
 					<?php 
 						wp_nav_menu( array(
 							'theme_location' => 'mainnav',
-							'container'      => '',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'depth'          => '0',
 						) );
 					?>
 				</nav>
