@@ -8,7 +8,7 @@
 			<?php dynamic_sidebar( 'page' ); ?>
 		</aside>
 	
-		<section id="content" class="content-right eightcol">
+		<section id="content" class="eightcol">
 
 			<h1>
 				<?php printf( __( 'Search Results for: %1$s', 'tp' ), '<strong>' . get_search_query() . '</strong>' ); ?>
