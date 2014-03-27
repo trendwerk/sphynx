@@ -105,7 +105,7 @@ class TP_Title_Content_Button extends WP_Widget {
 			if( $instance['content'] )
 				echo '<p>' . nl2br( $instance['content'] ) . '</p>';
 
-			do_action( 'tp_widget_after_content_widget', $instance );
+			do_action( 'tp_widget_after_content', $instance );
 		
 		    if( $instance['show_button'] ) { 
 		    	?>
