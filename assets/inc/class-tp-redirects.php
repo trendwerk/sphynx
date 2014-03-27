@@ -40,7 +40,7 @@ class TP_Redirects {
 		/**
 		 * Find the destination
 		 */
-		$destination = $wpdb->get_results( "SELECT * FROM wp_redirects WHERE source='" . esc_attr( $source ) . "'" );
+		$destination = $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "redirects WHERE source='" . esc_attr( $source ) . "'" );
 
 		if( 0 < count( $destination ) && isset( $destination[0]->destination ) && 0 < strlen( $destination[0]->destination ) ) {
 			$destination = $destination[0]->destination;
