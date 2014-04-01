@@ -106,14 +106,25 @@ h6 {
 
  	/* add characters to links */
  	
+ 	&.more-link:after,
+	&.back:before,
+	&.prev:before,
+	&.next:after {
+ 		display: inline-block;
+ 		font-family: fontawesome;
+ 		font-size: 10px;
+	}
+
  	&.back:before,
  	&.prev:before {
- 		content: "\00ab ";
+ 		content: "\f053";
+ 		padding-right: 7px;
  	}
  	
  	&.more-link:after,
  	&.next:after {
- 		content: " \00bb";
+ 		content: "\f054";
+ 		padding-left: 7px;
  	}
 	
 	/* call to action buttons */

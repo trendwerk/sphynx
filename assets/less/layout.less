@@ -311,7 +311,6 @@ body {
 	}
 
 	#pagination {
-		border-top: 1px solid @border-color;
 		clear: both;
 		font-size: 14px;
 		padding: 25px 0 25px 0;
@@ -339,11 +338,16 @@ body {
 				
 				span.current,
 				a.page {
-					.border-radius(3px);
-					border: 1px solid @border-color;
+					background-color: #FFF;
+					border: 1px solid @link-color;
 					margin: 0 3px;
 					padding: 6px 10px;
 					position: relative;
+				}
+
+				span.current {
+					border-color: @border-color;
+					color: @border-color;
 				}
 				
 				a.prev {
