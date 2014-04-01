@@ -1,0 +1,53 @@
+.tp-redirects input#tp-redirects-search {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+  width: 88%;
+}
+.tp-redirects input#tp-redirects-search::-webkit-input-placeholder:before {
+  content: "\f179";
+  float: left;
+  font-family: "dashicons";
+  line-height: 22px;
+  margin: 4px 5px 0px 2px;
+}
+.tp-redirects input#tp-redirects-add {
+  float: right;
+  height: 36px;
+  width: 11%;
+}
+.tp-redirects .tp-redirects-table tr.editing td.source input.widefat {
+  width: 95%;
+}
+.tp-redirects .tp-redirects-table tr.editing td.source:after {
+  margin-top: 5px;
+}
+.tp-redirects .tp-redirects-table tr.editing td.actions a {
+  margin-top: 3px;
+}
+.tp-redirects .tp-redirects-table td.source:after {
+  float: right;
+  font-family: "dashicons";
+  content: "\f344";
+}
+.tp-redirects .tp-redirects-table td.actions {
+  width: 45px;
+}
+.tp-redirects .tp-redirects-table td.actions a {
+  cursor: pointer;
+  outline: none;
+}
+.tp-redirects .tp-redirects-table tr.tp-redirects-more {
+  display: none;
+}
+.tp-redirects .tp-redirects-table tr.tp-redirects-more td {
+  border-top: 1px solid #ececec;
+  font-size: 14px;
+  padding: 10px 0px;
+  text-align: center;
+}
+.tp-redirects .tp-redirects-table tr.tp-redirects-more td .spinner {
+  display: inline-block;
+  float: none;
+  vertical-align: -2px;
+}
