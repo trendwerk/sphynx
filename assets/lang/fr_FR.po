@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-22 20:06+0100\n"
-"PO-Revision-Date: 2014-01-22 21:20+0100\n"
+"POT-Creation-Date: 2014-04-18 13:28+0100\n"
+"PO-Revision-Date: 2014-04-18 13:28+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "MIME-Version: 1.0\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
@@ -25,7 +25,7 @@ msgid ""
 "Seems like the page you were looking for might have been moved or just "
 "didn't exist in the first place."
 msgstr ""
-"Il semble que la page que vous recherchez ait été déplacée ou n'a jamais "
+"Il semble que la page que vous recherchez ait été déplacée ou n'ait jamais "
 "existé."
 
 #: ../../404.php:20
@@ -41,39 +41,6 @@ msgstr ""
 msgid "sitemap"
 msgstr "plan du site"
 
-#: ../../archive-posttype.php:14
-msgid "Posttype name"
-msgstr "Nom du type d'article"
-
-#: ../../archive-posttype.php:36 ../../author.php:34 ../../index.php:60
-#: ../../search.php:41
-msgid "Read more"
-msgstr "Lire davantage"
-
-#: ../../archive-posttype.php:49 ../../index.php:73
-msgid "No results found."
-msgstr "Aucun résultat trouvé."
-
-#: ../../author.php:10 ../../index.php:24
-msgid "Posts by"
-msgstr "Articles par"
-
-#: ../../author.php:26 ../../index.php:50 ../../single.php:16
-msgid "Posted on"
-msgstr "Posté le"
-
-#: ../../author.php:26 ../../index.php:50 ../../single.php:17
-msgid "by"
-msgstr "par"
-
-#: ../../author.php:26 ../../index.php:50 ../../single.php:17
-msgid "in the category"
-msgstr "dans la catégorie"
-
-#: ../../author.php:47
-msgid "No results found"
-msgstr "Aucun résultat trouvé"
-
 #: ../../comments.php:11
 #, php-format
 msgid "One response to &ldquo;%2$s&rdquo;"
@@ -85,16 +52,7 @@ msgstr[1] "%1$s réponses à &ldquo;%2$s&rdquo;"
 msgid "Copyright"
 msgstr "Droit d'auteur"
 
-#: ../../footer.php:39
-msgid ""
-"You are using a very old version of Internet Explorer. For the best "
-"experience please upgrade (for free) to a modern browser:"
-msgstr ""
-"Vous utilisez une version très ancienne d'Internet Explorer. Pour une "
-"meilleure expérience veuillez effectuer une mise à jour (gratuite) vers un "
-"navigateur plus moderne :"
-
-#: ../../header.php:72
+#: ../../header.php:81
 msgid "You are here: "
 msgstr "Vous êtes ici :"
 
@@ -106,32 +64,51 @@ msgstr "Catégorie"
 msgid "Tag"
 msgstr "Étiquette"
 
-#: ../../index.php:32
+#: ../../index.php:24
+msgid "Posts by"
+msgstr "Articles par"
+
+#: ../../index.php:32 ../../page-sitemap.php:93
 msgid "News"
 msgstr "Nouvelles"
+
+#: ../../index.php:50 ../../single.php:16
+msgid "Posted on"
+msgstr "Posté le"
+
+#: ../../index.php:51 ../../single.php:17
+msgid "by"
+msgstr "par"
+
+#: ../../index.php:51 ../../single.php:17
+msgid "in the category"
+msgstr "dans la catégorie"
+
+#: ../../index.php:63 ../../search.php:36
+msgid "Read more"
+msgstr "Lire davantage"
+
+#: ../../index.php:77
+msgid "No results found."
+msgstr "Aucun résultat trouvé."
 
 #: ../../page-authors.php:4
 msgid "Authors overview"
 msgstr "Vue d'ensemble des auteurs"
 
-#: ../../page-sitemap.php:21
+#: ../../page-sitemap.php:24
 msgid "Pages"
 msgstr "Pages"
 
-#: ../../page-sitemap.php:74 ../../assets/inc/sidebars.php:19
-#: ../inc/sidebars.php:19
-msgid "Blog"
-msgstr "Blog"
-
-#: ../../part-author.php:25
+#: ../../part-author.php:32
 msgid "Written by"
 msgstr "Écrit par"
 
-#: ../../part-author.php:38
-msgid "Follow me on:"
-msgstr "Suivez-moi sur :"
+#: ../../part-author.php:46
+msgid "Follow me on"
+msgstr "Suivez-moi sur"
 
-#: ../../part-author.php:85
+#: ../../part-author.php:94
 #, php-format
 msgid "View 1 post"
 msgid_plural "View all %1$s posts"
@@ -166,17 +143,12 @@ msgstr "Partager sur Pinterest"
 msgid "Email this"
 msgstr "Envoyer par email"
 
-#: ../../search.php:16 ../../search.php:56
+#: ../../search.php:14
 #, php-format
 msgid "Search Results for: %1$s"
 msgstr "Résultats de recherche pour : %1$s"
 
-#: ../../search.php:24
-#, php-format
-msgid "Found %2$s articles containing the keyword: %1$s"
-msgstr "Nous avons trouvé %2$s articles contenant le mot-clé : %1$s"
-
-#: ../../search.php:60
+#: ../../search.php:50
 #, php-format
 msgid ""
 "Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
@@ -191,7 +163,7 @@ msgstr ""
 msgid "Search"
 msgstr "Rechercher"
 
-#: ../../single-posttype.php:25 ../../single.php:34
+#: ../../single.php:34
 msgid "Back to the overview"
 msgstr "Retour à la vue d'ensemble"
 
@@ -255,6 +227,10 @@ msgstr "Accueil"
 msgid "Page"
 msgstr "Page"
 
+#: ../../assets/inc/sidebars.php:19 ../inc/sidebars.php:19
+msgid "Blog"
+msgstr "Blog"
+
 #: ../../assets/inc/sidebars.php:23 ../inc/sidebars.php:23
 msgid "Footer"
 msgstr "Bas de page"
@@ -277,7 +253,7 @@ msgstr "Affiche les informations contact spécifiées par l'utilisateur"
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:28
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:35
 #: ../../assets/inc/widgets/class-tp-tweets.php:18
-#: ../../assets/plugins/Filter/class-tp-filter.php:299
+#: ../../assets/plugins/filter/class-tp-filter.php:299
 #: ../inc/widgets/class-tp-contact.php:18
 #: ../inc/widgets/class-tp-fb-like-box.php:19
 #: ../inc/widgets/class-tp-post-type-posts.php:23
@@ -286,7 +262,7 @@ msgstr "Affiche les informations contact spécifiées par l'utilisateur"
 #: ../inc/widgets/class-tp-title-content-button.php:28
 #: ../inc/widgets/class-tp-title-image-content-button.php:35
 #: ../inc/widgets/class-tp-tweets.php:18
-#: ../plugins/Filter/class-tp-filter.php:299
+#: ../plugins/filter/class-tp-filter.php:299
 msgid "Title"
 msgstr "Titre"
 
@@ -375,7 +351,7 @@ msgstr "Afficher le lien vers l'archive du type d'article"
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:110
 #: ../inc/widgets/class-tp-post-type-posts.php:110
 msgid "View all"
-msgstr "Voir tous"
+msgstr "Voir tout"
 
 #: ../../assets/inc/widgets/class-tp-social.php:10
 #: ../inc/widgets/class-tp-social.php:10
@@ -440,24 +416,24 @@ msgstr "Ajoutez-nous à Google+"
 #: ../../assets/inc/widgets/class-tp-social.php:99
 #: ../inc/widgets/class-tp-social.php:97 ../inc/widgets/class-tp-social.php:99
 msgid "View our YouTube channel"
-msgstr "Voir votre canal Youtube"
+msgstr "Voir notre canal Youtube"
 
 #: ../../assets/inc/widgets/class-tp-social.php:106
 #: ../../assets/inc/widgets/class-tp-social.php:108
 #: ../inc/widgets/class-tp-social.php:106
 #: ../inc/widgets/class-tp-social.php:108
 msgid "E-mail newsletter"
-msgstr "Newsletter email"
+msgstr "E-newsletter"
 
 #: ../../assets/inc/widgets/class-tp-social.php:115
 #: ../inc/widgets/class-tp-social.php:115
 msgid "Subscribe via RSS"
-msgstr "Souscrivez par flux RSS"
+msgstr "Souscrire par flux RSS"
 
 #: ../../assets/inc/widgets/class-tp-social.php:117
 #: ../inc/widgets/class-tp-social.php:117
 msgid "Subscribe to our RSS"
-msgstr "Souscrivez à notre flux RSS"
+msgstr "Souscrire à notre flux RSS"
 
 #: ../../assets/inc/widgets/class-tp-submenu.php:10
 #: ../inc/widgets/class-tp-submenu.php:10
@@ -488,11 +464,6 @@ msgstr "Taxonomie"
 #: ../inc/widgets/class-tp-telephone-button.php:13
 msgid "Telephone number and button"
 msgstr "Numéro de téléphone et bouton"
-
-#: ../../assets/inc/widgets/class-tp-telephone-button.php:29
-#: ../inc/widgets/class-tp-telephone-button.php:29
-msgid "Telephone number"
-msgstr "Numéro de téléphone"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:10
 #: ../inc/widgets/class-tp-title-content-button.php:10
@@ -620,105 +591,105 @@ msgstr "Nom d'utilisateur Twitter"
 msgid "Tweets from @%1$s"
 msgstr "Tweets de @%1$s"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:84
-#: ../plugins/Filter/class-tp-filter.php:84
+#: ../../assets/plugins/filter/class-tp-filter.php:84
+#: ../plugins/filter/class-tp-filter.php:84
 msgid "Filters"
 msgstr "Filtres"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:85
-#: ../../assets/plugins/Filter/class-tp-filter.php:293
-#: ../../assets/plugins/Filter/class-tp-filter.php:307
-#: ../plugins/Filter/class-tp-filter.php:85
-#: ../plugins/Filter/class-tp-filter.php:293
-#: ../plugins/Filter/class-tp-filter.php:307
+#: ../../assets/plugins/filter/class-tp-filter.php:85
+#: ../../assets/plugins/filter/class-tp-filter.php:293
+#: ../../assets/plugins/filter/class-tp-filter.php:307
+#: ../plugins/filter/class-tp-filter.php:85
+#: ../plugins/filter/class-tp-filter.php:293
+#: ../plugins/filter/class-tp-filter.php:307
 msgid "Filter"
 msgstr "Filtre"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:86
-#: ../plugins/Filter/class-tp-filter.php:86
+#: ../../assets/plugins/filter/class-tp-filter.php:86
+#: ../plugins/filter/class-tp-filter.php:86
 msgid "Add filter"
 msgstr "Ajouter un filtre"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:87
-#: ../plugins/Filter/class-tp-filter.php:87
+#: ../../assets/plugins/filter/class-tp-filter.php:87
+#: ../plugins/filter/class-tp-filter.php:87
 msgid "Add new filter"
 msgstr "Ajouter un nouveau filtre"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:113
-#: ../../assets/plugins/Filter/class-tp-filter.php:182
-#: ../../assets/plugins/Filter/class-tp-filter.php:206
-#: ../plugins/Filter/class-tp-filter.php:113
-#: ../plugins/Filter/class-tp-filter.php:182
-#: ../plugins/Filter/class-tp-filter.php:206
+#: ../../assets/plugins/filter/class-tp-filter.php:113
+#: ../../assets/plugins/filter/class-tp-filter.php:182
+#: ../../assets/plugins/filter/class-tp-filter.php:206
+#: ../plugins/filter/class-tp-filter.php:113
+#: ../plugins/filter/class-tp-filter.php:182
+#: ../plugins/filter/class-tp-filter.php:206
 msgid "Post types"
 msgstr "Types d'articles"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:114
+#: ../../assets/plugins/filter/class-tp-filter.php:114
 #: ../../assets/plugins/pt-order/class-tp-pt-order.php:52
 #: ../../assets/plugins/pt-order/class-tp-pt-order.php:67
-#: ../plugins/Filter/class-tp-filter.php:114
+#: ../plugins/filter/class-tp-filter.php:114
 #: ../plugins/pt-order/class-tp-pt-order.php:52
 #: ../plugins/pt-order/class-tp-pt-order.php:67
 msgid "Order"
 msgstr "Commander"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:128
-#: ../../assets/plugins/Filter/class-tp-filter.php:179
-#: ../plugins/Filter/class-tp-filter.php:128
-#: ../plugins/Filter/class-tp-filter.php:179
+#: ../../assets/plugins/filter/class-tp-filter.php:128
+#: ../../assets/plugins/filter/class-tp-filter.php:179
+#: ../plugins/filter/class-tp-filter.php:128
+#: ../plugins/filter/class-tp-filter.php:179
 msgid "Not filterable"
 msgstr "Non filtrable"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:143
-#: ../../assets/plugins/Filter/class-tp-filter.php:198
-#: ../plugins/Filter/class-tp-filter.php:143
-#: ../plugins/Filter/class-tp-filter.php:198
+#: ../../assets/plugins/filter/class-tp-filter.php:143
+#: ../../assets/plugins/filter/class-tp-filter.php:198
+#: ../plugins/filter/class-tp-filter.php:143
+#: ../plugins/filter/class-tp-filter.php:198
 msgid "Filterable"
 msgstr "Filtrable"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:156
-#: ../plugins/Filter/class-tp-filter.php:156
+#: ../../assets/plugins/filter/class-tp-filter.php:156
+#: ../plugins/filter/class-tp-filter.php:156
 msgid "Drag and drop post types here to make them filterable."
 msgstr "Glisser-déposer des types d'articles ici pour les rendre filtrables"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:218
-#: ../plugins/Filter/class-tp-filter.php:218
+#: ../../assets/plugins/filter/class-tp-filter.php:218
+#: ../plugins/filter/class-tp-filter.php:218
 msgid "Drag and drop items here to make them filterable."
 msgstr "Glisser-déposer des objets ici pour les rendre filtrables"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:226
-#: ../plugins/Filter/class-tp-filter.php:226
+#: ../../assets/plugins/filter/class-tp-filter.php:226
+#: ../plugins/filter/class-tp-filter.php:226
 msgid ""
 "Please select one or more post types that have taxonomies assigned to them."
 msgstr ""
 "Veuillez sélectionner un ou plusieurs types d'articles qui ont des "
 "taxonomies assignés"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:288
-#: ../plugins/Filter/class-tp-filter.php:288
+#: ../../assets/plugins/filter/class-tp-filter.php:288
+#: ../plugins/filter/class-tp-filter.php:288
 msgid "Filter widget"
 msgstr "Widget filtre"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:288
-#: ../plugins/Filter/class-tp-filter.php:288
+#: ../../assets/plugins/filter/class-tp-filter.php:288
+#: ../plugins/filter/class-tp-filter.php:288
 msgid "A widget that filters on some taxonomies through AJAX"
 msgstr "Un widget qui filtre selon certaines taxonomies par le biais d'AJAX"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:312
-#: ../plugins/Filter/class-tp-filter.php:312
+#: ../../assets/plugins/filter/class-tp-filter.php:312
+#: ../plugins/filter/class-tp-filter.php:312
 msgid "Select a filter.."
 msgstr "Sélectionner un filtre.."
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:319
-#: ../plugins/Filter/class-tp-filter.php:319
+#: ../../assets/plugins/filter/class-tp-filter.php:319
+#: ../plugins/filter/class-tp-filter.php:319
 #, php-format
 msgid "You don't have any filters yet! <a href=\"%1$s\">Create one now</a>"
 msgstr ""
 "Vous n'avez pas encore de filtres ! <a href=\"%1$s\">En créer un maintenant</"
 "a>"
 
-#: ../../assets/plugins/Filter/class-tp-filter.php:429
-#: ../plugins/Filter/class-tp-filter.php:429
+#: ../../assets/plugins/filter/class-tp-filter.php:429
+#: ../plugins/filter/class-tp-filter.php:429
 msgid "Filter by type"
 msgstr "Filtrer par type"
 
@@ -747,6 +718,42 @@ msgstr "Étiquette modèle"
 msgid "Shortcode"
 msgstr "Code simple"
 
+#: ../../assets/plugins/migrate/class-tp-migrate.php:98
+#: ../plugins/migrate/class-tp-migrate.php:98
+msgid "Migrate"
+msgstr "Migrer"
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:108
+#: ../plugins/migrate/class-tp-migrate.php:108
+msgid "Migrate data"
+msgstr "Migrer les données"
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:111
+#: ../plugins/migrate/class-tp-migrate.php:111
+#, php-format
+msgid "Data is being migrated from %1$s."
+msgstr "Migration des données depuis %1$s."
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:117
+#: ../plugins/migrate/class-tp-migrate.php:117
+msgid "Start migration"
+msgstr "Lancer la migration"
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:140
+#: ../plugins/migrate/class-tp-migrate.php:140
+msgid "Data migration complete."
+msgstr "Migration des données accomplie."
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:141
+#: ../plugins/migrate/class-tp-migrate.php:141
+msgid "Initializing posts"
+msgstr "Initialisation des articles"
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:142
+#: ../plugins/migrate/class-tp-migrate.php:142
+msgid "Migrating posts (%i of %t)"
+msgstr "Migration des articles (%i de %t)"
+
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
 msgid "Enrich"
@@ -771,7 +778,7 @@ msgstr "Supprimer l'enrichissement"
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
 msgid "Show all"
-msgstr "Afficher tous"
+msgstr "Afficher tout"
 
 #: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
 #: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
@@ -787,6 +794,26 @@ msgstr "Rendre cet article adhésif"
 #: ../plugins/term-image/class-tp-term-image.php:64
 msgid "or"
 msgstr "ou"
+
+#~ msgid "Posttype name"
+#~ msgstr "Nom du type d'article"
+
+#~ msgid "No results found"
+#~ msgstr "Aucun résultat trouvé"
+
+#~ msgid ""
+#~ "You are using a very old version of Internet Explorer. For the best "
+#~ "experience please upgrade (for free) to a modern browser:"
+#~ msgstr ""
+#~ "Vous utilisez une version très ancienne d'Internet Explorer. Pour une "
+#~ "meilleure expérience veuillez effectuer une mise à jour (gratuite) vers "
+#~ "un navigateur plus moderne :"
+
+#~ msgid "Found %2$s articles containing the keyword: %1$s"
+#~ msgstr "Nous avons trouvé %2$s articles contenant le mot-clé : %1$s"
+
+#~ msgid "Telephone number"
+#~ msgstr "Numéro de téléphone"
 
 #, fuzzy
 #~ msgid ""
