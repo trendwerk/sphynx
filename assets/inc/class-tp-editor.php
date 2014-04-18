@@ -1,6 +1,8 @@
 <?php
 /**
  * Make changes to the TinyMCE editor
+ *
+ * @package TrendPress
  */
 
 class TP_Editor {
