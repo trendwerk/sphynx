@@ -8,9 +8,11 @@
 
 class TP_Term_Taxonomy_Meta {
 	var $table = 'term_taxonomymeta';
+	var $db_version = '1.0';
 
 	function __construct() {
 		add_action( 'init', array( $this, 'init' ), 11 );
+		add_action( 'plugins_loaded', 'maybe_create_table' );
 	}
 
 	/**
@@ -29,6 +31,14 @@ class TP_Term_Taxonomy_Meta {
 	 * Maybe create the table if it doesn't yet exists
 	 */
 	function maybe_create_table() {
+		if( $this->db_version != get_option( 'tp_taxonomy_term_meta_db_version' ) )
+			$this->create_table();
+	}
+	
+	/**
+	 * Create the table
+	 */
+	function create_table() {
 		global $wpdb;
 
 		$table_name = $wpdb->prefix . $this->table;
@@ -51,6 +61,8 @@ class TP_Term_Taxonomy_Meta {
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
+
+		update_option( 'tp_taxonomy_term_meta_db_version', $this->db_version );
 	}
 } new TP_Term_Taxonomy_Meta;
 
