@@ -15,9 +15,9 @@
  * @subsection Gravity Forms
  */
 
-/* error messages */
-
 .gform_wrapper {
+
+	/* error messages */
 
 	.validation_error {
 		.border-box;
@@ -35,6 +35,14 @@
 		color: #c44741;
 		float: left;
 		padding: 5px 0;
+	}
+
+	/* hide anti-spam honeypot field */
+
+	.gform_validation_container {
+		display: none !important;
+		position: absolute !important;
+		left: -9000px;
 	}
 
 }
