@@ -59,7 +59,7 @@
 
 							<?php tp_the_excerpt( 80 ); ?>
 
-							<a class="more-link" href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'tp' ); ?></a>
+							<a class="more-link" href="<?php the_permalink(); ?>"><?php _e( 'Read&nbsp;more', 'tp' ); ?></a>
 							
 						</p>
 						

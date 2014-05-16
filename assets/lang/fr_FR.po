@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-16 14:27+0100\n"
-"PO-Revision-Date: 2014-05-16 14:27+0100\n"
+"POT-Creation-Date: 2014-05-16 16:30+0100\n"
+"PO-Revision-Date: 2014-05-16 16:30+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "MIME-Version: 1.0\n"
@@ -84,11 +84,11 @@ msgstr "par"
 msgid "in the category"
 msgstr "dans la catégorie"
 
-#: ../../index.php:63 ../../search.php:36
-msgid "Read more"
-msgstr "Lire davantage"
+#: ../../index.php:62
+msgid "Read&nbsp;more"
+msgstr "Lire&nbsp;davantage"
 
-#: ../../index.php:77
+#: ../../index.php:75
 msgid "No results found."
 msgstr "Aucun résultat trouvé."
 
@@ -108,7 +108,7 @@ msgstr "Écrit par"
 msgid "Follow me on"
 msgstr "Suivez-moi sur"
 
-#: ../../part-author.php:94
+#: ../../part-author.php:87
 #, php-format
 msgid "View 1 post"
 msgid_plural "View all %1$s posts"
@@ -128,25 +128,30 @@ msgid "Share this on Twitter"
 msgstr "Partager sur Twitter"
 
 #: ../../part-share.php:15
-msgid "Share this on LinkedIn"
-msgstr "Partager sur LinkedIn"
-
-#: ../../part-share.php:19
 msgid "Share this on Google Plus"
 msgstr "Partager sur Google Plus"
 
-#: ../../part-share.php:23
-msgid "Share this on Pinterest"
-msgstr "Partager sur Pinterest"
+#: ../../part-share.php:19
+msgid "Share this on LinkedIn"
+msgstr "Partager sur LinkedIn"
 
-#: ../../part-share.php:27
+#: ../../part-share.php:23
 msgid "Email this"
 msgstr "Envoyer par email"
+
+#: ../../part-share.php:27
+#, fuzzy
+msgid "Share this on other networks"
+msgstr "Partager sur Pinterest"
 
 #: ../../search.php:14
 #, php-format
 msgid "Search Results for: %1$s"
 msgstr "Résultats de recherche pour : %1$s"
+
+#: ../../search.php:36
+msgid "Read more"
+msgstr "Lire davantage"
 
 #: ../../search.php:50
 #, php-format
@@ -163,7 +168,7 @@ msgstr ""
 msgid "Search"
 msgstr "Rechercher"
 
-#: ../../single.php:34
+#: ../../single.php:36
 msgid "Back to the overview"
 msgstr "Retour à la vue d'ensemble"
 
@@ -388,50 +393,51 @@ msgstr "Petites icônes avec texte"
 msgid "Icon types"
 msgstr "Types d'icônes"
 
-#: ../../assets/inc/widgets/class-tp-social.php:61
-#: ../../assets/inc/widgets/class-tp-social.php:63
-#: ../inc/widgets/class-tp-social.php:61 ../inc/widgets/class-tp-social.php:63
+#: ../../assets/inc/widgets/class-tp-social.php:62
+#: ../../assets/inc/widgets/class-tp-social.php:64
+#: ../inc/widgets/class-tp-social.php:62 ../inc/widgets/class-tp-social.php:64
 msgid "Follow us on Twitter"
 msgstr "Suivez-nous sur Twitter"
 
-#: ../../assets/inc/widgets/class-tp-social.php:70
-#: ../../assets/inc/widgets/class-tp-social.php:72
-#: ../inc/widgets/class-tp-social.php:70 ../inc/widgets/class-tp-social.php:72
+#: ../../assets/inc/widgets/class-tp-social.php:71
+#: ../../assets/inc/widgets/class-tp-social.php:73
+#: ../inc/widgets/class-tp-social.php:71 ../inc/widgets/class-tp-social.php:73
 msgid "Like our Facebook page"
 msgstr "Aimez notre page Facebook"
 
-#: ../../assets/inc/widgets/class-tp-social.php:79
-#: ../../assets/inc/widgets/class-tp-social.php:81
-#: ../inc/widgets/class-tp-social.php:79 ../inc/widgets/class-tp-social.php:81
-msgid "Connect with us on LinkedIn"
-msgstr "Rejoignez-nous sur LinkedIn"
-
-#: ../../assets/inc/widgets/class-tp-social.php:88
-#: ../../assets/inc/widgets/class-tp-social.php:90
-#: ../inc/widgets/class-tp-social.php:88 ../inc/widgets/class-tp-social.php:90
+#: ../../assets/inc/widgets/class-tp-social.php:80
+#: ../../assets/inc/widgets/class-tp-social.php:82
+#: ../inc/widgets/class-tp-social.php:80 ../inc/widgets/class-tp-social.php:82
 msgid "Add us on Google+"
 msgstr "Ajoutez-nous à Google+"
 
-#: ../../assets/inc/widgets/class-tp-social.php:97
-#: ../../assets/inc/widgets/class-tp-social.php:99
-#: ../inc/widgets/class-tp-social.php:97 ../inc/widgets/class-tp-social.php:99
+#: ../../assets/inc/widgets/class-tp-social.php:89
+#: ../../assets/inc/widgets/class-tp-social.php:91
+#: ../inc/widgets/class-tp-social.php:89 ../inc/widgets/class-tp-social.php:91
+msgid "Connect with us on LinkedIn"
+msgstr "Rejoignez-nous sur LinkedIn"
+
+#: ../../assets/inc/widgets/class-tp-social.php:98
+#: ../../assets/inc/widgets/class-tp-social.php:100
+#: ../inc/widgets/class-tp-social.php:98
+#: ../inc/widgets/class-tp-social.php:100
 msgid "View our YouTube channel"
 msgstr "Voir notre canal Youtube"
 
-#: ../../assets/inc/widgets/class-tp-social.php:106
-#: ../../assets/inc/widgets/class-tp-social.php:108
-#: ../inc/widgets/class-tp-social.php:106
-#: ../inc/widgets/class-tp-social.php:108
+#: ../../assets/inc/widgets/class-tp-social.php:107
+#: ../../assets/inc/widgets/class-tp-social.php:109
+#: ../inc/widgets/class-tp-social.php:107
+#: ../inc/widgets/class-tp-social.php:109
 msgid "E-mail newsletter"
 msgstr "E-newsletter"
 
-#: ../../assets/inc/widgets/class-tp-social.php:115
-#: ../inc/widgets/class-tp-social.php:115
+#: ../../assets/inc/widgets/class-tp-social.php:116
+#: ../inc/widgets/class-tp-social.php:116
 msgid "Subscribe via RSS"
 msgstr "Souscrire par flux RSS"
 
-#: ../../assets/inc/widgets/class-tp-social.php:117
-#: ../inc/widgets/class-tp-social.php:117
+#: ../../assets/inc/widgets/class-tp-social.php:118
+#: ../inc/widgets/class-tp-social.php:118
 msgid "Subscribe to our RSS"
 msgstr "Souscrire à notre flux RSS"
 

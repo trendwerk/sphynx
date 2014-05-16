@@ -24,7 +24,7 @@
 			<i class="fa fa-envelope"></i>
 		</a>
 
-		<a title="<?php _e('Other ','tp'); ?>" class="addthis_button_compact">
+		<a title="<?php _e('Share this on other networks','tp'); ?>" class="addthis_button_compact">
 			<i class="fa fa-plus"></i>
 		</a>
 
