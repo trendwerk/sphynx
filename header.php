@@ -43,11 +43,11 @@
 				<div id="mobile">
 
 					<div id="mobile-search" data-toggle="#search">
-						<i class="icon-search"></i>
+						<i class="fa fa-search"></i>
 					</div>
 
 					<div id="mobile-navigation" data-toggle="#main-navigation">
-						<i class="icon-reorder"></i>
+						<i class="fa fa-reorder"></i>
 					</div>
 
 				</div>
