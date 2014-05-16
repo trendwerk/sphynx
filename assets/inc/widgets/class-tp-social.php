@@ -57,67 +57,70 @@ class TP_Social extends WP_Widget {
 			<ul class="social <?php echo $instance['type']; ?>">
 
 				<?php if( $twitter = get_option( 'tp-twitter' ) ) { ?>
+
 					<li class="twitter">
 						<a rel="external" href="<?php echo $twitter; ?>" title="<?php _e( 'Follow us on Twitter', 'tp' ); ?>">
-							<i class="icon-twitter"></i>
+							<i class="fa fa-twitter"></i>
 							<span class="title"><?php _e( 'Follow us on Twitter', 'tp' ); ?></span>
 						</a>
 					</li>
-				<?php } ?>
 
-				<?php if( $facebook = get_option( 'tp-facebook' ) ) { ?>
+				<?php } if( $facebook = get_option( 'tp-facebook' ) ) { ?>
+
 					<li class="facebook">
 						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e( 'Like our Facebook page', 'tp' ); ?>">
-							<i class="icon-facebook"></i>
+							<i class="fa fa-facebook"></i>
 							<span class="title"><?php _e( 'Like our Facebook page', 'tp' ); ?></span>
 						</a>
 					</li>
-				<?php } ?>
 
-				<?php if( $linkedin = get_option( 'tp-linkedin' ) ) { ?>
-					<li class="linkedin">
-						<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e( 'Connect with us on LinkedIn', 'tp' ); ?>">
-							<i class="icon-linkedin"></i>
-							<span class="title"><?php _e('Connect with us on LinkedIn','tp'); ?></span>
-						</a>
-					</li>
-				<?php } ?>
+				<?php } if( $googleplus = get_option( 'tp-googleplus' ) ) { ?>
 
-				<?php if( $googleplus = get_option( 'tp-googleplus' ) ) { ?>
 					<li class="googleplus">
 						<a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e( 'Add us on Google+', 'tp' ); ?>">
-							<i class="icon-google-plus"></i>
+							<i class="fa fa-google-plus"></i>
 							<span class="title"><?php _e( 'Add us on Google+', 'tp' ); ?></span>
 						</a>
 					</li>
-				<?php } ?>
 
-				<?php if( $youtube = get_option( 'tp-youtube' ) ) { ?>
+				<?php } if( $linkedin = get_option( 'tp-linkedin' ) ) { ?>
+
+					<li class="linkedin">
+						<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e( 'Connect with us on LinkedIn', 'tp' ); ?>">
+							<i class="fa fa-linkedin"></i>
+							<span class="title"><?php _e('Connect with us on LinkedIn','tp'); ?></span>
+						</a>
+					</li>
+
+				<?php } if( $youtube = get_option( 'tp-youtube' ) ) { ?>
+
 					<li class="youtube">
 						<a rel="external" href="<?php echo $youtube; ?>" title="<?php _e( 'View our YouTube channel', 'tp' ); ?>">
-							<i class="icon-youtube"></i>
+							<i class="fa fa-youtube"></i>
 							<span class="title"><?php _e( 'View our YouTube channel', 'tp' ); ?></span>
 						</a>
 					</li>
-				<?php } ?>
 
-				<?php if( $newsletter = get_option( 'tp-newsletter' ) ) { ?>
+				<?php } if( $newsletter = get_option( 'tp-newsletter' ) ) { ?>
+
 					<li class="email">
 						<a href="<?php echo $newsletter; ?>" title="<?php _e( 'E-mail newsletter', 'tp' ); ?>">
-							<i class="icon-envelope"></i>
+							<i class="fa fa-envelope"></i>
 							<span class="title"><?php _e( 'E-mail newsletter', 'tp' ); ?></span>
 						</a>
 					</li>
-				<?php } ?>
 
-				<?php if( 'true' == get_option('tp-rss') ) { ?>
+				<?php } if( 'true' == get_option('tp-rss') ) { ?>
+
 					<li class="rss">
 						<a href="<?php bloginfo( 'rss2_url' ); ?>" title="<?php _e( 'Subscribe via RSS', 'tp' ); ?>">
-							<i class="icon-rss"></i>
+							<i class="fa fa-rss"></i>
 							<span class="title"><?php _e( 'Subscribe to our RSS', 'tp' ); ?></span>
 						</a>
 					</li>
+
 				<?php } ?>
+				
 			</ul>
 
 			<?php 

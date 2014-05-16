@@ -30,9 +30,7 @@
 				<?php get_template_part( 'part', 'author' ); ?>
 				
 				<p>
-					<a class="back" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-						<?php _e( 'Back to the overview', 'tp' ); ?>
-					</a>
+					<a class="back" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><?php _e( 'Back to the overview', 'tp' ); ?></a>
 				</p>
 				
 			<?php endwhile; endif; ?>

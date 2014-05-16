@@ -118,13 +118,13 @@ h6 {
  	&.back:before,
  	&.prev:before {
  		content: "\f053";
- 		padding-right: 7px;
+ 		padding-right: 5px;
  	}
  	
  	&.more-link:after,
  	&.next:after {
  		content: "\f054";
- 		padding-left: 7px;
+ 		padding-left: 5px;
  	}
 	
 	/* call to action buttons */
@@ -137,7 +137,7 @@ h6 {
  		height: 40px;
  		line-height: 40px;
  		margin: 0 10px 0 0;
- 		padding: 0 20px;
+ 		padding: 0 25px;
  		position: relative;
  		text-decoration: none;
 
@@ -189,7 +189,7 @@ h6 {
 
 ul { 
 	list-style-position: outside;
-	margin: 0 0 20px 20px;
+	margin: 0 0 25px 20px;
 	
 	ul {
 		margin: 0 0 0 20px;
@@ -200,11 +200,11 @@ ul {
 ol {
 	list-style-position: outside;
 	list-style-type: decimal;
-	margin: 0 0 20px 20px;
+	margin: 0 0 25px 20px;
 	
 	ol {
 		list-style-type: lower-alpha;
-		margin: 0;
+		margin: 0 0 0 20px;
 	}
 	
 }
@@ -219,8 +219,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;	
 	font-size: 14px;
-	line-height: 22px;
-	margin: 0 0 20px 0;
+	line-height: 25px;
+	margin: 0 0 25px 0;
 	width: 100%;
 		
 	tr { 
@@ -262,7 +262,7 @@ q {
 	color: @text-light;
 	display: inline-block;
 	font-style: italic;
-	margin: 0 0 20px 0; 
+	margin: 0 0 25px 0; 
 	padding: 20px 20px 10px 20px;
 
 	p {
@@ -273,10 +273,11 @@ q {
 
 cite { 
 	color: @text-color;
+	display: block;
 	font-size: 12px;
 	font-style: normal;
 	font-weight: bold;
-	margin: 0 0 10px 0; 
+	margin: 5px 0 10px 0; 
 
 	a {
 		color: @text-color;

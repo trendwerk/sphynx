@@ -50,37 +50,31 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 				
 					<li>
 						<a class="facebook" href="<?php echo $facebook; ?>" itemprop="url" rel="me external">
-							<i class="icon-facebook"></i>
+							<i class="fa fa-facebook"></i>
 						</a>
 					</li>
 					
-				<?php } ?>
-
-				<?php if( $twitter = get_the_author_meta( 'twitter', $author ) ) { ?>
+				<?php } if( $twitter = get_the_author_meta( 'twitter', $author ) ) { ?>
 				
 					<li >
 						<a class="twitter" href="https://twitter.com/<?php echo $twitter; ?>" itemprop="url" rel="me external">
-							<i class="icon-twitter"></i>
+							<i class="fa fa-twitter"></i>
 						</a>
 					</li>
 					
-				<?php } ?>
-								
-				<?php if( $linkedin = get_the_author_meta( 'linkedin', $author ) ) { ?>
-				
-					<li>
-						<a class="linkedin" href="<?php echo $linkedin; ?>" itemprop="url" rel="me external">
-							<i class="icon-linkedin"></i>
-						</a>
-					</li>
-					
-				<?php } ?>
-				
-				<?php if( $googleplus = get_the_author_meta( 'googleplus', $author ) ) { ?>
+				<?php } if( $googleplus = get_the_author_meta( 'googleplus', $author ) ) { ?>
 				
 					<li>
 						<a class="google-plus" href="<?php echo $googleplus; ?>" itemprop="url" rel="me external">
-							<i class="icon-google-plus"></i>
+							<i class="fa fa-google-plus"></i>
+						</a>
+					</li>
+					
+				<?php } if( $linkedin = get_the_author_meta( 'linkedin', $author ) ) { ?>
+				
+					<li>
+						<a class="linkedin" href="<?php echo $linkedin; ?>" itemprop="url" rel="me external">
+							<i class="fa fa-linkedin"></i>
 						</a>
 					</li>
 					
@@ -90,9 +84,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 			
 			<?php if( ! is_author() ) { ?>
 
-				<a class="more-link" href="<?php echo get_author_posts_url( $author ); ?>" rel="author">
-					<?php printf( _n( 'View 1 post', 'View all %1$s posts', count_user_posts( $author ), 'tp' ), count_user_posts( $author ) ); ?>
-				</a>
+				<a class="more-link" href="<?php echo get_author_posts_url( $author ); ?>" rel="author"><?php printf( _n( 'View 1 post', 'View all %1$s posts', count_user_posts( $author ), 'tp' ), count_user_posts( $author ) ); ?></a>
 				
 			<?php } ?>
 			

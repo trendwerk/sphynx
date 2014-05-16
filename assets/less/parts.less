@@ -273,7 +273,7 @@
  * @subsection AddThis
  */
 
- .addthis_toolbox {
+.addthis_toolbox {
 
 	.label {
 		float: left;
@@ -303,17 +303,6 @@
 		&:focus {
 			top: 1px;
 		}
-	
-		&.addthis_button_google_plusone_share {
-			background-color: #dd4B39;
-			
-			&:active,
-			&:focus,
-			&:hover {
-				background-color: darken(#dd4B39, 12%);
-			}
-
-		}
 
 		&.addthis_button_twitter {
 			background-color: #2ca8d2;
@@ -337,6 +326,17 @@
 
 		}
 
+		&.addthis_button_google_plusone_share {
+			background-color: #dd4B39;
+			
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: darken(#dd4B39, 12%);
+			}
+
+		}
+
 		&.addthis_button_linkedin {
 			background-color: #4498c8;
 
@@ -348,17 +348,6 @@
 			
 		}
 
-		&.addthis_button_pinterest_share {
-			background-color: #c82828;
-
-			&:active,
-			&:focus,
-			&:hover {
-				background-color: darken(#c82828, 12%);
-			}
-
-		}
-
 		&.addthis_button_email {
 			background-color: #666;
 
@@ -368,7 +357,18 @@
 				background-color: darken(#666, 12%);
 			}
 
-		}		
+		}
+		
+		&.addthis_button_compact {
+			background-color: #f56952;
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: darken(#f56952, 12%);
+			}
+
+		}
 
 	}
 
