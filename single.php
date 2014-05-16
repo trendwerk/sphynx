@@ -18,6 +18,9 @@
 				</p>
 				
 				<div class="article-content" itemprop="text">
+					<div class="article-thumbnail">
+						<?php the_post_thumbnail( 'medium', array( 'itemprop' => 'thumbnailUrl' ) ); ?>
+					</div>
 					<?php the_content(); ?>
 				</div>
 				
