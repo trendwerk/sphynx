@@ -10,7 +10,7 @@
 	
 		<section id="content" class="eightcol">
 
-			<h1>
+			<h1 id="page-title">
 				<?php printf( __( 'Search Results for: %1$s', 'tp' ), '<strong>' . get_search_query() . '</strong>' ); ?>
 			</h1>
 		

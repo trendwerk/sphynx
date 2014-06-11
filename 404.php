@@ -6,7 +6,7 @@
 	
 		<article id="content" class="twelvecol">
 		
-			<h1>
+			<h1 id="page-title">
 				<?php _e( 'The page you are looking for doesn\'t exist.', 'tp' ); ?>
 			</h1>
 			
