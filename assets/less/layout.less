@@ -105,26 +105,31 @@ body {
 		form { 
 			float: right;
 			width: 100%;
+
+			fieldset {
+				position: relative;
 			
-			input[type="text"] { 
-				margin: 0;
-				right: 0;
-				width: 100%;
-			}
-			
-			input[type="submit"] { 
-				background: none;
-				box-shadow: none;
-				color: @text-light;
-				margin: 0;
-				position: absolute;
-				right: 0;
-				text-shadow: none;
+				input[type="text"] { 
+					margin: 0;
+					right: 0;
+					width: 100%;
+				}
 				
-				&:active,
-				&:focus,
-				&:hover {
-					color: @text-color;
+				input[type="submit"] { 
+					background: none;
+					box-shadow: none;
+					color: @text-light;
+					margin: 0;
+					position: absolute;
+					right: 0;
+					text-shadow: none;
+					
+					&:active,
+					&:focus,
+					&:hover {
+						color: @text-color;
+					}
+
 				}
 
 			}
@@ -136,6 +141,7 @@ body {
 	/* main navigation */
 	
 	#main-navigation {
+		.border-radius(3px);
 		background: @footer-background;
 		z-index: 1;
 
@@ -171,7 +177,7 @@ body {
 
 				}
 				
-				&.has-children > a:after,
+				&.menu-item-has-children > a:after,
 				&.page_item_has_children > a:after { 
 					content: "\f0d7";
 					font-family: FontAwesome;
@@ -217,7 +223,7 @@ body {
 							background: darken(@footer-background, 10%);
 						}
 
-						&.has-children > a:after,
+						&.menu-item-has-children > a:after,
 						&.page_item_has_children > a:after { 
 							content: "\f0da";
 							font-family: FontAwesome;
