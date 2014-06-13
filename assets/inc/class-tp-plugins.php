@@ -142,7 +142,7 @@ class TP_Plugins {
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 		$plugins = array();
-		$folder = STYLESHEETPATH . '/assets/plugins/';
+		$folder = get_stylesheet_directory() . '/assets/plugins/';
 
 		if( is_dir( $folder ) ) {
 			foreach( scandir( $folder ) as $plugin ) {

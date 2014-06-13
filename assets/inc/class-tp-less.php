@@ -52,7 +52,7 @@ class TP_Less {
 	 * Get LESS dependencies. All less files from trendpress-child/assets/less/
 	 */
 	function get_dependencies() {
-		$folder = STYLESHEETPATH . '/assets/less/';
+		$folder = get_stylesheet_directory() . '/assets/less/';
 
 		if( is_dir( $folder ) ) {
 			$files = array_diff( scandir( $folder ), array( '.', '..' ) );

@@ -17,7 +17,7 @@ class TP_Widgets {
 	 * Activate widgets
 	 */
 	function activate() {
-		new TP_Includer( STYLESHEETPATH . '/assets/inc/widgets/' );
+		new TP_Includer( get_stylesheet_directory() . '/assets/inc/widgets/' );
 	}
 } new TP_Widgets;
 
