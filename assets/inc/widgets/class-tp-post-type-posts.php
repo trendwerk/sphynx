@@ -47,7 +47,7 @@ class TP_Post_Type_Posts extends WP_Widget {
 
 			<p>
 				<label>
-					<?php _e( 'Number of posts to show:' ); ?>
+					<?php _e( 'Number of posts to show:', 'tp' ); ?>
 					<input name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $instance['number']; ?>" size="3" />
 				</label>
 			</p>

@@ -32,19 +32,19 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 
 		<p>
 			<label>
-				<strong><?php _e( 'Title' ); ?></strong><br />
+				<strong><?php _e( 'Title', 'tp' ); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
 			</label>
 		</p>
 
 		<p>
 			<label>
-				<strong><?php _e( 'Image' ); ?></strong><br />
+				<strong><?php _e( 'Image', 'tp' ); ?></strong><br />
 
 				<?php 
 					if( ! $instance['image'] ) {
 						echo '<a class="tp-upload-image button-secondary">';
-							_e( 'Upload' );
+							_e( 'Upload', 'tp' );
 						echo '</a>';
 					} else {
 						echo '<div class="tp-edit-image">';
@@ -52,11 +52,11 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 						echo '</div>';
 
 						echo '<a class="tp-edit-image button-secondary">';
-							_e( 'Edit' );
+							_e( 'Edit', 'tp' );
 						echo '</a> ';
 
 						echo '<a class="tp-remove-image button-secondary">';
-							_e( 'Remove' );
+							_e( 'Remove', 'tp' );
 						echo '</a>';
 					} 
 				?>

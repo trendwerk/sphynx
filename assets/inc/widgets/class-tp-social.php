@@ -22,7 +22,7 @@ class TP_Social extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<strong><?php _e( 'Title' ); ?></strong><br />
+				<strong><?php _e( 'Title', 'tp' ); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
 			</label>
 		</p>

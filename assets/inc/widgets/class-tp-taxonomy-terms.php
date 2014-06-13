@@ -19,7 +19,7 @@ class TP_Taxonomy_Terms extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<strong><?php _e( 'Title' ); ?></strong><br />
+				<strong><?php _e( 'Title', 'tp' ); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
 			</label>
 		</p>
@@ -27,7 +27,7 @@ class TP_Taxonomy_Terms extends WP_Widget {
 		<?php if( $taxonomies ) { ?>
 			<p>
 				<label>
-					<strong><?php _e( 'Taxonomy' ); ?></strong><br />
+					<strong><?php _e( 'Taxonomy', 'tp' ); ?></strong><br />
 					<select class="widefat" name="<?php echo $this->get_field_name( 'taxonomy' ); ?>">
 						<?php foreach( $taxonomies as $taxonomy ) { ?>
 							<option <?php selected( $taxonomy->name, $instance['taxonomy'] ); ?> value="<?php echo $taxonomy->name; ?>"><?php echo $taxonomy->label; ?> (<?php echo $taxonomy->name; ?>)</option>
