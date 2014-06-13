@@ -81,7 +81,7 @@ class TP_CPT_Extras {
 			<span class="add-to-menu">
 
 				<img class="waiting" alt="" src="<?php echo site_url( '/wp-admin/images/wpspin_light.gif' ); ?>">
-				<input id="submit-custom-post-type" class="button-secondary submit-add-to-menu" type="submit" value="<?php _e( 'Add to Menu' ); ?>">
+				<input id="submit-custom-post-type" class="button-secondary submit-add-to-menu" type="submit" value="<?php _e( 'Add to Menu', 'tp' ); ?>">
 
 			</span>
 

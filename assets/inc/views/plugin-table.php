@@ -35,7 +35,7 @@
 						} else if( is_plugin_active( $labels['path'] ) && isset( $labels['settings'] ) ) {
 							echo '<a href="' . admin_url( 'plugins.php?page=tp-recommended-plugins&settings=' . $plugin ) . '" onclick="return confirm(\'' . __( 'Are you sure you want to reset to the recommended TrendPress settings?', 'tp' ) . '\');">' . __( 'Apply settings', 'tp' ) . '</a>';
 						} else if( ! is_plugin_active( $labels['path'] ) ) {
-							echo '<a href="' . wp_nonce_url( 'plugins.php?action=activate&plugin=' . urlencode( $labels['path'] ), 'activate-plugin_' . $labels['path'] ) . '">' . __( 'Activate' ) . '</a>';
+							echo '<a href="' . wp_nonce_url( 'plugins.php?action=activate&plugin=' . urlencode( $labels['path'] ), 'activate-plugin_' . $labels['path'] ) . '">' . __( 'Activate', 'tp' ) . '</a>';
 						} 
 					?>
 				</td>					

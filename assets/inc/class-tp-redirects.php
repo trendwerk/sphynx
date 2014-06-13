@@ -269,7 +269,7 @@ class TP_Manage_Redirects {
 
 			<p>
 				<input type="text" id="tp-redirects-search" placeholder="<?php _e( 'Find or create redirect..', 'tp' ); ?>" />
-				<input type="button" id="tp-redirects-add" class="button-primary" value="<?php _e( 'Add' ); ?>" />
+				<input type="button" id="tp-redirects-add" class="button-primary" value="<?php _e( 'Add', 'tp' ); ?>" />
 			</p>
 			
 			<?php $this->display_redirect_table(); ?>
@@ -349,8 +349,8 @@ class TP_Manage_Redirects {
 				</td>
 
 				<td class="actions">
-					<a class="dashicons dashicons-edit tp-redirects-edit" title="<?php _e( 'Edit' ); ?>"></a>
-					<a class="dashicons dashicons-post-trash tp-redirects-remove" title="<?php _e( 'Remove' ); ?>"></a>
+					<a class="dashicons dashicons-edit tp-redirects-edit" title="<?php _e( 'Edit', 'tp' ); ?>"></a>
+					<a class="dashicons dashicons-post-trash tp-redirects-remove" title="<?php _e( 'Remove', 'tp' ); ?>"></a>
 				</td>
 
 			</tr>
