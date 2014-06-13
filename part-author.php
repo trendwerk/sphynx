@@ -59,7 +59,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 
 			            <li>
 			                <a class="facebook" href="<?php echo $facebook; ?>" itemprop="url" rel="me external">
-			                    <i class="icon-facebook"></i>
+			                    <i class="fa fa-facebook"></i>
 			                </a>
 			            </li>
 
@@ -69,7 +69,17 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 
 			            <li >
 			                <a class="twitter" href="https://twitter.com/<?php echo $twitter; ?>" itemprop="url" rel="me external">
-			                    <i class="icon-twitter"></i>
+			                    <i class="fa fa-twitter"></i>
+			                </a>
+			            </li>
+
+			        <?php } ?>
+
+			          <?php if( $googleplus ) { ?>
+
+			            <li>
+			                <a class="google-plus" href="<?php echo $googleplus; ?>" itemprop="url" rel="me external">
+			                    <i class="fa fa-google-plus"></i>
 			                </a>
 			            </li>
 
@@ -79,22 +89,12 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 
 			            <li>
 			                <a class="linkedin" href="<?php echo $linkedin; ?>" itemprop="url" rel="me external">
-			                    <i class="icon-linkedin"></i>
+			                    <i class="fa fa-linkedin"></i>
 			                </a>
 			            </li>
 
 			        <?php } ?>
-
-			        <?php if( $googleplus ) { ?>
-
-			            <li>
-			                <a class="google-plus" href="<?php echo $googleplus; ?>" itemprop="url" rel="me external">
-			                    <i class="icon-google-plus"></i>
-			                </a>
-			            </li>
-
-			        <?php } ?>
-
+			      
 			    </ul>
 
 			<?php } ?>
