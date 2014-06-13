@@ -165,22 +165,27 @@
 
 		#main-navigation {
 			.border-box;
+			clear: both;
 			display: none;
+			float: left;
 			padding: 10px;
 			width: 100%;
 
 			ul {
 				margin: 0;
+				position: relative;
 				
 				/* level 1 */
 
 				li { 
+					.border-box;
+					min-height: inherit;
 					width: 100%;
 
 					a { 
 						.border-box;
 						line-height: 20px;
-						padding: 5px 15px;
+						margin: 0;
 						width: 100%;
 					}
 					
@@ -196,8 +201,11 @@
 					/* level 2 */
 
 					ul {
-						display: block; 
+						clear: both;
+						display: block;
+						float: left; 
 						left: 0;
+						margin-left: 0;
 						position: relative;
 						width: 100%;
 
@@ -229,6 +237,12 @@
 							
 							ul {
 								left: 0;
+								margin-left: 0;
+
+								li a {
+									padding-left: 60px;
+								}
+
 							}
 							
 						}

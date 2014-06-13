@@ -141,6 +141,7 @@ body {
 	/* main navigation */
 	
 	#main-navigation {
+		.border-box;
 		.border-radius(3px);
 		background: @footer-background;
 		z-index: 1;
@@ -155,7 +156,7 @@ body {
 
 			li {
 				float: left;
-				max-height: 50px;
+				min-height: 50px;
 				position: relative;
 
 				a { 
@@ -177,7 +178,7 @@ body {
 
 				}
 				
-				&.menu-item-has-children > a:after,
+				&.has-children > a:after,
 				&.page_item_has_children > a:after { 
 					content: "\f0d7";
 					font-family: FontAwesome;
@@ -223,7 +224,7 @@ body {
 							background: darken(@footer-background, 10%);
 						}
 
-						&.menu-item-has-children > a:after,
+						&.has-children > a:after,
 						&.page_item_has_children > a:after { 
 							content: "\f0da";
 							font-family: FontAwesome;
