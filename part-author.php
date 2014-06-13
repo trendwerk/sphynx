@@ -40,47 +40,64 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 				<?php the_author_meta( 'description', $author ); ?>
 			</p>
 			
-			<ul class="author-social">
+			<?php
+			    $facebook = get_the_author_meta( 'facebook', $author );
+			    $twitter = get_the_author_meta( 'twitter', $author );
+			    $linkedin = get_the_author_meta( 'linkedin', $author );
+			    $googleplus = get_the_author_meta( 'googleplus', $author );
 
-				<li>
-					<span class="label"><?php _e('Follow me on', 'tp'); ?>:</span>
-				</li>
+			    if ( $facebook || $twitter || $linkedin || $googleplus ) {
+			?>
 
-				<?php if( $facebook = get_the_author_meta( 'facebook', $author ) ) { ?>
-				
-					<li>
-						<a class="facebook" href="<?php echo $facebook; ?>" itemprop="url" rel="me external">
-							<i class="fa fa-facebook"></i>
-						</a>
-					</li>
-					
-				<?php } if( $twitter = get_the_author_meta( 'twitter', $author ) ) { ?>
-				
-					<li >
-						<a class="twitter" href="https://twitter.com/<?php echo $twitter; ?>" itemprop="url" rel="me external">
-							<i class="fa fa-twitter"></i>
-						</a>
-					</li>
-					
-				<?php } if( $googleplus = get_the_author_meta( 'googleplus', $author ) ) { ?>
-				
-					<li>
-						<a class="google-plus" href="<?php echo $googleplus; ?>" itemprop="url" rel="me external">
-							<i class="fa fa-google-plus"></i>
-						</a>
-					</li>
-					
-				<?php } if( $linkedin = get_the_author_meta( 'linkedin', $author ) ) { ?>
-				
-					<li>
-						<a class="linkedin" href="<?php echo $linkedin; ?>" itemprop="url" rel="me external">
-							<i class="fa fa-linkedin"></i>
-						</a>
-					</li>
-					
-				<?php } ?>
-				
-			</ul>
+			    <ul class="author-social">
+
+			        <li>
+			            <span class="label"><?php printf( __( 'Follow %1$s on', 'tp' ), get_the_author_meta( 'first_name', $author ) ); ?>:</span>
+			        </li>
+
+			        <?php if( $facebook ) { ?>
+
+			            <li>
+			                <a class="facebook" href="<?php echo $facebook; ?>" itemprop="url" rel="me external">
+			                    <i class="icon-facebook"></i>
+			                </a>
+			            </li>
+
+			        <?php } ?>
+
+			        <?php if( $twitter ) { ?>
+
+			            <li >
+			                <a class="twitter" href="https://twitter.com/<?php echo $twitter; ?>" itemprop="url" rel="me external">
+			                    <i class="icon-twitter"></i>
+			                </a>
+			            </li>
+
+			        <?php } ?>
+
+			        <?php if( $linkedin ) { ?>
+
+			            <li>
+			                <a class="linkedin" href="<?php echo $linkedin; ?>" itemprop="url" rel="me external">
+			                    <i class="icon-linkedin"></i>
+			                </a>
+			            </li>
+
+			        <?php } ?>
+
+			        <?php if( $googleplus ) { ?>
+
+			            <li>
+			                <a class="google-plus" href="<?php echo $googleplus; ?>" itemprop="url" rel="me external">
+			                    <i class="icon-google-plus"></i>
+			                </a>
+			            </li>
+
+			        <?php } ?>
+
+			    </ul>
+
+			<?php } ?>
 			
 			<?php if( ! is_author() ) { ?>
 
