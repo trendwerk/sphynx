@@ -15,34 +15,71 @@
  * @subsection Gravity Forms
  */
 
-.gform_wrapper {
+/* error message color */
 
-	/* error messages */
+@error-red: #c44741;
+
+/* error messages */
+
+.gform_wrapper {
 
 	.validation_error {
 		.border-box;
-		background: #fff;
-		border: 1px solid #c44741;
-		color: #c44741;
+		.border-radius(3px);
+		background: @error-red;
+		clear: both;
+		color: #FFF;
 		display: block;
+		float: left;
 		margin-bottom: 20px;
 		padding: 10px 15px;
-		width: 100%;
+		width: auto;
+
+		&:before {
+			content: "\f071";
+			display: inline-block;
+			font-family: fontawesome;
+			padding-right: 10px;
+		}
+
 	}
 
 	.validation_message {
+		background-color: @error-red;
 		clear: both;
-		color: #c44741;
+		color: #FFF;
 		float: left;
-		padding: 5px 0;
+		padding: 5px 15px 3px 15px;
+		position: relative;
+		width: auto !important;
+
+		&:before {
+			border: solid transparent;
+			border-color: rgba(255, 255, 255, 0);
+			border-bottom-color: @error-red;
+			border-width: 7px;
+			bottom: 100%;
+			content: " ";
+			left: 50%;
+			margin-left: -7px;
+			pointer-events: none;
+			position: absolute;
+			height: 0;
+			width: 0;
+		}
+
 	}
 
-	/* hide anti-spam honeypot field */
+	.gfield_required {
+		color: @error-red;
+	}
 
-	.gform_validation_container {
-		display: none !important;
-		position: absolute !important;
-		left: -9000px;
+	li.gfield_error {
+
+		label {
+			color: @error-red;
+		}
+
 	}
 
 }
