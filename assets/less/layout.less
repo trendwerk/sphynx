@@ -105,26 +105,31 @@ body {
 		form { 
 			float: right;
 			width: 100%;
+
+			fieldset {
+				position: relative;
 			
-			input[type="text"] { 
-				margin: 0;
-				right: 0;
-				width: 100%;
-			}
-			
-			input[type="submit"] { 
-				background: none;
-				box-shadow: none;
-				color: @text-light;
-				margin: 0;
-				position: absolute;
-				right: 0;
-				text-shadow: none;
+				input[type="text"] { 
+					margin: 0;
+					right: 0;
+					width: 100%;
+				}
 				
-				&:active,
-				&:focus,
-				&:hover {
-					color: @text-color;
+				input[type="submit"] { 
+					background: none;
+					box-shadow: none;
+					color: @text-light;
+					margin: 0;
+					position: absolute;
+					right: 0;
+					text-shadow: none;
+					
+					&:active,
+					&:focus,
+					&:hover {
+						color: @text-color;
+					}
+
 				}
 
 			}
