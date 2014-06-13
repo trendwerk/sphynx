@@ -37,9 +37,9 @@
 	position: relative;
 }
 
-img, 
 object, 
-embed { 
+embed,
+img { 
 	max-width: 100%;
 }
 
@@ -59,6 +59,7 @@ img {
 	.container-inner {
 		margin: 0 auto;
 		padding: 0 10px;
+		position: relative;
 	}
 
 }
@@ -191,8 +192,9 @@ img {
 @media(max-width: 980px) {
 
 	.container .container-inner {
-		padding: 0 5%;
-		width: 90%;
+		.border-box;
+		padding: 0 20px;
+		width: 100%;
 		
 		.onecol, 
 		.twocol, 
@@ -207,8 +209,11 @@ img {
 		.tencol, 
 		.elevencol, 
 		.twelvecol {
-			margin: 10px 1%;
-			width: 98%;
+			.border-box;
+			margin-left: 0;
+			margin-right: 0;
+			padding: 10px;
+			width: 100%;
 		}
 
 	}
@@ -224,7 +229,7 @@ img {
 
 	.container .container-inner {
 		.border-box;
-		padding: 0 20px;
+		padding: 0 10px;
 		width: 100%;
 	}
 	
