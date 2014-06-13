@@ -95,7 +95,7 @@ class TP_Recommended_Plugins {
 				'description' => __( 'Broadcast posts to Twitter and/or Facebook, pull in reactions from Twitter and Facebook as comments.', 'tp' ),
 				'path' => 'social/social.php',
 			),
-			'gravity-forms-placeholder' => array(
+			'gravity-forms-placeholders' => array(
 				'name' => 'Gravity Forms Placeholders',
 				'description' => __( 'Adds HTML5 placeholder support to Gravity Forms fields with a Javascript fallback. Javascript & jQuery are required.', 'tp' ),
 				'path' => 'gravity-forms-placeholders/gravityforms-placeholders.php',
