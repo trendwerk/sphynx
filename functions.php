@@ -46,4 +46,4 @@ add_action( 'admin_enqueue_scripts', 'tp_admin_enqueue_scripts' );
 /**
  * Add the language domain
  */
-load_theme_textdomain( 'tp', STYLESHEETPATH . '/assets/lang' );
+load_theme_textdomain( 'tp', get_stylesheet_directory() . '/assets/lang' );
