@@ -17,13 +17,16 @@ jQuery( function( $ ) {
 	/**
 	 * Toggle Navigation
 	 */
-	$( '#mobile-navigation, #mobile-search' ).click( function() {
-		$( this ).toggleClass( 'active' );
+ 	$( '#mobile-navigation, #mobile-search' ).click( function() {
+ 		$( this ).toggleClass( 'active' );
 		$( $( this ).data( 'toggle' ) ).slideToggle( 'fast' );
-	} );
 
-	$( '#mobile-search' ).click( function() {
-		$( $( this ).data( 'toggle' ) ).find( 'input[type="text"]' ).focus();
-	} );
+		$( $( this ).data( 'toggle' ) ).slideToggle( 'fast', function() {
+			if( ! $( this ).is( ':visible' ) )
+				$( this ).css( 'display', '' );
+		} );
+ 	} );
+ 
+ 	$( '#mobile-search' ).click( function() {
 	
 } );
