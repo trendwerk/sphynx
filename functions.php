@@ -25,7 +25,7 @@ function tp_enqueue_scripts() {
 	
 	//Get jQuery from Google CDN
     wp_deregister_script( 'jquery' );
-    wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-2.0.0.min.js' );
+    wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' );
 }
 add_action( 'wp_enqueue_scripts', 'tp_enqueue_scripts' );
 
