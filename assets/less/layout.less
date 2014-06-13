@@ -305,6 +305,25 @@ body {
 				&:hover { 
 					color: @link-color; 
 				}
+
+				&[rel="tag"] {
+					.border-radius(3px);
+					background: #fff;
+					border: 1px solid @link-color;
+					color: @link-color;
+					display: inline-block;
+					font-size: 12px !important;
+					line-height: 25px;
+					margin: 0 3px 5px 0;
+					padding: 0 10px;
+					text-decoration: none;
+					
+					&:hover {
+						background: @link-color;
+						color: #fff;
+					}
+								
+				}
 				
 			}
 			
