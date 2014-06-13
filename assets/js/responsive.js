@@ -28,5 +28,7 @@ jQuery( function( $ ) {
  	} );
  
  	$( '#mobile-search' ).click( function() {
-	
+		$( $( this ).data( 'toggle' ) ).find( 'input[type="text"]' ).focus();
+	} );	
+
 } );
