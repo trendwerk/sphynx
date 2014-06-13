@@ -24,12 +24,12 @@
 					<?php the_content(); ?>
 				</div>
 				
+				<?php get_template_part( 'part', 'share' ); ?>
+
 				<p class="article-meta">
 					<?php the_tags( 'Tags: ', '' ); ?>
 				</p>
-				
-				<?php get_template_part( 'part', 'share' ); ?>
-				
+								
 				<?php get_template_part( 'part', 'author' ); ?>
 				
 				<p>
