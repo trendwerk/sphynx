@@ -154,11 +154,12 @@
 		margin: 0;
 		 
 		li.comment {
-			border-top: 1px solid @border-color;
 			list-style: none;
-			padding: 25px 0 0 0;		
 						
 			.comment-body {
+				border: 1px solid @border-color;
+				margin: 0 0 20px 0;
+				padding: 20px 20px 0 20px;
 				position: relative;
 			
 				.comment-author {
@@ -187,13 +188,14 @@
 
 				.comment-meta {
 					clear: both;
-					font-size: 12px;
-					left: 80px;
+					font-size: 13px;
+					font-style: italic;
+					left: 100px;
 					position: absolute;
-					top: 35px;
+					top: 55px;
 					
 					a {
-						color: @text-color;
+						color: @text-light;
 						cursor: text;
 						text-decoration: none;
 					}
@@ -207,8 +209,8 @@
 				.reply {
 					font-size: 12px;
 					position: absolute;
-					right: 0;
-					top: 0;
+					right: 20px;
+					top: 20px;
 
 					a {	.font-awesome-before("\f112  "); }
 
@@ -216,12 +218,13 @@
 				
 			}
 
+			&.bypostauthor { background: @light-background; }
+
 		}
 
 	}
 	
 	#respond {
-		border-top: 1px solid @border-color;
 		clear: both;
 		float: left;
 		padding: 25px 0 0 0;
