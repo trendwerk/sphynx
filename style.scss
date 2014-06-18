@@ -1,0 +1,41 @@
+/**
+ * Main stylesheet
+ *
+ * @package			WordPress
+ * @subpackage		TrendPress
+ * @author			Trendwerk
+ * @license			GPL v2
+ * 
+ */
+
+@charset "UTF-8";
+
+/**
+ * @section Variables
+ *
+ * Defines recurring colors and fonts
+ */
+
+$heading-font:		'Helvetica Neue', sans-serif;
+$text-font:			'Helvetica Neue', sans-serif;
+
+$secondary-color:	#999999;
+$primary-color:		#1F6FD1;
+
+$footer-background:	#333333;
+$light-background:	#EEEEEE;
+$body-background:	#FFFFFF;
+$border-color:		#CCCCCC;
+
+$heading-color:		#333333;
+$text-color:		#666666;
+$text-light:		#999999;
+$link-color:		$primary-color;
+
+/**
+ * @section Import
+ *
+ * Import other SASS files
+ */
+
+@import 'assets/sass/reset';
