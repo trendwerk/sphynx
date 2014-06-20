@@ -1,0 +1,81 @@
+/**
+* @section Images
+* 
+* Defines the default styling of images
+*
+* @package     WordPress
+* @subpackage  TrendPress
+* @author      Trendwerk
+* @license     GPL v2
+*
+*/
+
+/**
+ * @section     Images
+ * @subsection  Alignment
+ */
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 10px 0; 
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 10px 20px; 
+}
+
+.aligncenter {
+	margin: 0 auto;
+	display: block;
+}
+
+/**
+ * @section    Images
+ * @subsection Captions
+ */
+
+.wp-caption {
+	background: $light-background;
+	text-align: center;
+	margin-bottom: 25px;
+	max-width: 100%;
+
+	img { 
+		margin: 5px 5px 0 5px; 
+	}
+		
+	.wp-caption-text { 
+		display: inline-block;
+		font-size: 12px;
+		line-height: 20px;
+		margin: 0 10px 10px 10px;	
+	}
+
+}
+
+/**
+ * @section     Images
+ * @subsection  Gallery
+ */
+
+.gallery { 
+	padding: 0 0 25px 0;
+
+	dd.gallery-caption {
+		font-size: 13px;
+		font-style: italic;
+		margin: 0 0 10px 0;
+	}
+
+}
+
+/**
+ * @section     Images
+ * @subsection  WordPress smileys
+ */
+
+.wp-smiley {
+	margin: 0 !important;
+	max-height: 1em;
+}

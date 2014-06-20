@@ -38,4 +38,15 @@ $link-color:		$primary-color;
  * Import other SASS files
  */
 
+@import 'assets/sass/mixins';
 @import 'assets/sass/reset';
+@import 'assets/sass/typography';
+@import 'assets/sass/forms';
+@import 'assets/sass/misc';
+@import 'assets/sass/images';
+@import 'assets/sass/grid';
+@import 'assets/sass/layout';
+@import 'assets/sass/template';
+@import 'assets/sass/parts';
+@import 'assets/sass/widgets';
+@import 'assets/sass/plugins';

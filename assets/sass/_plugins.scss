@@ -1,0 +1,348 @@
+/**
+ * @section Plugins
+ *
+ * Defines the default plugin specific styling
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+
+/**
+ * @section    Plugins
+ * @subsection Gravity Forms
+ */
+
+/* error message color */
+
+$error-red: #c44741;
+
+/* error messages */
+
+.gform_wrapper {
+
+	.validation_error {
+		@include border-box;
+		@include border-radius(3px);
+		background: $error-red;
+		clear: both;
+		color: #FFF;
+		display: block;
+		float: left;
+		margin-bottom: 20px;
+		padding: 10px 23px;
+		width: auto;
+
+		&:before {
+			content: "\f071";
+			display: inline-block;
+			font-family: fontawesome;
+			padding-right: 10px;
+		}
+
+		&:after {
+			content: ".";
+		}
+
+	}
+
+	.validation_message {
+		@include border-radius(3px);
+		background-color: $error-red;
+		clear: both;
+		color: #FFF;
+		float: left;
+		padding: 5px 15px 3px 15px;
+		position: relative;
+		width: auto !important;
+
+		&:before {
+			border: solid transparent;
+			border-color: rgba(255, 255, 255, 0);
+			border-bottom-color: $error-red;
+			border-width: 7px;
+			bottom: 100%;
+			content: " ";
+			left: 50%;
+			margin-left: -7px;
+			pointer-events: none;
+			position: absolute;
+			height: 0;
+			width: 0;
+		}
+
+	}
+
+	.gfield_required {
+		color: $error-red;
+	}
+
+	li.gfield_error {
+
+		label {
+			color: $error-red;
+		}
+
+	}
+
+}
+
+#content .gform_wrapper {
+
+	.gform_heading,
+	.gform_footer {	
+		clear: both;
+		margin-bottom: 15px;
+		width: 100%;
+	}
+		
+	.gform_body {		
+		
+		.gform_fields {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			
+			.gfield {
+				float: left;
+				margin-bottom: 20px;
+				width: 100%;
+				
+				.gfield_label {
+					float: left; 
+					width: 35%;
+				}
+				
+				.gfield_description,
+				.instruction {
+					font-size: 13px;
+					margin: 14px 0 0 35%;
+					width: 50%;				
+				}
+				
+				.medium,
+				.small,
+				.large {
+					font-size: 13px;
+				}
+				
+				.small {
+					width: 25%;
+				}
+
+				.medium {
+					width: 40%;
+				}
+
+				.large {
+					width: 55%;
+				}
+
+				.gfield_select {
+					float: left;
+				}
+				
+				.gfield_checkbox,
+				.gfield_radio {
+					float: left;
+					font-size: 13px;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					width: 65%;
+					
+					label { 
+						position: relative;
+						top: 2px; 
+					}
+	
+					input[type="text"],
+					label { 
+						margin-left: 10px;
+					}
+					
+				}
+
+				.clear-multi {
+					float: left;
+					width: 65%;
+					
+					.gfield_time_minute,
+					.gfield_time_ampm, 
+					.gfield_time_hour {
+						clear: both;
+						position: relative;
+
+						input[type="text"],
+						select {
+							float: left;
+							margin-bottom: 20px;
+							width: 61.6%;
+						}
+
+						select {
+							margin-bottom: 0;
+						}
+
+						label {
+							@include border-box;
+							float: left;
+							padding: 7px 0 0 10px;
+							width: 38.4%;					
+						}
+
+					}
+
+					.gfield_time_hour {
+						text-indent: -999999px;
+
+						label {
+							text-indent: 0;
+						}
+
+					}
+
+				}
+
+				.ginput_list {
+					float: left;
+					width: 65%;
+
+					table {
+						margin-bottom: 0;
+					}
+
+					.gfield_list {
+						border: none;
+						padding: 0;
+
+						tr,
+						th,
+						td {
+							border: none;
+							padding: 0;
+						}
+
+						tr {
+							position: relative;
+							width: 100%;
+						}
+
+						td.gfield_list_cell {
+							width: 100%;
+						}
+
+						td.gfield_list_icons {
+							position: absolute;
+							left: 69%;
+							margin-top: 11px;
+							width: 40px;
+							
+							img {
+								float: right;
+								width: auto;
+							}
+
+						}
+
+						input[type="text"] {
+							margin-bottom: 20px;
+							width: 61.6%;
+						}
+
+					}
+
+				}
+				
+				.ginput_complex {
+					float: left;
+					width: 65%;
+				
+					span {
+						clear: both;
+						float: left;
+						font-size: 13px;
+						margin-bottom: 20px;
+						width: 100%;
+
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+						
+						label { 
+							@include border-box;
+							@include elipsis;
+							float: left; 
+							padding: 7px 0 0 10px;
+							width: 38.4%;
+						}
+						
+						input[type="text"],
+						select {
+							float: left;
+							width: 61.6%;
+						}
+					
+					}
+				
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	.gform_footer {
+		clear: both;
+		
+		.gform_button {
+			margin: 0 0 0 35%;
+		}
+		
+	}
+
+}
+
+/**
+ * @section    Plugins
+ * @subsection Gravity Forms widget
+ */
+
+.gform_widget {
+	
+	form {
+		
+		ul {
+			border-bottom: none;
+			display: block;
+			float: left;
+			width: 100%;
+		
+			li {
+				border: none; 
+				display: block;
+				padding: 0;
+				width: 100%;
+
+				label {
+					clear: both;
+					float: left;
+					padding: 5px 0;
+				}
+
+			}
+		
+		}
+
+		.medium,
+		.large,
+		.small {
+			width: 100%;
+		}
+	
+	}
+	
+}

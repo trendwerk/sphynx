@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 		},
 
 		/**
-		 * Uglify files
+		 * Compile SASS to CSS
 		 */		
 
 		sass: {
@@ -54,6 +54,30 @@ module.exports = function(grunt) {
 			}
 		},
 
+		/**
+		 * Watch things
+		 */
+
+        watch: {
+            sass: {
+                files: ['style.scss',
+                		'assets/sass/*'],
+                tasks: ['sass'],
+                options: {
+					livereload: 35729
+				}
+            },
+            js: {
+                files: ['assets/js/lib/*.js',
+						'assets/js/functions.js'],
+                tasks: ['concat', 'uglify']
+            },
+            images: {
+                files: ['assets/img/*'],
+                tasks: ['imageoptim']
+            }
+        }
+
 	} );
 
 	/**
@@ -62,6 +86,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-imageoptim');
 
@@ -69,6 +94,6 @@ module.exports = function(grunt) {
 	 * Run tasks
 	 */
 
-	grunt.registerTask( 'default', ['concat', 'uglify', 'sass', 'imageoptim'] );
+	grunt.registerTask( 'default', ['concat', 'uglify', 'sass', 'imageoptim', 'watch'] );
 
 };

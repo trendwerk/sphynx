@@ -1,0 +1,236 @@
+/**
+ * @section Grid
+ * 
+ * This document defines the width of grid classes like .onecol, .twocol,
+ * .threecol and so on. These classes make sure the website aligns to the 
+ * 960 grid (http://960.gs/) or 1140 grid (http://www.1140px.com/) for larger 
+ * screens.
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+
+/**
+ * @section    Grid
+ * @subsection Default grid styling
+ *
+ * Defines the width of grid classes (e.g. .onecol, .twocol, .threecol, etc...)
+ */ 
+
+.onecol, 
+.twocol, 
+.threecol, 
+.fourcol, 
+.fivecol, 
+.sixcol, 
+.sevencol, 
+.eightcol, 
+.ninecol,
+.tencol, 
+.elevencol, 
+.twelvecol {
+	float: left;
+	margin: 10px;
+	position: relative;
+}
+
+object, 
+embed,
+img { 
+	max-width: 100%;
+}
+
+img { 
+	height: auto;
+	width: auto;
+}
+
+.container {
+	clear: both;
+	display: block;
+	float: left;
+	height: auto;
+	position: relative; // fix abolute elements conflicting with the WordPress admin bar
+	width: 100%;
+
+	.container-inner {
+		margin: 0 auto;
+		padding: 0 10px;
+		position: relative;
+	}
+
+}
+
+/**
+ * @section    Grid
+ * @subsection Standard (960 pixel grid)
+ */ 
+
+.container .container-inner {
+	width: 960px;
+
+	.onecol {
+		width: 60px;
+	}
+	
+	.twocol {
+		width: 140px;
+	}
+	
+	.threecol {
+		width: 220px;
+	}
+	
+	.fourcol {
+		width: 300px;
+	}
+	
+	.fivecol {
+		width: 380px;
+	}
+	
+	.sixcol {
+		width: 460px;
+	}
+	
+	.sevencol {
+		width: 540px;
+	}
+	
+	.eightcol {
+		width: 620px;
+	}
+	
+	.ninecol {
+		width: 700px;
+	}
+	
+	.tencol {
+		width: 780px;
+	}
+	
+	.elevencol {
+		width: 860px;
+	}
+	
+	.twelvecol {
+		width: 940px;
+	}
+
+}
+
+/**
+ * @section    Grid
+ * @subsection Large desktops (1140 pixel grid)
+ */ 
+	
+@media(min-width: 1200px) {
+
+	.container .container-inner {
+		width: 1140px;
+
+		.onecol {
+			width: 75px;
+		}
+
+		.twocol {
+			width: 170px;
+		}
+
+		.threecol {
+			width: 265px;
+		}
+
+		.fourcol {
+			width: 360px;
+		}
+
+		.fivecol {
+			width: 455px;
+		}
+
+		.sixcol {
+			width: 550px;
+		}
+
+		.sevencol {
+			width: 645px;
+		}
+
+		.eightcol {
+			width: 740px;
+		}
+
+		.ninecol {
+			width: 835px;
+		}
+
+		.tencol {
+			width: 930px;
+		}
+
+		.elevencol {
+			width: 1025px;
+		}
+
+		.twelvecol {
+			width: 1120px;
+		}
+
+	}
+
+}
+
+/**
+ * @section    Grid
+ * @subsection Tablets (fluid layout)
+ */ 
+	
+@media(max-width: 980px) {
+
+	.container .container-inner {
+		@include border-box;
+		padding: 0 20px;
+		width: 100%;
+		
+		.onecol, 
+		.twocol, 
+		.threecol, 
+		.fourcol, 
+		.fivecol, 
+		.sixcol, 
+		.sevencol, 
+		.sevencol, 
+		.eightcol, 
+		.ninecol, 
+		.tencol, 
+		.elevencol, 
+		.twelvecol {
+			@include border-box;
+			margin-left: 0;
+			margin-right: 0;
+			padding: 10px;
+			width: 100%;
+		}
+
+	}
+
+}
+
+/**
+ * @section    Grid
+ * @subsection Mobile (fluid layout)
+ */ 
+	
+@media(max-width: 640px) {
+
+	.container .container-inner {
+		@include border-box;
+		padding: 0 10px;
+		width: 100%;
+	}
+	
+}
