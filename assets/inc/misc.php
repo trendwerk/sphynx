@@ -25,6 +25,11 @@ function tp_add_editor_styles( $settings ) {
     		'selector' => 'a',
     		'classes'  => 'more-link',
     	),
+        array(
+            'title'    => __( 'Intro', 'tp' ),
+            'selector' => 'p',
+            'classes'  => 'intro',
+        ),       
     );
     $settings['style_formats'] = json_encode( $style_formats );
 

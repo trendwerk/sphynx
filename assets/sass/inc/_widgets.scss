@@ -17,17 +17,15 @@
 
 .widget {
 	@include border-box;
-	@include border-radius(3px);
 	background: $light-background;
 	clear: both;
 	float: left;
-	font-size: 13px;
-	margin: 0 0 15px 0;
-	padding: 20px;
+	margin: 0 0 $line-height * 2 0;
+	padding: 40px;
 	width: 100%;
 
 	.widgettitle {
-		margin: 0 0 20px 0;
+		margin: 0 0 $line-height 0;
 		
 		a {
 			color: $heading-color;
@@ -45,18 +43,25 @@
 	}
 
 	p {
-		margin: 0 0 15px 0;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
 	}
 	
 	ul {
 		border-bottom: 1px solid $border-color;
-		margin: 0 0 10px 0;
+		margin: 0 0 $line-height 0;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 		
 		li {
 			border-top: 1px solid $border-color;
 			display: block;
-			line-height: 24px;
-			padding: 5px;
+			padding: 10px 5px;
 			
 			a {
 				color: $text-color;
@@ -78,7 +83,7 @@
 
 				li {
 					border: none;
-					margin-left: 15px;
+					margin-left: 20px;
 				}
 				
 			}
@@ -194,8 +199,8 @@
 		
 		/* small icons with text */
 
-		&.small-icons,
-		&.small-icons-text {
+		&.small-icons-text,
+		&.small-icons {
 
 			li a {
 				margin: 0 0 5px 0;

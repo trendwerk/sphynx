@@ -12,10 +12,17 @@
 
 /**
  * @section    Typography
+ * @subsection Variables
+ */
+
+$line-height:	25px;
+
+/**
+ * @section    Typography
  * @subsection Import Font Awesome
  */
 
-@import "assets/sass/lib/_fontawesome.scss"; 
+@import "lib/_fontawesome.scss";
 
 /**
  * @section    Typography
@@ -33,14 +40,10 @@ html {
  */
 
 body {
-	color: $text-color;
+	color: $text-color; 
 	font-family: $text-font;
 	font-size: 14px;
-	line-height: 25px;	
-}
-
-p {
-	margin: 0 0 25px 0;
+	line-height: $line-height;
 }
 
 /**
@@ -56,37 +59,33 @@ h5,
 h6 {
 	color: $heading-color;
 	font-family: $heading-font;
-	font-weight: normal;
-	line-height: 1em;
-	margin: 0 0 25px 0;
+	font-weight: 700;
+	line-height: $line-height;
+	margin: 0 0 $line-height 0;
 }
 
-h1 { 
+h1 {
 	font-size: 36px;
 }
 
-h2 { 
-	font-size: 26px; 
+h2 {
+	font-size: 24px; 
 }
 
-h3 { 
+h3 {
 	font-size: 20px;
-	font-weight: bold;
 }
 
-h4 { 
+h4 {
 	font-size: 18px;
-	font-weight: bold;
 }
 
-h5 { 
+h5 {
 	font-size: 16px;
-	font-weight: bold;
 }
 
-h6 { 
+h6 {
 	font-size: 14px;
-	font-weight: bold;
 }
 
 /**
@@ -102,7 +101,7 @@ h6 {
  	&:active,
  	&:focus,
  	&:hover { 
- 		color: darken($link-color, 10%);
+ 		color: shade($link-color, 10%);
  		text-decoration: underline;
  	}
 
@@ -133,20 +132,15 @@ h6 {
 
  	&.cta {
  		@include border-radius(3px);
- 		@include font-awesome-after(" \f054");
  		display: inline-block;
  		font-weight: bold;
- 		height: 40px;
- 		line-height: 40px;
+ 		height: 50px;
+ 		line-height: 50px;
  		margin: 0 10px 0 0;
- 		padding: 0 25px;
+ 		padding: 0 36px;
  		position: relative;
  		text-decoration: none;
-
- 		&:after {
- 			font-size: 10px;
- 			padding-left: 10px;
- 		}
+ 		text-transform: uppercase;
  		
  		&:active {
  			top: 1px;
@@ -156,14 +150,11 @@ h6 {
  		
  		&.primary {
  			background: $primary-color;
- 			box-shadow: 0 2px 0 shade($primary-color, 10%);
- 			color: #fff;
- 			text-shadow: 0 1px 0 shade($primary-color, 10%);
+ 			color: #FFF;
  			
  			&:active,
  			&:focus,
  			&:hover { 
- 				background: shade-light($primary-color, 5%);
  			}
  		
  		}
@@ -172,14 +163,11 @@ h6 {
  		
  		&.secondary {
  			background: $secondary-color;
- 			box-shadow: 0 2px 0 shade($secondary-color, 10%);
- 			color: #fff;
- 			text-shadow: 0 1px 0 shade($secondary-color, 10%);
+ 			color: #FFF;
  			
  			&:active,
  			&:focus,
  			&:hover { 
- 				background: shade-light($secondary-color, 5%);
  			}
  		
  		}		
@@ -187,6 +175,21 @@ h6 {
  	}
 
  }
+
+/**
+ * @section    Typography
+ * @subsection Paragraphs
+ */
+
+p {
+	margin: 0 0 $line-height 0;
+
+	&.intro {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+}
 
 /**
  * @section    Typography
@@ -261,18 +264,27 @@ table {
  * @subsection Quotes
  */
 
-blockquote, 
-q {
-	@include border-radius(3px);
-	background: $light-background;
+blockquote {
 	color: $text-light;
 	display: inline-block;
+	font-size: 16px;
 	font-style: italic;
-	margin: 0 0 25px 0; 
-	padding: 20px 20px 10px 20px;
+	margin-bottom: $line-height;
+	text-align: center;
+
+	&:before {
+		content: "\201C";
+		display: inline;
+	}
+
+	&:after {
+		content: "\201D";
+		display: inline;
+	}
 
 	p {
-		margin: 0 0 10px 0;
+		display: inline;
+		margin: 0;
 	}
 
 }
@@ -322,24 +334,6 @@ acronym {
 		border-bottom-style: solid;
 	}
 	
-}
-
-/**
- * @section    Typography
- * @subsection Subscripts and superscripts
- */
-
-sub,
-sup {
-	font-size: 10px;
-}
-
-sub {
-	vertical-align: sub;
-}
-
-sup {
-	vertical-align: super;
 }
 
 /**

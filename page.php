@@ -3,10 +3,6 @@
 <section id="main" class="container">
 
 	<div class="container-inner">
-	
-		<aside class="sidebar">
-			<?php dynamic_sidebar( 'page' ); ?>
-		</aside>
 		
 		<article id="content">
 		
@@ -21,6 +17,10 @@
 			<?php endwhile; endif; ?>
 			
 		</article>
+
+		<aside class="sidebar">
+			<?php dynamic_sidebar( 'page' ); ?>
+		</aside>
 		
 	</div><!-- .container-inner -->
 	

@@ -30,16 +30,17 @@ module.exports = function(grunt) {
 		},
 
 		/**
-		 * Compile SASS to CSS
+		 * Compile SASS to CSS 
 		 */		
 
 		sass: {
+			options: {
+				style: 'compressed'
+			},
 			dist: {
-				options: {
-					style: 'expanded'
-				},
 				files: {
-					'sass.css': 'style.scss',
+					'assets/sass/output/style.compiled.css': 'assets/sass/style.scss',
+					'assets/sass/output/editor-style.css': 'assets/sass/editor.scss'
 				}
 			}
 		},
@@ -60,8 +61,11 @@ module.exports = function(grunt) {
 
         watch: {
             sass: {
-                files: ['style.scss',
-                		'assets/sass/*'],
+                files: [
+                		'assets/sass/*',
+                		'assets/sass/inc/*',
+                		'assets/sass/inc/lib/*',
+                		'asset/sass/output/*'],
                 tasks: ['sass'],
                 options: {
 					livereload: 35729

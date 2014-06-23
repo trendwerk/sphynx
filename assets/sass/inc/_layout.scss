@@ -34,7 +34,7 @@ body {
 	/* logo, sitename and description */
 
 	#logo {
-		@include column-9;
+		@include column-6;
 
 		#sitename {
 			font: bold 24px $heading-font;
@@ -63,8 +63,7 @@ body {
 	/* top navigation */
 			
 	#topnav {
-		@include column-3;
-		float: right;
+		@include column-6;
 
 		ul {
 			float: right;
@@ -72,11 +71,18 @@ body {
 			
 			li {
 				display: inline-block;
-				font-size: 12px;
-				padding: 0 5px;
+				font-size: 14px;
+
+				&:after {
+					color: $text-light;
+					content: "|";
+					padding: 0 5px 0 10px;
+				}
 				
 				&:last-child {
-					padding-right: 0;
+					&:after {
+						display: none;
+					}
 				}
 
 				a { 
@@ -99,11 +105,11 @@ body {
 	/* search form */
 
 	#search {
-		@include column-3;
+		@include column-6;
 
 		form {
 			float: right;
-			width: 100%;
+			width: 200;
 
 			fieldset {
 				position: relative;
@@ -137,131 +143,6 @@ body {
 		
 	}
 
-	/* main navigation */
-
-	#main-navigation {
-		@include border-box;
-		@include border-radius(3px);
-		@include column-12;
-		background: $footer-background;
-		z-index: 1;
-
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			position: relative;
-
-			/* level 1 */
-
-			li {
-				float: left;
-				position: relative;
-
-				a { 
-					color: #fff;
-					display: block;
-					font-size: 14px;
-					line-height: 30px;
-					padding: 10px 20px;
-					text-decoration: none;
-				}
-				
-				&:active,
-				&:focus,
-				&:hover {
-
-					> a {
-						background: darken($footer-background, 5%);
-					}
-
-				}
-				
-				&.has-children > a:after,
-				&.page_item_has_children > a:after { 
-					content: "\f0d7";
-					font-family: FontAwesome;
-					font-size: 10px;
-					line-height: 25px;
-					margin-left: 5px;
-					text-decoration: none !important;
-				}
-
-				&:active,
-				&:focus,
-				&:hover {
-
-					> ul {
-						display: block;
-					}
-
-				}
-
-				/* level 2 */
-
-				ul {
-					display: none;
-					position: absolute;
-					top: 100%;
-					width: 220px;
-					z-index: 1;
-
-					li {
-						float: none;
-						max-height: none;
-						
-						a {
-							background: darken($footer-background, 5%);
-							display: inline-block;	
-							font-size: 12px;
-							line-height: 25px;
-							padding: 10px 15px 10px 20px;
-							width: 100%;
-						}
-
-						&:hover > a {
-							background: darken($footer-background, 10%);
-						}
-
-						&.has-children > a:after,
-						&.page_item_has_children > a:after {
-							content: "\f0da";
-							font-family: FontAwesome;
-							font-size: 10px;
-							margin-left: 5px;
-							text-decoration: none !important;
-						}
-
-						/* level 3 */
-						
-						ul { 
-							left: 100%;
-							margin-left: 35px;
-							top: 0;
-						}
-						
-					}
-
-				}
-
-				/* current, parent and ancestor menu item */
-
-				&.current-menu-item,
-				&.current-menu-parent,
-				&.current-menu-ancestor {
-					
-					a {
-						background: darken($footer-background, 5%);
-					}
-				
-				}
-
-			}
-			
-		}		
-
-	}
-
 	/* breadcrumbs */
 		
 	#breadcrumbs {
@@ -284,9 +165,137 @@ body {
 
 }
 
+/* main navigation */
+
+#main-navigation {
+	background-color: #999;
+	z-index: 1;
+
+	div.menu {
+		@include border-box;
+		@include column-12;
+		margin: 0;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+
+		/* level 1 */
+
+		li {
+			float: left;
+			position: relative;
+
+			a { 
+				color: #fff;
+				display: block;
+				font-size: 14px;
+				line-height: 30px;
+				padding: 10px 20px;
+				text-decoration: none;
+			}
+			
+			&:active,
+			&:focus,
+			&:hover {
+
+				> a {
+					background: darken($footer-background, 5%);
+				}
+
+			}
+			
+			&.has-children > a:after,
+			&.page_item_has_children > a:after { 
+				content: "\f0d7";
+				font-family: FontAwesome;
+				font-size: 10px;
+				line-height: 25px;
+				margin-left: 5px;
+				text-decoration: none !important;
+			}
+
+			&:active,
+			&:focus,
+			&:hover {
+
+				> ul {
+					display: block;
+				}
+
+			}
+
+			/* level 2 */
+
+			ul {
+				display: none;
+				position: absolute;
+				top: 100%;
+				width: 220px;
+				z-index: 1;
+
+				li {
+					float: none;
+					max-height: none;
+					
+					a {
+						background: darken($footer-background, 5%);
+						display: inline-block;	
+						font-size: 12px;
+						line-height: 25px;
+						padding: 10px 15px 10px 20px;
+						width: 100%;
+					}
+
+					&:hover > a {
+						background: darken($footer-background, 10%);
+					}
+
+					&.has-children > a:after,
+					&.page_item_has_children > a:after {
+						content: "\f0da";
+						font-family: FontAwesome;
+						font-size: 10px;
+						margin-left: 5px;
+						text-decoration: none !important;
+					}
+
+					/* level 3 */
+					
+					ul { 
+						left: 100%;
+						margin-left: 35px;
+						top: 0;
+					}
+					
+				}
+
+			}
+
+			/* current, parent and ancestor menu item */
+
+			&.current-menu-item,
+			&.current-menu-parent,
+			&.current-menu-ancestor {
+				
+				a {
+					background: darken($footer-background, 5%);
+				}
+			
+			}
+
+		}
+		
+	}		
+
+}
+
 #main {
 	background: $body-background;
-	padding: 10px 0;
+	padding: $line-height 0;
 	z-index: 0;
 
 	/* content */
@@ -294,6 +303,7 @@ body {
 	#content {
 		@include border-box;
 		@include column-8;
+		padding-right: 20px;
 
 		.article-meta {
 			color: $text-light;
