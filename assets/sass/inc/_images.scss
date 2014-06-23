@@ -17,12 +17,12 @@
 
 .alignleft {
 	float: left;
-	margin: 5px 20px 10px 0; 
+	margin: 0 20px $line-height 0; 
 }
 
 .alignright {
 	float: right;
-	margin: 5px 0 10px 20px; 
+	margin: 0 0 $line-height 20px; 
 }
 
 .aligncenter {
@@ -37,7 +37,7 @@
 
 .wp-caption {
 	background: $light-background;
-	margin-bottom: 25px;
+	margin-bottom: $line-height;
 	max-width: 100%;
 	text-align: center;
 

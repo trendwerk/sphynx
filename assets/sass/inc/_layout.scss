@@ -28,7 +28,6 @@ body {
 
 #header {
 	background: $body-background;
-	color: $text-color;
 	z-index: 1;
 
 	/* logo, sitename and description */
@@ -38,11 +37,24 @@ body {
 
 		#sitename {
 			font: bold 24px $heading-font;
-			margin: 0;
+			margin: 20px 0 0 0;
 
 			a {
 				color: $heading-color;
 				text-decoration: none;
+
+				&:before {
+					@include border-radius(999999px);
+					background-color: $text-light;
+					content: "";
+					display: block;
+					float: left;
+					height: 60px;
+					margin-top: -5px;
+					margin-right: 20px;
+					width: 60px;
+				}
+
 			}
 
 		}
@@ -115,6 +127,10 @@ body {
 				position: relative;
 
 				input[type="text"] {
+					@include placeholder(#999, #333);
+					color: $border-color;
+					font-style: italic;
+					height: 30px;
 					margin: 0;
 					right: 0;
 					width: 100%;
@@ -124,10 +140,13 @@ body {
 					background: none;
 					box-shadow: none;
 					color: $text-light;
+					height: 30px;
 					margin: 0;
+					padding: 0 10px;
 					position: absolute;
 					right: 0;
 					text-shadow: none;
+					-webkit-font-smoothing: antialiased;
 					
 					&:active,
 					&:focus,
@@ -141,26 +160,6 @@ body {
 			
 		}
 		
-	}
-
-	/* breadcrumbs */
-		
-	#breadcrumbs {
-		@include column-12;
-		color: $text-light;
-		font-size: 13px;
-
-		a {
-			color: $text-color;
-
-			&:active,
-			&:focus,
-			&:hover { 
-				color: $link-color;
-			}
-
-		}
-
 	}
 
 }
@@ -290,6 +289,25 @@ body {
 		}
 		
 	}		
+
+}
+
+/* breadcrumbs */
+	
+#breadcrumbs {
+	color: $text-light;
+	font-size: 13px;
+
+	a {
+		color: $text-color;
+
+		&:active,
+		&:focus,
+		&:hover { 
+			color: $link-color;
+		}
+
+	}
 
 }
 

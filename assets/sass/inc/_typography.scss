@@ -198,7 +198,7 @@ p {
 
 ul { 
 	list-style-position: outside;
-	margin: 0 0 25px 20px;
+	margin: 0 0 $line-height 20px;
 	
 	ul {
 		margin: 0 0 0 20px;
@@ -209,7 +209,7 @@ ul {
 ol {
 	list-style-position: outside;
 	list-style-type: decimal;
-	margin: 0 0 25px 20px;
+	margin: 0 0 $line-height 20px;
 	
 	ol {
 		list-style-type: lower-alpha;
@@ -227,9 +227,7 @@ table {
 	border: 1px solid $border-color;
 	border-collapse: collapse;
 	border-spacing: 0;	
-	font-size: 14px;
-	line-height: 25px;
-	margin: 0 0 25px 0;
+	margin: 0 0 $line-height 0;
 	width: 100%;
 		
 	tr { 
@@ -292,7 +290,6 @@ blockquote {
 cite { 
 	color: $text-color;
 	display: block;
-	font-size: 12px;
 	font-style: normal;
 	font-weight: bold;
 	margin: 5px 0 10px 0; 
@@ -310,7 +307,8 @@ cite {
 
 code, 
 pre { 
-	background: #FFFFB3; 
+	background: #FFFFB3;
+	color: #000;
 }
 	
 pre {
@@ -334,6 +332,24 @@ acronym {
 		border-bottom-style: solid;
 	}
 	
+}
+
+/**
+ * @section    Typography
+ * @subsection Subscripts and superscripts
+ */
+
+sub,
+sup {
+	font-size: 10px;
+}
+
+sub {
+	vertical-align: sub;
+}
+
+sup {
+	vertical-align: super;
 }
 
 /**
@@ -380,6 +396,6 @@ hr {
 	border-top: 1px solid $border-color;
 	display: block;
 	height: 1px;
-	margin: 0 0 20px 0;
+	margin: 0 0 $line-height 0;
 	padding: 0;
 }
