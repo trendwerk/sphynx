@@ -4,7 +4,7 @@
 
 	<div class="container-inner">	
 	
-		<section id="content" class="eightcol">
+		<section id="content">
 		
 			<?php if( is_category() ) { ?>
 			
@@ -79,7 +79,7 @@
 			
 		</section><!-- #content -->	
 				
-		<aside class="sidebar fourcol">
+		<aside class="sidebar">
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		

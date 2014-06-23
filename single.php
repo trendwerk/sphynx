@@ -4,7 +4,7 @@
 
 	<div class="container-inner">
 	
-		<article id="content" class="eightcol" itemscope itemtype="NewsArticle">
+		<article id="content" itemscope itemtype="NewsArticle">
 		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				
@@ -42,7 +42,7 @@
 			
 		</article>
 		
-		<aside class="sidebar fourcol">
+		<aside class="sidebar">
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		

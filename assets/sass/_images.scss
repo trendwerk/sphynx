@@ -26,8 +26,8 @@
 }
 
 .aligncenter {
-	margin: 0 auto;
 	display: block;
+	margin: 0 auto;
 }
 
 /**
@@ -37,9 +37,9 @@
 
 .wp-caption {
 	background: $light-background;
-	text-align: center;
 	margin-bottom: 25px;
 	max-width: 100%;
+	text-align: center;
 
 	img { 
 		margin: 5px 5px 0 5px; 

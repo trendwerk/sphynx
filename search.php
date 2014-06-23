@@ -4,11 +4,11 @@
 
 	<div class="container-inner">
 
-		<aside class="sidebar fourcol">
+		<aside class="sidebar">
 			<?php dynamic_sidebar( 'page' ); ?>
 		</aside>
 	
-		<section id="content" class="eightcol">
+		<section id="content">
 
 			<h1 id="page-title">
 				<?php printf( __( 'Search Results for: %1$s', 'tp' ), '<strong>' . get_search_query() . '</strong>' ); ?>

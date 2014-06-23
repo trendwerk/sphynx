@@ -278,6 +278,82 @@
  * @subsection AddThis
  */
 
+#pagination {
+	clear: both;
+	font-size: 14px;
+	padding: 25px 0 25px 0;
+	width: 100%;
+
+	ul {
+		margin: 0; 
+		text-align: center;
+		width: auto; 
+
+		li {
+			display: inline-block;
+			list-style-type: none;
+
+			a {
+				text-decoration: none;
+
+				&:active,
+				&:focus,
+				&:hover {
+					text-decoration: underline;
+				}
+
+			}
+
+			span.current,
+			a.page {
+				background-color: #FFF;
+				border: 1px solid $link-color;
+				margin: 0 3px;
+				padding: 6px 10px;
+				position: relative;
+			}
+
+			span.current {
+				border-color: $border-color;
+				color: $border-color;
+			}
+
+			a.prev {
+				border: none;
+				margin: 0 5px 0 0;
+			}
+
+			a.next { 
+				border: none;
+				margin: 0 0 0 5px;
+			}
+
+		}
+
+		.gap {
+			margin: 0 3px;
+			position: relative;
+		}
+
+		.previous-post {
+			float: left;
+			margin: 0 10px 0 0;
+		}
+
+		.next-post {
+			float: right;
+			margin: 0 0 0 10px;
+		}
+
+	}
+
+}
+
+/**
+ * @section    Parts
+ * @subsection AddThis
+ */
+
 .addthis_toolbox {
 
 	.label {

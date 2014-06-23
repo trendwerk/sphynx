@@ -29,7 +29,7 @@
 		
 			<div class="container-inner">
 				
-				<div id="logo" class="ninecol" itemscope itemtype="http://schema.org/Organization">
+				<div id="logo">
 					<p id="sitename">
 						<a itemprop="url" href="<?php echo site_url(); ?>">
 							<?php bloginfo( 'name' ); ?>
@@ -52,7 +52,7 @@
 
 				</div>
 
-				<nav id="topnav" class="navigation threecol">				
+				<nav id="topnav" class="navigation">				
 					<?php
 						wp_nav_menu( array(
 							'depth'          => 1,
@@ -62,11 +62,11 @@
 					?>
 				</nav>
 
-				<div id="search" class="threecol">
+				<div id="search">
 					<?php get_search_form(); ?>
 				</div>
 				
-				<nav id="main-navigation" class="twelvecol">				
+				<nav id="main-navigation">				
 					<?php 
 						wp_nav_menu( array(
 							'theme_location' => 'mainnav',
@@ -76,7 +76,7 @@
 				
 				<?php if ( ! is_front_page() ) { ?>
 
-					<nav id="breadcrumbs" itemprop="breadcrumb" class="twelvecol">
+					<nav id="breadcrumbs" itemprop="breadcrumb">
 						<?php
 							_e( 'You are here: ', 'tp' );
 							tp_breadcrumbs('»'); 

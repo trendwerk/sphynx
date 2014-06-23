@@ -16,9 +16,9 @@
  * @section    Layout
  * @subsection Default
  */
- 
-body { 
-	// background: @body-background;
+
+body {
+	background: $body-background;
 }
 
 /**
@@ -29,53 +29,53 @@ body {
 #header {
 	background: $body-background;
 	color: $text-color;
-	padding: 10px 0;
 	z-index: 1;
 
 	/* logo, sitename and description */
-			
+
 	#logo {
-				
-		#sitename { 
+		@include column-9;
+
+		#sitename {
 			font: bold 24px $heading-font;
 			margin: 0;
-			
+
 			a {
 				color: $heading-color;
 				text-decoration: none;
 			}
-			
+
 		}
-		
-		#description { 
+
+		#description {
 			color: $text-color;
 			margin: 0;
 		}
-		
+
 	}
 
 	/* mobile navigation and search buttons */
 
-	#mobile { 
+	#mobile {
 		display: none;
 	}
 	
 	/* top navigation */
 			
 	#topnav {
+		@include column-3;
 		float: right;
-		margin: 0 10px;
 
 		ul {
 			float: right;
 			margin: 0;
 			
-			li { 
+			li {
 				display: inline-block;
 				font-size: 12px;
 				padding: 0 5px;
 				
-				&:last-child { 
+				&:last-child {
 					padding-right: 0;
 				}
 
@@ -84,36 +84,37 @@ body {
 					
 					&:active,
 					&:focus,
-					&:hover { 
+					&:hover {
 						color: $text-color;
 					}
 
 				}
 
 			}
-		
+
 		}
-	
+
 	}
-	
+
 	/* search form */
-			
+
 	#search {
-		
-		form { 
+		@include column-3;
+
+		form {
 			float: right;
 			width: 100%;
 
 			fieldset {
 				position: relative;
-			
-				input[type="text"] { 
+
+				input[type="text"] {
 					margin: 0;
 					right: 0;
 					width: 100%;
 				}
-				
-				input[type="submit"] { 
+
+				input[type="submit"] {
 					background: none;
 					box-shadow: none;
 					color: $text-light;
@@ -135,12 +136,13 @@ body {
 		}
 		
 	}
-	
+
 	/* main navigation */
-	
+
 	#main-navigation {
 		@include border-box;
 		@include border-radius(3px);
+		@include column-12;
 		background: $footer-background;
 		z-index: 1;
 
@@ -222,7 +224,7 @@ body {
 						}
 
 						&.has-children > a:after,
-						&.page_item_has_children > a:after { 
+						&.page_item_has_children > a:after {
 							content: "\f0da";
 							font-family: FontAwesome;
 							font-size: 10px;
@@ -259,15 +261,16 @@ body {
 		}		
 
 	}
-	
+
 	/* breadcrumbs */
 		
-	#breadcrumbs { 
+	#breadcrumbs {
+		@include column-12;
 		color: $text-light;
 		font-size: 13px;
 
-		a { 
-			color: $text-color; 
+		a {
+			color: $text-color;
 
 			&:active,
 			&:focus,
@@ -276,8 +279,9 @@ body {
 			}
 
 		}
+
 	}
-	
+
 }
 
 #main {
@@ -289,18 +293,19 @@ body {
 	
 	#content {
 		@include border-box;
+		@include column-8;
 
-		.article-meta { 
+		.article-meta {
 			color: $text-light;
 			font-size: 13px;
 			margin: 0 0 20px 0;
-			
-			a { 
+
+			a {
 				color: $text-color;
-				
+
 				&:active,
 				&:focus,
-				&:hover { 
+				&:hover {
 					color: $link-color; 
 				}
 
@@ -315,18 +320,18 @@ body {
 					margin: 0 5px 5px 0;
 					padding: 0 4px;
 					text-decoration: none;
-					
+
 					&:active,
 					&:focus,
 					&:hover {
 						background: $link-color;
 						color: #fff;
 					}
-								
+
 				}
-				
+
 			}
-			
+
 		}
 
 		#article-title {
@@ -335,81 +340,10 @@ body {
 
 	}
 
-	#pagination {
-		clear: both;
-		font-size: 14px;
-		padding: 25px 0 25px 0;
-		width: 100%;
-
-		ul {
-			margin: 0; 
-			text-align: center;
-			width: auto; 
-
-			li {
-				display: inline-block;
-				list-style-type: none;
-
-				a {
-					text-decoration: none;
-					
-					&:active,
-					&:focus,
-					&:hover {
-						text-decoration: underline;
-					}
-
-				}
-				
-				span.current,
-				a.page {
-					background-color: #FFF;
-					border: 1px solid $link-color;
-					margin: 0 3px;
-					padding: 6px 10px;
-					position: relative;
-				}
-
-				span.current {
-					border-color: $border-color;
-					color: $border-color;
-				}
-				
-				a.prev {
-					border: none;
-					margin: 0 5px 0 0;
-				}
-				
-				a.next { 
-					border: none;
-					margin: 0 0 0 5px;
-				}
-
-			}
-			
-			.gap {
-				margin: 0 3px;
-				position: relative;
-			}
-			
-			.previous-post {
-				float: left;
-				margin: 0 10px 0 0;
-			}
-				
-			.next-post {
-				float: right;
-				margin: 0 0 0 10px;
-			}
-
-		}
-
-	}
-
 	/* sidebar */
 
 	.sidebar {
-		
+		@include column-4;
 	}
 
 }
@@ -435,6 +369,7 @@ body {
 		width: 100%;
 	
 		.widget {
+			@include column-3;
 			background: none;
 			clear: none;
 			float: left;
@@ -474,6 +409,7 @@ body {
 	}
 	
 	#credits {
+		@include column-12;
 		font-size: 12px;
 		padding: 10px 0;
 		
@@ -497,11 +433,11 @@ body {
 				li {
 					display: inline;
 					
-					&:last-child a { 
+					&:last-child a {
 						padding-right: 0;
 					}
 
-					a { 
+					a {
 						float: left;
 						padding: 0 5px;
 					}

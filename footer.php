@@ -6,7 +6,7 @@
 					<?php dynamic_sidebar( 'footerid' ); ?>
 				</aside>
 				
-				<div id="credits" class="twelvecol">
+				<div id="credits">
 				
 					<div id="copyright">
 						<p>
