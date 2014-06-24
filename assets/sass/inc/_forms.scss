@@ -59,11 +59,12 @@ button {
 	border: 0;
 	color: #FFF;
 	font-family: $text-font;
-	font-size: 14px;
-	font-weight: normal;
-	height: 38px;
+	font-size: 12px;
+	font-weight: bold;
+	height: 40px;
 	margin-right: 10px;
-	padding: 0 15px;
+	padding: 0 35px;
+	text-transform: uppercase;
 	-webkit-appearance: none;
 
 		&:hover { 

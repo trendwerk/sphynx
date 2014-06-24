@@ -22,7 +22,7 @@ $text-font:			'Helvetica Neue', sans-serif;
 $secondary-color:	#999;
 $primary-color:		#333;
 
-$footer-background:	#333; 
+$footer-background:	#999; 
 $light-background:	#EEE;
 $body-background:	#FFF;
 $border-color:		#CCC;
@@ -31,6 +31,10 @@ $heading-color:		#333;
 $text-color:		#666;
 $text-light:		#999;
 $link-color:		#1F6FD1;
+
+$error-red: 		#C44741;
+$alert-yellow: 		#E3B000;
+$succes-green: 		#46B82A;
 
 /**
  * @section Import
@@ -49,4 +53,5 @@ $link-color:		#1F6FD1;
 @import 'inc/template';
 @import 'inc/parts';
 @import 'inc/widgets';
+@import 'inc/responsive';
 @import 'inc/plugins';

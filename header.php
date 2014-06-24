@@ -93,13 +93,17 @@
 			
 				<div class="container-inner">
 
-				<?php
-					_e( 'You are here: ', 'tp' );
-					tp_breadcrumbs('»'); 
-				?>
+					<div id="breadcrumbs-inner">
+
+						<?php
+							_e( 'You are here: ', 'tp' );
+							tp_breadcrumbs('»'); 
+						?>
+
+					</div>
 
 				</div> <!-- .container-inner -->
 			
 			</nav> <!-- #breadcrumbs -->
 
-			<?php } ?>
+		<?php } ?>

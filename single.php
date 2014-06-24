@@ -26,7 +26,7 @@
 				
 				<?php get_template_part( 'part', 'share' ); ?>
 
-				<p class="article-meta">
+				<p class="tags">
 					<?php the_tags( 'Tags: ', '' ); ?>
 				</p>
 								

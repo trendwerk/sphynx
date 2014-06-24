@@ -37,9 +37,9 @@
 				color: $link-color;
 				text-decoration: underline;
 			}
-			
+
 		}
-	
+
 	}
 
 	p {
@@ -65,6 +65,7 @@
 			
 			a {
 				color: $text-color;
+				text-decoration: underline;
 				
 				&:active,
 				&:focus,
@@ -73,6 +74,8 @@
 				}
 			 }
 
+			&.current_page_item > a,
+			&.current-cat > a,
 			&.current > a {
 				font-weight: bold;
 			}			 
@@ -106,7 +109,7 @@
 
 	span.label { 
 		display: inline-block;
-		width: 80px;
+		width: 90px;
 	}
 	
 }

@@ -43,6 +43,7 @@ $vertical-space: 10px;
 
 		@media(max-width: 960px) {
 			@include border-box;
+			padding: 0 40px;
 			width: 100%;
 		}
 
@@ -56,8 +57,16 @@ $vertical-space: 10px;
  */
 
 @mixin base-column {
+	@include border-box;
 	float: left;
 	margin: $vertical-space $horizontal-space;
+
+	@media(max-width: 960px) {
+		clear: both;
+		margin: 0;
+		width: 100%;
+	}
+
 }
 
 @mixin column-1 {
@@ -66,11 +75,6 @@ $vertical-space: 10px;
 
 	@media(min-width: 1200px) {
 		width: 75px;
-	}
-
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
 	}
 
 }
@@ -83,11 +87,6 @@ $vertical-space: 10px;
 		width: 170px;
 	}
 
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
-	}
-
 }
 
 @mixin column-3 {
@@ -96,11 +95,6 @@ $vertical-space: 10px;
 
 	@media(min-width: 1200px) {
 		width: 265px;
-	}
-
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
 	}
 
 }
@@ -113,11 +107,6 @@ $vertical-space: 10px;
 		width: 360px;
 	}
 
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
-	}
-
 }
 
 @mixin column-5 {
@@ -126,11 +115,6 @@ $vertical-space: 10px;
 
 	@media(min-width: 1200px) {
 		width: 455px;
-	}
-
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
 	}
 
 }
@@ -143,11 +127,6 @@ $vertical-space: 10px;
 		width: 550px;
 	}
 
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
-	}
-
 }
 
 @mixin column-7 {
@@ -156,11 +135,6 @@ $vertical-space: 10px;
 
 	@media(min-width: 1200px) {
 		width: 645px;
-	}
-
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
 	}
 
 }
@@ -173,11 +147,6 @@ $vertical-space: 10px;
 		width: 740px;
 	}
 
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
-	}
-
 }
 
 @mixin column-9 {
@@ -186,11 +155,6 @@ $vertical-space: 10px;
 
 	@media(min-width: 1200px) {
 		width: 835px;
-	}
-
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
 	}
 
 }
@@ -203,11 +167,6 @@ $vertical-space: 10px;
 		width: 930px;
 	}
 
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
-	}
-
 }
 
 @mixin column-11 {
@@ -218,11 +177,6 @@ $vertical-space: 10px;
 		width: 1025px;
 	}
 
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
-	}
-
 }
 
 @mixin column-12 {
@@ -231,11 +185,6 @@ $vertical-space: 10px;
 
 	@media(min-width: 1200px) {
 		width: 1120px;
-	}
-
-	@media(max-width: 960px) {
-		clear: both;
-		width: 100%;
 	}
 
 }

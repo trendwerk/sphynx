@@ -82,7 +82,7 @@ video {
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	vertical-align: baseline; 
+	vertical-align: baseline;
 }
 	
 table,
@@ -97,7 +97,7 @@ td {
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	vertical-align: baseline; 
+	vertical-align: baseline;
 }	
 
 body {
@@ -131,8 +131,8 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none; 
+	content: '';
+	content: none; 
 }
 
 input,
@@ -183,19 +183,18 @@ button {
 	outline: 0;
 	overflow: visible;
 	margin: 0;
- 	min-width: 0;
- 	position: relative;
+	min-width: 0;
+	position: relative;
 	text-decoration: none;
 	vertical-align: top;
 	width: auto;
 
 	&:hover {
-		@include vertical-gradient(lighten($primary-color, 5%), $primary-color);
 		text-decoration: none;
 	}
 
-	&:focus,
-	&:active {
+	&:active,
+	&:focus {
 		@include box-shadow(0);
 	}
 
@@ -227,7 +226,7 @@ textarea,
 select {
 	@include border-box;
 	text-align: left;
-	vertical-align: top;	
+	vertical-align: top;
 	-webkit-appearance: none;
 }
 
@@ -294,9 +293,9 @@ select {
 	background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
 	background-repeat: no-repeat;
 	background-position: right center;
-    text-indent: 0.01px;
-    text-overflow: '';
-    -moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	-moz-appearance: none;
 }
 
 select[multiple],
@@ -311,14 +310,14 @@ select[size="1"] {
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
-	
+
 	select[multiple][size],
 	select[multiple],
 	select[size] {
 		background-image: none;
 		padding-right: 3px;
 	}
-	
+
 	select[size="0"],
 	select[size="1"],
 	select {

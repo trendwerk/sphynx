@@ -155,6 +155,27 @@
 		 
 		li.comment {
 			list-style: none;
+
+			.comment-awaiting-moderation {
+				@include border-box;
+				@include border-radius(3px);
+				background: $alert-yellow;
+				clear: both;
+				color: #FFF;
+				display: block;
+				float: left;
+				font-style: normal;
+				margin-bottom: 20px;
+				padding: 10px 23px;	
+
+				&:before {
+					content: "\f071";
+					display: inline-block;
+					font-family: fontawesome;
+					padding-right: 10px;
+				}
+
+			}
 						
 			.comment-body {
 				border: 1px solid $border-color;
@@ -214,6 +235,11 @@
 
 					a {	@include font-awesome-before("\f112  "); }
 
+				}
+
+				p {
+					clear: both;
+					display: block;
 				}
 				
 			}
@@ -358,12 +384,7 @@
 
 	.label {
 		float: left;
-		font-size: 13px;
-		height: 24px;
-		line-height: 24px;
-		margin-top: 1px;
-		margin-right: 12px;
-		width: auto; 
+		width: 160px; 
 	}	
 
 	a {
@@ -453,4 +474,4 @@
 
 	}
 
- }
+}

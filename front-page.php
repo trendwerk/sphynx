@@ -1,5 +1,21 @@
 <?php get_header(); ?>
 
+<header id="sub-header" class="container">
+
+	<div class="container-inner">
+
+		<h1>
+			<?php bloginfo( 'name' ); ?>
+		</h1>
+		
+		<h2>
+			<?php bloginfo( 'description' ); ?>
+		</h2>
+
+	</div> <!-- .container-inner -->
+
+</header> <!-- #sub-header -->
+
 <section id="main" class="container">
 
 	<div class="container-inner">
@@ -8,7 +24,7 @@
 		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
-				<h1>
+				<h1 id="page-title">
 					<?php the_title(); ?>
 				</h1>
 				

@@ -14,11 +14,7 @@
  * @section    Plugins
  * @subsection Gravity Forms
  */
-
-/* error message color */
-
-$error-red: #c44741;
-
+ 
 /* error messages */
 
 .gform_wrapper {
@@ -33,7 +29,6 @@ $error-red: #c44741;
 		float: left;
 		margin-bottom: 20px;
 		padding: 10px 23px;
-		width: auto;
 
 		&:before {
 			content: "\f071";
@@ -112,6 +107,8 @@ $error-red: #c44741;
 				
 				.gfield_label {
 					float: left; 
+					font-size: 13px;
+					margin-top: 6px;
 					width: 35%;
 				}
 				

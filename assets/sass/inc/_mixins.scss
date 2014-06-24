@@ -191,15 +191,15 @@
 		&:focus:-moz-placeholder {
 			color: $on; 
 		}
-		
+
 		&:focus::-moz-placeholder {
 			color: $on;
 		}
-		
+
 		&:focus:-ms-input-placeholder {
 			color: $on; 
 		}
-		
+
 		&:focus::-webkit-input-placeholder {
 			color: $on; 
 		}
@@ -227,7 +227,7 @@
 	background-image: url('assets/img/sprite-x1.png');
 	background-repeat: no-repeat;
 	background-position: $top $left;
-	
+
 	@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
 	only screen and (min--moz-device-pixel-ratio: 2),
 	only screen and (-o-min-device-pixel-ratio: 2/1),
