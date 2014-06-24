@@ -41,10 +41,18 @@ $vertical-space: 10px;
 			width: 1140px;
 		}
 
-		@media(max-width: 960px) {
+		@media(max-width: 980px) {
 			@include border-box;
 			padding: 0 40px;
 			width: 100%;
+		}
+
+		@media(max-width: 640px) {
+			padding: 0 30px;
+		}
+
+		@media(max-width: 440px) {
+			padding: 0 20px;
 		}
 
 	}
@@ -61,7 +69,7 @@ $vertical-space: 10px;
 	float: left;
 	margin: $vertical-space $horizontal-space;
 
-	@media(max-width: 960px) {
+	@media(max-width: 980px) {
 		clear: both;
 		margin: 0;
 		width: 100%;

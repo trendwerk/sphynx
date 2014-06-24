@@ -34,10 +34,11 @@ body {
 
 	#logo {
 		@include column-9;
+		margin-top: 20px;
 
 		#sitename {
 			font: bold 24px $heading-font;
-			margin: 20px 0 0 0;
+			margin: 0;
 
 			a {
 				color: $heading-color;
@@ -50,7 +51,7 @@ body {
 					display: block;
 					float: left;
 					height: 60px;
-					margin-top: -5px;
+					margin-top: -4px;
 					margin-right: 20px;
 					width: 60px;
 				}
@@ -317,7 +318,7 @@ body {
 
 #main {
 	background: $body-background;
-	padding: $line-height 0 $line-height * 2 0;
+	padding: $line-height 0;
 	z-index: 0;
 
 	/* content */
@@ -390,6 +391,13 @@ body {
 
 	.sidebar {
 		@include column-4;
+
+		.widget {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
 	}
 
 }
@@ -457,25 +465,31 @@ body {
 
 			div {
 				display: inline-block;
-			}
 			
-			ul {
-			
-				li {
-					display: inline;
-					
-					&:last-child a {
-						padding-right: 0;
-					}
+				ul {
+				
+					li {
+						display: inline;
+						
+						&:after {
+							color: #FFF;
+							content: "|";
+							padding: 0 5px 0 10px;
+						}
+						
+						&:last-child {
 
-					a {
-						float: left;
-						padding: 0 5px;
+							&:after {
+								display: none;
+							}
+
+						}
+
 					}
-					
+						
 				}
-					
-			}
+
+			}	
 			
 		}
 		
