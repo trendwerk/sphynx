@@ -142,20 +142,20 @@
 			#mobile-navigation, 
 			#mobile-search {
 				@include border-radius(3px);
-				background-color: $primary-color;
+				background-color: $secondary-color;
 				color: #FFF;
 				cursor: pointer;
 				float: left;
-				font-size: 20px;
-				height: 40px;
-				line-height: 40px;
+				font-size: 16px;
+				height: 30px;
+				line-height: 30px;
 				margin-left: 10px;
 				text-align: center;
-				width: 40px;
+				width: 30px;
 
 				&.active,
 				&:hover {
-					// background-color: darken(@primary-color, 10%);
+					background-color: $primary-color;
 				}
 
 			}
@@ -178,20 +178,26 @@
 			padding: 10px;
 			width: 100%;
 			
-			form { 
+			form {
+				margin: 0;
 				width: 100%;
-				
-				input[type="text"] { 
-					@include border-box;
-					font-size: 16px;
-					border: none;
-					width: 100%;
-				}
 
-				input[type="submit"] {
-					font-size: 16px;
+				fieldset { 
+
+					input[type="text"] { 
+						@include border-box;
+						font-size: 16px;
+						border: none;
+						width: 100%;
+					}
+
+					input[type="submit"] {
+						margin-top: 2px;
+						font-size: 20px;
+					}
+
 				}
-				
+					
 			}
 		
 		}

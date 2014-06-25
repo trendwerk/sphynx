@@ -58,11 +58,13 @@
 						<p class="article-content" itemprop="description">
 
 							<?php tp_the_excerpt( 70 ); ?>
-
-							<a class="more-link" href="<?php the_permalink(); ?>"><?php _e( 'Read&nbsp;more', 'tp' ); ?></a>
 							
 						</p>
 						
+						<p>
+							<a class="more-link" href="<?php the_permalink(); ?>"><?php _e( 'Read&nbsp;more', 'tp' ); ?></a>
+						</p>
+
 					</article>
 				
 				<?php endwhile; ?>

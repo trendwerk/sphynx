@@ -171,23 +171,23 @@
 			/* rollover colors */
 
 			&.twitter a:hover i {
-				background: #00aced;
+				background: #00ACED;
 			}
 
 			&.facebook a:hover i {
-				background: #3b5998;
+				background: #3B5998;
 			}
 
 			&.linkedin a:hover i {
-				background: #007bb6;
+				background: #007BB6;
 			}
 
 			&.googleplus a:hover i {
-				background: #dd4b39;
+				background: #DD4b39;
 			}
 
 			&.youtube a:hover i {
-				background: #bb0000;
+				background: #BB0000;
 			}
 
 			&.email a:hover i {
@@ -195,7 +195,7 @@
 			}
 
 			&.rss a:hover i {
-				background: #ff6600;
+				background: #FF6600;
 			}
 
 		}
@@ -290,22 +290,22 @@
 	.tagcloud {
 	
 		a {
-			@include border-radius(3px);
-			background: #fff;
-			border: 1px solid $link-color;
-			color: $link-color;
+			@include border-radius(5px);
+			background: #CCC;
+			color: $text-color;
 			display: inline-block;
 			font-size: 12px !important;
 			line-height: 25px;
-			margin: 0 3px 5px 0;
+			margin: 0 10px 10px 0;
 			padding: 0 10px;
 			text-decoration: none;
+			text-transform: lowercase;
 			
 			&:active,
 			&:focus,
 			&:hover {
-				background: $link-color;
-				color: #fff;
+				background: $heading-color;
+				color: #FFF;
 			}
 			
 		}
@@ -407,6 +407,8 @@
 				margin: 0;
 				text-decoration: none;
 
+				&:active,
+				&:focus,
 				&:hover {
 					color: $link-color;
 					text-decoration: underline;

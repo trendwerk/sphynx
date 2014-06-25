@@ -29,6 +29,11 @@ function tp_add_editor_styles( $settings ) {
             'title'    => __( 'Intro', 'tp' ),
             'selector' => 'p',
             'classes'  => 'intro',
+        ),
+        array(
+            'title'    => __( 'Telephone', 'tp' ),
+            'selector' => 'span',
+            'classes'  => 'telephone',
         ),       
     );
     $settings['style_formats'] = json_encode( $style_formats );

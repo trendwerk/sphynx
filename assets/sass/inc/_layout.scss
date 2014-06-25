@@ -43,19 +43,6 @@ body {
 			a {
 				color: $heading-color;
 				text-decoration: none;
-
-				&:before {
-					@include border-radius(999999px);
-					background-color: $text-light;
-					content: "";
-					display: block;
-					float: left;
-					height: 60px;
-					margin-top: -4px;
-					margin-right: 20px;
-					width: 60px;
-				}
-
 			}
 
 		}
@@ -84,10 +71,10 @@ body {
 			
 			li {
 				display: inline-block;
-				font-size: 14px;
+				font-size: 13px;
 
 				&:after {
-					color: $text-light;
+					color: $text-color;
 					content: "|";
 					padding: 0 5px 0 10px;
 				}
@@ -101,7 +88,7 @@ body {
 				}
 
 				a { 
-					color: $text-light;
+					color: $text-color;
 
 					&:active,
 					&:focus,
@@ -121,10 +108,12 @@ body {
 
 	#search {
 		@include column-3;
+		margin-bottom: 0;
 
 		form {
 			float: right;
-			width: 200;
+			margin-right: 20px;
+			width: 200px;
 
 			fieldset {
 				position: relative;
@@ -133,7 +122,6 @@ body {
 					@include placeholder(#999, $text-color);
 					color: $text-color;
 					font-style: italic;
-					height: 30px;
 					margin: 0;
 					right: 0;
 					width: 100%;
@@ -143,9 +131,9 @@ body {
 					background: none;
 					box-shadow: none;
 					color: $text-light;
-					height: 30px;
+					font-size: 13px;
 					margin: 0;
-					padding: 0 10px;
+					padding: 0 12px;
 					position: absolute;
 					right: 0;
 					text-shadow: none;
