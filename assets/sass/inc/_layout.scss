@@ -258,12 +258,6 @@ body {
 				clear: both;
 				display: block;
 				width: 100%;
-	
-
-				&.page_item_has_children > a:after,
-				&.has-children > a:after {
-					content: "\f0da";
-				}
 
 				a {
 					@include border-box;
@@ -274,7 +268,35 @@ body {
 					line-height: $line-height;
 					padding: 5px 15px;
 					width: 100%;
+
+					&:active,
+					&:focus,
+					&:hover {
+						text-decoration: underline;
+					}
+
+				}				
+	
+				&.page_item_has_children > a,
+				&.has-children > a {
+
+					&:after {
+						content: "\f0da";
+						display: inline-block;
+					}
+				
+					&:active,
+					&:focus,
+					&:hover {
+
+						&:after {
+							text-decoration: none;
+						}
+
+					}
+
 				}
+
 
 				/* third level */
 

@@ -40,7 +40,8 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'assets/sass/output/style.compiled.css': 'assets/sass/style.scss',
-					'assets/sass/output/editor-style.css': 'assets/sass/editor.scss'
+					'assets/sass/output/editor.compiled.style.css': 'assets/sass/editor.scss',
+					'assets/sass/output/admin.compiled.css': 'assets/sass/admin.scss'
 				}
 			}
 		},

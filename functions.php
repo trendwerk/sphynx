@@ -39,7 +39,7 @@ function tp_admin_enqueue_scripts() {
 		wp_enqueue_media();
 
 	wp_enqueue_script( 'admin', get_stylesheet_directory_uri() . '/assets/js/admin.js', array( 'jquery' ) );
-	wp_enqueue_style( 'admin', get_stylesheet_directory_uri() . '/assets/less/admin.less' );
+	wp_enqueue_style( 'admin', get_stylesheet_directory_uri() . '/assets/sass/output/admin.compiled.css' );
 }
 add_action( 'admin_enqueue_scripts', 'tp_admin_enqueue_scripts' );
 
