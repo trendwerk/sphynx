@@ -3,10 +3,6 @@
 <section id="main" class="container">
 
 	<div class="container-inner">
-
-		<aside class="sidebar">
-			<?php dynamic_sidebar( 'page' ); ?>
-		</aside>
 	
 		<section id="content">
 
@@ -55,6 +51,10 @@
 			<?php endif; ?>	   
 			 
 		</section>
+
+		<aside class="sidebar">
+			<?php dynamic_sidebar( 'page' ); ?>
+		</aside>		
 				
 	</div><!-- .container-inner -->
 	

@@ -16,37 +16,34 @@
  * @subsection Author
  */
 
- .author-card {
- 	@include border-box;
- 	background: #FFF;
- 	border: 1px solid $border-color;
- 	margin: 0 0 30px 0;
- 	padding: 20px;
- 	width: 100%;
- 	
- 	.author-avatar {
- 		float: left;
- 		margin: 5px 0 0 0;
+.author-card {
+	@include border-box;
+	background: #EEE;
+	margin: 0 0 $line-height 0;
+	padding: 40px;
+	width: 100%;
+	
+	.author-avatar {
+		float: left;
+		margin: 5px 0 0 0;
 
 		img {
 			@include border-radius(999px);
 		}
 
- 	}
- 	
- 	.author-info {
- 		padding-left: 100px;
+	}
+		
+	.author-info {
+		padding-left: 100px;
 
- 		.author-writtenby {
- 			color: shade-light($text-color, 5%);
- 			font-size: 13px;
- 		}
+		.author-writtenby {
+			color: shade-light($text-color, 5%);
+			font-size: 13px;
+		}
 
- 		a.more-link {
- 			float: right;
- 			font-size: 12px;
- 			margin: -1px 10px 10px 0;
- 		}
+		.author-bio {
+			font-size: 13px;
+		}
 
 		.author-social {
 			list-style-type: none;
@@ -57,74 +54,70 @@
 				display: inline;
 				
 				.label {
-		 			color: shade-light($text-color, 5%);
-				 	display: inline-block;
-		 			font-size: 13px;
-				 	float: left;
-				 	margin-top: -1px;
-				 	margin-right: 10px;
+					color: shade-light($text-color, 5%);
+					display: inline-block;
+					font-size: 14px;
+					float: left;
+					margin-top: -1px;
+					margin-right: 10px;
 				}
 
 				a {
-					font-size: 14px;
-					height: 14px;
-					padding: 4px;
-					width: 14px;
-					line-height: 14px;
+					@include border-radius(999px);
+					background-color: #999;
 					color: #FFF;
 					display: block;
-					float: left;
-					margin: 0 4px 4px 0;
+					float: left;					
+					font-size: 14px;
+					height: 30px;
+					line-height: 30px;
+					margin: -3px 5px 0 0;
 					position: relative;
 					text-align: center;
-					text-decoration: none;
-
+					text-decoration: none;					
+					width: 30px;
 
 					&:active,
 					&:focus {
 						top: 1px;
 					}
-				
+
 					&.google-plus {
-						background-color: #dd4B39;
 						
 						&:active,
 						&:focus,
 						&:hover {
-							background-color: shade(#dd4B39, 12%);
+							background-color: #dd4B39;
 						}
 
 					}
 
 					&.twitter {
-						background-color: #2ca8d2;
 
 						&:active,
 						&:focus,
 						&:hover {
-							background-color: shade(#2ca8d2, 12%);
+							background-color: #2ca8d2;
 						}
 
 					}
 
 					&.facebook {
-						background-color: #305891;
 
 						&:active,
 						&:focus,
 						&:hover {
-							background-color: shade(#305891, 12%);
+							background-color: #305891;
 						}
 
 					}
 
 					&.linkedin {
-						background-color: #4498c8;
 
 						&:active,
 						&:focus,
 						&:hover {
-							background-color: shade(#4498c8, 12%);
+							background-color: #4498c8;
 						}
 						
 					}
@@ -133,11 +126,17 @@
 
 			}
 
-		 }		
- 		
- 	}
- 	
- }
+		}
+
+		a.more-link {
+			float: right;
+			font-size: 14px;
+			margin: -1px 10px 10px 0;
+		}	
+		
+	}
+	
+}
 
  /**
   * @section    Parts
@@ -147,13 +146,21 @@
 #comments { 
 	clear: both;
 	float: left;
-	margin: 25px 0 25px 0;
+	margin: $line-height 0;
 	width: 100%;
 
 	ol.commentlist {
 		margin: 0;
 		 
 		li.comment {
+
+			.comment-respond {
+				@include border-box;
+				float: left;
+				clear: both;
+				padding: 30px;
+			}
+
 			list-style: none;
 
 			.comment-awaiting-moderation {
@@ -255,7 +262,6 @@
 	#respond {
 		clear: both;
 		float: left;
-		padding: 25px 0 0 0;
 		position: relative;
 		width: 100%;
 		
@@ -294,7 +300,7 @@
 			float: left;
 			margin-left: 25%;
 		}
-		
+
 	}
 
 }
@@ -306,18 +312,19 @@
 
 #pagination {
 	clear: both;
-	font-size: 14px;
-	padding: 25px 0 25px 0;
+	font-size: 13px;
+	padding: $line-height 0;
 	width: 100%;
 
 	ul {
+		list-style-type: none;
 		margin: 0; 
+		padding: 0;
 		text-align: center;
 		width: auto; 
 
 		li {
 			display: inline-block;
-			list-style-type: none;
 
 			a {
 				text-decoration: none;
@@ -330,45 +337,43 @@
 
 			}
 
-			span.current,
-			a.page {
+			.current,
+			.prev,
+			.page,
+			.next {
+				@include border-radius(3px);
+				background-color: #CCC;
+				border: 1px solid #CCC;
+				color: $text-color;
+				display: inline-block;
+				height: 38px;
+				line-height: 38px;
+				margin: 0 5px 10px 5px;
+				text-align: center;
+			}
+
+			.current,
+			.page {
+				width: 38px;
+			}
+
+			.current {
 				background-color: #FFF;
-				border: 1px solid $link-color;
-				margin: 0 3px;
-				padding: 6px 10px;
-				position: relative;
 			}
 
-			span.current {
-				border-color: $border-color;
-				color: $border-color;
-			}
-
-			a.prev {
-				border: none;
-				margin: 0 5px 0 0;
-			}
-
-			a.next { 
-				border: none;
-				margin: 0 0 0 5px;
+			.prev,
+			.next {
+				padding: 0 15px;
 			}
 
 		}
 
 		.gap {
-			margin: 0 3px;
+			height: 40px;
+			line-height: 40px;
+			margin: 0 5px 10px 5px;
 			position: relative;
-		}
-
-		.previous-post {
-			float: left;
-			margin: 0 10px 0 0;
-		}
-
-		.next-post {
-			float: right;
-			margin: 0 0 0 10px;
+			text-align: center;
 		}
 
 	}
@@ -388,18 +393,20 @@
 	}	
 
 	a {
+		@include border-radius(999px);
+		background-color: #999;
 		color: #FFF;
 		display: block;
-		float: left;
+		float: left;					
 		font-size: 14px;
-		height: 14px;
-		line-height: 14px;
-		margin: 0 4px 4px 0;
-		padding: 4px;
+		height: 30px;
+		line-height: 30px;
+		margin: -3px 5px 0 0;
 		position: relative;
 		text-align: center;
-		text-decoration: none;
-		width: 14px;
+		text-decoration: none;					
+		width: 30px;
+
 
 		&:active,
 		&:focus {
@@ -407,67 +414,61 @@
 		}
 
 		&.addthis_button_twitter {
-			background-color: #2ca8d2;
 
 			&:active,
 			&:focus,
 			&:hover {
-				background-color: shade(#2ca8d2, 12%);
+				background-color: #2ca8d2;
 			}
 
 		}
 
 		&.addthis_button_facebook {
-			background-color: #305891;
 
 			&:active,
 			&:focus,
 			&:hover {
-				background-color: shade(#305891, 12%);
+				background-color: #305891;
 			}
 
 		}
 
 		&.addthis_button_google_plusone_share {
-			background-color: #dd4B39;
-			
+
 			&:active,
 			&:focus,
 			&:hover {
-				background-color: shade(#dd4B39, 12%);
+				background-color: #dd4B39;
 			}
 
 		}
 
 		&.addthis_button_linkedin {
-			background-color: #4498c8;
 
 			&:active,
 			&:focus,
 			&:hover {
-				background-color: shade(#4498c8, 12%);
+				background-color: #4498c8;
 			}
 			
 		}
 
 		&.addthis_button_email {
-			background-color: #666;
 
 			&:active,
 			&:focus,
 			&:hover {
-				background-color: shade(#666, 12%);
+				background-color: #666;
 			}
 
 		}
 		
 		&.addthis_button_compact {
-			background-color: #f56952;
 
 			&:active,
 			&:focus,
 			&:hover {
-				background-color: shade(#f56952, 12%);
+				background-color: #f56952;
 			}
 
 		}

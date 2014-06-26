@@ -60,7 +60,7 @@ h6 {
 	color: $heading-color;
 	font-family: $heading-font;
 	font-weight: 700;
-	line-height: $line-height;
+	line-height: 1em;
 	margin: 0 0 $line-height 0;
 }
 
@@ -141,7 +141,8 @@ h6 {
  		position: relative;
  		text-decoration: none;
  		text-transform: uppercase;
- 		
+ 		white-space: nowrap;
+
  		&:active {
  			top: 1px;
  		}	
@@ -175,6 +176,29 @@ h6 {
  		}		
  	
  	}
+
+ 	/* style for tags */
+
+	&[rel="tag"] {
+		@include border-radius(5px);
+		background: #CCC;
+		color: $text-color;
+		display: inline-block;
+		font-size: 12px !important;
+		line-height: 25px;
+		margin: 0 10px 10px 0;
+		padding: 0 10px;
+		text-decoration: none;
+		text-transform: lowercase;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			background: $heading-color;
+			color: #FFF;
+		}
+		
+	}	
 
  }
 
@@ -389,7 +413,7 @@ b {
 	font-weight: bold;
 }
 
-em, 
+em,
 i {
 	font-style: italic;
 }

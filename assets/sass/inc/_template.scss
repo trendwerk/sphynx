@@ -132,3 +132,41 @@
  	}
  	
 }
+
+/**
+ * @section    Templates
+ * @subsection search.php
+ * @subsection error404.php
+ */
+
+.search,
+.error404 {
+
+	article h2.article-title {
+		margin-bottom: $line-height;
+	}
+
+	.search input[type="submit"] {
+		font-size: 16px;
+		height: 41px;
+		padding: 0 15px;
+	}
+
+}
+
+.search-no-results {
+
+	#main #content {
+		margin-bottom: $line-height * 2;
+	}
+
+}
+
+.error404 {
+
+	#main #content {
+		@include column-10;
+		margin-bottom: $line-height * 2;
+	}
+
+}

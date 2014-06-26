@@ -368,31 +368,10 @@ body {
 
 		.tags {
 
-			a[rel="tag"] {
-				@include border-radius(3px);
-				background: #fff;
-				border: 1px solid $link-color;
-				color: $link-color;
-				display: inline-block;
-				font-size: 12px;
-				line-height: $line-height;
-				margin: 0 5px 5px 0;
-				padding: 0 7px;
-				text-decoration: none;
-
-				&:first-child {
-					margin-left: 120px;
-				}
-
-				&:active,
-				&:focus,
-				&:hover {
-					background: $link-color;
-					color: #fff;
-				}
-
+			a:first-of-type {
+				margin-left: 120px;
 			}
-
+			
 		}
 
 	}
@@ -460,7 +439,7 @@ body {
 	
 	#credits {
 		@include column-12;
-		padding: $line-height 0;
+		padding: 0;
 		
 		p {
 			margin: 0;

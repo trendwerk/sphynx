@@ -111,6 +111,10 @@
 		display: inline-block;
 		width: 90px;
 	}
+
+	a[itemprop="email"] {
+		white-space: nowrap;
+	}
 	
 }
 
@@ -141,12 +145,14 @@
 				text-decoration: none;
 
 				i { 
-					background: $text-color;
+					@include border-radius(999999px);
+					background: $text-light;
 					color: #fff;
 					display: block;
-					font-size: 20px;
+					font-size: 18px;
 					float: left;
 					height: 20px;
+					line-height: 20px;
 					margin: 0 10px 0 0;
 					padding: 6px;
 					text-align: center;
@@ -210,6 +216,7 @@
 
 				i { 
 					font-size: 14px;
+					line-height: 14px;
 					height: 14px;
 					padding: 4px;
 					width: 14px;
