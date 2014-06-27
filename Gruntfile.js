@@ -26,7 +26,16 @@ module.exports = function(grunt) {
 					'assets/js/responsive.js'
 				],
 			dest: 'assets/js/all.js',
-			}
+			},
+		},
+
+		concat: {
+			dist: {
+				src: [
+					'assets/plugins/*.scss',
+					'assets/plugins/**/*.scss'],
+			dest: 'assets/sass/output/_plugins.scss',
+			},
 		},
 
 		/**
@@ -64,6 +73,7 @@ module.exports = function(grunt) {
         watch: {
             sass: {
                 files: [
+                		'assets/plugins/*',
                 		'assets/sass/*',
                 		'assets/sass/inc/*',
                 		'assets/sass/inc/lib/*',
