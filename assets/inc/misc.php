@@ -32,7 +32,7 @@ function tp_add_editor_styles( $settings ) {
         ),
         array(
             'title'    => __( 'Telephone', 'tp' ),
-            'selector' => 'span',
+            'selector' => 'p',
             'classes'  => 'telephone',
         ),       
     );
