@@ -22,7 +22,6 @@ class TP_Telephone_Button extends TP_Title_Content_Button {
 			?>
 			
 			<p class="telephone">
-				<i class="fa fa-phone"></i> 
 				<?php echo get_option( 'tp-telephone' ); ?>
 			</p>
 

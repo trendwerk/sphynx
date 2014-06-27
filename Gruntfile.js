@@ -2,17 +2,28 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
+		pkg: grunt.file.readJSON( 'package.json' ),
+
+		/**
+		 * Optimize images
+		 */
+
+		imageoptim: {
+			myTask: {
+				src: ['assets/img']
+			}
+		},
+
 		/**
 		 * Combine files with concatenate
 		 */
-
-		pkg: grunt.file.readJSON( 'package.json' ),
 
 		concat: {
 			dist: {
 				src: [
 					'assets/js/lib/*.js',
-					'assets/js/functions.js'
+					'assets/js/functions.js',
+					'assets/js/responsive.js'
 				],
 			dest: 'assets/js/all.js',
 			}
@@ -39,20 +50,10 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'assets/sass/output/style.compiled.css': 'assets/sass/style.scss',
-					'assets/sass/output/editor.compiled.css': 'assets/sass/editor.scss',
-					'assets/sass/output/admin.compiled.css': 'assets/sass/admin.scss'
+					'assets/sass/output/style.css': 'assets/sass/style.scss',
+					'assets/sass/output/editor.css': 'assets/sass/editor.scss',
+					'assets/sass/output/admin.css': 'assets/sass/admin.scss'
 				}
-			}
-		},
-
-		/**
-		 * Optimize images
-		 */
-
-		imageoptim: {
-			myTask: {
-				src: ['assets/img']
 			}
 		},
 
@@ -89,11 +90,11 @@ module.exports = function(grunt) {
 	 * Load tasks
 	 */
 
+	grunt.loadNpmTasks('grunt-imageoptim');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-imageoptim');
 
 	/**
 	 * Run tasks

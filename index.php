@@ -56,14 +56,9 @@
 						</a>
 						
 						<p class="article-content">
-							<?php tp_the_excerpt( 70 ); ?>
+							<?php the_content( __( 'Read more', 'tp' ) ); ?>
 						</p>
-						
-						<p>
-							<a class="more-link" href="<?php the_permalink(); ?>">
-								<?php _e( 'Read&nbsp;more', 'tp' ); ?>
-							</a>
-						</p>
+				
 
 					</article>
 				

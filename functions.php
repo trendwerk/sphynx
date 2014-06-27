@@ -21,7 +21,7 @@ function tp_enqueue_scripts() {
 	//Register & enqueue child scripts and styles
 	wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/assets/js/functions.js', array( 'jquery' ) );
 	wp_enqueue_script( 'responsive', get_stylesheet_directory_uri() . '/assets/js/responsive.js', array( 'jquery' ) );
-	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/assets/sass/output/style.compiled.css' );
+	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/assets/sass/output/style.css' );
 	
 	//Get jQuery from Google CDN
     wp_deregister_script( 'jquery' );
@@ -39,7 +39,7 @@ function tp_admin_enqueue_scripts() {
 		wp_enqueue_media();
 
 	wp_enqueue_script( 'admin', get_stylesheet_directory_uri() . '/assets/js/admin.js', array( 'jquery' ) );
-	wp_enqueue_style( 'admin', get_stylesheet_directory_uri() . '/assets/sass/output/admin.compiled.css' );
+	wp_enqueue_style( 'admin', get_stylesheet_directory_uri() . '/assets/sass/output/admin.css' );
 }
 add_action( 'admin_enqueue_scripts', 'tp_admin_enqueue_scripts' );
 

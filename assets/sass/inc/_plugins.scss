@@ -43,7 +43,7 @@
 
 	}
 
-	.validation_message {
+	.validation_message.gfield_description {
 		@include border-radius(3px);
 		background-color: $error-red;
 		clear: both;
@@ -252,6 +252,29 @@
 							width: 61.6%;
 						}
 
+					}
+
+				}
+
+				.gform_drop_area {
+					margin-bottom: $line-height;
+
+					.gform_drop_instructions {
+						float: left;
+						margin-top: 8px;
+						margin-right: 20px;
+					}
+
+				}
+
+				.ginput_preview {
+					margin-left: 35%;
+					margin-bottom: 10px;
+
+					.gform_delete {
+						float: left;
+						margin-top: 6px;
+						margin-right: 10px;
 					}
 
 				}
