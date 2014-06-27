@@ -101,7 +101,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 			
 			<?php if( ! is_author() ) { ?>
 
-				<a class="more-link" href="<?php echo get_author_posts_url( $author ); ?>" rel="author"><?php printf( _n( 'View 1 post', 'View all %1$s posts', count_user_posts( $author ), 'tp' ), count_user_posts( $author ) ); ?></a>
+				<a class="more-link" href="<?php echo get_author_posts_url( $author ); ?>"><?php printf( _n( 'View 1 post', 'View all %1$s posts', count_user_posts( $author ), 'tp' ), count_user_posts( $author ) ); ?></a>
 				
 			<?php } ?>
 			
