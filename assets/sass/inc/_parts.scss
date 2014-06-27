@@ -342,8 +342,8 @@
 			.page,
 			.next {
 				@include border-radius(3px);
-				background-color: #CCC;
-				border: 1px solid #CCC;
+				background-color: $border-color;
+				border: 1px solid $border-color;
 				color: $text-color;
 				display: inline-block;
 				height: 38px;

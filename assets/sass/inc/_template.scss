@@ -24,12 +24,12 @@
 	#sub-header {
 		background-color: #CCC;
 		margin-top: 0;
-		padding: $line-height * 4 0;
+		padding: $line-height * 4 0 $line-height * 5;
 		text-align: center;
 
 		h1 {
 			font-size: 64px;
-			margin-bottom: $line-height * 2;
+			margin-bottom: $line-height * 1.5;
 		}
 
 		h2 {
