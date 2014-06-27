@@ -7,16 +7,16 @@ if( ! $author )
 if( get_the_author_meta( 'show_profile', $author ) ) {
 	?>
 
-	<section class="author-card" itemscope itemtype="http://schema.org/Person">
+	<section class="author-card">
 	
-		<div class="author-avatar" itemprop="image">
+		<div class="author-avatar">
 			<?php 
 				if( is_author() ) {
 					echo get_avatar( $author, 80 ); 
 				} else {
 					?>
 
-					<a href="<?php echo get_author_posts_url( $author ); ?>" rel="author">
+					<a href="<?php echo get_author_posts_url( $author ); ?>">
 						<?php echo get_avatar( $author, 80 ); ?>
 					</a>
 
@@ -32,11 +32,11 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 					echo '<span class="author-writtenby">' . __( 'Written by', 'tp' ) . ':</span>'; 
 			?>
 			
-			<h4 class="author-name" itemprop="name">
+			<h4 class="author-name">
 				<?php the_author_meta( 'display_name', $author ); ?>
 			</h4>
 			
-			<p class="author-bio" itemprop="description">
+			<p class="author-bio">
 				<?php the_author_meta( 'description', $author ); ?>
 			</p>
 			
@@ -58,7 +58,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 			        <?php if( $facebook ) { ?>
 
 			            <li>
-			                <a class="facebook" href="<?php echo $facebook; ?>" itemprop="url" rel="me external">
+			                <a class="facebook" href="<?php echo $facebook; ?>" rel="external">
 			                    <i class="fa fa-facebook"></i>
 			                </a>
 			            </li>
@@ -68,7 +68,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 			        <?php if( $twitter ) { ?>
 
 			            <li >
-			                <a class="twitter" href="https://twitter.com/<?php echo $twitter; ?>" itemprop="url" rel="me external">
+			                <a class="twitter" href="https://twitter.com/<?php echo $twitter; ?>" rel="external">
 			                    <i class="fa fa-twitter"></i>
 			                </a>
 			            </li>
@@ -78,7 +78,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 			          <?php if( $googleplus ) { ?>
 
 			            <li>
-			                <a class="google-plus" href="<?php echo $googleplus; ?>" itemprop="url" rel="me external">
+			                <a class="google-plus" href="<?php echo $googleplus; ?>" rel="external">
 			                    <i class="fa fa-google-plus"></i>
 			                </a>
 			            </li>
@@ -88,7 +88,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 			        <?php if( $linkedin ) { ?>
 
 			            <li>
-			                <a class="linkedin" href="<?php echo $linkedin; ?>" itemprop="url" rel="me external">
+			                <a class="linkedin" href="<?php echo $linkedin; ?>" rel="external">
 			                    <i class="fa fa-linkedin"></i>
 			                </a>
 			            </li>

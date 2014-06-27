@@ -23,7 +23,7 @@
 
 	</head>
 	
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<body <?php body_class(); ?>>
 	
 		<header id="header" class="container">
 		
@@ -55,7 +55,7 @@
 
 				</div>
 
-				<nav id="topnav" class="navigation">				
+				<nav id="topnav">				
 					<?php
 						wp_nav_menu( array(
 							'depth'          => 1,
@@ -89,7 +89,7 @@
 
 		<?php if ( ! is_front_page() ) { ?>
 
-			<nav id="breadcrumbs" itemprop="breadcrumb" class="container">
+			<nav id="breadcrumbs" class="container">
 			
 				<div class="container-inner">
 
