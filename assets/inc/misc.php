@@ -64,8 +64,6 @@ function tp_set_image_sizes() {
 }
 add_action('after_switch_theme', 'tp_set_image_sizes'); 
 
-if ( ! isset( $content_width ) ) $content_width = 900;
-
 /**
  * Remove AIM, YIM, JABBER and add Facebook and LinkedIn
  */
