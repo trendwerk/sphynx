@@ -46,7 +46,7 @@ add_filter( 'tiny_mce_before_init', 'tp_add_editor_styles' );
  * Set content width
  */
 if ( ! isset( $content_width ) ) {
-    $content_width = 600;
+    $content_width = 740;
 }
 
 /**

@@ -79,3 +79,18 @@
 	margin: 0 !important;
 	max-height: 1em;
 }
+
+/**
+ * @section     Images
+ * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
+ */
+
+
+.size-thumbnail,
+.size-medium,
+.size-large,
+.size-auto, 
+.size-full {
+	max-width: 100%;
+	height: auto;
+}
