@@ -93,91 +93,91 @@ h6 {
  * @subsection Links
  */
 
- a {
- 	color: $link-color;
- 	outline: 0;
- 	text-decoration: underline;
- 		
- 	&:active,
- 	&:focus,
- 	&:hover { 
- 		color: darken($link-color, 15%);
- 		text-decoration: underline;
- 	}
+a {
+	color: $link-color;
+	outline: 0;
+	text-decoration: underline;
 
- 	/* add characters to links */
- 	
- 	&.more-link:after,
+	&:active,
+	&:focus,
+	&:hover { 
+		color: darken($link-color, 15%);
+		text-decoration: underline;
+	}
+
+	/* add characters to links */
+
+	&.more-link:after,
 	&.back:before,
 	&.prev:before,
 	&.next:after {
- 		display: inline-block;
- 		font-family: fontawesome;
- 		font-size: 8px;
+			display: inline-block;
+			font-family: fontawesome;
+			font-size: 8px;
 	}
 
- 	&.back:before,
- 	&.prev:before {
- 		content: "\f053";
- 		padding-right: 4px;
- 	}
- 	
- 	&.more-link:after,
- 	&.next:after {
- 		content: "\f054";
- 		padding-left: 4px;
- 	}
-	
+	&.back:before,
+	&.prev:before {
+		content: "\f053";
+		padding-right: 4px;
+	}
+
+	&.more-link:after,
+	&.next:after {
+		content: "\f054";
+		padding-left: 4px;
+	}
+
 	/* call to action buttons */
 
- 	&.cta {
- 		@include border-radius(3px);
- 		display: inline-block;
- 		font-weight: bold;
- 		height: 50px;
- 		line-height: 50px;
- 		margin: 0 10px 10px 0;
- 		padding: 0 35px;
- 		position: relative;
- 		text-decoration: none;
- 		text-transform: uppercase;
- 		white-space: nowrap;
+	&.cta {
+		@include border-radius(3px);
+		display: inline-block;
+		font-weight: bold;
+		height: 50px;
+		line-height: 50px;
+		margin: 0 10px 10px 0;
+		padding: 0 35px;
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
 
- 		&:active {
- 			top: 1px;
- 		}	
+		&:active {
+			top: 1px;
+		}
 
- 		/* primary button */
- 		
- 		&.primary {
- 			background: $primary-color;
- 			color: #FFF;
- 			
- 			&:active,
- 			&:focus,
- 			&:hover { 
- 				background: darken($primary-color, 15%);
- 			}
- 		
- 		}
+		/* primary button */
 
- 		/* secondary button */
- 		
- 		&.secondary {
- 			background: $secondary-color;
- 			color: #FFF;
- 			
- 			&:active,
- 			&:focus,
- 			&:hover {
- 				background: darken($secondary-color, 15%);
- 			}
- 		
- 		}		
- 	
- 	}
+		&.primary {
+			background: $primary-color;
+			color: #FFF;
 
- 	/* style for tags */
+			&:active,
+			&:focus,
+			&:hover { 
+				background: darken($primary-color, 15%);
+			}
+
+		}
+
+		/* secondary button */
+
+		&.secondary {
+			background: $secondary-color;
+			color: #FFF;
+
+			&:active,
+			&:focus,
+			&:hover {
+				background: darken($secondary-color, 15%);
+			}
+
+		}
+
+	}
+
+	/* style for tags */
 
 	&[rel="tag"] {
 		@include border-radius(5px);
@@ -190,17 +190,17 @@ h6 {
 		padding: 0 10px;
 		text-decoration: none;
 		text-transform: lowercase;
-		
+
 		&:active,
 		&:focus,
 		&:hover {
 			background: $heading-color;
 			color: #FFF;
 		}
-		
-	}	
 
- }
+	}
+
+}
 
 /**
  * @section    Typography
@@ -225,23 +225,23 @@ p {
 ul { 
 	list-style-position: outside;
 	margin: 0 0 $line-height 20px;
-	
+
 	ul {
 		margin: 0 0 0 20px;
 	}
-	
+
 }
 
 ol {
 	list-style-position: outside;
 	list-style-type: decimal;
 	margin: 0 0 $line-height 20px;
-	
+
 	ol {
 		list-style-type: lower-alpha;
 		margin: 0 0 0 20px;
 	}
-	
+
 }
 
 /**
@@ -255,11 +255,11 @@ table {
 	border-spacing: 0;	
 	margin: 0 0 $line-height 0;
 	width: 100%;
-		
+
 	tr { 
 		border-bottom: 1px solid $border-color;
 		border-right: 1px solid $border-color;
-		
+
 		&:nth-child(even) {
 			background: $light-background;
 		}
@@ -313,7 +313,7 @@ blockquote {
 
 }
 
-cite { 
+cite {
 	color: $text-color;
 	display: block;
 	font-style: normal;
@@ -331,18 +331,18 @@ cite {
  * @subsection Code snippets
  */
 
-code, 
-pre { 
+code,
+pre {
 	background: #FFFFB3;
 	color: #000;
 }
 	
 pre {
-    margin-bottom: 20px; 
+	margin-bottom: 20px; 
 	padding: 20px; 
-    white-space: pre-wrap;
- 	white-space: -moz-pre-wrap;
- 	white-space: -o-pre-wrap;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
 }
 
 /* abbreviations */
@@ -351,13 +351,13 @@ abbr,
 acronym {
 	border-bottom: 1px dotted $text-color;
 	cursor: help;
-	
+
 	&:active,
 	&:focus,
 	&:hover {
 		border-bottom-style: solid;
 	}
-	
+
 }
 
 /**
@@ -408,7 +408,7 @@ ins {
  * @subsection Other
  */
 
-strong, 
+strong,
 b {
 	font-weight: bold;
 }
@@ -419,7 +419,7 @@ i {
 }
 
 hr {
-	border: 0;   
+	border: 0;
 	border-top: 1px solid $border-color;
 	display: block;
 	height: 1px;

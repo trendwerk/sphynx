@@ -48,7 +48,8 @@
 						
 						<p class="article-meta">
 							<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time>
-							<?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?> <?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
+							<?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?> 
+							<?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
 						</p>
 						
 						<a class="article-thumbnail" href="<?php the_permalink(); ?>">
@@ -58,7 +59,6 @@
 						<p class="article-content">
 							<?php the_content( __( 'Read more', 'tp' ) ); ?>
 						</p>
-				
 
 					</article>
 				
