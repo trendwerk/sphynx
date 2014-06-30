@@ -116,17 +116,46 @@
  * @subsection Mobile
  */
 
- @media (max-width: 640px) {	
+ @media (max-width: 640px) {
+
+	h1 {
+		font-size: 24px;
+	}
+
+	h2 {
+		font-size: 20px; 
+	}
+
+	h3 {
+		font-size: 18px;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+
+	h5 {
+		font-size: 14px;
+	}
+
+	h6 {
+		font-size: 12px;
+	}	
  			
  	#header {
+ 		padding: 5px;
 
  		/* logo, sitename and description */
 
 		#logo {
 			width: 100%;
 
-			#sitename a:before {
-				display: none;
+			#sitename {
+				font-size: 18px;
+			}
+
+			#description {
+				font-size: 12px;
 			}
 
 		}
@@ -136,8 +165,9 @@
 		#mobile {
 			display: block;
 			position: absolute;
-			right: 30px;
 			margin: 0;
+			right: 30px;
+			top: 20px;
 
 			#mobile-navigation, 
 			#mobile-search {
@@ -303,7 +333,7 @@
 	#main {
 		border-top: 1px solid $border-color;
 		margin-top: 0;
-		padding-top: $line-height * 2;
+		padding: 30px 0;
 
 		.sidebar {
 			
@@ -324,6 +354,10 @@
 		}
 
 		#content {
+
+			#page-title {
+				margin-bottom: $line-height;
+			}
 		
 			.gform_wrapper form {
 
@@ -397,7 +431,8 @@
 		}
 
 		#credits {
-
+			padding-bottom: $line-height;
+			
 			#copyright,
 			#footernav {
 				text-align: center;
@@ -424,15 +459,15 @@
 		}
 
 		#sub-header {
-			padding: $line-height * 2 0;
+			padding: 40px 0 50px 0;
 
 			h1 {
-				font-size: 36px;
-				margin-bottom: $line-height;
+				font-size: 24px;
+				margin-bottom: 11px;
 			}
 
 			h2 {
-				font-size: 22px;
+				font-size: 20px;
 			}
 
 		}

@@ -42,6 +42,14 @@
 
 	}
 
+	a {
+		
+		&.cta {
+			margin-bottom: 0;
+		}
+		
+	}
+
 	p {
 
 		&:last-of-type {
@@ -145,15 +153,14 @@
 					background: $text-light;
 					color: #fff;
 					display: block;
-					font-size: 18px;
+					font-size: 14px;
 					float: left;
-					height: 20px;
-					line-height: 20px;
-					margin: 0 10px 0 0;
-					padding: 6px;
+					height: 30px;
+					line-height: 30px;
+					margin: 0 5px 0 0;
 					text-align: center;
 					text-decoration: none;
-					width: 20px;
+					width: 30px;
 				}
 
 				span.title { 

@@ -35,6 +35,7 @@ body {
 	#logo {
 		@include column-9;
 		margin-top: 27px;
+		margin-bottom: 5px;
 
 		#sitename {
 			font: bold 24px $heading-font;
@@ -114,7 +115,7 @@ body {
 
 		form {
 			float: right;
-			width: 240px;
+			width: 230px;
 
 			fieldset {
 				position: relative;
@@ -187,11 +188,11 @@ body {
 			&.page_item_has_children > a:after,
 			&.has-children > a:after {
 				content: "\f0d7";
+				display: inline-block;
 				font-family: FontAwesome;
-				font-size: 10px;
-				line-height: 25px;
-				margin-left: 5px;
-				text-decoration: none;
+				font-size: 9px;
+				position: absolute;
+				padding-left: 5px;
 			}
 
 			&.current-menu-item,
