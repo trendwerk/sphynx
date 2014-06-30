@@ -1,6 +1,6 @@
 {
 	"name": "TrendPress",
-	"version": "0.1.123123",
+	"version": "0.1",
 	"devDependencies": {
 		"grunt": "~0.4.5",
 		"grunt-contrib-sass": "^0.7.3",
