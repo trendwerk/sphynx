@@ -30,55 +30,54 @@ input[type="tel"],
 input[type="url"],
 textarea, 
 select {
-	.border-radius(3px);
- 	.placeholder(#666, #ccc);
+	@include border-radius(3px);
+	@include placeholder(#666, #ccc);
 	background-color: #FFF;
- 	border: 1px solid @border-color;
- 	color: @text-color;
- 	display: block;
- 	font-family: @text-font;
- 	font-size: 14px;
- 	margin: 0;
- 	min-width: 220px;
- 	outline: none;
- 	padding: 10px;
+	border: 1px solid $border-color;
+	color: $text-color;
+	display: block;
+	font-family: $text-font;
+	font-size: 13px;
+	margin: 0;
+	min-width: 220px;
+	outline: none;
+	padding: 12px;
 
 	&:focus {
-		border: 1px solid darken(@border-color, 20%);
+		border: 1px solid darken($border-color, 20%);
 	}
 
 }
-
-/* submit buttons */
 
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
 a.button,
 button {
-	.border-radius(3px);
-	background-color: @primary-color;
- 	border: 0;
- 	color: #FFF;
-	font-family: @text-font;
-	font-size: 14px;
-	font-weight: normal;
- 	height: 38px;
- 	margin-right: 10px;
- 	padding: 0 15px;
+	@include border-radius(3px);
+	background-color: $primary-color;
+	border: 0;
+	color: #FFF;
+	font-family: $text-font;
+	font-size: 12px;
+	font-weight: bold;
+	height: 40px;
+	margin-right: 10px;
+	padding: 0 35px;
+	text-transform: uppercase;
 	-webkit-appearance: none;
- 	
- 	&:hover { 
- 		background-color: lighten(@primary-color, 5%);
- 	}
 
- 	&:active,
- 	&:focus {
-		background-color: darken(@primary-color, 5%);
-		outline: none;
+		&:hover { 
+			background-color: lighten($primary-color, 5%);
+		}
+
+		&:active,
+		&:focus {
+			background-color: darken($primary-color, 5%);
+			outline: none;
+		}
+
 	}
-
-}
 
 /**
  * @section    Forms
@@ -99,12 +98,6 @@ button {
 	}
 
 }
-
-/**
- * @section    Forms
- * @subsection Comment form 
- */
-
 
 /**
  * @section    Forms

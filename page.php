@@ -3,12 +3,12 @@
 <section id="main" class="container">
 
 	<div class="container-inner">
-	
-		<aside class="sidebar fourcol">
+
+		<aside class="sidebar">
 			<?php dynamic_sidebar( 'page' ); ?>
 		</aside>
 		
-		<article id="content" class="eightcol">
+		<article id="content">
 		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
@@ -21,7 +21,7 @@
 			<?php endwhile; endif; ?>
 			
 		</article>
-		
+
 	</div><!-- .container-inner -->
 	
 </section><!-- #main -->

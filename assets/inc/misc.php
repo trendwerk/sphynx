@@ -6,7 +6,15 @@
  */
 
 /**
- * Add editor styles
+ * Load editor styles
+ */
+function tp_add_editor_style() {
+    add_editor_style( 'assets/sass/output/editor.css' );
+}
+add_action( 'init', 'tp_add_editor_style' );
+
+/**
+ * Define editor styles
  */
 function tp_add_editor_styles( $settings ) {
     $style_formats = array(
@@ -25,6 +33,16 @@ function tp_add_editor_styles( $settings ) {
     		'selector' => 'a',
     		'classes'  => 'more-link',
     	),
+        array(
+            'title'    => __( 'Intro', 'tp' ),
+            'selector' => 'p',
+            'classes'  => 'intro',
+        ),
+        array(
+            'title'    => __( 'Telephone', 'tp' ),
+            'selector' => 'p',
+            'classes'  => 'telephone',
+        ),       
     );
     $settings['style_formats'] = json_encode( $style_formats );
 
@@ -35,9 +53,8 @@ add_filter( 'tiny_mce_before_init', 'tp_add_editor_styles' );
 /**
  * Set content width
  */
-if ( ! isset( $content_width ) ) {
-    $content_width = 600;
-}
+if( ! isset( $content_width ) )
+    $content_width = 740;
 
 /**
  * Set image sizes
@@ -52,9 +69,7 @@ function tp_set_image_sizes() {
 	update_option( 'large_size_w', 600 );
 	update_option( 'large_size_h', '' );
 }
-add_action('after_switch_theme', 'tp_set_image_sizes'); 
-
-if ( ! isset( $content_width ) ) $content_width = 900;
+add_action( 'after_switch_theme', 'tp_set_image_sizes' );
 
 /**
  * Remove AIM, YIM, JABBER and add Facebook and LinkedIn

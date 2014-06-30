@@ -1,0 +1,478 @@
+/**
+ * @section Parts
+ *
+ * Defines the styling for recurring template parts
+ *
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ *
+ */
+
+/**
+ * @section    Parts
+ * @subsection Author
+ */
+
+.author-card {
+	@include border-box;
+	background: #EEE;
+	margin: 0 0 $line-height 0;
+	padding: 40px;
+	width: 100%;
+	
+	.author-avatar {
+		float: left;
+		margin: 5px 0 0 0;
+
+		img {
+			@include border-radius(999px);
+		}
+
+	}
+		
+	.author-info {
+		padding-left: 100px;
+
+		.author-writtenby {
+			color: shade-light($text-color, 5%);
+			font-size: 13px;
+		}
+
+		.author-bio {
+			font-size: 13px;
+		}
+
+		.author-social {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline;
+				
+				.label {
+					color: shade-light($text-color, 5%);
+					display: inline-block;
+					font-size: 14px;
+					float: left;
+					margin-top: -1px;
+					margin-right: 10px;
+				}
+
+				a {
+					@include border-radius(999px);
+					background-color: #999;
+					color: #FFF;
+					display: block;
+					float: left;					
+					font-size: 14px;
+					height: 30px;
+					line-height: 30px;
+					margin: -3px 5px 0 0;
+					position: relative;
+					text-align: center;
+					text-decoration: none;					
+					width: 30px;
+
+					&:active,
+					&:focus {
+						top: 1px;
+					}
+
+					&.google-plus {
+						
+						&:active,
+						&:focus,
+						&:hover {
+							background-color: #dd4B39;
+						}
+
+					}
+
+					&.twitter {
+
+						&:active,
+						&:focus,
+						&:hover {
+							background-color: #2ca8d2;
+						}
+
+					}
+
+					&.facebook {
+
+						&:active,
+						&:focus,
+						&:hover {
+							background-color: #305891;
+						}
+
+					}
+
+					&.linkedin {
+
+						&:active,
+						&:focus,
+						&:hover {
+							background-color: #4498c8;
+						}
+						
+					}
+
+				}
+
+			}
+
+		}
+
+		a.more-link {
+			float: right;
+			font-size: 14px;
+			margin: -1px 10px 10px 0;
+		}	
+		
+	}
+	
+}
+
+ /**
+  * @section    Parts
+  * @subsection Comments
+  */
+
+#comments { 
+	clear: both;
+	float: left;
+	margin: $line-height 0;
+	width: 100%;
+
+	ol.commentlist {
+		margin: 0;
+		 
+		li.comment {
+
+			.comment-respond {
+				@include border-box;
+				float: left;
+				clear: both;
+				padding: 30px;
+			}
+
+			list-style: none;
+
+			.comment-awaiting-moderation {
+				@include border-box;
+				@include border-radius(3px);
+				background: $alert-yellow;
+				clear: both;
+				color: #FFF;
+				display: block;
+				float: left;
+				font-style: normal;
+				margin-bottom: 20px;
+				padding: 10px 23px;	
+
+				&:before {
+					content: "\f071";
+					display: inline-block;
+					font-family: fontawesome;
+					padding-right: 10px;
+				}
+
+			}
+						
+			.comment-body {
+				border: 1px solid $border-color;
+				margin: 0 0 20px 0;
+				padding: 20px 20px 0 20px;
+				position: relative;
+			
+				.comment-author {
+					height: 80px;
+					
+					.avatar { 
+						@include border-radius(1000px);
+						border: 1px solid $border-color;
+						float: left;
+						margin-right: 20px;
+					}
+					
+					cite { 
+						display: block;
+						float: left;
+						font: 20px $heading-font;
+						font-style: normal;
+						margin: 10px 0;
+					}
+					
+					.says {
+						display: none;
+					}
+				
+				}
+
+				.comment-meta {
+					clear: both;
+					font-size: 13px;
+					font-style: italic;
+					left: 100px;
+					position: absolute;
+					top: 55px;
+					
+					a {
+						color: $text-light;
+						cursor: text;
+						text-decoration: none;
+					}
+					
+					.comment-edit-link {
+						display: none;
+					}
+					
+				}
+				
+				.reply {
+					font-size: 12px;
+					position: absolute;
+					right: 20px;
+					top: 20px;
+
+					a {	@include font-awesome-before("\f112  "); }
+
+				}
+
+				p {
+					clear: both;
+					display: block;
+				}
+				
+			}
+
+			&.bypostauthor { 
+				background: $light-background;
+			}
+
+		}
+
+	}
+	
+	#respond {
+		clear: both;
+		float: left;
+		position: relative;
+		width: 100%;
+		
+		p {
+			clear: both;
+			float: left;
+			width: 100%;
+			
+			label { 
+				float: left;
+				width: 25%;
+			}
+			
+		}
+		
+		small {
+			font-size: 12px;
+			position: absolute;
+			right: 0;
+			top: 20px;
+		}
+		
+		textarea { 
+			@include border-box;
+			display: block;
+			height: 200px;
+			margin: 0;
+			width: 75%; 
+		}
+		
+		.form-allowed-tags {
+			display: none;
+		}
+		
+		input[type="submit"] {
+			float: left;
+			margin-left: 25%;
+		}
+
+	}
+
+}
+
+/**
+ * @section    Parts
+ * @subsection AddThis
+ */
+
+#pagination {
+	clear: both;
+	font-size: 13px;
+	padding: $line-height 0;
+	width: 100%;
+
+	ul {
+		list-style-type: none;
+		margin: 0; 
+		padding: 0;
+		text-align: center;
+		width: auto; 
+
+		li {
+			display: inline-block;
+
+			a {
+				text-decoration: none;
+
+				&:active,
+				&:focus,
+				&:hover {
+					text-decoration: underline;
+				}
+
+			}
+
+			.current,
+			.prev,
+			.page,
+			.next {
+				@include border-radius(3px);
+				background-color: $border-color;
+				border: 1px solid $border-color;
+				color: $text-color;
+				display: inline-block;
+				height: 38px;
+				line-height: 38px;
+				margin: 0 5px 10px 5px;
+				text-align: center;
+			}
+
+			.current,
+			.page {
+				width: 38px;
+			}
+
+			.current {
+				background-color: #FFF;
+			}
+
+			.prev,
+			.next {
+				padding: 0 15px;
+			}
+
+		}
+
+		.gap {
+			height: 40px;
+			line-height: 40px;
+			margin: 0 5px 10px 5px;
+			position: relative;
+			text-align: center;
+		}
+
+	}
+
+}
+
+/**
+ * @section    Parts
+ * @subsection AddThis
+ */
+
+.addthis_toolbox {
+
+	.label {
+		float: left;
+		width: 160px; 
+	}	
+
+	a {
+		@include border-radius(999px);
+		background-color: #999;
+		color: #FFF;
+		display: block;
+		float: left;					
+		font-size: 14px;
+		height: 30px;
+		line-height: 30px;
+		margin: -3px 5px 0 0;
+		position: relative;
+		text-align: center;
+		text-decoration: none;					
+		width: 30px;
+
+
+		&:active,
+		&:focus {
+			top: 1px;
+		}
+
+		&.addthis_button_twitter {
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: #2ca8d2;
+			}
+
+		}
+
+		&.addthis_button_facebook {
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: #305891;
+			}
+
+		}
+
+		&.addthis_button_google_plusone_share {
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: #dd4B39;
+			}
+
+		}
+
+		&.addthis_button_linkedin {
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: #4498c8;
+			}
+			
+		}
+
+		&.addthis_button_email {
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: #666;
+			}
+
+		}
+		
+		&.addthis_button_compact {
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: #f56952;
+			}
+
+		}
+
+	}
+
+}

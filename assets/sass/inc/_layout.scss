@@ -1,0 +1,491 @@
+/**
+ * @section    Layout
+ *
+ * Defines the default layout for a regular page, archive and post (e.g. position, 
+ * size, margin, etc...)
+ *
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ *
+ */
+
+/**
+ * @section    Layout
+ * @subsection Default
+ */
+
+body {
+	background: $body-background;
+}
+
+/**
+ * @section    Layout
+ * @subsection Page
+ */
+
+#header {
+	background: $body-background;
+	z-index: 1;
+
+	/* logo, sitename and description */
+
+	#logo {
+		@include column-9;
+		margin-top: 27px;
+		margin-bottom: 5px;
+
+		#sitename {
+			font: bold 24px $heading-font;
+			margin: 0;
+
+			a {
+				color: $heading-color;
+				text-decoration: none;
+			}
+
+		}
+
+		#description {
+			color: $text-color;
+			margin: 0;
+		}
+
+	}
+
+	/* mobile navigation and search buttons */
+
+	#mobile {
+		display: none;
+	}
+	
+	/* top navigation */
+			
+	#topnav {
+		@include column-3;
+		margin-top: 3px;
+
+		ul {
+			float: right;
+			margin: 0;
+			
+			li {
+				display: inline-block;
+				font-size: 13px;
+
+				&:after {
+					color: $text-color;
+					content: "|";
+					padding: 0 5px 0 10px;
+				}
+				
+				&:last-child {
+
+					&:after {
+						display: none;
+					}
+
+				}
+
+				a { 
+					color: $text-color;
+
+					&:active,
+					&:focus,
+					&:hover {
+						color: $link-color;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	/* search form */
+
+	#search {
+		@include column-3;
+		margin-top: 2px;
+		margin-bottom: 0;
+
+		form {
+			float: right;
+			width: 230px;
+
+			fieldset {
+				position: relative;
+
+				input[type="text"] {
+					@include placeholder(#999, $text-color);
+					color: $text-color;
+					font-style: italic;
+					margin: 0;
+					right: 0;
+					width: 100%;
+				}
+
+				input[type="submit"] {
+					background: none;
+					box-shadow: none;
+					color: $text-light;
+					font-size: 13px;
+					margin: 0;
+					padding: 0 12px;
+					position: absolute;
+					right: 0;
+					text-shadow: none;
+					-webkit-font-smoothing: antialiased;
+					
+					&:active,
+					&:focus,
+					&:hover {
+						color: $text-color;
+					}
+
+				}
+
+			}
+			
+		}
+		
+	}
+
+}
+
+/* main navigation */
+
+#main-navigation {
+	background-color: #999;
+	z-index: 1;
+
+	ul.menu {
+		margin: 0;
+		padding: 0;
+		position: relative;
+
+		li {
+			float: left;
+
+			/* show sub-menu */
+
+			&:active,
+			&:focus,
+			&:hover {
+
+				> ul {
+					display: block;
+				}
+
+			}
+
+			/* if item has children, show indicator */
+
+			&.page_item_has_children > a:after,
+			&.has-children > a:after {
+				content: "\f0d7";
+				display: inline-block;
+				font-family: FontAwesome;
+				font-size: 9px;
+				position: absolute;
+				padding-left: 5px;
+			}
+
+			&.current-menu-item,
+			&.current-menu-parent,
+			&.current-menu-ancestor {
+				background-color: #666;
+			}
+
+			a {
+				text-decoration: none;
+			}	
+
+		}
+
+		/* first level only */
+
+		> li {
+			position: relative;
+			display: block;
+			float: left;
+			line-height: 60px;
+			padding: 0;
+
+			&:active, 
+			&:focus,
+			&:hover {
+				background-color: #666;
+			}
+
+			> a {
+				color: #FFF;
+				display: block;
+				font-size: 14px;
+				font-weight: bold;
+				line-height: 60px;
+				padding: 0 20px;
+				text-transform: uppercase;
+			}
+
+		}
+
+		/* second level */
+
+		ul.sub-menu {
+			display: none;
+			margin: 0;
+			position: absolute;
+			top: auto;
+			width: 220px;
+			z-index: 1;
+
+			li {
+				clear: both;
+				display: block;
+				width: 100%;
+
+				a {
+					@include border-box;
+					background: #666;
+					color: #FFF;
+					display: block;	
+					font-size: 12px;
+					line-height: $line-height;
+					padding: 5px 15px;
+					width: 100%;
+
+					&:active,
+					&:focus,
+					&:hover {
+						text-decoration: underline;
+					}
+
+				}				
+	
+				&.page_item_has_children > a,
+				&.has-children > a {
+
+					&:after {
+						content: "\f0da";
+						display: inline-block;
+					}
+				
+					&:active,
+					&:focus,
+					&:hover {
+
+						&:after {
+							text-decoration: none;
+						}
+
+					}
+
+				}
+
+
+				/* third level */
+
+				ul {
+					margin-left: 0;
+					left: 100%;
+					margin-top: -35px;
+				}				
+
+			}
+
+		}	
+
+	}	
+
+}
+
+/* breadcrumbs */
+	
+#breadcrumbs {
+	color: $text-light;
+	font-size: 13px;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	#breadcrumbs-inner {
+		@include column-12;
+
+		a {
+			color: $text-color;
+
+			&:active,
+			&:focus,
+			&:hover { 
+				color: $link-color;
+			}
+
+		}
+
+	}
+
+}
+
+#main {
+	background: $body-background;
+	padding: 60px 0;
+	z-index: 0;
+
+	/* content */
+	
+	#content {
+		@include border-box;
+		@include column-8;
+		padding-right: 20px;
+
+		#page-title {
+			margin-bottom: $line-height * 2;
+		}
+
+		.article-meta {
+			color: $text-light;
+			font-size: 13px;
+			font-weight: bold; 
+			margin: 0 0 $line-height 0;
+			text-transform: uppercase;
+
+			a {
+				color: $text-color;
+
+				&:active,
+				&:focus,
+				&:hover {
+					color: $link-color; 
+				}
+
+			}
+
+		}
+
+		#article-title {
+			margin-bottom: 10px;
+		}
+
+		.tags {
+
+			a:first-of-type {
+				margin-left: 120px;
+			}
+			
+		}
+
+	}
+
+	/* sidebar */
+
+	.sidebar {
+		@include column-4;
+
+		.widget {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+	}
+
+}
+
+#footer {
+	background: $footer-background;
+	color: #FFF;
+	margin-bottom: 0; 
+	
+	a { 
+		color: #FFF;		
+	}
+	
+	.sidebar {
+		float: left;
+		padding-top: $line-height;
+		width: 100%;
+	
+		.widget {
+			@include column-3;
+			background: none;
+			clear: none;
+			float: left;
+			margin: 10px;
+			padding: $line-height 0;
+			
+			h3 { 
+				color: #FFF; 
+			}
+
+			ul {
+				border: none;
+				
+				li { 
+					border: none;
+					line-height: 25px;
+					margin: 5px 0 0 0;
+					padding: 0;
+				}
+
+			}
+
+			p {
+				padding-right: 20px;
+			}
+
+		}
+		
+	}
+	
+	#credits {
+		@include column-12;
+		padding: 0;
+		
+		p {
+			margin: 0;
+		}
+		
+		#copyright { 
+			float: left;
+		}
+		
+		#footernav { 
+			float: right; 
+
+			div {
+				display: inline-block;
+			
+				ul {
+				
+					li {
+						display: inline;
+						
+						&:after {
+							color: #FFF;
+							content: "|";
+							padding: 0 5px 0 10px;
+						}
+						
+						&:last-child {
+
+							&:after {
+								display: none;
+							}
+
+						}
+
+					}
+						
+				}
+
+			}	
+			
+		}
+		
+	}
+	
+}

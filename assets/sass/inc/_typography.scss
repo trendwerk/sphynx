@@ -1,0 +1,450 @@
+/**
+ * @section Typography
+ * 
+ * Defines the styling of text elements
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+
+/**
+ * @section    Typography
+ * @subsection Variables
+ */
+
+$line-height:	25px;
+
+/**
+ * @section    Typography
+ * @subsection Import Font Awesome
+ */
+
+@import "lib/_fontawesome.scss";
+
+/**
+ * @section    Typography
+ * @subsection Render settings
+ */
+
+html {
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-text-size-adjust: none;
+}
+
+/**
+ * @section    Typography
+ * @subsection Content
+ */
+
+body {
+	color: $text-color; 
+	font-family: $text-font;
+	font-size: 14px;
+	line-height: $line-height;
+}
+
+/**
+ * @section    Typography
+ * @subsection Headings
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $heading-color;
+	font-family: $heading-font;
+	font-weight: 700;
+	line-height: 1em;
+	margin: 0 0 $line-height 0;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 24px; 
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 14px;
+}
+
+/**
+ * @section    Typography
+ * @subsection Links
+ */
+
+a {
+	color: $link-color;
+	outline: 0;
+	text-decoration: underline;
+
+	&:active,
+	&:focus,
+	&:hover { 
+		color: darken($link-color, 15%);
+		text-decoration: underline;
+	}
+
+	/* add characters to links */
+
+	&.more-link:after,
+	&.back:before,
+	&.prev:before,
+	&.next:after {
+			display: inline-block;
+			font-family: fontawesome;
+			font-size: 8px;
+	}
+
+	&.back:before,
+	&.prev:before {
+		content: "\f053";
+		padding-right: 4px;
+	}
+
+	&.more-link:after,
+	&.next:after {
+		content: "\f054";
+		padding-left: 4px;
+	}
+
+	/* call to action buttons */
+
+	&.cta {
+		@include border-radius(3px);
+		display: inline-block;
+		font-weight: bold;
+		height: 50px;
+		line-height: 50px;
+		margin: 0 10px 10px 0;
+		padding: 0 35px;
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+
+		&:active {
+			top: 1px;
+		}
+
+		/* primary button */
+
+		&.primary {
+			background: $primary-color;
+			color: #FFF;
+
+			&:active,
+			&:focus,
+			&:hover { 
+				background: darken($primary-color, 15%);
+			}
+
+		}
+
+		/* secondary button */
+
+		&.secondary {
+			background: $secondary-color;
+			color: #FFF;
+
+			&:active,
+			&:focus,
+			&:hover {
+				background: darken($secondary-color, 15%);
+			}
+
+		}
+
+	}
+
+	/* style for tags */
+
+	&[rel="tag"] {
+		@include border-radius(5px);
+		background: #CCC;
+		color: $text-color;
+		display: inline-block;
+		font-size: 12px !important;
+		line-height: 25px;
+		margin: 0 10px 10px 0;
+		padding: 0 10px;
+		text-decoration: none;
+		text-transform: lowercase;
+
+		&:active,
+		&:focus,
+		&:hover {
+			background: $heading-color;
+			color: #FFF;
+		}
+
+	}
+
+}
+
+/**
+ * @section    Typography
+ * @subsection Paragraphs
+ */
+
+p {
+	margin: 0 0 $line-height 0;
+
+	&.intro {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+}
+
+/**
+ * @section    Typography
+ * @subsection Lists
+ */
+
+ul { 
+	list-style-position: outside;
+	margin: 0 0 $line-height 20px;
+
+	ul {
+		margin: 0 0 0 20px;
+	}
+
+}
+
+ol {
+	list-style-position: outside;
+	list-style-type: decimal;
+	margin: 0 0 $line-height 20px;
+
+	ol {
+		list-style-type: lower-alpha;
+		margin: 0 0 0 20px;
+	}
+
+}
+
+/**
+ * @section    Typography
+ * @subsection Tables
+ */
+
+table { 
+	border: 1px solid $border-color;
+	border-collapse: collapse;
+	border-spacing: 0;	
+	margin: 0 0 $line-height 0;
+	width: 100%;
+
+	tr { 
+		border-bottom: 1px solid $border-color;
+		border-right: 1px solid $border-color;
+
+		&:nth-child(even) {
+			background: $light-background;
+		}
+
+		td,
+		th { 
+			border-right: 1px solid $border-color;
+			padding: 5px 10px;
+			text-align: left;
+		}
+
+		th { 
+			font-weight: bold;
+		}
+
+	}
+
+	thead tr {
+		background: $light-background;
+	}
+
+}
+
+/**
+ * @section    Typography
+ * @subsection Quotes
+ */
+
+blockquote {
+	color: $text-light;
+	display: inline-block;
+	font-size: 16px;
+	font-style: italic;
+	margin-bottom: $line-height;
+	text-align: center;
+
+	&:before {
+		content: "\201C";
+		display: inline;
+	}
+
+	&:after {
+		content: "\201D";
+		display: inline;
+	}
+
+	p {
+		display: inline;
+		margin: 0;
+	}
+
+}
+
+cite {
+	color: $text-color;
+	display: block;
+	font-style: normal;
+	font-weight: bold;
+	margin: 5px 0 10px 0; 
+
+	a {
+		color: $text-color;
+	}
+
+}
+
+/**
+ * @section    Typography
+ * @subsection Code snippets
+ */
+
+code,
+pre {
+	background: #FFFFB3;
+	color: #000;
+}
+	
+pre {
+	margin-bottom: 20px; 
+	padding: 20px; 
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+}
+
+/* abbreviations */
+
+abbr,
+acronym {
+	border-bottom: 1px dotted $text-color;
+	cursor: help;
+
+	&:active,
+	&:focus,
+	&:hover {
+		border-bottom-style: solid;
+	}
+
+}
+
+/**
+ * @section    Typography
+ * @subsection Subscripts and superscripts
+ */
+
+sub,
+sup {
+	font-size: 10px;
+}
+
+sub {
+	vertical-align: sub;
+}
+
+sup {
+	vertical-align: super;
+}
+
+/**
+ * @section    Typography
+ * @subsection Deleted and inserted text 
+ */
+
+del {
+	color: $text-light;
+	text-decoration: line-through;
+}
+
+ins {
+	text-decoration: none;
+}
+
+/**
+ * @section    Typography
+ * @subsection Selection 
+ */
+
+::-moz-selection,
+::selection {
+	background-color: $primary-color;
+	color: #FFF;
+}
+
+/**
+ * @section    Typography
+ * @subsection Other
+ */
+
+strong,
+b {
+	font-weight: bold;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid $border-color;
+	display: block;
+	height: 1px;
+	margin: 0 0 $line-height 0;
+	padding: 0;
+}
+
+.telephone {
+	color: $heading-color;
+	font-size: 24px;
+	font-weight: bold;
+
+	&:before {
+		content: "\f095";
+		font-family: FontAwesome;
+		font-size: 30px;
+		display: inline-block;
+		margin: 0 7px 0 0;
+		position: relative;
+		top: 4px;
+	}
+
+	a[href^=tel] {
+		color: $heading-color;
+		text-decoration: none;
+	}
+
+}

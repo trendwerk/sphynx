@@ -4,7 +4,7 @@
 
 	<div class="container-inner">	
 	
-		<section id="content" class="eightcol">
+		<section id="content">
 		
 			<?php if( is_category() ) { ?>
 			
@@ -38,31 +38,28 @@
 
 				<?php while( have_posts() ) : the_post(); ?>
 			
-					<article <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
+					<article <?php post_class(); ?>>
 					
-						<h2 class="article-title" itemprop="headline">
+						<h2 class="article-title">
 							<a href="<?php the_permalink(); ?>">
 								<?php the_title(); ?>
 							</a>
 						</h2>
 						
 						<p class="article-meta">
-							<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>" itemprop="dateCreated"><?php echo get_the_date(); ?></time>
-							<span itemprop="author"><?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?></span> <?php _e( 'in the category', 'tp' ) ?> <span itemprop="genre"><?php the_category( ', ' ) ?></span>
+							<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time>
+							<?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?> 
+							<?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
 						</p>
 						
 						<a class="article-thumbnail" href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail( 'thumbnail', array( 'itemprop' => 'thumbnailUrl' ) ); ?>
+							<?php the_post_thumbnail( 'thumbnail' ); ?>
 						</a>
 						
-						<p class="article-content" itemprop="description">
-
-							<?php tp_the_excerpt( 80 ); ?>
-
-							<a class="more-link" href="<?php the_permalink(); ?>"><?php _e( 'Read&nbsp;more', 'tp' ); ?></a>
-							
+						<p class="article-content">
+							<?php the_content( __( 'Read more', 'tp' ) ); ?>
 						</p>
-						
+
 					</article>
 				
 				<?php endwhile; ?>
@@ -79,7 +76,7 @@
 			
 		</section><!-- #content -->	
 				
-		<aside class="sidebar fourcol">
+		<aside class="sidebar">
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		

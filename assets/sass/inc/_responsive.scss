@@ -1,0 +1,524 @@
+/**
+ * @section Responsive
+ *
+ * Defines responsive layout
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ *
+ */
+
+/**
+ * @section    Responsive
+ * @subsection Large desktops
+ */
+
+@media (min-width: 1200px) {
+
+	.widget_search input[type="text"] {
+		width: 248px;
+	}
+
+}
+
+/**
+ * @section    Responsive
+ * @subsection Tablets
+ */
+
+@media (max-width: 980px) {
+
+	#header {
+		padding: $line-height 0;
+
+		#topnav,
+		#search,
+		#logo {
+			clear: none;
+			margin-right: 0;
+			margin-left: 0;
+			width: 50%;
+		}
+
+		#topnav {
+			margin-top: 0;
+		}
+
+		#search {
+			margin-top: $line-height;
+		}
+
+	}
+
+	#main {
+		padding-bottom: 0;
+		
+		#content {
+			padding-bottom: $line-height;
+			padding-right: 0;
+	}
+
+	.sidebar {
+		margin: 0 0 $line-height 0;
+		width: 100%;
+
+			.widget {
+				clear: none;
+				margin-bottom: 30px;
+				padding: 30px;
+				width: 48%;
+
+				&:nth-child(odd) {
+					clear: left;
+					margin-right: 2%;
+				}
+
+				&:nth-child(even) {
+					margin-left: 2%;
+				}
+
+			}
+		
+		}
+
+	}
+
+	#footer {
+
+		.sidebar {
+
+			.widget {
+				clear: none;
+				margin-bottom: 30px;
+				width: 48%;
+
+					&:nth-child(odd) {
+						clear: left;
+						margin-right: 2%;
+					}
+
+					&:nth-child(even) {
+						margin-left: 2%;
+					}
+
+			}
+
+		}
+
+	}
+
+}
+
+/**
+ * @section    Responsive
+ * @subsection Mobile
+ */
+
+ @media (max-width: 640px) {
+
+	h1 {
+		font-size: 24px;
+	}
+
+	h2 {
+		font-size: 20px; 
+	}
+
+	h3 {
+		font-size: 18px;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+
+	h5 {
+		font-size: 14px;
+	}
+
+	h6 {
+		font-size: 12px;
+	}	
+ 			
+ 	#header {
+ 		padding: 5px;
+
+ 		/* logo, sitename and description */
+
+		#logo {
+			width: 100%;
+
+			#sitename {
+				font-size: 18px;
+			}
+
+			#description {
+				font-size: 12px;
+			}
+
+		}
+
+		/* mobile navigation and mobile search toggle buttons */
+
+		#mobile {
+			display: block;
+			position: absolute;
+			margin: 0;
+			right: 30px;
+			top: 20px;
+
+			#mobile-navigation, 
+			#mobile-search {
+				@include border-radius(3px);
+				background-color: $secondary-color;
+				color: #FFF;
+				cursor: pointer;
+				float: left;
+				font-size: 16px;
+				height: 30px;
+				line-height: 30px;
+				margin-left: 10px;
+				text-align: center;
+				width: 30px;
+
+				&.active,
+				&:hover {
+					background-color: $primary-color;
+				}
+
+			}
+
+		}
+
+		/* top navigation */
+
+ 		#topnav {
+ 			display: none;
+ 		}
+
+		/* search form */
+				
+		#search {
+			@include border-box;
+			@include border-radius(3px);
+			background: $footer-background;
+			display: none;
+			padding: 10px;
+			width: 100%;
+			
+			form {
+				margin: 0;
+				width: 100%;
+
+				fieldset { 
+
+					input[type="text"] { 
+						@include border-box;
+						font-size: 16px;
+						border: none;
+						width: 100%;
+					}
+
+					input[type="submit"] {
+						margin-top: 2px;
+						font-size: 20px;
+					}
+
+				}
+					
+			}
+		
+		}
+
+	}
+
+	/* main navigation */
+
+	#main-navigation {
+		display: none;
+		margin-bottom: 0;
+		padding: 10px 0;
+
+		ul.menu {
+
+			li {
+
+				/* if item has children, hide indicator */
+
+				&.page_item_has_children > a:after,
+				&.has-children > a:after {
+					display: none !important;
+				}
+
+				&.current-menu-item,
+				&.current-menu-parent,
+				&.current-menu-ancestor {
+					background-color: transparent;
+				}
+
+			}
+
+			/* first level only */
+
+			> li {
+				margin: 0;
+				width: 100%;
+
+				&:active, 
+				&:focus,
+				&:hover {
+					background-color: transparent;
+				}
+
+				> a {
+					font-size: 16px;
+					padding: 0;
+				}
+
+			}
+
+			/* second level */
+
+			ul.sub-menu {
+				@include border-box;
+				border: 1px solid #FFF;
+				clear: both;
+				display: block;
+				float: left;
+				margin: 10px 0;
+				padding: 10px;
+				position: relative;
+				width: 100%;
+
+				li {
+
+					a {
+						background-color: transparent;
+						font-size: 14px;
+					}				
+
+					/* third level */
+
+					ul {
+						border: none;
+						left: 0;
+						margin: 0;
+						padding: 0 20px;
+
+						a {
+							font-size: 12px;
+
+							&:before {
+								content: "- ";
+							}
+
+						}
+
+					}				
+
+				}
+
+			}	
+
+		}	
+
+	}	
+
+	#breadcrumbs {
+		display: none;
+	}
+
+	#main {
+		border-top: 1px solid $border-color;
+		margin-top: 0;
+		padding: 30px 0;
+
+		.sidebar {
+			
+			.widget {
+				margin: 0 0 20px 0;
+				width: 100%;
+
+				&:nth-child(odd) {
+					margin-right: 0;
+				}
+
+				&:nth-child(even) {
+					margin-left: 0;
+				}
+
+			}
+
+		}
+
+		#content {
+
+			#page-title {
+				margin-bottom: $line-height;
+			}
+		
+			.gform_wrapper form {
+
+				.gform_body .gform_fields .gfield {
+					margin-bottom: 20px;
+
+					.gfield_description,
+					.instruction {
+						margin-left: 0;
+						width: 100%;
+					}
+
+					.gfield_label {
+						clear: both;
+						float: left;
+						margin-bottom: 10px;
+						width: 100%;
+					}
+
+					.ginput_complex,
+					.clear-multi,
+					.ginput_list,
+					.medium,
+					.large,
+					.small {
+						width: 100%;
+					}
+
+					.ginput_list .gfield_list td.gfield_list_icons{
+						left: 52%;
+					}
+
+				}	
+
+				.ginput_preview {
+					margin-left: 0;
+				}
+
+				.gform_footer {
+					
+					.gform_button {
+						margin: 0;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	#footer {
+
+		.sidebar {
+			
+			.widget {
+				margin: 0 0 20px 0;
+				width: 100%;
+
+				&:nth-child(odd) {
+					margin-right: 0;
+				}
+
+				&:nth-child(even) {
+					margin-left: 0;
+				}
+
+			}
+
+		}
+
+		#credits {
+			padding-bottom: $line-height;
+			
+			#copyright,
+			#footernav {
+				text-align: center;
+				width: 100%;
+
+				ul {
+					margin: 0;
+				}
+
+				ul li a {
+					float: none;
+				}
+
+			}
+
+		}
+
+	}
+
+	.home {
+
+		#main {
+			border-top: 0;
+		}
+
+		#sub-header {
+			padding: 40px 0 50px 0;
+
+			h1 {
+				font-size: 24px;
+				margin-bottom: 11px;
+			}
+
+			h2 {
+				font-size: 20px;
+			}
+
+		}
+
+	}
+
+}
+
+/**
+ * @section    Responsive
+ * @subsection Small mobile
+ */
+
+@media(max-width: 440px) {
+
+	#content .gform_wrapper form .gform_body .gform_fields .gfield {
+
+		.ginput_complex,
+		.clear-multi,
+		.ginput_list {
+			width: 100%;
+
+			input[type="text"],
+			select {
+				width: 100% !important;
+			}
+
+			label {
+				padding-left: 0 !important;
+				width: 100%;
+			}
+
+		}
+		
+		.ginput_list .gfield_list td.gfield_list_icons{
+			left: auto !important;
+			right: 20px;
+		}
+
+		.clear-multi {
+
+			input {
+				margin-bottom: 0 !important;
+			}
+
+			label {
+				margin-bottom: 10px !important;
+			}
+
+		}
+
+	}
+
+}

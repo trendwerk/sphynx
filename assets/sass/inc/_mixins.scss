@@ -1,0 +1,254 @@
+/**
+ * @section Mixins
+ *
+ * Mixins allow you to embed all the properties of a class into another class 
+ * by simply including the class name as one of its properties. It’s just like 
+ * variables, but for whole classes. Mixins can also behave like functions, 
+ * and take arguments.
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+
+/**
+ * @section 	Mixins
+ * @subsection Animate 
+ */
+
+@mixin animate-this($what: all, $time: 0.5s, $ease: ease-in-out) {
+	-webkit-transition: $what $time $ease;
+	-moz-transition: $what $time $ease;
+	-o-transition: $what $time $ease;
+	-ms-transition: $what $time $ease;
+	transition: $what $time $ease;
+}
+
+/**
+ * @section    Mixins
+ * @subsection Border radius (single)
+ */
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+/**
+ * @section    Mixins
+ * @subsection Border radiusses (multiple)
+ */
+
+@mixin border-radiuses ($topright, $bottomright, $bottomleft, $topleft) {
+	-webkit-border-top-right-radius: $topright;
+	-webkit-border-bottom-right-radius: $bottomright;
+	-webkit-border-bottom-left-radius: $bottomleft;
+	-webkit-border-top-left-radius: $topleft;
+	-moz-border-radius-topright: $topright;
+	-moz-border-radius-bottomright: $bottomright;
+	-moz-border-radius-bottomleft: $bottomleft;
+	-moz-border-radius-topleft: $topleft;
+	border-top-right-radius: $topright;
+	border-bottom-right-radius: $bottomright;
+	border-bottom-left-radius: $bottomleft;
+	border-top-left-radius: $topleft;
+}
+
+/**
+ * @section    Mixins
+ * @subsection Border-box
+ */
+
+@mixin border-box {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/**
+ * @section    Mixins
+ * @subsection Box-shadow
+ */
+
+@mixin box-shadow ($shadow) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+/**
+ * @section    Mixins
+ * @subsection Collumns
+ */
+
+@mixin columns($number, $gap) {
+	-moz-column-count: $number;
+	-webkit-column-count: $number;
+	column-count: $number;
+	-moz-column-gap: $gap;
+	-webkit-column-gap: $gap;
+	column-gap: $gap;
+}
+
+/** 
+ * @section    Mixins
+ * @subsection Elipsis
+ */
+
+@mixin elipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/**
+ * @section    Mixins
+ * @subsection Font Awesome
+ * 
+ * website: http://fontawesome.io/icons/
+ * cheatsheet: http://fortawesome.github.io/Font-Awesome/cheatsheet/
+ */
+
+@mixin font-awesome-before($glyph) {
+	position: relative;
+
+	&:before {
+		content: $glyph;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: inherit;
+	}
+
+}
+
+@mixin font-awesome-after($glyph) {
+	position: relative;
+
+	&:after {
+		content: $glyph;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: inherit;
+	}
+
+}
+
+/**
+ * @section    Mixins
+ * @subsection Horizontal gradient
+ */
+
+@mixin horizontal-gradient ($startColor, $endColor) {
+ 	background-color: $startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+	background-image: -webkit-linear-gradient(left, $startColor, $endColor);
+	background-image: -moz-linear-gradient(left, $startColor, $endColor);
+	background-image: -ms-linear-gradient(left, $startColor, $endColor);
+	background-image: -o-linear-gradient(left, $startColor, $endColor);
+}
+
+/**
+ * @section    Mixins
+ * @subsection Opacity
+ */
+
+@mixin opacity($trans) {
+	filter: alpha(opactiy=($trans * 100));
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+	-moz-opacity: $trans;
+	-khtml-opacity: $trans;
+	opacity: $trans;
+}
+
+/**
+ * @section    Mixins
+ * @subsection Placeholder
+ */
+
+@mixin placeholder($out, $on) {
+	
+	&:-moz-placeholder {
+		color: $out; 
+	}
+
+	&::-moz-placeholder {
+		color: $out; 
+	}
+
+	&:-ms-input-placeholder {
+		color: $out; 
+	}
+
+	&::-webkit-input-placeholder {
+		color: $out; 
+	}
+	
+		&:focus:-moz-placeholder {
+			color: $on; 
+		}
+
+		&:focus::-moz-placeholder {
+			color: $on;
+		}
+
+		&:focus:-ms-input-placeholder {
+			color: $on; 
+		}
+
+		&:focus::-webkit-input-placeholder {
+			color: $on; 
+		}
+
+}
+
+/**
+ * @section    Mixins
+ * @subsection User select
+ */
+
+@mixin user-select-none {
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+/**
+ * @section    Mixins
+ * @subsection Sprites
+ */
+
+@mixin sprite($top, $left) {
+	background-image: url('assets/img/sprite-x1.png');
+	background-repeat: no-repeat;
+	background-position: $top $left;
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
+	only screen and (min--moz-device-pixel-ratio: 2),
+	only screen and (-o-min-device-pixel-ratio: 2/1),
+	only screen and (min-device-pixel-ratio: 2) {
+		background-image: url('assets/img/sprite-x2.png');
+		background-position: $top x 2 $left x 2;
+		background-size: 500px 500px;
+	}
+	
+}
+
+/**
+ * @section    Mixins
+ * @subsection Vertical gradient
+ */
+
+@mixin vertical-gradient ($startColor, $endColor) {
+	background-color: $startColor;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+	background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+	background-image: -moz-linear-gradient(top, $startColor, $endColor);
+	background-image: -ms-linear-gradient(top, $startColor, $endColor);
+	background-image: -o-linear-gradient(top, $startColor, $endColor);
+}

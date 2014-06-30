@@ -16,73 +16,91 @@
  */
 
 .widget {
-	.border-box;
-	.border-radius(3px);
-	background: @light-background;
+	@include border-box;
+	background: $light-background;
 	clear: both;
 	float: left;
-	font-size: 13px;
-	margin: 0 0 15px 0;
-	padding: 20px;
+	margin: 0 0 $line-height * 2 0;
+	padding: 40px;
 	width: 100%;
 
-	.widgettitle { 	
-		margin: 0 0 20px 0;
+	.widgettitle {
+		margin: 0 0 $line-height 0;
 		
-		a { 
-			color: @heading-color;
+		a {
+			color: $heading-color;
 			text-decoration: none;
 			
 			&:active,
 			&:focus,
-			&:hover { 
-				color: @link-color;
-				text-decoration: underline; 
+			&:hover {
+				color: $link-color;
+				text-decoration: underline;
 			}
-			
-		 }
-	
+
+		}
+
+	}
+
+	a {
+		
+		&.cta {
+			margin-bottom: 0;
+		}
+		
 	}
 
 	p {
-		margin: 0 0 15px 0;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
 	}
 	
 	ul {
-		border-bottom: 1px solid @border-color;
-		margin: 0 0 10px 0;
+		border-bottom: 1px solid $border-color;
+		margin: 0 0 $line-height 0;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 		
-		li { 
-			border-top: 1px solid @border-color;
+		li {
+			border-top: 1px solid $border-color;
 			display: block;
-			line-height: 24px;
-			padding: 5px;
+			padding: 10px 5px;
 			
-			a { 
-				color: @text-color;
+			a {
+				color: $text-color;
+				text-decoration: underline;
 				
+				&:active,
+				&:focus,
 				&:hover {
-					color: @link-color;
+					color: $link-color;
 				}
 			 }
 
-			&.current > a { 
+			&.current_page_item > a,
+			&.current-cat > a,
+			&.current > a {
 				font-weight: bold;
 			}			 
-			 
-			 ul {
-			 	border: none;
-			 	margin: 0 0 0 20px;
-
-			 	li {
-			 		border: none;
-			 		margin-left: 15px;
-			 	}
-			 	
-			}
 			
+			ul {
+				border: none;
+				margin: 0 0 0 20px;
+
+				li {
+					border: none;
+					margin-left: 20px;
+				}
+				
+			}
+
 		}
-		
+
 	}
 
 }
@@ -99,7 +117,7 @@
 
 	span.label { 
 		display: inline-block;
-		width: 80px;
+		width: 90px;
 	}
 	
 }
@@ -131,17 +149,18 @@
 				text-decoration: none;
 
 				i { 
-					background: @text-color;
+					@include border-radius(999999px);
+					background: $text-light;
 					color: #fff;
 					display: block;
-					font-size: 20px;
+					font-size: 14px;
 					float: left;
-					height: 20px;
-					margin: 0 10px 0 0;
-					padding: 6px;
+					height: 30px;
+					line-height: 30px;
+					margin: 0 5px 0 0;
 					text-align: center;
 					text-decoration: none;
-					width: 20px;
+					width: 30px;
 				}
 
 				span.title { 
@@ -161,45 +180,46 @@
 			/* rollover colors */
 
 			&.twitter a:hover i {
-				background: #00aced;
+				background: #00ACED;
 			}
 
 			&.facebook a:hover i {
-				background: #3b5998;
+				background: #3B5998;
 			}
 
 			&.linkedin a:hover i {
-				background: #007bb6;
+				background: #007BB6;
 			}
 
 			&.googleplus a:hover i {
-				background: #dd4b39;
+				background: #DD4b39;
 			}
 
 			&.youtube a:hover i {
-				background: #bb0000;
+				background: #BB0000;
 			}
 
 			&.email a:hover i {
-				background: @primary-color;
+				background: $primary-color;
 			}
 
 			&.rss a:hover i {
-				background: #ff6600;
+				background: #FF6600;
 			}
 
 		}
 		
 		/* small icons with text */
 
-		&.small-icons,
-		&.small-icons-text {
+		&.small-icons-text,
+		&.small-icons {
 
 			li a {
 				margin: 0 0 5px 0;
 
 				i { 
 					font-size: 14px;
+					line-height: 14px;
 					height: 14px;
 					padding: 4px;
 					width: 14px;
@@ -280,20 +300,22 @@
 	.tagcloud {
 	
 		a {
-			.border-radius(3px);
-			background: #fff;
-			border: 1px solid @link-color;
-			color: @link-color;
+			@include border-radius(5px);
+			background: #CCC;
+			color: $text-color;
 			display: inline-block;
 			font-size: 12px !important;
 			line-height: 25px;
-			margin: 0 3px 5px 0;
+			margin: 0 10px 10px 0;
 			padding: 0 10px;
 			text-decoration: none;
+			text-transform: lowercase;
 			
+			&:active,
+			&:focus,
 			&:hover {
-				background: @link-color;
-				color: #fff;
+				background: $heading-color;
+				color: #FFF;
 			}
 			
 		}
@@ -388,22 +410,24 @@
 			padding: 15px 0; 
 
 			a.rsswidget { 
-				color: @heading-color;
+				color: $heading-color;
 				font-size: 16px;
 				font-weight: bold;
 				line-height: 25px;
 				margin: 0;
 				text-decoration: none;
 
+				&:active,
+				&:focus,
 				&:hover {
-					color: @link-color;
+					color: $link-color;
 					text-decoration: underline;
 				}
 
 			}
 
 			span.rss-date { 
-				color: @text-light; 
+				color: $text-light; 
 				display: block;
 				margin: 0 0 10px 0;
 			}

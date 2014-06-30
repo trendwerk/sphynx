@@ -82,7 +82,7 @@ video {
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	vertical-align: baseline; 
+	vertical-align: baseline;
 }
 	
 table,
@@ -97,7 +97,7 @@ td {
 	margin: 0;
 	outline: 0;
 	padding: 0;
-	vertical-align: baseline; 
+	vertical-align: baseline;
 }	
 
 body {
@@ -131,8 +131,8 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none; 
+	content: '';
+	content: none; 
 }
 
 input,
@@ -154,7 +154,7 @@ textarea:focus,
 button:focus,
 select:focus,
 input:focus {
-	.box-shadow(0);
+	@include box-shadow(0);
 	z-index: 1;
 }
 
@@ -169,7 +169,7 @@ textarea:invalid,
 button:invalid,
 select:invalid,
 input:invalid {
-	.box-shadow(0);
+	@include box-shadow(0);
 }
 
 input[type="submit"],
@@ -177,27 +177,25 @@ input[type="button"],
 input[type="reset"],
 a.button,
 button {
-	.border-radius(4px);
-	.padding-box
-	.vertical-gradient(@primary-color, darken(@primary-color, 5%));
+	@include border-radius(4px);
+	@include vertical-gradient($primary-color, darken($primary-color, 5%));
 	cursor: pointer;
 	outline: 0;
 	overflow: visible;
 	margin: 0;
- 	min-width: 0;
- 	position: relative;
+	min-width: 0;
+	position: relative;
 	text-decoration: none;
 	vertical-align: top;
 	width: auto;
 
 	&:hover {
-		.vertical-gradient(lighten(@primary-color, 5%), @primary-color);
 		text-decoration: none;
 	}
 
-	&:focus,
-	&:active {
-		.box-shadow(0);
+	&:active,
+	&:focus {
+		@include box-shadow(0);
 	}
 
 }
@@ -226,14 +224,14 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select {
-	.border-box;
-	.padding-box;
+	@include border-box;
 	text-align: left;
-	vertical-align: top;	
+	vertical-align: top;
 	-webkit-appearance: none;
 }
 
 textarea {
+	line-height: 24px;
 	min-height: 40px;
 	overflow: auto;
 	resize: vertical;
@@ -241,8 +239,8 @@ textarea {
 }
 
 optgroup {
-	color: @text-color;
-	font-family: @text-font;
+	color: $text-color;
+	font-family: $text-font;
 	font-style: normal;
 	font-weight: normal;
 }
@@ -277,8 +275,8 @@ a.button_disabled,
 button[disabled],
 select[disabled],
 input[disabled] {
-	.box-shadow(0);
-	.user-select-none;
+	@include box-shadow(0);
+	@include user-select-none;
 	color: #888;
 	cursor: default;
 }
@@ -296,9 +294,9 @@ select {
 	background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
 	background-repeat: no-repeat;
 	background-position: right center;
-    text-indent: 0.01px;
-    text-overflow: '';
-    -moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	-moz-appearance: none;
 }
 
 select[multiple],
@@ -313,14 +311,14 @@ select[size="1"] {
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
-	
+
 	select[multiple][size],
 	select[multiple],
 	select[size] {
 		background-image: none;
 		padding-right: 3px;
 	}
-	
+
 	select[size="0"],
 	select[size="1"],
 	select {
@@ -331,33 +329,24 @@ select[size="1"] {
 	}
 
 	::-webkit-validation-bubble-message {
-		.box-shadow(none);
-		background-color: @primary-color;
+		@include box-shadow(none);
+		background-color: $primary-color;
 		border: none;
 		color: #FFF;
-		font-family: @text-font;
+		font-family: $text-font;
 		font-size: 14px;
 		min-height: 16px;
 		overflow: hidden;
 		padding: 15px 15px 17px;
-		text-shadow: 0 1px 0 darken(@primary-color, 10%);
+		text-shadow: 0 1px 0 shade($primary-color, 10%);
 	}
 
 	::-webkit-validation-bubble-arrow,
 	::-webkit-validation-bubble-top-outer-arrow,
 	::-webkit-validation-bubble-top-inner-arrow {
-		.box-shadow(none);
+		@include box-shadow(none);
 		background: #666;
 		border-color: #666;
 	}
 
-}
-
-/**
- * @section    Reset
- * @subsection Fix for resize bug image IE7
- */
-
-.ie7 img {
-	-ms-interpolation-mode: bicubic;
 }

@@ -4,7 +4,7 @@
 
 	<div class="container-inner">
 	
-		<article id="content" class="twelvecol">
+		<article id="content">
 		
 			<h1 id="page-title">
 				<?php _e( 'The page you are looking for doesn\'t exist.', 'tp' ); ?>

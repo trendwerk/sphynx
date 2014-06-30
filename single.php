@@ -4,29 +4,33 @@
 
 	<div class="container-inner">
 	
-		<article id="content" class="eightcol" itemscope itemtype="NewsArticle">
+		<article id="content">
 		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				
-				<h1 id="article-title" itemprop="headline">
+				<h1 id="article-title">
 					<?php the_title(); ?>
 				</h1>
 				
 				<p class="article-meta">
-					<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>" itemprop="dateCreated"><?php echo get_the_date(); ?></time>
-					<span itemprop="author"><?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?></span> <?php _e( 'in the category', 'tp' ) ?> <span itemprop="genre"><?php the_category( ', ' ) ?></span>
+					<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time>
+					<?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?> 
+					<?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
 				</p>
 				
-				<div class="article-content" itemprop="text">
+				<div class="article-content">
+
 					<div class="article-thumbnail">
-						<?php the_post_thumbnail( 'medium', array( 'itemprop' => 'thumbnailUrl' ) ); ?>
+						<?php the_post_thumbnail( 'medium' ); ?>
 					</div>
+
 					<?php the_content(); ?>
+					
 				</div>
 				
 				<?php get_template_part( 'part', 'share' ); ?>
 
-				<p class="article-meta">
+				<p class="tags">
 					<?php the_tags( 'Tags: ', '' ); ?>
 				</p>
 								
@@ -42,7 +46,7 @@
 			
 		</article>
 		
-		<aside class="sidebar fourcol">
+		<aside class="sidebar">
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		

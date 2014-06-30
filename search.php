@@ -3,12 +3,8 @@
 <section id="main" class="container">
 
 	<div class="container-inner">
-
-		<aside class="sidebar fourcol">
-			<?php dynamic_sidebar( 'page' ); ?>
-		</aside>
 	
-		<section id="content" class="eightcol">
+		<section id="content">
 
 			<h1 id="page-title">
 				<?php printf( __( 'Search Results for: %1$s', 'tp' ), '<strong>' . get_search_query() . '</strong>' ); ?>
@@ -55,6 +51,10 @@
 			<?php endif; ?>	   
 			 
 		</section>
+
+		<aside class="sidebar">
+			<?php dynamic_sidebar( 'page' ); ?>
+		</aside>		
 				
 	</div><!-- .container-inner -->
 	
