@@ -8,8 +8,6 @@
 class TP_Editor {
 	function __construct() {
 		add_filter( 'tiny_mce_before_init', array( $this, 'edit' ), 1 );
-
-		add_editor_style( 'assets/sass/output/editor.css' );
 	}
 
 	/**
