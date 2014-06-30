@@ -31,6 +31,6 @@ class TP_Libraries {
 	 */
 	function admin_enqueue() {
 		//Styles
-		wp_enqueue_style( 'trendpress-admin', get_template_directory_uri() . '/assets/less/admin.less' );
+		wp_enqueue_style( 'trendpress-admin', get_template_directory_uri() . '/assets/sass/admin.css' );
 	}
 } new TP_Libraries;

@@ -39,7 +39,7 @@ function tp_pagination( $args = null ) {
 	}
 	
 	if( 1 < $pages ) {
-		$output = '<nav id="pagination" itemscope itemtype="http://schema.org/SiteNavigationElement/"><ul>';
+		$output = '<nav id="pagination"><ul>';
 		
 		$ellipsis = '<li class="gap">&hellip;</li>';
 

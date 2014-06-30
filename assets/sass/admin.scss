@@ -23,7 +23,8 @@
 		margin: 0;
 		width: 88%;
 
-		&::-webkit-input-placeholder { 
+		&::-webkit-input-placeholder {
+
 			&:before {
 				content: "\f179";
 				float: left;
@@ -31,7 +32,9 @@
 				line-height: 22px;
 				margin: 4px 5px 0px 2px;
 			}
+
 		}
+
 	}
 
 	input#tp-redirects-add {
@@ -41,7 +44,9 @@
 	}
 
 	.tp-redirects-table {
+
 		tr.editing {
+
 			td.source {
 				input.widefat {
 					width: 95%;
@@ -50,21 +55,27 @@
 				&:after {
 					margin-top: 5px;
 				}
+
 			}
 
 			td.actions {
+
 				a {
 					margin-top: 3px;
 				}
+
 			}
+
 		}
 
 		td.source {
+
 			&:after {
 				float: right;
 				font-family: "dashicons";
 				content: "\f344";
 			}
+
 		}
 
 		td.actions {
@@ -81,7 +92,7 @@
 			display: none;
 
 			td {
-				border-top: 1px solid #ececec;
+				border-top: 1px solid #ECECEC;
 				font-size: 14px;
 				padding: 10px 0px;
 				text-align: center;
@@ -91,7 +102,9 @@
 					float: none;
 					vertical-align: -2px;
 				}
+
 			}
+
 		}
 
 	}
