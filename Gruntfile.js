@@ -9,6 +9,9 @@ module.exports = function(grunt) {
 		 */
 
 		imageoptim: {
+			options: {
+				quitAfter: true
+			},
 			myTask: {
 				src: ['assets/img']
 			}

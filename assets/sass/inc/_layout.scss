@@ -34,7 +34,7 @@ body {
 
 	#logo {
 		@include column-9;
-		margin-top: 20px;
+		margin-top: 27px;
 
 		#sitename {
 			font: bold 24px $heading-font;
@@ -64,6 +64,7 @@ body {
 			
 	#topnav {
 		@include column-3;
+		margin-top: 3px;
 
 		ul {
 			float: right;
@@ -108,12 +109,12 @@ body {
 
 	#search {
 		@include column-3;
+		margin-top: 2px;
 		margin-bottom: 0;
 
 		form {
 			float: right;
-			margin-right: 20px;
-			width: 200px;
+			width: 240px;
 
 			fieldset {
 				position: relative;
@@ -211,7 +212,7 @@ body {
 			position: relative;
 			display: block;
 			float: left;
-			line-height: 50px;
+			line-height: 60px;
 			padding: 0;
 
 			&:active, 
@@ -225,7 +226,7 @@ body {
 				display: block;
 				font-size: 14px;
 				font-weight: bold;
-				line-height: 50px;
+				line-height: 60px;
 				padding: 0 20px;
 				text-transform: uppercase;
 			}
@@ -330,7 +331,7 @@ body {
 
 #main {
 	background: $body-background;
-	padding: $line-height 0;
+	padding: 60px 0;
 	z-index: 0;
 
 	/* content */

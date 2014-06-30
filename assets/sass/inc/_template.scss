@@ -24,12 +24,12 @@
 	#sub-header {
 		background-color: #CCC;
 		margin-top: 0;
-		padding: $line-height * 4 0 $line-height * 5;
+		padding: 66px 0 81px 0;
 		text-align: center;
 
 		h1 {
 			font-size: 64px;
-			margin-bottom: $line-height * 1.2;
+			margin-bottom: 23px;
 		}
 
 		h2 {
@@ -167,6 +167,20 @@
 	#main #content {
 		@include column-10;
 		margin-bottom: $line-height * 2;
+	}
+
+}
+
+/**
+ * @section    Templates
+ * @subsection single.php
+ */
+
+.page {
+
+	#content {
+		padding-right: 0;
+		padding-left: 20px;
 	}
 
 }

@@ -379,7 +379,21 @@
 	#footer {
 
 		.sidebar {
-			display: none;
+			
+			.widget {
+				margin: 0 0 20px 0;
+				width: 100%;
+
+				&:nth-child(odd) {
+					margin-right: 0;
+				}
+
+				&:nth-child(even) {
+					margin-left: 0;
+				}
+
+			}
+
 		}
 
 		#credits {
