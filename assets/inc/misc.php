@@ -48,6 +48,13 @@ add_filter( 'tiny_mce_before_init', 'tp_add_editor_styles' );
 if ( ! isset( $content_width ) ) {
     $content_width = 740;
 }
+/**
+ * Load editor styles
+ */
+function tp_add_editor_css() {
+    add_editor_style( 'assets/sass/output/editor.css' );
+}
+add_action( 'init', 'tp_add_editor_css' );
 
 /**
  * Set image sizes
