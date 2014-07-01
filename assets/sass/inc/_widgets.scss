@@ -199,8 +199,16 @@
 				background: #BB0000;
 			}
 
-			&.email a:hover i {
-				background: $primary-color;
+			&.email {
+				
+				i {
+					font-size: 12px;
+				}
+
+				a:hover i {
+					background: $primary-color;
+				}
+
 			}
 
 			&.rss a:hover i {

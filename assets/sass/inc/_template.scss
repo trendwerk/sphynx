@@ -15,7 +15,7 @@
  * @subsection front-page.php
  */
 
-.home {
+.home.page {
 
 	#main-navigation {
 		margin-bottom: 0;
@@ -46,6 +46,10 @@
 
 		}
 
+	}
+
+	#content {
+		padding-left: 0;
 	}
 
 }

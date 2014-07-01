@@ -143,6 +143,7 @@
 	}	
  			
  	#header {
+ 		@include border-box;
  		padding: 5px;
 
  		/* logo, sitename and description */
@@ -156,6 +157,8 @@
 
 			#description {
 				font-size: 12px;
+				line-height: 1.5;
+				width: 75%;
 			}
 
 		}
@@ -470,6 +473,14 @@
 				font-size: 20px;
 			}
 
+		}
+
+	}
+
+	.page {
+
+		#content {
+			padding-left: 0;
 		}
 
 	}

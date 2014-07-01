@@ -185,14 +185,21 @@ body {
 
 			/* if item has children, show indicator */
 
-			&.page_item_has_children > a:after,
-			&.has-children > a:after {
-				content: "\f0d7";
-				display: inline-block;
-				font-family: FontAwesome;
-				font-size: 9px;
-				position: absolute;
-				padding-left: 5px;
+			&.page_item_has_children,
+			&.menu-item-has-children,
+			&.has-children {
+				padding-right: 10px;
+
+				> a:after {
+					content: "\f0d7";
+					display: inline-block;
+					font-family: FontAwesome;
+					font-size: 9px;
+					position: absolute;
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+
 			}
 
 			&.current-menu-item,
@@ -236,7 +243,7 @@ body {
 
 		/* second level */
 
-		ul.sub-menu {
+		ul, ul ul {
 			display: none;
 			margin: 0;
 			position: absolute;
@@ -256,7 +263,7 @@ body {
 					display: block;	
 					font-size: 12px;
 					line-height: $line-height;
-					padding: 5px 15px;
+					padding: 7px 20px 0 20px;
 					width: 100%;
 
 					&:active,
@@ -265,7 +272,15 @@ body {
 						text-decoration: underline;
 					}
 
-				}				
+				}
+
+				&:first-child > a { 
+					padding-top: 10px; 
+				}
+
+				&:last-child > a { 
+					padding-bottom: 10px;
+				}		
 	
 				&.page_item_has_children > a,
 				&.has-children > a {
@@ -293,7 +308,12 @@ body {
 				ul {
 					margin-left: 0;
 					left: 100%;
-					margin-top: -35px;
+					margin-top: -45px;
+
+					ul {
+						margin-top: -35px;
+					}
+
 				}				
 
 			}
