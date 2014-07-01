@@ -251,6 +251,7 @@
 				/* if item has children, hide indicator */
 
 				&.page_item_has_children > a:after,
+				&.menu-item-has-children > a:after,
 				&.has-children > a:after {
 					display: none !important;
 				}
@@ -277,6 +278,7 @@
 
 				> a {
 					font-size: 16px;
+					line-height: 40px;
 					padding: 0;
 				}
 
@@ -286,12 +288,11 @@
 
 			ul.sub-menu {
 				@include border-box;
-				border: 1px solid #FFF;
 				clear: both;
 				display: block;
 				float: left;
-				margin: 10px 0;
-				padding: 10px;
+				margin: 0;
+				padding: 0 15px 5px 15px;
 				position: relative;
 				width: 100%;
 
@@ -300,7 +301,22 @@
 					a {
 						background-color: transparent;
 						font-size: 14px;
-					}				
+						line-height: 30px;
+						padding: 0;
+
+						&:before {
+							content: "- ";
+						}
+
+					}
+
+					&:first-child a {
+						padding-top: 0;
+					}		
+
+					&:last-child a {
+						padding-bottom: 0;
+					}
 
 					/* third level */
 
@@ -308,15 +324,10 @@
 						border: none;
 						left: 0;
 						margin: 0;
-						padding: 0 20px;
+						padding: 0 15px;
 
 						a {
 							font-size: 12px;
-
-							&:before {
-								content: "- ";
-							}
-
 						}
 
 					}				
