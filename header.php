@@ -38,7 +38,7 @@
 					</p>
 
 					<p id="description">
-						<?php bloginfo( 'description' ); ?>
+						<?php _e( 'WordPress theme framework for awesome websites', 'tp' ); ?>
 					</p>
 
 				</div>	
