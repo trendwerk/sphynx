@@ -380,6 +380,55 @@
 
 }
 
+
+/**
+ * @section    Parts
+ * @subsection Search
+ */
+
+.search {
+
+	form {
+		width: 230px;
+		
+		fieldset {
+			position: relative;
+
+			input[type="text"] {
+				@include placeholder(#999, $text-color);
+				color: $text-color;
+				font-style: italic;
+				margin: 0;
+				right: 0;
+				width: 100%;
+			}
+
+			input[type="submit"] {
+				background: none;
+				box-shadow: none;
+				color: $text-light;
+				font-size: 13px;
+				margin: 0;
+				padding: 0 12px;
+				position: absolute;
+				right: 0;
+				text-shadow: none;
+				-webkit-font-smoothing: antialiased;
+				
+				&:active,
+				&:focus,
+				&:hover {
+					color: $text-color;
+				}
+
+			}
+
+		}
+		
+	}
+
+}
+
 /**
  * @section    Parts
  * @subsection AddThis
