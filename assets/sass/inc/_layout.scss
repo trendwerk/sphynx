@@ -314,6 +314,33 @@ body {
 
 }
 
+#sub-header {
+	background-color: #CCC;
+	margin-top: 0;
+	padding: 64px 0 81px 0;
+	text-align: center;
+
+	h1 {
+		font-size: 64px;
+		margin-bottom: 20px;
+	}
+
+	h2 {
+		font-size: 36px;
+		font-weight: normal;
+		margin-bottom: 0;
+	}
+
+	p {
+		
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+	}
+
+}
+
 #main {
 	background: $body-background;
 	padding: 60px 0;
@@ -327,6 +354,7 @@ body {
 		padding-right: 20px;
 
 		#page-title {
+			font-size: 36px;
 			margin-bottom: $line-height * 2;
 		}
 
