@@ -32,17 +32,7 @@ function tp_add_editor_styles( $settings ) {
     		'title'    => __( 'More link', 'tp' ),
     		'selector' => 'a',
     		'classes'  => 'more-link',
-    	),
-        array(
-            'title'    => __( 'Intro', 'tp' ),
-            'selector' => 'p',
-            'classes'  => 'intro',
-        ),
-        array(
-            'title'    => __( 'Telephone', 'tp' ),
-            'selector' => 'p',
-            'classes'  => 'telephone',
-        ),       
+    	),   
     );
     $settings['style_formats'] = json_encode( $style_formats );
 

@@ -209,12 +209,6 @@ a {
 
 p {
 	margin: 0 0 $line-height 0;
-
-	&.intro {
-		font-size: 16px;
-		font-weight: bold;
-	}
-
 }
 
 /**
@@ -425,26 +419,4 @@ hr {
 	height: 1px;
 	margin: 0 0 $line-height 0;
 	padding: 0;
-}
-
-.telephone {
-	color: $heading-color;
-	font-size: 24px;
-	font-weight: bold;
-
-	&:before {
-		content: "\f095";
-		font-family: FontAwesome;
-		font-size: 30px;
-		display: inline-block;
-		margin: 0 7px 0 0;
-		position: relative;
-		top: 4px;
-	}
-
-	a[href^=tel] {
-		color: $heading-color;
-		text-decoration: none;
-	}
-
 }
