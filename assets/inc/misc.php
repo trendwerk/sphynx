@@ -21,12 +21,12 @@ function tp_add_editor_styles( $settings ) {
     	array(
     		'title'    => __( 'Primary button', 'tp' ),
     		'selector' => 'a',
-    		'classes'  => 'cta primary',
+    		'classes'  => 'button',
     	),
     	array(
     		'title'    => __( 'Secondary button', 'tp' ),
     		'selector' => 'a',
-    		'classes'  => 'cta secondary',
+    		'classes'  => 'button secondary',
     	),
     	array(
     		'title'    => __( 'More link', 'tp' ),

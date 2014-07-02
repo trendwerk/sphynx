@@ -15,8 +15,8 @@ class TP_Title_Content_Button extends WP_Widget {
 	function setup() {
 		$this->types = array(
 			'more-link'     => __( 'Read more link', 'tp' ),
-			'cta primary'   => __( 'Primary button', 'tp' ),
-			'cta secondary' => __( 'Secondary button', 'tp' ),
+			'button'   => __( 'Primary button', 'tp' ),
+			'button secondary' => __( 'Secondary button', 'tp' ),
 		);
 	}
 

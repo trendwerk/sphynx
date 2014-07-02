@@ -52,7 +52,6 @@ select {
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
-a.button,
 button {
 	@include border-radius(3px);
 	background-color: $primary-color;

@@ -130,8 +130,10 @@ a {
 
 	/* call to action buttons */
 
-	&.cta {
+	&.button {
 		@include border-radius(3px);
+		background: $primary-color;
+		color: #FFF;		
 		display: inline-block;
 		font-weight: bold;
 		height: 50px;
@@ -147,18 +149,10 @@ a {
 			top: 1px;
 		}
 
-		/* primary button */
-
-		&.primary {
-			background: $primary-color;
-			color: #FFF;
-
-			&:active,
-			&:focus,
-			&:hover { 
-				background: darken($primary-color, 15%);
-			}
-
+		&:active,
+		&:focus,
+		&:hover { 
+			background: darken($primary-color, 15%);
 		}
 
 		/* secondary button */

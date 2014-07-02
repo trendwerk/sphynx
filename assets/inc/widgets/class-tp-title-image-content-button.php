@@ -11,8 +11,8 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 
 		$this->types = array(
 			'more-link'     => __( 'Read more link', 'tp' ),
-			'cta primary'   => __( 'Primary button', 'tp' ),
-			'cta secondary' => __( 'Secondary button', 'tp' ),
+			'button'   => __( 'Primary button', 'tp' ),
+			'button secondary' => __( 'Secondary button', 'tp' ),
 		);
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'localize' ), 11 );
