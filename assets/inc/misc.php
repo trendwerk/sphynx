@@ -19,7 +19,7 @@ add_action( 'init', 'tp_add_editor_style' );
 function tp_add_editor_styles( $settings ) {
     $style_formats = array(
     	array(
-    		'title'    => __( 'Primary button', 'tp' ),
+    		'title'    => __( 'Button', 'tp' ),
     		'selector' => 'a',
     		'classes'  => 'button',
     	),

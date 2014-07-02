@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-01 09:27+0100\n"
-"PO-Revision-Date: 2014-07-01 09:28+0100\n"
-"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
+"POT-Creation-Date: 2014-07-02 18:31+0100\n"
+"PO-Revision-Date: 2014-07-02 18:31+0100\n"
+"Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:2c,1\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
@@ -189,13 +189,9 @@ msgstr "Footer navigatie"
 msgid "Sitemap"
 msgstr "Sitemap"
 
-#: ../../assets/inc/misc.php:22
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:18
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:14
-#: ../inc/misc.php:22 ../inc/widgets/class-tp-title-content-button.php:18
-#: ../inc/widgets/class-tp-title-image-content-button.php:14
-msgid "Primary button"
-msgstr "Primaire knop"
+#: ../../assets/inc/misc.php:22 ../inc/misc.php:22
+msgid "Button"
+msgstr "Knop"
 
 #: ../../assets/inc/misc.php:27
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:19
@@ -209,29 +205,19 @@ msgstr "Secondaire knop"
 msgid "More link"
 msgstr "Lees meer link"
 
-#: ../../assets/inc/misc.php:37 ../inc/misc.php:37
-msgid "Intro"
-msgstr "Intro"
-
-#: ../../assets/inc/misc.php:42
-#: ../../assets/inc/widgets/class-tp-contact.php:67 ../inc/misc.php:42
-#: ../inc/widgets/class-tp-contact.php:67
-msgid "Telephone"
-msgstr "Telefoon"
-
-#: ../../assets/inc/misc.php:82 ../inc/misc.php:82
+#: ../../assets/inc/misc.php:72 ../inc/misc.php:72
 msgid "Facebook profile URL"
 msgstr "Facebook profiel URL"
 
-#: ../../assets/inc/misc.php:83 ../inc/misc.php:83
+#: ../../assets/inc/misc.php:73 ../inc/misc.php:73
 msgid "LinkedIn profile URL"
 msgstr "LinkedIn profiel URL"
 
-#: ../../assets/inc/misc.php:84 ../inc/misc.php:84
+#: ../../assets/inc/misc.php:74 ../inc/misc.php:74
 msgid "Google+ profile URL"
 msgstr "Google+ profiel URL"
 
-#: ../../assets/inc/misc.php:85 ../inc/misc.php:85
+#: ../../assets/inc/misc.php:75 ../inc/misc.php:75
 msgid "Twitter @username"
 msgstr "Twitter @gebruikersnaam"
 
@@ -298,6 +284,11 @@ msgstr ""
 #: ../inc/widgets/class-tp-contact.php:64
 msgid "E-mail"
 msgstr "E-mail"
+
+#: ../../assets/inc/widgets/class-tp-contact.php:67
+#: ../inc/widgets/class-tp-contact.php:67
+msgid "Telephone"
+msgstr "Telefoon"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:70
 #: ../inc/widgets/class-tp-contact.php:70
@@ -493,6 +484,13 @@ msgstr "Bewerkbare titel, tekst en knop"
 #: ../inc/widgets/class-tp-title-image-content-button.php:13
 msgid "Read more link"
 msgstr "Lees meer link"
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:18
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:14
+#: ../inc/widgets/class-tp-title-content-button.php:18
+#: ../inc/widgets/class-tp-title-image-content-button.php:14
+msgid "Primary button"
+msgstr "Primaire knop"
 
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:35
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:69
@@ -773,23 +771,23 @@ msgstr "Verrijk"
 msgid "Back to %1$s overview"
 msgstr "Terug naar het %1$s overzicht"
 
-#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:118
-#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:118
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:117
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:117
 msgid "Enriched"
 msgstr "Verrijkt"
 
-#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:120
-#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:120
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:119
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:119
 msgid "Remove enrichment"
 msgstr "Verwijder verrijking"
 
-#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:155
-#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:155
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
 msgid "Show all"
 msgstr "Toon alle"
 
-#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:157
-#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:157
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
 msgid "Only show enriched"
 msgstr "Toon verrijkt"
 
@@ -802,6 +800,9 @@ msgstr "Maak dit bericht sticky"
 #: ../plugins/term-image/class-tp-term-image.php:64
 msgid "or"
 msgstr "of"
+
+#~ msgid "Intro"
+#~ msgstr "Intro"
 
 #~ msgid "Read&nbsp;more"
 #~ msgstr "Lees&nbsp;verder"
