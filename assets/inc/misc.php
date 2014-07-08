@@ -62,6 +62,11 @@ function tp_set_image_sizes() {
 add_action( 'after_switch_theme', 'tp_set_image_sizes' );
 
 /**
+ * Add HTML5 theme support
+ */
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+
+/**
  * Remove AIM, YIM, JABBER and add Facebook and LinkedIn
  */
 function tp_modify_profile( $media ) {

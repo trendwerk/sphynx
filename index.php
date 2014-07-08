@@ -56,9 +56,9 @@
 							<?php the_post_thumbnail( 'thumbnail' ); ?>
 						</a>
 						
-						<p class="article-content">
+						<div class="article-content">
 							<?php the_content( __( 'Read more', 'tp' ) ); ?>
-						</p>
+						</div>
 
 					</article>
 				

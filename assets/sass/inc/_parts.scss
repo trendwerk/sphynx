@@ -138,167 +138,154 @@
 	
 }
 
- /**
-  * @section    Parts
-  * @subsection Comments
-  */
+/**
+ * @section    Parts
+ * @subsection Respond
+ */
 
-#comments { 
+#respond {
+	clear: both;
+	float: left;
+	position: relative;
+	margin: $line-height 0;
+	width: 100%;
+	
+	p {
+		clear: both;
+		float: left;
+		width: 100%;
+		
+		label { 
+			float: left;
+			width: 25%;
+		}
+		
+	}
+	
+	small {
+		font-size: 12px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	
+	textarea { 
+		@include border-box;
+		display: block;
+		height: 200px;
+		margin: 0;
+		width: 75%; 
+	}
+	
+	input[type="submit"],
+	p.form-allowed-tags {
+		float: left;
+		margin-left: 25%;
+		width: auto;
+	}
+
+}
+
+/**
+ * @section    Parts
+ * @subsection Comments
+ */
+
+#comments {
 	clear: both;
 	float: left;
 	margin: $line-height 0;
 	width: 100%;
 
 	ol.commentlist {
+		list-style-type: none;
 		margin: 0;
-		 
+		padding: 0;
+
+		ul.children {
+			list-style-type: none;
+
+			#respond { 
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+		}
+
 		li.comment {
+			font-size: 14px;
+			position: relative;
 
-			.comment-respond {
-				@include border-box;
-				float: left;
-				clear: both;
-				padding: 30px;
-			}
-
-			list-style: none;
-
-			.comment-awaiting-moderation {
-				@include border-box;
-				@include border-radius(3px);
-				background: $alert-yellow;
-				clear: both;
-				color: #FFF;
-				display: block;
-				float: left;
-				font-style: normal;
-				margin-bottom: 20px;
-				padding: 10px 23px;	
-
-				&:before {
-					content: "\f071";
-					display: inline-block;
-					font-family: fontawesome;
-					padding-right: 10px;
-				}
-
-			}
-						
 			.comment-body {
-				border: 1px solid $border-color;
-				margin: 0 0 20px 0;
-				padding: 20px 20px 0 20px;
+				@include border-box;
+				background-color: $light-background;
+				clear: both;
+				float: left;
+				margin-bottom: $line-height;
+				padding-bottom: $line-height;
 				position: relative;
-			
-				.comment-author {
-					height: 80px;
-					
-					.avatar { 
-						@include border-radius(1000px);
-						border: 1px solid $border-color;
-						float: left;
-						margin-right: 20px;
-					}
-					
-					cite { 
-						display: block;
-						float: left;
-						font: 20px $heading-font;
-						font-style: normal;
-						margin: 10px 0;
-					}
-					
-					.says {
-						display: none;
-					}
-				
-				}
+				padding: 30px 30px 50px 30px;
+				width: 100%;
 
 				.comment-meta {
 					clear: both;
-					font-size: 13px;
-					font-style: italic;
-					left: 100px;
-					position: absolute;
-					top: 55px;
-					
-					a {
+					float: left;
+					width: 100%;
+
+					.comment-author {
+						float: left;
+
+						img {
+							@include border-radius(999px);
+							float: left;
+							margin-right: 20px;
+						}
+
+					}
+
+					.comment-metadata {
+						bottom: 30px;
 						color: $text-light;
-						cursor: text;
-						text-decoration: none;
+						font-size: 12px;
+						position: absolute;
+						left: 30px;
+
+						a {
+							font-weight: 700;
+						}
+
 					}
-					
-					.comment-edit-link {
-						display: none;
+
+					.comment-awaiting-moderation {
+						float: right;
+						font-style: italic;
 					}
-					
+
 				}
-				
+
+				.comment-content {
+					@include border-box;
+					float: left;
+					margin-top: -20px;
+					padding-left: 80px;
+					width: 100%;
+				}
+
 				.reply {
+					bottom: 30px;
 					font-size: 12px;
 					position: absolute;
-					right: 20px;
-					top: 20px;
+					right: 30px;
 
-					a {	@include font-awesome-before("\f112  "); }
+					a {	
+						@include font-awesome-before( "\f112  " );
+						font-weight: 700;
+					}
 
 				}
 
-				p {
-					clear: both;
-					display: block;
-				}
-				
 			}
 
-			&.bypostauthor { 
-				background: $light-background;
-			}
-
-		}
-
-	}
-	
-	#respond {
-		clear: both;
-		float: left;
-		position: relative;
-		width: 100%;
-		
-		p {
-			clear: both;
-			float: left;
-			width: 100%;
-			
-			label { 
-				float: left;
-				width: 25%;
-			}
-			
-		}
-		
-		small {
-			font-size: 12px;
-			position: absolute;
-			right: 0;
-			top: 20px;
-		}
-		
-		textarea { 
-			@include border-box;
-			display: block;
-			height: 200px;
-			margin: 0;
-			width: 75%; 
-		}
-		
-		.form-allowed-tags {
-			display: none;
-		}
-		
-		input[type="submit"] {
-			float: left;
-			margin-left: 25%;
 		}
 
 	}
@@ -342,12 +329,12 @@
 			.page,
 			.next {
 				@include border-radius(3px);
-				background-color: $border-color;
-				border: 1px solid $border-color;
+				background-color: $light-background;
+				border: 2px solid $light-background;
 				color: $text-color;
 				display: inline-block;
-				height: 38px;
-				line-height: 38px;
+				height: 36px;
+				line-height: 37px;
 				margin: 0 5px 10px 5px;
 				text-align: center;
 			}
