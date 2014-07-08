@@ -42,7 +42,8 @@
 	text-align: center;
 
 	img { 
-		margin: 5px 5px 0 5px; 
+		@include border-box;
+		padding: 5px; 
 	}
 		
 	.wp-caption-text { 
@@ -59,13 +60,42 @@
  * @subsection  Gallery
  */
 
-.gallery { 
-	padding: 0 0 25px 0;
+.gallery {
+	clear: both;
+	float: left;
+	margin-left: -10px;
+	margin-bottom: $line-height;
+	width: 100%;
 
-	dd.gallery-caption {
-		font-size: 13px;
-		font-style: italic;
-		margin: 0 0 10px 0;
+	figure {
+		@include border-box;
+		float: left;
+		padding: 10px;
+
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+
+		figcaption {
+			background: $light-background;
+			display: block;
+			font-size: 12px;
+			line-height: 20px;
+			padding: 10px 0 5px 0;
+			text-align: center;
+			width: 100%;			
+		}
+
+	}
+
+	&.gallery-columns-3  {
+
+		figure:nth-child(3) {
+			clear: right;
+		}
+
 	}
 
 }
