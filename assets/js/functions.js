@@ -11,7 +11,7 @@ jQuery( function( $ ) {
 	/**
 	 * Open rel="external" in new tab
 	 */
-	$( 'a[rel*="external"]' ).click( function() {
+	$( document ).on( 'click', 'a[rel*="external"]', function() {
 		window.open( $( this ).prop( 'href' ) );
 		return false;
 	} );
