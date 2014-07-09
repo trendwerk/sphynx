@@ -67,6 +67,15 @@ add_action( 'after_switch_theme', 'tp_set_image_sizes' );
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
 /**
+ * Responsive video container
+ */
+function tp_video_embed( $html ) {
+    return '<div class="video-container">' . $html . '</div>';
+}
+
+add_filter( 'embed_oembed_html', 'tp_video_embed' );
+
+/**
  * Remove AIM, YIM, JABBER and add Facebook and LinkedIn
  */
 function tp_modify_profile( $media ) {

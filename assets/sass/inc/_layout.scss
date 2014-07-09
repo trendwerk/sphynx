@@ -34,11 +34,11 @@ body {
 
 	#logo {
 		@include column-9;
-		margin-top: 27px;
+		margin-top: 15px;
 		margin-bottom: 5px;
 
 		#sitename {
-			font: bold 24px $heading-font;
+			font: bold 32px $heading-font;
 			margin: 0;
 
 			a {
@@ -50,7 +50,8 @@ body {
 
 		#description {
 			color: $text-color;
-			margin: 0;
+			font-size: 16px;
+			margin: 0 0 5px 0;
 		}
 
 	}
@@ -124,7 +125,7 @@ body {
 /* main navigation */
 
 #main-navigation {
-	background-color: #999;
+	background-color: $footer-background;
 	margin-bottom: 0;
 	z-index: 1;
 
@@ -170,7 +171,7 @@ body {
 			&.current-menu-item,
 			&.current-menu-parent,
 			&.current-menu-ancestor {
-				background-color: #666;
+				background-color: #222;
 			}
 
 			a {
@@ -191,7 +192,7 @@ body {
 			&:active, 
 			&:focus,
 			&:hover {
-				background-color: #666;
+				background-color: #222;
 			}
 
 			> a {
@@ -223,7 +224,7 @@ body {
 
 				a {
 					@include border-box;
-					background: #666;
+					background: #222;
 					color: #FFF;
 					display: block;	
 					font-size: 12px;
@@ -327,13 +328,14 @@ body {
 
 	h1 {
 		font-size: 64px;
-		margin-bottom: 20px;
+		margin-bottom: 5px;
 	}
 
 	h2 {
 		font-size: 36px;
 		font-weight: normal;
-		margin-bottom: 0;
+		margin-top: 6px;
+		margin-bottom: 20px;
 	}
 
 	p {
@@ -348,7 +350,7 @@ body {
 
 #main {
 	background: $body-background;
-	padding: 60px 0;
+	padding: 50px 0 35px 0;
 	z-index: 0;
 
 	/* content */
@@ -360,7 +362,7 @@ body {
 
 		#page-title {
 			font-size: 36px;
-			margin-bottom: $line-height * 2;
+			margin-bottom: 36px;
 		}
 
 		.article-meta {

@@ -15,14 +15,20 @@
  * @subsection front-page.php
  */
 
-.home.page {
+.home {
 
 	#main-navigation {
 		margin-bottom: 0;
 	}
-	
-	#content {
-		padding-left: 0;
+
+	#main {
+		
+		padding-top: 120px;
+
+		#content {
+			padding-left: 0;
+		}
+
 	}
 
 }

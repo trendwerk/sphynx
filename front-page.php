@@ -9,7 +9,7 @@
 		</h1>
 		
 		<h2>
-			<?php _e( 'WordPress theme framework for awesome websites', 'tp' ); ?>
+			<?php bloginfo( 'description' ); ?>
 		</h2>
 
 	</div> <!-- .container-inner -->
