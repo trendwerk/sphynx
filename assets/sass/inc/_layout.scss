@@ -125,6 +125,7 @@ body {
 
 #main-navigation {
 	background-color: #999;
+	margin-bottom: 0;
 	z-index: 1;
 
 	ul.menu {
@@ -291,13 +292,17 @@ body {
 /* breadcrumbs */
 	
 #breadcrumbs {
-	color: $text-light;
+	background: $light-background;
+	color: $text-color;
 	font-size: 13px;
 	margin-top: 0;
 	margin-bottom: 0;
 
 	#breadcrumbs-inner {
 		@include column-12;
+		height: 60px;
+		line-height: 60px;
+		margin: 0 10px;
 
 		a {
 			color: $text-color;
