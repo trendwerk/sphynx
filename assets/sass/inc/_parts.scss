@@ -297,72 +297,48 @@
  * @subsection AddThis
  */
 
-#pagination {
+#pager {
 	clear: both;
 	font-size: 13px;
 	padding: $line-height 0;
 	width: 100%;
 
-	ul {
-		list-style-type: none;
-		margin: 0; 
-		padding: 0;
-		text-align: center;
-		width: auto; 
+	.page-numbers, 
+	.prev,
+	.next {
+		@include border-radius(3px);
+		background-color: $light-background;
+		border: 2px solid $light-background;
+		color: $text-color;
+		display: inline-block;
+		font-size: 13px;
+		height: 36px;
+		line-height: 37px;
+		margin: 0 5px 10px 5px; 
+		text-align: center;		
+		text-decoration: none;
 
-		li {
-			display: inline-block;
-
-			a {
-				text-decoration: none;
-
-				&:active,
-				&:focus,
-				&:hover {
-					text-decoration: underline;
-				}
-
-			}
-
-			.current,
-			.prev,
-			.page,
-			.next {
-				@include border-radius(3px);
-				background-color: $light-background;
-				border: 2px solid $light-background;
-				color: $text-color;
-				display: inline-block;
-				height: 36px;
-				line-height: 37px;
-				margin: 0 5px 10px 5px;
-				text-align: center;
-			}
-
-			.current,
-			.page {
-				width: 38px;
-			}
-
-			.current {
-				background-color: #FFF;
-			}
-
-			.prev,
-			.next {
-				padding: 0 15px;
-			}
-
+		&:active,
+		&:focus,
+		&:hover {
+			text-decoration: underline;
 		}
 
-		.gap {
-			height: 40px;
-			line-height: 40px;
-			margin: 0 5px 10px 5px;
-			position: relative;
-			text-align: center;
-		}
+	}
 
+	.page-numbers {
+	 	width: 38px;
+
+	 	&.current {
+	 		background-color: #FFF;
+	 	}
+
+	}
+
+	.prev,
+	.next {
+		padding: 0 15px;
+		width: auto;
 	}
 
 }
