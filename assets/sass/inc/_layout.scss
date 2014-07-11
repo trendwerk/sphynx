@@ -51,7 +51,7 @@ body {
 		#description {
 			color: $text-color;
 			font-size: 16px;
-			margin: 0 0 5px 0;
+			margin: -2px 0 7px 0;
 		}
 
 	}
@@ -129,7 +129,7 @@ body {
 	margin-bottom: 0;
 	z-index: 1;
 
-	ul.menu {
+	ul {
 		margin: 0;
 		padding: 0;
 		position: relative;
@@ -323,19 +323,19 @@ body {
 #sub-header {
 	background-color: #CCC;
 	margin-top: 0;
-	padding: 64px 0 81px 0;
+	padding: 72px 0 81px 0;
 	text-align: center;
 
 	h1 {
 		font-size: 64px;
-		margin-bottom: 5px;
+		margin-bottom: 0;
 	}
 
 	h2 {
 		font-size: 36px;
 		font-weight: normal;
-		margin-top: 6px;
-		margin-bottom: 20px;
+		margin-top: -2px;
+		margin-bottom: 22px;
 	}
 
 	p {
@@ -461,6 +461,7 @@ body {
 	
 	#credits {
 		@include column-12;
+		min-height: 50px;
 		padding: 0;
 		
 		p {

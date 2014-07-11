@@ -13,133 +13,6 @@
 
 /**
  * @section    Parts
- * @subsection Author
- */
-
-.author-card {
-	@include border-box;
-	background: #EEE;
-	margin: 0 0 $line-height 0;
-	padding: 40px;
-	width: 100%;
-	
-	.author-avatar {
-		float: left;
-		margin: 5px 0 0 0;
-
-		img {
-			@include border-radius(999px);
-		}
-
-	}
-		
-	.author-info {
-		padding-left: 100px;
-
-		.author-writtenby {
-			color: shade-light($text-color, 5%);
-			font-size: 13px;
-		}
-
-		.author-bio {
-			font-size: 13px;
-		}
-
-		.author-social {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-
-			li {
-				display: inline;
-				
-				.label {
-					color: shade-light($text-color, 5%);
-					display: inline-block;
-					font-size: 14px;
-					float: left;
-					margin-top: -1px;
-					margin-right: 10px;
-				}
-
-				a {
-					@include border-radius(999px);
-					background-color: #999;
-					color: #FFF;
-					display: block;
-					float: left;					
-					font-size: 14px;
-					height: 30px;
-					line-height: 30px;
-					margin: -3px 5px 0 0;
-					position: relative;
-					text-align: center;
-					text-decoration: none;					
-					width: 30px;
-
-					&:active,
-					&:focus {
-						top: 1px;
-					}
-
-					&.google-plus {
-						
-						&:active,
-						&:focus,
-						&:hover {
-							background-color: #dd4B39;
-						}
-
-					}
-
-					&.twitter {
-
-						&:active,
-						&:focus,
-						&:hover {
-							background-color: #2ca8d2;
-						}
-
-					}
-
-					&.facebook {
-
-						&:active,
-						&:focus,
-						&:hover {
-							background-color: #305891;
-						}
-
-					}
-
-					&.linkedin {
-
-						&:active,
-						&:focus,
-						&:hover {
-							background-color: #4498c8;
-						}
-						
-					}
-
-				}
-
-			}
-
-		}
-
-		a.more-link {
-			float: right;
-			font-size: 14px;
-			margin: -1px 10px 10px 0;
-		}	
-		
-	}
-	
-}
-
-/**
- * @section    Parts
  * @subsection Respond
  */
 
@@ -277,7 +150,7 @@
 					position: absolute;
 					right: 30px;
 
-					a {	
+					a {
 						@include font-awesome-before( "\f112  " );
 						font-weight: 700;
 					}
@@ -303,7 +176,7 @@
 	padding: $line-height 0;
 	width: 100%;
 
-	.page-numbers, 
+	.page-numbers,
 	.prev,
 	.next {
 		@include border-radius(3px);
@@ -314,7 +187,7 @@
 		font-size: 13px;
 		height: 36px;
 		line-height: 37px;
-		margin: 0 5px 10px 5px; 
+		margin: 0 5px 10px 5px;
 		text-align: center;		
 		text-decoration: none;
 
@@ -327,11 +200,11 @@
 	}
 
 	.page-numbers {
-	 	width: 38px;
+		width: 38px;
 
-	 	&.current {
-	 		background-color: #FFF;
-	 	}
+		&.current {
+			background-color: #FFF;
+		}
 
 	}
 
@@ -376,7 +249,7 @@
 				right: 0;
 				text-shadow: none;
 				-webkit-font-smoothing: antialiased;
-				
+
 				&:active,
 				&:focus,
 				&:hover {
@@ -386,7 +259,7 @@
 			}
 
 		}
-		
+
 	}
 
 }
@@ -400,22 +273,98 @@
 
 	.label {
 		float: left;
-		width: 160px; 
-	}	
+		width: 160px;
+	}
+
+}
+
+/**
+ * @section    Parts
+ * @subsection Author
+ */
+
+.author-card {
+	@include border-box;
+	background: #EEE;
+	margin: 0 0 $line-height 0;
+	padding: 40px;
+	width: 100%;
+
+	.author-avatar {
+		float: left;
+		margin: 5px 0 0 0;
+
+		img {
+			@include border-radius(999px);
+		}
+
+	}
+
+	.author-info {
+		padding-left: 100px;
+
+		.author-writtenby {
+			color: shade-light($text-color, 5%);
+			font-size: 13px;
+		}
+
+		.author-bio {
+			font-size: 13px;
+		}
+
+		.author-social {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline;
+
+				.label {
+					color: shade-light($text-color, 5%);
+					display: inline-block;
+					font-size: 14px;
+					float: left;
+					margin-top: -1px;
+					margin-right: 10px;
+				}
+
+			}
+
+		}
+
+		a.more-link {
+			float: right;
+			font-size: 14px;
+			margin: -1px 10px 10px 0;
+		}	
+
+	}
+
+}
+
+/**
+ * @section    Parts
+ * @subsection AddThis
+ * @subsection Author
+ */
+
+.addthis_toolbox,
+.author-social {
 
 	a {
 		@include border-radius(999px);
 		background-color: #999;
 		color: #FFF;
 		display: block;
-		float: left;					
+		float: left;
 		font-size: 14px;
 		height: 30px;
 		line-height: 30px;
 		margin: -3px 5px 0 0;
 		position: relative;
 		text-align: center;
-		text-decoration: none;					
+		text-decoration: none;
 		width: 30px;
 
 
@@ -424,17 +373,19 @@
 			top: 1px;
 		}
 
-		&.addthis_button_twitter {
+		&.addthis_button_twitter,
+		&.twitter {
 
 			&:active,
 			&:focus,
 			&:hover {
-				background-color: #2ca8d2;
+				background-color: #55ACEE;
 			}
 
 		}
 
-		&.addthis_button_facebook {
+		&.addthis_button_facebook,
+		&.facebook {
 
 			&:active,
 			&:focus,
@@ -444,7 +395,8 @@
 
 		}
 
-		&.addthis_button_google_plusone_share {
+		&.addthis_button_google_plusone_share,
+		&.google-plus {
 
 			&:active,
 			&:focus,
@@ -454,7 +406,8 @@
 
 		}
 
-		&.addthis_button_linkedin {
+		&.addthis_button_linkedin,
+		&.linkedin {
 
 			&:active,
 			&:focus,
@@ -474,7 +427,7 @@
 			}
 
 		}
-		
+
 		&.addthis_button_compact {
 
 			&:active,

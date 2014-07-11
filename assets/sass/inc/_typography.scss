@@ -15,7 +15,7 @@
  * @subsection Variables
  */
 
-$line-height:	25px;
+$line-height: 25px;
 
 /**
  * @section    Typography
@@ -207,6 +207,21 @@ p {
 
 /**
  * @section    Typography
+ * @subsection Text styles
+ */
+
+strong,
+b {
+	font-weight: bold;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+/**
+ * @section    Typography
  * @subsection Lists
  */
 
@@ -321,8 +336,10 @@ cite {
 
 code,
 pre {
-	background: #FFFFB3;
-	color: #000;
+	background: #FFEFB4;
+	color: #333;
+	font-family: 'Menlo', 'Consolas', monospace;
+	font-size: 13px;
 }
 	
 pre {
@@ -333,10 +350,13 @@ pre {
 	white-space: -o-pre-wrap;
 }
 
-/* abbreviations */
+/**
+ * @section    Typography
+ * @subsection Abbreviations
+ */
 
-abbr,
-acronym {
+acronym,
+abbr {
 	border-bottom: 1px dotted $text-color;
 	cursor: help;
 
@@ -393,18 +413,8 @@ ins {
 
 /**
  * @section    Typography
- * @subsection Other
+ * @subsection Misc
  */
-
-strong,
-b {
-	font-weight: bold;
-}
-
-em,
-i {
-	font-style: italic;
-}
 
 hr {
 	border: 0;
@@ -413,4 +423,26 @@ hr {
 	height: 1px;
 	margin: 0 0 $line-height 0;
 	padding: 0;
+}
+
+.telephone {
+	color: $heading-color;
+	font-size: 24px;
+	font-weight: bold;
+
+	&:before {
+		content: "\f095";
+		font-family: FontAwesome;
+		font-size: 30px;
+		display: inline-block;
+		margin: 0 7px 0 0;
+		position: relative;
+		top: 4px;
+	}
+
+	a[href^=tel] {
+		color: $heading-color;
+		text-decoration: none;
+	}
+
 }
