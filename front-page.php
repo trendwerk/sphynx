@@ -12,9 +12,9 @@
 			<?php bloginfo( 'description' ); ?>
 		</h2>
 
-	</div> <!-- .container-inner -->
+	</div>
 
-</header> <!-- #sub-header -->
+</header>
 
 <section id="main" class="container">
 
@@ -24,7 +24,7 @@
 		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
-				<h2 id="page-title">
+				<h2>
 					<?php the_title(); ?>
 				</h2>
 				
@@ -34,12 +34,12 @@
 					
 		</article>
 		
-		<aside class="sidebar">
+		<aside>
 			<?php dynamic_sidebar( 'home' ); ?>
 		</aside>
 		
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

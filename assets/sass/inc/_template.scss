@@ -22,11 +22,15 @@
 	}
 
 	#main {
-		
 		padding-top: 120px;
 
 		#content {
 			padding-left: 0;
+
+			h2 {
+				font-size: 36px;
+				margin-bottom: 36px;
+			}
 		}
 
 	}
@@ -66,7 +70,7 @@
 			padding-bottom: 0;
 		}
 
-		h2.article-title {
+		h2 {
 			margin: 0 0 4px 0;
 			
 			a {
@@ -84,7 +88,7 @@
 			
 		}
 
-		.article-thumbnail {
+		figure {
 			float: right;
 			margin: 0 0 $line-height 20px;
 		}
@@ -111,13 +115,13 @@
 
  .single {
 
- 	#content {
+ 	#main #content {
  			
- 		#page-title {
+ 		h1 {
  			margin-bottom: 10px;
  		}
 
- 		.article-thumbnail {
+ 		figure {
 			float: right;
 			margin: 5px 0 10px 20px; 
  		}
@@ -135,7 +139,7 @@
 .search,
 .error404 {
 
-	article h2.article-title {
+	article h2 {
 		margin-bottom: $line-height;
 	}
 

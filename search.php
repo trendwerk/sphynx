@@ -6,7 +6,7 @@
 	
 		<section id="content">
 
-			<h1 id="page-title">
+			<h1>
 				<?php printf( __( 'Search Results for: %1$s', 'tp' ), '<strong>' . get_search_query() . '</strong>' ); ?>
 			</h1>
 		
@@ -16,7 +16,7 @@
 				
 					<article <?php post_class(); ?>>
 					
-						<h2 class="article-title">
+						<h2>
 
 							<a href="<?php the_permalink(); ?>">
 								<?php the_title(); ?>
@@ -24,7 +24,7 @@
 
 						</h2>
 						
-						<p class="article-content">
+						<p>
 
 							<?php tp_the_excerpt( 80 ); ?>
 
@@ -52,12 +52,12 @@
 			 
 		</section>
 
-		<aside class="sidebar">
+		<aside>
 			<?php dynamic_sidebar( 'page' ); ?>
 		</aside>		
 				
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

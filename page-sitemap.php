@@ -4,7 +4,7 @@
 
 	<div class="container-inner">
 	
-		<aside class="sidebar fourcol">
+		<aside>
 			<?php dynamic_sidebar( 'page' ); ?>
 		</aside>
 		
@@ -114,8 +114,8 @@
 			
 		</article>
 
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>
