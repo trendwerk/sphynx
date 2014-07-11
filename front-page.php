@@ -12,9 +12,9 @@
 			<?php bloginfo( 'description' ); ?>
 		</h2>
 
-	</div> <!-- .container-inner -->
+	</div>
 
-</header> <!-- #sub-header -->
+</header>
 
 <section id="main" class="container">
 
@@ -38,8 +38,8 @@
 			<?php dynamic_sidebar( 'home' ); ?>
 		</aside>
 		
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

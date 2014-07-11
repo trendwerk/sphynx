@@ -24,8 +24,8 @@
 			
 		</article>
 		
-	</div><!-- .conainer-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

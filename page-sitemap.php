@@ -114,8 +114,8 @@
 			
 		</article>
 
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

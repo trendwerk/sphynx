@@ -74,14 +74,14 @@
 				
 			<?php endif; ?>
 			
-		</section><!-- #content -->	
+		</section>
 				
 		<aside class="sidebar">
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

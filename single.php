@@ -50,8 +50,8 @@
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

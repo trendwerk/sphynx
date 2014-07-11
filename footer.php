@@ -26,9 +26,9 @@
 					
 				</div>
 				
-			</div><!-- .container-inner -->
+			</div>
 			
-		</footer><!-- #footer -->
+		</footer>
 		
 		<?php wp_footer(); ?>
 		

@@ -69,9 +69,9 @@
 					<?php get_search_form(); ?>
 				</div>
 
-			</div><!-- .container-inner -->
+			</div>
 
-		</header><!-- #header -->
+		</header>
 
 		<nav id="main-navigation" class="container">
 
@@ -83,9 +83,9 @@
 					) );
 				?>
 
-			</div> <!-- .container-inner -->
+			</div>
 
-		</nav> <!-- #main-navigation -->
+		</nav>
 
 		<?php if ( ! is_front_page() ) { ?>
 
@@ -102,8 +102,8 @@
 
 					</div>
 
-				</div> <!-- .container-inner -->
+				</div>
 			
-			</nav> <!-- #breadcrumbs -->
+			</nav>
 
 		<?php } ?>

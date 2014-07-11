@@ -56,8 +56,8 @@
 			<?php dynamic_sidebar( 'page' ); ?>
 		</aside>		
 				
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>
