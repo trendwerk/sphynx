@@ -97,7 +97,7 @@
 
 						<?php
 							_e( 'You are here: ', 'tp' );
-							tp_breadcrumbs('»'); 
+							tp_breadcrumbs('<i class="fa fa-chevron-right"></i>'); 
 						?>
 
 					</div>

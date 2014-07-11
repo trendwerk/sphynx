@@ -305,6 +305,10 @@ body {
 		line-height: 60px;
 		margin: 0 10px;
 
+		.separator {
+			font-size: 10px;
+		}
+
 		a {
 			color: $text-color;
 
