@@ -12,17 +12,17 @@
 					<?php the_title(); ?>
 				</h1>
 				
-				<p class="article-meta">
+				<p class="meta">
 					<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time>
 					<?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?> 
 					<?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
 				</p>
 				
-				<div class="article-content">
+				<div>
 
-					<div class="article-thumbnail">
+					<figure>
 						<?php the_post_thumbnail( 'medium' ); ?>
-					</div>
+					</figure>
 
 					<?php the_content(); ?>
 					

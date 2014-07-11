@@ -40,25 +40,25 @@
 			
 					<article <?php post_class(); ?>>
 					
-						<h2 class="article-title">
+						<h2>
 							<a href="<?php the_permalink(); ?>">
 								<?php the_title(); ?>
 							</a>
 						</h2>
 						
-						<p class="article-meta">
+						<p class="meta">
 							<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time>
 							<?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?> 
 							<?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
 						</p>
 						
-						<a class="article-thumbnail" href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail( 'thumbnail' ); ?>
-						</a>
+						<figure>
+							<a href="<?php the_permalink(); ?>">
+								<?php the_post_thumbnail( 'thumbnail' ); ?>
+							</a>
+						</figure>
 						
-						<div class="article-content">
-							<?php the_content( __( 'Read more', 'tp' ) ); ?>
-						</div>
+						<?php the_content( __( 'Read more', 'tp' ) ); ?>
 
 					</article>
 				
