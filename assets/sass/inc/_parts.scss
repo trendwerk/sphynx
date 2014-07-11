@@ -274,6 +274,7 @@
  */
 
 .addthis_toolbox {
+	margin-bottom: 20px;
 
 	.label {
 		float: left;
@@ -290,6 +291,8 @@
 .author-card {
 	@include border-box;
 	background: #EEE;
+	clear: both;
+	float: left;
 	margin: 0 0 $line-height 0;
 	padding: 40px;
 	width: 100%;
