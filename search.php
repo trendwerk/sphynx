@@ -6,7 +6,7 @@
 	
 		<section id="content">
 
-			<h1 id="page-title">
+			<h1>
 				<?php printf( __( 'Search Results for: %1$s', 'tp' ), '<strong>' . get_search_query() . '</strong>' ); ?>
 			</h1>
 		
@@ -52,12 +52,12 @@
 			 
 		</section>
 
-		<aside class="sidebar">
+		<aside>
 			<?php dynamic_sidebar( 'page' ); ?>
 		</aside>		
 				
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

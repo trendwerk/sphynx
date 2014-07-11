@@ -2,7 +2,7 @@
 		
 			<div class="container-inner">
 			
-				<aside class="sidebar">
+				<aside>
 					<?php dynamic_sidebar( 'footerid' ); ?>
 				</aside>
 				
@@ -26,9 +26,9 @@
 					
 				</div>
 				
-			</div><!-- .container-inner -->
+			</div>
 			
-		</footer><!-- #footer -->
+		</footer>
 		
 		<?php wp_footer(); ?>
 		

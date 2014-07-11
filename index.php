@@ -8,19 +8,19 @@
 		
 			<?php if( is_category() ) { ?>
 			
-				<h1 id="page-title">
+				<h1>
 					<?php _e( 'Category', 'tp' ); ?>: <?php single_cat_title(); ?>
 				</h1>
 				
 			<?php } elseif( is_tag() || is_tax() ) { ?>
 			
-				<h1 id="page-title">
+				<h1>
 					<?php _e( 'Tag', 'tp' ); ?>: <?php single_tag_title(); ?>
 				</h1>
 				
 			<?php } elseif( is_author() ) { ?>
 			
-				<h1 id="page-title">
+				<h1>
 					<?php _e( 'Posts by', 'tp' ); ?> <?php echo get_the_author_meta( 'display_name', $author ); ?>
 				</h1>
 				
@@ -28,7 +28,7 @@
 
 			<?php } else { ?>
 			
-				<h1 id="page-title">
+				<h1>
 					<?php _e( 'News', 'tp' ); ?>
 				</h1>
 				
@@ -74,14 +74,14 @@
 				
 			<?php endif; ?>
 			
-		</section><!-- #content -->	
+		</section>
 				
-		<aside class="sidebar">
+		<aside>
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

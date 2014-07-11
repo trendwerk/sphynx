@@ -8,7 +8,7 @@
 		
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				
-				<h1 id="article-title">
+				<h1>
 					<?php the_title(); ?>
 				</h1>
 				
@@ -37,7 +37,9 @@
 				<?php get_template_part( 'part', 'author' ); ?>
 				
 				<p>
-					<a class="back" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><?php _e( 'Back to the overview', 'tp' ); ?></a>
+					<a class="back" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
+						<?php _e( 'Back to the overview', 'tp' ); ?>
+					</a>
 				</p>
 				
 			<?php endwhile; endif; ?>
@@ -46,12 +48,12 @@
 			
 		</article>
 		
-		<aside class="sidebar">
+		<aside>
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		
-	</div><!-- .container-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>

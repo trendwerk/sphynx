@@ -6,7 +6,7 @@
 	
 		<article id="content">
 		
-			<h1 id="page-title">
+			<h1>
 				<?php _e( 'The page you are looking for doesn\'t exist.', 'tp' ); ?>
 			</h1>
 			
@@ -24,8 +24,8 @@
 			
 		</article>
 		
-	</div><!-- .conainer-inner -->
+	</div>
 	
-</section><!-- #main -->
+</section>
 
 <?php get_footer(); ?>
