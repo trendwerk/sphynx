@@ -98,11 +98,6 @@
 			background: $light-background;
 			padding: 30px 30px 5px 30px;
 			margin-bottom: $line-height * 2;
-
-			h2 { 
-				@include font-awesome-before("\f08d"); 
-			}
-
 		}
 
 	}
