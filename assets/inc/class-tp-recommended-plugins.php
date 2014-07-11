@@ -45,7 +45,7 @@ class TP_Recommended_Plugins {
 		add_action( 'init', array( $this, 'redirect_after_activation' ) );
 		
 		//Show activation message
-		if( isset( $_GET['activated'] ) && 'tp-recommended-plugins' == $_GET['page'] ) 
+		if( isset( $_GET['activated'] ) && isset( $_GET['page'] ) && 'tp-recommended-plugins' == $_GET['page'] ) 
 			add_action( 'admin_notices', array( $this, 'show_plugin_activated' ) );
 		
 		//Add recommended link after install
