@@ -27,11 +27,10 @@
 					<?php the_content(); ?>
 
 					<?php
-						$args = array(
+						wp_link_pages( array(
 							'before'         => '<p class="pages">',
 							'next_or_number' => 'next'
-						);
-						wp_link_pages( $args );
+						) );
 					?>
 
 				</div>
