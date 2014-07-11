@@ -33,12 +33,12 @@ body {
 	/* logo, sitename and description */
 
 	#logo {
-		@include column-9;
-		margin-top: 15px;
-		margin-bottom: 5px;
+		@include column-6;
+		margin-bottom: 20px;
+		margin-top: 20px;
 
 		#sitename {
-			font: bold 32px $heading-font;
+			font: bold 32px/40px $heading-font;
 			margin: 0;
 
 			a {
@@ -50,8 +50,8 @@ body {
 
 		#description {
 			color: $text-color;
-			font-size: 16px;
-			margin: -2px 0 7px 0;
+			font: normal 16px/30px $text-font;
+			margin: 0;
 		}
 
 	}
@@ -65,8 +65,7 @@ body {
 	/* top navigation */
 			
 	#topnav {
-		@include column-3;
-		margin-top: 3px;
+		@include column-6;
 
 		ul {
 			float: right;
@@ -110,9 +109,8 @@ body {
 	/* search form */
 
 	#search {
-		@include column-3;
-		margin-top: 2px;
-		margin-bottom: 0;
+		@include column-6;
+		margin-top: 5px;
 
 		form {
 			float: right;
@@ -126,7 +124,7 @@ body {
 
 #main-navigation {
 	background-color: $footer-background;
-	margin-bottom: 0;
+	margin: 0;
 	z-index: 1;
 
 	ul {
