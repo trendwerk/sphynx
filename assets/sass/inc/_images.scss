@@ -240,10 +240,24 @@
  * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
  */
 
+
+figure.aligncenter,
+figure.alignright,
+figure.alignleft,
+figure.alignnone {
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+}
+
 .size-thumbnail,
 .size-medium,
 .size-large,
-.size-auto, 
+.size-auto,
+.alignnone, 
 .size-full {
 	max-width: 100%;
 	height: auto;
