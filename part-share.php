@@ -35,4 +35,3 @@
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51a880a417084aa1"></script>
 
 </section>
-

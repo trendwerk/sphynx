@@ -1,7 +1,8 @@
 <?php 
-	get_header();
-	/* Template name: Authors overview */
-	__('Authors overview','tp');
+//Template name: Authors overview
+__( 'Authors overview', 'tp' );
+
+get_header();
 ?>
 
 <section id="main" class="container">
