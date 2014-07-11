@@ -63,12 +63,13 @@
 .gallery {
 	clear: both;
 	float: left;
-	margin-bottom: 20px;
+	margin-top: $line-height;
+	margin-bottom: $line-height;
 	width: 100%;
 
 	.gallery-item {
-		float: left;
-		margin: 0 4px 4px 0;
+		float: left !important;
+		margin: 0 4px 4px 0 !important;
 		overflow: hidden;
 		position: relative;
 
