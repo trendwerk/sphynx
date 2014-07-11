@@ -105,6 +105,10 @@ a {
 		text-decoration: underline;
 	}
 
+	/* more link */
+
+	&.more-link { white-space: nowrap; }
+
 	/* add characters to links */
 
 	&.more-link:after,
