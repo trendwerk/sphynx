@@ -42,6 +42,13 @@
 
 	}
 
+	img.attachment-widget {
+		display: block;
+		height: auto;
+		margin-bottom: $line-height;
+		width: 100%;
+	}
+
 	a {
 		
 		&.button {
