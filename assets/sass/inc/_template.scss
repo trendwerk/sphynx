@@ -22,11 +22,15 @@
 	}
 
 	#main {
-		
 		padding-top: 120px;
 
 		#content {
 			padding-left: 0;
+
+			h2 {
+				font-size: 36px;
+				margin-bottom: 36px;
+			}
 		}
 
 	}
@@ -111,9 +115,9 @@
 
  .single {
 
- 	#content {
+ 	#main #content {
  			
- 		#page-title {
+ 		h1 {
  			margin-bottom: 10px;
  		}
 

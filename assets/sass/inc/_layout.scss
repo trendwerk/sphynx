@@ -360,7 +360,7 @@ body {
 		@include column-8;
 		padding-right: 20px;
 
-		#page-title {
+		h1 {
 			font-size: 36px;
 			margin-bottom: 36px;
 		}
@@ -382,10 +382,6 @@ body {
 
 			}
 
-		}
-
-		#article-title {
-			margin-bottom: 10px;
 		}
 
 		.tags {
