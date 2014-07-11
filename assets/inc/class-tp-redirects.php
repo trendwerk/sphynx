@@ -68,7 +68,7 @@ class TP_Redirects {
 		if( is_404() ) {
 			$parameters = parse_url( $_SERVER['REQUEST_URI'] );
 
-			$url = $this->get_maybe_redirect_url( home_url( $wp->request ), $parameters['query'] );
+			$url = $this->get_maybe_redirect_url( home_url( $wp->request ), isset( $parameters['query'] ) ? $parameters['query'] : '' );
 
 			if( $url ) {
 				wp_redirect( $url, 301 );
