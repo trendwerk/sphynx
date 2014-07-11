@@ -247,21 +247,26 @@ body {
 					padding-bottom: 10px;
 				}		
 	
-				&.page_item_has_children > a,
-				&.menu-item-has-children > a,
-				&.has-children > a {
+				&.page_item_has_children,
+				&.menu-item-has-children,
+				&.has-children {
+					padding-right: 0;
 
-					&:after {
-						content: "\f0da";
-						display: inline-block;
-					}
-				
-					&:active,
-					&:focus,
-					&:hover {
+					> a {
 
 						&:after {
-							text-decoration: none;
+							content: "\f0da";
+							display: inline-block;
+						}
+					
+						&:active,
+						&:focus,
+						&:hover {
+
+							&:after {
+								text-decoration: none;
+							}
+
 						}
 
 					}
@@ -274,7 +279,7 @@ body {
 				ul {
 					margin-left: 0;
 					left: 100%;
-					margin-top: -45px;
+					margin-top: -35px;
 
 					ul {
 						margin-top: -35px;
