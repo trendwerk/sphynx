@@ -61,7 +61,7 @@ function tp_breadcrumbs($separator='>',$menu='mainnav') {
  * @param string $separator
  */
 function tp_separator($separator) {
-	echo ' <span class="separator">'.htmlentities($separator,ENT_COMPAT,'UTF-8').'</span> ';	
+	echo ' <span class="separator">'.$separator.'</span> ';	
 }
 
 ?>
