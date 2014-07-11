@@ -20,8 +20,12 @@
         			) );
                 ?>
             </ol>
-        
-            <?php 
+
+            <?php
+            paginate_comments_links( array(
+                'next_text' => __( 'Next', 'tp' ),
+                'prev_text' => __( 'Previous', 'tp' ),
+            ) );
         }
 
         comment_form( array(
