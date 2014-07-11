@@ -24,9 +24,9 @@
 						<?php the_post_thumbnail( 'medium' ); ?>
 					</figure>
 
-					<?php the_content(); ?>
+					<?php 
+						the_content();
 
-					<?php
 						wp_link_pages( array(
 							'before'         => '<p class="pages">',
 							'next_or_number' => 'next'
