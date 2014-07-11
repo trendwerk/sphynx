@@ -72,7 +72,6 @@ add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form'
 function tp_video_embed( $html ) {
     return '<div class="video-container">' . $html . '</div>';
 }
-
 add_filter( 'embed_oembed_html', 'tp_video_embed' );
 
 /**

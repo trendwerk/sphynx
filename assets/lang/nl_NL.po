@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-02 18:31+0100\n"
-"PO-Revision-Date: 2014-07-02 18:31+0100\n"
+"PO-Revision-Date: 2014-07-10 18:01+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -112,7 +112,7 @@ msgstr "Geschreven door"
 #: ../../part-author.php:55
 #, php-format
 msgid "Follow %1$s on"
-msgstr "Volg %1$s op:"
+msgstr "Volg %1$s op"
 
 #: ../../part-author.php:104
 #, php-format
