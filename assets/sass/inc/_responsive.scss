@@ -31,23 +31,23 @@
 @media (max-width: 980px) {
 
 	#header {
-		padding: $line-height 0;
+
 
 		#topnav,
 		#search,
 		#logo {
 			clear: none;
-			margin-right: 0;
-			margin-left: 0;
+			margin: 10px 0;
 			width: 50%;
 		}
 
-		#topnav {
-			margin-top: 0;
+		#logo { 
+			margin-bottom: 20px;
+			margin-top: 20px;
 		}
 
-		#search {
-			margin-top: $line-height;
+		#search { 
+			margin-top: 5px;
 		}
 
 	}
@@ -144,7 +144,7 @@
  			
  	#header {
  		@include border-box;
- 		padding: 5px;
+ 		margin: 0px 0px 5px 0;
 
  		/* logo, sitename and description */
 
@@ -152,12 +152,14 @@
 			width: 100%;
 
 			#sitename {
-				font-size: 18px;
+				font-size: 20px;
+				line-height: 25px;
+				width: 75%;
 			}
 
 			#description {
-				font-size: 12px;
-				line-height: 1.5;
+				font-size: 14px;
+				line-height: 20px;
 				width: 75%;
 			}
 
@@ -169,8 +171,8 @@
 			display: block;
 			position: absolute;
 			margin: 0;
-			right: 30px;
-			top: 20px;
+			right: 20px;
+			top: 30px;
 
 			#mobile-navigation, 
 			#mobile-search {
@@ -240,7 +242,7 @@
 	.logged-in #header {
 
 		#mobile {
-			top: 66px;
+			top: 76px;
 		}
 
 	}
