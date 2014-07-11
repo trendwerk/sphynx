@@ -21,8 +21,8 @@
                 ?>
             </ol>
 
-			<?php
-			paginate_comments_links( array(
+            <?php
+            paginate_comments_links( array(
                 'next_text' => __( 'Next', 'tp' ),
                 'prev_text' => __( 'Previous', 'tp' ),
             ) );
