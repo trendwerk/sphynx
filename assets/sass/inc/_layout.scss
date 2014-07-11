@@ -248,6 +248,7 @@ body {
 				}		
 	
 				&.page_item_has_children > a,
+				&.menu-item-has-children > a,
 				&.has-children > a {
 
 					&:after {
@@ -303,6 +304,10 @@ body {
 		height: 60px;
 		line-height: 60px;
 		margin: 0 10px;
+
+		.separator {
+			font-size: 10px;
+		}
 
 		a {
 			color: $text-color;

@@ -189,20 +189,24 @@
 		line-height: 37px;
 		margin: 0 5px 10px 5px;
 		text-align: center;		
-		text-decoration: none;
+	}
 
+	a {
+		text-decoration: none;
+	
 		&:active,
 		&:focus,
 		&:hover {
 			text-decoration: underline;
 		}
-
+	
 	}
 
 	.page-numbers {
 		width: 38px;
 
-		&.current {
+		&.current,
+		&.dots {
 			background-color: #FFF;
 		}
 

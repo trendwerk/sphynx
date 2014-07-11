@@ -42,6 +42,13 @@
 
 	}
 
+	img.attachment-widget {
+		display: block;
+		height: auto;
+		margin-bottom: $line-height;
+		width: 100%;
+	}
+
 	a {
 		
 		&.button {
@@ -354,7 +361,7 @@
 					
 		thead tr th:first-child, 
 		tbody tr td:first-child {
-			border-left: 1px solid #000000;
+			border-left: 1px solid $border-color;
 		}
 		
 		tfoot, 
