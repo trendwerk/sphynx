@@ -20,12 +20,17 @@
         			) );
                 ?>
             </ol>
+            
+            <div id="pager">
+                <?php
+                    paginate_comments_links( array(
+                        'next_text' => __( 'Next', 'tp' ),
+                        'prev_text' => __( 'Previous', 'tp' ),
+                    ) );
+                ?>
+            </div>
 
             <?php
-            paginate_comments_links( array(
-                'next_text' => __( 'Next', 'tp' ),
-                'prev_text' => __( 'Previous', 'tp' ),
-            ) );
         }
 
         comment_form( array(
