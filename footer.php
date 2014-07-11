@@ -2,7 +2,7 @@
 		
 			<div class="container-inner">
 			
-				<aside class="sidebar">
+				<aside>
 					<?php dynamic_sidebar( 'footerid' ); ?>
 				</aside>
 				

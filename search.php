@@ -52,7 +52,7 @@
 			 
 		</section>
 
-		<aside class="sidebar">
+		<aside>
 			<?php dynamic_sidebar( 'page' ); ?>
 		</aside>		
 				

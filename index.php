@@ -76,7 +76,7 @@
 			
 		</section>
 				
-		<aside class="sidebar">
+		<aside>
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
 		

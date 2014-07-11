@@ -34,7 +34,7 @@
 					
 		</article>
 		
-		<aside class="sidebar">
+		<aside>
 			<?php dynamic_sidebar( 'home' ); ?>
 		</aside>
 		

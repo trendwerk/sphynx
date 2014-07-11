@@ -400,7 +400,7 @@ body {
 
 	/* sidebar */
 
-	.sidebar {
+	aside {
 		@include column-4;
 
 		.widget {
@@ -422,7 +422,7 @@ body {
 		color: #FFF;		
 	}
 	
-	.sidebar {
+	aside {
 		float: left;
 		padding-top: $line-height;
 		width: 100%;
