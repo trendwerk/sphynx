@@ -25,7 +25,14 @@
 					</figure>
 
 					<?php the_content(); ?>
-					
+
+					<?php
+						wp_link_pages( array(
+							'before'         => '<p class="pages">',
+							'next_or_number' => 'next'
+						) );
+					?>
+
 				</div>
 				
 				<?php get_template_part( 'part', 'share' ); ?>
