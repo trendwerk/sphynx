@@ -23,8 +23,8 @@
 
 			<?php
 				$args = array(
-					'next_text' => __('Next', 'tp'),
-					'prev_text' => __('Previous', 'tp'),
+					'next_text' => __( 'Next', 'tp' ),
+					'prev_text' => __( 'Previous', 'tp' )
 				);
 				paginate_comments_links( $args );
 			?>
