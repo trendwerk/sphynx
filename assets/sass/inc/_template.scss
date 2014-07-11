@@ -125,7 +125,32 @@
 			float: right;
 			margin: 5px 0 10px 20px; 
  		}
- 		 		
+
+		nav.pages {
+			margin-bottom: 30px;
+
+			a {
+				@include border-radius(3px);
+				background-color: $light-background;
+				color: $text-color;
+				display: inline-block;
+				font-size: 13px;
+				height: 40px;
+				line-height: 40px;
+				margin-right: 5px;
+				padding: 0 20px;
+				text-decoration: none;
+
+				&:active,
+				&:focus,
+				&:hover {
+					background: darken($light-background, 10%);
+				}
+
+			}
+
+		}
+		
  	}
  	
 }

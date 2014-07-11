@@ -28,7 +28,8 @@
 						the_content();
 
 						wp_link_pages( array(
-							'before'         => '<p class="pages">',
+							'before'         => '<nav class="pages">',
+							'after'          => '</nav>',
 							'next_or_number' => 'next'
 						) );
 					?>

@@ -197,7 +197,7 @@
 		&:active,
 		&:focus,
 		&:hover {
-			text-decoration: underline;
+			background: darken($light-background, 10%);
 		}
 	
 	}
