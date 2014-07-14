@@ -14,7 +14,7 @@
 						</p>
 					</div>
 					
-					<nav id="footernav" class="navigation">
+					<nav>
 						<?php 
 							wp_nav_menu( array(
 								'depth'          => 1,
