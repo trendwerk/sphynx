@@ -13,7 +13,7 @@
                 <?php printf( _n( 'One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'tp' ), get_comments_number(), '<span>' . get_the_title() . '</span>' ); ?>
             </h2>
             
-            <ol class="commentlist">
+            <ol>
                 <?php 
                     wp_list_comments( array(
         				'avatar_size' => 60,
