@@ -9,7 +9,7 @@
         if ( have_comments() ) { 
             ?>
     
-            <h2 class="comments-title">
+            <h2>
                 <?php printf( _n( 'One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'tp' ), get_comments_number(), '<span>' . get_the_title() . '</span>' ); ?>
             </h2>
             
