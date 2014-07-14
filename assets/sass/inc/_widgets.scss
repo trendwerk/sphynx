@@ -352,18 +352,23 @@
 		border-right: none;
 		border-bottom: none; 
 		border-left: none;
+		margin-bottom: 0;
 	
 		tr th, 
 		tr td { 
 			text-align: center;
 			vertical-align: center;
 		}
-					
+	
 		thead tr th:first-child, 
 		tbody tr td:first-child {
 			border-left: 1px solid $border-color;
 		}
 		
+		caption {
+			padding-bottom: 10px;
+		}
+
 		tfoot, 
 		tfoot tr, 
 		tfoot tr td {
@@ -371,10 +376,14 @@
 		}
 		
 		tfoot td#prev {
+			padding-top: 10px;
+			padding-left: 0;
 			text-align: left;
 		}
 
 		tfoot td#next {
+			padding-top: 10px;
+			padding-right: 0;
 			text-align: right;
 		}
 
