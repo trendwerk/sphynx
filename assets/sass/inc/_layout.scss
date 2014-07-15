@@ -218,6 +218,7 @@ body {
 			li {
 				clear: both;
 				display: block;
+				height: 40px;
 				width: 100%;
 
 				a {
@@ -226,8 +227,9 @@ body {
 					color: #FFF;
 					display: block;	
 					font-size: 12px;
-					line-height: $line-height;
-					padding: 7px 20px 0 20px;
+					line-height: 40px;
+					height: 40px;
+					padding: 0 20px;
 					text-transform: none;
 					width: 100%;
 
@@ -237,15 +239,7 @@ body {
 						text-decoration: underline;
 					}
 
-				}
-
-				&:first-child > a { 
-					padding-top: 10px; 
-				}
-
-				&:last-child > a { 
-					padding-bottom: 10px;
-				}		
+				}	
 	
 				&.page_item_has_children,
 				&.menu-item-has-children,
@@ -279,10 +273,10 @@ body {
 				ul {
 					margin-left: 0;
 					left: 100%;
-					margin-top: -35px;
+					margin-top: -40px;
 
 					ul {
-						margin-top: -35px;
+						margin-top: -40px;
 					}
 
 				}				

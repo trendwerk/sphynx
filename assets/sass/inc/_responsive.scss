@@ -272,6 +272,12 @@
 					background-color: transparent;
 				}
 
+				&:active, 
+				&:focus,
+				&:hover {
+					background-color: transparent;
+				}
+
 			}
 
 			/* first level only */
@@ -279,12 +285,6 @@
 			> li {
 				margin: 0;
 				width: 100%;
-
-				&:active, 
-				&:focus,
-				&:hover {
-					background-color: transparent;
-				}
 
 				> a {
 					font-size: 16px;
@@ -307,6 +307,7 @@
 				width: 100%;
 
 				li {
+					height: auto;
 
 					a {
 						background-color: transparent;
@@ -318,14 +319,6 @@
 							content: "- ";
 						}
 
-					}
-
-					&:first-child a {
-						padding-top: 0;
-					}		
-
-					&:last-child a {
-						padding-bottom: 0;
 					}
 
 					/* third level */
