@@ -303,19 +303,14 @@ blockquote {
 	margin-bottom: $line-height;
 	text-align: center;
 
-	&:before {
-		content: "\201C";
-		display: inline;
-	}
-
-	&:after {
-		content: "\201D";
-		display: inline;
-	}
-
 	p {
 		display: inline;
 		margin: 0;
+	}
+
+	cite {
+		display: block;
+		margin-top: 10px;
 	}
 
 }
