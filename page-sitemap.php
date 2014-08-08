@@ -20,9 +20,7 @@
 				
 				<div id="sitemap-pages">
 
-					<h2>
-						<?php _e( 'Pages', 'tp' ); ?>
-					</h2>
+					<h2><?php _e( 'Pages', 'tp' ); ?></h2>
 							
 					<?php 
 						wp_nav_menu( array(
