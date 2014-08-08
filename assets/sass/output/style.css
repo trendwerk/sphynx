@@ -2999,7 +2999,8 @@ body {
       #breadcrumbs #breadcrumbs-inner {
         width: 1120px; } }
     #breadcrumbs #breadcrumbs-inner .separator {
-      font-size: 10px; }
+      font-size: 10px;
+      padding: 0 2px 0 3px; }
     #breadcrumbs #breadcrumbs-inner a {
       color: #666666; }
       #breadcrumbs #breadcrumbs-inner a:active, #breadcrumbs #breadcrumbs-inner a:focus, #breadcrumbs #breadcrumbs-inner a:hover {
