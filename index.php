@@ -6,33 +6,23 @@
 	
 		<section id="content">
 		
-			<?php if( is_category() ) { ?>
-			
-				<h1>
-					<?php _e( 'Category', 'tp' ); ?>: <?php single_cat_title(); ?>
-				</h1>
-				
-			<?php } elseif( is_tag() || is_tax() ) { ?>
-			
-				<h1>
-					<?php _e( 'Tag', 'tp' ); ?>: <?php single_tag_title(); ?>
-				</h1>
-				
-			<?php } elseif( is_author() ) { ?>
-			
-				<h1>
-					<?php _e( 'Posts by', 'tp' ); ?> <?php echo get_the_author_meta( 'display_name', $author ); ?>
-				</h1>
-				
-				<?php get_template_part( 'part', 'author' ); ?>
+			<h1 id="page-title">
+				<?php 
+					if( is_category() || is_tag() || is_tax() ) { 
+						single_term_title( __( 'Posts about', 'tp' ) . ' ' );
+					} elseif( is_author() ) {
+						echo __( 'Posts by', 'tp' ) . ' ' . get_the_author_meta( 'display_name' );
+					} else {
+						_e( 'News', 'tp' );
+					}
+				?>
+			</h1>
 
-			<?php } else { ?>
-			
-				<h1>
-					<?php _e( 'News', 'tp' ); ?>
-				</h1>
-				
-			<?php } ?>
+			<?php 
+				if( is_author() ) { 
+					get_template_part( 'part', 'author' ); 
+				} 
+			?>
 			
 			<?php if( have_posts() ) : ?>
 
