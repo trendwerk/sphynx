@@ -41,12 +41,12 @@ $alert-yellow: 		#E3B000;
  * Import other SASS files
  */
 
-@import 'inc/mixins';
-@import 'inc/reset';  
-@import 'inc/typography';
-@import 'inc/forms';
-@import 'inc/misc';
-@import 'inc/images'; 
+@import 'mixins';
+@import 'reset';  
+@import 'typography';
+@import 'forms';
+@import 'misc';
+@import 'images'; 
 
 /**
  * @sectiob WYSIWYG style

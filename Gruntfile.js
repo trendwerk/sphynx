@@ -9,7 +9,7 @@ module.exports = function( grunt ) {
 		 */	
 		sass: {
 			options: {
-				style: 'compressed'
+				style: 'nested'
 			},
 			dist: {
 				files: {
@@ -28,8 +28,7 @@ module.exports = function( grunt ) {
 				files: [
 					'assets/plugins/*',
 					'assets/sass/*',
-					'assets/sass/inc/*',
-					'assets/sass/inc/lib/*'
+					'assets/sass/lib/*'
 				],
 				tasks: [ 'sass' ],
 				options: {
