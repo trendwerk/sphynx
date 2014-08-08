@@ -224,7 +224,7 @@
  */
 
 @mixin sprite($top, $left) {
-	background-image: url('assets/img/sprite-x1.png');
+	background-image: url('../../../assets/img/sprite-x1.png');
 	background-repeat: no-repeat;
 	background-position: $top $left;
 
@@ -232,7 +232,7 @@
 	only screen and (min--moz-device-pixel-ratio: 2),
 	only screen and (-o-min-device-pixel-ratio: 2/1),
 	only screen and (min-device-pixel-ratio: 2) {
-		background-image: url('assets/img/sprite-x2.png');
+		background-image: url('../../../assets/img/sprite-x2.png');
 		background-position: $top x 2 $left x 2;
 		background-size: 500px 500px;
 	}
