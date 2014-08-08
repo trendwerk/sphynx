@@ -29,8 +29,7 @@ module.exports = function( grunt ) {
 					'assets/plugins/*',
 					'assets/sass/*',
 					'assets/sass/inc/*',
-					'assets/sass/inc/lib/*',
-					'assets/sass/output/*'
+					'assets/sass/inc/lib/*'
 				],
 				tasks: [ 'sass' ],
 				options: {
