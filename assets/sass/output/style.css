@@ -4442,6 +4442,8 @@ body {
         #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span select {
           float: left;
           width: 61.6%; }
+  #content .gform_wrapper .gform_body .gform_fields .gform_validation_container {
+    display: none; }
 #content .gform_wrapper .gform_footer {
   clear: both; }
   #content .gform_wrapper .gform_footer .gform_button {
