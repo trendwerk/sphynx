@@ -62,6 +62,16 @@ function tp_set_image_sizes() {
 add_action( 'after_switch_theme', 'tp_set_image_sizes' );
 
 /**
+ * Add rel="group" gallery items for Fancybox
+ */
+function tp_add_rel_groups( $link ) {
+    global $post;
+
+    return str_replace( '<a href', '<a rel="group" href', $link );
+}
+add_filter( 'wp_get_attachment_link', 'tp_add_rel_groups' );
+
+/**
  * Add HTML5 theme support
  */
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
