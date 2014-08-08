@@ -417,7 +417,14 @@ body {
 	margin-bottom: 0; 
 	
 	a { 
-		color: #FFF;		
+		color: #FFF;
+
+		&:active,
+		&:focus,
+		&:hover {
+			color: $text-light;
+		}
+
 	}
 	
 	aside {
