@@ -106,9 +106,7 @@ class TP_Post_Type_Posts extends WP_Widget {
 				<?php if( $instance['archive_link'] ) { 
 					?>
 			    	
-		    		<a class="more-link" href="<?php echo get_post_type_archive_link( $post_type->name ); ?>">
-		    			<?php echo __( 'View all', 'tp') . ' ' . strtolower( $post_type->labels->name ); ?>
-		    		</a>
+		    		<a class="more-link" href="<?php echo get_post_type_archive_link( $post_type->name ); ?>"><?php echo __( 'View all', 'tp') . ' ' . strtolower( $post_type->labels->name ); ?></a>
 
 		    		<?php 
 		    	} 
