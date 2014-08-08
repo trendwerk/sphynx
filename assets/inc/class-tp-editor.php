@@ -14,8 +14,8 @@ class TP_Editor {
 	 * Edit TinyMCE buttons
 	 */
 	function edit( $settings ) {
-		$settings['toolbar1'] = 'formatselect,bold,italic,bullist,numlist,link,unlink,wp_more,wpfullscreen,wp_adv';
-		$settings['toolbar2'] = 'styleselect,undo,redo,pastetext,removeformat';
+		$settings['toolbar1'] = 'formatselect, bold, italic, bullist, numlist, link, unlink, wp_more, wpfullscreen';
+		$settings['toolbar2'] = 'styleselect, undo, redo, charmap, blockquote, pastetext, removeformat';
 
 		return $settings;
 	}
