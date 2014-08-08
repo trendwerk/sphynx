@@ -54,7 +54,7 @@ $alert-yellow: 		#E3B000;
  * Sets the style of the WYSIWYG itself
  *
  */
-
- body {
- 	padding: 20px;
- }
+ 
+#tinymce {
+	padding: 20px !important;
+}

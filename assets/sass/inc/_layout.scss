@@ -326,7 +326,7 @@ body {
 #sub-header {
 	background-color: #CCC;
 	margin-top: 0;
-	padding: 72px 0 81px 0;
+	padding: 70px 0 100px 0;
 	text-align: center;
 
 	h1 {
@@ -337,8 +337,7 @@ body {
 	h2 {
 		font-size: 36px;
 		font-weight: normal;
-		margin-top: -2px;
-		margin-bottom: 22px;
+		margin-bottom: 0;
 	}
 
 	p {
@@ -418,7 +417,14 @@ body {
 	margin-bottom: 0; 
 	
 	a { 
-		color: #FFF;		
+		color: #FFF;
+
+		&:active,
+		&:focus,
+		&:hover {
+			color: $text-light;
+		}
+
 	}
 	
 	aside {
