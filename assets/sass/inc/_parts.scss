@@ -199,6 +199,7 @@
 		&:focus,
 		&:hover {
 			background: darken($light-background, 10%);
+			border-color: darken($light-background, 10%);
 		}
 	
 	}
