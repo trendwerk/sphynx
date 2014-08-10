@@ -52,24 +52,32 @@ if( ! isset( $content_width ) )
 function tp_set_image_sizes() {
 	update_option( 'thumbnail_size_w', 140 );
 	update_option( 'thumbnail_size_h', 140 );
-	
 	update_option( 'medium_size_w', 300 );
 	update_option( 'medium_size_h', '' );
-	
 	update_option( 'large_size_w', 600 );
 	update_option( 'large_size_h', '' );
+    update_option( 'image_default_link_type', 'file' );
 }
 add_action( 'after_switch_theme', 'tp_set_image_sizes' );
 
 /**
- * Add rel="group" gallery items for Fancybox
+ * Group gallery images together for Fancybox
  */
-function tp_add_rel_groups( $link ) {
+function tp_group_gallery_images( $link ) {
     global $post;
 
-    return str_replace( '<a href', '<a rel="group" href', $link );
+    return str_replace( '<a href', '<a rel="gallery" href', $link );
 }
-add_filter( 'wp_get_attachment_link', 'tp_add_rel_groups' );
+add_filter( 'wp_get_attachment_link', 'tp_group_gallery_images' );
+
+/**
+ * Force galleries to link to image files, not to attachment pages
+ */
+function tp_link_galleries_to_files( $out ) {
+    $out['link'] = 'file'; 
+    return $out;
+}
+add_filter( 'shortcode_atts_gallery', 'tp_link_galleries_to_files' );
 
 /**
  * Add HTML5 theme support
