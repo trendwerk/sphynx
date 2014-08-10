@@ -8,6 +8,8 @@ jQuery( function( $ ) {
 			$( this ).fancybox();
 	} );
 
+	$( '.gallery a' ).fancybox();
+	
 	/**
 	 * Open rel="external" in new tab
 	 */
