@@ -8,20 +8,18 @@
 		
 			<h1 id="page-title">
 				<?php 
-					if( is_category() || is_tag() || is_tax() ) { 
+					if( is_category() || is_tag() || is_tax() )
 						single_term_title( __( 'Posts about', 'tp' ) . ' ' );
-					} elseif( is_author() ) {
+					elseif( is_author() )
 						echo __( 'Posts by', 'tp' ) . ' ' . get_the_author_meta( 'display_name' );
-					} else {
+					else
 						_e( 'News', 'tp' );
-					}
 				?>
 			</h1>
 
 			<?php 
-				if( is_author() ) { 
-					get_template_part( 'part', 'author' ); 
-				} 
+				if( is_author() )
+					get_template_part( 'part', 'author' );
 			?>
 			
 			<?php if( have_posts() ) : ?>
