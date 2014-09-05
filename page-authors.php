@@ -35,7 +35,7 @@ get_header();
 							<?php 
 								foreach( $users as $user ) {
 									$GLOBALS['author'] = $user->ID;
-									get_template_part( 'part', 'author' );
+									get_template_part( 'partials/author' );
 								}
 							?>
 						</section>

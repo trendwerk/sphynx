@@ -36,13 +36,13 @@
 
 				</div>
 
-				<?php get_template_part( 'part', 'share' ); ?>
+				<?php get_template_part( 'partials/share' ); ?>
 
 				<p class="tags">
 					<?php the_tags( 'Tags ', '' ); ?>
 				</p>
 
-				<?php get_template_part( 'part', 'author' ); ?>
+				<?php get_template_part( 'partials/author' ); ?>
 
 				<p>
 					<a class="back" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">

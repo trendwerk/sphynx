@@ -19,7 +19,7 @@
 
 			<?php 
 				if( is_author() )
-					get_template_part( 'part', 'author' );
+					get_template_part( 'partials/author' );
 			?>
 			
 			<?php if( have_posts() ) : ?>
