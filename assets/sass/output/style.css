@@ -4225,7 +4225,9 @@ body {
     margin-bottom: 10px !important; }
 
   .addthis_toolbox span {
-    display: none; } }
+    display: block;
+    margin-bottom: 10px;
+    width: 100%; } }
 /**
  * @section Plugins
  *

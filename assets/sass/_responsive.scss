@@ -498,14 +498,10 @@
 
 	}
 
-	.addthis_toolbox {
-
-		span {
-			display: inline-block;
-			padding-right: 15px;
-			width: auto;
-		}
-
+	.addthis_toolbox span {
+		display: inline-block;
+		padding-right: 15px;
+		width: auto;
 	}
 
 }
@@ -555,12 +551,10 @@
 
 	}
 
-	.addthis_toolbox {
-
-		span {
-			display: none;
-		}
-
+	.addthis_toolbox span {
+		display: block;
+		margin-bottom: 10px;
+		width: 100%;
 	}
 
 }
