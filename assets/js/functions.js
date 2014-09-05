@@ -14,7 +14,7 @@ jQuery( function( $ ) {
 	$( '.gallery' ).each( function( i ) {
 		$( this ).find( 'a' ).prop( 'rel', 'fancybox-gallery-' + i );
 
-		$( this ).find( 'a' ).fancybox( {
+		$( this ).find( 'figure a' ).fancybox( {
 			type: 'image'
 		} );
 	} );
