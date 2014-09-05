@@ -61,25 +61,6 @@ function tp_set_image_sizes() {
 add_action( 'after_switch_theme', 'tp_set_image_sizes' );
 
 /**
- * Group gallery images together for Fancybox
- */
-function tp_group_gallery_images( $link ) {
-    global $post;
-
-    return str_replace( '<a href', '<a rel="gallery" href', $link );
-}
-add_filter( 'wp_get_attachment_link', 'tp_group_gallery_images' );
-
-/**
- * Force galleries to link to image files, not to attachment pages
- */
-function tp_link_galleries_to_files( $out ) {
-    $out['link'] = 'file'; 
-    return $out;
-}
-add_filter( 'shortcode_atts_gallery', 'tp_link_galleries_to_files' );
-
-/**
  * Add HTML5 theme support
  */
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
