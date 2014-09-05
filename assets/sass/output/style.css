@@ -4189,7 +4189,12 @@ body {
       font-size: 20px; }
 
   .page #content {
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .addthis_toolbox span {
+    display: inline-block;
+    padding-right: 15px;
+    width: auto; } }
 /**
  * @section    Responsive
  * @subsection Small mobile
@@ -4217,7 +4222,10 @@ body {
   #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi input {
     margin-bottom: 0 !important; }
   #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi label {
-    margin-bottom: 10px !important; } }
+    margin-bottom: 10px !important; }
+
+  .addthis_toolbox span {
+    display: none; } }
 /**
  * @section Plugins
  *

@@ -32,7 +32,6 @@
 
 	#header {
 
-
 		#topnav,
 		#search,
 		#logo {
@@ -499,6 +498,16 @@
 
 	}
 
+	.addthis_toolbox {
+
+		span {
+			display: inline-block;
+			padding-right: 15px;
+			width: auto;
+		}
+
+	}
+
 }
 
 /**
@@ -542,6 +551,14 @@
 				margin-bottom: 10px !important;
 			}
 
+		}
+
+	}
+
+	.addthis_toolbox {
+
+		span {
+			display: none;
 		}
 
 	}
