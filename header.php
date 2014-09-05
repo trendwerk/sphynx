@@ -87,23 +87,6 @@
 
 		</nav>
 
-		<?php if ( ! is_front_page() ) { ?>
-
-			<nav id="breadcrumbs" class="container">
-			
-				<div class="container-inner">
-
-					<div id="breadcrumbs-inner">
-
-						<?php
-							_e( 'You are here: ', 'tp' );
-							tp_breadcrumbs('<i class="fa fa-chevron-right"></i>'); 
-						?>
-
-					</div>
-
-				</div>
-			
-			</nav>
-
-		<?php }
+		<?php 
+			if( ! is_front_page() )
+				get_template_part( 'partials/breadcrumbs' );
