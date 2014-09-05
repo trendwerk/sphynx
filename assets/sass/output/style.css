@@ -3738,35 +3738,31 @@ p.tags {
  */
 .widget_tp_social ul {
   border: none;
-  /* large icons with text */
-  /* small icons with text */
-  /* large icons without text */
-  /* small icons without text */ }
+  /* large icons with text */ }
   .widget_tp_social ul li {
     border-top: none;
+    display: inline;
     padding: 0;
     /* rollover colors */ }
     .widget_tp_social ul li a {
-      clear: both;
       display: block;
       float: left;
       margin: 0 0 10px 0;
       text-decoration: none; }
       .widget_tp_social ul li a i {
-        -webkit-border-radius: 999999px;
-        -moz-border-radius: 999999px;
-        border-radius: 999999px;
+        -webkit-border-radius: 999px;
+        -moz-border-radius: 999px;
+        border-radius: 999px;
         background: #999999;
-        color: #fff;
-        display: block;
-        font-size: 14px;
+        color: #FFF;
+        font-size: 16px;
         float: left;
-        height: 30px;
-        line-height: 30px;
+        height: 32px;
+        line-height: 32px;
         margin: 0 5px 0 0;
         text-align: center;
         text-decoration: none;
-        width: 30px; }
+        width: 32px; }
       .widget_tp_social ul li a span.title {
         line-height: 32px; }
       .widget_tp_social ul li a:hover span {
@@ -3787,26 +3783,6 @@ p.tags {
       background: #333333; }
     .widget_tp_social ul li.rss a:hover i {
       background: #FF6600; }
-  .widget_tp_social ul.small-icons-text li a, .widget_tp_social ul.small-icons li a {
-    margin: 0 0 5px 0; }
-    .widget_tp_social ul.small-icons-text li a i, .widget_tp_social ul.small-icons li a i {
-      font-size: 14px;
-      line-height: 14px;
-      height: 14px;
-      padding: 4px;
-      width: 14px; }
-    .widget_tp_social ul.small-icons-text li a span.title, .widget_tp_social ul.small-icons li a span.title {
-      line-height: 24px; }
-  .widget_tp_social ul.large-icons li a {
-    clear: none; }
-    .widget_tp_social ul.large-icons li a span.title {
-      display: none; }
-  .widget_tp_social ul.small-icons li a {
-    clear: none; }
-    .widget_tp_social ul.small-icons li a i {
-      margin: 0 5px 0 0; }
-    .widget_tp_social ul.small-icons li a span.title {
-      display: none; }
 
 /**
  * @section    Widget

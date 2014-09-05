@@ -151,28 +151,27 @@
 
 		li {
 			border-top: none;
+			display: inline;
 			padding: 0;
 
 			a {
-				clear: both;
 				display: block;
 				float: left;
 				margin: 0 0 10px 0;
 				text-decoration: none;
 
 				i { 
-					@include border-radius(999999px);
+					@include border-radius(999px);
 					background: $text-light;
-					color: #fff;
-					display: block;
-					font-size: 14px;
+					color: #FFF;
+					font-size: 16px;
 					float: left;
-					height: 30px;
-					line-height: 30px;
+					height: 32px;
+					line-height: 32px;
 					margin: 0 5px 0 0;
 					text-align: center;
 					text-decoration: none;
-					width: 30px;
+					width: 32px;
 				}
 
 				span.title { 
@@ -229,64 +228,6 @@
 
 		}
 		
-		/* small icons with text */
-
-		&.small-icons-text,
-		&.small-icons {
-
-			li a {
-				margin: 0 0 5px 0;
-
-				i { 
-					font-size: 14px;
-					line-height: 14px;
-					height: 14px;
-					padding: 4px;
-					width: 14px;
-				}
-
-				span.title {
-					line-height: 24px;
-				}
-
-			}
-
-		}
-
-		/* large icons without text */
-
-		&.large-icons {
-
-			li a {
-				clear: none;
-
-				span.title {
-					display: none;
-				}
-
-			}
-
-		}
-
-		/* small icons without text */
-
-		&.small-icons {
-
-			li a {
-				clear: none;
-
-				i {
-					margin: 0 5px 0 0;
-				}
-
-				span.title {
-					display: none;
-				}
-
-			}
-
-		}
-
 	}
 	
 }

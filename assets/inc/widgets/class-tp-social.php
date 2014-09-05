@@ -8,13 +8,6 @@
 class TP_Social extends WP_Widget {
 	function TP_Social() {
 		$this->WP_Widget( 'TP_Social', __( 'Social media links', 'tp' ), array( 'description' => __( 'Shows links to specified social network profiles', 'tp' ) ) );
-
-		$this->types = array(
-			'large-icons' => __( 'Large icons', 'tp' ),
-			'large-icons-text' => __( 'Large icons with text', 'tp' ),
-			'small-icons' => __( 'Small icons', 'tp' ),
-			'small-icons-text' => __( 'Small icons with text', 'tp' ),
-		);
 	}
 	
 	function form( $instance ) {
@@ -24,18 +17,6 @@ class TP_Social extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
 				<strong><?php _e( 'Title' ); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
-			</label>
-		</p>
-
-		<p>
-			<label>
-				<strong><?php _e( 'Icon types', 'tp' ); ?></strong><br />
-				<select class="widefat" name="<?php echo $this->get_field_name( 'type' ); ?>">
-					<?php 
-						foreach( $this->types as $size_type => $label )
-							echo '<option value="' . $size_type . '" ' . selected( $size_type, $instance['type'] ) . '>' . $label . '</option>';
-					?>
-				</select>
 			</label>
 		</p>
 
@@ -54,14 +35,13 @@ class TP_Social extends WP_Widget {
 
 			?>
 
-			<ul class="social <?php echo $instance['type']; ?>">
+			<ul class="social">
 
 				<?php if( $twitter = get_option( 'tp-twitter' ) ) { ?>
 
 					<li class="twitter">
 						<a rel="external" href="<?php echo $twitter; ?>" title="<?php _e( 'Follow us on Twitter', 'tp' ); ?>">
 							<i class="fa fa-twitter"></i>
-							<span class="title"><?php _e( 'Follow us on Twitter', 'tp' ); ?></span>
 						</a>
 					</li>
 
@@ -70,7 +50,6 @@ class TP_Social extends WP_Widget {
 					<li class="facebook">
 						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e( 'Like our Facebook page', 'tp' ); ?>">
 							<i class="fa fa-facebook"></i>
-							<span class="title"><?php _e( 'Like our Facebook page', 'tp' ); ?></span>
 						</a>
 					</li>
 
@@ -79,7 +58,6 @@ class TP_Social extends WP_Widget {
 					<li class="googleplus">
 						<a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e( 'Add us on Google+', 'tp' ); ?>">
 							<i class="fa fa-google-plus"></i>
-							<span class="title"><?php _e( 'Add us on Google+', 'tp' ); ?></span>
 						</a>
 					</li>
 
@@ -88,7 +66,6 @@ class TP_Social extends WP_Widget {
 					<li class="linkedin">
 						<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e( 'Connect with us on LinkedIn', 'tp' ); ?>">
 							<i class="fa fa-linkedin"></i>
-							<span class="title"><?php _e('Connect with us on LinkedIn','tp'); ?></span>
 						</a>
 					</li>
 
@@ -97,7 +74,6 @@ class TP_Social extends WP_Widget {
 					<li class="youtube">
 						<a rel="external" href="<?php echo $youtube; ?>" title="<?php _e( 'View our YouTube channel', 'tp' ); ?>">
 							<i class="fa fa-youtube"></i>
-							<span class="title"><?php _e( 'View our YouTube channel', 'tp' ); ?></span>
 						</a>
 					</li>
 
@@ -106,7 +82,6 @@ class TP_Social extends WP_Widget {
 					<li class="email">
 						<a href="<?php echo $newsletter; ?>" title="<?php _e( 'E-mail newsletter', 'tp' ); ?>">
 							<i class="fa fa-envelope"></i>
-							<span class="title"><?php _e( 'E-mail newsletter', 'tp' ); ?></span>
 						</a>
 					</li>
 
@@ -115,7 +90,6 @@ class TP_Social extends WP_Widget {
 					<li class="rss">
 						<a href="<?php bloginfo( 'rss2_url' ); ?>" title="<?php _e( 'Subscribe via RSS', 'tp' ); ?>">
 							<i class="fa fa-rss"></i>
-							<span class="title"><?php _e( 'Subscribe to our RSS', 'tp' ); ?></span>
 						</a>
 					</li>
 
