@@ -1958,7 +1958,7 @@ body {
   color: #666666;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
-  line-height: 25px; }
+  line-height: 30px; }
 
 /**
  * @section    Typography
@@ -1974,7 +1974,7 @@ h6 {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 700;
   line-height: 1.5em;
-  margin: 0 0 25px 0; }
+  margin: 0 0 30px 0; }
 
 h1 {
   font-size: 36px; }
@@ -2089,14 +2089,14 @@ i {
  */
 ul {
   list-style-position: outside;
-  margin: 0 0 25px 20px; }
+  margin: 0 0 30px 20px; }
   ul ul {
     margin: 0 0 0 20px; }
 
 ol {
   list-style-position: outside;
   list-style-type: decimal;
-  margin: 0 0 25px 20px; }
+  margin: 0 0 30px 20px; }
   ol ol {
     list-style-type: lower-alpha;
     margin: 0 0 0 20px; }
@@ -2109,7 +2109,7 @@ table {
   border: 1px solid #cccccc;
   border-collapse: collapse;
   border-spacing: 0;
-  margin: 0 0 25px 0;
+  margin: 0 0 30px 0;
   width: 100%; }
   table tr {
     border-bottom: 1px solid #cccccc;
@@ -2135,7 +2135,7 @@ blockquote {
   display: inline-block;
   font-size: 16px;
   font-style: italic;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   text-align: center;
   width: 100%; }
   blockquote p {
@@ -2229,7 +2229,7 @@ hr {
   border-top: 1px solid #cccccc;
   display: block;
   height: 1px;
-  margin: 0 0 25px 0;
+  margin: 0 0 30px 0;
   padding: 0; }
 
 .telephone {
@@ -2537,11 +2537,11 @@ input#adminbar-search {
  */
 .alignleft {
   float: left;
-  margin: 0 20px 25px 0; }
+  margin: 0 20px 30px 0; }
 
 .alignright {
   float: right;
-  margin: 0 0 25px 20px; }
+  margin: 0 0 30px 20px; }
 
 .aligncenter {
   display: block;
@@ -2553,7 +2553,7 @@ input#adminbar-search {
  */
 .wp-caption {
   background: #eeeeee;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   max-width: 100%;
   text-align: center; }
   .wp-caption img {
@@ -2574,8 +2574,8 @@ input#adminbar-search {
 .gallery {
   clear: both;
   float: left;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   width: 100%; }
   .gallery .gallery-item {
     float: left !important;
@@ -3088,7 +3088,7 @@ body {
       color: #CCC; }
   #footer aside {
     float: left;
-    padding-top: 25px;
+    padding-top: 30px;
     width: 100%; }
     #footer aside .widget {
       -moz-box-sizing: border-box;
@@ -3101,7 +3101,7 @@ body {
       clear: none;
       float: left;
       margin: 10px;
-      padding: 25px 0; }
+      padding: 30px 0; }
       @media (max-width: 980px) {
         #footer aside .widget {
           clear: both;
@@ -3197,7 +3197,7 @@ body {
 .search article,
 .blog article {
   clear: both;
-  padding: 0 0 25px 0;
+  padding: 0 0 30px 0;
   width: 100%; }
   .archive article:last-of-type,
   .search article:last-of-type,
@@ -3225,7 +3225,7 @@ body {
   .search article figure,
   .blog article figure {
     float: right;
-    margin: 0 0 25px 20px; }
+    margin: 0 0 30px 20px; }
   .archive article .search-highlight,
   .search article .search-highlight,
   .blog article .search-highlight {
@@ -3238,7 +3238,7 @@ body {
     box-sizing: border-box;
     background: #eeeeee;
     padding: 30px 30px 5px 30px;
-    margin-bottom: 50px; }
+    margin-bottom: 60px; }
 
 /**
  * @section    Templates
@@ -3274,7 +3274,7 @@ body {
  */
 .search article h2,
 .error404 article h2 {
-  margin-bottom: 25px; }
+  margin-bottom: 30px; }
 .search .search input[type="submit"],
 .error404 .search input[type="submit"] {
   font-size: 16px;
@@ -3282,7 +3282,7 @@ body {
   padding: 0 15px; }
 
 .search-no-results #main #content {
-  margin-bottom: 50px; }
+  margin-bottom: 60px; }
 
 .error404 #main #content {
   -moz-box-sizing: border-box;
@@ -3291,7 +3291,7 @@ body {
   float: left;
   margin: 10px 10px;
   width: 780px;
-  margin-bottom: 50px; }
+  margin-bottom: 60px; }
   @media (max-width: 980px) {
     .error404 #main #content {
       clear: both;
@@ -3321,7 +3321,7 @@ body {
   clear: both;
   float: left;
   position: relative;
-  margin: 25px 0;
+  margin: 30px 0;
   width: 100%; }
   #respond p {
     clear: both;
@@ -3356,7 +3356,7 @@ body {
 #comments {
   clear: both;
   float: left;
-  margin: 25px 0;
+  margin: 30px 0;
   width: 100%; }
   #comments ol {
     list-style-type: none;
@@ -3377,8 +3377,8 @@ body {
         background-color: #eeeeee;
         clear: both;
         float: left;
-        margin-bottom: 25px;
-        padding-bottom: 25px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
         position: relative;
         padding: 30px 30px 50px 30px;
         width: 100%; }
@@ -3435,7 +3435,7 @@ body {
 #pager {
   clear: both;
   font-size: 13px;
-  padding: 25px 0;
+  padding: 30px 0;
   text-align: center;
   width: 100%; }
   #pager .page-numbers,
@@ -3532,7 +3532,7 @@ body {
   background: #EEE;
   clear: both;
   float: left;
-  margin: 0 0 25px 0;
+  margin: 0 0 30px 0;
   padding: 40px;
   width: 100%; }
   .author-card .author-avatar {
@@ -3675,7 +3675,7 @@ body {
   .widget img.attachment-widget {
     display: block;
     height: auto;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     width: 100%; }
   .widget a.button {
     margin-bottom: 0; }
@@ -3686,7 +3686,7 @@ body {
     margin-bottom: 0; }
   .widget ul {
     border-bottom: 1px solid #cccccc;
-    margin: 0 0 25px 0; }
+    margin: 0 0 30px 0; }
     .widget ul:last-of-type {
       margin-bottom: 0; }
     .widget ul li {
@@ -3943,10 +3943,10 @@ body {
   #main {
     padding-bottom: 0; }
     #main #content {
-      padding-bottom: 25px;
+      padding-bottom: 30px;
       padding-right: 0; }
     #main aside {
-      margin: 0 0 25px 0;
+      margin: 0 0 30px 0;
       width: 100%; }
       #main aside .widget {
         clear: none;
@@ -4132,7 +4132,7 @@ body {
       #main aside .widget:nth-child(even) {
         margin-left: 0; }
     #main #content h1 {
-      margin-bottom: 25px; }
+      margin-bottom: 30px; }
     #main #content .gform_wrapper form .gform_body .gform_fields .gfield {
       margin-bottom: 20px; }
       #main #content .gform_wrapper form .gform_body .gform_fields .gfield .gfield_description,
@@ -4166,7 +4166,7 @@ body {
     #footer aside .widget:nth-child(even) {
       margin-left: 0; }
   #footer #credits {
-    padding-bottom: 25px; }
+    padding-bottom: 30px; }
     #footer #credits #copyright,
     #footer #credits nav {
       text-align: center;
@@ -4413,7 +4413,7 @@ body {
           margin-bottom: 20px;
           width: 61.6%; }
     #content .gform_wrapper .gform_body .gform_fields .gfield .gform_drop_area {
-      margin-bottom: 25px; }
+      margin-bottom: 30px; }
       #content .gform_wrapper .gform_body .gform_fields .gfield .gform_drop_area .gform_drop_instructions {
         float: left;
         font-size: 13px;

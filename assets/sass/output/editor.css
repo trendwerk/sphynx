@@ -1958,7 +1958,7 @@ body {
   color: #666666;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
-  line-height: 25px; }
+  line-height: 30px; }
 
 /**
  * @section    Typography
@@ -1974,7 +1974,7 @@ h6 {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 700;
   line-height: 1.5em;
-  margin: 0 0 25px 0; }
+  margin: 0 0 30px 0; }
 
 h1 {
   font-size: 36px; }
@@ -2089,14 +2089,14 @@ i {
  */
 ul {
   list-style-position: outside;
-  margin: 0 0 25px 20px; }
+  margin: 0 0 30px 20px; }
   ul ul {
     margin: 0 0 0 20px; }
 
 ol {
   list-style-position: outside;
   list-style-type: decimal;
-  margin: 0 0 25px 20px; }
+  margin: 0 0 30px 20px; }
   ol ol {
     list-style-type: lower-alpha;
     margin: 0 0 0 20px; }
@@ -2109,7 +2109,7 @@ table {
   border: 1px solid #cccccc;
   border-collapse: collapse;
   border-spacing: 0;
-  margin: 0 0 25px 0;
+  margin: 0 0 30px 0;
   width: 100%; }
   table tr {
     border-bottom: 1px solid #cccccc;
@@ -2135,7 +2135,7 @@ blockquote {
   display: inline-block;
   font-size: 16px;
   font-style: italic;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   text-align: center;
   width: 100%; }
   blockquote p {
@@ -2229,7 +2229,7 @@ hr {
   border-top: 1px solid #cccccc;
   display: block;
   height: 1px;
-  margin: 0 0 25px 0;
+  margin: 0 0 30px 0;
   padding: 0; }
 
 .telephone {
@@ -2537,11 +2537,11 @@ input#adminbar-search {
  */
 .alignleft {
   float: left;
-  margin: 0 20px 25px 0; }
+  margin: 0 20px 30px 0; }
 
 .alignright {
   float: right;
-  margin: 0 0 25px 20px; }
+  margin: 0 0 30px 20px; }
 
 .aligncenter {
   display: block;
@@ -2553,7 +2553,7 @@ input#adminbar-search {
  */
 .wp-caption {
   background: #eeeeee;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   max-width: 100%;
   text-align: center; }
   .wp-caption img {
@@ -2574,8 +2574,8 @@ input#adminbar-search {
 .gallery {
   clear: both;
   float: left;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   width: 100%; }
   .gallery .gallery-item {
     float: left !important;
