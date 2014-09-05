@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-08 16:23+0100\n"
-"PO-Revision-Date: 2014-08-08 16:23+0100\n"
-"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
+"POT-Creation-Date: 2014-09-05 15:46+0100\n"
+"PO-Revision-Date: 2014-09-05 15:46+0100\n"
+"Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -61,10 +61,6 @@ msgstr "Vorige"
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../header.php:99
-msgid "You are here: "
-msgstr "U bent hier: "
-
 #: ../../index.php:12
 msgid "Posts about"
 msgstr "Berichten over"
@@ -77,23 +73,23 @@ msgstr "Berichten van"
 msgid "News"
 msgstr "Nieuws"
 
-#: ../../index.php:40 ../../single.php:16
+#: ../../index.php:38 ../../single.php:16
 msgid "Posted on"
 msgstr "Geplaatst op"
 
-#: ../../index.php:41 ../../single.php:17
+#: ../../index.php:39 ../../single.php:17
 msgid "by"
 msgstr "door"
 
-#: ../../index.php:42 ../../single.php:18
+#: ../../index.php:40 ../../single.php:18
 msgid "in the category"
 msgstr "in de categorie"
 
-#: ../../index.php:51 ../../search.php:32
+#: ../../index.php:49 ../../search.php:32
 msgid "Read more"
 msgstr "Lees verder"
 
-#: ../../index.php:62
+#: ../../index.php:60
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
@@ -104,50 +100,6 @@ msgstr "Auteurs overzicht"
 #: ../../page-sitemap.php:23
 msgid "Pages"
 msgstr "Pagina's"
-
-#: ../../part-author.php:32
-msgid "Written by"
-msgstr "Geschreven door"
-
-#: ../../part-author.php:55
-#, php-format
-msgid "Follow %1$s on"
-msgstr "Volg %1$s op"
-
-#: ../../part-author.php:104
-#, php-format
-msgid "View 1 post"
-msgid_plural "View all %1$s posts"
-msgstr[0] "Bekijk %1$s bericht"
-msgstr[1] "Bekijk alle %1$s berichten"
-
-#: ../../part-share.php:5
-msgid "Share this article"
-msgstr "Deel dit artikel"
-
-#: ../../part-share.php:7
-msgid "Share this on Facebook"
-msgstr "Deel dit artikel op Facebook"
-
-#: ../../part-share.php:11
-msgid "Share this on Twitter"
-msgstr "Deel dit artikel op Twitter"
-
-#: ../../part-share.php:15
-msgid "Share this on Google Plus"
-msgstr "Deel dit artikel op Google Plus"
-
-#: ../../part-share.php:19
-msgid "Share this on LinkedIn"
-msgstr "Deel dut artikel op LinkedIn"
-
-#: ../../part-share.php:23
-msgid "Email this"
-msgstr "Email dit artikel"
-
-#: ../../part-share.php:27
-msgid "Share this on other networks"
-msgstr "Deel dit artikel via andere netwerken"
 
 #: ../../search.php:10
 #, php-format
@@ -205,19 +157,19 @@ msgstr "Secondaire knop"
 msgid "More link"
 msgstr "Lees meer link"
 
-#: ../../assets/inc/misc.php:85 ../inc/misc.php:85
+#: ../../assets/inc/misc.php:84 ../inc/misc.php:84
 msgid "Facebook profile URL"
 msgstr "Facebook profiel URL"
 
-#: ../../assets/inc/misc.php:86 ../inc/misc.php:86
+#: ../../assets/inc/misc.php:85 ../inc/misc.php:85
 msgid "LinkedIn profile URL"
 msgstr "LinkedIn profiel URL"
 
-#: ../../assets/inc/misc.php:87 ../inc/misc.php:87
+#: ../../assets/inc/misc.php:86 ../inc/misc.php:86
 msgid "Google+ profile URL"
 msgstr "Google+ profiel URL"
 
-#: ../../assets/inc/misc.php:88 ../inc/misc.php:88
+#: ../../assets/inc/misc.php:87 ../inc/misc.php:87
 msgid "Twitter @username"
 msgstr "Twitter @gebruikersnaam"
 
@@ -529,8 +481,8 @@ msgstr "Link type"
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:113
 #: ../inc/widgets/class-tp-title-content-button.php:81
 #: ../inc/widgets/class-tp-title-image-content-button.php:113
-msgid "This link is external"
-msgstr "Dit is een externe link"
+msgid "Open link in new window / tab"
+msgstr "Open link in een nieuw venster"
 
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:10
 #: ../inc/widgets/class-tp-title-image-content-button.php:10
@@ -592,6 +544,57 @@ msgstr "Twitter gebruikersnaam"
 #, php-format
 msgid "Tweets from @%1$s"
 msgstr "Tweets van @%1$s"
+
+#: ../../partials/author.php:32
+msgid "Written by"
+msgstr "Geschreven door"
+
+#: ../../partials/author.php:55
+#, php-format
+msgid "Follow %1$s on"
+msgstr "Volg %1$s op"
+
+#: ../../partials/author.php:104
+#, php-format
+msgid "View 1 post"
+msgid_plural "View all %1$s posts"
+msgstr[0] "Bekijk %1$s bericht"
+msgstr[1] "Bekijk alle %1$s berichten"
+
+#: ../../partials/breadcrumbs.php:8
+msgid "You are here"
+msgstr "U bent hier"
+
+#: ../../partials/share.php:5
+msgid "Share this article"
+msgstr "Deel dit artikel"
+
+#: ../../partials/share.php:7
+msgid "Share this on Facebook"
+msgstr "Deel dit artikel op Facebook"
+
+#: ../../partials/share.php:11
+msgid "Share this on Twitter"
+msgstr "Deel dit artikel op Twitter"
+
+#: ../../partials/share.php:15
+msgid "Share this on Google Plus"
+msgstr "Deel dit artikel op Google Plus"
+
+#: ../../partials/share.php:19
+msgid "Share this on LinkedIn"
+msgstr "Deel dut artikel op LinkedIn"
+
+#: ../../partials/share.php:23
+msgid "Email this"
+msgstr "Email dit artikel"
+
+#: ../../partials/share.php:27
+msgid "Share this on other networks"
+msgstr "Deel dit artikel via andere netwerken"
+
+#~ msgid "This link is external"
+#~ msgstr "Dit is een externe link"
 
 #~ msgid "WordPress theme framework for awesome websites"
 #~ msgstr "WordPress theme framework for awesome websites"
