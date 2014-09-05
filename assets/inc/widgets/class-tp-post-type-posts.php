@@ -20,7 +20,7 @@ class TP_Post_Type_Posts extends WP_Widget {
 
 			<p>
 				<label>
-					<strong><?php _e( 'Title', 'tp' ); ?></strong><br />
+					<strong><?php _e( 'Title' ); ?></strong><br />
 					<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
 				</label>
 			</p>
@@ -47,7 +47,7 @@ class TP_Post_Type_Posts extends WP_Widget {
 
 			<p>
 				<label>
-					<?php _e( 'Number of posts to show:', 'tp' ); ?>
+					<?php _e( 'Number of posts to show:' ); ?>
 					<input name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $instance['number']; ?>" size="3" />
 				</label>
 			</p>

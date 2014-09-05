@@ -25,14 +25,14 @@ class TP_Title_Content_Button extends WP_Widget {
 
 		<p>
 			<label>
-				<strong><?php _e( 'Title', 'tp' ); ?></strong><br />
+				<strong><?php _e( 'Title' ); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
 			</label>
 		</p>
 
 		<p>
 			<label>
-				<strong><?php _e('Content','tp'); ?></strong><br />
+				<strong><?php _e( 'Content' ); ?></strong><br />
 				<textarea class="widefat" name="<?php echo $this->get_field_name('content'); ?>" ><?php echo $instance['content']; ?></textarea>
 			</label>
 		</p>
@@ -78,7 +78,7 @@ class TP_Title_Content_Button extends WP_Widget {
 			<p>
 				<label>
 					<input type="checkbox" name="<?php echo $this->get_field_name( 'external' ); ?>" value="true" <?php checked( $instance['external'], true ); ?>>
-					<?php _e( 'This link is external', 'tp' ); ?>
+					<?php _e( 'Open link in new window / tab', 'tp' ); ?>
 				</label>
 			</p>
 

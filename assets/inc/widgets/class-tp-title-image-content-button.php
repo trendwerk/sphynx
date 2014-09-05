@@ -32,19 +32,19 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 
 		<p>
 			<label>
-				<strong><?php _e( 'Title', 'tp' ); ?></strong><br />
+				<strong><?php _e( 'Title' ); ?></strong><br />
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $instance['title']; ?>" />
 			</label>
 		</p>
 
 		<p>
 			<label>
-				<strong><?php _e( 'Image', 'tp' ); ?></strong><br />
+				<strong><?php _e( 'Image' ); ?></strong><br />
 
 				<?php 
 					if( ! $instance['image'] ) {
 						echo '<a class="tp-upload-image button-secondary">';
-							_e( 'Upload', 'tp' );
+							_e( 'Upload' );
 						echo '</a>';
 					} else {
 						echo '<div class="tp-edit-image">';
@@ -52,11 +52,11 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 						echo '</div>';
 
 						echo '<a class="tp-edit-image button-secondary">';
-							_e( 'Edit', 'tp' );
+							_e( 'Edit' );
 						echo '</a> ';
 
 						echo '<a class="tp-remove-image button-secondary">';
-							_e( 'Remove', 'tp' );
+							_e( 'Remove' );
 						echo '</a>';
 					} 
 				?>
@@ -66,7 +66,7 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 
 		<p>
 			<label>
-				<strong><?php _e('Content','tp'); ?></strong><br />
+				<strong><?php _e( 'Content' ); ?></strong><br />
 				<textarea class="widefat" name="<?php echo $this->get_field_name('content'); ?>" ><?php echo $instance['content']; ?></textarea>
 			</label>
 		</p>
@@ -110,7 +110,7 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 			<p>
 				<label>
 					<input type="checkbox" name="<?php echo $this->get_field_name( 'external' ); ?>" value="true" <?php checked( $instance['external'], true ); ?>>
-					<?php _e( 'This link is external', 'tp' ); ?>
+					<?php _e( 'Open link in new window / tab', 'tp' ); ?>
 				</label>
 			</p>
 
