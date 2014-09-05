@@ -3085,7 +3085,7 @@ body {
   #footer a {
     color: #FFF; }
     #footer a:active, #footer a:focus, #footer a:hover {
-      color: #999999; }
+      color: #CCC; }
   #footer aside {
     float: left;
     padding-top: 25px;
