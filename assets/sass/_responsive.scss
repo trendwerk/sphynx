@@ -478,7 +478,7 @@
 			padding: 45px 0 60px 0;
 
 			h1 {
-				font-size: 34px;
+				font-size: 32px;
 				margin-bottom: 10px;
 			}
 
@@ -498,7 +498,8 @@
 
 	}
 
-	.addthis_toolbox span {
+	#main #content .addthis_toolbox span,
+	#main #content .tags .label {
 		display: inline-block;
 		padding-right: 15px;
 		width: auto;
@@ -551,9 +552,12 @@
 
 	}
 
-	.addthis_toolbox span {
+	#main #content .addthis_toolbox span,
+	#main #content .tags .label {
 		display: block;
+		line-height: inherit;
 		margin-bottom: 10px;
+		line-height: 30px;
 		width: 100%;
 	}
 

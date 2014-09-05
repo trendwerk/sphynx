@@ -388,9 +388,14 @@ body {
 		}
 
 		.tags {
+			line-height: 1;
 
-			a:first-of-type {
-				margin-left: 125px;
+			span {
+				display: inline-block;
+				font-size: 13px;
+				padding-right: 125px;
+				position: relative;
+				top: 1px;
 			}
 			
 		}
@@ -403,9 +408,11 @@ body {
 		@include column-4;
 
 		.widget {
+
 			&:last-of-type {
 				margin-bottom: 0;
 			}
+
 		}
 
 	}

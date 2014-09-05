@@ -39,7 +39,7 @@
 				<?php get_template_part( 'partials/share' ); ?>
 
 				<p class="tags">
-					<?php the_tags( 'Tags ', '' ); ?>
+					<?php the_tags( '<span class="label">Tags</span> ', '' ); ?>
 				</p>
 
 				<?php get_template_part( 'partials/author' ); ?>

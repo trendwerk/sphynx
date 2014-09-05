@@ -3058,8 +3058,14 @@ body {
         color: #666666; }
         #main #content .meta a:active, #main #content .meta a:focus, #main #content .meta a:hover {
           color: #1f6fd1; }
-    #main #content .tags a:first-of-type {
-      margin-left: 125px; }
+    #main #content .tags {
+      line-height: 1; }
+      #main #content .tags span {
+        display: inline-block;
+        font-size: 13px;
+        padding-right: 125px;
+        position: relative;
+        top: 1px; }
   #main aside {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3349,6 +3355,12 @@ body {
     margin-left: 25%;
     width: auto; }
 
+p.tags {
+  display: block; }
+  p.tags a[rel="tag"] {
+    margin-right: 5px;
+    margin-bottom: 0; }
+
 /**
  * @section    Parts
  * @subsection Comments
@@ -3515,11 +3527,10 @@ body {
  * @section    Parts
  * @subsection AddThis
  */
-.addthis_toolbox {
-  margin-bottom: 20px; }
-  .addthis_toolbox span {
-    float: left;
-    width: 160px; }
+.addthis_toolbox span {
+  float: left;
+  font-size: 13px;
+  width: 160px; }
 
 /**
  * @section    Parts
@@ -3532,7 +3543,7 @@ body {
   background: #EEE;
   clear: both;
   float: left;
-  margin: 0 0 30px 0;
+  margin: 10px 0 30px 0;
   padding: 40px;
   width: 100%; }
   .author-card .author-avatar {
@@ -3584,7 +3595,7 @@ body {
   font-size: 14px;
   height: 30px;
   line-height: 30px;
-  margin: -3px 5px 0 0;
+  margin: 0 5px 0 0;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -4183,7 +4194,7 @@ body {
   .home #sub-header {
     padding: 45px 0 60px 0; }
     .home #sub-header h1 {
-      font-size: 34px;
+      font-size: 32px;
       margin-bottom: 10px; }
     .home #sub-header h2 {
       font-size: 20px; }
@@ -4191,7 +4202,8 @@ body {
   .page #content {
     padding-left: 0; }
 
-  .addthis_toolbox span {
+  #main #content .addthis_toolbox span,
+  #main #content .tags .label {
     display: inline-block;
     padding-right: 15px;
     width: auto; } }
@@ -4224,9 +4236,12 @@ body {
   #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi label {
     margin-bottom: 10px !important; }
 
-  .addthis_toolbox span {
+  #main #content .addthis_toolbox span,
+  #main #content .tags .label {
     display: block;
+    line-height: inherit;
     margin-bottom: 10px;
+    line-height: 30px;
     width: 100%; } }
 /**
  * @section Plugins

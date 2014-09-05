@@ -59,6 +59,16 @@
 
 }
 
+p.tags {
+	display: block;
+
+	a[rel="tag"] {
+		margin-right: 5px;
+		margin-bottom: 0;
+	}
+
+}
+
 /**
  * @section    Parts
  * @subsection Comments
@@ -276,10 +286,10 @@
  */
 
 .addthis_toolbox {
-	margin-bottom: 20px;
 
 	span {
 		float: left;
+		font-size: 13px;
 		width: 160px;
 	}
 
@@ -295,7 +305,7 @@
 	background: #EEE;
 	clear: both;
 	float: left;
-	margin: 0 0 $line-height 0;
+	margin: 10px 0 $line-height 0;
 	padding: 40px;
 	width: 100%;
 
@@ -370,7 +380,7 @@
 		font-size: 14px;
 		height: 30px;
 		line-height: 30px;
-		margin: -3px 5px 0 0;
+		margin: 0 5px 0 0;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
