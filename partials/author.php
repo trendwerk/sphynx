@@ -110,4 +110,4 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 	</section>
 
 <?php 
-} 
+}

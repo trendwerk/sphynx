@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
 <header id="sub-header" class="container">
 
