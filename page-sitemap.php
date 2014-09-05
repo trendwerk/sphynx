@@ -107,9 +107,9 @@
 						<?php 
 					}
 
-				endwhile; endif;			
+				endwhile; endif;
 			?>
-			
+
 		</article>
 
 	</div>
@@ -117,4 +117,4 @@
 </section>
 
 <?php
-	get_footer();
+get_footer();

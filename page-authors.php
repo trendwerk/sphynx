@@ -1,5 +1,5 @@
 <?php 
-//Template name: Authors overview
+/* Template name: Authors overview */
 __( 'Authors overview', 'tp' );
 
 get_header();
@@ -53,4 +53,4 @@ get_header();
 </section>
 
 <?php
-	get_footer();
+get_footer();

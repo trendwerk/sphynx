@@ -17,7 +17,7 @@
 					<?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?> 
 					<?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
 				</p>
-				
+
 				<div>
 
 					<figure>
@@ -35,34 +35,34 @@
 					?>
 
 				</div>
-				
+
 				<?php get_template_part( 'part', 'share' ); ?>
 
 				<p class="tags">
 					<?php the_tags( 'Tags ', '' ); ?>
 				</p>
-								
+
 				<?php get_template_part( 'part', 'author' ); ?>
-				
+
 				<p>
 					<a class="back" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
 						<?php _e( 'Back to the overview', 'tp' ); ?>
 					</a>
 				</p>
-				
+
 			<?php endwhile; endif; ?>
-			
+
 			<?php comments_template(); ?>
-			
+
 		</article>
-		
+
 		<aside>
 			<?php dynamic_sidebar( 'blog' ); ?>
 		</aside>
-		
+
 	</div>
-	
+
 </section>
 
 <?php
-	get_footer();
+get_footer();

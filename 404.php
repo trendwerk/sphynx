@@ -29,4 +29,4 @@
 </section>
 
 <?php
-	get_footer();
+get_footer();

@@ -24,8 +24,8 @@ function tp_enqueue_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/assets/sass/output/style.css' );
 	
 	//Get jQuery from Google CDN
-    wp_deregister_script( 'jquery' );
-    wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' );
+	wp_deregister_script( 'jquery' );
+	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' );
 }
 add_action( 'wp_enqueue_scripts', 'tp_enqueue_scripts' );
 
