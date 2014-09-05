@@ -74,5 +74,6 @@ function tp_pagination( $args = array() ) {
 		'next_text' => __( 'Next', 'tp' )
 	) ) );
 
-	echo '<nav id="pager">' . $pagination . '</nav>';
+	if( 0 < strlen( $pagination ) )
+		echo '<nav id="pager">' . $pagination . '</nav>';
 }
