@@ -1,9 +1,8 @@
 <?php
 /**
- * Enqueue scripts and styles, register languages
+ * Theme support & localization
  * 
  * @package TrendPress
- * @see assets/inc/ for all specific functions
  */
 
 /**
