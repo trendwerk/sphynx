@@ -3439,6 +3439,8 @@ p.tags {
               font-style: normal;
               font-weight: normal;
               text-decoration: inherit; }
+      #comments ol li.comment.bypostauthor .comment-body {
+        background-color: #e1e1e1; }
 
 /**
  * @section    Parts

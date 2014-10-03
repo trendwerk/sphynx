@@ -169,6 +169,10 @@ p.tags {
 
 			}
 
+			&.bypostauthor .comment-body {
+				background-color: darken($light-background, 5%);
+			}
+
 		}
 
 	}
