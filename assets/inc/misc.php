@@ -66,6 +66,11 @@ add_action( 'after_switch_theme', 'tp_set_image_sizes' );
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
 /**
+ * Add theme support for RSS links
+ */
+add_theme_support( 'automatic-feed-links' );
+
+/**
  * Responsive video container
  */
 function tp_video_embed( $html ) {
