@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-11 13:29+0100\n"
-"PO-Revision-Date: 2014-07-11 13:29+0100\n"
+"POT-Creation-Date: 2014-10-03 15:51+0100\n"
+"PO-Revision-Date: 2014-10-03 15:51+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -178,15 +178,6 @@ msgstr "404"
 #: ../../assets/inc/class-tp-nav.php:307 ../inc/class-tp-nav.php:307
 msgid "Blog"
 msgstr "Blog"
-
-#: ../../assets/inc/class-tp-plugins.php:42 ../inc/class-tp-plugins.php:42
-#, php-format
-msgid "Plugins in the %1$s folder are executed automatically."
-msgstr "Plugins in de %1$s folder worden automatisch uitgevoerd."
-
-#: ../../assets/inc/class-tp-plugins.php:122 ../inc/class-tp-plugins.php:122
-msgid "TrendPress"
-msgstr "TrendPress"
 
 #: ../../assets/inc/class-tp-profile.php:25 ../inc/class-tp-profile.php:25
 msgid "Publish profile"
@@ -456,6 +447,12 @@ msgstr "Optionele plugins"
 #: ../inc/views/recommended-plugins.php:35
 msgid "Developer tools"
 msgstr "Ontwikkelaars tools"
+
+#~ msgid "Plugins in the %1$s folder are executed automatically."
+#~ msgstr "Plugins in de %1$s folder worden automatisch uitgevoerd."
+
+#~ msgid "TrendPress"
+#~ msgstr "TrendPress"
 
 #~ msgid ""
 #~ "Send e-mails form the website using your preferred SMTP server to prevent "

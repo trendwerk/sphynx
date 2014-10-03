@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-16 14:27+0100\n"
-"PO-Revision-Date: 2014-05-16 14:27+0100\n"
-"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
+"POT-Creation-Date: 2014-10-03 15:51+0100\n"
+"PO-Revision-Date: 2014-10-03 15:51+0100\n"
+"Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -177,15 +177,6 @@ msgstr "404"
 #: ../../assets/inc/class-tp-nav.php:307 ../inc/class-tp-nav.php:307
 msgid "Blog"
 msgstr "Blog"
-
-#: ../../assets/inc/class-tp-plugins.php:42 ../inc/class-tp-plugins.php:42
-#, php-format
-msgid "Plugins in the %1$s folder are executed automatically."
-msgstr "Les plugins dans le dossier %1$s sont exécutés automatiquement."
-
-#: ../../assets/inc/class-tp-plugins.php:122 ../inc/class-tp-plugins.php:122
-msgid "TrendPress"
-msgstr "TrendPress"
 
 #: ../../assets/inc/class-tp-profile.php:25 ../inc/class-tp-profile.php:25
 msgid "Publish profile"
@@ -413,20 +404,13 @@ msgstr ""
 msgid "Home"
 msgstr "Accueil"
 
-#: ../../assets/inc/functions-pagination.php:22
-#: ../inc/functions-pagination.php:22
-msgid "Pagination"
-msgstr "Pagination"
-
-#: ../../assets/inc/functions-pagination.php:23
-#: ../inc/functions-pagination.php:23
-msgid "Next"
-msgstr "Suivant"
-
-#: ../../assets/inc/functions-pagination.php:24
-#: ../inc/functions-pagination.php:24
+#: ../../assets/inc/functions.php:73 ../inc/functions.php:73
 msgid "Previous"
 msgstr "Précédent"
+
+#: ../../assets/inc/functions.php:74 ../inc/functions.php:74
+msgid "Next"
+msgstr "Suivant"
 
 #: ../../assets/inc/views/plugin-table.php:34 ../inc/views/plugin-table.php:34
 msgid "Install now"
@@ -464,6 +448,15 @@ msgstr "Plugins optionnels"
 #: ../inc/views/recommended-plugins.php:35
 msgid "Developer tools"
 msgstr "Outils développeur"
+
+#~ msgid "Plugins in the %1$s folder are executed automatically."
+#~ msgstr "Les plugins dans le dossier %1$s sont exécutés automatiquement."
+
+#~ msgid "TrendPress"
+#~ msgstr "TrendPress"
+
+#~ msgid "Pagination"
+#~ msgstr "Pagination"
 
 #~ msgid ""
 #~ "Enables the advanced features of TinyMCE, the WordPress WYSIWYG editor."
