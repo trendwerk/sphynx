@@ -14,7 +14,7 @@ class TP_Featured_Images {
 	/**
 	 * Define image sizes
 	 */
-	function add_images_sizes() {
+	function add_image_sizes() {
 		add_image_size( 'widget', 320, 500 );
 	}
 
