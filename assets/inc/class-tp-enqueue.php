@@ -23,8 +23,8 @@ class TP_Enqueue {
 		/**
 		 * Scripts
 		 */
-		wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'fancybox' ) );
-		wp_enqueue_script( 'responsive', get_stylesheet_directory_uri() . '/assets/js/responsive.js', array( 'jquery' ) );
+		wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/assets/js/output/functions.js', array( 'jquery', 'fancybox' ) );
+		wp_enqueue_script( 'responsive', get_stylesheet_directory_uri() . '/assets/js/output/responsive.js', array( 'jquery' ) );
 		wp_enqueue_script( 'fancybox', get_stylesheet_directory_uri() . '/assets/js/lib/fancybox/jquery.fancybox.js', array( 'jquery' ) );
 
 		/**
@@ -49,7 +49,7 @@ class TP_Enqueue {
 		if( 'widgets' == $current_screen->base )
 			wp_enqueue_media();
 
-		wp_enqueue_script( 'admin', get_stylesheet_directory_uri() . '/assets/js/admin.js', array( 'jquery' ) );
+		wp_enqueue_script( 'admin', get_stylesheet_directory_uri() . '/assets/js/output/admin.js', array( 'jquery' ) );
 		wp_enqueue_style( 'admin', get_stylesheet_directory_uri() . '/assets/sass/output/admin.css' );
 	}
 } new TP_Enqueue;
