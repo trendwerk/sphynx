@@ -25,16 +25,12 @@ get_header();
 							</a>
 
 						</h2>
-						
-						<p>
 
-							<?php tp_the_excerpt( 80 ); ?>
+						<?php the_excerpt(); ?>
 
-							<a class="more-link" href="<?php the_permalink(); ?>">
-								<?php _e( 'Read more', 'tp' ); ?>
-							</a>
-
-						</p>
+						<a class="more-link" href="<?php the_permalink(); ?>">
+							<?php _e( 'Read more', 'tp' ); ?>
+						</a>
 						
 					</article>
 					
