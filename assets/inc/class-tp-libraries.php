@@ -8,7 +8,6 @@
 class TP_Libraries {
 	function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'register' ), 9 );
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue' ), 9 );
 	}
 	
 	/**
@@ -24,13 +23,5 @@ class TP_Libraries {
 
 		//Styles
 		wp_register_style( 'fancybox', get_template_directory_uri() . '/assets/js/fancybox/jquery.fancybox.css' );
-	}
-
-	/**
-	 * Enqueue admin scripts
-	 */
-	function admin_enqueue() {
-		//Styles
-		wp_enqueue_style( 'trendpress-admin', get_template_directory_uri() . '/assets/sass/admin.css' );
 	}
 } new TP_Libraries;
