@@ -1,6 +1,8 @@
 <?php
 /**
  * All query adjustments
+ *
+ * @package TrendPress
  */
 
 class TP_Query {
