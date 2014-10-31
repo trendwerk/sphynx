@@ -16,28 +16,28 @@ class TP_Enqueue {
 	 */
 	function frontend() {
 		/**
-		 * Register and enqueue child styles and scripts
+		 * Core
 		 */
-		wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/assets/js/functions.js', array( 'jquery' ) );
+		wp_enqueue_script( 'comment-reply' );
+
+		/**
+		 * Scripts
+		 */
+		wp_enqueue_script( 'functions', get_stylesheet_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'fancybox' ) );
 		wp_enqueue_script( 'responsive', get_stylesheet_directory_uri() . '/assets/js/responsive.js', array( 'jquery' ) );
+		wp_enqueue_script( 'fancybox', get_stylesheet_directory_uri() . '/assets/js/lib/fancybox/jquery.fancybox.js', array( 'jquery' ) );
+
+		/**
+		 * Styles
+		 */
 		wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/assets/sass/output/style.css' );
+		wp_enqueue_style( 'fancybox', get_stylesheet_directory_uri() . '/assets/js/lib/fancybox/jquery.fancybox.css' );
 
 		/**
 		 * jQuery from Google's CDN
 		 */
 		wp_deregister_script( 'jquery' );
 		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' );
-
-		/**
-		 * Enqueue used parent libraries
-		 */
-		wp_enqueue_script( 'modernizr' );
-	 	wp_enqueue_script( 'cycle' );
-		wp_enqueue_script( 'fancybox' );
-		wp_enqueue_script( 'trendpress' );
-		wp_enqueue_script( 'comment-reply' );
-
-		wp_enqueue_style( 'fancybox' );
 	}
 
 	/**
