@@ -6,22 +6,6 @@
  */
 
 /**
- * Automatically include files in 'trendpress-child/assets/inc/widgets/'
- */
-class TP_Widgets {
-	function __construct() {
-		$this->activate();
-	}
-
-	/**
-	 * Activate widgets
-	 */
-	function activate() {
-		new TP_Includer( get_stylesheet_directory() . '/assets/inc/widgets/' );
-	}
-} new TP_Widgets;
-
-/**
  * Static widgets
  * 
  * @param string $class The class name of the widget
