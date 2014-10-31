@@ -1,9 +1,16 @@
 <?php
 /**
- * Theme support & localization
+ * Includes, theme support and localization
  * 
  * @package TrendPress
  */
+
+/**
+ * Includes
+ */
+include_once( 'assets/inc/class-tp-includer.php' );
+
+new TP_Includer( get_stylesheet_directory() . '/assets/inc/' );
 
 /**
  * Add theme support for RSS links

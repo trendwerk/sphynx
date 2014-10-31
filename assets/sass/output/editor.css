@@ -2537,11 +2537,11 @@ input#adminbar-search {
  */
 .alignleft {
   float: left;
-  margin: 0 20px 30px 0; }
+  margin: 10px 20px 10px 0; }
 
 .alignright {
   float: right;
-  margin: 0 0 30px 20px; }
+  margin: 10px 0 10px 20px; }
 
 .aligncenter {
   display: block;

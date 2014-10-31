@@ -22,13 +22,13 @@ class TP_Featured_Images {
 	 * Set default image sizes
 	 */
 	function defaults() {
-		update_option( 'thumbnail_size_w', 140 );
-		update_option( 'thumbnail_size_h', 140 );
+		update_option( 'thumbnail_size_w', 150 );
+		update_option( 'thumbnail_size_h', 150 );
 
-		update_option( 'medium_size_w', 300 );
+		update_option( 'medium_size_w', 340 );
 		update_option( 'medium_size_h', '' );
 
-		update_option( 'large_size_w', 600 );
+		update_option( 'large_size_w', 720 );
 		update_option( 'large_size_h', '' );
 		
 	    update_option( 'image_default_link_type', 'file' );
