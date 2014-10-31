@@ -3,7 +3,7 @@
 			<div class="container-inner">
 			
 				<aside>
-					<?php dynamic_sidebar( 'footerid' ); ?>
+					<?php dynamic_sidebar( 'footer' ); ?>
 				</aside>
 				
 				<div id="credits">

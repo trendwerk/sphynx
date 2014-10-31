@@ -6,6 +6,13 @@
  */
 
 class TP_Sidebars {
+	static $defaults = array(
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>',
+	);
+
 	function __construct() {
 		add_action( 'init', array( $this, 'register' ) );
 	}
@@ -14,20 +21,34 @@ class TP_Sidebars {
 	 * Register sidebars
 	 */
 	function register() {
-		new TP_Sidebar( 'home', array(
+		self::add( 'home', array(
 			'name' => __( 'Home', 'tp' ),
 		) );
 
-		new TP_Sidebar( 'page', array(
+		self::add( 'page', array(
 			'name' => __( 'Page', 'tp' ),
 		) );
 
-		new TP_Sidebar( 'blog', array(
+		self::add( 'blog', array(
 			'name' => __( 'Blog', 'tp' ),
 		) );
 
-		new TP_Sidebar( 'footerid', array(
+		self::add( 'footer', array(
 			'name' => __( 'Footer', 'tp' ),
 		) );
+	}
+
+	/**
+	 * Add a sidebar
+	 *
+	 * @param string $id Unique sidebar ID
+	 * @param array $args
+	 *
+	 * @abstract
+	 */
+	static function add( $id, $args = array() ) {
+		$args['id'] = $id;
+
+		register_sidebar( wp_parse_args( $args, self::$defaults ) );
 	}
 } new TP_Sidebars;
