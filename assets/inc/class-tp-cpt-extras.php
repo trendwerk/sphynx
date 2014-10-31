@@ -8,7 +8,11 @@
  * @package TrendPress
  */
 
-class TP_CPT_Extras {	
+class TP_CPT_Extras {
+	function __construct() {		
+		add_filter( 'wp_nav_menu_objects', array( $this, 'highlight' ) );
+	}
+
 	/**
 	 * Takes care of the highlighting in a navigation menu
 	 *
