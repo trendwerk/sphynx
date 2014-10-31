@@ -4,6 +4,19 @@ module.exports = function( grunt ) {
 
 		pkg: grunt.file.readJSON( 'package.json' ),
 
+		coffee: {
+			compile: {
+				options: {
+					bare: true
+				},
+				files: {
+					'assets/js/functions.js': 'assets/js/coffee/functions.coffee',
+					'assets/js/responsive.js': 'assets/js/coffee/responsive.coffee'
+				}
+			}
+
+		},
+
 		/**
 		 * Compile SASS to CSS 
 		 */	
@@ -33,7 +46,16 @@ module.exports = function( grunt ) {
 				tasks: [ 'sass' ],
 				options: {
 					livereload: 35729
-				}
+				},
+			},
+			coffee: {
+				files: [
+					'assets/js/coffee/*'
+				],
+				tasks: [ 'coffee' ],
+				options: {
+					livereload: 35729
+				},
 			}
 		}
 
@@ -42,12 +64,13 @@ module.exports = function( grunt ) {
 	/**
 	 * Load tasks
 	 */
+	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 	/**
 	 * Run tasks
 	 */
-	grunt.registerTask( 'default', [ 'sass', 'watch' ] );
+	grunt.registerTask( 'default', [ 'coffee', 'sass', 'watch' ] );
 
 };
