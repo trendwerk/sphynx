@@ -289,41 +289,6 @@ body {
 
 }
 
-/* breadcrumbs */
-	
-#breadcrumbs {
-	background: $light-background;
-	color: $text-color;
-	font-size: 13px;
-	margin-top: 0;
-	margin-bottom: 0;
-
-	#breadcrumbs-inner {
-		@include column-12;
-		height: 60px;
-		line-height: 60px;
-		margin: 0 10px;
-
-		.separator {
-			font-size: 10px;
-			padding: 0 2px 0 3px;
-		}
-
-		a {
-			color: $text-color;
-
-			&:active,
-			&:focus,
-			&:hover { 
-				color: $link-color;
-			}
-
-		}
-
-	}
-
-}
-
 #sub-header {
 	background-color: #CCC;
 	margin-top: 0;
