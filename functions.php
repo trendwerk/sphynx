@@ -8,6 +8,8 @@
 /**
  * Include PHP files in /assets/inc/
  */
+include_once( get_stylesheet_directory() . 'assets/inc/class-tp-includer.php' );
+
 new TP_Includer( dirname( __FILE__ ) . '/assets/inc/' );
 
 /**
