@@ -1,11 +1,11 @@
 <?php
 /**
- * Everything that has to do with featured images
+ * Everything that has to do with media
  *
  * @package TrendPress
  */
 
-class TP_Featured_Images {
+class TP_Media {
 	function __construct() {
 		add_action( 'init', array( $this, 'add_image_sizes' ) );
 		add_action( 'after_switch_theme', array( $this, 'defaults' ) );
@@ -33,4 +33,4 @@ class TP_Featured_Images {
 		
 	    update_option( 'image_default_link_type', 'file' );
 	}
-} new TP_Featured_Images;
+} new TP_Media;
