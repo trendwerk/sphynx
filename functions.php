@@ -10,8 +10,8 @@
  */
 include_once( 'assets/inc/class-tp-includer.php' );
 
-new TP_Includer( get_stylesheet_directory() . '/assets/inc/' );
-new TP_Includer( get_stylesheet_directory() . '/assets/inc/widgets/' );
+new TP_Includer( get_template_directory() . '/assets/inc/' );
+new TP_Includer( get_template_directory() . '/assets/inc/widgets/' );
 
 /**
  * Add theme support for RSS links
@@ -31,4 +31,4 @@ add_theme_support( 'post-thumbnails' );
 /**
  * Add localization support
  */
-load_theme_textdomain( 'tp', get_stylesheet_directory() . '/assets/lang' );
+load_theme_textdomain( 'tp', get_template_directory() . '/assets/lang' );

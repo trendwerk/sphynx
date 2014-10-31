@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-05 15:46+0100\n"
-"PO-Revision-Date: 2014-09-05 15:46+0100\n"
+"POT-Creation-Date: 2014-10-31 19:05+0100\n"
+"PO-Revision-Date: 2014-10-31 19:09+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -17,11 +17,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../../404.php:10
+#: ../../404.php:12
 msgid "The page you are looking for doesn't exist."
 msgstr "De pagina die je zoekt bestaat niet."
 
-#: ../../404.php:15
+#: ../../404.php:17
 msgid ""
 "Seems like the page you were looking for might have been moved or just "
 "didn't exist in the first place."
@@ -29,7 +29,7 @@ msgstr ""
 "Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of "
 "nooit heeft bestaan."
 
-#: ../../404.php:20
+#: ../../404.php:22
 #, php-format
 msgid ""
 "You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
@@ -38,7 +38,7 @@ msgstr ""
 "Bekijk onze <a href=\"%1$s\">sitemap</a> of gebruik het onderstaande "
 "zoekformulier om te vinden wat je zoekt."
 
-#: ../../404.php:20
+#: ../../404.php:22
 msgid "sitemap"
 msgstr "sitemap"
 
@@ -49,11 +49,13 @@ msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
 msgstr[0] "Één reactie op &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
 
-#: ../../comments.php:27
+#: ../../comments.php:27 ../../assets/inc/template-tags.php:21
+#: ../inc/template-tags.php:21
 msgid "Next"
 msgstr "Volgende"
 
-#: ../../comments.php:28
+#: ../../comments.php:28 ../../assets/inc/template-tags.php:20
+#: ../inc/template-tags.php:20
 msgid "Previous"
 msgstr "Vorige"
 
@@ -61,35 +63,35 @@ msgstr "Vorige"
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../../index.php:12
+#: ../../index.php:14
 msgid "Posts about"
 msgstr "Berichten over"
 
-#: ../../index.php:14
+#: ../../index.php:16
 msgid "Posts by"
 msgstr "Berichten van"
 
-#: ../../index.php:16 ../../page-sitemap.php:91
+#: ../../index.php:18 ../../page-sitemap.php:93
 msgid "News"
 msgstr "Nieuws"
 
-#: ../../index.php:38 ../../single.php:16
+#: ../../index.php:40 ../../single.php:18
 msgid "Posted on"
 msgstr "Geplaatst op"
 
-#: ../../index.php:39 ../../single.php:17
+#: ../../index.php:41 ../../single.php:19
 msgid "by"
 msgstr "door"
 
-#: ../../index.php:40 ../../single.php:18
+#: ../../index.php:42 ../../single.php:20
 msgid "in the category"
 msgstr "in de categorie"
 
-#: ../../index.php:49 ../../search.php:32
+#: ../../index.php:51 ../../search.php:32
 msgid "Read more"
 msgstr "Lees verder"
 
-#: ../../index.php:60
+#: ../../index.php:62
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
@@ -97,16 +99,16 @@ msgstr "Geen resultaten gevonden."
 msgid "Authors overview"
 msgstr "Auteurs overzicht"
 
-#: ../../page-sitemap.php:23
+#: ../../page-sitemap.php:25
 msgid "Pages"
 msgstr "Pagina's"
 
-#: ../../search.php:10
+#: ../../search.php:12
 #, php-format
 msgid "Search Results for: %1$s"
 msgstr "Zoek resultaten voor:  %1$s"
 
-#: ../../search.php:46
+#: ../../search.php:44
 #, php-format
 msgid ""
 "Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
@@ -121,78 +123,255 @@ msgstr ""
 msgid "Search"
 msgstr "Zoeken"
 
-#: ../../single.php:49
+#: ../../single.php:51
 msgid "Back to the overview"
 msgstr "Terug naar het overzicht"
 
-#: ../../assets/inc/menus.php:7 ../inc/menus.php:7
-msgid "Main navigation"
-msgstr "Hoofd navigatie"
+#: ../../assets/inc/class-tp-contact-information.php:23
+#: ../inc/class-tp-contact-information.php:23
+msgid "General settings"
+msgstr "Algemene instellingen"
 
-#: ../../assets/inc/menus.php:8 ../inc/menus.php:8
-msgid "Top navigation"
-msgstr "Top navigatie"
-
-#: ../../assets/inc/menus.php:9 ../inc/menus.php:9
-msgid "Footer navigation"
-msgstr "Footer navigatie"
-
-#: ../../assets/inc/menus.php:10 ../inc/menus.php:10
-msgid "Sitemap"
+#: ../../assets/inc/class-tp-contact-information.php:25
+#: ../inc/class-tp-contact-information.php:25
+msgid "Sitename"
 msgstr "Sitemap"
 
-#: ../../assets/inc/misc.php:22 ../inc/misc.php:22
+#: ../../assets/inc/class-tp-contact-information.php:32
+#: ../inc/class-tp-contact-information.php:32
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../../assets/inc/class-tp-contact-information.php:42
+#: ../inc/class-tp-contact-information.php:42
+msgid "Contact"
+msgstr "Contact"
+
+#: ../../assets/inc/class-tp-contact-information.php:44
+#: ../inc/class-tp-contact-information.php:44
+msgid "Company name"
+msgstr "Bedrijfsnaam"
+
+#: ../../assets/inc/class-tp-contact-information.php:50
+#: ../inc/class-tp-contact-information.php:50
+msgid "Address"
+msgstr "Adres"
+
+#: ../../assets/inc/class-tp-contact-information.php:56
+#: ../inc/class-tp-contact-information.php:56
+msgid "Postal code"
+msgstr "Postcode"
+
+#: ../../assets/inc/class-tp-contact-information.php:62
+#: ../inc/class-tp-contact-information.php:62
+msgid "City"
+msgstr "Stad"
+
+#: ../../assets/inc/class-tp-contact-information.php:68
+#: ../inc/class-tp-contact-information.php:68
+msgid "Country"
+msgstr "Land"
+
+#: ../../assets/inc/class-tp-contact-information.php:74
+#: ../../assets/inc/widgets/class-tp-contact.php:64
+#: ../inc/class-tp-contact-information.php:74
+#: ../inc/widgets/class-tp-contact.php:64
+msgid "E-mail"
+msgstr "E-mail"
+
+#: ../../assets/inc/class-tp-contact-information.php:80
+#: ../../assets/inc/widgets/class-tp-contact.php:67
+#: ../inc/class-tp-contact-information.php:80
+#: ../inc/widgets/class-tp-contact.php:67
+msgid "Telephone"
+msgstr "Telefoon"
+
+#: ../../assets/inc/class-tp-contact-information.php:86
+#: ../../assets/inc/widgets/class-tp-contact.php:70
+#: ../inc/class-tp-contact-information.php:86
+#: ../inc/widgets/class-tp-contact.php:70
+msgid "Fax"
+msgstr "Fax"
+
+#: ../../assets/inc/class-tp-contact-information.php:95
+#: ../inc/class-tp-contact-information.php:95
+msgid "Registration numbers & financial"
+msgstr "Registratie nummers & financieel"
+
+#: ../../assets/inc/class-tp-contact-information.php:97
+#: ../inc/class-tp-contact-information.php:97
+msgid "CC No."
+msgstr "KvK Nr."
+
+#: ../../assets/inc/class-tp-contact-information.php:103
+#: ../inc/class-tp-contact-information.php:103
+msgid "VAT No."
+msgstr "BTW Nr."
+
+#: ../../assets/inc/class-tp-contact-information.php:109
+#: ../inc/class-tp-contact-information.php:109
+msgid "Bank name"
+msgstr "Bank naam"
+
+#: ../../assets/inc/class-tp-contact-information.php:115
+#: ../inc/class-tp-contact-information.php:115
+msgid "Bank No."
+msgstr "Bank Nr."
+
+#: ../../assets/inc/class-tp-contact-information.php:124
+#: ../../assets/inc/widgets/class-tp-social.php:10
+#: ../inc/class-tp-contact-information.php:124
+#: ../inc/widgets/class-tp-social.php:10
+msgid "Social media links"
+msgstr "Social media links"
+
+#: ../../assets/inc/class-tp-contact-information.php:126
+#: ../inc/class-tp-contact-information.php:126
+msgid "Twitter URL"
+msgstr "Twitter URL"
+
+#: ../../assets/inc/class-tp-contact-information.php:132
+#: ../inc/class-tp-contact-information.php:132
+msgid "Facebook URL"
+msgstr "Facebook URL"
+
+#: ../../assets/inc/class-tp-contact-information.php:138
+#: ../inc/class-tp-contact-information.php:138
+msgid "LinkedIn URL"
+msgstr "LinkedIn URL"
+
+#: ../../assets/inc/class-tp-contact-information.php:144
+#: ../inc/class-tp-contact-information.php:144
+msgid "Google Plus URL"
+msgstr "Google Plus URL"
+
+#: ../../assets/inc/class-tp-contact-information.php:150
+#: ../inc/class-tp-contact-information.php:150
+msgid "YouTube URL"
+msgstr "YouTube URL"
+
+#: ../../assets/inc/class-tp-contact-information.php:156
+#: ../inc/class-tp-contact-information.php:156
+msgid "Newsletter / mailto link"
+msgstr "Nieuwsbrief / mailto link"
+
+#: ../../assets/inc/class-tp-contact-information.php:163
+#: ../inc/class-tp-contact-information.php:163
+msgid "Show RSS feed in the social media widget"
+msgstr "Toon RSS icoon in de sociale media widget"
+
+#: ../../assets/inc/class-tp-contact-information.php:215
+#: ../../assets/inc/class-tp-contact-information.php:227
+#: ../../assets/inc/widgets/class-tp-contact.php:10
+#: ../inc/class-tp-contact-information.php:215
+#: ../inc/class-tp-contact-information.php:227
+#: ../inc/widgets/class-tp-contact.php:10
+msgid "Contact information"
+msgstr "Contactgegevens"
+
+#: ../../assets/inc/class-tp-editor.php:30 ../inc/class-tp-editor.php:30
 msgid "Button"
 msgstr "Knop"
 
-#: ../../assets/inc/misc.php:27
+#: ../../assets/inc/class-tp-editor.php:35
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:19
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:15
-#: ../inc/misc.php:27 ../inc/widgets/class-tp-title-content-button.php:19
+#: ../inc/class-tp-editor.php:35
+#: ../inc/widgets/class-tp-title-content-button.php:19
 #: ../inc/widgets/class-tp-title-image-content-button.php:15
 msgid "Secondary button"
 msgstr "Secondaire knop"
 
-#: ../../assets/inc/misc.php:32 ../inc/misc.php:32
+#: ../../assets/inc/class-tp-editor.php:40 ../inc/class-tp-editor.php:40
 msgid "More link"
 msgstr "Lees meer link"
 
-#: ../../assets/inc/misc.php:84 ../inc/misc.php:84
-msgid "Facebook profile URL"
-msgstr "Facebook profiel URL"
+#: ../../assets/inc/class-tp-menus.php:17 ../inc/class-tp-menus.php:17
+msgid "Main navigation"
+msgstr "Hoofd navigatie"
 
-#: ../../assets/inc/misc.php:85 ../inc/misc.php:85
-msgid "LinkedIn profile URL"
-msgstr "LinkedIn profiel URL"
+#: ../../assets/inc/class-tp-menus.php:18 ../inc/class-tp-menus.php:18
+msgid "Top navigation"
+msgstr "Top navigatie"
 
-#: ../../assets/inc/misc.php:86 ../inc/misc.php:86
-msgid "Google+ profile URL"
-msgstr "Google+ profiel URL"
+#: ../../assets/inc/class-tp-menus.php:19 ../inc/class-tp-menus.php:19
+msgid "Footer navigation"
+msgstr "Footer navigatie"
 
-#: ../../assets/inc/misc.php:87 ../inc/misc.php:87
-msgid "Twitter @username"
-msgstr "Twitter @gebruikersnaam"
+#: ../../assets/inc/class-tp-menus.php:20 ../inc/class-tp-menus.php:20
+msgid "Sitemap"
+msgstr "Sitemap"
 
-#: ../../assets/inc/sidebars.php:11 ../inc/sidebars.php:11
-msgid "Home"
-msgstr "Home"
+#: ../../assets/inc/class-tp-nav.php:114 ../inc/class-tp-nav.php:114
+msgid "Search for"
+msgstr "Zoekresultaten voor"
 
-#: ../../assets/inc/sidebars.php:15 ../inc/sidebars.php:15
-msgid "Page"
-msgstr "Pagina"
+#: ../../assets/inc/class-tp-nav.php:123 ../inc/class-tp-nav.php:123
+msgid "404"
+msgstr "404"
 
-#: ../../assets/inc/sidebars.php:19 ../inc/sidebars.php:19
+#: ../../assets/inc/class-tp-nav.php:307
+#: ../../assets/inc/class-tp-sidebars.php:33 ../inc/class-tp-nav.php:307
+#: ../inc/class-tp-sidebars.php:33
 msgid "Blog"
 msgstr "Blog"
 
-#: ../../assets/inc/sidebars.php:23 ../inc/sidebars.php:23
+#: ../../assets/inc/class-tp-sidebars.php:25 ../inc/class-tp-sidebars.php:25
+msgid "Home"
+msgstr "Home"
+
+#: ../../assets/inc/class-tp-sidebars.php:29 ../inc/class-tp-sidebars.php:29
+msgid "Page"
+msgstr "Pagina"
+
+#: ../../assets/inc/class-tp-sidebars.php:37 ../inc/class-tp-sidebars.php:37
 msgid "Footer"
 msgstr "Footer"
 
-#: ../../assets/inc/widgets/class-tp-contact.php:10
-#: ../inc/widgets/class-tp-contact.php:10
-msgid "Contact information"
-msgstr "Contactgegevens"
+#: ../../assets/inc/class-tp-users.php:26 ../inc/class-tp-users.php:26
+msgid "Facebook profile URL"
+msgstr "Facebook profiel URL"
+
+#: ../../assets/inc/class-tp-users.php:27 ../inc/class-tp-users.php:27
+msgid "LinkedIn profile URL"
+msgstr "LinkedIn profiel URL"
+
+#: ../../assets/inc/class-tp-users.php:28 ../inc/class-tp-users.php:28
+msgid "Google+ profile URL"
+msgstr "Google+ profiel URL"
+
+#: ../../assets/inc/class-tp-users.php:29 ../inc/class-tp-users.php:29
+msgid "Twitter @username"
+msgstr "Twitter @gebruikersnaam"
+
+#: ../../assets/inc/class-tp-users.php:40 ../inc/class-tp-users.php:40
+msgid "Publish profile"
+msgstr "Profiel publiceren"
+
+#: ../../assets/inc/class-tp-users.php:48 ../inc/class-tp-users.php:48
+msgid "Show profile on website"
+msgstr "Profiel weergeven op de website"
+
+#: ../../assets/inc/class-tp-users.php:53 ../inc/class-tp-users.php:53
+msgid "Show my profile on the website at blogposts and author archives"
+msgstr ""
+"Geef mijn profiel weer op de website bij blogberichten en auteur archieven"
+
+#: ../../assets/inc/class-tp-users.php:61 ../inc/class-tp-users.php:61
+msgid "Profile picture"
+msgstr "Profielfoto"
+
+#: ../../assets/inc/class-tp-users.php:69 ../inc/class-tp-users.php:69
+msgid "You can change your profile picture via"
+msgstr "Je kunt je profielfoto aanpassen via"
+
+#: ../../assets/inc/class-tp-users.php:69 ../inc/class-tp-users.php:69
+msgid ""
+"by logging in or signing up for free with the email address associated with "
+"your profile"
+msgstr ""
+"door in te loggen of door je gratis aan te melden met het e-mailadres dat is "
+"gekoppeld aan je profiel"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:10
 #: ../inc/widgets/class-tp-contact.php:10
@@ -202,7 +381,7 @@ msgstr "Geeft gespecificeerde contactgegevens weer"
 #: ../../assets/inc/widgets/class-tp-contact.php:18
 #: ../../assets/inc/widgets/class-tp-fb-like-box.php:19
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:23
-#: ../../assets/inc/widgets/class-tp-social.php:25
+#: ../../assets/inc/widgets/class-tp-social.php:18
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:22
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:28
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:35
@@ -210,7 +389,7 @@ msgstr "Geeft gespecificeerde contactgegevens weer"
 #: ../inc/widgets/class-tp-contact.php:18
 #: ../inc/widgets/class-tp-fb-like-box.php:19
 #: ../inc/widgets/class-tp-post-type-posts.php:23
-#: ../inc/widgets/class-tp-social.php:25
+#: ../inc/widgets/class-tp-social.php:18
 #: ../inc/widgets/class-tp-taxonomy-terms.php:22
 #: ../inc/widgets/class-tp-title-content-button.php:28
 #: ../inc/widgets/class-tp-title-image-content-button.php:35
@@ -219,9 +398,9 @@ msgid "Title"
 msgstr "Titel"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:23
-#: ../../assets/inc/widgets/class-tp-social.php:42
+#: ../../assets/inc/widgets/class-tp-social.php:23
 #: ../inc/widgets/class-tp-contact.php:23
-#: ../inc/widgets/class-tp-social.php:42
+#: ../inc/widgets/class-tp-social.php:23
 #, php-format
 msgid ""
 "Change the contents of this widget on the <a href=\"%1$s\">contact "
@@ -229,21 +408,6 @@ msgid ""
 msgstr ""
 "Beheer de inhoud van deze widget op de <a href=\"%1$s\">contact informatie</"
 "a> pagina."
-
-#: ../../assets/inc/widgets/class-tp-contact.php:64
-#: ../inc/widgets/class-tp-contact.php:64
-msgid "E-mail"
-msgstr "E-mail"
-
-#: ../../assets/inc/widgets/class-tp-contact.php:67
-#: ../inc/widgets/class-tp-contact.php:67
-msgid "Telephone"
-msgstr "Telefoon"
-
-#: ../../assets/inc/widgets/class-tp-contact.php:70
-#: ../inc/widgets/class-tp-contact.php:70
-msgid "Fax"
-msgstr "Fax"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:77
 #: ../inc/widgets/class-tp-contact.php:77
@@ -307,86 +471,43 @@ msgstr "Bekijk alle"
 
 #: ../../assets/inc/widgets/class-tp-social.php:10
 #: ../inc/widgets/class-tp-social.php:10
-msgid "Social media links"
-msgstr "Social media links"
-
-#: ../../assets/inc/widgets/class-tp-social.php:10
-#: ../inc/widgets/class-tp-social.php:10
 msgid "Shows links to specified social network profiles"
 msgstr "Geeft links naar gespecificeerde profielen op sociale netwerken weer"
 
-#: ../../assets/inc/widgets/class-tp-social.php:13
-#: ../inc/widgets/class-tp-social.php:13
-msgid "Large icons"
-msgstr "Grote iconen"
-
-#: ../../assets/inc/widgets/class-tp-social.php:14
-#: ../inc/widgets/class-tp-social.php:14
-msgid "Large icons with text"
-msgstr "Grote iconen met tekst"
-
-#: ../../assets/inc/widgets/class-tp-social.php:15
-#: ../inc/widgets/class-tp-social.php:15
-msgid "Small icons"
-msgstr "Kleine iconen"
-
-#: ../../assets/inc/widgets/class-tp-social.php:16
-#: ../inc/widgets/class-tp-social.php:16
-msgid "Small icons with text"
-msgstr "Kleine iconen met tekst"
-
-#: ../../assets/inc/widgets/class-tp-social.php:32
-#: ../inc/widgets/class-tp-social.php:32
-msgid "Icon types"
-msgstr "Type iconen"
-
-#: ../../assets/inc/widgets/class-tp-social.php:62
-#: ../../assets/inc/widgets/class-tp-social.php:64
-#: ../inc/widgets/class-tp-social.php:62 ../inc/widgets/class-tp-social.php:64
+#: ../../assets/inc/widgets/class-tp-social.php:43
+#: ../inc/widgets/class-tp-social.php:43
 msgid "Follow us on Twitter"
 msgstr "Volg ons via Twitter"
 
-#: ../../assets/inc/widgets/class-tp-social.php:71
-#: ../../assets/inc/widgets/class-tp-social.php:73
-#: ../inc/widgets/class-tp-social.php:71 ../inc/widgets/class-tp-social.php:73
+#: ../../assets/inc/widgets/class-tp-social.php:51
+#: ../inc/widgets/class-tp-social.php:51
 msgid "Like our Facebook page"
 msgstr "Like onze Facebook pagina"
 
-#: ../../assets/inc/widgets/class-tp-social.php:80
-#: ../../assets/inc/widgets/class-tp-social.php:82
-#: ../inc/widgets/class-tp-social.php:80 ../inc/widgets/class-tp-social.php:82
+#: ../../assets/inc/widgets/class-tp-social.php:59
+#: ../inc/widgets/class-tp-social.php:59
 msgid "Add us on Google+"
 msgstr "Voeg ons toe op Google+"
 
-#: ../../assets/inc/widgets/class-tp-social.php:89
-#: ../../assets/inc/widgets/class-tp-social.php:91
-#: ../inc/widgets/class-tp-social.php:89 ../inc/widgets/class-tp-social.php:91
+#: ../../assets/inc/widgets/class-tp-social.php:67
+#: ../inc/widgets/class-tp-social.php:67
 msgid "Connect with us on LinkedIn"
 msgstr "Connect via LinkedIn"
 
-#: ../../assets/inc/widgets/class-tp-social.php:98
-#: ../../assets/inc/widgets/class-tp-social.php:100
-#: ../inc/widgets/class-tp-social.php:98
-#: ../inc/widgets/class-tp-social.php:100
+#: ../../assets/inc/widgets/class-tp-social.php:75
+#: ../inc/widgets/class-tp-social.php:75
 msgid "View our YouTube channel"
 msgstr "Bekijk ons YouTube kanaal"
 
-#: ../../assets/inc/widgets/class-tp-social.php:107
-#: ../../assets/inc/widgets/class-tp-social.php:109
-#: ../inc/widgets/class-tp-social.php:107
-#: ../inc/widgets/class-tp-social.php:109
+#: ../../assets/inc/widgets/class-tp-social.php:83
+#: ../inc/widgets/class-tp-social.php:83
 msgid "E-mail newsletter"
 msgstr "E-mail nieuwsbrief"
 
-#: ../../assets/inc/widgets/class-tp-social.php:116
-#: ../inc/widgets/class-tp-social.php:116
+#: ../../assets/inc/widgets/class-tp-social.php:91
+#: ../inc/widgets/class-tp-social.php:91
 msgid "Subscribe via RSS"
 msgstr "Abonneer via RSS"
-
-#: ../../assets/inc/widgets/class-tp-social.php:118
-#: ../inc/widgets/class-tp-social.php:118
-msgid "Subscribe to our RSS"
-msgstr "Schrijf je in via RSS"
 
 #: ../../assets/inc/widgets/class-tp-submenu.php:10
 #: ../inc/widgets/class-tp-submenu.php:10
@@ -561,37 +682,54 @@ msgid_plural "View all %1$s posts"
 msgstr[0] "Bekijk %1$s bericht"
 msgstr[1] "Bekijk alle %1$s berichten"
 
-#: ../../partials/breadcrumbs.php:8
-msgid "You are here"
-msgstr "U bent hier"
-
-#: ../../partials/share.php:5
+#: ../../partials/share.php:3
 msgid "Share this article"
 msgstr "Deel dit artikel"
 
-#: ../../partials/share.php:7
+#: ../../partials/share.php:5
 msgid "Share this on Facebook"
 msgstr "Deel dit artikel op Facebook"
 
-#: ../../partials/share.php:11
+#: ../../partials/share.php:9
 msgid "Share this on Twitter"
 msgstr "Deel dit artikel op Twitter"
 
-#: ../../partials/share.php:15
+#: ../../partials/share.php:13
 msgid "Share this on Google Plus"
 msgstr "Deel dit artikel op Google Plus"
 
-#: ../../partials/share.php:19
+#: ../../partials/share.php:17
 msgid "Share this on LinkedIn"
 msgstr "Deel dut artikel op LinkedIn"
 
-#: ../../partials/share.php:23
+#: ../../partials/share.php:21
 msgid "Email this"
 msgstr "Email dit artikel"
 
-#: ../../partials/share.php:27
+#: ../../partials/share.php:25
 msgid "Share this on other networks"
 msgstr "Deel dit artikel via andere netwerken"
+
+#~ msgid "Large icons"
+#~ msgstr "Grote iconen"
+
+#~ msgid "Large icons with text"
+#~ msgstr "Grote iconen met tekst"
+
+#~ msgid "Small icons"
+#~ msgstr "Kleine iconen"
+
+#~ msgid "Small icons with text"
+#~ msgstr "Kleine iconen met tekst"
+
+#~ msgid "Icon types"
+#~ msgstr "Type iconen"
+
+#~ msgid "Subscribe to our RSS"
+#~ msgstr "Schrijf je in via RSS"
+
+#~ msgid "You are here"
+#~ msgstr "U bent hier"
 
 #~ msgid "This link is external"
 #~ msgstr "Dit is een externe link"
@@ -654,9 +792,6 @@ msgstr "Deel dit artikel via andere netwerken"
 
 #~ msgid "Filter by type"
 #~ msgstr "Filter op type"
-
-#~ msgid "General"
-#~ msgstr "Algemeen"
 
 #~ msgid "Add content"
 #~ msgstr "Nieuwe inhoud"
@@ -751,9 +886,6 @@ msgstr "Deel dit artikel via andere netwerken"
 #~ msgid "Facebook"
 #~ msgstr "Facebook"
 
-#~ msgid "LinkedIn"
-#~ msgstr "LinkedIn"
-
 #~ msgid "Google+"
 #~ msgstr "Google+"
 
@@ -782,9 +914,6 @@ msgstr "Deel dit artikel via andere netwerken"
 #, fuzzy
 #~ msgid "Back to spotlights overview"
 #~ msgstr "Terug naar het overzicht"
-
-#~ msgid "Hide my profile on the website"
-#~ msgstr "Verberg mijn profiel op de website"
 
 #~ msgid "This post is password protected. Try logging in."
 #~ msgstr "Deze post is beschermd met een wachtwoord. Probeer in te loggen."
@@ -827,9 +956,6 @@ msgstr "Deel dit artikel via andere netwerken"
 
 #~ msgid "Website:"
 #~ msgstr "Website"
-
-#~ msgid "Contact"
-#~ msgstr "Contact"
 
 #~ msgid "Social media"
 #~ msgstr "Sociale media"
@@ -930,15 +1056,6 @@ msgstr "Deel dit artikel via andere netwerken"
 
 #~ msgid "Name"
 #~ msgstr "Naam"
-
-#~ msgid "Adres"
-#~ msgstr "Adres"
-
-#~ msgid "City"
-#~ msgstr "Stad"
-
-#~ msgid "Bank No"
-#~ msgstr "Bank nummer"
 
 #~ msgid "Social media accounts, as used in the \"Stay tuned\" widget."
 #~ msgstr ""
