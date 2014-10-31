@@ -1,0 +1,788 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TrendPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-21 15:10+0100\n"
+"PO-Revision-Date: 2014-03-21 15:11+0100\n"
+"Last-Translator: Harold <harold@trendwerk.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:2c,1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: ../..\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../../404.php:10
+msgid "The page you are looking for doesn't exist."
+msgstr ""
+
+#: ../../404.php:15
+msgid ""
+"Seems like the page you were looking for might have been moved or just "
+"didn't exist in the first place."
+msgstr ""
+
+#: ../../404.php:20
+#, php-format
+msgid ""
+"You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
+"searchform below to find the page you are looking for."
+msgstr ""
+
+#: ../../404.php:20
+msgid "sitemap"
+msgstr ""
+
+#: ../../comments.php:11
+#, php-format
+msgid "One response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../footer.php:13
+msgid "Copyright"
+msgstr ""
+
+#: ../../header.php:81
+msgid "You are here: "
+msgstr ""
+
+#: ../../index.php:12
+msgid "Category"
+msgstr ""
+
+#: ../../index.php:18
+msgid "Tag"
+msgstr ""
+
+#: ../../index.php:24
+msgid "Posts by"
+msgstr ""
+
+#: ../../index.php:32 ../../page-sitemap.php:93
+msgid "News"
+msgstr ""
+
+#: ../../index.php:50 ../../single.php:16
+msgid "Posted on"
+msgstr ""
+
+#: ../../index.php:51 ../../single.php:17
+msgid "by"
+msgstr ""
+
+#: ../../index.php:51 ../../single.php:17
+msgid "in the category"
+msgstr ""
+
+#: ../../index.php:63 ../../search.php:36
+msgid "Read more"
+msgstr ""
+
+#: ../../index.php:77
+msgid "No results found."
+msgstr ""
+
+#: ../../page-authors.php:4
+msgid "Authors overview"
+msgstr ""
+
+#: ../../page-sitemap.php:24
+msgid "Pages"
+msgstr ""
+
+#: ../../part-author.php:32
+msgid "Written by"
+msgstr ""
+
+#: ../../part-author.php:46
+msgid "Follow me on"
+msgstr ""
+
+#: ../../part-author.php:94
+#, php-format
+msgid "View 1 post"
+msgid_plural "View all %1$s posts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../part-share.php:5
+msgid "Share this article"
+msgstr ""
+
+#: ../../part-share.php:7
+msgid "Share this on Facebook"
+msgstr ""
+
+#: ../../part-share.php:11
+msgid "Share this on Twitter"
+msgstr ""
+
+#: ../../part-share.php:15
+msgid "Share this on LinkedIn"
+msgstr ""
+
+#: ../../part-share.php:19
+msgid "Share this on Google Plus"
+msgstr ""
+
+#: ../../part-share.php:23
+msgid "Share this on Pinterest"
+msgstr ""
+
+#: ../../part-share.php:27
+msgid "Email this"
+msgstr ""
+
+#: ../../search.php:14
+#, php-format
+msgid "Search Results for: %1$s"
+msgstr ""
+
+#: ../../search.php:50
+#, php-format
+msgid ""
+"Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
+"Please make sure all your words are spelled correctly or try different "
+"keywords."
+msgstr ""
+
+#: ../../searchform.php:6
+msgid "Search"
+msgstr ""
+
+#: ../../single.php:34
+msgid "Back to the overview"
+msgstr ""
+
+#: ../../assets/inc/menus.php:7 ../inc/menus.php:7
+msgid "Main navigation"
+msgstr ""
+
+#: ../../assets/inc/menus.php:8 ../inc/menus.php:8
+msgid "Top navigation"
+msgstr ""
+
+#: ../../assets/inc/menus.php:9 ../inc/menus.php:9
+msgid "Footer navigation"
+msgstr ""
+
+#: ../../assets/inc/menus.php:10 ../inc/menus.php:10
+msgid "Sitemap"
+msgstr ""
+
+#: ../../assets/inc/misc.php:14
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:18
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:14
+#: ../inc/misc.php:14 ../inc/widgets/class-tp-title-content-button.php:18
+#: ../inc/widgets/class-tp-title-image-content-button.php:14
+msgid "Primary button"
+msgstr ""
+
+#: ../../assets/inc/misc.php:19
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:19
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:15
+#: ../inc/misc.php:19 ../inc/widgets/class-tp-title-content-button.php:19
+#: ../inc/widgets/class-tp-title-image-content-button.php:15
+msgid "Secondary button"
+msgstr ""
+
+#: ../../assets/inc/misc.php:24 ../inc/misc.php:24
+msgid "More link"
+msgstr ""
+
+#: ../../assets/inc/misc.php:58 ../inc/misc.php:58
+msgid "Facebook profile URL"
+msgstr ""
+
+#: ../../assets/inc/misc.php:59 ../inc/misc.php:59
+msgid "LinkedIn profile URL"
+msgstr ""
+
+#: ../../assets/inc/misc.php:60 ../inc/misc.php:60
+msgid "Google+ profile URL"
+msgstr ""
+
+#: ../../assets/inc/misc.php:61 ../inc/misc.php:61
+msgid "Twitter @username"
+msgstr ""
+
+#: ../../assets/inc/sidebars.php:11 ../inc/sidebars.php:11
+msgid "Home"
+msgstr ""
+
+#: ../../assets/inc/sidebars.php:15 ../inc/sidebars.php:15
+msgid "Page"
+msgstr ""
+
+#: ../../assets/inc/sidebars.php:19 ../inc/sidebars.php:19
+msgid "Blog"
+msgstr ""
+
+#: ../../assets/inc/sidebars.php:23 ../inc/sidebars.php:23
+msgid "Footer"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:10
+#: ../inc/widgets/class-tp-contact.php:10
+msgid "Contact information"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:10
+#: ../inc/widgets/class-tp-contact.php:10
+msgid "Shows the specified contact information"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:18
+#: ../../assets/inc/widgets/class-tp-fb-like-box.php:19
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:23
+#: ../../assets/inc/widgets/class-tp-social.php:25
+#: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:22
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:28
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:35
+#: ../../assets/inc/widgets/class-tp-tweets.php:18
+#: ../../assets/plugins/filter/class-tp-filter.php:299
+#: ../inc/widgets/class-tp-contact.php:18
+#: ../inc/widgets/class-tp-fb-like-box.php:19
+#: ../inc/widgets/class-tp-post-type-posts.php:23
+#: ../inc/widgets/class-tp-social.php:25
+#: ../inc/widgets/class-tp-taxonomy-terms.php:22
+#: ../inc/widgets/class-tp-title-content-button.php:28
+#: ../inc/widgets/class-tp-title-image-content-button.php:35
+#: ../inc/widgets/class-tp-tweets.php:18
+#: ../plugins/filter/class-tp-filter.php:299
+msgid "Title"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:23
+#: ../../assets/inc/widgets/class-tp-social.php:42
+#: ../inc/widgets/class-tp-contact.php:23
+#: ../inc/widgets/class-tp-social.php:42
+#, php-format
+msgid ""
+"Change the contents of this widget on the <a href=\"%1$s\">contact "
+"information</a> page."
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:66
+#: ../inc/widgets/class-tp-contact.php:66
+msgid "E-mail"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:69
+#: ../inc/widgets/class-tp-contact.php:69
+msgid "Telephone"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:72
+#: ../inc/widgets/class-tp-contact.php:72
+msgid "Fax"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:79
+#: ../inc/widgets/class-tp-contact.php:79
+msgid "CC No"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:82
+#: ../inc/widgets/class-tp-contact.php:82
+msgid "VAT No"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-contact.php:85
+#: ../inc/widgets/class-tp-contact.php:85
+msgid "Bank"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-fb-like-box.php:11
+#: ../inc/widgets/class-tp-fb-like-box.php:11
+msgid "Facebook like box"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-fb-like-box.php:11
+#: ../inc/widgets/class-tp-fb-like-box.php:11
+msgid "Shows the Facebook users that like your Facebook page"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-fb-like-box.php:26
+#: ../inc/widgets/class-tp-fb-like-box.php:26
+msgid "Facebook page URL"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:10
+#: ../inc/widgets/class-tp-post-type-posts.php:10
+msgid "Post type posts"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:10
+#: ../inc/widgets/class-tp-post-type-posts.php:10
+msgid "List of posts from a given post type"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:30
+#: ../inc/widgets/class-tp-post-type-posts.php:30
+msgid "Post type"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:50
+#: ../inc/widgets/class-tp-post-type-posts.php:50
+msgid "Number of posts to show:"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:58
+#: ../inc/widgets/class-tp-post-type-posts.php:58
+msgid "Show link to post type archive"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-post-type-posts.php:110
+#: ../inc/widgets/class-tp-post-type-posts.php:110
+msgid "View all"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:10
+#: ../inc/widgets/class-tp-social.php:10
+msgid "Social media links"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:10
+#: ../inc/widgets/class-tp-social.php:10
+msgid "Shows links to specified social network profiles"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:13
+#: ../inc/widgets/class-tp-social.php:13
+msgid "Large icons"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:14
+#: ../inc/widgets/class-tp-social.php:14
+msgid "Large icons with text"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:15
+#: ../inc/widgets/class-tp-social.php:15
+msgid "Small icons"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:16
+#: ../inc/widgets/class-tp-social.php:16
+msgid "Small icons with text"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:32
+#: ../inc/widgets/class-tp-social.php:32
+msgid "Icon types"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:61
+#: ../../assets/inc/widgets/class-tp-social.php:63
+#: ../inc/widgets/class-tp-social.php:61 ../inc/widgets/class-tp-social.php:63
+msgid "Follow us on Twitter"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:70
+#: ../../assets/inc/widgets/class-tp-social.php:72
+#: ../inc/widgets/class-tp-social.php:70 ../inc/widgets/class-tp-social.php:72
+msgid "Like our Facebook page"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:79
+#: ../../assets/inc/widgets/class-tp-social.php:81
+#: ../inc/widgets/class-tp-social.php:79 ../inc/widgets/class-tp-social.php:81
+msgid "Connect with us on LinkedIn"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:88
+#: ../../assets/inc/widgets/class-tp-social.php:90
+#: ../inc/widgets/class-tp-social.php:88 ../inc/widgets/class-tp-social.php:90
+msgid "Add us on Google+"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:97
+#: ../../assets/inc/widgets/class-tp-social.php:99
+#: ../inc/widgets/class-tp-social.php:97 ../inc/widgets/class-tp-social.php:99
+msgid "View our YouTube channel"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:106
+#: ../../assets/inc/widgets/class-tp-social.php:108
+#: ../inc/widgets/class-tp-social.php:106
+#: ../inc/widgets/class-tp-social.php:108
+msgid "E-mail newsletter"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:115
+#: ../inc/widgets/class-tp-social.php:115
+msgid "Subscribe via RSS"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-social.php:117
+#: ../inc/widgets/class-tp-social.php:117
+msgid "Subscribe to our RSS"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-submenu.php:10
+#: ../inc/widgets/class-tp-submenu.php:10
+msgid "Submenu"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-submenu.php:10
+#: ../inc/widgets/class-tp-submenu.php:10
+msgid "Shows submenu items of current menu item or parent"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
+#: ../inc/widgets/class-tp-taxonomy-terms.php:10
+msgid "Term list"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
+#: ../inc/widgets/class-tp-taxonomy-terms.php:10
+msgid "List of terms from a given taxonomy"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:30
+#: ../inc/widgets/class-tp-taxonomy-terms.php:30
+msgid "Taxonomy"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-telephone-button.php:13
+#: ../inc/widgets/class-tp-telephone-button.php:13
+msgid "Telephone number and button"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-telephone-button.php:29
+#: ../inc/widgets/class-tp-telephone-button.php:29
+msgid "Telephone number"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:10
+#: ../inc/widgets/class-tp-title-content-button.php:10
+msgid "Text with button"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:10
+#: ../inc/widgets/class-tp-title-content-button.php:10
+msgid "Editable title, text and button"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:17
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:13
+#: ../inc/widgets/class-tp-title-content-button.php:17
+#: ../inc/widgets/class-tp-title-image-content-button.php:13
+msgid "Read more link"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:35
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:69
+#: ../../assets/plugins/global-content/class-tp-global-content.php:27
+#: ../inc/widgets/class-tp-title-content-button.php:35
+#: ../inc/widgets/class-tp-title-image-content-button.php:69
+#: ../plugins/global-content/class-tp-global-content.php:27
+msgid "Content"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:45
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:77
+#: ../inc/widgets/class-tp-title-content-button.php:45
+#: ../inc/widgets/class-tp-title-image-content-button.php:77
+msgid "Show button / read more link"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:53
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:85
+#: ../inc/widgets/class-tp-title-content-button.php:53
+#: ../inc/widgets/class-tp-title-image-content-button.php:85
+msgid "Button text"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:60
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:92
+#: ../inc/widgets/class-tp-title-content-button.php:60
+#: ../inc/widgets/class-tp-title-image-content-button.php:92
+msgid "Button link"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:68
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:100
+#: ../inc/widgets/class-tp-title-content-button.php:68
+#: ../inc/widgets/class-tp-title-image-content-button.php:100
+msgid "Link type"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-content-button.php:81
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:113
+#: ../inc/widgets/class-tp-title-content-button.php:81
+#: ../inc/widgets/class-tp-title-image-content-button.php:113
+msgid "This link is external"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:10
+#: ../inc/widgets/class-tp-title-image-content-button.php:10
+msgid "Text with image and button"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:10
+#: ../inc/widgets/class-tp-title-image-content-button.php:10
+msgid "Editable title, image text and button"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:24
+#: ../inc/widgets/class-tp-title-image-content-button.php:24
+msgid "Choose an image"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:25
+#: ../inc/widgets/class-tp-title-image-content-button.php:25
+msgid "Insert into widget"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:42
+#: ../../assets/plugins/term-image/class-tp-term-image.php:51
+#: ../inc/widgets/class-tp-title-image-content-button.php:42
+#: ../plugins/term-image/class-tp-term-image.php:51
+msgid "Image"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:47
+#: ../inc/widgets/class-tp-title-image-content-button.php:47
+msgid "Upload"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:55
+#: ../inc/widgets/class-tp-title-image-content-button.php:55
+msgid "Edit"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:59
+#: ../../assets/plugins/term-image/class-tp-term-image.php:66
+#: ../inc/widgets/class-tp-title-image-content-button.php:59
+#: ../plugins/term-image/class-tp-term-image.php:66
+msgid "Remove"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-tweets.php:10
+#: ../inc/widgets/class-tp-tweets.php:10
+msgid "Tweets"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-tweets.php:10
+#: ../inc/widgets/class-tp-tweets.php:10
+msgid "Shows latest tweets from a Twitter account"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-tweets.php:25
+#: ../inc/widgets/class-tp-tweets.php:25
+msgid "Twitter username"
+msgstr ""
+
+#: ../../assets/inc/widgets/class-tp-tweets.php:42
+#: ../inc/widgets/class-tp-tweets.php:42
+#, php-format
+msgid "Tweets from @%1$s"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:84
+#: ../plugins/filter/class-tp-filter.php:84
+msgid "Filters"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:85
+#: ../../assets/plugins/filter/class-tp-filter.php:293
+#: ../../assets/plugins/filter/class-tp-filter.php:307
+#: ../plugins/filter/class-tp-filter.php:85
+#: ../plugins/filter/class-tp-filter.php:293
+#: ../plugins/filter/class-tp-filter.php:307
+msgid "Filter"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:86
+#: ../plugins/filter/class-tp-filter.php:86
+msgid "Add filter"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:87
+#: ../plugins/filter/class-tp-filter.php:87
+msgid "Add new filter"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:113
+#: ../../assets/plugins/filter/class-tp-filter.php:182
+#: ../../assets/plugins/filter/class-tp-filter.php:206
+#: ../plugins/filter/class-tp-filter.php:113
+#: ../plugins/filter/class-tp-filter.php:182
+#: ../plugins/filter/class-tp-filter.php:206
+msgid "Post types"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:114
+#: ../../assets/plugins/pt-order/class-tp-pt-order.php:52
+#: ../../assets/plugins/pt-order/class-tp-pt-order.php:67
+#: ../plugins/filter/class-tp-filter.php:114
+#: ../plugins/pt-order/class-tp-pt-order.php:52
+#: ../plugins/pt-order/class-tp-pt-order.php:67
+msgid "Order"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:128
+#: ../../assets/plugins/filter/class-tp-filter.php:179
+#: ../plugins/filter/class-tp-filter.php:128
+#: ../plugins/filter/class-tp-filter.php:179
+msgid "Not filterable"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:143
+#: ../../assets/plugins/filter/class-tp-filter.php:198
+#: ../plugins/filter/class-tp-filter.php:143
+#: ../plugins/filter/class-tp-filter.php:198
+msgid "Filterable"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:156
+#: ../plugins/filter/class-tp-filter.php:156
+msgid "Drag and drop post types here to make them filterable."
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:218
+#: ../plugins/filter/class-tp-filter.php:218
+msgid "Drag and drop items here to make them filterable."
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:226
+#: ../plugins/filter/class-tp-filter.php:226
+msgid ""
+"Please select one or more post types that have taxonomies assigned to them."
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:288
+#: ../plugins/filter/class-tp-filter.php:288
+msgid "Filter widget"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:288
+#: ../plugins/filter/class-tp-filter.php:288
+msgid "A widget that filters on some taxonomies through AJAX"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:312
+#: ../plugins/filter/class-tp-filter.php:312
+msgid "Select a filter.."
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:319
+#: ../plugins/filter/class-tp-filter.php:319
+#, php-format
+msgid "You don't have any filters yet! <a href=\"%1$s\">Create one now</a>"
+msgstr ""
+
+#: ../../assets/plugins/filter/class-tp-filter.php:429
+#: ../plugins/filter/class-tp-filter.php:429
+msgid "Filter by type"
+msgstr ""
+
+#: ../../assets/plugins/global-content/class-tp-global-content.php:26
+#: ../plugins/global-content/class-tp-global-content.php:26
+msgid "General"
+msgstr ""
+
+#: ../../assets/plugins/global-content/class-tp-global-content.php:28
+#: ../plugins/global-content/class-tp-global-content.php:28
+msgid "Add content"
+msgstr ""
+
+#: ../../assets/plugins/global-content/class-tp-global-content.php:29
+#: ../plugins/global-content/class-tp-global-content.php:29
+msgid "Add new content"
+msgstr ""
+
+#: ../../assets/plugins/global-content/class-tp-global-content.php:47
+#: ../plugins/global-content/class-tp-global-content.php:47
+msgid "Template tag"
+msgstr ""
+
+#: ../../assets/plugins/global-content/class-tp-global-content.php:48
+#: ../plugins/global-content/class-tp-global-content.php:48
+msgid "Shortcode"
+msgstr ""
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:98
+#: ../plugins/migrate/class-tp-migrate.php:98
+msgid "Migrate"
+msgstr ""
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:108
+#: ../plugins/migrate/class-tp-migrate.php:108
+msgid "Migrate data"
+msgstr ""
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:111
+#: ../plugins/migrate/class-tp-migrate.php:111
+#, php-format
+msgid "Data is being migrated from %1$s."
+msgstr ""
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:117
+#: ../plugins/migrate/class-tp-migrate.php:117
+msgid "Start migration"
+msgstr ""
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:140
+#: ../plugins/migrate/class-tp-migrate.php:140
+msgid "Data migration complete."
+msgstr ""
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:141
+#: ../plugins/migrate/class-tp-migrate.php:141
+msgid "Initializing posts"
+msgstr ""
+
+#: ../../assets/plugins/migrate/class-tp-migrate.php:142
+#: ../plugins/migrate/class-tp-migrate.php:142
+msgid "Migrating posts (%i of %t)"
+msgstr ""
+
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:72
+msgid "Enrich"
+msgstr ""
+
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:106
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:106
+#, php-format
+msgid "Back to %1$s overview"
+msgstr ""
+
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:117
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:117
+msgid "Enriched"
+msgstr ""
+
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:119
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:119
+msgid "Remove enrichment"
+msgstr ""
+
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:154
+msgid "Show all"
+msgstr ""
+
+#: ../../assets/plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
+#: ../plugins/rich-taxonomy/class-tp-rich-taxonomy.php:156
+msgid "Only show enriched"
+msgstr ""
+
+#: ../../assets/plugins/sticky-posts/class-tp-sticky-posts.php:36
+#: ../plugins/sticky-posts/class-tp-sticky-posts.php:36
+msgid "Make this post sticky"
+msgstr ""
+
+#: ../../assets/plugins/term-image/class-tp-term-image.php:64
+#: ../plugins/term-image/class-tp-term-image.php:64
+msgid "or"
+msgstr ""

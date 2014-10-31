@@ -1,0 +1,108 @@
+/**
+ * @section forms
+ *
+ * Defines the styling of forms
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+
+/**
+ * @section    Forms
+ * @subsection Default form styling
+ */
+
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="month"],
+input[type="email"],
+input[type="date"],
+input[type="text"],
+input[type="time"],
+input[type="week"],
+input[type="tel"],
+input[type="url"],
+textarea, 
+select {
+	@include border-radius(3px);
+	@include placeholder(#666, #ccc);
+	background-color: #FFF;
+	border: 1px solid $border-color;
+	color: $text-color;
+	display: block;
+	font-family: $text-font;
+	font-size: 13px;
+	margin: 0;
+	min-width: 220px;
+	outline: none;
+	padding: 12px;
+
+	&:focus {
+		border: 1px solid darken($border-color, 20%);
+	}
+
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+	@include border-radius(3px);
+	background-color: $primary-color;
+	border: 0;
+	color: #FFF;
+	font-family: $text-font;
+	font-size: 12px;
+	font-weight: bold;
+	height: 40px;
+	margin-right: 10px;
+	padding: 0 35px;
+	text-transform: uppercase;
+	-webkit-appearance: none;
+
+		&:hover { 
+			background-color: lighten($primary-color, 5%);
+		}
+
+		&:active,
+		&:focus {
+			background-color: darken($primary-color, 5%);
+			outline: none;
+		}
+
+	}
+
+/**
+ * @section    Forms
+ * @subsection Searchform
+ */
+
+.search {
+
+	input[type="text"] { 
+		float: left;
+		margin-right: 10px;
+	}
+
+	input[type="submit"] { 
+		float: left;
+		font-family: 'FontAwesome';
+		font-weight: normal;
+	}
+
+}
+
+/**
+ * @section    Forms
+ * @subsection Fix for admin bar search form 
+ */
+
+input#adminbar-search {
+	min-width: 0;
+}

@@ -1,0 +1,295 @@
+/**
+* @section Images
+* 
+* Defines the default styling of images
+*
+* @package     WordPress
+* @subpackage  TrendPress
+* @author      Trendwerk
+* @license     GPL v2
+*
+*/
+
+/**
+ * @section     Images
+ * @subsection  Alignment
+ */
+
+.alignleft {
+	float: left;
+	margin: 10px 20px 10px 0; 
+}
+
+.alignright {
+	float: right;
+	margin: 10px 0 10px 20px; 
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
+/**
+ * @section    Images
+ * @subsection Captions
+ */
+
+.wp-caption {
+	background: $light-background;
+	margin-bottom: $line-height;
+	max-width: 100%;
+	text-align: center;
+
+	img { 
+		@include border-box;
+		padding: 5px; 
+	}
+		
+	.wp-caption-text { 
+		display: inline-block;
+		font-size: 12px;
+		line-height: 20px;
+		margin: 0 10px 10px 10px;	
+	}
+
+}
+
+/**
+ * @section     Images
+ * @subsection  Gallery
+ */
+
+.gallery {
+	clear: both;
+	float: left;
+	margin-top: $line-height;
+	margin-bottom: $line-height;
+	width: 100%;
+
+	.gallery-item {
+		float: left !important;
+		margin: 0 4px 4px 0 !important;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+
+		.gallery-caption {
+			@include border-box;
+			background-color: rgba(0, 0, 0, 0.75);
+			bottom: 0;
+			color: #FFF;
+			font-size: 12px;
+			left: 0;
+			line-height: 1.5;
+			margin: 0;
+			max-height: 50%;
+			opacity: 0;
+			padding: 6px 8px;
+			position: absolute;
+			text-align: left;
+			width: 100%;
+
+			.gallery-caption:before {
+				content: "";
+				height: 100%;
+				left: 0;
+				min-height: 49px;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+		}
+
+		&:hover .gallery-caption {
+			opacity: 1;
+		}
+
+	}
+
+	.gallery-columns-7 .gallery-caption,
+	.gallery-columns-8 .gallery-caption,
+	.gallery-columns-9 .gallery-caption {
+		display: none;
+	}		
+
+	&.gallery-columns-1 .gallery-item {
+		max-width: 100%;
+
+		&:nth-of-type(1n) {
+			margin-right: 0;
+		}
+
+	}
+
+	&.gallery-columns-2 .gallery-item {
+		max-width: 48%;
+		max-width: -webkit-calc(50% - 4px);
+		max-width: calc(50% - 4px);
+
+		&:nth-of-type(2n) {
+			margin-right: 0;
+		}
+
+	}
+
+	&.gallery-columns-3 .gallery-item {
+		max-width: 32%;
+		max-width: -webkit-calc(33.3% - 4px);
+		max-width: calc(33.3% - 4px);
+	
+		&:nth-of-type(3n) {
+			margin-right: 0;
+		}
+
+	}
+
+	&.gallery-columns-4 .gallery-item {
+		max-width: 23%;
+		max-width: -webkit-calc(25% - 4px);
+		max-width: calc(25% - 4px);
+	
+		&:nth-of-type(4n) {
+			margin-right: 0;
+		}
+
+	}
+
+	&.gallery-columns-5 .gallery-item {
+		max-width: 19%;
+		max-width: -webkit-calc(20% - 4px);
+		max-width: calc(20% - 4px);
+
+		&:nth-of-type(5n) {
+			margin-right: 0;
+		}
+
+	}
+
+	&.gallery-columns-6 .gallery-item {
+		max-width: 15%;
+		max-width: -webkit-calc(16.7% - 4px);
+		max-width: calc(16.7% - 4px);
+
+		&:nth-of-type(6) {
+			margin-right: 0;
+		}
+
+	}
+
+	&.gallery-columns-7 .gallery-item {
+		max-width: 13%;
+		max-width: -webkit-calc(14.28% - 4px);
+		max-width: calc(14.28% - 4px);
+
+		&:nth-of-type(7n) {
+			margin-right: 0;
+		}
+
+	}
+
+	&.gallery-columns-8 .gallery-item {
+		max-width: 11%;
+		max-width: -webkit-calc(12.5% - 4px);
+		max-width: calc(12.5% - 4px);
+
+		&:nth-of-type(8n) {
+			margin-right: 0;
+		}
+
+	}
+
+	&.gallery-columns-9 .gallery-item {
+		max-width: 9%;
+		max-width: -webkit-calc(11.1% - 4px);
+		max-width: calc(11.1% - 4px);
+
+		&:nth-of-type(9n) {
+			margin-right: 0;
+		}
+
+	}	
+
+	.gallery-columns-1.gallery-size-thumbnail figure.gallery-item:nth-of-type(1n+1),
+	.gallery-columns-2.gallery-size-thumbnail figure.gallery-item:nth-of-type(2n+1),
+	.gallery-columns-3.gallery-size-thumbnail figure.gallery-item:nth-of-type(3n+1),
+	.gallery-columns-1.gallery-size-medium figure.gallery-item:nth-of-type(1n+1) {
+		clear: left;
+	}
+
+}
+
+/**
+ * @section     Images
+ * @subsection  WordPress smileys
+ */
+
+.wp-smiley {
+	margin: 0 !important;
+	max-height: 1em;
+}
+
+/**
+ * @section     Images
+ * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
+ */
+
+
+figure.aligncenter,
+figure.alignright,
+figure.alignleft,
+figure.alignnone {
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+}
+
+.size-thumbnail,
+.size-medium,
+.size-large,
+.size-auto,
+.alignnone, 
+.size-full {
+	max-width: 100%;
+	height: auto;
+}
+
+/**
+ * @section     Images
+ * @subsection  Video container for better responsive video's
+ */
+
+.video-container {
+	margin-bottom: 30px;
+}
+
+@media(max-width: 740px) {
+
+	.video-container { 
+		height: 0;
+		padding-top: 30px;
+		padding-bottom: 56.25%;
+		position: relative;
+	}
+
+	.video-container iframe, 
+	.video-container object, 
+	.video-container embed, 
+	.video-container video {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+}

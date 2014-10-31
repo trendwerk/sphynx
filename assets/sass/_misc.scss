@@ -1,0 +1,38 @@
+/**
+ * @section Misc
+ *
+ * Defines miscellaneous styles
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ *
+ */
+
+/**
+ * @section    Misc
+ * @subsection Classes
+ */
+
+.clear {
+	clear: both;
+}
+
+.hide {
+	display: none;
+}
+
+/**
+ * @section    Misc
+ * @subsection Fixes
+ */
+
+/**
+ * Fixes vertical scroll caused by tweet buttons
+ */
+ 
+#twttrHubFrameSecure,
+#twttrHubFrame {
+	display: none;
+}

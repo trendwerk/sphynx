@@ -1,0 +1,409 @@
+/**
+ * @section Widgets
+ *
+ * Defines the  styling of widgets
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+
+/**
+ * @section    Widget
+ * @subsection Default wigdet styling
+ */
+
+.widget {
+	@include border-box;
+	background: $light-background;
+	clear: both;
+	float: left;
+	margin: 0 0 40px 0;
+	padding: 40px;
+	width: 100%;
+
+	.widgettitle {
+		margin: 0 0 22px 0;
+		
+		a {
+			color: $heading-color;
+			text-decoration: none;
+			
+			&:active,
+			&:focus,
+			&:hover {
+				color: $link-color;
+				text-decoration: underline;
+			}
+
+		}
+
+	}
+
+	img.attachment-widget {
+		display: block;
+		height: auto;
+		margin-bottom: $line-height;
+		width: 100%;
+	}
+
+	a {
+		
+		&.button {
+			margin-bottom: 0;
+		}
+
+		&.more-link {
+			display: block;
+			margin-top: 20px;
+		}
+		
+	}
+
+	p {
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+	}
+	
+	ul {
+		border-bottom: 1px solid $border-color;
+		margin: 0 0 $line-height 0;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		
+		li {
+			border-top: 1px solid $border-color;
+			display: block;
+			padding: 10px 5px;
+			
+			a {
+				color: $text-color;
+				text-decoration: underline;
+				
+				&:active,
+				&:focus,
+				&:hover {
+					color: $link-color;
+				}
+			 }
+
+			&.current_page_item > a,
+			&.current-cat > a,
+			&.current > a {
+				font-weight: bold;
+			}			 
+			
+			ul {
+				border: none;
+				margin: 0 0 0 20px;
+
+				li {
+					border: none;
+					margin-left: 20px;
+				}
+				
+			}
+
+		}
+
+	}
+
+}
+
+/**
+ * @section    Widget
+ * @subsection Contact
+ *
+ * @package    WordPress
+ * @subpackage TrendPress
+ */
+
+.widget_tp_contact {
+
+	span.label { 
+		display: inline-block;
+		width: 90px;
+	}
+	
+}
+
+/**
+ * @section    Widget
+ * @subsection Social
+ *
+ * @package    WordPress
+ * @subpackage TrendPress
+ */
+
+.widget_tp_social {
+
+	ul {	
+		border: none;
+
+		/* large icons with text */
+
+		li {
+			border-top: none;
+			display: inline;
+			padding: 0;
+
+			a {
+				display: block;
+				float: left;
+				margin: 0 0 10px 0;
+				text-decoration: none;
+
+				i { 
+					@include border-radius(999px);
+					background: $text-light;
+					color: #FFF;
+					font-size: 16px;
+					float: left;
+					height: 32px;
+					line-height: 32px;
+					margin: 0 5px 0 0;
+					text-align: center;
+					text-decoration: none;
+					width: 32px;
+				}
+
+				span.title { 
+					line-height: 32px;
+				}
+
+				&:hover {
+
+					span {
+						text-decoration: underline;
+					}
+
+				} 
+
+			}
+			
+			/* rollover colors */
+
+			&.twitter a:hover i {
+				background: #00ACED;
+			}
+
+			&.facebook a:hover i {
+				background: #3B5998;
+			}
+
+			&.linkedin a:hover i {
+				background: #007BB6;
+			}
+
+			&.googleplus a:hover i {
+				background: #DD4b39;
+			}
+
+			&.youtube a:hover i {
+				background: #BB0000;
+			}
+
+			&.email {
+				
+				i {
+					font-size: 12px;
+				}
+
+				a:hover i {
+					background: $primary-color;
+				}
+
+			}
+
+			&.rss a:hover i {
+				background: #FF6600;
+			}
+
+		}
+		
+	}
+	
+}
+
+/**
+ * @section    Widget
+ * @subsection Telephone number and button
+ *
+ * @package    WordPress
+ * @subpackage TrendPress
+ */
+
+.widget_tp_telephone_button {
+	
+	p.telephone {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	
+}
+
+/**
+ * @section    Widget
+ * @subsection Tag cloud
+ *
+ * @package    WordPress
+ */
+
+.widget_tag_cloud {
+
+	.tagcloud {
+	
+		a {
+			@include border-radius(5px);
+			background: #CCC;
+			color: $text-color;
+			display: inline-block;
+			font-size: 12px !important;
+			line-height: 25px;
+			margin: 0 6px 9px 0;
+			padding: 0 10px;
+			text-decoration: none;
+			text-transform: lowercase;
+			
+			&:active,
+			&:focus,
+			&:hover {
+				background: $heading-color;
+				color: #FFF;
+			}
+			
+		}
+	
+	}
+
+}
+
+/**
+ * @section    Widget
+ * @subsection Calendar
+ *
+ * @package    WordPress
+ */
+
+.widget_calendar {
+
+	table {
+		border-right: none;
+		border-bottom: none; 
+		border-left: none;
+		margin-bottom: 0;
+	
+		tr th, 
+		tr td { 
+			text-align: center;
+			vertical-align: center;
+		}
+	
+		thead tr th:first-child, 
+		tbody tr td:first-child {
+			border-left: 1px solid $border-color;
+		}
+		
+		caption {
+			padding-bottom: 10px;
+		}
+
+		tfoot, 
+		tfoot tr, 
+		tfoot tr td {
+			border: none !important;
+		}
+		
+		tfoot td#prev {
+			padding-top: 10px;
+			padding-left: 0;
+			text-align: left;
+		}
+
+		tfoot td#next {
+			padding-top: 10px;
+			padding-right: 0;
+			text-align: right;
+		}
+
+	}
+
+}
+
+/**
+ * @section    Widget
+ * @subsection Search
+ *
+ * @package    WordPress
+ */
+
+.widget_search {
+	
+	input[type="text"] {
+		margin-bottom: 5px;
+		min-width: 0;
+		width: 188px;
+	}
+
+	input[type="submit"] {
+		margin-bottom: 5px;
+		margin-right: 0;
+		padding: 0;
+		width: 40px;
+	}
+	
+}
+		
+/**
+ * @section    Widget
+ * @subsection RSS
+ *
+ * @package    WordPress
+ */
+
+.widget_rss {
+
+	h3 img {
+		display: none;
+	}
+
+	ul {
+
+		li {
+			padding: 15px 0; 
+
+			a.rsswidget { 
+				color: $heading-color;
+				font-size: 16px;
+				font-weight: bold;
+				line-height: 25px;
+				margin: 0;
+				text-decoration: none;
+
+				&:active,
+				&:focus,
+				&:hover {
+					color: $link-color;
+					text-decoration: underline;
+				}
+
+			}
+
+			span.rss-date { 
+				color: $text-light; 
+				display: block;
+				margin: 0 0 10px 0;
+			}
+
+		}
+
+	}
+
+}
