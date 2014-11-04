@@ -1,11 +1,10 @@
-$ ->
-  
+$ -> 
+
   # Show button in widget
   # @subpackage Widgets
   # 
   $( document ) .on 'click', '.tp-show-button', ->
     $(this).closest( 'div.widget-content' ).find( '.tp-show-button-content' ).toggle()
-    return
   
   # Upload image in widget
   # @subpackage Widgets
@@ -31,14 +30,9 @@ $ ->
       attachment = TP_Upload_Image_Widget.state().get( 'selection' ).first().toJSON()
       $( TP_Upload_Button ).closest( '.widget-content' ).find( '.tp-upload-image-content' ).val attachment.id
       $( TP_Upload_Button ).closest( '.widget-inside' ).find( '.widget-control-save' ).trigger 'click'
-      return
 
     TP_Upload_Image_Widget.open()
-    return
 
   $(document).on 'click', '.tp-remove-image', (event) ->
     $(this).closest( '.widget-content' ).find( '.tp-upload-image-content' ).val ''
     $(this).closest( '.widget-inside' ).find( '.widget-control-save' ).trigger 'click'
-    return
-
-  return

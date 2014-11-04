@@ -1,7 +1,7 @@
 $(function() {
   var TP_Upload_Button, TP_Upload_Image_Widget;
   $(document).on('click', '.tp-show-button', function() {
-    $(this).closest('div.widget-content').find('.tp-show-button-content').toggle();
+    return $(this).closest('div.widget-content').find('.tp-show-button-content').toggle();
   });
   TP_Upload_Image_Widget = void 0;
   TP_Upload_Button = void 0;
@@ -25,12 +25,12 @@ $(function() {
       var attachment;
       attachment = TP_Upload_Image_Widget.state().get('selection').first().toJSON();
       $(TP_Upload_Button).closest('.widget-content').find('.tp-upload-image-content').val(attachment.id);
-      $(TP_Upload_Button).closest('.widget-inside').find('.widget-control-save').trigger('click');
+      return $(TP_Upload_Button).closest('.widget-inside').find('.widget-control-save').trigger('click');
     });
-    TP_Upload_Image_Widget.open();
+    return TP_Upload_Image_Widget.open();
   });
-  $(document).on('click', '.tp-remove-image', function(event) {
+  return $(document).on('click', '.tp-remove-image', function(event) {
     $(this).closest('.widget-content').find('.tp-upload-image-content').val('');
-    $(this).closest('.widget-inside').find('.widget-control-save').trigger('click');
+    return $(this).closest('.widget-inside').find('.widget-control-save').trigger('click');
   });
 });
