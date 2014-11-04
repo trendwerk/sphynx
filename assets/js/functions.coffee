@@ -15,5 +15,5 @@ $ ->
     $( document ).on 'click', 'a[rel*=\"external\"]', ->
         window.open $( this ).prop( 'href' )
     false
-
+  
     return

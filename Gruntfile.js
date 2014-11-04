@@ -51,7 +51,7 @@ module.exports = function( grunt ) {
 			},
 			coffee: {
 				files: [
-					'assets/js/coffee/*'
+					'assets/js/*'
 				],
 				tasks: [ 'coffee' ],
 				options: {

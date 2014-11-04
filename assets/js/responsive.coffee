@@ -1,5 +1,5 @@
 $ -> 
- 
+    
     # Sidebar
     if window.innerWidth < 980
         $( '#main aside' ).insertAfter( '#main #content' )

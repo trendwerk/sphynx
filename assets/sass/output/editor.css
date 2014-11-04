@@ -465,7 +465,6 @@ select[size="1"] {
   src: url("../../../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("../../../assets/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("./assets/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("./assets/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 .fa {
   display: inline-block;
   font-family: FontAwesome;
@@ -543,21 +542,18 @@ select[size="1"] {
 
   100% {
     -moz-transform: rotate(359deg); } }
-
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); }
 
   100% {
     -webkit-transform: rotate(359deg); } }
-
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg); }
 
   100% {
     -o-transform: rotate(359deg); } }
-
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -566,7 +562,6 @@ select[size="1"] {
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
-
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
