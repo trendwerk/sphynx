@@ -4,15 +4,13 @@ $(function() {
       return $(this).fancybox();
     }
   });
-  return;
   $('.gallery').each(function(i) {
     $(this).find('a').prop('rel', 'fancybox-gallery-' + i);
     return $(this).find('figure.gallery-item a').fancybox({
       type: 'image'
     });
   });
-  $(document).on('click', 'a[rel*=\"external\"]', function() {
+  return $(document).on('click', 'a[rel*=\"external\"]', function() {
     return window.open($(this).prop('href'));
   });
-  false;
 });
