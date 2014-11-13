@@ -1,3 +1,5 @@
+$ = jQuery
+
 $ -> 
 
   # Show button in widget

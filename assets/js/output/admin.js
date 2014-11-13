@@ -1,3 +1,7 @@
+var $;
+
+$ = jQuery;
+
 $(function() {
   var TP_Upload_Button, TP_Upload_Image_Widget;
   $(document).on('click', '.tp-show-button', function() {
