@@ -358,7 +358,7 @@ class TP_Nav {
 	function get_nav_id_by_page_id( $postid ) {
 		if( $this->menu_items ) {
 			foreach( $this->menu_items as $menu_item ) {
-				if( $menu_item->object_id == $postid )
+				if( $menu_item->object_id == $postid && 'page' == $menu_item->object )
 					return $menu_item->ID;
 			}
 		}
