@@ -14,13 +14,24 @@ class TP_Title_Content_Button extends WP_Widget {
 
 	function setup() {
 		$this->types = array(
-			'more-link'     => __( 'Read more link', 'tp' ),
-			'button'   => __( 'Primary button', 'tp' ),
+			'more-link'        => __( 'Read more link', 'tp' ),
+			'button'           => __( 'Primary button', 'tp' ),
 			'button secondary' => __( 'Secondary button', 'tp' ),
 		);
 	}
 
 	function form( $instance ) {
+		$defaults = array(
+			'title'       => '',
+			'content'     => '',
+			'show_button' => false,
+			'button_text' => '',
+			'button_link' => '',
+			'link_type'   => 'more-link',
+			'external'    => false,
+		);
+
+		$instance = wp_parse_args( $instance, $defaults );
 		?>
 
 		<p>

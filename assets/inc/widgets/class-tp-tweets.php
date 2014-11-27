@@ -11,6 +11,12 @@ class TP_Tweets extends WP_Widget {
 	}
 	
 	function form( $instance ) {
+		$defaults = array(
+			'title'    => $this->name,
+			'username' => '',
+		);
+
+		$instance = wp_parse_args( $instance, $defaults );
 		?>
 
 		<p>

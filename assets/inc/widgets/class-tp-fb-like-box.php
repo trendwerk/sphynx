@@ -12,6 +12,12 @@ class TP_FB_Like_Box extends WP_Widget {
 	}
 	
 	function form( $instance ) {
+		$defaults = array(
+			'title' => '',
+			'url'   => '',
+		);
+
+		$instance = wp_parse_args( $instance, $defaults );
 		?>
 
 		<p>

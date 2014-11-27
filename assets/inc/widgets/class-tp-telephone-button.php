@@ -18,7 +18,7 @@ class TP_Telephone_Button extends TP_Title_Content_Button {
 	}
 
 	function show( $instance ) {
-		if( true === $instance['tp-telephone'] ) {
+		if( isset( $instance['tp-telephone'] ) && true === $instance['tp-telephone'] ) {
 			?>
 			
 			<p class="telephone">

@@ -11,6 +11,11 @@ class TP_Contact extends WP_Widget {
 	}
 
 	function form( $instance ) {
+		$defaults = array(
+			'title' => __( 'Contact', 'tp' ),
+		);
+
+		$instance = wp_parse_args( $instance, $defaults );
 		?>
 
  		<p>

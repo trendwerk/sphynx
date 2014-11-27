@@ -11,6 +11,15 @@ class TP_Post_Type_Posts extends WP_Widget {
 	}
 	
 	function form( $instance ) {
+		$defaults = array(
+			'title'        => __( 'Latest posts', 'tp' ),
+			'post_type'    => 'post',
+			'number'       => 5,
+			'archive_link' => true,
+		);
+
+		$instance = wp_parse_args( $instance, $defaults );
+
 		$post_types = array_diff( get_post_types( array(
 			'public'   => true,
 		) ), array( 'page', 'attachment' ) );
@@ -54,7 +63,7 @@ class TP_Post_Type_Posts extends WP_Widget {
 
 			<p>
 				<label>
-					<input type="checkbox" name="<?php echo $this->get_field_name( 'archive_link' ); ?>" value="true" <?php checked( $instance['archive_link'], true ); ?>>
+					<input type="checkbox" name="<?php echo $this->get_field_name( 'archive_link' ); ?>" value="true" <?php checked( $instance['archive_link'] ); ?>>
 					<?php _e( 'Show link to post type archive', 'tp' ); ?>
 				</label>
 			</p>
@@ -85,8 +94,7 @@ class TP_Post_Type_Posts extends WP_Widget {
 			echo $before_widget;
 
 				if( $instance['title'] )
-				echo $before_title . $instance['title'] . $after_title;
-
+					echo $before_title . $instance['title'] . $after_title;
 				?>
 		
 				<ul class="post-type-posts">
@@ -103,10 +111,11 @@ class TP_Post_Type_Posts extends WP_Widget {
 		
 				</ul>
 				
-				<?php if( $instance['archive_link'] ) { 
+				<?php 
+				if( $instance['archive_link'] ) { 
 					?>
-			    	
-		    		<a class="more-link" href="<?php echo get_post_type_archive_link( $post_type->name ); ?>"><?php echo __( 'View all', 'tp') . ' ' . strtolower( $post_type->labels->name ); ?></a>
+					
+			    	<a class="more-link" href="<?php echo get_post_type_archive_link( $post_type->name ); ?>"><?php echo __( 'View all', 'tp') . ' ' . strtolower( $post_type->labels->name ); ?></a>
 
 		    		<?php 
 		    	} 

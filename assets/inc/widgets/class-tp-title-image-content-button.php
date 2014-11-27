@@ -21,13 +21,25 @@ class TP_Title_Content_Image_Button extends WP_Widget {
 	function localize() {
 		wp_localize_script( 'admin', 'TP_Title_Content_Image_Button', array(
 			'media_frame_labels' => array(
-				'title'  => __( 'Choose an image', 'tp' ),
-				'button' => __( 'Insert into widget', 'tp' ),
+				'title'          => __( 'Choose an image', 'tp' ),
+				'button'         => __( 'Insert into widget', 'tp' ),
 			),
 		) );
 	}
 
 	function form( $instance ) {
+		$defaults = array(
+			'title'       => '',
+			'image'       => 0,
+			'content'     => '',
+			'show_button' => false,
+			'button_text' => '',
+			'button_link' => '',
+			'link_type'   => 'more-link',
+			'external'    => false,
+		);
+
+		$instance = wp_parse_args( $instance, $defaults );
 		?>
 
 		<p>

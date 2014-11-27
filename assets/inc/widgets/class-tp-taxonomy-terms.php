@@ -11,6 +11,13 @@ class TP_Taxonomy_Terms extends WP_Widget {
 	}
 	
 	function form( $instance ) {
+		$defaults = array(
+			'title'    => '',
+			'taxonomy' => '',
+		);
+
+		$instance = wp_parse_args( $instance, $defaults );
+
 		$taxonomies = get_taxonomies( array(
 			'public'   => true,
 			'_builtin' => false,

@@ -11,6 +11,11 @@ class TP_Social extends WP_Widget {
 	}
 	
 	function form( $instance ) {
+		$defaults = array(
+			'title' => __( 'Social', 'tp' ),
+		);
+
+		$instance = wp_parse_args( $instance, $defaults );
 		?>
 
 		<p>
