@@ -11,6 +11,7 @@ $(function() {
     });
   });
   return $(document).on('click', 'a[rel*=\"external\"]', function() {
-    return window.open($(this).prop('href'));
+    window.open($(this).prop('href'));
+    return false;
   });
 });

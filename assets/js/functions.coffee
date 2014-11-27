@@ -12,3 +12,4 @@ $ ->
     # Open rel="external" in new tab
     $( document ).on 'click', 'a[rel*=\"external\"]', ->
         window.open $( this ).prop( 'href' )
+        return false
