@@ -10,9 +10,9 @@ module.exports = function( grunt ) {
 					bare: true
 				},
 				files: {
-					'assets/js/output/admin.js': 'assets/js/admin.coffee',
-					'assets/js/output/functions.js': 'assets/js/functions.coffee',
-					'assets/js/output/responsive.js': 'assets/js/responsive.coffee'
+					'assets/coffee/output/admin.js': 'assets/coffee/admin.coffee',
+					'assets/coffee/output/functions.js': 'assets/coffee/functions.coffee',
+					'assets/coffee/output/responsive.js': 'assets/coffee/responsive.coffee'
 				}
 			}
 
