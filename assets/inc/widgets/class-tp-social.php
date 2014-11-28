@@ -45,7 +45,7 @@ class TP_Social extends WP_Widget {
 				<?php if( $twitter = get_option( 'tp-twitter' ) ) { ?>
 
 					<li class="twitter">
-						<a rel="external" href="<?php echo $twitter; ?>" title="<?php _e( 'Follow us on Twitter', 'tp' ); ?>">
+						<a href="<?php echo $twitter; ?>" title="<?php _e( 'Follow us on Twitter', 'tp' ); ?>" target="_blank">
 							<i class="fa fa-twitter"></i>
 						</a>
 					</li>
@@ -53,7 +53,7 @@ class TP_Social extends WP_Widget {
 				<?php } if( $facebook = get_option( 'tp-facebook' ) ) { ?>
 
 					<li class="facebook">
-						<a rel="external" href="<?php echo $facebook; ?>" title="<?php _e( 'Like our Facebook page', 'tp' ); ?>">
+						<a href="<?php echo $facebook; ?>" title="<?php _e( 'Like our Facebook page', 'tp' ); ?>" target="_blank">
 							<i class="fa fa-facebook"></i>
 						</a>
 					</li>
@@ -61,7 +61,7 @@ class TP_Social extends WP_Widget {
 				<?php } if( $googleplus = get_option( 'tp-googleplus' ) ) { ?>
 
 					<li class="googleplus">
-						<a rel="external" href="<?php echo $googleplus; ?>" title="<?php _e( 'Add us on Google+', 'tp' ); ?>">
+						<a href="<?php echo $googleplus; ?>" title="<?php _e( 'Add us on Google+', 'tp' ); ?>" target="_blank">
 							<i class="fa fa-google-plus"></i>
 						</a>
 					</li>
@@ -69,7 +69,7 @@ class TP_Social extends WP_Widget {
 				<?php } if( $linkedin = get_option( 'tp-linkedin' ) ) { ?>
 
 					<li class="linkedin">
-						<a rel="external" href="<?php echo $linkedin; ?>" title="<?php _e( 'Connect with us on LinkedIn', 'tp' ); ?>">
+						<a href="<?php echo $linkedin; ?>" title="<?php _e( 'Connect with us on LinkedIn', 'tp' ); ?>" target="_blank">
 							<i class="fa fa-linkedin"></i>
 						</a>
 					</li>
@@ -77,7 +77,7 @@ class TP_Social extends WP_Widget {
 				<?php } if( $youtube = get_option( 'tp-youtube' ) ) { ?>
 
 					<li class="youtube">
-						<a rel="external" href="<?php echo $youtube; ?>" title="<?php _e( 'View our YouTube channel', 'tp' ); ?>">
+						<a href="<?php echo $youtube; ?>" title="<?php _e( 'View our YouTube channel', 'tp' ); ?>" target="_blank">
 							<i class="fa fa-youtube"></i>
 						</a>
 					</li>

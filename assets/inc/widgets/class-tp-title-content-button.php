@@ -122,7 +122,7 @@ class TP_Title_Content_Button extends WP_Widget {
 		    	?>
 
 		    	<p>
-		    		<a class="<?php echo $instance['link_type']; ?>" href="<?php echo $instance['button_link']; ?>" <?php if( $instance['external'] ) echo 'rel="external"'; ?>>
+		    		<a class="<?php echo $instance['link_type']; ?>" href="<?php echo $instance['button_link']; ?>" <?php if( $instance['external'] ) echo 'target="_blank"'; ?>>
 		    			<?php echo $instance['button_text']; ?>
 		    		</a>
 		    	</p>

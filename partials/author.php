@@ -58,7 +58,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 					<?php if( $facebook ) { ?>
 
 						<li>
-							<a class="facebook" href="<?php echo $facebook; ?>" rel="external">
+							<a class="facebook" href="<?php echo $facebook; ?>" target="_blank">
 								<i class="fa fa-facebook"></i>
 							</a>
 						</li>
@@ -68,7 +68,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 					<?php if( $twitter ) { ?>
 
 						<li >
-							<a class="twitter" href="https://twitter.com/<?php echo $twitter; ?>" rel="external">
+							<a class="twitter" href="https://twitter.com/<?php echo $twitter; ?>" target="_blank">
 								<i class="fa fa-twitter"></i>
 							</a>
 						</li>
@@ -78,7 +78,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 					<?php if( $googleplus ) { ?>
 
 						<li>
-							<a class="google-plus" href="<?php echo $googleplus; ?>" rel="external">
+							<a class="google-plus" href="<?php echo $googleplus; ?>" target="_blank">
 								<i class="fa fa-google-plus"></i>
 							</a>
 						</li>
@@ -88,7 +88,7 @@ if( get_the_author_meta( 'show_profile', $author ) ) {
 					<?php if( $linkedin ) { ?>
 
 						<li>
-							<a class="linkedin" href="<?php echo $linkedin; ?>" rel="external">
+							<a class="linkedin" href="<?php echo $linkedin; ?>" target="_blank">
 								<i class="fa fa-linkedin"></i>
 							</a>
 						</li>

@@ -4,14 +4,10 @@ $(function() {
       return $(this).fancybox();
     }
   });
-  $('.gallery').each(function(i) {
+  return $('.gallery').each(function(i) {
     $(this).find('a').prop('rel', 'fancybox-gallery-' + i);
     return $(this).find('figure.gallery-item a').fancybox({
       type: 'image'
     });
-  });
-  return $(document).on('click', 'a[rel*=\"external\"]', function() {
-    window.open($(this).prop('href'));
-    return false;
   });
 });
