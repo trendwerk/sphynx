@@ -258,11 +258,12 @@ p.tags {
 				width: 100%;
 			}
 
-			input[type="submit"] {
+			button[type="submit"] {
 				background: none;
 				box-shadow: none;
 				color: $text-light;
 				font-size: 13px;
+				font-family: fontawesome;
 				margin: 0;
 				padding: 0 12px;
 				position: absolute;

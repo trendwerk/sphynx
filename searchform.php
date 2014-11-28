@@ -4,7 +4,7 @@
 
 		<fieldset>
 			<input type="text" name="s" placeholder="<?php _e( 'Search', 'tp' ); ?>&hellip;" />
-			<input type="submit" value="&#xf002;" />
+			<button type="submit">&#xf002;</button>
 		</fieldset>
 
 	</form>
