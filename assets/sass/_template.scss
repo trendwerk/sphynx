@@ -93,10 +93,6 @@
 			margin: 0 0 $line-height 20px;
 		}
 
-		.search-highlight {
-			background: #FFFFB3;
-		}
-
 		&.sticky { 
 			@include border-box();
 			background: $light-background;

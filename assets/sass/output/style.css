@@ -3199,10 +3199,6 @@ body {
   .blog article figure {
     float: right;
     margin: 0 0 30px 20px; }
-  .archive article .search-highlight,
-  .search article .search-highlight,
-  .blog article .search-highlight {
-    background: #FFFFB3; }
   .archive article.sticky,
   .search article.sticky,
   .blog article.sticky {
