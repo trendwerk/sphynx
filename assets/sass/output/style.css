@@ -3676,12 +3676,17 @@ p.tags {
           color: #1f6fd1; }
       .widget ul li.current_page_item > a, .widget ul li.current-cat > a, .widget ul li.current > a {
         font-weight: bold; }
+      .widget ul li.current > ul, .widget ul li.parent > ul {
+        border-bottom: none;
+        display: block;
+        font-size: 12px; }
       .widget ul li ul {
-        border: none;
+        display: none;
         margin: 0 0 0 20px; }
         .widget ul li ul li {
           border: none;
-          margin-left: 20px; }
+          margin-left: 20px;
+          padding: 0 5px; }
 
 /**
  * @section    Widget

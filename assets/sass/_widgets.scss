@@ -94,19 +94,35 @@
 				}
 			 }
 
-			&.current_page_item > a,
-			&.current-cat > a,
-			&.current > a {
-				font-weight: bold;
-			}			 
+			&.current_page_item,
+			&.current-cat,
+			&.current {
+
+				&>a {
+					font-weight: bold;
+				}
+
+			}	
+
+			&.current, 
+			&.parent {
+
+				> ul { 
+					border-bottom: none;
+					display: block;
+					font-size: 12px;
+				}
+
+			}
 			
 			ul {
-				border: none;
+				display: none;
 				margin: 0 0 0 20px;
 
 				li {
 					border: none;
 					margin-left: 20px;
+					padding: 0 5px;
 				}
 				
 			}
