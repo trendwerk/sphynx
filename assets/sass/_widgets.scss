@@ -92,27 +92,20 @@
 				&:hover {
 					color: $link-color;
 				}
+				
 			 }
 
-			&.current_page_item,
-			&.current-cat,
-			&.current {
-
-				&>a {
-					font-weight: bold;
-				}
-
+			&.current_page_item &>a ,
+			&.current-cat &>a ,
+			&.current &>a  {
+				font-weight: bold;
 			}	
 
-			&.current, 
-			&.parent {
-
-				> ul { 
-					border-bottom: none;
-					display: block;
-					font-size: 12px;
-				}
-
+			&.current > ul, 
+			&.parent > ul {
+				border-bottom: none;
+				display: block;
+				font-size: 12px;
 			}
 			
 			ul {
@@ -163,8 +156,6 @@
 	ul {	
 		border: none;
 
-		/* large icons with text */
-
 		li {
 			border-top: none;
 			display: inline;
@@ -204,8 +195,6 @@
 
 			}
 			
-			/* rollover colors */
-
 			&.twitter a:hover i {
 				background: #00ACED;
 			}
@@ -274,29 +263,25 @@
 
 .widget_tag_cloud {
 
-	.tagcloud {
-	
-		a {
-			@include border-radius(5px);
-			background: #CCC;
-			color: $text-color;
-			display: inline-block;
-			font-size: 12px !important;
-			line-height: 25px;
-			margin: 0 6px 9px 0;
-			padding: 0 10px;
-			text-decoration: none;
-			text-transform: lowercase;
-			
-			&:active,
-			&:focus,
-			&:hover {
-				background: $heading-color;
-				color: #FFF;
-			}
-			
+	.tagcloud a {
+		@include border-radius(5px);
+		background: #CCC;
+		color: $text-color;
+		display: inline-block;
+		font-size: 12px !important;
+		line-height: 25px;
+		margin: 0 6px 9px 0;
+		padding: 0 10px;
+		text-decoration: none;
+		text-transform: lowercase;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			background: $heading-color;
+			color: #FFF;
 		}
-	
+		
 	}
 
 }
@@ -308,47 +293,43 @@
  * @package    WordPress
  */
 
-.widget_calendar {
+.widget_calendar table {
+	border-right: none;
+	border-bottom: none; 
+	border-left: none;
+	margin-bottom: 0;
 
-	table {
-		border-right: none;
-		border-bottom: none; 
-		border-left: none;
-		margin-bottom: 0;
+	tr th, 
+	tr td { 
+		text-align: center;
+		vertical-align: center;
+	}
+
+	thead tr th:first-child, 
+	tbody tr td:first-child {
+		border-left: 1px solid $border-color;
+	}
 	
-		tr th, 
-		tr td { 
-			text-align: center;
-			vertical-align: center;
-		}
+	caption {
+		padding-bottom: 10px;
+	}
 	
-		thead tr th:first-child, 
-		tbody tr td:first-child {
-			border-left: 1px solid $border-color;
-		}
-		
-		caption {
-			padding-bottom: 10px;
-		}
+	tfoot tr td,
+	tfoot tr,
+	tfoot {
+		border: none !important;
+	}
+	
+	tfoot td#prev {
+		padding-top: 10px;
+		padding-left: 0;
+		text-align: left;
+	}
 
-		tfoot, 
-		tfoot tr, 
-		tfoot tr td {
-			border: none !important;
-		}
-		
-		tfoot td#prev {
-			padding-top: 10px;
-			padding-left: 0;
-			text-align: left;
-		}
-
-		tfoot td#next {
-			padding-top: 10px;
-			padding-right: 0;
-			text-align: right;
-		}
-
+	tfoot td#next {
+		padding-top: 10px;
+		padding-right: 0;
+		text-align: right;
 	}
 
 }
@@ -390,34 +371,30 @@
 		display: none;
 	}
 
-	ul {
+	ul li {
+		padding: 15px 0; 
 
-		li {
-			padding: 15px 0; 
+		a.rsswidget { 
+			color: $heading-color;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 25px;
+			margin: 0;
+			text-decoration: none;
 
-			a.rsswidget { 
-				color: $heading-color;
-				font-size: 16px;
-				font-weight: bold;
-				line-height: 25px;
-				margin: 0;
-				text-decoration: none;
-
-				&:active,
-				&:focus,
-				&:hover {
-					color: $link-color;
-					text-decoration: underline;
-				}
-
+			&:active,
+			&:focus,
+			&:hover {
+				color: $link-color;
+				text-decoration: underline;
 			}
 
-			span.rss-date { 
-				color: $text-light; 
-				display: block;
-				margin: 0 0 10px 0;
-			}
+		}
 
+		span.rss-date { 
+			color: $text-light; 
+			display: block;
+			margin: 0 0 10px 0;
 		}
 
 	}

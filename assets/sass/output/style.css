@@ -3674,7 +3674,7 @@ p.tags {
         text-decoration: underline; }
         .widget ul li a:active, .widget ul li a:focus, .widget ul li a:hover {
           color: #1f6fd1; }
-      .widget ul li.current_page_item > a, .widget ul li.current-cat > a, .widget ul li.current > a {
+      .widget ul li.current_page_item .widget ul li > a, .widget ul li.current-cat .widget ul li > a, .widget ul li.current .widget ul li > a {
         font-weight: bold; }
       .widget ul li.current > ul, .widget ul li.parent > ul {
         border-bottom: none;
@@ -3707,13 +3707,11 @@ p.tags {
  * @subpackage TrendPress
  */
 .widget_tp_social ul {
-  border: none;
-  /* large icons with text */ }
+  border: none; }
   .widget_tp_social ul li {
     border-top: none;
     display: inline;
-    padding: 0;
-    /* rollover colors */ }
+    padding: 0; }
     .widget_tp_social ul li a {
       display: block;
       float: left;
@@ -3808,9 +3806,9 @@ p.tags {
     border-left: 1px solid #cccccc; }
   .widget_calendar table caption {
     padding-bottom: 10px; }
-  .widget_calendar table tfoot,
+  .widget_calendar table tfoot tr td,
   .widget_calendar table tfoot tr,
-  .widget_calendar table tfoot tr td {
+  .widget_calendar table tfoot {
     border: none !important; }
   .widget_calendar table tfoot td#prev {
     padding-top: 10px;

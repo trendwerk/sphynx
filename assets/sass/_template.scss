@@ -31,6 +31,7 @@
 				font-size: 36px;
 				margin-bottom: 36px;
 			}
+			
 		}
 
 	}
@@ -109,46 +110,42 @@
  * @subsection single.php
  */
 
- .single {
-
- 	#main #content {
+ .single #main #content {
  			
- 		h1 {
- 			margin-bottom: 0;
- 		}
+		h1 {
+			margin-bottom: 0;
+		}
 
- 		figure {
-			float: right;
-			margin: 5px 0 10px 20px; 
- 		}
+		figure {
+		float: right;
+		margin: 5px 0 10px 20px; 
+		}
 
-		nav.pages {
-			margin-bottom: 30px;
+	nav.pages {
+		margin-bottom: 30px;
 
-			a {
-				@include border-radius(3px);
-				background-color: $light-background;
-				color: $text-color;
-				display: inline-block;
-				font-size: 13px;
-				height: 40px;
-				line-height: 40px;
-				margin-right: 5px;
-				padding: 0 20px;
-				text-decoration: none;
+		a {
+			@include border-radius(3px);
+			background-color: $light-background;
+			color: $text-color;
+			display: inline-block;
+			font-size: 13px;
+			height: 40px;
+			line-height: 40px;
+			margin-right: 5px;
+			padding: 0 20px;
+			text-decoration: none;
 
-				&:active,
-				&:focus,
-				&:hover {
-					background: darken($light-background, 10%);
-				}
-
+			&:active,
+			&:focus,
+			&:hover {
+				background: darken($light-background, 10%);
 			}
 
 		}
-		
- 	}
- 	
+
+	}
+	
 }
 
 /**
@@ -172,19 +169,11 @@
 
 }
 
-.search-no-results {
-
-	#main #content {
-		margin-bottom: $line-height * 2;
-	}
-
+.search-no-results #main #content {
+	margin-bottom: $line-height * 2;
 }
 
-.error404 {
-
-	#main #content {
-		@include column-10;
-		margin-bottom: $line-height * 2;
-	}
-
+.error404 #main #content {
+	@include column-10;
+	margin-bottom: $line-height * 2;
 }
