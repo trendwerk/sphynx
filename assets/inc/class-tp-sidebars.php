@@ -9,8 +9,8 @@ class TP_Sidebars {
 	static $defaults = array(
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widgettitle">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h5 class="widgettitle">',
+		'after_title'   => '</h5>',
 	);
 
 	function __construct() {
