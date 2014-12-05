@@ -15,10 +15,10 @@
 
 /**
  * @section 	Mixins
- * @subsection Animate 
+ * @subsection  Animate 
  */
 
-@mixin animate-this($what: all, $time: 0.5s, $ease: ease-in-out) {
+@mixin animate-this ( $what: all, $time: 0.5s, $ease: ease-in-out ) {
 	-webkit-transition: $what $time $ease;
 	-moz-transition: $what $time $ease;
 	-o-transition: $what $time $ease;
@@ -28,10 +28,21 @@
 
 /**
  * @section    Mixins
+ * @subsection Border-box
+ */
+
+@mixin border-box {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/**
+ * @section    Mixins
  * @subsection Border radius (single)
  */
 
-@mixin border-radius($radius) {
+@mixin border-radius ( $radius ) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 	border-radius: $radius;
@@ -42,7 +53,7 @@
  * @subsection Border radiusses (multiple)
  */
 
-@mixin border-radiuses ($topright, $bottomright, $bottomleft, $topleft) {
+@mixin border-radiuses ( $topright, $bottomright, $bottomleft, $topleft ) {
 	-webkit-border-top-right-radius: $topright;
 	-webkit-border-bottom-right-radius: $bottomright;
 	-webkit-border-bottom-left-radius: $bottomleft;
@@ -59,21 +70,10 @@
 
 /**
  * @section    Mixins
- * @subsection Border-box
- */
-
-@mixin border-box {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-/**
- * @section    Mixins
  * @subsection Box-shadow
  */
 
-@mixin box-shadow ($shadow) {
+@mixin box-shadow ( $shadow ) {
 	-webkit-box-shadow: $shadow;
 	-moz-box-shadow: $shadow;
 	box-shadow: $shadow;
@@ -84,7 +84,7 @@
  * @subsection Collumns
  */
 
-@mixin columns($number, $gap) {
+@mixin columns ( $number, $gap ) {
 	-moz-column-count: $number;
 	-webkit-column-count: $number;
 	column-count: $number;
@@ -112,10 +112,10 @@
  * cheatsheet: http://fortawesome.github.io/Font-Awesome/cheatsheet/
  */
 
-@mixin font-awesome-before($glyph) {
+@mixin font-awesome-after ( $glyph ) {
 	position: relative;
 
-	&:before {
+	&:after {
 		content: $glyph;
 		font-family: FontAwesome;
 		font-style: normal;
@@ -125,10 +125,10 @@
 
 }
 
-@mixin font-awesome-after($glyph) {
+@mixin font-awesome-before ( $glyph ) {
 	position: relative;
 
-	&:after {
+	&:before {
 		content: $glyph;
 		font-family: FontAwesome;
 		font-style: normal;
@@ -143,7 +143,7 @@
  * @subsection Horizontal gradient
  */
 
-@mixin horizontal-gradient ($startColor, $endColor) {
+@mixin horizontal-gradient ( $startColor, $endColor ) {
  	background-color: $startColor;
 	background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
 	background-image: -webkit-linear-gradient(left, $startColor, $endColor);
@@ -157,7 +157,7 @@
  * @subsection Opacity
  */
 
-@mixin opacity($trans) {
+@mixin opacity ( $trans ) {
 	filter: alpha(opactiy=($trans * 100));
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
 	-moz-opacity: $trans;
@@ -170,7 +170,7 @@
  * @subsection Placeholder
  */
 
-@mixin placeholder($out, $on) {
+@mixin placeholder ( $out, $on ) {
 	
 	&:-moz-placeholder {
 		color: $out; 
@@ -223,10 +223,10 @@
  * @subsection Sprites
  */
 
-@mixin sprite($top, $left) {
+@mixin sprite ( $top, $left ) {
 	background-image: url('../../../assets/img/sprite-x1.png');
-	background-repeat: no-repeat;
 	background-position: $top $left;
+	background-repeat: no-repeat;
 
 	@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
 	only screen and (min--moz-device-pixel-ratio: 2),
@@ -244,7 +244,7 @@
  * @subsection Vertical gradient
  */
 
-@mixin vertical-gradient ($startColor, $endColor) {
+@mixin vertical-gradient ( $startColor, $endColor ) {
 	background-color: $startColor;
 	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
 	background-image: -webkit-linear-gradient(top, $startColor, $endColor);
