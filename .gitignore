@@ -1,3 +1,6 @@
-.DS_Store
+# Grunt
 node_modules
 *.sass-cache
+
+# Composer
+vendor/*
