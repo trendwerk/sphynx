@@ -19,7 +19,7 @@
 		{
 			"name": "Sjoerd Boerrigter",
 			"email": "sjoerd@trendwerk.nl"
-		},
+		}
 	],
 	"require": {
 		"php": ">=5.4",
