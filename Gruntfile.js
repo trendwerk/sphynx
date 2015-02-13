@@ -47,7 +47,7 @@ module.exports = function( grunt ) {
 				],
 				tasks: [ 'sass' ],
 				options: {
-					livereload: 35729
+					livereload: true
 				},
 			},
 			coffee: {
@@ -56,7 +56,7 @@ module.exports = function( grunt ) {
 				],
 				tasks: [ 'coffee' ],
 				options: {
-					livereload: 35729
+					livereload: true
 				},
 			}
 		}
