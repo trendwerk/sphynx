@@ -8,7 +8,7 @@ get_header();
 	
 		<section id="content">
 		
-			<h1 id="page-title">
+			<h1>
 				<?php 
 					if( is_category() || is_tag() || is_tax() )
 						single_term_title( __( 'Posts about', 'tp' ) . ' ' );
