@@ -41,7 +41,6 @@ module.exports = function( grunt ) {
 		watch: {
 			sass: {
 				files: [
-					'assets/plugins/*',
 					'assets/sass/*',
 					'assets/sass/lib/*'
 				],
