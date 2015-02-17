@@ -276,9 +276,9 @@ button[disabled],
 select[disabled],
 input[disabled] {
 	@include box-shadow(0);
-	@include user-select-none;
 	color: #888;
 	cursor: default;
+	user-select: none;
 }
 
 textarea::-webkit-input-placeholder,
