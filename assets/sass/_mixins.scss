@@ -208,18 +208,6 @@
 
 /**
  * @section    Mixins
- * @subsection User select
- */
-
-@mixin user-select-none {
-	-moz-user-select: -moz-none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	user-select: none;
-}
-
-/**
- * @section    Mixins
  * @subsection Sprites
  */
 
