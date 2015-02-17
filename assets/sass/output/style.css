@@ -254,17 +254,7 @@ input:invalid {
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
-a.button,
 button {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #333;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#262626));
-  background-image: -webkit-linear-gradient(top, #333, #262626);
-  background-image: -moz-linear-gradient(top, #333, #262626);
-  background-image: -ms-linear-gradient(top, #333, #262626);
-  background-image: -o-linear-gradient(top, #333, #262626);
   cursor: pointer;
   outline: 0;
   overflow: visible;
@@ -277,21 +267,8 @@ button {
   input[type="submit"]:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
-  a.button:hover,
   button:hover {
     text-decoration: none; }
-  input[type="submit"]:active, input[type="submit"]:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  a.button:active,
-  a.button:focus,
-  button:active,
-  button:focus {
-    -webkit-box-shadow: 0;
-    -moz-box-shadow: 0;
-    box-shadow: 0; }
 
 input[type="submit"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,

@@ -175,10 +175,7 @@ input:invalid {
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
-a.button,
 button {
-	@include border-radius(4px);
-	@include vertical-gradient($primary-color, darken($primary-color, 5%));
 	cursor: pointer;
 	outline: 0;
 	overflow: visible;
@@ -191,11 +188,6 @@ button {
 
 	&:hover {
 		text-decoration: none;
-	}
-
-	&:active,
-	&:focus {
-		@include box-shadow(0);
 	}
 
 }
