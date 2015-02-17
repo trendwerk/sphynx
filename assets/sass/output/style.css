@@ -3485,7 +3485,7 @@ p.tags {
 .addthis_toolbox span {
   float: left;
   font-size: 13px;
-  width: 160px; }
+  width: 156px; }
 
 /**
  * @section    Parts
@@ -3498,8 +3498,8 @@ p.tags {
   background: #EEE;
   clear: both;
   float: left;
-  margin: 10px 0 30px 0;
-  padding: 40px;
+  margin: 0 0 30px 0;
+  padding: 30px;
   width: 100%; }
   .author-card .author-avatar {
     float: left;
@@ -3531,7 +3531,7 @@ p.tags {
     .author-card .author-info a.more-link {
       float: right;
       font-size: 14px;
-      margin: -1px 10px 10px 0; }
+      margin: 0 10px 0 0; }
 
 /**
  * @section    Parts
