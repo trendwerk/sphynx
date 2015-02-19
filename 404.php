@@ -19,7 +19,7 @@ get_header();
 			</p>
 			
 			<p>
-				<?php printf( __( 'You might want to check out our <a href="%1$s">sitemap</a> or use the searchform below to find the page you are looking for.', 'tp' ), trailingslashit( site_url( __( 'sitemap', 'tp' ) ) ) ); ?>
+				<?php printf( __( 'You might want to check out our <a href="%1$s">sitemap</a> or use the searchform below to find the page you are looking for.', 'tp' ), trailingslashit( home_url( __( 'sitemap', 'tp' ) ) ) ); ?>
 			</p>
 			
 			<?php get_search_form(); ?>

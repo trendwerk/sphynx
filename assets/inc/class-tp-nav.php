@@ -112,7 +112,7 @@ class TP_Nav {
 			//Search page exception
 			$breadcrumb = new stdClass;
 			$breadcrumb->title = __( 'Search for', 'tp' ) . ' &quot;' . get_search_query() . '&quot;';
-			$breadcrumb->url = get_option( 'siteurl' ) . '/?s=' . get_query_var( 's' );
+			$breadcrumb->url = home_url() . '/?s=' . get_query_var( 's' );
 			
 			$breadcrumb->is_current = true;
 			

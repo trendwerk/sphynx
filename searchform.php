@@ -1,6 +1,6 @@
 <div class="search">
 
-	<form action="<?php echo site_url(); ?>" method="get">
+	<form action="<?php echo home_url(); ?>" method="get">
 
 		<fieldset>
 			<input type="text" name="s" placeholder="<?php _e( 'Search', 'tp' ); ?>&hellip;" />
