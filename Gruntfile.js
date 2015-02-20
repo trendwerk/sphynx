@@ -23,8 +23,7 @@ module.exports = function( grunt ) {
 		 */	
 		sass: {
 			options: {
-				style: 'nested',
-				sourceMap: false
+				style: 'nested'
 			},
 			dist: {
 				files: {
