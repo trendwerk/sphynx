@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-27 16:25+0100\n"
-"PO-Revision-Date: 2014-11-27 16:25+0100\n"
+"POT-Creation-Date: 2015-02-20 10:20+0100\n"
+"PO-Revision-Date: 2015-02-20 10:20+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -49,13 +49,13 @@ msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
 msgstr[0] "Één reactie op &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
 
-#: ../../comments.php:27 ../../assets/inc/template-tags.php:21
-#: ../inc/template-tags.php:21
+#: ../../comments.php:27 ../../assets/inc/template-tags.php:47
+#: ../inc/template-tags.php:47
 msgid "Next"
 msgstr "Volgende"
 
-#: ../../comments.php:28 ../../assets/inc/template-tags.php:20
-#: ../inc/template-tags.php:20
+#: ../../comments.php:28 ../../assets/inc/template-tags.php:46
+#: ../inc/template-tags.php:46
 msgid "Previous"
 msgstr "Vorige"
 
@@ -381,21 +381,17 @@ msgid "Shows the specified contact information"
 msgstr "Geeft gespecificeerde contactgegevens weer"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:23
-#: ../../assets/inc/widgets/class-tp-fb-like-box.php:25
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:32
 #: ../../assets/inc/widgets/class-tp-social.php:23
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:29
 #: ../../assets/inc/widgets/class-tp-title-content-button.php:39
 #: ../../assets/inc/widgets/class-tp-title-image-content-button.php:47
-#: ../../assets/inc/widgets/class-tp-tweets.php:24
 #: ../inc/widgets/class-tp-contact.php:23
-#: ../inc/widgets/class-tp-fb-like-box.php:25
 #: ../inc/widgets/class-tp-post-type-posts.php:32
 #: ../inc/widgets/class-tp-social.php:23
 #: ../inc/widgets/class-tp-taxonomy-terms.php:29
 #: ../inc/widgets/class-tp-title-content-button.php:39
 #: ../inc/widgets/class-tp-title-image-content-button.php:47
-#: ../inc/widgets/class-tp-tweets.php:24
 msgid "Title"
 msgstr "Titel"
 
@@ -425,21 +421,6 @@ msgstr "BTW Nr"
 #: ../inc/widgets/class-tp-contact.php:88
 msgid "Bank"
 msgstr "Bank"
-
-#: ../../assets/inc/widgets/class-tp-fb-like-box.php:11
-#: ../inc/widgets/class-tp-fb-like-box.php:11
-msgid "Facebook like box"
-msgstr "Facebook like box"
-
-#: ../../assets/inc/widgets/class-tp-fb-like-box.php:11
-#: ../inc/widgets/class-tp-fb-like-box.php:11
-msgid "Shows the Facebook users that like your Facebook page"
-msgstr "Geeft de Facebook gebruikers weer die je Facebook pagina leuk vinden"
-
-#: ../../assets/inc/widgets/class-tp-fb-like-box.php:32
-#: ../inc/widgets/class-tp-fb-like-box.php:32
-msgid "Facebook page URL"
-msgstr "Facebook pagina URL"
 
 #: ../../assets/inc/widgets/class-tp-post-type-posts.php:10
 #: ../inc/widgets/class-tp-post-type-posts.php:10
@@ -521,15 +502,20 @@ msgstr "E-mail nieuwsbrief"
 msgid "Subscribe via RSS"
 msgstr "Abonneer via RSS"
 
-#: ../../assets/inc/widgets/class-tp-submenu.php:10
-#: ../inc/widgets/class-tp-submenu.php:10
+#: ../../assets/inc/widgets/class-tp-submenu.php:13
+#: ../inc/widgets/class-tp-submenu.php:13
 msgid "Submenu"
 msgstr "Submenu"
 
-#: ../../assets/inc/widgets/class-tp-submenu.php:10
-#: ../inc/widgets/class-tp-submenu.php:10
-msgid "Shows submenu items of current menu item or parent"
-msgstr "Geef submenu items weer van huidige (moeder) pagina"
+#: ../../assets/inc/widgets/class-tp-submenu.php:14
+#: ../inc/widgets/class-tp-submenu.php:14
+msgid "Shows submenu items of current menu item or parent."
+msgstr "Geef submenu items weer van huidige (moeder) pagina."
+
+#: ../../assets/inc/widgets/class-tp-submenu.php:37
+#: ../inc/widgets/class-tp-submenu.php:37
+msgid "Menu"
+msgstr "Menu"
 
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
 #: ../inc/widgets/class-tp-taxonomy-terms.php:10
@@ -657,27 +643,6 @@ msgstr "Bewerken"
 msgid "Remove"
 msgstr "Verwijder"
 
-#: ../../assets/inc/widgets/class-tp-tweets.php:10
-#: ../inc/widgets/class-tp-tweets.php:10
-msgid "Tweets"
-msgstr "Tweets"
-
-#: ../../assets/inc/widgets/class-tp-tweets.php:10
-#: ../inc/widgets/class-tp-tweets.php:10
-msgid "Shows latest tweets from a Twitter account"
-msgstr "Toont de laatste tweets van een Twitter account"
-
-#: ../../assets/inc/widgets/class-tp-tweets.php:31
-#: ../inc/widgets/class-tp-tweets.php:31
-msgid "Twitter username"
-msgstr "Twitter gebruikersnaam"
-
-#: ../../assets/inc/widgets/class-tp-tweets.php:48
-#: ../inc/widgets/class-tp-tweets.php:48
-#, php-format
-msgid "Tweets from @%1$s"
-msgstr "Tweets van @%1$s"
-
 #: ../../partials/author.php:32
 msgid "Written by"
 msgstr "Geschreven door"
@@ -721,6 +686,28 @@ msgstr "Email dit artikel"
 #: ../../partials/share.php:25
 msgid "Share this on other networks"
 msgstr "Deel dit artikel via andere netwerken"
+
+#~ msgid "Facebook like box"
+#~ msgstr "Facebook like box"
+
+#~ msgid "Shows the Facebook users that like your Facebook page"
+#~ msgstr ""
+#~ "Geeft de Facebook gebruikers weer die je Facebook pagina leuk vinden"
+
+#~ msgid "Facebook page URL"
+#~ msgstr "Facebook pagina URL"
+
+#~ msgid "Tweets"
+#~ msgstr "Tweets"
+
+#~ msgid "Shows latest tweets from a Twitter account"
+#~ msgstr "Toont de laatste tweets van een Twitter account"
+
+#~ msgid "Twitter username"
+#~ msgstr "Twitter gebruikersnaam"
+
+#~ msgid "Tweets from @%1$s"
+#~ msgstr "Tweets van @%1$s"
 
 #~ msgid "Large icons"
 #~ msgstr "Grote iconen"
