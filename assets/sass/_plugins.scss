@@ -86,6 +86,10 @@
 }
 
 #content .gform_wrapper {
+	clear: both;
+	float: left;
+	margin-bottom: $line-height;
+	width: 100%;
 
 	.gform_heading,
 	.gform_footer {	
