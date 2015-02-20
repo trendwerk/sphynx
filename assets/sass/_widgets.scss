@@ -103,13 +103,6 @@
 			&.current-cat &>a ,
 			&.current &>a  {
 				font-weight: bold;
-			}	
-
-			&.current > ul, 
-			&.parent > ul {
-				border-bottom: none;
-				display: block;
-				font-size: 12px;
 			}
 			
 			ul {

@@ -3541,10 +3541,6 @@ p.tags {
           color: #1F6FD1; }
       .widget ul li.current_page_item .widget ul li > a, .widget ul li.current-cat .widget ul li > a, .widget ul li.current .widget ul li > a {
         font-weight: bold; }
-      .widget ul li.current > ul, .widget ul li.parent > ul {
-        border-bottom: none;
-        display: block;
-        font-size: 12px; }
       .widget ul li ul {
         display: none;
         margin: 0 0 0 20px; }
@@ -4259,5 +4255,14 @@ p.tags {
 .gform_widget form .large,
 .gform_widget form .small {
   width: 100%; }
+
+/**
+ * @section    Plugins
+ * @subsection Gravity Forms widget
+ */
+.widget_tp_submenu ul li.current_page_ancestor > ul, .widget_tp_submenu ul li.current-menu-item > ul {
+  border-bottom: none;
+  display: block;
+  font-size: 12px; }
 
 /*# sourceMappingURL=style.css.map */

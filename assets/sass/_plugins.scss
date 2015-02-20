@@ -377,3 +377,23 @@
 	}
 	
 }
+
+/**
+ * @section    Plugins
+ * @subsection Gravity Forms widget
+ */
+
+.widget_tp_submenu {
+
+	ul li {
+		
+		&.current_page_ancestor > ul, 
+		&.current-menu-item > ul {
+			border-bottom: none;
+			display: block;
+			font-size: 12px;
+		}
+	
+	}
+
+}
