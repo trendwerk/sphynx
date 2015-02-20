@@ -179,7 +179,7 @@ p.tags {
 					right: 30px;
 
 					a {
-						@include font-awesome-before( "\f112  " );
+						@include font-awesome( before, "\f112  " );
 						font-weight: 700;
 					}
 

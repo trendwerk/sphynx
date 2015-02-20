@@ -57,7 +57,7 @@
  */
 /**
  * @section    Mixins
- * @subsection Horizontal gradient
+ * @subsection Gradient
  */
 /**
  * @section    Mixins
@@ -66,10 +66,6 @@
 /**
  * @section    Mixins
  * @subsection Sprites
- */
-/**
- * @section    Mixins
- * @subsection Vertical gradient
  */
 /**
  * @section Extends
@@ -2470,17 +2466,6 @@ input#adminbar-search {
   display: none; }
 
 /**
- * @section    Misc
- * @subsection Fixes
- */
-/**
- * Fixes vertical scroll caused by tweet buttons
- */
-#twttrHubFrameSecure,
-#twttrHubFrame {
-  display: none; }
-
-/**
  * @section Images
  * 
  * Defines the default styling of images
@@ -2766,52 +2751,23 @@ body {
       #header #logo {
         width: 550px; } }
     #header #logo #sitename {
-      font: bold 32px/40px "Helvetica Neue", sans-serif;
+      font: bold 28px/35px "Helvetica Neue", sans-serif;
       margin: 0; }
       #header #logo #sitename a {
         color: #333;
         text-decoration: none; }
     #header #logo #description {
       color: #666;
-      font: normal 16px/30px "Helvetica Neue", sans-serif;
+      font: normal 14px/25px "Helvetica Neue", sans-serif;
       margin: 0; }
   #header #mobile {
     display: none; }
-  #header #topnav {
-    box-sizing: border-box;
-    float: left;
-    margin: 10px;
-    width: 460px; }
-    @media (max-width: 980px) {
-      #header #topnav {
-        clear: both;
-        margin: 0;
-        width: 100%; } }
-    @media (min-width: 1200px) {
-      #header #topnav {
-        width: 550px; } }
-    #header #topnav ul {
-      float: right;
-      margin: 0; }
-      #header #topnav ul li {
-        display: inline-block;
-        font-size: 13px; }
-        #header #topnav ul li:after {
-          color: #666;
-          content: "|";
-          padding: 0 5px 0 10px; }
-        #header #topnav ul li:last-child:after {
-          display: none; }
-        #header #topnav ul li a {
-          color: #666; }
-          #header #topnav ul li a:active, #header #topnav ul li a:focus, #header #topnav ul li a:hover {
-            color: #1F6FD1; }
   #header #search {
     box-sizing: border-box;
     float: left;
     margin: 10px;
     width: 460px;
-    margin-top: 5px; }
+    margin-top: 20px; }
     @media (max-width: 980px) {
       #header #search {
         clear: both;
@@ -2841,7 +2797,7 @@ body {
           content: "\f0d7";
           display: inline-block;
           font-family: FontAwesome;
-          font-size: 9px;
+          font-size: 10px;
           position: absolute;
           padding-left: 5px;
           padding-right: 5px; }
@@ -3786,10 +3742,10 @@ p.tags {
     margin: 10px 0;
     width: 50%; }
   #header #logo {
-    margin-bottom: 20px;
-    margin-top: 20px; }
+    margin-bottom: 10px;
+    margin-top: 10px; }
   #header #search {
-    margin-top: 5px; }
+    margin-top: 20px; }
 
   #main {
     padding-bottom: 0; }
@@ -3844,17 +3800,9 @@ p.tags {
 
   #header {
     box-sizing: border-box;
-    margin: 0px 0px 5px 0; }
+    margin: 0px 0px 0 0; }
     #header #logo {
-      width: 100%; }
-      #header #logo #sitename {
-        font-size: 20px;
-        line-height: 25px;
-        width: 75%; }
-      #header #logo #description {
-        font-size: 14px;
-        line-height: 20px;
-        width: 75%; }
+      width: 75%; }
     #header #mobile {
       display: block;
       position: absolute;
@@ -3869,11 +3817,11 @@ p.tags {
         cursor: pointer;
         float: left;
         font-size: 16px;
-        height: 30px;
-        line-height: 30px;
+        height: 40px;
+        line-height: 40px;
         margin-left: 10px;
         text-align: center;
-        width: 30px; }
+        width: 40px; }
         #header #mobile #mobile-navigation.active, #header #mobile #mobile-navigation:hover,
         #header #mobile #mobile-search.active,
         #header #mobile #mobile-search:hover {
@@ -3885,7 +3833,7 @@ p.tags {
       box-sizing: border-box;
       border-radius: 3px;
       display: none;
-      padding: 10px;
+      margin: 0;
       width: 100%; }
       #header #search form {
         margin: 0;
