@@ -41,12 +41,12 @@
 		}
 
 		#logo { 
-			margin-bottom: 20px;
-			margin-top: 20px;
+			margin-bottom: 10px;
+			margin-top: 10px;
 		}
 
 		#search { 
-			margin-top: 5px;
+			margin-top: 20px;
 		}
 
 	}
@@ -143,25 +143,12 @@
  			
  	#header {
 		box-sizing: border-box;
- 		margin: 0px 0px 5px 0;
+ 		margin: 0px 0px 0 0;
 
- 		// logo, sitename and description
+ 		// logo
 
 		#logo {
-			width: 100%;
-
-			#sitename {
-				font-size: 20px;
-				line-height: 25px;
-				width: 75%;
-			}
-
-			#description {
-				font-size: 14px;
-				line-height: 20px;
-				width: 75%;
-			}
-
+			width: 75%;
 		}
 
 		// mobile navigation and mobile search toggle buttons
@@ -181,11 +168,11 @@
 				cursor: pointer;
 				float: left;
 				font-size: 16px;
-				height: 30px;
-				line-height: 30px;
+				height: 40px;
+				line-height: 40px;
 				margin-left: 10px;
 				text-align: center;
-				width: 30px;
+				width: 40px;
 
 				&.active,
 				&:hover {
@@ -209,7 +196,7 @@
 			box-sizing: border-box;
 			border-radius: 3px;
 			display: none;
-			padding: 10px;
+			margin: 0;
 			width: 100%;
 			
 			form {
