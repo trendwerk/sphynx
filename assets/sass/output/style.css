@@ -2966,7 +2966,6 @@ body {
     float: left;
     margin: 10px;
     width: 620px;
-    box-sizing: border-box;
     padding-right: 20px; }
     @media (max-width: 980px) {
       #main #content {
