@@ -2466,17 +2466,6 @@ input#adminbar-search {
   display: none; }
 
 /**
- * @section    Misc
- * @subsection Fixes
- */
-/**
- * Fixes vertical scroll caused by tweet buttons
- */
-#twttrHubFrameSecure,
-#twttrHubFrame {
-  display: none; }
-
-/**
  * @section Images
  * 
  * Defines the default styling of images
