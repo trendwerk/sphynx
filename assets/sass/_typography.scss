@@ -338,7 +338,6 @@ code,
 pre {
 	background: #FFEFB4;
 	color: #333;
-	font-family: 'Menlo', 'Consolas', monospace;
 	font-size: 13px;
 }
 	
@@ -366,24 +365,6 @@ abbr {
 		border-bottom-style: solid;
 	}
 
-}
-
-/**
- * @section    Typography
- * @subsection Subscripts and superscripts
- */
-
-sub,
-sup {
-	font-size: 10px;
-}
-
-sub {
-	vertical-align: sub;
-}
-
-sup {
-	vertical-align: super;
 }
 
 /**
