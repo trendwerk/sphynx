@@ -4258,11 +4258,13 @@ p.tags {
 
 /**
  * @section    Plugins
- * @subsection Gravity Forms widget
+ * @subsection TP Sub menu
  */
 .widget_tp_submenu ul li.current_page_ancestor > ul, .widget_tp_submenu ul li.current-menu-item > ul {
   border-bottom: none;
   display: block;
   font-size: 12px; }
+.widget_tp_submenu ul li.current-menu-item > a {
+  font-weight: 700; }
 
 /*# sourceMappingURL=style.css.map */

@@ -380,7 +380,7 @@
 
 /**
  * @section    Plugins
- * @subsection Gravity Forms widget
+ * @subsection TP Sub menu
  */
 
 .widget_tp_submenu {
@@ -392,6 +392,10 @@
 			border-bottom: none;
 			display: block;
 			font-size: 12px;
+		}
+
+		&.current-menu-item>a {
+			font-weight: 700;
 		}
 	
 	}
