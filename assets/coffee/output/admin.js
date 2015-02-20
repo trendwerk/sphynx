@@ -38,3 +38,5 @@ $(function() {
     return $(this).closest('.widget-inside').find('.widget-control-save').trigger('click');
   });
 });
+
+//# sourceMappingURL=admin.js.map

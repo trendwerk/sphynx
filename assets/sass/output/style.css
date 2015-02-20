@@ -3150,7 +3150,7 @@ body {
   clear: both;
   float: left;
   position: relative;
-  margin: 0;
+  margin: 0 0 30px 0;
   width: 100%; }
   #respond p {
     clear: both;
@@ -3191,7 +3191,7 @@ p.tags {
 #comments {
   clear: both;
   float: left;
-  margin: 0 0 30px 0;
+  margin: 0;
   width: 100%; }
   #comments ol {
     list-style-type: none;
@@ -3201,11 +3201,13 @@ p.tags {
       clear: both;
       float: left;
       font-size: 14px;
-      margin-top: 30px;
+      margin-bottom: 30px;
       position: relative;
       width: 100%; }
       #comments ol li:first-of-type {
         margin-top: 0; }
+      #comments ol li.parent {
+        margin-bottom: 0; }
     #comments ol ul.children {
       clear: both;
       float: left;
@@ -3214,7 +3216,7 @@ p.tags {
       list-style-type: none;
       width: 100%; }
       #comments ol ul.children #respond {
-        margin-top: 0;
+        margin-top: 30px;
         margin-bottom: 0; }
       #comments ol ul.children li:last-of-type {
         margin-bottom: 30px; }

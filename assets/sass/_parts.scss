@@ -20,7 +20,7 @@
 	clear: both;
 	float: left;
 	position: relative;
-	margin: 0;
+	margin: 0 0 $line-height 0;
 	width: 100%;
 	
 	p {
@@ -81,7 +81,7 @@ p.tags {
 #comments {
 	clear: both;
 	float: left;
-	margin: 0 0 $line-height 0;
+	margin: 0;
 	width: 100%;
 
 	ol {
@@ -93,12 +93,16 @@ p.tags {
 			clear: both;
 			float: left;
 			font-size: 14px;
-			margin-top: $line-height;
+			margin-bottom: $line-height;
 			position: relative;
 			width: 100%;
 			
 			&:first-of-type {
 				margin-top: 0;
+			}
+
+			&.parent {
+				margin-bottom: 0;
 			}
 
 		}
@@ -112,7 +116,7 @@ p.tags {
 			width: 100%; 
 
 			#respond { 
-				margin-top: 0;
+				margin-top: $line-height;
 				margin-bottom: 0;
 			}
 

@@ -15,3 +15,5 @@ $(function() {
     return $($(this).data('toggle')).find('input[type="text"]').focus();
   });
 });
+
+//# sourceMappingURL=responsive.js.map
