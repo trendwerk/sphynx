@@ -18,7 +18,7 @@
  * @subsection Collumns
  */
 
-@mixin columns ( $number, $gap ) {
+@mixin columns( $number, $gap ) {
 	-moz-column-count: $number;
 	-webkit-column-count: $number;
 	column-count: $number;
@@ -35,7 +35,7 @@
  * cheatsheet: http://fortawesome.github.io/Font-Awesome/cheatsheet/
  */
 
-@mixin font-awesome-after ( $glyph ) {
+@mixin font-awesome-after( $glyph ) {
 	position: relative;
 
 	&:after {
@@ -48,7 +48,7 @@
 
 }
 
-@mixin font-awesome-before ( $glyph ) {
+@mixin font-awesome-before( $glyph ) {
 	position: relative;
 
 	&:before {
@@ -91,7 +91,7 @@
  * @subsection Placeholder
  */
 
-@mixin placeholder ( $out, $on ) {
+@mixin placeholder( $out, $on ) {
 	
 	&:-moz-placeholder {
 		color: $out; 
@@ -132,7 +132,7 @@
  * @subsection Sprites
  */
 
-@mixin sprite ( $top, $left ) {
+@mixin sprite( $top, $left ) {
 	background-image: url('../../../assets/img/sprite-x1.png');
 	background-position: $top $left;
 	background-repeat: no-repeat;
