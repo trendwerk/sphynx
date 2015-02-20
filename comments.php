@@ -20,17 +20,16 @@ if ( post_password_required() )
 					) );
 				?>
 			</ol>
-			
-			<div id="pager">
-				<?php
-					paginate_comments_links( array(
-						'next_text' => __( 'Next', 'tp' ),
-						'prev_text' => __( 'Previous', 'tp' ),
-					) );
-				?>
-			</div>
-
+		
 			<?php
+			$pagination = paginate_comments_links( array(
+				'next_text' => __( 'Next', 'tp' ),
+				'prev_text' => __( 'Previous', 'tp' ),
+				'echo'      => false,
+			) );
+
+			if( 0 < strlen( $pagination ) )
+				echo '<nav id="pager">' . $pagination . '</nav>';
 		}
 
 		comment_form( array(
