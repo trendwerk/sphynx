@@ -145,7 +145,7 @@
  		@include border-box;
  		margin: 0px 0px 5px 0;
 
- 		/* logo, sitename and description */
+ 		// logo, sitename and description
 
 		#logo {
 			width: 100%;
@@ -164,7 +164,7 @@
 
 		}
 
-		/* mobile navigation and mobile search toggle buttons */
+		// mobile navigation and mobile search toggle buttons
 
 		#mobile {
 			display: block;
@@ -196,13 +196,13 @@
 
 		}
 
-		/* top navigation */
+		// top navigation
 
  		#topnav {
  			display: none;
  		}
 
-		/* search form */
+		// search form
 				
 		#search {
 			@include border-box;
@@ -246,7 +246,7 @@
 
 	}
 
-	/* main navigation */
+	// main navigation
 
 	#main-navigation {
 		display: none;
@@ -257,7 +257,7 @@
 
 			li {
 
-				/* if item has children, hide indicator */
+				// if item has children, hide indicator
 
 				&.page_item_has_children > a:after,
 				&.menu-item-has-children > a:after,
@@ -279,7 +279,7 @@
 
 			}
 
-			/* first level only */
+			// first level only
 
 			> li {
 				margin: 0;
@@ -293,7 +293,7 @@
 
 			}
 
-			/* second level */
+			// second level
 
 			ul.sub-menu {
 				@include border-box;

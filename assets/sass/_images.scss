@@ -1,14 +1,14 @@
 /**
-* @section Images
-* 
-* Defines the default styling of images
-*
-* @package     WordPress
-* @subpackage  TrendPress
-* @author      Trendwerk
-* @license     GPL v2
-*
-*/
+ * @section Images
+ * 
+ * Defines the default styling of images
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ *
+ */
 
 /**
  * @section     Images
@@ -31,8 +31,8 @@
 }
 
 /**
- * @section    Images
- * @subsection Captions
+ * @section     Images
+ * @subsection  Captions
  */
 
 .wp-caption {
@@ -240,7 +240,6 @@
  * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
  */
 
-
 figure.aligncenter,
 figure.alignright,
 figure.alignleft,
@@ -265,7 +264,7 @@ figure.alignnone {
 
 /**
  * @section     Images
- * @subsection  Video container for better responsive video's
+ * @subsection  Video-container for better responsive videos
  */
 
 .video-container {

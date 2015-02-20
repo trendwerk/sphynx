@@ -2227,7 +2227,7 @@ hr {
  */
 /**
  * @section    Forms
- * @subsection Default form styling
+ * @subsection Default form styles
  */
 input[type="datetime-local"],
 input[type="datetime"],
@@ -2437,7 +2437,7 @@ button {
 
 /**
  * @section    Forms
- * @subsection Searchform
+ * @subsection Search form
  */
 .search input[type="text"] {
   float: left;
@@ -2449,7 +2449,7 @@ button {
 
 /**
  * @section    Forms
- * @subsection Fix for admin bar search form 
+ * @subsection Fix for admin-bar search form 
  */
 input#adminbar-search {
   min-width: 0; }
@@ -2487,16 +2487,16 @@ input#adminbar-search {
   display: none; }
 
 /**
-* @section Images
-* 
-* Defines the default styling of images
-*
-* @package     WordPress
-* @subpackage  TrendPress
-* @author      Trendwerk
-* @license     GPL v2
-*
-*/
+ * @section Images
+ * 
+ * Defines the default styling of images
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ *
+ */
 /**
  * @section     Images
  * @subsection  Alignment
@@ -2514,8 +2514,8 @@ input#adminbar-search {
   margin: 0 auto; }
 
 /**
- * @section    Images
- * @subsection Captions
+ * @section     Images
+ * @subsection  Captions
  */
 .wp-caption {
   background: #EEE;
@@ -2671,7 +2671,7 @@ figure.alignnone img {
 
 /**
  * @section     Images
- * @subsection  Video container for better responsive video's
+ * @subsection  Video-container for better responsive videos
  */
 .video-container {
   margin-bottom: 30px; }
@@ -2695,8 +2695,8 @@ figure.alignnone img {
 /**
  * @section Grid
  * 
- * This document contains the grid classes wich can be used as @includes on 
- * elements that need to algin to a grid. This section uses the 960px grid for
+ * This document contains the grid classes which can be used as @includes on 
+ * elements that need to align to a grid. This section uses the 960px grid for
  * smaller screens and a 1140px grid for larger screens. If the width is below
  * 960px the grid elements will stretch to 100% of the container width.
  *
@@ -2708,7 +2708,7 @@ figure.alignnone img {
  */
 /**
  * @section     Grid
- * @subsection 	Wrapper and inner
+ * @subsection 	Container and container inner
  */
 .container {
   clear: both;
@@ -2763,11 +2763,7 @@ body {
 #header {
   background: #FFF;
   padding: 10px 0;
-  z-index: 1;
-  /* logo, sitename and description */
-  /* mobile navigation and search buttons */
-  /* top navigation */
-  /* search form */ }
+  z-index: 1; }
   #header #logo {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2845,7 +2841,6 @@ body {
     #header #search form {
       float: right; }
 
-/* main navigation */
 #main-navigation {
   background-color: #333;
   margin: 0;
@@ -2853,13 +2848,9 @@ body {
   #main-navigation ul {
     margin: 0;
     padding: 0;
-    position: relative;
-    /* first level only */
-    /* second level */ }
+    position: relative; }
     #main-navigation ul li {
-      float: left;
-      /* show sub-menu */
-      /* if item has children, show indicator */ }
+      float: left; }
       #main-navigation ul li:active > ul, #main-navigation ul li:focus > ul, #main-navigation ul li:hover > ul {
         display: block; }
       #main-navigation ul li.page_item_has_children, #main-navigation ul li.menu-item-has-children, #main-navigation ul li.has-children {
@@ -2903,8 +2894,7 @@ body {
         clear: both;
         display: block;
         height: 40px;
-        width: 100%;
-        /* third level */ }
+        width: 100%; }
         #main-navigation ul ul li a, #main-navigation ul ul ul li a {
           -moz-box-sizing: border-box;
           -webkit-box-sizing: border-box;
@@ -2952,9 +2942,7 @@ body {
 #main {
   background: #FFF;
   padding-top: 30px;
-  z-index: 0;
-  /* content */
-  /* sidebar */ }
+  z-index: 0; }
   #main #content {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3370,7 +3358,7 @@ p.tags {
 
 /**
  * @section    Parts
- * @subsection AddThis
+ * @subsection Pager
  */
 #pager {
   clear: both;
@@ -3916,11 +3904,7 @@ p.tags {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0px 0px 5px 0;
-    /* logo, sitename and description */
-    /* mobile navigation and mobile search toggle buttons */
-    /* top navigation */
-    /* search form */ }
+    margin: 0px 0px 5px 0; }
     #header #logo {
       width: 100%; }
       #header #logo #sitename {
@@ -3986,57 +3970,51 @@ p.tags {
   .logged-in #header #mobile {
     top: 76px; }
 
-  /* main navigation */
   #main-navigation {
     display: none;
     margin-bottom: 0;
     padding: 10px 0; }
-    #main-navigation ul.menu {
-      /* first level only */
-      /* second level */ }
-      #main-navigation ul.menu li {
-        /* if item has children, hide indicator */ }
-        #main-navigation ul.menu li.page_item_has_children > a:after, #main-navigation ul.menu li.menu-item-has-children > a:after, #main-navigation ul.menu li.has-children > a:after {
-          display: none !important; }
-        #main-navigation ul.menu li.current-menu-item, #main-navigation ul.menu li.current-menu-parent, #main-navigation ul.menu li.current-menu-ancestor {
-          background-color: transparent; }
-        #main-navigation ul.menu li:active, #main-navigation ul.menu li:focus, #main-navigation ul.menu li:hover {
-          background-color: transparent; }
-      #main-navigation ul.menu > li {
-        margin: 0;
-        width: 100%; }
-        #main-navigation ul.menu > li > a {
-          font-size: 16px;
-          line-height: 40px;
+    #main-navigation ul.menu li.page_item_has_children > a:after, #main-navigation ul.menu li.menu-item-has-children > a:after, #main-navigation ul.menu li.has-children > a:after {
+      display: none !important; }
+    #main-navigation ul.menu li.current-menu-item, #main-navigation ul.menu li.current-menu-parent, #main-navigation ul.menu li.current-menu-ancestor {
+      background-color: transparent; }
+    #main-navigation ul.menu li:active, #main-navigation ul.menu li:focus, #main-navigation ul.menu li:hover {
+      background-color: transparent; }
+    #main-navigation ul.menu > li {
+      margin: 0;
+      width: 100%; }
+      #main-navigation ul.menu > li > a {
+        font-size: 16px;
+        line-height: 40px;
+        padding: 0; }
+    #main-navigation ul.menu ul.sub-menu {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      clear: both;
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 0 15px 5px 15px;
+      position: relative;
+      width: 100%; }
+      #main-navigation ul.menu ul.sub-menu li {
+        height: auto;
+        /* third level */ }
+        #main-navigation ul.menu ul.sub-menu li a {
+          background-color: transparent;
+          font-size: 14px;
+          line-height: 30px;
           padding: 0; }
-      #main-navigation ul.menu ul.sub-menu {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        clear: both;
-        display: block;
-        float: left;
-        margin: 0;
-        padding: 0 15px 5px 15px;
-        position: relative;
-        width: 100%; }
-        #main-navigation ul.menu ul.sub-menu li {
-          height: auto;
-          /* third level */ }
-          #main-navigation ul.menu ul.sub-menu li a {
-            background-color: transparent;
-            font-size: 14px;
-            line-height: 30px;
-            padding: 0; }
-            #main-navigation ul.menu ul.sub-menu li a:before {
-              content: "- "; }
-          #main-navigation ul.menu ul.sub-menu li ul {
-            border: none;
-            left: 0;
-            margin: 0;
-            padding: 0 15px; }
-            #main-navigation ul.menu ul.sub-menu li ul a {
-              font-size: 12px; }
+          #main-navigation ul.menu ul.sub-menu li a:before {
+            content: "- "; }
+        #main-navigation ul.menu ul.sub-menu li ul {
+          border: none;
+          left: 0;
+          margin: 0;
+          padding: 0 15px; }
+          #main-navigation ul.menu ul.sub-menu li ul a {
+            font-size: 12px; }
 
   #main {
     border-top: 1px solid #CCC;
@@ -4165,7 +4143,6 @@ p.tags {
  * @section    Plugins
  * @subsection Gravity Forms
  */
-/* error messages */
 .gform_wrapper .validation_error {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
