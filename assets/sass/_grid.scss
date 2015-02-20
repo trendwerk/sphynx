@@ -13,15 +13,6 @@
  * 
  */
 
-
-/**
- * @section     Grid
- * @subsection 	Variables
- */
-
-$horizontal-space: 10px;
-$vertical-space: 10px;
-
 /**
  * @section     Grid
  * @subsection 	Wrapper and inner
@@ -63,7 +54,7 @@ $vertical-space: 10px;
 @mixin base-column {
 	@include border-box;
 	float: left;
-	margin: $vertical-space $horizontal-space;
+	margin: 10px;
 
 	@media(max-width: 980px) {
 		clear: both;
