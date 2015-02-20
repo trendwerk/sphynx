@@ -37,7 +37,7 @@ body {
 		@include column-6;
 
 		#sitename {
-			font: bold 32px/40px $heading-font;
+			font: bold 28px/35px $heading-font;
 			margin: 0;
 
 			a {
@@ -49,7 +49,7 @@ body {
 
 		#description {
 			color: $text-color;
-			font: normal 16px/30px $text-font;
+			font: normal 14px/25px $text-font;
 			margin: 0;
 		}
 
@@ -60,56 +60,12 @@ body {
 	#mobile {
 		display: none;
 	}
-	
-	// top navigation 
-			
-	#topnav {
-		@include column-6;
-
-		ul {
-			float: right;
-			margin: 0;
-			
-			li {
-				display: inline-block;
-				font-size: 13px;
-
-				&:after {
-					color: $text-color;
-					content: "|";
-					padding: 0 5px 0 10px;
-				}
-				
-				&:last-child {
-
-					&:after {
-						display: none;
-					}
-
-				}
-
-				a { 
-					color: $text-color;
-
-					&:active,
-					&:focus,
-					&:hover {
-						color: $link-color;
-					}
-
-				}
-
-			}
-
-		}
-
-	}
 
 	// search form
 
 	#search {
 		@include column-6;
-		margin-top: 5px;
+		margin-top: 20px;
 
 		form {
 			float: right;
@@ -157,7 +113,7 @@ body {
 					content: "\f0d7";
 					display: inline-block;
 					font-family: FontAwesome;
-					font-size: 9px;
+					font-size: 10px;
 					position: absolute;
 					padding-left: 5px;
 					padding-right: 5px;
