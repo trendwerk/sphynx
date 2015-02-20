@@ -33,7 +33,7 @@
 		}
 
 		@media(max-width: 980px) {
-			@include border-box;
+			box-sizing: border-box;
 			padding: 0 40px;
 			width: 100%;
 		}
@@ -52,7 +52,7 @@
  */
 
 @mixin base-column {
-	@include border-box;
+	box-sizing: border-box;
 	float: left;
 	margin: 10px;
 

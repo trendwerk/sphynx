@@ -42,7 +42,7 @@
 	text-align: center;
 
 	img { 
-		@include border-box;
+		box-sizing: border-box;
 		padding: 5px;
 	}
 		
@@ -80,7 +80,7 @@
 		}
 
 		.gallery-caption {
-			@include border-box;
+			box-sizing: border-box;
 			background-color: rgba(0, 0, 0, 0.75);
 			bottom: 0;
 			color: #FFF;

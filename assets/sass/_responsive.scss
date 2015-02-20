@@ -142,7 +142,7 @@
 	}	
  			
  	#header {
- 		@include border-box;
+		box-sizing: border-box;
  		margin: 0px 0px 5px 0;
 
  		// logo, sitename and description
@@ -205,9 +205,9 @@
 		// search form
 				
 		#search {
-			@include border-box;
 			@include border-radius(3px);
 			background: $footer-background;
+			box-sizing: border-box;
 			display: none;
 			padding: 10px;
 			width: 100%;
@@ -219,7 +219,7 @@
 				fieldset { 
 
 					input[type="text"] { 
-						@include border-box;
+						box-sizing: border-box;
 						font-size: 16px;
 						border: none;
 						width: 100%;
@@ -296,7 +296,7 @@
 			// second level
 
 			ul.sub-menu {
-				@include border-box;
+				box-sizing: border-box;
 				clear: both;
 				display: block;
 				float: left;

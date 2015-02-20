@@ -16,8 +16,8 @@
  */
 
 .widget {
-	@include border-box;
 	background: $light-background;
+	box-sizing: border-box;
 	clear: both;
 	float: left;
 	margin: 0 0 $line-height + 10px 0;

@@ -216,7 +216,7 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select {
-	@include border-box;
+	box-sizing: border-box;
 	text-align: left;
 	vertical-align: top;
 	-webkit-appearance: none;

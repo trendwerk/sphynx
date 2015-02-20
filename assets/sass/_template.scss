@@ -80,8 +80,8 @@
 		}
 
 		&.sticky { 
-			@include border-box();
 			background: $light-background;
+			box-sizing: border-box;
 			padding: 30px 30px 5px 30px;
 			margin-bottom: $line-height * 2;
 		}

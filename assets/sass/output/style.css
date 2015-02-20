@@ -50,10 +50,6 @@
  */
 /**
  * @section    Mixins
- * @subsection Border-box
- */
-/**
- * @section    Mixins
  * @subsection Border radius (single)
  */
 /**
@@ -67,10 +63,6 @@
 /**
  * @section    Mixins
  * @subsection Collumns
- */
-/** 
- * @section    Mixins
- * @subsection Ellipsis
  */
 /**
  * @section    Mixins
@@ -99,6 +91,36 @@
  * @section    Mixins
  * @subsection Vertical gradient
  */
+/**
+ * @section Extends
+ *
+ * Extends are like mixins but without the variables. Use them
+ * to build pre-defined styles
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+/**
+ * @section    Extends
+ * @subsection Border-box
+ */
+.border-box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/** 
+ * @section    Extends
+ * @subsection Ellipsis
+ */
+.ellipsis, #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
 /**
  * @section Reset
  *
@@ -305,8 +327,6 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: left;
   vertical-align: top;
@@ -2535,8 +2555,6 @@ input#adminbar-search {
   max-width: 100%;
   text-align: center; }
   .wp-caption img {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 5px; }
   .wp-caption .wp-caption-text {
@@ -2565,8 +2583,6 @@ input#adminbar-search {
       height: auto;
       width: 100%; }
     .gallery .gallery-item .gallery-caption {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       background-color: rgba(0, 0, 0, 0.75);
       bottom: 0;
@@ -2735,8 +2751,6 @@ figure.alignnone img {
         width: 1140px; } }
     @media (max-width: 980px) {
       .container .container-inner {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 0 40px;
         width: 100%; } }
@@ -2777,8 +2791,6 @@ body {
   padding: 10px 0;
   z-index: 1; }
   #header #logo {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     margin: 10px;
@@ -2804,8 +2816,6 @@ body {
   #header #mobile {
     display: none; }
   #header #topnav {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     margin: 10px;
@@ -2835,8 +2845,6 @@ body {
           #header #topnav ul li a:active, #header #topnav ul li a:focus, #header #topnav ul li a:hover {
             color: #1F6FD1; }
   #header #search {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     margin: 10px;
@@ -2908,8 +2916,6 @@ body {
         height: 40px;
         width: 100%; }
         #main-navigation ul ul li a, #main-navigation ul ul ul li a {
-          -moz-box-sizing: border-box;
-          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           background: #222;
           color: #FFF;
@@ -2956,15 +2962,11 @@ body {
   padding-top: 30px;
   z-index: 0; }
   #main #content {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     margin: 10px;
     width: 620px;
+    box-sizing: border-box;
     padding-right: 20px; }
     @media (max-width: 980px) {
       #main #content {
@@ -2995,8 +2997,6 @@ body {
         position: relative;
         top: 1px; }
   #main aside {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     margin: 10px;
@@ -3022,8 +3022,6 @@ body {
     float: left;
     width: 100%; }
     #footer aside .widget {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       float: left;
       margin: 10px;
@@ -3054,8 +3052,6 @@ body {
       #footer aside .widget p {
         padding-right: 20px; }
   #footer #credits {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     margin: 10px;
@@ -3155,10 +3151,8 @@ body {
   .archive article.sticky,
   .search article.sticky,
   .blog article.sticky {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     background: #EEE;
+    box-sizing: border-box;
     padding: 30px 30px 5px 30px;
     margin-bottom: 60px; }
 
@@ -3207,8 +3201,6 @@ body {
   margin-bottom: 60px; }
 
 .error404 #main #content {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
   margin: 10px;
@@ -3260,8 +3252,6 @@ body {
     right: 0;
     top: 0; }
   #respond textarea {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
     height: 200px;
@@ -3311,8 +3301,6 @@ p.tags {
         margin-top: 0;
         margin-bottom: 0; }
     #comments ol li.comment .comment-body {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       background-color: #EEE;
       clear: both;
@@ -3344,8 +3332,6 @@ p.tags {
           float: right;
           font-style: italic; }
       #comments ol li.comment .comment-body .comment-content {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         float: left;
         margin-top: -20px;
@@ -3467,8 +3453,6 @@ p.tags {
  * @subsection Author
  */
 .author-card {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background: #EEE;
   clear: both;
@@ -3596,10 +3580,8 @@ p.tags {
  * @subsection Default wigdet styling
  */
 .widget {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   background: #EEE;
+  box-sizing: border-box;
   clear: both;
   float: left;
   margin: 0 0 40px 0;
@@ -3914,8 +3896,6 @@ p.tags {
     font-size: 12px; }
 
   #header {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0px 0px 5px 0; }
     #header #logo {
@@ -3956,13 +3936,11 @@ p.tags {
     #header #topnav {
       display: none; }
     #header #search {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       border-radius: 3px;
       background: #333;
+      box-sizing: border-box;
       display: none;
       padding: 10px;
       width: 100%; }
@@ -3970,8 +3948,6 @@ p.tags {
         margin: 0;
         width: 100%; }
         #header #search form fieldset input[type="text"] {
-          -moz-box-sizing: border-box;
-          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           font-size: 16px;
           border: none;
@@ -4001,8 +3977,6 @@ p.tags {
         line-height: 40px;
         padding: 0; }
     #main-navigation ul.menu ul.sub-menu {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       clear: both;
       display: block;
@@ -4157,13 +4131,11 @@ p.tags {
  * @subsection Gravity Forms
  */
 .gform_wrapper .validation_error {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   background: #C44741;
+  box-sizing: border-box;
   clear: both;
   color: #FFF;
   display: block;
@@ -4290,8 +4262,6 @@ p.tags {
           #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_minute label,
           #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_ampm label,
           #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_hour label {
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             float: left;
             padding: 7px 0 0 10px;
@@ -4356,12 +4326,7 @@ p.tags {
           #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span:last-of-type {
             margin-bottom: 0; }
           #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span label {
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
             float: left;
             padding: 7px 0 0 10px;
             width: 38.4%; }

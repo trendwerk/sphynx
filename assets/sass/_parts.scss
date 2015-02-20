@@ -47,7 +47,7 @@
 	}
 	
 	textarea { 
-		@include border-box;
+		box-sizing: border-box;
 		display: block;
 		height: 200px;
 		margin: 0;
@@ -120,7 +120,7 @@ p.tags {
 		li.comment {
 
 			.comment-body {
-				@include border-box;
+				box-sizing: border-box;
 				background-color: $light-background;
 				clear: both;
 				float: left;
@@ -165,7 +165,7 @@ p.tags {
 				}
 
 				.comment-content {
-					@include border-box;
+					box-sizing: border-box;
 					float: left;
 					margin-top: -20px;
 					padding-left: 80px;
@@ -325,7 +325,7 @@ p.tags {
  */
 
 .author-card {
-	@include border-box;
+	box-sizing: border-box;
 	background: #EEE;
 	clear: both;
 	float: left;

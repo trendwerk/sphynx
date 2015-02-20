@@ -1,0 +1,34 @@
+/**
+ * @section Extends
+ *
+ * Extends are like mixins but without the variables. Use them
+ * to build pre-defined styles
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+
+/**
+ * @section    Extends
+ * @subsection Border-box
+ */
+
+.border-box {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/** 
+ * @section    Extends
+ * @subsection Ellipsis
+ */
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

@@ -18,9 +18,9 @@
 .gform_wrapper {
 
 	.validation_error {
-		@include border-box;
 		@include border-radius(3px);
 		background: $error-red;
+		box-sizing: border-box;
 		clear: both;
 		color: #FFF;
 		display: block;
@@ -189,7 +189,7 @@
 						}
 
 						label {
-							@include border-box;
+							box-sizing: border-box;
 							float: left;
 							padding: 7px 0 0 10px;
 							width: 38.4%;					
@@ -299,8 +299,8 @@
 						}
 						
 						label { 
-							@include border-box;
-							@include ellipsis;
+							@extend .ellipsis;
+							box-sizing: border-box;
 							float: left; 
 							padding: 7px 0 0 10px;
 							width: 38.4%;

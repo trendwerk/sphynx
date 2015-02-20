@@ -50,10 +50,6 @@
  */
 /**
  * @section    Mixins
- * @subsection Border-box
- */
-/**
- * @section    Mixins
  * @subsection Border radius (single)
  */
 /**
@@ -67,10 +63,6 @@
 /**
  * @section    Mixins
  * @subsection Collumns
- */
-/** 
- * @section    Mixins
- * @subsection Ellipsis
  */
 /**
  * @section    Mixins
@@ -99,6 +91,36 @@
  * @section    Mixins
  * @subsection Vertical gradient
  */
+/**
+ * @section Extends
+ *
+ * Extends are like mixins but without the variables. Use them
+ * to build pre-defined styles
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+/**
+ * @section    Extends
+ * @subsection Border-box
+ */
+.border-box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/** 
+ * @section    Extends
+ * @subsection Ellipsis
+ */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
 /**
  * @section Reset
  *
@@ -305,8 +327,6 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: left;
   vertical-align: top;
@@ -2535,8 +2555,6 @@ input#adminbar-search {
   max-width: 100%;
   text-align: center; }
   .wp-caption img {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 5px; }
   .wp-caption .wp-caption-text {
@@ -2565,8 +2583,6 @@ input#adminbar-search {
       height: auto;
       width: 100%; }
     .gallery .gallery-item .gallery-caption {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       background-color: rgba(0, 0, 0, 0.75);
       bottom: 0;

@@ -221,7 +221,7 @@ body {
 				width: 100%;
 
 				a {
-					@include border-box;
+					box-sizing: border-box;
 					background: #222;
 					color: #FFF;
 					display: block;	
@@ -326,8 +326,8 @@ body {
 	// content
 	
 	#content {
-		@include border-box;
 		@include column-8;
+		box-sizing: border-box;
 		padding-right: 20px;
 
 		h1 {
