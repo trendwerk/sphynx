@@ -55,16 +55,6 @@
 
 				</div>
 
-				<nav id="topnav">				
-					<?php
-						wp_nav_menu( array(
-							'depth'          => 1,
-							'fallback_cb'    => null,
-							'theme_location' => 'topnav',
-						) ); 
-					?>
-				</nav>
-
 				<div id="search">
 					<?php get_search_form(); ?>
 				</div>
