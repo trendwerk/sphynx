@@ -97,17 +97,17 @@
 
  .single #main #content {
  			
-		h1 {
-			margin-bottom: 0;
-		}
+	h1 {
+		margin-bottom: 0;
+	}
 
-		figure {
+	figure {
 		float: right;
 		margin: 5px 0 10px 20px; 
-		}
+	}
 
 	nav.pages {
-		margin-bottom: 30px;
+		margin-bottom: $line-height;
 
 		a {
 			background-color: $light-background;

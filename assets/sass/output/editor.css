@@ -2263,7 +2263,6 @@ select {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 13px;
   margin: 0;
-  min-width: 220px;
   outline: none;
   padding: 12px; }
   input[type="datetime-local"]:-moz-placeholder,

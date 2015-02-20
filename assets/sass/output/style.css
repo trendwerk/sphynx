@@ -2263,7 +2263,6 @@ select {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 13px;
   margin: 0;
-  min-width: 220px;
   outline: none;
   padding: 12px; }
   input[type="datetime-local"]:-moz-placeholder,
@@ -3519,7 +3518,7 @@ p.tags {
   .widget:last-of-type {
     margin-bottom: 40px; }
   .widget .widgettitle {
-    margin: 0 0 22px 0; }
+    margin: 0 0 15px 0; }
     .widget .widgettitle a {
       color: #333;
       text-decoration: none; }
@@ -3562,6 +3561,8 @@ p.tags {
           border: none;
           margin-left: 20px;
           padding: 0 5px; }
+  .widget .search form {
+    width: 100%; }
 
 /**
  * @section    Widget
@@ -3776,7 +3777,6 @@ p.tags {
       width: 100%; }
       #main aside .widget {
         clear: none;
-        margin-bottom: 30px;
         padding: 30px;
         width: 48%; }
         #main aside .widget:nth-child(odd) {
@@ -3819,7 +3819,7 @@ p.tags {
 
   #header {
     box-sizing: border-box;
-    margin: 0px 0px 0 0; }
+    margin: 0; }
     #header #logo {
       width: 75%; }
     #header #mobile {
@@ -4048,7 +4048,7 @@ p.tags {
   color: #FFF;
   display: block;
   float: left;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 10px 23px; }
   .gform_wrapper .validation_error:before {
     content: "\f071";
