@@ -11,36 +11,12 @@
 @charset "UTF-8";
 
 /**
- * @section Variables
- *
- * Defines recurring colors and fonts
- */
-
-$heading-font:		'Helvetica Neue', sans-serif;
-$text-font:			'Helvetica Neue', sans-serif;
-
-$primary-color:		#333;
-$secondary-color:	#999;
-
-$light-background:	#EEE;
-$body-background:	#FFF;
-$border-color:		#CCC;
-$footer-background:	#333; 
-
-$heading-color:		#333;
-$text-color:		#666;
-$text-light:		#999;
-$link-color:		#1F6FD1;
-
-$error-red: 		#C44741;
-$alert-yellow: 		#E3B000;
-
-/**
  * @section Import
  *
  * Import other SASS files
  */
 
+@import 'vars';
 @import 'mixins';
 @import 'reset';
 @import 'typography';

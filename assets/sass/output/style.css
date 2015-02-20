@@ -9,14 +9,26 @@
  * 
  */
 /**
- * @section Variables
- *
- * Defines recurring colors and fonts
- */
-/**
  * @section Import
  *
  * Import other SASS files
+ */
+/**
+ * @section Variables
+ *
+ * This is where you should include all the recurring colors, 
+ * fonts, etc.te
+ *
+ * @package   		WordPress
+ * @subpackage 		TrendPress
+ * @author    		Trendwerk
+ * @license   		GPL v2
+ * 
+ */
+/**
+ * @section Variables
+ *
+ * Defines recurring colors and fonts
  */
 /**
  * @section Mixins
@@ -2842,7 +2854,7 @@ body {
       float: right; }
 
 #main-navigation {
-  background-color: #333;
+  background-color: red;
   margin: 0;
   z-index: 1; }
   #main-navigation ul {
@@ -2999,7 +3011,7 @@ body {
         width: 360px; } }
 
 #footer {
-  background: #333;
+  background: red;
   color: #FFF;
   margin-bottom: 0; }
   #footer a {
@@ -3949,7 +3961,7 @@ p.tags {
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       border-radius: 3px;
-      background: #333;
+      background: red;
       display: none;
       padding: 10px;
       width: 100%; }
