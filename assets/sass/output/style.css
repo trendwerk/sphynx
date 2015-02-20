@@ -3150,7 +3150,7 @@ body {
   clear: both;
   float: left;
   position: relative;
-  margin: 30px 0 0 0;
+  margin: 0;
   width: 100%; }
   #respond p {
     clear: both;
@@ -3216,6 +3216,8 @@ p.tags {
       #comments ol ul.children #respond {
         margin-top: 0;
         margin-bottom: 0; }
+      #comments ol ul.children li:last-of-type {
+        margin-bottom: 30px; }
     #comments ol li.comment .comment-body {
       box-sizing: border-box;
       background-color: #EEE;
@@ -3275,7 +3277,7 @@ p.tags {
 #pager {
   clear: both;
   font-size: 13px;
-  padding: 30px 0;
+  padding: 0 0 30px 0;
   text-align: center;
   width: 100%; }
   #pager .page-numbers,

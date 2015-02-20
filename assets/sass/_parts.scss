@@ -20,7 +20,7 @@
 	clear: both;
 	float: left;
 	position: relative;
-	margin: $line-height 0 0 0;
+	margin: 0;
 	width: 100%;
 	
 	p {
@@ -116,6 +116,10 @@ p.tags {
 				margin-bottom: 0;
 			}
 
+			li:last-of-type {
+				margin-bottom: $line-height;
+			}
+
 		}
 
 		li.comment {
@@ -206,7 +210,7 @@ p.tags {
 #pager {
 	clear: both;
 	font-size: 13px;
-	padding: $line-height 0;
+	padding: 0 0 $line-height 0;
 	text-align: center;
 	width: 100%;
 
