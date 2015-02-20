@@ -95,10 +95,10 @@
 
 /** 
  * @section    Mixins
- * @subsection Elipsis
+ * @subsection Ellipsis
  */
 
-@mixin elipsis {
+@mixin ellipsis {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
