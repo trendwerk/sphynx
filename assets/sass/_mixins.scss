@@ -35,28 +35,29 @@
  * cheatsheet: http://fortawesome.github.io/Font-Awesome/cheatsheet/
  */
 
-@mixin font-awesome-after( $glyph ) {
+@mixin font-awesome( $position, $glyph ) {
 	position: relative;
 
-	&:after {
-		content: $glyph;
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		text-decoration: inherit;
-	}
+	@if $position == before {
 
-}
+		&:before {
+			content: $glyph;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-decoration: inherit;
+		}
 
-@mixin font-awesome-before( $glyph ) {
-	position: relative;
+	} @else if $position == after {
 
-	&:before {
-		content: $glyph;
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		text-decoration: inherit;
+		&:after {
+			content: $glyph;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-decoration: inherit;
+		}
+
 	}
 
 }
