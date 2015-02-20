@@ -30,9 +30,9 @@ input[type="tel"],
 input[type="url"],
 textarea, 
 select {
-	@include border-radius(3px);
 	@include placeholder(#666, #ccc);
 	background-color: #FFF;
+	border-radius: 3px;
 	border: 1px solid $border-color;
 	color: $text-color;
 	display: block;
@@ -53,9 +53,9 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
-	@include border-radius(3px);
 	background-color: $primary-color;
 	border: 0;
+	border-radius: 3px;
 	color: #FFF;
 	font-family: $text-font;
 	font-size: 12px;

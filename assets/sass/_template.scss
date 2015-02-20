@@ -110,8 +110,8 @@
 		margin-bottom: 30px;
 
 		a {
-			@include border-radius(3px);
 			background-color: $light-background;
+			border-radius: 3px;
 			color: $text-color;
 			display: inline-block;
 			font-size: 13px;

@@ -135,8 +135,8 @@ a {
 	/* call to action buttons */
 
 	&.button {
-		@include border-radius(3px);
 		background: $primary-color;
+		border-radius: 3px;
 		color: #FFF;		
 		display: inline-block;
 		font-weight: bold;
@@ -178,8 +178,8 @@ a {
 	/* style for tags */
 
 	&[rel="tag"] {
-		@include border-radius(5px);
 		background: #CCC;
+		border-radius: 3px;
 		color: $text-color;
 		display: inline-block;
 		font-size: 12px !important;

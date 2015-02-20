@@ -154,7 +154,7 @@ textarea:focus,
 button:focus,
 select:focus,
 input:focus {
-	@include box-shadow(0);
+	box-shadow: none;
 	z-index: 1;
 }
 
@@ -169,7 +169,7 @@ textarea:invalid,
 button:invalid,
 select:invalid,
 input:invalid {
-	@include box-shadow(0);
+	box-shadow: none;
 }
 
 input[type="submit"],
@@ -267,7 +267,7 @@ a.button_disabled,
 button[disabled],
 select[disabled],
 input[disabled] {
-	@include box-shadow(0);
+	box-shadow: none;
 	color: #888;
 	cursor: default;
 	user-select: none;
@@ -321,7 +321,7 @@ select[size="1"] {
 	}
 
 	::-webkit-validation-bubble-message {
-		@include box-shadow(none);
+		box-shadow: none;
 		background-color: $primary-color;
 		border: none;
 		color: #FFF;
@@ -336,7 +336,7 @@ select[size="1"] {
 	::-webkit-validation-bubble-arrow,
 	::-webkit-validation-bubble-top-outer-arrow,
 	::-webkit-validation-bubble-top-inner-arrow {
-		@include box-shadow(none);
+		box-shadow: none;
 		background: #666;
 		border-color: #666;
 	}

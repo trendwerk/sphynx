@@ -137,7 +137,7 @@ p.tags {
 						float: left;
 
 						img {
-							@include border-radius(999px);
+							border-radius: 999px;
 							float: left;
 							margin-right: 20px;
 						}
@@ -212,9 +212,9 @@ p.tags {
 	.page-numbers,
 	.prev,
 	.next {
-		@include border-radius(3px);
 		background-color: $light-background;
 		border: 2px solid $light-background;
+		border-radius: 3px;
 		color: $text-color;
 		display: inline-block;
 		font-size: 13px;
@@ -338,7 +338,7 @@ p.tags {
 		margin: 0;
 
 		img {
-			@include border-radius(999px);
+			border-radius: 999px;
 		}
 
 	}
@@ -396,8 +396,8 @@ p.tags {
 .author-social {
 
 	a {
-		@include border-radius(999px);
 		background-color: #999;
+		border-radius: 999px;
 		color: #FFF;
 		display: block;
 		float: left;

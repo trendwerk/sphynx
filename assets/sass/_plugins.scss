@@ -18,8 +18,8 @@
 .gform_wrapper {
 
 	.validation_error {
-		@include border-radius(3px);
 		background: $error-red;
+		border-radius: 3px;
 		box-sizing: border-box;
 		clear: both;
 		color: #FFF;
@@ -42,8 +42,8 @@
 	}
 
 	.validation_message.gfield_description {
-		@include border-radius(3px);
 		background-color: $error-red;
+		border-radius: 3px;
 		clear: both;
 		color: #FFF;
 		float: left;

@@ -172,8 +172,8 @@
 				text-decoration: none;
 
 				i { 
-					@include border-radius(999px);
 					background: $text-light;
+					border-radius: 999px;
 					color: #FFF;
 					font-size: 16px;
 					float: left;
@@ -268,8 +268,8 @@
 .widget_tag_cloud {
 
 	.tagcloud a {
-		@include border-radius(5px);
 		background: #CCC;
+		border-radius: 3px;
 		color: $text-color;
 		display: inline-block;
 		font-size: 12px !important;

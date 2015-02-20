@@ -14,61 +14,6 @@
  */
 
 /**
- * @section 	Mixins
- * @subsection  Animate 
- */
-
-@mixin animate-this ( $what: all, $time: 0.5s, $ease: ease-in-out ) {
-	-webkit-transition: $what $time $ease;
-	-moz-transition: $what $time $ease;
-	-o-transition: $what $time $ease;
-	-ms-transition: $what $time $ease;
-	transition: $what $time $ease;
-}
-
-/**
- * @section    Mixins
- * @subsection Border radius (single)
- */
-
-@mixin border-radius ( $radius ) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	border-radius: $radius;
-}
-
-/**
- * @section    Mixins
- * @subsection Border radiusses (multiple)
- */
-
-@mixin border-radiuses ( $topright, $bottomright, $bottomleft, $topleft ) {
-	-webkit-border-top-right-radius: $topright;
-	-webkit-border-bottom-right-radius: $bottomright;
-	-webkit-border-bottom-left-radius: $bottomleft;
-	-webkit-border-top-left-radius: $topleft;
-	-moz-border-radius-topright: $topright;
-	-moz-border-radius-bottomright: $bottomright;
-	-moz-border-radius-bottomleft: $bottomleft;
-	-moz-border-radius-topleft: $topleft;
-	border-top-right-radius: $topright;
-	border-bottom-right-radius: $bottomright;
-	border-bottom-left-radius: $bottomleft;
-	border-top-left-radius: $topleft;
-}
-
-/**
- * @section    Mixins
- * @subsection Box-shadow
- */
-
-@mixin box-shadow ( $shadow ) {
-	-webkit-box-shadow: $shadow;
-	-moz-box-shadow: $shadow;
-	box-shadow: $shadow;
-}
-
-/**
  * @section    Mixins
  * @subsection Collumns
  */
@@ -128,19 +73,6 @@
 	background-image: -moz-linear-gradient(left, $startColor, $endColor);
 	background-image: -ms-linear-gradient(left, $startColor, $endColor);
 	background-image: -o-linear-gradient(left, $startColor, $endColor);
-}
-
-/**
- * @section    Mixins
- * @subsection Opacity
- */
-
-@mixin opacity ( $trans ) {
-	filter: alpha(opactiy=($trans * 100));
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
-	-moz-opacity: $trans;
-	-khtml-opacity: $trans;
-	opacity: $trans;
 }
 
 /**

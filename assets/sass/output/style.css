@@ -45,22 +45,6 @@
  * 
  */
 /**
- * @section 	Mixins
- * @subsection  Animate 
- */
-/**
- * @section    Mixins
- * @subsection Border radius (single)
- */
-/**
- * @section    Mixins
- * @subsection Border radiusses (multiple)
- */
-/**
- * @section    Mixins
- * @subsection Box-shadow
- */
-/**
  * @section    Mixins
  * @subsection Collumns
  */
@@ -74,10 +58,6 @@
 /**
  * @section    Mixins
  * @subsection Horizontal gradient
- */
-/**
- * @section    Mixins
- * @subsection Opacity
  */
 /**
  * @section    Mixins
@@ -265,9 +245,7 @@ textarea:focus,
 button:focus,
 select:focus,
 input:focus {
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: 0;
+  box-shadow: none;
   z-index: 1; }
 
 input[type="checkbox"]:active,
@@ -281,9 +259,7 @@ textarea:invalid,
 button:invalid,
 select:invalid,
 input:invalid {
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: 0; }
+  box-shadow: none; }
 
 input[type="submit"],
 input[type="button"],
@@ -373,9 +349,7 @@ a.button_disabled,
 button[disabled],
 select[disabled],
 input[disabled] {
-  -webkit-box-shadow: 0;
-  -moz-box-shadow: 0;
-  box-shadow: 0;
+  box-shadow: none;
   color: #888;
   cursor: default;
   user-select: none; }
@@ -421,8 +395,6 @@ select[size="1"] {
     padding-right: 20px; }
 
   ::-webkit-validation-bubble-message {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
     box-shadow: none;
     background-color: #333;
     border: none;
@@ -437,8 +409,6 @@ select[size="1"] {
   ::-webkit-validation-bubble-arrow,
   ::-webkit-validation-bubble-top-outer-arrow,
   ::-webkit-validation-bubble-top-inner-arrow {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
     box-shadow: none;
     background: #666;
     border-color: #666; } }
@@ -2020,10 +1990,8 @@ a {
     content: "\f054";
     padding-left: 4px; }
   a.button {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     background: #333;
+    border-radius: 3px;
     color: #FFF;
     display: inline-block;
     font-weight: bold;
@@ -2046,10 +2014,8 @@ a {
       a.button.secondary:active, a.button.secondary:focus, a.button.secondary:hover {
         background: #737373; }
   a[rel="tag"] {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
     background: #CCC;
+    border-radius: 3px;
     color: #666;
     display: inline-block;
     font-size: 12px !important;
@@ -2276,10 +2242,8 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   background-color: #FFF;
+  border-radius: 3px;
   border: 1px solid #CCC;
   color: #666;
   display: block;
@@ -2438,11 +2402,9 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   background-color: #333;
   border: 0;
+  border-radius: 3px;
   color: #FFF;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 12px;
@@ -3167,10 +3129,8 @@ body {
 .single #main #content nav.pages {
   margin-bottom: 30px; }
   .single #main #content nav.pages a {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     background-color: #EEE;
+    border-radius: 3px;
     color: #666;
     display: inline-block;
     font-size: 13px;
@@ -3314,8 +3274,6 @@ p.tags {
         #comments ol li.comment .comment-body .comment-meta .comment-author {
           float: left; }
           #comments ol li.comment .comment-body .comment-meta .comment-author img {
-            -webkit-border-radius: 999px;
-            -moz-border-radius: 999px;
             border-radius: 999px;
             float: left;
             margin-right: 20px; }
@@ -3366,11 +3324,9 @@ p.tags {
   #pager .page-numbers,
   #pager .prev,
   #pager .next {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     background-color: #EEE;
     border: 2px solid #EEE;
+    border-radius: 3px;
     color: #666;
     display: inline-block;
     font-size: 13px;
@@ -3463,8 +3419,6 @@ p.tags {
     float: left;
     margin: 0; }
     .author-card .author-avatar img {
-      -webkit-border-radius: 999px;
-      -moz-border-radius: 999px;
       border-radius: 999px; }
   .author-card .author-info {
     padding-left: 100px; }
@@ -3498,10 +3452,8 @@ p.tags {
  */
 .addthis_toolbox a,
 .author-social a {
-  -webkit-border-radius: 999px;
-  -moz-border-radius: 999px;
-  border-radius: 999px;
   background-color: #999;
+  border-radius: 999px;
   color: #FFF;
   display: block;
   float: left;
@@ -3666,10 +3618,8 @@ p.tags {
       margin: 0 0 10px 0;
       text-decoration: none; }
       .widget_tp_social ul li a i {
-        -webkit-border-radius: 999px;
-        -moz-border-radius: 999px;
-        border-radius: 999px;
         background: #999;
+        border-radius: 999px;
         color: #FFF;
         font-size: 16px;
         float: left;
@@ -3718,10 +3668,8 @@ p.tags {
  * @package    WordPress
  */
 .widget_tag_cloud .tagcloud a {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   background: #CCC;
+  border-radius: 3px;
   color: #666;
   display: inline-block;
   font-size: 12px !important;
@@ -3915,10 +3863,8 @@ p.tags {
       top: 30px; }
       #header #mobile #mobile-navigation,
       #header #mobile #mobile-search {
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
         background-color: #999;
+        border-radius: 3px;
         color: #FFF;
         cursor: pointer;
         float: left;
@@ -3935,11 +3881,9 @@ p.tags {
     #header #topnav {
       display: none; }
     #header #search {
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
       background: #333;
       box-sizing: border-box;
+      border-radius: 3px;
       display: none;
       padding: 10px;
       width: 100%; }
@@ -4130,10 +4074,8 @@ p.tags {
  * @subsection Gravity Forms
  */
 .gform_wrapper .validation_error {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   background: #C44741;
+  border-radius: 3px;
   box-sizing: border-box;
   clear: both;
   color: #FFF;
@@ -4149,10 +4091,8 @@ p.tags {
   .gform_wrapper .validation_error:after {
     content: "."; }
 .gform_wrapper .validation_message.gfield_description {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   background-color: #C44741;
+  border-radius: 3px;
   clear: both;
   color: #FFF;
   float: left;

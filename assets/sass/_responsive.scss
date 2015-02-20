@@ -175,8 +175,8 @@
 
 			#mobile-navigation, 
 			#mobile-search {
-				@include border-radius(3px);
 				background-color: $secondary-color;
+				border-radius: 3px;
 				color: #FFF;
 				cursor: pointer;
 				float: left;
@@ -205,9 +205,9 @@
 		// search form
 				
 		#search {
-			@include border-radius(3px);
 			background: $footer-background;
 			box-sizing: border-box;
+			border-radius: 3px;
 			display: none;
 			padding: 10px;
 			width: 100%;
