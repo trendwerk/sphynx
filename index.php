@@ -22,47 +22,27 @@ get_header();
 			<?php 
 				if( is_author() )
 					get_template_part( 'partials/author' );
-			?>
-			
-			<?php if( have_posts() ) : ?>
+				
+				if( have_posts() ) {
 
-				<?php while( have_posts() ) : the_post(); ?>
+					while( have_posts() ) {
+						the_post();
+						get_template_part( 'partials/loop', 'post' );
 			
-					<article <?php post_class(); ?>>
+					}
+
+					tp_pagination();
 					
-						<h2>
-							<a href="<?php the_permalink(); ?>">
-								<?php the_title(); ?>
-							</a>
-						</h2>
-						
-						<p class="meta">
-							<?php _e( 'Posted on', 'tp' ); ?> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time>
-							<?php _e( 'by', 'tp' ) ?> <?php the_author_posts_link(); ?> 
-							<?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
-						</p>
-						
-						<figure>
-							<a href="<?php the_permalink(); ?>">
-								<?php the_post_thumbnail( 'thumbnail' ); ?>
-							</a>
-						</figure>
-						
-						<?php the_content( __( 'Read more', 'tp' ) ); ?>
+				} else {
+					?>
 
-					</article>
-				
-				<?php endwhile; ?>
-			
-				<?php tp_pagination(); ?>
-			
-			<?php else : ?>
+					<p>
+						<?php _e( 'No results found.', 'tp' ); ?>
+					</p>
 
-				<p>
-					<?php _e( 'No results found.', 'tp' ); ?>
-				</p>
-				
-			<?php endif; ?>
+					<?php
+				}
+			?>
 			
 		</section>
 				
