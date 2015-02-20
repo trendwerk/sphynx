@@ -28,14 +28,13 @@ body {
 
 #header {
 	background: $body-background;
+	padding: 10px 0;
 	z-index: 1;
 
 	/* logo, sitename and description */
 
 	#logo {
 		@include column-6;
-		margin-bottom: 20px;
-		margin-top: 20px;
 
 		#sitename {
 			font: bold 32px/40px $heading-font;
@@ -291,13 +290,13 @@ body {
 
 #sub-header {
 	background-color: #CCC;
-	margin-top: 0;
-	padding: 70px 0 100px 0;
+	padding: $line-height * 2 0;
 	text-align: center;
 
 	h1 {
 		font-size: 64px;
-		margin-bottom: 0;
+		line-height: 1;
+		margin-bottom: 15px;
 	}
 
 	h2 {
@@ -318,7 +317,7 @@ body {
 
 #main {
 	background: $body-background;
-	padding: 50px 0 35px 0;
+	padding-top: $line-height;
 	z-index: 0;
 
 	/* content */
@@ -371,15 +370,6 @@ body {
 
 	aside {
 		@include column-4;
-
-		.widget {
-
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-
-		}
-
 	}
 
 }
@@ -402,7 +392,6 @@ body {
 	
 	aside {
 		float: left;
-		padding-top: $line-height;
 		width: 100%;
 	
 		.widget {
@@ -410,10 +399,11 @@ body {
 			background: none;
 			clear: none;
 			float: left;
-			margin: 10px;
-			padding: $line-height 0;
+			margin-top: 40px;
+			margin-bottom: 30px;
+			padding: 0;
 			
-			h3 { 
+			h5 { 
 				color: #FFF; 
 			}
 
@@ -439,8 +429,7 @@ body {
 	
 	#credits {
 		@include column-12;
-		min-height: 50px;
-		padding: 0;
+		margin-bottom: $line-height;
 		
 		p {
 			margin: 0;
@@ -457,7 +446,8 @@ body {
 				display: inline-block;
 			
 				ul {
-				
+					margin: 0;
+
 					li {
 						display: inline;
 						

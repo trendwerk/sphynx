@@ -20,9 +20,13 @@
 	background: $light-background;
 	clear: both;
 	float: left;
-	margin: 0 0 40px 0;
-	padding: 40px;
+	margin: 0 0 $line-height + 10px 0;
+	padding: 30px;
 	width: 100%;
+
+	&:last-of-type {
+		margin-bottom: $line-height + 10px;
+	}
 
 	.widgettitle {
 		margin: 0 0 22px 0;

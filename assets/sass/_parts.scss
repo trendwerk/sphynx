@@ -20,7 +20,7 @@
 	clear: both;
 	float: left;
 	position: relative;
-	margin: 0 0 $line-height 0;
+	margin: 0;
 	width: 100%;
 	
 	p {
@@ -31,6 +31,10 @@
 		label { 
 			float: left;
 			width: 25%;
+		}
+
+		&.form-submit {
+			margin-bottom: 0;
 		}
 		
 	}
@@ -85,8 +89,26 @@ p.tags {
 		margin: 0;
 		padding: 0;
 
+		li {
+			clear: both;
+			float: left;
+			font-size: 14px;
+			margin-top: $line-height;
+			position: relative;
+			width: 100%;
+			
+			&:first-of-type {
+				margin-top: 0;
+			}
+
+		}
+
 		ul.children {
+			clear: both;
+			float: left;
+			margin-top: $line-height;
 			list-style-type: none;
+			width: 100%; 
 
 			#respond { 
 				margin-top: 0;
@@ -96,16 +118,12 @@ p.tags {
 		}
 
 		li.comment {
-			font-size: 14px;
-			position: relative;
 
 			.comment-body {
 				@include border-box;
 				background-color: $light-background;
 				clear: both;
 				float: left;
-				margin-bottom: $line-height;
-				padding-bottom: $line-height;
 				position: relative;
 				padding: 30px 30px 50px 30px;
 				width: 100%;
