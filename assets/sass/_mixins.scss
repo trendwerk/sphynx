@@ -63,16 +63,27 @@
 
 /**
  * @section    Mixins
- * @subsection Horizontal gradient
+ * @subsection Gradient
  */
 
-@mixin horizontal-gradient ( $startColor, $endColor ) {
- 	background-color: $startColor;
-	background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
-	background-image: -webkit-linear-gradient(left, $startColor, $endColor);
-	background-image: -moz-linear-gradient(left, $startColor, $endColor);
-	background-image: -ms-linear-gradient(left, $startColor, $endColor);
-	background-image: -o-linear-gradient(left, $startColor, $endColor);
+@mixin gradient( $direction, $startColor, $endColor ) {
+	background-color: $startColor;
+
+	@if $direction == horizontal {
+		background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+		background-image: -webkit-linear-gradient(left, $startColor, $endColor);
+		background-image: -moz-linear-gradient(left, $startColor, $endColor);
+		background-image: -ms-linear-gradient(left, $startColor, $endColor);
+		background-image: -o-linear-gradient(left, $startColor, $endColor);
+
+    } @else if $direction == vertical {
+		background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+		background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+		background-image: -moz-linear-gradient(top, $startColor, $endColor);
+		background-image: -ms-linear-gradient(top, $startColor, $endColor);
+		background-image: -o-linear-gradient(top, $startColor, $endColor);
+    }
+
 }
 
 /**
@@ -134,18 +145,4 @@
 		background-size: 500px 500px;
 	}
 	
-}
-
-/**
- * @section    Mixins
- * @subsection Vertical gradient
- */
-
-@mixin vertical-gradient ( $startColor, $endColor ) {
-	background-color: $startColor;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
-	background-image: -webkit-linear-gradient(top, $startColor, $endColor);
-	background-image: -moz-linear-gradient(top, $startColor, $endColor);
-	background-image: -ms-linear-gradient(top, $startColor, $endColor);
-	background-image: -o-linear-gradient(top, $startColor, $endColor);
 }
