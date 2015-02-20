@@ -194,10 +194,9 @@
 	background-position: $top $left;
 	background-repeat: no-repeat;
 
-	@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
-	only screen and (min--moz-device-pixel-ratio: 2),
-	only screen and (-o-min-device-pixel-ratio: 2/1),
-	only screen and (min-device-pixel-ratio: 2) {
+		@media 
+		(-webkit-min-device-pixel-ratio: 2), 
+		(min-resolution: 192dpi) { 
 		background-image: url('../../../assets/img/sprite-x2.png');
 		background-position: $top x 2 $left x 2;
 		background-size: 500px 500px;
