@@ -2854,7 +2854,7 @@ body {
       float: right; }
 
 #main-navigation {
-  background-color: red;
+  background-color: #333;
   margin: 0;
   z-index: 1; }
   #main-navigation ul {
@@ -3011,7 +3011,7 @@ body {
         width: 360px; } }
 
 #footer {
-  background: red;
+  background: #333;
   color: #FFF;
   margin-bottom: 0; }
   #footer a {
@@ -3443,6 +3443,7 @@ p.tags {
       color: #999;
       font-size: 13px;
       font-family: fontawesome;
+      font-weight: 400;
       margin: 0;
       padding: 0 12px;
       position: absolute;
@@ -3961,7 +3962,7 @@ p.tags {
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       border-radius: 3px;
-      background: red;
+      background: #333;
       display: none;
       padding: 10px;
       width: 100%; }
