@@ -4272,7 +4272,7 @@ p.tags {
 
 /**
  * @section    Plugins
- * @subsection TP Sub menu
+ * @subsection Submenu widget
  */
 .widget_tp_submenu ul li.current_page_ancestor > ul, .widget_tp_submenu ul li.current-menu-item > ul {
   border-bottom: none;
