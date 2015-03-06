@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 10:20+0100\n"
-"PO-Revision-Date: 2015-02-20 10:20+0100\n"
+"PO-Revision-Date: 2015-03-06 16:16+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -677,7 +677,7 @@ msgstr "Deel dit artikel op Google Plus"
 
 #: ../../partials/share.php:17
 msgid "Share this on LinkedIn"
-msgstr "Deel dut artikel op LinkedIn"
+msgstr "Deel dit artikel op LinkedIn"
 
 #: ../../partials/share.php:21
 msgid "Email this"
