@@ -1,10 +1,10 @@
 $ = jQuery
 
-$ -> 
+$ ->
 
   # Show button in widget
   # @subpackage Widgets
-  # 
+  #
   $( document ) .on 'click', '.tp-show-button', ->
     $(this).closest( 'div.widget-content' ).find( '.tp-show-button-content' ).toggle()
   

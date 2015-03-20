@@ -4,6 +4,9 @@ module.exports = function( grunt ) {
 
 		pkg: grunt.file.readJSON( 'package.json' ),
 
+		/**
+		 * Compile Coffee
+		 */	
 		coffee: {
 			compile: {
 				options: {
@@ -18,6 +21,18 @@ module.exports = function( grunt ) {
 			}
 
 		},
+
+		/**
+		 * Lint Coffee
+		 */
+	    coffeelint: {
+			app: ['assets/coffee/functions.coffee', 'assets/coffee/responsive.coffee'],
+			options: {
+				'max_line_length': {
+					'level': 'ignore'
+				}
+			}
+	    },
 
 		/**
 		 * Compile SASS to CSS 
@@ -57,6 +72,15 @@ module.exports = function( grunt ) {
 				options: {
 					livereload: true
 				},
+			},
+			coffeelint: {
+				files: [
+					'assets/coffee/*'
+				],
+				tasks: [ 'coffeelint' ],
+				options: {
+					livereload: true
+				},				
 			}
 		}
 
@@ -68,10 +92,11 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-coffeelint' );
 
 	/**
 	 * Run tasks
 	 */
-	grunt.registerTask( 'default', [ 'coffee', 'sass', 'watch' ] );
+	grunt.registerTask( 'default', [ 'coffee', 'coffeelint', 'sass', 'watch' ] );
 
 };
