@@ -234,6 +234,11 @@ body {
 			line-height: 60px;
 			padding: 0;
 
+			@media (max-width: 640px) {
+				margin: 0;
+				width: 100%;
+			}
+
 			&:active, 
 			&:focus,
 			&:hover {
@@ -248,6 +253,12 @@ body {
 				line-height: 60px;
 				padding: 0 20px;
 				text-transform: uppercase;
+
+				@media (max-width: 640px) {
+					font-size: 16px;
+					line-height: 40px;
+					padding: 0;
+				}
 			}
 		}
 
@@ -261,11 +272,26 @@ body {
 			width: 220px;
 			z-index: 1;
 
+			@media (max-width: 640px) {
+				box-sizing: border-box;
+				clear: both;
+				display: block;
+				float: left;
+				margin: 0;
+				padding: 0 15px 5px 15px;
+				position: relative;
+				width: 100%;
+			}
+
 			li {
 				clear: both;
 				display: block;
 				height: 40px;
 				width: 100%;
+
+				@media (max-width: 640px) {
+					height: auto;
+				}
 
 				a {
 					box-sizing: border-box;
@@ -278,6 +304,17 @@ body {
 					padding: 0 20px;
 					text-transform: none;
 					width: 100%;
+
+					@media (max-width: 640px) {
+						background-color: transparent;
+						font-size: 14px;
+						line-height: 30px;
+						padding: 0;
+
+						&:before {
+							content: "- ";
+						}
+					}
 
 					&:active,
 					&:focus,

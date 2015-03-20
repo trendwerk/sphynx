@@ -3116,6 +3116,10 @@ body {
       float: left;
       line-height: 60px;
       padding: 0; }
+      @media (max-width: 640px) {
+        #main-navigation ul > li {
+          margin: 0;
+          width: 100%; } }
       #main-navigation ul > li:active, #main-navigation ul > li:focus, #main-navigation ul > li:hover {
         background-color: #222; }
       #main-navigation ul > li > a {
@@ -3126,6 +3130,11 @@ body {
         line-height: 60px;
         padding: 0 20px;
         text-transform: uppercase; }
+        @media (max-width: 640px) {
+          #main-navigation ul > li > a {
+            font-size: 16px;
+            line-height: 40px;
+            padding: 0; } }
     #main-navigation ul ul, #main-navigation ul ul ul {
       display: none;
       margin: 0;
@@ -3133,11 +3142,24 @@ body {
       top: auto;
       width: 220px;
       z-index: 1; }
+      @media (max-width: 640px) {
+        #main-navigation ul ul, #main-navigation ul ul ul {
+          box-sizing: border-box;
+          clear: both;
+          display: block;
+          float: left;
+          margin: 0;
+          padding: 0 15px 5px 15px;
+          position: relative;
+          width: 100%; } }
       #main-navigation ul ul li, #main-navigation ul ul ul li {
         clear: both;
         display: block;
         height: 40px;
         width: 100%; }
+        @media (max-width: 640px) {
+          #main-navigation ul ul li, #main-navigation ul ul ul li {
+            height: auto; } }
         #main-navigation ul ul li a, #main-navigation ul ul ul li a {
           box-sizing: border-box;
           background: #222;
@@ -3149,6 +3171,14 @@ body {
           padding: 0 20px;
           text-transform: none;
           width: 100%; }
+          @media (max-width: 640px) {
+            #main-navigation ul ul li a, #main-navigation ul ul ul li a {
+              background-color: transparent;
+              font-size: 14px;
+              line-height: 30px;
+              padding: 0; }
+              #main-navigation ul ul li a:before, #main-navigation ul ul ul li a:before {
+                content: "- "; } }
           #main-navigation ul ul li a:active, #main-navigation ul ul li a:focus, #main-navigation ul ul li a:hover, #main-navigation ul ul ul li a:active, #main-navigation ul ul ul li a:focus, #main-navigation ul ul ul li a:hover {
             text-decoration: underline; }
         #main-navigation ul ul li.page_item_has_children, #main-navigation ul ul li.menu-item-has-children, #main-navigation ul ul li.has-children, #main-navigation ul ul ul li.page_item_has_children, #main-navigation ul ul ul li.menu-item-has-children, #main-navigation ul ul ul li.has-children {
@@ -3983,39 +4013,15 @@ p.tags {
  * @subsection Mobile
  */
 @media (max-width: 640px) {
-  #main-navigation ul.menu > li {
-    margin: 0;
-    width: 100%; }
-    #main-navigation ul.menu > li > a {
-      font-size: 16px;
-      line-height: 40px;
-      padding: 0; }
-  #main-navigation ul.menu ul.sub-menu {
-    box-sizing: border-box;
-    clear: both;
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 0 15px 5px 15px;
-    position: relative;
-    width: 100%; }
-    #main-navigation ul.menu ul.sub-menu li {
-      height: auto;
-      /* third level */ }
-      #main-navigation ul.menu ul.sub-menu li a {
-        background-color: transparent;
-        font-size: 14px;
-        line-height: 30px;
-        padding: 0; }
-        #main-navigation ul.menu ul.sub-menu li a:before {
-          content: "- "; }
-      #main-navigation ul.menu ul.sub-menu li ul {
-        border: none;
-        left: 0;
-        margin: 0;
-        padding: 0 15px; }
-        #main-navigation ul.menu ul.sub-menu li ul a {
-          font-size: 12px; }
+  #main-navigation ul.menu ul.sub-menu li {
+    /* third level */ }
+    #main-navigation ul.menu ul.sub-menu li ul {
+      border: none;
+      left: 0;
+      margin: 0;
+      padding: 0 15px; }
+      #main-navigation ul.menu ul.sub-menu li ul a {
+        font-size: 12px; }
 
   #main {
     border-top: 1px solid #CCC;

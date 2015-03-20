@@ -12,45 +12,12 @@
 
 		ul.menu {
 
-			// first level only
-
-			> li {
-				margin: 0;
-				width: 100%;
-
-				> a {
-					font-size: 16px;
-					line-height: 40px;
-					padding: 0;
-				}
-
-			}
-
 			// second level
 
 			ul.sub-menu {
-				box-sizing: border-box;
-				clear: both;
-				display: block;
-				float: left;
-				margin: 0;
-				padding: 0 15px 5px 15px;
-				position: relative;
-				width: 100%;
 
 				li {
-					height: auto;
-
-					a {
-						background-color: transparent;
-						font-size: 14px;
-						line-height: 30px;
-						padding: 0;
-
-						&:before {
-							content: "- ";
-						}
-					}
+					
 
 					/* third level */
 
