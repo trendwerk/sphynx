@@ -10,7 +10,7 @@
 				
 					<div id="copyright">
 						<p>
-							&copy; <?php _e( 'Copyright', 'tp' ); ?> <?php echo date( 'Y' ); ?> - <?php echo ( $name = get_option( 'tp-company-name' ) ) ? $name : get_bloginfo( 'name' ); ?>
+							&copy; <?php _e( 'Copyright', 'tp' ); ?> <?php echo date( 'Y' ); ?> - <?php bloginfo( 'name' ); ?>
 						</p>
 					</div>
 					
