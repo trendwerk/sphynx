@@ -3378,53 +3378,9 @@ p.tags {
 
 /**
  * @section    Parts
- * @subsection Author
- */
-.author-card {
-  box-sizing: border-box;
-  background: #EEE;
-  clear: both;
-  float: left;
-  margin: 0 0 30px 0;
-  padding: 30px;
-  width: 100%; }
-  .author-card .author-avatar {
-    float: left;
-    margin: 0; }
-    .author-card .author-avatar img {
-      border-radius: 999px; }
-  .author-card .author-info {
-    padding-left: 100px; }
-    .author-card .author-info .author-writtenby {
-      color: shade-light(#666, 5%);
-      font-size: 13px; }
-    .author-card .author-info .author-bio {
-      font-size: 13px; }
-    .author-card .author-info .author-social {
-      list-style-type: none;
-      margin: 0;
-      padding: 0; }
-      .author-card .author-info .author-social li {
-        display: inline; }
-        .author-card .author-info .author-social li .label {
-          color: shade-light(#666, 5%);
-          display: inline-block;
-          font-size: 14px;
-          float: left;
-          margin-top: -1px;
-          margin-right: 10px; }
-    .author-card .author-info a.more-link {
-      float: right;
-      font-size: 14px;
-      margin: 0 10px 0 0; }
-
-/**
- * @section    Parts
  * @subsection AddThis
- * @subsection Author
  */
-.addthis_toolbox a,
-.author-social a {
+.addthis_toolbox a {
   background-color: #999;
   border-radius: 999px;
   color: #FFF;
@@ -3438,54 +3394,21 @@ p.tags {
   text-align: center;
   text-decoration: none;
   width: 30px; }
-  .addthis_toolbox a:active, .addthis_toolbox a:focus,
-  .author-social a:active,
-  .author-social a:focus {
+  .addthis_toolbox a:active, .addthis_toolbox a:focus {
     top: 1px; }
-  .addthis_toolbox a.addthis_button_twitter:active, .addthis_toolbox a.addthis_button_twitter:focus, .addthis_toolbox a.addthis_button_twitter:hover, .addthis_toolbox a.twitter:active, .addthis_toolbox a.twitter:focus, .addthis_toolbox a.twitter:hover,
-  .author-social a.addthis_button_twitter:active,
-  .author-social a.addthis_button_twitter:focus,
-  .author-social a.addthis_button_twitter:hover,
-  .author-social a.twitter:active,
-  .author-social a.twitter:focus,
-  .author-social a.twitter:hover {
+  .addthis_toolbox a.addthis_button_twitter:active, .addthis_toolbox a.addthis_button_twitter:focus, .addthis_toolbox a.addthis_button_twitter:hover, .addthis_toolbox a.twitter:active, .addthis_toolbox a.twitter:focus, .addthis_toolbox a.twitter:hover {
     background-color: #55ACEE; }
-  .addthis_toolbox a.addthis_button_facebook:active, .addthis_toolbox a.addthis_button_facebook:focus, .addthis_toolbox a.addthis_button_facebook:hover, .addthis_toolbox a.facebook:active, .addthis_toolbox a.facebook:focus, .addthis_toolbox a.facebook:hover,
-  .author-social a.addthis_button_facebook:active,
-  .author-social a.addthis_button_facebook:focus,
-  .author-social a.addthis_button_facebook:hover,
-  .author-social a.facebook:active,
-  .author-social a.facebook:focus,
-  .author-social a.facebook:hover {
+  .addthis_toolbox a.addthis_button_facebook:active, .addthis_toolbox a.addthis_button_facebook:focus, .addthis_toolbox a.addthis_button_facebook:hover, .addthis_toolbox a.facebook:active, .addthis_toolbox a.facebook:focus, .addthis_toolbox a.facebook:hover {
     background-color: #305891; }
-  .addthis_toolbox a.addthis_button_google_plusone_share:active, .addthis_toolbox a.addthis_button_google_plusone_share:focus, .addthis_toolbox a.addthis_button_google_plusone_share:hover, .addthis_toolbox a.google-plus:active, .addthis_toolbox a.google-plus:focus, .addthis_toolbox a.google-plus:hover,
-  .author-social a.addthis_button_google_plusone_share:active,
-  .author-social a.addthis_button_google_plusone_share:focus,
-  .author-social a.addthis_button_google_plusone_share:hover,
-  .author-social a.google-plus:active,
-  .author-social a.google-plus:focus,
-  .author-social a.google-plus:hover {
+  .addthis_toolbox a.addthis_button_google_plusone_share:active, .addthis_toolbox a.addthis_button_google_plusone_share:focus, .addthis_toolbox a.addthis_button_google_plusone_share:hover, .addthis_toolbox a.google-plus:active, .addthis_toolbox a.google-plus:focus, .addthis_toolbox a.google-plus:hover {
     background-color: #dd4B39; }
-  .addthis_toolbox a.addthis_button_linkedin:active, .addthis_toolbox a.addthis_button_linkedin:focus, .addthis_toolbox a.addthis_button_linkedin:hover, .addthis_toolbox a.linkedin:active, .addthis_toolbox a.linkedin:focus, .addthis_toolbox a.linkedin:hover,
-  .author-social a.addthis_button_linkedin:active,
-  .author-social a.addthis_button_linkedin:focus,
-  .author-social a.addthis_button_linkedin:hover,
-  .author-social a.linkedin:active,
-  .author-social a.linkedin:focus,
-  .author-social a.linkedin:hover {
+  .addthis_toolbox a.addthis_button_linkedin:active, .addthis_toolbox a.addthis_button_linkedin:focus, .addthis_toolbox a.addthis_button_linkedin:hover, .addthis_toolbox a.linkedin:active, .addthis_toolbox a.linkedin:focus, .addthis_toolbox a.linkedin:hover {
     background-color: #4498c8; }
-  .addthis_toolbox a.addthis_button_email,
-  .author-social a.addthis_button_email {
+  .addthis_toolbox a.addthis_button_email {
     font-size: 12px; }
-    .addthis_toolbox a.addthis_button_email:active, .addthis_toolbox a.addthis_button_email:focus, .addthis_toolbox a.addthis_button_email:hover,
-    .author-social a.addthis_button_email:active,
-    .author-social a.addthis_button_email:focus,
-    .author-social a.addthis_button_email:hover {
+    .addthis_toolbox a.addthis_button_email:active, .addthis_toolbox a.addthis_button_email:focus, .addthis_toolbox a.addthis_button_email:hover {
       background-color: #666; }
-  .addthis_toolbox a.addthis_button_compact:active, .addthis_toolbox a.addthis_button_compact:focus, .addthis_toolbox a.addthis_button_compact:hover,
-  .author-social a.addthis_button_compact:active,
-  .author-social a.addthis_button_compact:focus,
-  .author-social a.addthis_button_compact:hover {
+  .addthis_toolbox a.addthis_button_compact:active, .addthis_toolbox a.addthis_button_compact:focus, .addthis_toolbox a.addthis_button_compact:hover {
     background-color: #f56952; }
 
 /**
