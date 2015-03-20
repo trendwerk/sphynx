@@ -2517,14 +2517,14 @@ input#adminbar-search {
 .gallery {
   clear: both;
   float: left;
-  margin-top: 30px;
   margin-bottom: 30px;
   width: 100%; }
   .gallery .gallery-item {
-    float: left !important;
-    margin: 0 4px 4px 0 !important;
+    float: left;
+    margin: 0 4px 4px 0;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    width: auto; }
     .gallery .gallery-item img {
       display: block;
       height: auto;
