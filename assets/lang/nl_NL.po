@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 10:20+0100\n"
-"PO-Revision-Date: 2015-03-06 16:16+0100\n"
+"POT-Creation-Date: 2015-03-20 13:51+0100\n"
+"PO-Revision-Date: 2015-03-20 13:51+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -49,12 +49,12 @@ msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
 msgstr[0] "Één reactie op &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
 
-#: ../../comments.php:27 ../../assets/inc/template-tags.php:47
+#: ../../comments.php:26 ../../assets/inc/template-tags.php:47
 #: ../inc/template-tags.php:47
 msgid "Next"
 msgstr "Volgende"
 
-#: ../../comments.php:28 ../../assets/inc/template-tags.php:46
+#: ../../comments.php:27 ../../assets/inc/template-tags.php:46
 #: ../inc/template-tags.php:46
 msgid "Previous"
 msgstr "Vorige"
@@ -75,29 +75,9 @@ msgstr "Berichten van"
 msgid "News"
 msgstr "Nieuws"
 
-#: ../../index.php:40 ../../single.php:18
-msgid "Posted on"
-msgstr "Geplaatst op"
-
-#: ../../index.php:41 ../../single.php:19
-msgid "by"
-msgstr "door"
-
-#: ../../index.php:42 ../../single.php:20
-msgid "in the category"
-msgstr "in de categorie"
-
-#: ../../index.php:51 ../../search.php:32
-msgid "Read more"
-msgstr "Lees verder"
-
-#: ../../index.php:62
+#: ../../index.php:37
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
-
-#: ../../page-authors.php:3
-msgid "Authors overview"
-msgstr "Auteurs overzicht"
 
 #: ../../page-sitemap.php:25
 msgid "Pages"
@@ -107,6 +87,10 @@ msgstr "Pagina's"
 #, php-format
 msgid "Search Results for: %1$s"
 msgstr "Zoek resultaten voor:  %1$s"
+
+#: ../../search.php:32 ../../partials/loop-post.php:33
+msgid "Read more"
+msgstr "Lees verder"
 
 #: ../../search.php:44
 #, php-format
@@ -123,7 +107,19 @@ msgstr ""
 msgid "Search"
 msgstr "Zoeken"
 
-#: ../../single.php:51
+#: ../../single.php:18 ../../partials/loop-post.php:16
+msgid "Posted on"
+msgstr "Geplaatst op"
+
+#: ../../single.php:19 ../../partials/loop-post.php:17
+msgid "by"
+msgstr "door"
+
+#: ../../single.php:20 ../../partials/loop-post.php:18
+msgid "in the category"
+msgstr "in de categorie"
+
+#: ../../single.php:49
 msgid "Back to the overview"
 msgstr "Terug naar het overzicht"
 
@@ -293,30 +289,12 @@ msgid "Main navigation"
 msgstr "Hoofd navigatie"
 
 #: ../../assets/inc/class-tp-menus.php:18 ../inc/class-tp-menus.php:18
-msgid "Top navigation"
-msgstr "Top navigatie"
-
-#: ../../assets/inc/class-tp-menus.php:19 ../inc/class-tp-menus.php:19
 msgid "Footer navigation"
 msgstr "Footer navigatie"
 
-#: ../../assets/inc/class-tp-menus.php:20 ../inc/class-tp-menus.php:20
+#: ../../assets/inc/class-tp-menus.php:19 ../inc/class-tp-menus.php:19
 msgid "Sitemap"
 msgstr "Sitemap"
-
-#: ../../assets/inc/class-tp-nav.php:114 ../inc/class-tp-nav.php:114
-msgid "Search for"
-msgstr "Zoekresultaten voor"
-
-#: ../../assets/inc/class-tp-nav.php:123 ../inc/class-tp-nav.php:123
-msgid "404"
-msgstr "404"
-
-#: ../../assets/inc/class-tp-nav.php:307
-#: ../../assets/inc/class-tp-sidebars.php:33 ../inc/class-tp-nav.php:307
-#: ../inc/class-tp-sidebars.php:33
-msgid "Blog"
-msgstr "Blog"
 
 #: ../../assets/inc/class-tp-sidebars.php:25 ../inc/class-tp-sidebars.php:25
 msgid "Home"
@@ -326,54 +304,13 @@ msgstr "Home"
 msgid "Page"
 msgstr "Pagina"
 
+#: ../../assets/inc/class-tp-sidebars.php:33 ../inc/class-tp-sidebars.php:33
+msgid "Blog"
+msgstr "Blog"
+
 #: ../../assets/inc/class-tp-sidebars.php:37 ../inc/class-tp-sidebars.php:37
 msgid "Footer"
 msgstr "Footer"
-
-#: ../../assets/inc/class-tp-users.php:26 ../inc/class-tp-users.php:26
-msgid "Facebook profile URL"
-msgstr "Facebook profiel URL"
-
-#: ../../assets/inc/class-tp-users.php:27 ../inc/class-tp-users.php:27
-msgid "LinkedIn profile URL"
-msgstr "LinkedIn profiel URL"
-
-#: ../../assets/inc/class-tp-users.php:28 ../inc/class-tp-users.php:28
-msgid "Google+ profile URL"
-msgstr "Google+ profiel URL"
-
-#: ../../assets/inc/class-tp-users.php:29 ../inc/class-tp-users.php:29
-msgid "Twitter @username"
-msgstr "Twitter @gebruikersnaam"
-
-#: ../../assets/inc/class-tp-users.php:40 ../inc/class-tp-users.php:40
-msgid "Publish profile"
-msgstr "Profiel publiceren"
-
-#: ../../assets/inc/class-tp-users.php:48 ../inc/class-tp-users.php:48
-msgid "Show profile on website"
-msgstr "Profiel weergeven op de website"
-
-#: ../../assets/inc/class-tp-users.php:53 ../inc/class-tp-users.php:53
-msgid "Show my profile on the website at blogposts and author archives"
-msgstr ""
-"Geef mijn profiel weer op de website bij blogberichten en auteur archieven"
-
-#: ../../assets/inc/class-tp-users.php:61 ../inc/class-tp-users.php:61
-msgid "Profile picture"
-msgstr "Profielfoto"
-
-#: ../../assets/inc/class-tp-users.php:69 ../inc/class-tp-users.php:69
-msgid "You can change your profile picture via"
-msgstr "Je kunt je profielfoto aanpassen via"
-
-#: ../../assets/inc/class-tp-users.php:69 ../inc/class-tp-users.php:69
-msgid ""
-"by logging in or signing up for free with the email address associated with "
-"your profile"
-msgstr ""
-"door in te loggen of door je gratis aan te melden met het e-mailadres dat is "
-"gekoppeld aan je profiel"
 
 #: ../../assets/inc/widgets/class-tp-contact.php:10
 #: ../inc/widgets/class-tp-contact.php:10
@@ -502,21 +439,6 @@ msgstr "E-mail nieuwsbrief"
 msgid "Subscribe via RSS"
 msgstr "Abonneer via RSS"
 
-#: ../../assets/inc/widgets/class-tp-submenu.php:13
-#: ../inc/widgets/class-tp-submenu.php:13
-msgid "Submenu"
-msgstr "Submenu"
-
-#: ../../assets/inc/widgets/class-tp-submenu.php:14
-#: ../inc/widgets/class-tp-submenu.php:14
-msgid "Shows submenu items of current menu item or parent."
-msgstr "Geef submenu items weer van huidige (moeder) pagina."
-
-#: ../../assets/inc/widgets/class-tp-submenu.php:37
-#: ../inc/widgets/class-tp-submenu.php:37
-msgid "Menu"
-msgstr "Menu"
-
 #: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
 #: ../inc/widgets/class-tp-taxonomy-terms.php:10
 msgid "Term list"
@@ -643,22 +565,6 @@ msgstr "Bewerken"
 msgid "Remove"
 msgstr "Verwijder"
 
-#: ../../partials/author.php:32
-msgid "Written by"
-msgstr "Geschreven door"
-
-#: ../../partials/author.php:55
-#, php-format
-msgid "Follow %1$s on"
-msgstr "Volg %1$s op"
-
-#: ../../partials/author.php:104
-#, php-format
-msgid "View 1 post"
-msgid_plural "View all %1$s posts"
-msgstr[0] "Bekijk %1$s bericht"
-msgstr[1] "Bekijk alle %1$s berichten"
-
 #: ../../partials/share.php:3
 msgid "Share this article"
 msgstr "Deel dit artikel"
@@ -686,6 +592,73 @@ msgstr "Email dit artikel"
 #: ../../partials/share.php:25
 msgid "Share this on other networks"
 msgstr "Deel dit artikel via andere netwerken"
+
+#~ msgid "Authors overview"
+#~ msgstr "Auteurs overzicht"
+
+#~ msgid "Top navigation"
+#~ msgstr "Top navigatie"
+
+#~ msgid "Search for"
+#~ msgstr "Zoekresultaten voor"
+
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "Facebook profile URL"
+#~ msgstr "Facebook profiel URL"
+
+#~ msgid "LinkedIn profile URL"
+#~ msgstr "LinkedIn profiel URL"
+
+#~ msgid "Google+ profile URL"
+#~ msgstr "Google+ profiel URL"
+
+#~ msgid "Twitter @username"
+#~ msgstr "Twitter @gebruikersnaam"
+
+#~ msgid "Publish profile"
+#~ msgstr "Profiel publiceren"
+
+#~ msgid "Show profile on website"
+#~ msgstr "Profiel weergeven op de website"
+
+#~ msgid "Show my profile on the website at blogposts and author archives"
+#~ msgstr ""
+#~ "Geef mijn profiel weer op de website bij blogberichten en auteur archieven"
+
+#~ msgid "Profile picture"
+#~ msgstr "Profielfoto"
+
+#~ msgid "You can change your profile picture via"
+#~ msgstr "Je kunt je profielfoto aanpassen via"
+
+#~ msgid ""
+#~ "by logging in or signing up for free with the email address associated "
+#~ "with your profile"
+#~ msgstr ""
+#~ "door in te loggen of door je gratis aan te melden met het e-mailadres dat "
+#~ "is gekoppeld aan je profiel"
+
+#~ msgid "Submenu"
+#~ msgstr "Submenu"
+
+#~ msgid "Shows submenu items of current menu item or parent."
+#~ msgstr "Geef submenu items weer van huidige (moeder) pagina."
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "Written by"
+#~ msgstr "Geschreven door"
+
+#~ msgid "Follow %1$s on"
+#~ msgstr "Volg %1$s op"
+
+#~ msgid "View 1 post"
+#~ msgid_plural "View all %1$s posts"
+#~ msgstr[0] "Bekijk %1$s bericht"
+#~ msgstr[1] "Bekijk alle %1$s berichten"
 
 #~ msgid "Facebook like box"
 #~ msgstr "Facebook like box"

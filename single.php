@@ -44,8 +44,6 @@ get_header();
 					<?php the_tags( '<span class="label">Tags</span> ', '' ); ?>
 				</p>
 
-				<?php get_template_part( 'partials/author' ); ?>
-
 				<p>
 					<a class="back" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
 						<?php _e( 'Back to the overview', 'tp' ); ?>
