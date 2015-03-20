@@ -19,7 +19,7 @@
 							wp_nav_menu( array(
 								'depth'          => 1,
 								'fallback_cb'    => null,
-								'theme_location' => 'footernav',
+								'theme_location' => 'footer',
 							) );
 						?>
 					</nav>

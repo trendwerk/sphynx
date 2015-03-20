@@ -330,79 +330,10 @@ p.tags {
 
 /**
  * @section    Parts
- * @subsection Author
- */
-
-.author-card {
-	box-sizing: border-box;
-	background: #EEE;
-	clear: both;
-	float: left;
-	margin: 0 0 $line-height 0;
-	padding: 30px;
-	width: 100%;
-
-	.author-avatar {
-		float: left;
-		margin: 0;
-
-		img {
-			border-radius: 999px;
-		}
-
-	}
-
-	.author-info {
-		padding-left: 100px;
-
-		.author-writtenby {
-			color: shade-light($text-color, 5%);
-			font-size: 13px;
-		}
-
-		.author-bio {
-			font-size: 13px;
-		}
-
-		.author-social {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-
-			li {
-				display: inline;
-
-				.label {
-					color: shade-light($text-color, 5%);
-					display: inline-block;
-					font-size: 14px;
-					float: left;
-					margin-top: -1px;
-					margin-right: 10px;
-				}
-
-			}
-
-		}
-
-		a.more-link {
-			float: right;
-			font-size: 14px;
-			margin: 0 10px 0 0;
-		}	
-
-	}
-
-}
-
-/**
- * @section    Parts
  * @subsection AddThis
- * @subsection Author
  */
 
-.addthis_toolbox,
-.author-social {
+.addthis_toolbox {
 
 	a {
 		background-color: #999;

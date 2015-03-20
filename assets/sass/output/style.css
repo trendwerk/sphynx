@@ -96,7 +96,7 @@
  * @section    Extends
  * @subsection Ellipsis
  */
-.ellipsis, #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span label {
+.ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -3369,53 +3369,9 @@ p.tags {
 
 /**
  * @section    Parts
- * @subsection Author
- */
-.author-card {
-  box-sizing: border-box;
-  background: #EEE;
-  clear: both;
-  float: left;
-  margin: 0 0 30px 0;
-  padding: 30px;
-  width: 100%; }
-  .author-card .author-avatar {
-    float: left;
-    margin: 0; }
-    .author-card .author-avatar img {
-      border-radius: 999px; }
-  .author-card .author-info {
-    padding-left: 100px; }
-    .author-card .author-info .author-writtenby {
-      color: shade-light(#666, 5%);
-      font-size: 13px; }
-    .author-card .author-info .author-bio {
-      font-size: 13px; }
-    .author-card .author-info .author-social {
-      list-style-type: none;
-      margin: 0;
-      padding: 0; }
-      .author-card .author-info .author-social li {
-        display: inline; }
-        .author-card .author-info .author-social li .label {
-          color: shade-light(#666, 5%);
-          display: inline-block;
-          font-size: 14px;
-          float: left;
-          margin-top: -1px;
-          margin-right: 10px; }
-    .author-card .author-info a.more-link {
-      float: right;
-      font-size: 14px;
-      margin: 0 10px 0 0; }
-
-/**
- * @section    Parts
  * @subsection AddThis
- * @subsection Author
  */
-.addthis_toolbox a,
-.author-social a {
+.addthis_toolbox a {
   background-color: #999;
   border-radius: 999px;
   color: #FFF;
@@ -3429,54 +3385,21 @@ p.tags {
   text-align: center;
   text-decoration: none;
   width: 30px; }
-  .addthis_toolbox a:active, .addthis_toolbox a:focus,
-  .author-social a:active,
-  .author-social a:focus {
+  .addthis_toolbox a:active, .addthis_toolbox a:focus {
     top: 1px; }
-  .addthis_toolbox a.addthis_button_twitter:active, .addthis_toolbox a.addthis_button_twitter:focus, .addthis_toolbox a.addthis_button_twitter:hover, .addthis_toolbox a.twitter:active, .addthis_toolbox a.twitter:focus, .addthis_toolbox a.twitter:hover,
-  .author-social a.addthis_button_twitter:active,
-  .author-social a.addthis_button_twitter:focus,
-  .author-social a.addthis_button_twitter:hover,
-  .author-social a.twitter:active,
-  .author-social a.twitter:focus,
-  .author-social a.twitter:hover {
+  .addthis_toolbox a.addthis_button_twitter:active, .addthis_toolbox a.addthis_button_twitter:focus, .addthis_toolbox a.addthis_button_twitter:hover, .addthis_toolbox a.twitter:active, .addthis_toolbox a.twitter:focus, .addthis_toolbox a.twitter:hover {
     background-color: #55ACEE; }
-  .addthis_toolbox a.addthis_button_facebook:active, .addthis_toolbox a.addthis_button_facebook:focus, .addthis_toolbox a.addthis_button_facebook:hover, .addthis_toolbox a.facebook:active, .addthis_toolbox a.facebook:focus, .addthis_toolbox a.facebook:hover,
-  .author-social a.addthis_button_facebook:active,
-  .author-social a.addthis_button_facebook:focus,
-  .author-social a.addthis_button_facebook:hover,
-  .author-social a.facebook:active,
-  .author-social a.facebook:focus,
-  .author-social a.facebook:hover {
+  .addthis_toolbox a.addthis_button_facebook:active, .addthis_toolbox a.addthis_button_facebook:focus, .addthis_toolbox a.addthis_button_facebook:hover, .addthis_toolbox a.facebook:active, .addthis_toolbox a.facebook:focus, .addthis_toolbox a.facebook:hover {
     background-color: #305891; }
-  .addthis_toolbox a.addthis_button_google_plusone_share:active, .addthis_toolbox a.addthis_button_google_plusone_share:focus, .addthis_toolbox a.addthis_button_google_plusone_share:hover, .addthis_toolbox a.google-plus:active, .addthis_toolbox a.google-plus:focus, .addthis_toolbox a.google-plus:hover,
-  .author-social a.addthis_button_google_plusone_share:active,
-  .author-social a.addthis_button_google_plusone_share:focus,
-  .author-social a.addthis_button_google_plusone_share:hover,
-  .author-social a.google-plus:active,
-  .author-social a.google-plus:focus,
-  .author-social a.google-plus:hover {
+  .addthis_toolbox a.addthis_button_google_plusone_share:active, .addthis_toolbox a.addthis_button_google_plusone_share:focus, .addthis_toolbox a.addthis_button_google_plusone_share:hover, .addthis_toolbox a.google-plus:active, .addthis_toolbox a.google-plus:focus, .addthis_toolbox a.google-plus:hover {
     background-color: #dd4B39; }
-  .addthis_toolbox a.addthis_button_linkedin:active, .addthis_toolbox a.addthis_button_linkedin:focus, .addthis_toolbox a.addthis_button_linkedin:hover, .addthis_toolbox a.linkedin:active, .addthis_toolbox a.linkedin:focus, .addthis_toolbox a.linkedin:hover,
-  .author-social a.addthis_button_linkedin:active,
-  .author-social a.addthis_button_linkedin:focus,
-  .author-social a.addthis_button_linkedin:hover,
-  .author-social a.linkedin:active,
-  .author-social a.linkedin:focus,
-  .author-social a.linkedin:hover {
+  .addthis_toolbox a.addthis_button_linkedin:active, .addthis_toolbox a.addthis_button_linkedin:focus, .addthis_toolbox a.addthis_button_linkedin:hover, .addthis_toolbox a.linkedin:active, .addthis_toolbox a.linkedin:focus, .addthis_toolbox a.linkedin:hover {
     background-color: #4498c8; }
-  .addthis_toolbox a.addthis_button_email,
-  .author-social a.addthis_button_email {
+  .addthis_toolbox a.addthis_button_email {
     font-size: 12px; }
-    .addthis_toolbox a.addthis_button_email:active, .addthis_toolbox a.addthis_button_email:focus, .addthis_toolbox a.addthis_button_email:hover,
-    .author-social a.addthis_button_email:active,
-    .author-social a.addthis_button_email:focus,
-    .author-social a.addthis_button_email:hover {
+    .addthis_toolbox a.addthis_button_email:active, .addthis_toolbox a.addthis_button_email:focus, .addthis_toolbox a.addthis_button_email:hover {
       background-color: #666; }
-  .addthis_toolbox a.addthis_button_compact:active, .addthis_toolbox a.addthis_button_compact:focus, .addthis_toolbox a.addthis_button_compact:hover,
-  .author-social a.addthis_button_compact:active,
-  .author-social a.addthis_button_compact:focus,
-  .author-social a.addthis_button_compact:hover {
+  .addthis_toolbox a.addthis_button_compact:active, .addthis_toolbox a.addthis_button_compact:focus, .addthis_toolbox a.addthis_button_compact:hover {
     background-color: #f56952; }
 
 /**
@@ -4012,260 +3935,5 @@ p.tags {
     margin-bottom: 10px;
     line-height: 30px;
     width: 100%; } }
-/**
- * @section Plugins
- *
- * Defines the default plugin specific styling
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
-/**
- * @section    Plugins
- * @subsection Gravity Forms
- */
-.gform_wrapper .validation_error {
-  background: #C44741;
-  border-radius: 3px;
-  box-sizing: border-box;
-  clear: both;
-  color: #FFF;
-  display: block;
-  float: left;
-  margin-bottom: 30px;
-  padding: 10px 23px; }
-  .gform_wrapper .validation_error:before {
-    content: "\f071";
-    display: inline-block;
-    font-family: fontawesome;
-    padding-right: 10px; }
-  .gform_wrapper .validation_error:after {
-    content: "."; }
-.gform_wrapper .validation_message.gfield_description {
-  background-color: #C44741;
-  border-radius: 3px;
-  clear: both;
-  color: #FFF;
-  float: left;
-  padding: 5px 15px 3px 15px;
-  position: relative;
-  width: auto !important; }
-  .gform_wrapper .validation_message.gfield_description:before {
-    border: solid transparent;
-    border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: #C44741;
-    border-width: 7px;
-    bottom: 100%;
-    content: " ";
-    left: 50%;
-    margin-left: -7px;
-    pointer-events: none;
-    position: absolute;
-    height: 0;
-    width: 0; }
-.gform_wrapper .gfield_required {
-  display: inline-block;
-  padding-left: 5px; }
-.gform_wrapper li.gfield_error label {
-  color: #C44741; }
-
-#content .gform_wrapper {
-  clear: both;
-  float: left;
-  margin-bottom: 30px;
-  width: 100%; }
-  #content .gform_wrapper .gform_heading,
-  #content .gform_wrapper .gform_footer {
-    clear: both;
-    margin-bottom: 15px;
-    width: 100%; }
-  #content .gform_wrapper .gform_body .gform_fields {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    #content .gform_wrapper .gform_body .gform_fields .gfield {
-      float: left;
-      margin-bottom: 20px;
-      width: 100%; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_label {
-        color: #333;
-        float: left;
-        font-size: 14px;
-        font-weight: bold;
-        margin-top: 8px;
-        width: 35%; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_description,
-      #content .gform_wrapper .gform_body .gform_fields .gfield .instruction {
-        font-size: 13px;
-        margin: 14px 0 0 35%;
-        width: 50%; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .medium,
-      #content .gform_wrapper .gform_body .gform_fields .gfield .small,
-      #content .gform_wrapper .gform_body .gform_fields .gfield .large {
-        font-size: 13px; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .small {
-        width: 25%; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .medium {
-        width: 40%; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .large {
-        width: 55%; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_select {
-        float: left; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox,
-      #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio {
-        float: left;
-        font-size: 13px;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 65%; }
-        #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox label,
-        #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio label {
-          position: relative;
-          top: 2px; }
-        #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox input[type="text"],
-        #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox label,
-        #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio input[type="text"],
-        #content .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio label {
-          margin-left: 10px; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi {
-        float: left;
-        width: 65%; }
-        #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_minute,
-        #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_ampm,
-        #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_hour {
-          clear: both;
-          position: relative; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_minute input[type="text"],
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_minute select,
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_ampm input[type="text"],
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_ampm select,
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_hour input[type="text"],
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_hour select {
-            float: left;
-            margin-bottom: 20px;
-            width: 61.6%; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_minute select,
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_ampm select,
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_hour select {
-            margin-bottom: 0; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_minute label,
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_ampm label,
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_hour label {
-            box-sizing: border-box;
-            float: left;
-            padding: 7px 0 0 10px;
-            width: 38.4%; }
-        #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_hour {
-          text-indent: -999999px; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .clear-multi .gfield_time_hour label {
-            text-indent: 0; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list {
-        float: left;
-        width: 65%; }
-        #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table {
-          margin-bottom: 0; }
-        #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list .gfield_list {
-          border: none;
-          padding: 0; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list .gfield_list tr,
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list .gfield_list th,
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list .gfield_list td {
-            border: none;
-            padding: 0; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list .gfield_list tr {
-            position: relative;
-            width: 100%; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list .gfield_list td.gfield_list_cell {
-            width: 100%; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list .gfield_list td.gfield_list_icons {
-            position: absolute;
-            left: 69%;
-            margin-top: 11px;
-            width: 40px; }
-            #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list .gfield_list td.gfield_list_icons img {
-              float: right;
-              width: auto; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_list .gfield_list input[type="text"] {
-            margin-bottom: 20px;
-            width: 61.6%; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .gform_drop_area {
-        margin-bottom: 30px; }
-        #content .gform_wrapper .gform_body .gform_fields .gfield .gform_drop_area .gform_drop_instructions {
-          float: left;
-          font-size: 13px;
-          margin-top: 8px;
-          margin-right: 20px; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_preview {
-        margin-left: 35%;
-        margin-bottom: 10px; }
-        #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_preview .gform_delete {
-          cursor: pointer;
-          float: left;
-          margin-top: 6px;
-          margin-right: 10px; }
-      #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex {
-        float: left;
-        width: 65%; }
-        #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span {
-          clear: both;
-          float: left;
-          font-size: 13px;
-          margin-bottom: 20px;
-          width: 100%; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span:last-of-type {
-            margin-bottom: 0; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span label {
-            box-sizing: border-box;
-            float: left;
-            padding: 7px 0 0 10px;
-            width: 38.4%; }
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span input[type="text"],
-          #content .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex span select {
-            float: left;
-            width: 61.6%; }
-    #content .gform_wrapper .gform_body .gform_fields .gform_validation_container {
-      display: none; }
-  #content .gform_wrapper .gform_footer {
-    clear: both; }
-    #content .gform_wrapper .gform_footer .gform_button {
-      margin: 0 0 0 35%; }
-
-/**
- * @section    Plugins
- * @subsection Gravity Forms widget
- */
-.gform_widget form ul {
-  border-bottom: none;
-  display: block;
-  float: left;
-  width: 100%; }
-  .gform_widget form ul li {
-    border: none;
-    display: block;
-    padding: 0;
-    width: 100%; }
-    .gform_widget form ul li label {
-      clear: both;
-      float: left;
-      padding: 5px 0; }
-.gform_widget form .medium,
-.gform_widget form .large,
-.gform_widget form .small {
-  width: 100%; }
-
-/**
- * @section    Plugins
- * @subsection Submenu widget
- */
-.widget_tp_submenu ul li.current_page_ancestor > ul, .widget_tp_submenu ul li.current-menu-item > ul {
-  border-bottom: none;
-  display: block;
-  font-size: 12px; }
-.widget_tp_submenu ul li.current-menu-item > a {
-  font-weight: 700; }
 
 /*# sourceMappingURL=style.css.map */
