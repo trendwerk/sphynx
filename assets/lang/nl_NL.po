@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-20 13:51+0100\n"
-"PO-Revision-Date: 2015-03-20 13:51+0100\n"
+"PO-Revision-Date: 2015-03-20 14:01+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -286,7 +286,7 @@ msgstr "Lees meer link"
 
 #: ../../assets/inc/class-tp-menus.php:17 ../inc/class-tp-menus.php:17
 msgid "Main navigation"
-msgstr "Hoofd navigatie"
+msgstr "Hoofdnavigatie"
 
 #: ../../assets/inc/class-tp-menus.php:18 ../inc/class-tp-menus.php:18
 msgid "Footer navigation"

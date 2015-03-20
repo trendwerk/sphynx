@@ -14,8 +14,8 @@ class TP_Menus {
 	 * Register menu's
 	 */
 	function register() {
-		register_nav_menu( 'mainnav', __( 'Main navigation', 'tp' ) );
-		register_nav_menu( 'footernav', __( 'Footer navigation', 'tp' ) );
+		register_nav_menu( 'main', __( 'Main navigation', 'tp' ) );
+		register_nav_menu( 'footer', __( 'Footer', 'tp' ) );
 		register_nav_menu( 'sitemap', __( 'Sitemap', 'tp' ) );
 	}
 } new TP_Menus;

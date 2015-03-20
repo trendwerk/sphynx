@@ -69,7 +69,7 @@
 
 				<?php 
 					wp_nav_menu( array(
-						'theme_location' => 'mainnav',
+						'theme_location' => 'main',
 					) );
 				?>
 
