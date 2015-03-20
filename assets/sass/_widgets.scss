@@ -173,10 +173,8 @@
 					line-height: 32px;
 				}
 
-				&:hover {
-					span {
-						text-decoration: underline;
-					}
+				&:hover span {
+					text-decoration: underline;
 				} 
 			}
 			

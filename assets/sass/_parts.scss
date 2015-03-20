@@ -121,73 +121,71 @@ p.tags {
 			}
 		}
 
-		li.comment {
-			.comment-body {
-				box-sizing: border-box;
-				background-color: $light-background;
+		.comment-body {
+			box-sizing: border-box;
+			background-color: $light-background;
+			clear: both;
+			float: left;
+			position: relative;
+			padding: 30px 30px 50px 30px;
+			width: 100%;
+
+			.comment-meta {
 				clear: both;
 				float: left;
-				position: relative;
-				padding: 30px 30px 50px 30px;
 				width: 100%;
 
-				.comment-meta {
-					clear: both;
+				.comment-author {
 					float: left;
-					width: 100%;
-
-					.comment-author {
-						float: left;
-
-						img {
-							border-radius: 999px;
-							float: left;
-							margin-right: 20px;
-						}
-					}
-
-					.comment-metadata {
-						bottom: 30px;
-						color: $text-light;
-						font-size: 12px;
-						position: absolute;
-						left: 30px;
-
-						a {
-							font-weight: 700;
-						}
-					}
-
-					.comment-awaiting-moderation {
-						float: right;
-						font-style: italic;
-					}
 				}
 
-				.comment-content {
-					box-sizing: border-box;
+				img {
+					border-radius: 999px;
 					float: left;
-					margin-top: -20px;
-					padding-left: 80px;
-					width: 100%;
+					margin-right: 20px;
 				}
 
-				.reply {
+				.comment-metadata {
 					bottom: 30px;
+					color: $text-light;
 					font-size: 12px;
 					position: absolute;
-					right: 30px;
+					left: 30px;
 
 					a {
-						@include font-awesome( before, "\f112  " );
 						font-weight: 700;
 					}
 				}
+
+				.comment-awaiting-moderation {
+					float: right;
+					font-style: italic;
+				}
 			}
 
-			&.bypostauthor .comment-body {
-				background-color: darken($light-background, 5%);
+			.comment-content {
+				box-sizing: border-box;
+				float: left;
+				margin-top: -20px;
+				padding-left: 80px;
+				width: 100%;
 			}
+
+			.reply {
+				bottom: 30px;
+				font-size: 12px;
+				position: absolute;
+				right: 30px;
+
+				a {
+					@include font-awesome( before, "\f112  " );
+					font-weight: 700;
+				}
+			}
+		}
+
+		&.bypostauthor .comment-body {
+			background-color: darken($light-background, 5%);
 		}
 	}
 }
