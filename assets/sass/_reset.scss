@@ -240,7 +240,6 @@ button {
 	&:hover {
 		text-decoration: none;
 	}
-
 }
 
 input[type="submit"]::-moz-focus-inner,
@@ -354,7 +353,6 @@ select[size="1"] {
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
-
 	select[multiple][size],
 	select[multiple],
 	select[size] {
@@ -391,5 +389,4 @@ select[size="1"] {
 		background: #666;
 		border-color: #666;
 	}
-
 }

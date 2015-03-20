@@ -16,11 +16,9 @@
  */
 
 @media (min-width: 1200px) {
-
 	.widget_search input[type="text"] {
 		width: 248px;
 	}
-
 }
 
 /**
@@ -29,9 +27,7 @@
  */
 
 @media (max-width: 980px) {
-
 	#header {
-
 		#topnav,
 		#search,
 		#logo {
@@ -48,7 +44,6 @@
 		#search { 
 			margin-top: 20px;
 		}
-
 	}
 
 	#main {
@@ -76,37 +71,28 @@
 				&:nth-child(even) {
 					margin-left: 2%;
 				}
-
 			}
-		
 		}
-
 	}
 
 	#footer {
-
 		aside {
-
 			.widget {
 				clear: none;
 				margin-bottom: 30px;
 				width: 48%;
 
-					&:nth-child(odd) {
-						clear: left;
-						margin-right: 2%;
-					}
+				&:nth-child(odd) {
+					clear: left;
+					margin-right: 2%;
+				}
 
-					&:nth-child(even) {
-						margin-left: 2%;
-					}
-
+				&:nth-child(even) {
+					margin-left: 2%;
+				}
 			}
-
 		}
-
 	}
-
 }
 
 /**
@@ -115,7 +101,6 @@
  */
 
  @media (max-width: 640px) {
-
 	h1 {
 		font-size: 24px;
 	}
@@ -177,9 +162,7 @@
 				&:hover {
 					background-color: $primary-color;
 				}
-
 			}
-
 		}
 
 		// top navigation
@@ -203,7 +186,6 @@
 				width: 100%;
 
 				fieldset { 
-
 					input[type="text"] { 
 						box-sizing: border-box;
 						font-size: 16px;
@@ -215,21 +197,15 @@
 						margin-top: 2px;
 						font-size: 18px;
 					}
-
 				}
-					
 			}
-		
 		}
-
 	}
 
 	.logged-in #header {
-
 		#mobile {
 			top: 76px;
 		}
-
 	}
 
 	// main navigation
@@ -240,9 +216,7 @@
 		padding: 10px 0;
 
 		ul.menu {
-
 			li {
-
 				// if item has children, hide indicator
 
 				&.page_item_has_children > a:after,
@@ -262,7 +236,6 @@
 				&:hover {
 					background-color: transparent;
 				}
-
 			}
 
 			// first level only
@@ -303,7 +276,6 @@
 						&:before {
 							content: "- ";
 						}
-
 					}
 
 					/* third level */
@@ -317,15 +289,10 @@
 						a {
 							font-size: 12px;
 						}
-
-					}				
-
+					}
 				}
-
-			}	
-
-		}	
-
+			}
+		}
 	}
 
 	#main {
@@ -334,7 +301,6 @@
 		padding: 30px 0;
 
 		aside {
-			
 			.widget {
 				margin: 0 0 20px 0;
 				width: 100%;
@@ -346,72 +312,18 @@
 				&:nth-child(even) {
 					margin-left: 0;
 				}
-
 			}
-
 		}
 
 		#content {
-
 			h1 {
 				margin-bottom: $line-height;
 			}
-		
-			.gform_wrapper form {
-
-				.gform_body .gform_fields .gfield {
-					margin-bottom: 20px;
-
-					.gfield_description,
-					.instruction {
-						margin-left: 0;
-						width: 100%;
-					}
-
-					.gfield_label {
-						clear: both;
-						float: left;
-						margin-bottom: 10px;
-						width: 100%;
-					}
-
-					.ginput_complex,
-					.clear-multi,
-					.ginput_list,
-					.medium,
-					.large,
-					.small {
-						width: 100%;
-					}
-
-					.ginput_list .gfield_list td.gfield_list_icons{
-						left: 52%;
-					}
-
-				}	
-
-				.ginput_preview {
-					margin-left: 0;
-				}
-
-				.gform_footer {
-					
-					.gform_button {
-						margin: 0;
-					}
-
-				}
-
-			}
-
 		}
-
 	}
 
 	#footer {
-
 		aside {
-			
 			.widget {
 				margin: 0 0 20px 0;
 				width: 100%;
@@ -423,9 +335,7 @@
 				&:nth-child(even) { 
 					margin-left: 0;
 				}
-
 			}
-
 		}
 
 		#credits {
@@ -443,15 +353,11 @@
 				ul li a {
 					float: none;
 				}
-
 			}
-
 		}
-
 	}
 
 	.home {
- 
 		#main {
 			border-top: 0;
 		}
@@ -467,17 +373,13 @@
 			h2 {
 				font-size: 20px;
 			}
-
 		}
-
 	}
 
 	.page {
-
 		#content {
 			padding-left: 0;
 		}
-
 	}
 
 	#main #content .addthis_toolbox span,
@@ -486,7 +388,6 @@
 		padding-right: 15px;
 		width: auto;
 	}
-
 }
 
 /**
@@ -495,45 +396,6 @@
  */
 
 @media(max-width: 440px) {
-
-	#content .gform_wrapper form .gform_body .gform_fields .gfield {
-
-		.ginput_complex,
-		.clear-multi,
-		.ginput_list {
-			width: 100%;
-
-			input[type="text"],
-			select {
-				width: 100% !important;
-			}
-
-			label {
-				padding-left: 0 !important;
-				width: 100%;
-			}
-
-		}
-		
-		.ginput_list .gfield_list td.gfield_list_icons{
-			left: auto !important;
-			right: 20px;
-		}
-
-		.clear-multi {
-
-			input {
-				margin-bottom: 0 !important;
-			}
-
-			label {
-				margin-bottom: 10px !important;
-			}
-
-		}
-
-	}
-
 	#main #content .addthis_toolbox span,
 	#main #content .tags .label {
 		display: block;
@@ -542,5 +404,4 @@
 		line-height: 30px;
 		width: 100%;
 	}
-
 }

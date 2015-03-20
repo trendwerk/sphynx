@@ -101,7 +101,6 @@ p.tags {
 			&.parent {
 				margin-bottom: 0;
 			}
-
 		}
 
 		ul.children {
@@ -120,11 +119,9 @@ p.tags {
 			li:last-of-type {
 				margin-bottom: $line-height;
 			}
-
 		}
 
 		li.comment {
-
 			.comment-body {
 				box-sizing: border-box;
 				background-color: $light-background;
@@ -147,7 +144,6 @@ p.tags {
 							float: left;
 							margin-right: 20px;
 						}
-
 					}
 
 					.comment-metadata {
@@ -160,14 +156,12 @@ p.tags {
 						a {
 							font-weight: 700;
 						}
-
 					}
 
 					.comment-awaiting-moderation {
 						float: right;
 						font-style: italic;
 					}
-
 				}
 
 				.comment-content {
@@ -188,19 +182,14 @@ p.tags {
 						@include font-awesome( before, "\f112  " );
 						font-weight: 700;
 					}
-
 				}
-
 			}
 
 			&.bypostauthor .comment-body {
 				background-color: darken($light-background, 5%);
 			}
-
 		}
-
 	}
-
 }
 
 /**
@@ -232,14 +221,13 @@ p.tags {
 
 	a {
 		text-decoration: none;
-	
+
 		&:active,
 		&:focus,
 		&:hover {
 			background: darken($light-background, 10%);
 			border-color: darken($light-background, 10%);
 		}
-	
 	}
 
 	.page-numbers {
@@ -249,7 +237,6 @@ p.tags {
 		&.dots {
 			background-color: #FFF;
 		}
-
 	}
 
 	.prev,
@@ -257,7 +244,6 @@ p.tags {
 		padding: 0 15px;
 		width: auto;
 	}
-
 }
 
 /**
@@ -266,7 +252,6 @@ p.tags {
  */
 
 .search {
-
 	form {
 		width: 230px;
 
@@ -301,13 +286,9 @@ p.tags {
 				&:hover {
 					color: $text-color;
 				}
-
 			}
-
 		}
-
 	}
-
 }
 
 /**
@@ -316,13 +297,11 @@ p.tags {
  */
 
 .addthis_toolbox {
-
 	span {
 		float: left;
 		font-size: 13px;
 		width: 156px;
 	}
-
 }
 
 /**
@@ -331,7 +310,6 @@ p.tags {
  */
 
 .addthis_toolbox {
-
 	a {
 		background-color: #999;
 		border-radius: 999px;
@@ -347,7 +325,6 @@ p.tags {
 		text-decoration: none;
 		width: 30px;
 
-
 		&:active,
 		&:focus {
 			top: 1px;
@@ -355,46 +332,38 @@ p.tags {
 
 		&.addthis_button_twitter,
 		&.twitter {
-
 			&:active,
 			&:focus,
 			&:hover {
 				background-color: #55ACEE;
 			}
-
 		}
 
 		&.addthis_button_facebook,
 		&.facebook {
-
 			&:active,
 			&:focus,
 			&:hover {
 				background-color: #305891;
 			}
-
 		}
 
 		&.addthis_button_google_plusone_share,
 		&.google-plus {
-
 			&:active,
 			&:focus,
 			&:hover {
 				background-color: #dd4B39;
 			}
-
 		}
 
 		&.addthis_button_linkedin,
 		&.linkedin {
-
 			&:active,
 			&:focus,
 			&:hover {
 				background-color: #4498c8;
 			}
-			
 		}
 
 		&.addthis_button_email {
@@ -405,19 +374,14 @@ p.tags {
 			&:hover {
 				background-color: #666;
 			}
-
 		}
 
 		&.addthis_button_compact {
-
 			&:active,
 			&:focus,
 			&:hover {
 				background-color: #f56952;
 			}
-
 		}
-
 	}
-
 }

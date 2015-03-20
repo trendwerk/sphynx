@@ -3845,30 +3845,6 @@ p.tags {
         margin-left: 0; }
     #main #content h1 {
       margin-bottom: 30px; }
-    #main #content .gform_wrapper form .gform_body .gform_fields .gfield {
-      margin-bottom: 20px; }
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .gfield_description,
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .instruction {
-        margin-left: 0;
-        width: 100%; }
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .gfield_label {
-        clear: both;
-        float: left;
-        margin-bottom: 10px;
-        width: 100%; }
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_complex,
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi,
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_list,
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .medium,
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .large,
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .small {
-        width: 100%; }
-      #main #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_list .gfield_list td.gfield_list_icons {
-        left: 52%; }
-    #main #content .gform_wrapper form .ginput_preview {
-      margin-left: 0; }
-    #main #content .gform_wrapper form .gform_footer .gform_button {
-      margin: 0; }
 
   #footer aside .widget {
     margin: 0 0 20px 0;
@@ -3913,30 +3889,6 @@ p.tags {
  * @subsection Small mobile
  */
 @media (max-width: 440px) {
-  #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_complex,
-  #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi,
-  #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_list {
-    width: 100%; }
-    #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_complex input[type="text"],
-    #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_complex select,
-    #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi input[type="text"],
-    #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi select,
-    #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_list input[type="text"],
-    #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_list select {
-      width: 100% !important; }
-    #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_complex label,
-    #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi label,
-    #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_list label {
-      padding-left: 0 !important;
-      width: 100%; }
-  #content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_list .gfield_list td.gfield_list_icons {
-    left: auto !important;
-    right: 20px; }
-  #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi input {
-    margin-bottom: 0 !important; }
-  #content .gform_wrapper form .gform_body .gform_fields .gfield .clear-multi label {
-    margin-bottom: 10px !important; }
-
   #main #content .addthis_toolbox span,
   #main #content .tags .label {
     display: block;
