@@ -3636,7 +3636,6 @@ p.tags {
  * @subsection Tablets
  */
 @media (max-width: 980px) {
-  #header #topnav,
   #header #search,
   #header #logo {
     clear: none;
@@ -3726,8 +3725,6 @@ p.tags {
         #header #mobile #mobile-search.active,
         #header #mobile #mobile-search:hover {
           background-color: #333; }
-    #header #topnav {
-      display: none; }
     #header #search {
       background: #333;
       box-sizing: border-box;
