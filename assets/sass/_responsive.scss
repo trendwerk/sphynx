@@ -361,27 +361,4 @@
 			padding-left: 0;
 		}
 	}
-
-	#main #content .addthis_toolbox span,
-	#main #content .tags .label {
-		display: inline-block;
-		padding-right: 15px;
-		width: auto;
-	}
-}
-
-/**
- * @section    Responsive
- * @subsection Small mobile
- */
-
-@media(max-width: 440px) {
-	#main #content .addthis_toolbox span,
-	#main #content .tags .label {
-		display: block;
-		line-height: inherit;
-		margin-bottom: 10px;
-		line-height: 30px;
-		width: 100%;
-	}
 }

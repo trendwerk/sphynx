@@ -295,6 +295,22 @@ body {
 				position: relative;
 				top: 1px;
 			}
+
+			.label {
+				@media (max-width: 640px) {
+					display: inline-block;
+					padding-right: 15px;
+					width: auto;
+				}
+
+				@media(max-width: 440px) {
+					display: block;
+					line-height: inherit;
+					margin-bottom: 10px;
+					line-height: 30px;
+					width: 100%;
+				}
+			}
 		}
 	}
 
