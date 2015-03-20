@@ -18,7 +18,7 @@
  * @subsection  Animate 
  */
 
-@mixin animate-this ( $what: all, $time: 0.5s, $ease: ease-in-out ) {
+@mixin animate-this( $what: all, $time: 0.5s, $ease: ease-in-out ) {
 	-webkit-transition: $what $time $ease;
 	transition: $what $time $ease;
 }
@@ -49,7 +49,6 @@
 	position: relative;
 
 	@if $position == before {
-
 		&:before {
 			content: $glyph;
 			font-family: FontAwesome;
@@ -59,7 +58,6 @@
 		}
 
 	} @else if $position == after {
-
 		&:after {
 			content: $glyph;
 			font-family: FontAwesome;
@@ -67,9 +65,7 @@
 			font-weight: normal;
 			text-decoration: inherit;
 		}
-
 	}
-
 }
 
 /**
@@ -94,7 +90,6 @@
 		background-image: -ms-linear-gradient(top, $startColor, $endColor);
 		background-image: -o-linear-gradient(top, $startColor, $endColor);
     }
-
 }
 
 /**
@@ -103,39 +98,38 @@
  */
 
 @mixin placeholder( $out, $on ) {
-	
+
 	&:-moz-placeholder {
-		color: $out; 
+		color: $out;
 	}
 
 	&::-moz-placeholder {
-		color: $out; 
+		color: $out;
 	}
 
 	&:-ms-input-placeholder {
-		color: $out; 
+		color: $out;
 	}
 
 	&::-webkit-input-placeholder {
-		color: $out; 
+		color: $out;
 	}
 	
-		&:focus:-moz-placeholder {
-			color: $on; 
-		}
+	&:focus:-moz-placeholder {
+		color: $on;
+	}
 
-		&:focus::-moz-placeholder {
-			color: $on;
-		}
+	&:focus::-moz-placeholder {
+		color: $on;
+	}
 
-		&:focus:-ms-input-placeholder {
-			color: $on; 
-		}
+	&:focus:-ms-input-placeholder {
+		color: $on;
+	}
 
-		&:focus::-webkit-input-placeholder {
-			color: $on; 
-		}
-
+	&:focus::-webkit-input-placeholder {
+		color: $on;
+	}
 }
 
 /**
@@ -155,5 +149,4 @@
 		background-position: $top x 2 $left x 2;
 		background-size: 500px 500px;
 	}
-	
 }

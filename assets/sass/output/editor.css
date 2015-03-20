@@ -2186,6 +2186,15 @@ ins {
 
 /**
  * @section    Typography
+ * @subsection Selection 
+ */
+::-moz-selection,
+::selection {
+  background-color: #333;
+  color: #FFF; }
+
+/**
+ * @section    Typography
  * @subsection Misc
  */
 hr {

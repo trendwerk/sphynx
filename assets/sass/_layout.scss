@@ -44,7 +44,6 @@ body {
 				color: $heading-color;
 				text-decoration: none;
 			}
-
 		}
 
 		#description {
@@ -52,7 +51,6 @@ body {
 			font: normal 14px/25px $text-font;
 			margin: 0;
 		}
-
 	}
 
 	// mobile navigation and search buttons
@@ -70,9 +68,7 @@ body {
 		form {
 			float: right;
 		}
-		
 	}
-
 }
 
 // main navigation
@@ -95,11 +91,9 @@ body {
 			&:active,
 			&:focus,
 			&:hover {
-
 				> ul {
 					display: block;
 				}
-
 			}
 
 			// if item has children, show indicator
@@ -118,7 +112,6 @@ body {
 					padding-left: 5px;
 					padding-right: 5px;
 				}
-
 			}
 
 			&.current-menu-item,
@@ -129,8 +122,7 @@ body {
 
 			a {
 				text-decoration: none;
-			}	
-
+			}
 		}
 
 		// first level only
@@ -157,7 +149,6 @@ body {
 				padding: 0 20px;
 				text-transform: uppercase;
 			}
-
 		}
 
 		// second level
@@ -193,7 +184,6 @@ body {
 					&:hover {
 						text-decoration: underline;
 					}
-
 				}	
 	
 				&.page_item_has_children,
@@ -202,7 +192,6 @@ body {
 					padding-right: 0;
 
 					> a {
-
 						&:after {
 							content: "\f0da";
 							display: inline-block;
@@ -211,15 +200,11 @@ body {
 						&:active,
 						&:focus,
 						&:hover {
-
 							&:after {
 								text-decoration: none;
 							}
-
 						}
-
 					}
-
 				}
 
 				// third level
@@ -232,15 +217,10 @@ body {
 					ul {
 						margin-top: -40px;
 					}
-
-				}				
-
+				}
 			}
-
-		}	
-
-	}	
-
+		}
+	}
 }
 
 // sub-header
@@ -267,9 +247,7 @@ body {
 		&:last-of-type {
 			margin-bottom: 0;
 		}
-
 	}
-
 }
 
 // main
@@ -304,9 +282,7 @@ body {
 				&:hover {
 					color: $link-color; 
 				}
-
 			}
-
 		}
 
 		.tags {
@@ -319,9 +295,7 @@ body {
 				position: relative;
 				top: 1px;
 			}
-			
 		}
-
 	}
 
 	// sidebar
@@ -329,7 +303,6 @@ body {
 	aside {
 		@include column-4;
 	}
-
 }
 
 // footer
@@ -347,7 +320,6 @@ body {
 		&:hover {
 			color: #CCC;
 		}
-
 	}
 	
 	aside {
@@ -376,15 +348,12 @@ body {
 					margin: 5px 0 0 0;
 					padding: 0;
 				}
-
 			}
 
 			p {
 				padding-right: 20px;
 			}
-
 		}
-		
 	}
 
 	// credits
@@ -420,21 +389,13 @@ body {
 						}
 						
 						&:last-child {
-
 							&:after {
 								display: none;
 							}
-
 						}
-
 					}
-						
 				}
-
-			}	
-			
+			}
 		}
-		
 	}
-	
 }

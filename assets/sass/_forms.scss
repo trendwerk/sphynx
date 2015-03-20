@@ -45,7 +45,6 @@ select {
 	&:focus {
 		border: 1px solid darken($border-color, 20%);
 	}
-
 }
 
 input[type="submit"],
@@ -65,17 +64,16 @@ button {
 	text-transform: uppercase;
 	-webkit-appearance: none;
 
-		&:hover { 
-			background-color: lighten($primary-color, 5%);
-		}
-
-		&:active,
-		&:focus {
-			background-color: darken($primary-color, 5%);
-			outline: none;
-		}
-
+	&:hover { 
+		background-color: lighten($primary-color, 5%);
 	}
+
+	&:active,
+	&:focus {
+		background-color: darken($primary-color, 5%);
+		outline: none;
+	}
+}
 
 /**
  * @section    Forms
@@ -83,7 +81,6 @@ button {
  */
 
 .search {
-
 	input[type="text"] { 
 		float: left;
 		margin-right: 10px;
@@ -94,7 +91,6 @@ button {
 		font-family: 'FontAwesome';
 		font-weight: normal;
 	}
-
 }
 
 /**
