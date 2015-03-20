@@ -88,7 +88,7 @@
  * @subsection Mobile
  */
 
- @media (max-width: 640px) {
+@media (max-width: 640px) {
 	h1 {
 		font-size: 24px;
 	}
@@ -167,18 +167,16 @@
 				margin: 0;
 				width: 100%;
 
-				fieldset { 
-					input[type="text"] { 
-						box-sizing: border-box;
-						font-size: 16px;
-						border: none;
-						width: 100%;
-					}
+				input[type="text"] { 
+					box-sizing: border-box;
+					font-size: 16px;
+					border: none;
+					width: 100%;
+				}
 
-					input[type="submit"] {
-						margin-top: 2px;
-						font-size: 18px;
-					}
+				input[type="submit"] {
+					margin-top: 2px;
+					font-size: 18px;
 				}
 			}
 		}
