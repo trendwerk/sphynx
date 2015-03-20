@@ -298,6 +298,20 @@ p.tags {
 		float: left;
 		font-size: 13px;
 		width: 156px;
+
+		@media(max-width: 640px) {
+			display: inline-block;
+			padding-right: 15px;
+			width: auto;
+		}
+
+		@media(max-width: 440px) {
+			display: block;
+			line-height: inherit;
+			margin-bottom: 10px;
+			line-height: 30px;
+			width: 100%;
+		}
 	}
 }
 
