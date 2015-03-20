@@ -371,29 +371,27 @@ body {
 		}
 		
 		nav { 
-			float: right; 
+			float: right;
 
 			div {
 				display: inline-block;
-			
-				ul {
-					margin: 0;
+			}
+		}
 
-					li {
-						display: inline;
-						
-						&:after {
-							color: #FFF;
-							content: "|";
-							padding: 0 5px 0 10px;
-						}
-						
-						&:last-child {
-							&:after {
-								display: none;
-							}
-						}
-					}
+		ul {
+			margin: 0;
+
+			li {
+				display: inline;
+				
+				&:after {
+					color: #FFF;
+					content: "|";
+					padding: 0 5px 0 10px;
+				}
+				
+				&:last-child:after {
+					display: none;
 				}
 			}
 		}
