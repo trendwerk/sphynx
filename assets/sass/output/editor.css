@@ -83,15 +83,6 @@
  * @license   		GPL v2
  * 
  */
-/**
- * @section    Extends
- * @subsection Border-box
- */
-.border-box {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
 /** 
  * @section    Extends
  * @subsection Ellipsis
@@ -2478,9 +2469,9 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select {
-  background-color: #FFF;
-  border-radius: 3px;
+  background-color: #fff;
   border: 1px solid #CCC;
+  border-radius: 3px;
   color: #666;
   display: block;
   font-family: "Helvetica Neue", sans-serif;
@@ -2637,18 +2628,18 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
+  -webkit-appearance: none;
   background-color: #333;
   border: 0;
   border-radius: 3px;
-  color: #FFF;
+  color: #fff;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 12px;
   font-weight: bold;
   height: 40px;
   margin-right: 10px;
   padding: 0 35px;
-  text-transform: uppercase;
-  -webkit-appearance: none; }
+  text-transform: uppercase; }
   input[type="submit"]:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
@@ -2668,7 +2659,7 @@ button {
  * @section    Forms
  * @subsection Fix for admin-bar search form 
  */
-input#adminbar-search {
+#adminbar-search {
   min-width: 0; }
 
 /**

@@ -31,9 +31,9 @@ input[type="url"],
 textarea, 
 select {
 	@include placeholder(#666, #ccc);
-	background-color: #FFF;
-	border-radius: 3px;
+	background-color: #fff;
 	border: 1px solid $border-color;
+	border-radius: 3px;
 	color: $text-color;
 	display: block;
 	font-family: $text-font;
@@ -51,10 +51,11 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
+	-webkit-appearance: none;
 	background-color: $primary-color;
 	border: 0;
 	border-radius: 3px;
-	color: #FFF;
+	color: #fff;
 	font-family: $text-font;
 	font-size: 12px;
 	font-weight: bold;
@@ -62,7 +63,6 @@ button {
 	margin-right: 10px;
 	padding: 0 35px;
 	text-transform: uppercase;
-	-webkit-appearance: none;
 
 	&:hover { 
 		background-color: lighten($primary-color, 5%);
@@ -80,6 +80,6 @@ button {
  * @subsection Fix for admin-bar search form 
  */
 
-input#adminbar-search {
+#adminbar-search {
 	min-width: 0;
 }
