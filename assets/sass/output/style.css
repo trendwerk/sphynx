@@ -2439,18 +2439,6 @@ button {
 
 /**
  * @section    Forms
- * @subsection Search form
- */
-.search input[type="text"] {
-  float: left;
-  margin-right: 10px; }
-.search input[type="submit"] {
-  float: left;
-  font-family: 'FontAwesome';
-  font-weight: normal; }
-
-/**
- * @section    Forms
  * @subsection Fix for admin-bar search form 
  */
 input#adminbar-search {
@@ -3118,11 +3106,6 @@ body {
 .search article h2,
 .error404 article h2 {
   margin-bottom: 30px; }
-.search .search input[type="submit"],
-.error404 .search input[type="submit"] {
-  font-size: 16px;
-  height: 41px;
-  padding: 0 15px; }
 
 .search-no-results #main #content {
   margin-bottom: 60px; }
@@ -3325,46 +3308,48 @@ p.tags {
  * @section    Parts
  * @subsection Search
  */
-.search form {
-  width: 230px; }
-  .search form fieldset {
+.search-form form {
+  width: 265px; }
+  .search-form form fieldset {
     position: relative; }
-    .search form fieldset input[type="text"] {
+    .search-form form fieldset input[type="text"] {
       color: #666;
       font-style: italic;
       margin: 0;
       right: 0;
       width: 100%; }
-      .search form fieldset input[type="text"]:-moz-placeholder {
+      .search-form form fieldset input[type="text"]:-moz-placeholder {
         color: #999; }
-      .search form fieldset input[type="text"]::-moz-placeholder {
+      .search-form form fieldset input[type="text"]::-moz-placeholder {
         color: #999; }
-      .search form fieldset input[type="text"]:-ms-input-placeholder {
+      .search-form form fieldset input[type="text"]:-ms-input-placeholder {
         color: #999; }
-      .search form fieldset input[type="text"]::-webkit-input-placeholder {
+      .search-form form fieldset input[type="text"]::-webkit-input-placeholder {
         color: #999; }
-      .search form fieldset input[type="text"]:focus:-moz-placeholder {
+      .search-form form fieldset input[type="text"]:focus:-moz-placeholder {
         color: #666; }
-      .search form fieldset input[type="text"]:focus::-moz-placeholder {
+      .search-form form fieldset input[type="text"]:focus::-moz-placeholder {
         color: #666; }
-      .search form fieldset input[type="text"]:focus:-ms-input-placeholder {
+      .search-form form fieldset input[type="text"]:focus:-ms-input-placeholder {
         color: #666; }
-      .search form fieldset input[type="text"]:focus::-webkit-input-placeholder {
+      .search-form form fieldset input[type="text"]:focus::-webkit-input-placeholder {
         color: #666; }
-    .search form fieldset button[type="submit"] {
+    .search-form form fieldset button[type="submit"] {
       background: none;
       box-shadow: none;
       color: #999;
       font-size: 13px;
       font-family: fontawesome;
       font-weight: 400;
+      height: 39px;
       margin: 0;
       padding: 0 12px;
       position: absolute;
-      right: 0;
+      right: 1px;
       text-shadow: none;
+      top: 1px;
       -webkit-font-smoothing: antialiased; }
-      .search form fieldset button[type="submit"]:active, .search form fieldset button[type="submit"]:focus, .search form fieldset button[type="submit"]:hover {
+      .search-form form fieldset button[type="submit"]:active, .search-form form fieldset button[type="submit"]:focus, .search-form form fieldset button[type="submit"]:hover {
         color: #666; }
 
 /**
@@ -3480,7 +3465,7 @@ p.tags {
           border: none;
           margin-left: 20px;
           padding: 0 5px; }
-  .widget .search form {
+  .widget .search-form form {
     width: 100%; }
 
 /**
@@ -3609,22 +3594,6 @@ p.tags {
     padding-top: 10px;
     padding-right: 0;
     text-align: right; }
-
-/**
- * @section    Widget
- * @subsection Search
- *
- * @package    WordPress
- */
-.widget_search input[type="text"] {
-  margin-bottom: 5px;
-  min-width: 0;
-  width: 188px; }
-.widget_search input[type="submit"] {
-  margin-bottom: 5px;
-  margin-right: 0;
-  padding: 0;
-  width: 40px; }
 
 /**
  * @section    Widget

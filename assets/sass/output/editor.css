@@ -2439,18 +2439,6 @@ button {
 
 /**
  * @section    Forms
- * @subsection Search form
- */
-.search input[type="text"] {
-  float: left;
-  margin-right: 10px; }
-.search input[type="submit"] {
-  float: left;
-  font-family: 'FontAwesome';
-  font-weight: normal; }
-
-/**
- * @section    Forms
  * @subsection Fix for admin-bar search form 
  */
 input#adminbar-search {

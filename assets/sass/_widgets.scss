@@ -112,7 +112,7 @@
 		}
 	}
 
-	.search form {
+	.search-form form {
 		width: 100%;
 	}
 }
@@ -305,28 +305,6 @@
 		padding-top: 10px;
 		padding-right: 0;
 		text-align: right;
-	}
-}
-
-/**
- * @section    Widget
- * @subsection Search
- *
- * @package    WordPress
- */
-
-.widget_search {
-	input[type="text"] {
-		margin-bottom: 5px;
-		min-width: 0;
-		width: 188px;
-	}
-
-	input[type="submit"] {
-		margin-bottom: 5px;
-		margin-right: 0;
-		padding: 0;
-		width: 40px;
 	}
 }
 		

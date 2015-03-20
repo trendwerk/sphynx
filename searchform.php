@@ -1,4 +1,4 @@
-<div class="search">
+<div class="search-form">
 
 	<form action="<?php echo home_url(); ?>" method="get">
 

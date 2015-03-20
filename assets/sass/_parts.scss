@@ -251,9 +251,9 @@ p.tags {
  * @subsection Search
  */
 
-.search {
+.search-form {
 	form {
-		width: 230px;
+		width: 265px;
 
 		fieldset {
 			position: relative;
@@ -274,11 +274,13 @@ p.tags {
 				font-size: 13px;
 				font-family: fontawesome;
 				font-weight: 400;
+				height: 39px;
 				margin: 0;
 				padding: 0 12px;
 				position: absolute;
-				right: 0;
+				right: 1px;
 				text-shadow: none;
+				top: 1px;
 				-webkit-font-smoothing: antialiased;
 
 				&:active,
