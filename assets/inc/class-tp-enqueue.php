@@ -6,9 +6,9 @@
  */
 
 class TP_Enqueue {
+	
 	function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'frontend' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin' ) );
 	}
 
 	/**
@@ -40,16 +40,4 @@ class TP_Enqueue {
 		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' );
 	}
 
-	/**
-	 * Admin styles and scripts
-	 */
-	function admin() {
-		global $current_screen;
-		
-		if( 'widgets' == $current_screen->base )
-			wp_enqueue_media();
-
-		wp_enqueue_script( 'admin', get_template_directory_uri() . '/assets/coffee/output/admin.js', array( 'jquery' ) );
-		wp_enqueue_style( 'admin', get_template_directory_uri() . '/assets/sass/output/admin.css' );
-	}
 } new TP_Enqueue;
