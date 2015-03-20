@@ -7,15 +7,7 @@
 
 class TP_Media {
 	function __construct() {
-		add_action( 'init', array( $this, 'add_image_sizes' ) );
 		add_action( 'after_switch_theme', array( $this, 'defaults' ) );
-	}
-
-	/**
-	 * Define image sizes
-	 */
-	function add_image_sizes() {
-		add_image_size( 'widget', 320, 500 );
 	}
 
 	/**

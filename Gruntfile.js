@@ -14,7 +14,6 @@ module.exports = function( grunt ) {
 					bare: true
 				},
 				files: {
-					'assets/coffee/output/admin.js': 'assets/coffee/admin.coffee',
 					'assets/coffee/output/functions.js': 'assets/coffee/functions.coffee',
 					'assets/coffee/output/responsive.js': 'assets/coffee/responsive.coffee'
 				}
@@ -43,7 +42,6 @@ module.exports = function( grunt ) {
 			},
 			dist: {
 				files: {
-					'assets/sass/output/admin.css': 'assets/sass/admin.scss',
 					'assets/sass/output/editor.css': 'assets/sass/editor.scss',
 					'assets/sass/output/style.css': 'assets/sass/style.scss'
 				}
