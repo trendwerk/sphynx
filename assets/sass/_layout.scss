@@ -278,7 +278,7 @@ body {
 				display: block;
 				float: left;
 				margin: 0;
-				padding: 0 15px 5px 15px;
+				padding: 0;
 				position: relative;
 				width: 100%;
 			}
@@ -309,7 +309,7 @@ body {
 						background-color: transparent;
 						font-size: 14px;
 						line-height: 30px;
-						padding: 0;
+						padding-left: 15px;
 
 						&:before {
 							content: "- ";
@@ -350,6 +350,17 @@ body {
 					margin-left: 0;
 					left: 100%;
 					margin-top: -40px;
+
+					@media (max-width: 640px) {
+						border: none;
+						left: 0;
+						margin: 0;
+						padding: 0 15px;
+
+						a {
+							font-size: 12px;
+						}
+					}
 
 					ul {
 						margin-top: -40px;
@@ -398,6 +409,12 @@ body {
 		padding-bottom: 0;
 	}
 
+	@media (max-width: 640px) {
+		border-top: 1px solid $border-color;
+		margin-top: 0;
+		padding: 30px 0;
+	}
+
 	// content
 	
 	#content {
@@ -412,6 +429,10 @@ body {
 		h1 {
 			font-size: 36px;
 			margin-bottom: 36px;
+
+			@media (max-width: 640px) {
+				margin-bottom: $line-height;
+			}
 		}
 
 		.meta {
@@ -468,19 +489,38 @@ body {
 		@media (max-width: 980px) {
 			margin: 0 0 $line-height 0;
 			width: 100%;
+		}
 
-			.widget {
+		.widget {
+			@media (max-width: 980px) {
 				clear: none;
 				padding: 30px;
 				width: 48%;
+			}
 
-				&:nth-child(odd) {
+			@media (max-width: 640px) {
+				margin: 0 0 20px 0;
+				width: 100%;
+			}
+
+			&:nth-child(odd) {
+				@media (max-width: 980px) {
 					clear: left;
 					margin-right: 2%;
 				}
 
-				&:nth-child(even) {
+				@media (max-width: 640px) {
+					margin-right: 0;
+				}
+			}
+
+			&:nth-child(even) {
+				@media (max-width: 980px) {
 					margin-left: 2%;
+				}
+
+				@media (max-width: 640px) {
+					margin-left: 0;
 				}
 			}
 		}
@@ -521,14 +561,31 @@ body {
 				clear: none;
 				margin-bottom: 30px;
 				width: 48%;
+			}
 
-				&:nth-child(odd) {
+			@media (max-width: 640px) {
+				margin: 0 0 20px 0;
+				width: 100%;
+			}
+
+			&:nth-child(odd) {
+				@media (max-width: 980px) {
 					clear: left;
 					margin-right: 2%;
 				}
 
-				&:nth-child(even) {
+				@media (max-width: 640px) {
+					margin-right: 0;
+				}
+			}
+
+			&:nth-child(even) {
+				@media (max-width: 980px) {
 					margin-left: 2%;
+				}
+
+				@media (max-width: 640px) {
+					margin-left: 0;
 				}
 			}
 			
@@ -558,6 +615,10 @@ body {
 	#credits {
 		@include column-12;
 		margin-bottom: $line-height;
+
+		@media (max-width: 640px) {
+			padding-bottom: $line-height;
+		}
 		
 		p {
 			margin: 0;
@@ -565,10 +626,20 @@ body {
 		
 		#copyright { 
 			float: left;
+
+			@media (max-width: 640px) {
+				text-align: center;
+				width: 100%;
+			}
 		}
 		
 		nav { 
 			float: right;
+
+			@media (max-width: 640px) {
+				text-align: center;
+				width: 100%;
+			}
 
 			div {
 				display: inline-block;
@@ -580,6 +651,12 @@ body {
 
 			li {
 				display: inline;
+
+				@media (max-width: 640px) {
+					a {
+						float: none;
+					}
+				}
 				
 				&:after {
 					color: #FFF;
