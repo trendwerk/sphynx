@@ -253,41 +253,38 @@ p.tags {
 
 .search-form {
 	form {
+		position: relative;
 		width: 265px;
 
-		fieldset {
-			position: relative;
+		input[type="text"] {
+			@include placeholder(#999, $text-color);
+			color: $text-color;
+			font-style: italic;
+			margin: 0;
+			right: 0;
+			width: 100%;
+		}
 
-			input[type="text"] {
-				@include placeholder(#999, $text-color);
+		button[type="submit"] {
+			background: none;
+			box-shadow: none;
+			color: $text-light;
+			font-size: 13px;
+			font-family: fontawesome;
+			font-weight: 400;
+			height: 39px;
+			margin: 0;
+			padding: 0 12px;
+			position: absolute;
+			right: 1px;
+			text-shadow: none;
+			top: 1px;
+			-webkit-font-smoothing: antialiased;
+
+			&:active,
+			&:focus,
+			&:hover {
 				color: $text-color;
-				font-style: italic;
-				margin: 0;
-				right: 0;
-				width: 100%;
-			}
-
-			button[type="submit"] {
-				background: none;
-				box-shadow: none;
-				color: $text-light;
-				font-size: 13px;
-				font-family: fontawesome;
-				font-weight: 400;
-				height: 39px;
-				margin: 0;
-				padding: 0 12px;
-				position: absolute;
-				right: 1px;
-				text-shadow: none;
-				top: 1px;
-				-webkit-font-smoothing: antialiased;
-
-				&:active,
-				&:focus,
-				&:hover {
-					color: $text-color;
-				}
 			}
 		}
 	}
