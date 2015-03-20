@@ -31,10 +31,25 @@ body {
 	padding: 10px 0;
 	z-index: 1;
 
+	@media (max-width: 640px) {
+		box-sizing: border-box;
+ 		margin: 0;
+	}
+
 	// logo, sitename and description
 
 	#logo {
 		@include column-6;
+
+		@media (max-width: 980px) {
+			clear: none;
+			margin: 10px 0;
+			width: 50%;
+		}
+
+		@media (max-width: 640px) {
+			width: 75%;
+		}
 
 		#sitename {
 			font: bold 28px/35px $heading-font;
@@ -57,6 +72,34 @@ body {
 
 	#mobile {
 		display: none;
+
+		@media (max-width: 640px) {
+			display: block;
+			position: absolute;
+			margin: 0;
+			right: 20px;
+			top: 30px;
+
+			#mobile-navigation, 
+			#mobile-search {
+				background-color: $secondary-color;
+				border-radius: 3px;
+				color: #FFF;
+				cursor: pointer;
+				float: left;
+				font-size: 16px;
+				height: 40px;
+				line-height: 40px;
+				margin-left: 10px;
+				text-align: center;
+				width: 40px;
+
+				&.active,
+				&:hover {
+					background-color: $primary-color;
+				}
+			}
+		}
 	}
 
 	// search form
@@ -65,9 +108,47 @@ body {
 		@include column-6;
 		margin-top: 20px;
 
+		@media (max-width: 980px) {
+			clear: none;
+			margin: 20px 0 10px 0;
+			width: 50%;
+		}
+
+		@media (max-width: 640px) {
+			background: $footer-background;
+			box-sizing: border-box;
+			border-radius: 3px;
+			display: none;
+			margin: 0;
+			width: 100%;
+		}
+
 		form {
 			float: right;
+
+			@media (max-width: 640px) {
+				margin: 0;
+				width: 100%;
+
+				input[type="text"] { 
+					box-sizing: border-box;
+					font-size: 16px;
+					border: none;
+					width: 100%;
+				}
+
+				input[type="submit"] {
+					margin-top: 2px;
+					font-size: 18px;
+				}
+			}
 		}
+	}
+}
+
+@media (max-width: 640px) {
+	.logged-in #header #mobile {
+		top: 76px;
 	}
 }
 
@@ -77,6 +158,12 @@ body {
 	background-color: $footer-background;
 	margin: 0;
 	z-index: 1;
+
+	@media (max-width: 640px) {
+		display: none;
+		margin-bottom: 0;
+		padding: 10px 0;
+	}
 
 	ul {
 		margin: 0;
@@ -91,6 +178,11 @@ body {
 			&:active,
 			&:focus,
 			&:hover {
+
+				@media (max-width: 640px) {
+					background-color: transparent;
+				}
+				
 				> ul {
 					display: block;
 				}
@@ -111,6 +203,10 @@ body {
 					position: absolute;
 					padding-left: 5px;
 					padding-right: 5px;
+
+					@media (max-width: 640px) {
+						display: none !important;
+					}
 				}
 			}
 
@@ -118,6 +214,10 @@ body {
 			&.current-menu-parent,
 			&.current-menu-ancestor {
 				background-color: #222;
+
+				@media (max-width: 640px) {
+					background-color: transparent;
+				}
 			}
 
 			a {
@@ -257,11 +357,20 @@ body {
 	padding-top: $line-height;
 	z-index: 0;
 
+	@media (max-width: 980px) {
+		padding-bottom: 0;
+	}
+
 	// content
 	
 	#content {
 		@include column-8;
 		padding-right: 20px;
+
+		@media (max-width: 980px) {
+			padding-bottom: $line-height;
+			padding-right: 0;
+		}
 
 		h1 {
 			font-size: 36px;
@@ -318,6 +427,26 @@ body {
 
 	aside {
 		@include column-4;
+
+		@media (max-width: 980px) {
+			margin: 0 0 $line-height 0;
+			width: 100%;
+
+			.widget {
+				clear: none;
+				padding: 30px;
+				width: 48%;
+
+				&:nth-child(odd) {
+					clear: left;
+					margin-right: 2%;
+				}
+
+				&:nth-child(even) {
+					margin-left: 2%;
+				}
+			}
+		}
 	}
 }
 
@@ -326,7 +455,7 @@ body {
 #footer {
 	background: $footer-background;
 	color: #FFF;
-	margin-bottom: 0; 
+	margin-bottom: 0;
 	
 	a { 
 		color: #FFF;
@@ -350,6 +479,21 @@ body {
 			margin-top: 40px;
 			margin-bottom: 30px;
 			padding: 0;
+
+			@media (max-width: 980px) {
+				clear: none;
+				margin-bottom: 30px;
+				width: 48%;
+
+				&:nth-child(odd) {
+					clear: left;
+					margin-right: 2%;
+				}
+
+				&:nth-child(even) {
+					margin-left: 2%;
+				}
+			}
 			
 			h5 { 
 				color: #FFF; 
