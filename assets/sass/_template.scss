@@ -16,11 +16,9 @@
  */
 
 .home {
-
 	#main #content {
 		padding-left: 0;
 	}
-
 }
 
 /**
@@ -29,12 +27,10 @@
  */
 
 .page {
-
 	#content {
 		padding-right: 0;
 		padding-left: 20px;
 	}
-
 }
 
 /**
@@ -46,7 +42,6 @@
 .archive,
 .search,
 .blog {
-
 	article {
 		clear: both;
 		padding: 0 0 $line-height 0;
@@ -69,9 +64,7 @@
 					color: $link-color;
 					text-decoration: underline;
 				}
-				
 			}
-			
 		}
 
 		figure {
@@ -85,9 +78,7 @@
 			padding: 30px 30px 5px 30px;
 			margin-bottom: $line-height * 2;
 		}
-
 	}
-
 }
 
 /**
@@ -95,8 +86,7 @@
  * @subsection single.php
  */
 
- .single #main #content {
- 			
+.single #main #content {
 	h1 {
 		margin-bottom: 0;
 	}
@@ -126,11 +116,8 @@
 			&:hover {
 				background: darken($light-background, 10%);
 			}
-
 		}
-
 	}
-	
 }
 
 /**
@@ -141,7 +128,6 @@
 
 .search,
 .error404 {
-
 	article h2 {
 		margin-bottom: $line-height;
 	}
@@ -151,7 +137,6 @@
 		height: 41px;
 		padding: 0 15px;
 	}
-
 }
 
 .search-no-results #main #content {

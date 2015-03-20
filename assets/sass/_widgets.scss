@@ -41,9 +41,7 @@
 				color: $link-color;
 				text-decoration: underline;
 			}
-
 		}
-
 	}
 
 	img.attachment-widget {
@@ -54,7 +52,6 @@
 	}
 
 	a {
-		
 		&.button {
 			margin-bottom: 0;
 		}
@@ -63,15 +60,12 @@
 			display: block;
 			margin-top: 20px;
 		}
-		
 	}
 
 	p {
-
 		&:last-of-type {
 			margin-bottom: 0;
 		}
-
 	}
 	
 	ul {
@@ -97,12 +91,11 @@
 				&:hover {
 					color: $link-color;
 				}
-				
-			 }
+			}
 
-			&.current_page_item &>a ,
-			&.current-cat &>a ,
-			&.current &>a  {
+			&.current_page_item > a,
+			&.current-cat > a,
+			&.current > a {
 				font-weight: bold;
 			}
 			
@@ -115,17 +108,13 @@
 					margin-left: 20px;
 					padding: 0 5px;
 				}
-				
 			}
-
 		}
-
 	}
 
 	.search form {
 		width: 100%;
 	}
-
 }
 
 /**
@@ -137,12 +126,10 @@
  */
 
 .widget_tp_contact {
-
-	span.label { 
+	span.label {
 		display: inline-block;
 		width: 90px;
 	}
-	
 }
 
 /**
@@ -154,7 +141,6 @@
  */
 
 .widget_tp_social {
-
 	ul {	
 		border: none;
 
@@ -188,13 +174,10 @@
 				}
 
 				&:hover {
-
 					span {
 						text-decoration: underline;
 					}
-
 				} 
-
 			}
 			
 			&.twitter a:hover i {
@@ -218,7 +201,6 @@
 			}
 
 			&.email {
-				
 				i {
 					font-size: 12px;
 				}
@@ -226,17 +208,13 @@
 				a:hover i {
 					background: $primary-color;
 				}
-
 			}
 
 			&.rss a:hover i {
 				background: #FF6600;
 			}
-
 		}
-		
 	}
-	
 }
 
 /**
@@ -248,12 +226,10 @@
  */
 
 .widget_tp_telephone_button {
-	
 	p.telephone {
 		font-size: 24px;
 		font-weight: bold;
 	}
-	
 }
 
 /**
@@ -264,7 +240,6 @@
  */
 
 .widget_tag_cloud {
-
 	.tagcloud a {
 		background: #CCC;
 		border-radius: 3px;
@@ -283,9 +258,7 @@
 			background: $heading-color;
 			color: #FFF;
 		}
-		
 	}
-
 }
 
 /**
@@ -333,7 +306,6 @@
 		padding-right: 0;
 		text-align: right;
 	}
-
 }
 
 /**
@@ -344,7 +316,6 @@
  */
 
 .widget_search {
-	
 	input[type="text"] {
 		margin-bottom: 5px;
 		min-width: 0;
@@ -357,7 +328,6 @@
 		padding: 0;
 		width: 40px;
 	}
-	
 }
 		
 /**
@@ -368,7 +338,6 @@
  */
 
 .widget_rss {
-
 	h3 img {
 		display: none;
 	}
@@ -390,7 +359,6 @@
 				color: $link-color;
 				text-decoration: underline;
 			}
-
 		}
 
 		span.rss-date { 
@@ -398,7 +366,5 @@
 			display: block;
 			margin: 0 0 10px 0;
 		}
-
 	}
-
 }

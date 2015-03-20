@@ -100,7 +100,9 @@ a {
 
 	/* more link */
 
-	&.more-link { white-space: nowrap; }
+	&.more-link {
+		white-space: nowrap;
+	}
 
 	/* add characters to links */
 
@@ -163,9 +165,7 @@ a {
 			&:hover {
 				background: darken($secondary-color, 15%);
 			}
-
 		}
-
 	}
 
 	/* style for tags */
@@ -188,9 +188,7 @@ a {
 			background: $heading-color;
 			color: #FFF;
 		}
-
 	}
-
 }
 
 /**
@@ -229,7 +227,6 @@ ul {
 	ul {
 		margin: 0 0 0 20px;
 	}
-
 }
 
 ol {
@@ -241,7 +238,6 @@ ol {
 		list-style-type: lower-alpha;
 		margin: 0 0 0 20px;
 	}
-
 }
 
 /**
@@ -274,13 +270,11 @@ table {
 		th { 
 			font-weight: bold;
 		}
-
 	}
 
 	thead tr {
 		background: $light-background;
 	}
-
 }
 
 /**
@@ -306,7 +300,6 @@ blockquote {
 		display: block;
 		margin-top: 10px;
 	}
-
 }
 
 cite {
@@ -319,7 +312,6 @@ cite {
 	a {
 		color: $text-color;
 	}
-
 }
 
 /**
@@ -357,7 +349,6 @@ abbr {
 	&:hover {
 		border-bottom-style: solid;
 	}
-
 }
 
 /**
@@ -418,5 +409,4 @@ hr {
 		color: $heading-color;
 		text-decoration: none;
 	}
-
 }

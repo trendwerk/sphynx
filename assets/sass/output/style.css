@@ -3471,7 +3471,7 @@ p.tags {
         text-decoration: underline; }
         .widget ul li a:active, .widget ul li a:focus, .widget ul li a:hover {
           color: #1F6FD1; }
-      .widget ul li.current_page_item .widget ul li > a, .widget ul li.current-cat .widget ul li > a, .widget ul li.current .widget ul li > a {
+      .widget ul li.current_page_item > a, .widget ul li.current-cat > a, .widget ul li.current > a {
         font-weight: bold; }
       .widget ul li ul {
         display: none;
