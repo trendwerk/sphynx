@@ -3633,13 +3633,6 @@ p.tags {
  */
 /**
  * @section    Responsive
- * @subsection Large desktops
- */
-@media (min-width: 1200px) {
-  .widget_search input[type="text"] {
-    width: 248px; } }
-/**
- * @section    Responsive
  * @subsection Tablets
  */
 @media (max-width: 980px) {
