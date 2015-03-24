@@ -2967,7 +2967,6 @@ body {
     @media (max-width: 980px) {
       #header #logo {
         clear: both;
-        margin: 0;
         width: 100%; } }
     @media (min-width: 1200px) {
       #header #logo {
@@ -3025,7 +3024,6 @@ body {
     @media (max-width: 980px) {
       #header #search {
         clear: both;
-        margin: 0;
         width: 100%; } }
     @media (min-width: 1200px) {
       #header #search {
@@ -3052,7 +3050,6 @@ body {
           #header #search form input[type="text"] {
             box-sizing: border-box;
             font-size: 16px;
-            border: none;
             width: 100%; }
           #header #search form input[type="submit"] {
             margin-top: 2px;
@@ -3230,7 +3227,6 @@ body {
     @media (max-width: 980px) {
       #main #content {
         clear: both;
-        margin: 0;
         width: 100%; } }
     @media (min-width: 1200px) {
       #main #content {
@@ -3282,7 +3278,6 @@ body {
     @media (max-width: 980px) {
       #main aside {
         clear: both;
-        margin: 0;
         width: 100%; } }
     @media (min-width: 1200px) {
       #main aside {
@@ -3333,13 +3328,12 @@ body {
       background: none;
       clear: none;
       float: left;
-      margin-top: 40px;
-      margin-bottom: 30px;
+      margin-top: 30px;
+      margin-bottom: 0;
       padding: 0; }
       @media (max-width: 980px) {
         #footer aside .widget {
           clear: both;
-          margin: 0;
           width: 100%; } }
       @media (min-width: 1200px) {
         #footer aside .widget {
@@ -3347,11 +3341,11 @@ body {
       @media (max-width: 980px) {
         #footer aside .widget {
           clear: none;
-          margin-bottom: 30px;
           width: 48%; } }
       @media (max-width: 640px) {
         #footer aside .widget {
-          margin: 0 0 20px 0;
+          margin-right: 0;
+          margin-left: 0;
           width: 100%; } }
       @media (max-width: 980px) {
         #footer aside .widget:nth-child(odd) {
@@ -3382,18 +3376,15 @@ body {
     float: left;
     margin: 10px;
     width: 940px;
+    margin-top: 30px;
     margin-bottom: 30px; }
     @media (max-width: 980px) {
       #footer #credits {
         clear: both;
-        margin: 0;
         width: 100%; } }
     @media (min-width: 1200px) {
       #footer #credits {
         width: 1120px; } }
-    @media (max-width: 640px) {
-      #footer #credits {
-        padding-bottom: 30px; } }
     #footer #credits p {
       margin: 0; }
     #footer #credits #copyright {
@@ -3556,7 +3547,6 @@ body {
   @media (max-width: 980px) {
     .error404 #main #content {
       clear: both;
-      margin: 0;
       width: 100%; } }
   @media (min-width: 1200px) {
     .error404 #main #content {
@@ -3870,6 +3860,7 @@ p.tags {
   .widget:last-of-type {
     margin-bottom: 40px; }
   .widget .widgettitle {
+    font-size: 18px;
     margin: 0 0 15px 0; }
     .widget .widgettitle a {
       color: #333;
