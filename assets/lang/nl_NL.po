@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-20 13:51+0100\n"
-"PO-Revision-Date: 2015-03-20 14:01+0100\n"
+"POT-Creation-Date: 2015-04-03 16:26+0100\n"
+"PO-Revision-Date: 2015-04-03 16:27+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -103,7 +103,7 @@ msgstr ""
 "opgeleverd. Controleer of alle woorden correct gespeld zijn of probeer een "
 "andere zoekterm."
 
-#: ../../searchform.php:6
+#: ../../searchform.php:4
 msgid "Search"
 msgstr "Zoeken"
 
@@ -123,160 +123,11 @@ msgstr "in de categorie"
 msgid "Back to the overview"
 msgstr "Terug naar het overzicht"
 
-#: ../../assets/inc/class-tp-contact-information.php:23
-#: ../inc/class-tp-contact-information.php:23
-msgid "General settings"
-msgstr "Algemene instellingen"
-
-#: ../../assets/inc/class-tp-contact-information.php:25
-#: ../inc/class-tp-contact-information.php:25
-msgid "Sitename"
-msgstr "Sitemap"
-
-#: ../../assets/inc/class-tp-contact-information.php:32
-#: ../inc/class-tp-contact-information.php:32
-msgid "Description"
-msgstr "Omschrijving"
-
-#: ../../assets/inc/class-tp-contact-information.php:42
-#: ../../assets/inc/widgets/class-tp-contact.php:15
-#: ../inc/class-tp-contact-information.php:42
-#: ../inc/widgets/class-tp-contact.php:15
-msgid "Contact"
-msgstr "Contact"
-
-#: ../../assets/inc/class-tp-contact-information.php:44
-#: ../inc/class-tp-contact-information.php:44
-msgid "Company name"
-msgstr "Bedrijfsnaam"
-
-#: ../../assets/inc/class-tp-contact-information.php:50
-#: ../inc/class-tp-contact-information.php:50
-msgid "Address"
-msgstr "Adres"
-
-#: ../../assets/inc/class-tp-contact-information.php:56
-#: ../inc/class-tp-contact-information.php:56
-msgid "Postal code"
-msgstr "Postcode"
-
-#: ../../assets/inc/class-tp-contact-information.php:62
-#: ../inc/class-tp-contact-information.php:62
-msgid "City"
-msgstr "Stad"
-
-#: ../../assets/inc/class-tp-contact-information.php:68
-#: ../inc/class-tp-contact-information.php:68
-msgid "Country"
-msgstr "Land"
-
-#: ../../assets/inc/class-tp-contact-information.php:74
-#: ../../assets/inc/widgets/class-tp-contact.php:69
-#: ../inc/class-tp-contact-information.php:74
-#: ../inc/widgets/class-tp-contact.php:69
-msgid "E-mail"
-msgstr "E-mail"
-
-#: ../../assets/inc/class-tp-contact-information.php:80
-#: ../../assets/inc/widgets/class-tp-contact.php:72
-#: ../inc/class-tp-contact-information.php:80
-#: ../inc/widgets/class-tp-contact.php:72
-msgid "Telephone"
-msgstr "Telefoon"
-
-#: ../../assets/inc/class-tp-contact-information.php:86
-#: ../../assets/inc/widgets/class-tp-contact.php:75
-#: ../inc/class-tp-contact-information.php:86
-#: ../inc/widgets/class-tp-contact.php:75
-msgid "Fax"
-msgstr "Fax"
-
-#: ../../assets/inc/class-tp-contact-information.php:95
-#: ../inc/class-tp-contact-information.php:95
-msgid "Registration numbers & financial"
-msgstr "Registratie nummers & financieel"
-
-#: ../../assets/inc/class-tp-contact-information.php:97
-#: ../inc/class-tp-contact-information.php:97
-msgid "CC No."
-msgstr "KvK Nr."
-
-#: ../../assets/inc/class-tp-contact-information.php:103
-#: ../inc/class-tp-contact-information.php:103
-msgid "VAT No."
-msgstr "BTW Nr."
-
-#: ../../assets/inc/class-tp-contact-information.php:109
-#: ../inc/class-tp-contact-information.php:109
-msgid "Bank name"
-msgstr "Bank naam"
-
-#: ../../assets/inc/class-tp-contact-information.php:115
-#: ../inc/class-tp-contact-information.php:115
-msgid "Bank No."
-msgstr "Bank Nr."
-
-#: ../../assets/inc/class-tp-contact-information.php:124
-#: ../../assets/inc/widgets/class-tp-social.php:10
-#: ../inc/class-tp-contact-information.php:124
-#: ../inc/widgets/class-tp-social.php:10
-msgid "Social media links"
-msgstr "Social media links"
-
-#: ../../assets/inc/class-tp-contact-information.php:126
-#: ../inc/class-tp-contact-information.php:126
-msgid "Twitter URL"
-msgstr "Twitter URL"
-
-#: ../../assets/inc/class-tp-contact-information.php:132
-#: ../inc/class-tp-contact-information.php:132
-msgid "Facebook URL"
-msgstr "Facebook URL"
-
-#: ../../assets/inc/class-tp-contact-information.php:138
-#: ../inc/class-tp-contact-information.php:138
-msgid "LinkedIn URL"
-msgstr "LinkedIn URL"
-
-#: ../../assets/inc/class-tp-contact-information.php:144
-#: ../inc/class-tp-contact-information.php:144
-msgid "Google Plus URL"
-msgstr "Google Plus URL"
-
-#: ../../assets/inc/class-tp-contact-information.php:150
-#: ../inc/class-tp-contact-information.php:150
-msgid "YouTube URL"
-msgstr "YouTube URL"
-
-#: ../../assets/inc/class-tp-contact-information.php:156
-#: ../inc/class-tp-contact-information.php:156
-msgid "Newsletter / mailto link"
-msgstr "Nieuwsbrief / mailto link"
-
-#: ../../assets/inc/class-tp-contact-information.php:163
-#: ../inc/class-tp-contact-information.php:163
-msgid "Show RSS feed in the social media widget"
-msgstr "Toon RSS icoon in de sociale media widget"
-
-#: ../../assets/inc/class-tp-contact-information.php:215
-#: ../../assets/inc/class-tp-contact-information.php:227
-#: ../../assets/inc/widgets/class-tp-contact.php:10
-#: ../inc/class-tp-contact-information.php:215
-#: ../inc/class-tp-contact-information.php:227
-#: ../inc/widgets/class-tp-contact.php:10
-msgid "Contact information"
-msgstr "Contactgegevens"
-
 #: ../../assets/inc/class-tp-editor.php:30 ../inc/class-tp-editor.php:30
 msgid "Button"
 msgstr "Knop"
 
-#: ../../assets/inc/class-tp-editor.php:35
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:19
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:15
-#: ../inc/class-tp-editor.php:35
-#: ../inc/widgets/class-tp-title-content-button.php:19
-#: ../inc/widgets/class-tp-title-image-content-button.php:15
+#: ../../assets/inc/class-tp-editor.php:35 ../inc/class-tp-editor.php:35
 msgid "Secondary button"
 msgstr "Secondaire knop"
 
@@ -288,9 +139,11 @@ msgstr "Lees meer link"
 msgid "Main navigation"
 msgstr "Hoofdnavigatie"
 
-#: ../../assets/inc/class-tp-menus.php:18 ../inc/class-tp-menus.php:18
-msgid "Footer navigation"
-msgstr "Footer navigatie"
+#: ../../assets/inc/class-tp-menus.php:18
+#: ../../assets/inc/class-tp-sidebars.php:37 ../inc/class-tp-menus.php:18
+#: ../inc/class-tp-sidebars.php:37
+msgid "Footer"
+msgstr "Footer"
 
 #: ../../assets/inc/class-tp-menus.php:19 ../inc/class-tp-menus.php:19
 msgid "Sitemap"
@@ -308,290 +161,251 @@ msgstr "Pagina"
 msgid "Blog"
 msgstr "Blog"
 
-#: ../../assets/inc/class-tp-sidebars.php:37 ../inc/class-tp-sidebars.php:37
-msgid "Footer"
-msgstr "Footer"
-
-#: ../../assets/inc/widgets/class-tp-contact.php:10
-#: ../inc/widgets/class-tp-contact.php:10
-msgid "Shows the specified contact information"
-msgstr "Geeft gespecificeerde contactgegevens weer"
-
-#: ../../assets/inc/widgets/class-tp-contact.php:23
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:32
-#: ../../assets/inc/widgets/class-tp-social.php:23
-#: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:29
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:39
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:47
-#: ../inc/widgets/class-tp-contact.php:23
-#: ../inc/widgets/class-tp-post-type-posts.php:32
-#: ../inc/widgets/class-tp-social.php:23
-#: ../inc/widgets/class-tp-taxonomy-terms.php:29
-#: ../inc/widgets/class-tp-title-content-button.php:39
-#: ../inc/widgets/class-tp-title-image-content-button.php:47
-msgid "Title"
-msgstr "Titel"
-
-#: ../../assets/inc/widgets/class-tp-contact.php:28
-#: ../../assets/inc/widgets/class-tp-social.php:28
-#: ../inc/widgets/class-tp-contact.php:28
-#: ../inc/widgets/class-tp-social.php:28
-#, php-format
-msgid ""
-"Change the contents of this widget on the <a href=\"%1$s\">contact "
-"information</a> page."
-msgstr ""
-"Beheer de inhoud van deze widget op de <a href=\"%1$s\">contact informatie</"
-"a> pagina."
-
-#: ../../assets/inc/widgets/class-tp-contact.php:82
-#: ../inc/widgets/class-tp-contact.php:82
-msgid "CC No"
-msgstr "KvK Nr"
-
-#: ../../assets/inc/widgets/class-tp-contact.php:85
-#: ../inc/widgets/class-tp-contact.php:85
-msgid "VAT No"
-msgstr "BTW Nr"
-
-#: ../../assets/inc/widgets/class-tp-contact.php:88
-#: ../inc/widgets/class-tp-contact.php:88
-msgid "Bank"
-msgstr "Bank"
-
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:10
-#: ../inc/widgets/class-tp-post-type-posts.php:10
-msgid "Post type posts"
-msgstr "Post type berichten"
-
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:10
-#: ../inc/widgets/class-tp-post-type-posts.php:10
-msgid "List of posts from a given post type"
-msgstr "Lijst met berichten uit een bepaalde post type"
-
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:15
-#: ../inc/widgets/class-tp-post-type-posts.php:15
-msgid "Latest posts"
-msgstr "Laatste berichten"
-
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:39
-#: ../inc/widgets/class-tp-post-type-posts.php:39
-msgid "Post type"
-msgstr "Bericht type"
-
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:59
-#: ../inc/widgets/class-tp-post-type-posts.php:59
-msgid "Number of posts to show:"
-msgstr "Aantal berichten:"
-
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:67
-#: ../inc/widgets/class-tp-post-type-posts.php:67
-msgid "Show link to post type archive"
-msgstr "Link naar berichten overzicht weergeven"
-
-#: ../../assets/inc/widgets/class-tp-post-type-posts.php:118
-#: ../inc/widgets/class-tp-post-type-posts.php:118
-msgid "View all"
-msgstr "Bekijk alle"
-
-#: ../../assets/inc/widgets/class-tp-social.php:10
-#: ../inc/widgets/class-tp-social.php:10
-msgid "Shows links to specified social network profiles"
-msgstr "Geeft links naar gespecificeerde profielen op sociale netwerken weer"
-
-#: ../../assets/inc/widgets/class-tp-social.php:15
-#: ../inc/widgets/class-tp-social.php:15
-msgid "Social"
-msgstr "Sociaal"
-
-#: ../../assets/inc/widgets/class-tp-social.php:48
-#: ../inc/widgets/class-tp-social.php:48
-msgid "Follow us on Twitter"
-msgstr "Volg ons via Twitter"
-
-#: ../../assets/inc/widgets/class-tp-social.php:56
-#: ../inc/widgets/class-tp-social.php:56
-msgid "Like our Facebook page"
-msgstr "Like onze Facebook pagina"
-
-#: ../../assets/inc/widgets/class-tp-social.php:64
-#: ../inc/widgets/class-tp-social.php:64
-msgid "Add us on Google+"
-msgstr "Voeg ons toe op Google+"
-
-#: ../../assets/inc/widgets/class-tp-social.php:72
-#: ../inc/widgets/class-tp-social.php:72
-msgid "Connect with us on LinkedIn"
-msgstr "Connect via LinkedIn"
-
-#: ../../assets/inc/widgets/class-tp-social.php:80
-#: ../inc/widgets/class-tp-social.php:80
-msgid "View our YouTube channel"
-msgstr "Bekijk ons YouTube kanaal"
-
-#: ../../assets/inc/widgets/class-tp-social.php:88
-#: ../inc/widgets/class-tp-social.php:88
-msgid "E-mail newsletter"
-msgstr "E-mail nieuwsbrief"
-
-#: ../../assets/inc/widgets/class-tp-social.php:96
-#: ../inc/widgets/class-tp-social.php:96
-msgid "Subscribe via RSS"
-msgstr "Abonneer via RSS"
-
-#: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
-#: ../inc/widgets/class-tp-taxonomy-terms.php:10
-msgid "Term list"
-msgstr "Term lijst"
-
-#: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:10
-#: ../inc/widgets/class-tp-taxonomy-terms.php:10
-msgid "List of terms from a given taxonomy"
-msgstr "Lijst met termen uit een bepaalde taxonomie"
-
-#: ../../assets/inc/widgets/class-tp-taxonomy-terms.php:37
-#: ../inc/widgets/class-tp-taxonomy-terms.php:37
-msgid "Taxonomy"
-msgstr "Taxonomie"
-
-#: ../../assets/inc/widgets/class-tp-telephone-button.php:13
-#: ../inc/widgets/class-tp-telephone-button.php:13
-msgid "Telephone number and button"
-msgstr "Telefoonnummer en knop"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:10
-#: ../inc/widgets/class-tp-title-content-button.php:10
-msgid "Text with button"
-msgstr "Tekst met knop"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:10
-#: ../inc/widgets/class-tp-title-content-button.php:10
-msgid "Editable title, text and button"
-msgstr "Bewerkbare titel, tekst en knop"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:17
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:13
-#: ../inc/widgets/class-tp-title-content-button.php:17
-#: ../inc/widgets/class-tp-title-image-content-button.php:13
-msgid "Read more link"
-msgstr "Lees meer link"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:18
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:14
-#: ../inc/widgets/class-tp-title-content-button.php:18
-#: ../inc/widgets/class-tp-title-image-content-button.php:14
-msgid "Primary button"
-msgstr "Primaire knop"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:46
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:81
-#: ../inc/widgets/class-tp-title-content-button.php:46
-#: ../inc/widgets/class-tp-title-image-content-button.php:81
-msgid "Content"
-msgstr "Inhoud"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:56
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:89
-#: ../inc/widgets/class-tp-title-content-button.php:56
-#: ../inc/widgets/class-tp-title-image-content-button.php:89
-msgid "Show button / read more link"
-msgstr "Knop / lees meer link weergeven"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:64
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:97
-#: ../inc/widgets/class-tp-title-content-button.php:64
-#: ../inc/widgets/class-tp-title-image-content-button.php:97
-msgid "Button text"
-msgstr "Knop tekst"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:71
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:104
-#: ../inc/widgets/class-tp-title-content-button.php:71
-#: ../inc/widgets/class-tp-title-image-content-button.php:104
-msgid "Button link"
-msgstr "Knop link"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:79
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:112
-#: ../inc/widgets/class-tp-title-content-button.php:79
-#: ../inc/widgets/class-tp-title-image-content-button.php:112
-msgid "Link type"
-msgstr "Link type"
-
-#: ../../assets/inc/widgets/class-tp-title-content-button.php:92
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:125
-#: ../inc/widgets/class-tp-title-content-button.php:92
-#: ../inc/widgets/class-tp-title-image-content-button.php:125
-msgid "Open link in new window / tab"
-msgstr "Open link in een nieuw venster"
-
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:10
-#: ../inc/widgets/class-tp-title-image-content-button.php:10
-msgid "Text with image and button"
-msgstr "Tekst met afbeelding en knop"
-
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:10
-#: ../inc/widgets/class-tp-title-image-content-button.php:10
-msgid "Editable title, image text and button"
-msgstr "Bewerkbare titel, afbeelding en knop"
-
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:24
-#: ../inc/widgets/class-tp-title-image-content-button.php:24
-msgid "Choose an image"
-msgstr "Kies een afbeelding"
-
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:25
-#: ../inc/widgets/class-tp-title-image-content-button.php:25
-msgid "Insert into widget"
-msgstr "Voeg toe aan widget"
-
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:54
-#: ../inc/widgets/class-tp-title-image-content-button.php:54
-msgid "Image"
-msgstr "Afbeelding"
-
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:59
-#: ../inc/widgets/class-tp-title-image-content-button.php:59
-msgid "Upload"
-msgstr "Uploaden"
-
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:67
-#: ../inc/widgets/class-tp-title-image-content-button.php:67
-msgid "Edit"
-msgstr "Bewerken"
-
-#: ../../assets/inc/widgets/class-tp-title-image-content-button.php:71
-#: ../inc/widgets/class-tp-title-image-content-button.php:71
-msgid "Remove"
-msgstr "Verwijder"
-
 #: ../../partials/share.php:3
 msgid "Share this article"
 msgstr "Deel dit artikel"
 
 #: ../../partials/share.php:5
 msgid "Share this on Facebook"
-msgstr "Deel dit artikel op Facebook"
+msgstr "Delen via Facebook"
 
 #: ../../partials/share.php:9
 msgid "Share this on Twitter"
-msgstr "Deel dit artikel op Twitter"
+msgstr "Delen via Twitter"
 
 #: ../../partials/share.php:13
 msgid "Share this on Google Plus"
-msgstr "Deel dit artikel op Google Plus"
+msgstr "Delen via Google Plus"
 
 #: ../../partials/share.php:17
 msgid "Share this on LinkedIn"
-msgstr "Deel dit artikel op LinkedIn"
+msgstr "Delen via LinkedIn"
 
 #: ../../partials/share.php:21
 msgid "Email this"
-msgstr "Email dit artikel"
+msgstr "E-mail dit artikel"
 
 #: ../../partials/share.php:25
 msgid "Share this on other networks"
-msgstr "Deel dit artikel via andere netwerken"
+msgstr "Delen via andere netwerken"
+
+#~ msgid "General settings"
+#~ msgstr "Algemene instellingen"
+
+#~ msgid "Sitename"
+#~ msgstr "Sitemap"
+
+#~ msgid "Description"
+#~ msgstr "Omschrijving"
+
+#~ msgid "Contact"
+#~ msgstr "Contact"
+
+#~ msgid "Company name"
+#~ msgstr "Bedrijfsnaam"
+
+#~ msgid "Address"
+#~ msgstr "Adres"
+
+#~ msgid "Postal code"
+#~ msgstr "Postcode"
+
+#~ msgid "City"
+#~ msgstr "Stad"
+
+#~ msgid "Country"
+#~ msgstr "Land"
+
+#~ msgid "E-mail"
+#~ msgstr "E-mail"
+
+#~ msgid "Telephone"
+#~ msgstr "Telefoon"
+
+#~ msgid "Fax"
+#~ msgstr "Fax"
+
+#~ msgid "Registration numbers & financial"
+#~ msgstr "Registratie nummers & financieel"
+
+#~ msgid "CC No."
+#~ msgstr "KvK Nr."
+
+#~ msgid "VAT No."
+#~ msgstr "BTW Nr."
+
+#~ msgid "Bank name"
+#~ msgstr "Bank naam"
+
+#~ msgid "Bank No."
+#~ msgstr "Bank Nr."
+
+#~ msgid "Social media links"
+#~ msgstr "Social media links"
+
+#~ msgid "Twitter URL"
+#~ msgstr "Twitter URL"
+
+#~ msgid "Facebook URL"
+#~ msgstr "Facebook URL"
+
+#~ msgid "LinkedIn URL"
+#~ msgstr "LinkedIn URL"
+
+#~ msgid "Google Plus URL"
+#~ msgstr "Google Plus URL"
+
+#~ msgid "YouTube URL"
+#~ msgstr "YouTube URL"
+
+#~ msgid "Newsletter / mailto link"
+#~ msgstr "Nieuwsbrief / mailto link"
+
+#~ msgid "Show RSS feed in the social media widget"
+#~ msgstr "Toon RSS icoon in de sociale media widget"
+
+#~ msgid "Contact information"
+#~ msgstr "Contactgegevens"
+
+#~ msgid "Footer navigation"
+#~ msgstr "Footer navigatie"
+
+#~ msgid "Shows the specified contact information"
+#~ msgstr "Geeft gespecificeerde contactgegevens weer"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid ""
+#~ "Change the contents of this widget on the <a href=\"%1$s\">contact "
+#~ "information</a> page."
+#~ msgstr ""
+#~ "Beheer de inhoud van deze widget op de <a href=\"%1$s\">contact "
+#~ "informatie</a> pagina."
+
+#~ msgid "CC No"
+#~ msgstr "KvK Nr"
+
+#~ msgid "VAT No"
+#~ msgstr "BTW Nr"
+
+#~ msgid "Bank"
+#~ msgstr "Bank"
+
+#~ msgid "Post type posts"
+#~ msgstr "Post type berichten"
+
+#~ msgid "List of posts from a given post type"
+#~ msgstr "Lijst met berichten uit een bepaalde post type"
+
+#~ msgid "Latest posts"
+#~ msgstr "Laatste berichten"
+
+#~ msgid "Post type"
+#~ msgstr "Bericht type"
+
+#~ msgid "Number of posts to show:"
+#~ msgstr "Aantal berichten:"
+
+#~ msgid "Show link to post type archive"
+#~ msgstr "Link naar berichten overzicht weergeven"
+
+#~ msgid "View all"
+#~ msgstr "Bekijk alle"
+
+#~ msgid "Shows links to specified social network profiles"
+#~ msgstr ""
+#~ "Geeft links naar gespecificeerde profielen op sociale netwerken weer"
+
+#~ msgid "Social"
+#~ msgstr "Sociaal"
+
+#~ msgid "Follow us on Twitter"
+#~ msgstr "Volg ons via Twitter"
+
+#~ msgid "Like our Facebook page"
+#~ msgstr "Like onze Facebook pagina"
+
+#~ msgid "Add us on Google+"
+#~ msgstr "Voeg ons toe op Google+"
+
+#~ msgid "Connect with us on LinkedIn"
+#~ msgstr "Connect via LinkedIn"
+
+#~ msgid "View our YouTube channel"
+#~ msgstr "Bekijk ons YouTube kanaal"
+
+#~ msgid "E-mail newsletter"
+#~ msgstr "E-mail nieuwsbrief"
+
+#~ msgid "Subscribe via RSS"
+#~ msgstr "Abonneer via RSS"
+
+#~ msgid "Term list"
+#~ msgstr "Term lijst"
+
+#~ msgid "List of terms from a given taxonomy"
+#~ msgstr "Lijst met termen uit een bepaalde taxonomie"
+
+#~ msgid "Taxonomy"
+#~ msgstr "Taxonomie"
+
+#~ msgid "Telephone number and button"
+#~ msgstr "Telefoonnummer en knop"
+
+#~ msgid "Text with button"
+#~ msgstr "Tekst met knop"
+
+#~ msgid "Editable title, text and button"
+#~ msgstr "Bewerkbare titel, tekst en knop"
+
+#~ msgid "Read more link"
+#~ msgstr "Lees meer link"
+
+#~ msgid "Primary button"
+#~ msgstr "Primaire knop"
+
+#~ msgid "Content"
+#~ msgstr "Inhoud"
+
+#~ msgid "Show button / read more link"
+#~ msgstr "Knop / lees meer link weergeven"
+
+#~ msgid "Button text"
+#~ msgstr "Knop tekst"
+
+#~ msgid "Button link"
+#~ msgstr "Knop link"
+
+#~ msgid "Link type"
+#~ msgstr "Link type"
+
+#~ msgid "Open link in new window / tab"
+#~ msgstr "Open link in een nieuw venster"
+
+#~ msgid "Text with image and button"
+#~ msgstr "Tekst met afbeelding en knop"
+
+#~ msgid "Editable title, image text and button"
+#~ msgstr "Bewerkbare titel, afbeelding en knop"
+
+#~ msgid "Choose an image"
+#~ msgstr "Kies een afbeelding"
+
+#~ msgid "Insert into widget"
+#~ msgstr "Voeg toe aan widget"
+
+#~ msgid "Image"
+#~ msgstr "Afbeelding"
+
+#~ msgid "Upload"
+#~ msgstr "Uploaden"
+
+#~ msgid "Edit"
+#~ msgstr "Bewerken"
+
+#~ msgid "Remove"
+#~ msgstr "Verwijder"
 
 #~ msgid "Authors overview"
 #~ msgstr "Auteurs overzicht"
