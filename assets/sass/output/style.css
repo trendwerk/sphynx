@@ -3300,7 +3300,8 @@ body {
   .archive article h2,
   .search article h2,
   .blog article h2 {
-    margin: 0 0 4px 0; }
+    margin: 0 0 4px 0;
+    text-align: center; }
     .archive article h2 a,
     .search article h2 a,
     .blog article h2 a {
