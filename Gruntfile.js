@@ -38,8 +38,7 @@ module.exports = function( grunt ) {
 		 */	
 		sass: {
 			options: {
-				style: 'nested',
-				unixNewlines: false
+				style: 'nested'
 			},
 			dist: {
 				files: {
