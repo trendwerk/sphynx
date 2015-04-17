@@ -2918,10 +2918,10 @@ body {
       .container .container-inner {
         margin: 0 auto;
         padding: 0 20px;
-        width: 960px; } }
-    @media (min-width: 1201px) {
+        width: 980px; } }
+    @media (min-width: 1161px) {
       .container .container-inner {
-        width: 1140px; } }
+        width: 1160px; } }
 
 /**
  * @section    Layout
@@ -2982,29 +2982,14 @@ body {
       #header #mobile #mobile-search:hover {
         background-color: #333; }
   #header #search {
-    box-sizing: border-box;
+    display: none;
     float: right;
-    margin-top: 10px; }
-    @media (max-width: 640px) {
+    margin-top: 10px;
+    width: 100%; }
+    @media (min-width: 641px) {
       #header #search {
-        box-sizing: border-box;
-        border-radius: 3px;
-        display: none;
-        margin-top: 10px;
-        width: 100%; } }
-    #header #search form {
-      float: right; }
-      @media (max-width: 640px) {
-        #header #search form {
-          margin: 0;
-          width: 100%; }
-          #header #search form input[type="text"] {
-            box-sizing: border-box;
-            font-size: 16px;
-            width: 100%; }
-          #header #search form input[type="submit"] {
-            margin-top: 2px;
-            font-size: 18px; } }
+        display: block;
+        width: auto; } }
 
 #main-navigation {
   background-color: #333;
@@ -3127,24 +3112,21 @@ body {
 
 #main {
   background: #FFF;
-  padding: 45px 0 30px 0; }
+  padding: 45px 0 60px 0; }
   @media (max-width: 640px) {
     #main {
       border-top: 1px solid #CCC;
       margin-top: 0;
-      padding: 30px 0; } }
+      padding: 30px 0 60px 0; } }
   #main #content {
     box-sizing: border-box;
     margin: 0 auto;
     width: 100%; }
-    @media (min-width: 1201px) {
+    @media (min-width: 821px) {
       #main #content {
-        width: 700px; } }
+        width: 740px; } }
     #main #content h1 {
-      margin-bottom: 36px; }
-      @media (max-width: 640px) {
-        #main #content h1 {
-          margin-bottom: 30px; } }
+      margin-bottom: 30px; }
     #main #content .meta {
       color: #999;
       font-size: 13px;
@@ -3174,6 +3156,8 @@ body {
           margin-bottom: 10px;
           line-height: 30px;
           width: 100%; } }
+    #main #content p:last-child {
+      margin-bottom: 0; }
 
 #footer {
   background: #333;
@@ -3336,20 +3320,6 @@ body {
 
 .search-no-results #main #content {
   margin-bottom: 60px; }
-
-.error404 #main #content {
-  box-sizing: border-box;
-  float: left;
-  margin: 10px;
-  width: 780px;
-  margin-bottom: 60px; }
-  @media (min-width: 1200px) {
-    .error404 #main #content {
-      width: 930px; } }
-  @media (max-width: 980px) {
-    .error404 #main #content {
-      clear: both;
-      width: 100%; } }
 
 /**
  * @section Parts
@@ -3536,9 +3506,13 @@ p.tags {
  */
 .search-form form {
   position: relative;
-  width: 265px; }
+  width: 100%; }
+  @media (min-width: 641px) {
+    .search-form form {
+      width: 265px; } }
   .search-form form input[type="text"] {
     color: #666;
+    font-size: 16px;
     font-style: italic;
     margin: 0;
     right: 0;
@@ -3559,21 +3533,28 @@ p.tags {
       color: #666; }
     .search-form form input[type="text"]:focus::-webkit-input-placeholder {
       color: #666; }
+    @media (min-width: 641px) {
+      .search-form form input[type="text"] {
+        font-size: 13px; } }
   .search-form form button[type="submit"] {
     background: none;
     box-shadow: none;
     color: #999;
-    font-size: 13px;
+    font-size: 16px;
     font-family: fontawesome;
     font-weight: 400;
     height: 39px;
-    margin: 0;
+    margin: 2px 0 0 0;
     padding: 0 12px;
     position: absolute;
     right: 1px;
     text-shadow: none;
     top: 1px;
     -webkit-font-smoothing: antialiased; }
+    @media (min-width: 641px) {
+      .search-form form button[type="submit"] {
+        font-size: 13px;
+        margin-top: 0; } }
     .search-form form button[type="submit"]:active, .search-form form button[type="submit"]:focus, .search-form form button[type="submit"]:hover {
       color: #666; }
 

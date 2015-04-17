@@ -39,11 +39,11 @@ body {
 		@media(min-width: 981px) {
 			margin: 0 auto;
 			padding: 0 20px;
-			width: 960px;
+			width: 980px;
 		}
 
-		@media(min-width: 1201px) {
-			width: 1140px;
+		@media(min-width: 1161px) {
+			width: 1160px;
 		}
 	}
 }
@@ -128,39 +128,15 @@ body {
 		}
 	}
 
-	// search form
-
 	#search {
-		box-sizing: border-box;
+		display: none;
 		float: right;
 		margin-top: 10px;
+		width: 100%;
 
-		@media(max-width: 640px) {
-			box-sizing: border-box;
-			border-radius: 3px;
-			display: none;
-			margin-top: 10px;
-			width: 100%;
-		}
-
-		form {
-			float: right;
-
-			@media(max-width: 640px) {
-				margin: 0;
-				width: 100%;
-
-				input[type="text"] { 
-					box-sizing: border-box;
-					font-size: 16px;
-					width: 100%;
-				}
-
-				input[type="submit"] {
-					margin-top: 2px;
-					font-size: 18px;
-				}
-			}
+		@media(min-width: 641px) {
+			display: block;
+			width: auto;
 		}
 	}
 }
@@ -392,12 +368,12 @@ body {
 
 #main {
 	background: $body-background;
-	padding: ($line-height * 1.5) 0 $line-height 0;
+	padding: ($line-height * 1.5) 0 ($line-height * 2) 0;
 
 	@media(max-width: 640px) {
 		border-top: 1px solid $border-color;
 		margin-top: 0;
-		padding: $line-height 0;
+		padding: $line-height 0 ($line-height * 2) 0;
 	}
 
 	// content
@@ -407,16 +383,12 @@ body {
 		margin: 0 auto;
 		width: 100%;
 
-		@media(min-width: 1201px) {
-			width: 700px;
+		@media(min-width: 821px) {
+			width: 740px;
 		}
 
 		h1 {
-			margin-bottom: 36px;
-
-			@media(max-width: 640px) {
-				margin-bottom: $line-height;
-			}
+			margin-bottom: $line-height;
 		}
 
 		.meta {
@@ -462,6 +434,10 @@ body {
 					width: 100%;
 				}
 			}
+		}
+
+		p:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

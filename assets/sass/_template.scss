@@ -145,21 +145,3 @@
 .search-no-results #main #content {
 	margin-bottom: $line-height * 2;
 }
-
-.error404 #main #content {
-	box-sizing: border-box;
-	float: left;
-	margin: 10px;
-	width: 780px;
-
-	@media(min-width: 1200px) {
-		width: 930px;
-	}
-
-	@media(max-width: 980px) {
-		clear: both;
-		width: 100%;
-	}
-
-	margin-bottom: $line-height * 2;
-}
