@@ -3010,7 +3010,8 @@ body {
       @media (min-width: 401px) {
         #header #mobile #mobile-navigation,
         #header #mobile #mobile-search {
-          float: left; } }
+          float: left;
+          margin: 0 0 0 10px; } }
       #header #mobile #mobile-navigation.active, #header #mobile #mobile-navigation:hover,
       #header #mobile #mobile-search.active,
       #header #mobile #mobile-search:hover {
@@ -3312,15 +3313,13 @@ body {
   .blog article.sticky {
     background: #EEE;
     box-sizing: border-box;
-    padding: 30px 30px 5px 30px;
+    padding: 30px;
     margin-bottom: 60px; }
 
 /**
  * @section    Templates
  * @subsection single.php
  */
-.single #main #content h1 {
-  margin-bottom: 0; }
 .single #main #content figure {
   float: right;
   margin: 5px 0 10px 20px; }
@@ -3474,7 +3473,7 @@ p.tags {
       #comments ol .comment-body .comment-content {
         box-sizing: border-box;
         float: left;
-        margin-top: -20px;
+        margin: -20px 0 20px 0;
         padding-left: 80px;
         width: 100%; }
       #comments ol .comment-body .reply {
