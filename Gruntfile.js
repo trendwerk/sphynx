@@ -18,14 +18,16 @@ module.exports = function( grunt ) {
 					'assets/coffee/output/responsive.js': 'assets/coffee/responsive.coffee'
 				}
 			}
-
 		},
 
 		/**
 		 * Lint Coffee
 		 */
 	    coffeelint: {
-			app: ['assets/coffee/functions.coffee', 'assets/coffee/responsive.coffee'],
+			app: [ 
+				'assets/coffee/functions.coffee', 
+				'assets/coffee/responsive.coffee'
+			],
 			options: {
 				'max_line_length': {
 					'level': 'ignore'
@@ -54,8 +56,7 @@ module.exports = function( grunt ) {
 		watch: {
 			sass: {
 				files: [
-					'assets/sass/*',
-					'assets/sass/lib/*'
+					'assets/sass/*'
 				],
 				tasks: [ 'sass' ],
 				options: {
