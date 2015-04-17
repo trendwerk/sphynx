@@ -145,50 +145,42 @@ body {
 
 #main-navigation {
 	background-color: $footer-background;
+	display: none;
 	margin: 0;
+	padding: 10px 0;
 	z-index: 1;
 
-	@media(max-width: 640px) {
-		display: none;
-		margin-bottom: 0;
-		padding: 10px 0;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
 
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
+		li {
+			display: block;
 
-			li {
-				display: block;
-
-				a {
-					color: #FFF;
-					text-decoration: none;
-				}
-
-				ul {
-					box-sizing: border-box;
-					padding: 5px 10px;
-					width: 100%;
-
-					li {
-						font-size: 12px;
-
-						ul {
-							padding-bottom: 0;
-						}
-
-					}
-
-				}
-
+			a {
+				color: #FFF;
+				text-decoration: none;
 			}
 
-		}
+			ul {
+				box-sizing: border-box;
+				padding: 5px 10px;
+				width: 100%;
 
+				li {
+					font-size: 12px;
+
+					ul {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
 	}
 
 	@media(min-width: 641px) {
+		display: block;
 
 		ul {
 			margin: 0;
@@ -264,7 +256,7 @@ body {
 				}
 			}
 
-			// second level
+			// second level, third level
 
 			ul, ul ul {
 				display: none;
@@ -364,19 +356,15 @@ body {
 	}
 }
 
-// main
-
 #main {
-	background: $body-background;
-	padding: ($line-height * 1.5) 0 ($line-height * 2) 0;
+	border-top: 1px solid $border-color;
+	margin-top: 0;
+	padding: $line-height 0 ($line-height * 2) 0;
 
-	@media(max-width: 640px) {
-		border-top: 1px solid $border-color;
-		margin-top: 0;
-		padding: $line-height 0 ($line-height * 2) 0;
+	@media(min-width: 641px) {
+		background: $body-background;
+		padding: ($line-height * 1.5) 0 ($line-height * 2) 0;
 	}
-
-	// content
 	
 	#content {
 		box-sizing: border-box;
@@ -409,7 +397,6 @@ body {
 		}
 
 		.tags {
-			line-height: 1;
 
 			span {
 				display: inline-block;
@@ -420,18 +407,22 @@ body {
 			}
 
 			.label {
-				@media(max-width: 640px) {
+				display: block;
+				float: left;
+				font-size: 13px;
+				line-height: inherit;
+				margin-bottom: 10px;
+				width: 100%;
+
+				@media(min-width: 441px) {
 					display: inline-block;
 					padding-right: 15px;
 					width: auto;
 				}
 
-				@media(max-width: 440px) {
-					display: block;
-					line-height: inherit;
-					margin-bottom: 10px;
-					line-height: 30px;
-					width: 100%;
+				@media(min-width: 641px) {
+					padding-right: 0;
+					width: 150px;
 				}
 			}
 		}
@@ -441,8 +432,6 @@ body {
 		}
 	}
 }
-
-// footer
 
 #footer {
 	background: $footer-background;
@@ -458,23 +447,12 @@ body {
 			color: #CCC;
 		}
 	}
-
-	// credits
 	
 	#credits {
 		box-sizing: border-box;
+		clear: both;
 		float: left;
-		margin: $line-height 10px $line-height 10px;
-		width: 940px;
-
-		@media(min-width: 1200px) {
-			width: 1120px;
-		}
-
-		@media(max-width: 980px) {
-			clear: both;
-			width: 100%;
-		}
+		margin: $line-height 0;
 		
 		p {
 			margin: 0;

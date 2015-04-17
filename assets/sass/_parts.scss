@@ -308,23 +308,23 @@ p.tags {
  */
 
 .addthis_toolbox {
-	span {
+	.label {
+		display: block;
 		float: left;
 		font-size: 13px;
-		width: 156px;
+		line-height: inherit;
+		margin-bottom: 10px;
+		width: 100%;
 
-		@media(max-width: 640px) {
+		@media(min-width: 441px) {
 			display: inline-block;
 			padding-right: 15px;
 			width: auto;
 		}
 
-		@media(max-width: 440px) {
-			display: block;
-			line-height: inherit;
-			margin-bottom: 10px;
-			line-height: 30px;
-			width: 100%;
+		@media(min-width: 641px) {
+			padding-right: 0;
+			width: 150px;
 		}
 	}
 }
