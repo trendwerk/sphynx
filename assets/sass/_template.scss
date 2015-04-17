@@ -63,7 +63,7 @@
 		&.sticky { 
 			background: $light-background;
 			box-sizing: border-box;
-			padding: 30px 30px 5px 30px;
+			padding: 30px;
 			margin-bottom: $line-height * 2;
 		}
 	}
@@ -75,9 +75,6 @@
  */
 
 .single #main #content {
-	h1 {
-		margin-bottom: 0;
-	}
 
 	figure {
 		float: right;
