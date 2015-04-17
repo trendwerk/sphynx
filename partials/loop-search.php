@@ -4,7 +4,7 @@
  */
 ?>
 
-<article <?php post_class(); ?>>
+<article>
 					
 	<h2>
 		<a href="<?php the_permalink(); ?>">
