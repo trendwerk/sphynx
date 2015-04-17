@@ -1,7 +1,6 @@
 {
 	"name": "trendwerk/trendpress",
 	"description": "A light & simple WordPress starter theme.",
-	"type": "wordpress-theme",
 	"license": "GPL-2.0+",
 	"authors": [
 		{
@@ -22,7 +21,6 @@
 		}
 	],
 	"require": {
-		"php": ">=5.4",
-		"composer/installers": "v1.0.19"
-    }
+		"php": ">=5.4"
+	}
 }
