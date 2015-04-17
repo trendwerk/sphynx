@@ -118,8 +118,7 @@ body {
 				margin: 0 0 0 10px;
 			}
 
-			&.active,
-			&:hover {
+			&.active {
 				background-color: $primary-color;
 			}
 		}

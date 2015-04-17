@@ -3012,9 +3012,8 @@ body {
         #header #mobile #mobile-search {
           float: left;
           margin: 0 0 0 10px; } }
-      #header #mobile #mobile-navigation.active, #header #mobile #mobile-navigation:hover,
-      #header #mobile #mobile-search.active,
-      #header #mobile #mobile-search:hover {
+      #header #mobile #mobile-navigation.active,
+      #header #mobile #mobile-search.active {
         background-color: #333; }
   #header #search {
     display: none;
