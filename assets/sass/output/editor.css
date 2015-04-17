@@ -2891,4 +2891,8 @@ figure.alignnone img {
 #tinymce {
   padding: 20px !important; }
 
+.video-container {
+  height: auto;
+  padding: 0; }
+
 /*# sourceMappingURL=editor.css.map */
