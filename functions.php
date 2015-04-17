@@ -23,9 +23,13 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
 /**
- * Add theme support for featured images
+ * Add theme support for featured images for posts
  */
 add_theme_support( 'post-thumbnails' );
+
+add_action( 'init', function() {
+	remove_post_type_support( 'page', 'thumbnail' );
+} );
 
 /**
  * Add localization support

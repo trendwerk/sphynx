@@ -8,6 +8,7 @@
 class TP_Media {
 	function __construct() {
 		add_action( 'after_switch_theme', array( $this, 'defaults' ) );
+		add_filter( 'embed_oembed_html', array( $this, 'video_embed' ) );
 	}
 
 	/**
@@ -24,5 +25,12 @@ class TP_Media {
 		update_option( 'large_size_h', '' );
 		
 	    update_option( 'image_default_link_type', 'file' );
+	}
+
+	/**
+	 * Responsive video container
+	 */
+	function video_embed( $html ) {
+		return '<div class="video-container">' . $html . '</div>';
 	}
 } new TP_Media;
