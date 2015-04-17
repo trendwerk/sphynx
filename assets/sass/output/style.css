@@ -3030,7 +3030,7 @@ body {
   background-color: #333;
   display: none;
   margin: 0;
-  padding: 10px 0;
+  padding: 15px 0;
   z-index: 1; }
   @media (min-width: 641px) {
     #main-navigation {
@@ -3052,7 +3052,12 @@ body {
           float: left; } }
       #main-navigation ul li a {
         color: #FFF;
-        text-decoration: none; }
+        float: left;
+        text-decoration: none;
+        padding: 6px 0;
+        width: 100%; }
+      #main-navigation ul li.current-menu-ancestor > a, #main-navigation ul li.current-menu-parent > a, #main-navigation ul li.current-menu-item > a {
+        text-decoration: underline; }
       #main-navigation ul li ul {
         box-sizing: border-box;
         padding: 5px 10px;
@@ -3062,6 +3067,8 @@ body {
             padding: 0; } }
         #main-navigation ul li ul li {
           font-size: 12px; }
+          #main-navigation ul li ul li a {
+            padding: 3px 0; }
           #main-navigation ul li ul li ul {
             padding-bottom: 0; }
     @media (min-width: 641px) {
