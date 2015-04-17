@@ -2976,13 +2976,17 @@ body {
         width: auto; } }
     #header #logo #sitename {
       font: bold 28px/35px "Helvetica Neue", sans-serif;
-      margin: 0; }
+      margin: 0 0 10px 0; }
+      @media (min-width: 401px) {
+        #header #logo #sitename {
+          margin-bottom: 0; } }
       #header #logo #sitename a {
         color: #333;
         text-decoration: none; }
     #header #logo #description {
       color: #666;
       font: normal 14px/25px "Helvetica Neue", sans-serif;
+      line-height: 1.5;
       margin: 0; }
   #header #mobile {
     margin-top: 10px;
@@ -3018,8 +3022,11 @@ body {
   #header #search {
     display: none;
     float: right;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 100%; }
+    @media (min-width: 401px) {
+      #header #search {
+        margin-top: 10px; } }
     @media (min-width: 641px) {
       #header #search {
         display: block;
@@ -3153,7 +3160,7 @@ body {
         font-size: 64px;
         margin-bottom: 15px; } }
   #sub-header h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     margin-bottom: 0; }
     @media (min-width: 641px) {
