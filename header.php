@@ -19,7 +19,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="shortcut icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/favicon.ico" />
 
-		<?php wp_head();?>
+		<?php wp_head(); ?>
 
 	</head>
 	
