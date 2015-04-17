@@ -7,19 +7,17 @@ get_header();
 	<div class="container-inner">	
 	
 		<section id="content">
-		
+			
 			<h1>
-				<?php 
-					if( is_category() || is_tag() || is_tax() )
-						single_term_title( __( 'Posts about', 'tp' ) . ' ' );
-					elseif( is_author() )
-						echo __( 'Posts by', 'tp' ) . ' ' . get_the_author_meta( 'display_name' );
+				<?php
+					if( is_archive() )
+						the_archive_title();
 					else
-						_e( 'News', 'tp' );
+						echo get_the_title( get_option( 'page_for_posts' ) );
 				?>
 			</h1>
 
-			<?php				
+			<?php
 				if( have_posts() ) {
 
 					while( have_posts() ) {

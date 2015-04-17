@@ -18,6 +18,11 @@ new TP_Includer( get_template_directory() . '/assets/inc/' );
 add_theme_support( 'automatic-feed-links' );
 
 /**
+ * Add support for <title>
+ */
+add_theme_support( 'title-tag' );
+
+/**
  * Add HTML5 theme support
  */
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
