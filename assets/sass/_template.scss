@@ -17,28 +17,7 @@
 
 .home {
 	#main {
-		@media (max-width: 640px) {
-			border-top: 0;
-		}
-
-		#content {
-			padding-left: 0;
-		}
-	}
-
-	@media (max-width: 640px) {
-		#sub-header {
-			padding: 45px 0 60px 0;
-
-			h1 {
-				font-size: 32px;
-				margin-bottom: 10px;
-			}
-
-			h2 {
-				font-size: 20px;
-			}
-		}
+		border-top: 0;
 	}
 }
 

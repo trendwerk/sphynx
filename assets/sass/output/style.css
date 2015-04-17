@@ -2172,7 +2172,7 @@ h1 {
   font-size: 40px; }
   @media (max-width: 640px) {
     h1 {
-      font-size: 24px; } }
+      font-size: 28px; } }
 
 h2 {
   font-size: 28px; }
@@ -3042,7 +3042,6 @@ body {
         text-decoration: none; }
       #main-navigation ul li ul {
         box-sizing: border-box;
-        padding: 5px 10px;
         width: 100%; }
         #main-navigation ul li ul li {
           font-size: 12px; }
@@ -3050,7 +3049,8 @@ body {
             padding-bottom: 0; }
   @media (min-width: 641px) {
     #main-navigation {
-      display: block; }
+      display: block;
+      padding: 0; }
       #main-navigation ul {
         margin: 0;
         padding: 0;
@@ -3130,27 +3130,34 @@ body {
 
 #sub-header {
   background-color: #CCC;
-  padding: 60px 0;
+  padding: 45px 0 60px 0;
   text-align: center; }
   #sub-header h1 {
-    font-size: 64px;
+    font-size: 32px;
     line-height: 1;
-    margin-bottom: 15px; }
+    margin-bottom: 10px; }
+    @media (min-width: 641px) {
+      #sub-header h1 {
+        font-size: 64px;
+        margin-bottom: 15px; } }
   #sub-header h2 {
-    font-size: 36px;
+    font-size: 20px;
     font-weight: normal;
     margin-bottom: 0; }
-  #sub-header p:last-of-type {
-    margin-bottom: 0; }
+    @media (min-width: 641px) {
+      #sub-header h2 {
+        font-size: 36px; } }
+  @media (min-width: 641px) {
+    #sub-header {
+      padding: 60px 0; } }
 
 #main {
   border-top: 1px solid #CCC;
   margin-top: 0;
-  padding: 30px 0 60px 0; }
+  padding: 45px 0 90px 0; }
   @media (min-width: 641px) {
     #main {
-      background: #FFF;
-      padding: 45px 0 60px 0; } }
+      background: #FFF; } }
   #main #content {
     box-sizing: border-box;
     margin: 0 auto;
@@ -3159,7 +3166,8 @@ body {
       #main #content {
         width: 740px; } }
     #main #content h1 {
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      text-align: center; }
     #main #content .meta {
       color: #999;
       font-size: 13px;
@@ -3203,33 +3211,32 @@ body {
     #footer a:active, #footer a:focus, #footer a:hover {
       color: #CCC; }
   #footer #credits {
-    box-sizing: border-box;
-    clear: both;
     float: left;
-    margin: 30px 0; }
+    margin: 30px 0;
+    width: 100%; }
     #footer #credits p {
       margin: 0; }
     #footer #credits #copyright {
-      float: left; }
-      @media (max-width: 640px) {
+      text-align: center;
+      width: 100%; }
+      @media (min-width: 641px) {
         #footer #credits #copyright {
-          text-align: center;
-          width: 100%; } }
+          float: left;
+          width: auto; } }
     #footer #credits nav {
-      float: right; }
-      @media (max-width: 640px) {
+      text-align: center;
+      width: 100%; }
+      @media (min-width: 641px) {
         #footer #credits nav {
-          text-align: center;
-          width: 100%; } }
+          float: right;
+          width: auto; } }
       #footer #credits nav div {
         display: inline-block; }
     #footer #credits ul {
-      margin: 0; }
+      margin: 0;
+      padding: 0; }
       #footer #credits ul li {
         display: inline; }
-        @media (max-width: 640px) {
-          #footer #credits ul li a {
-            float: none; } }
         #footer #credits ul li:after {
           color: #FFF;
           content: "|";
@@ -3252,19 +3259,8 @@ body {
  * @section    Templates
  * @subsection front-page.php
  */
-@media (max-width: 640px) {
-  .home #main {
-    border-top: 0; } }
-.home #main #content {
-  padding-left: 0; }
-@media (max-width: 640px) {
-  .home #sub-header {
-    padding: 45px 0 60px 0; }
-    .home #sub-header h1 {
-      font-size: 32px;
-      margin-bottom: 10px; }
-    .home #sub-header h2 {
-      font-size: 20px; } }
+.home #main {
+  border-top: 0; }
 
 /**
  * @section    Templates

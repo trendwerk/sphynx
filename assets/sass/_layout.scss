@@ -165,7 +165,6 @@ body {
 
 			ul {
 				box-sizing: border-box;
-				padding: 5px 10px;
 				width: 100%;
 
 				li {
@@ -181,6 +180,7 @@ body {
 
 	@media(min-width: 641px) {
 		display: block;
+		padding: 0;
 
 		ul {
 			margin: 0;
@@ -333,37 +333,43 @@ body {
 
 #sub-header {
 	background-color: #CCC;
-	padding: $line-height * 2 0;
+	padding: 45px 0 60px 0;
 	text-align: center;
 
 	h1 {
-		font-size: 64px;
+		font-size: 32px;
 		line-height: 1;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
+
+		@media(min-width: 641px) {
+			font-size: 64px;
+			margin-bottom: 15px;
+		}
 	}
 
 	h2 {
-		font-size: 36px;
+		font-size: 20px;
 		font-weight: normal;
 		margin-bottom: 0;
-	}
 
-	p {
-		
-		&:last-of-type {
-			margin-bottom: 0;
+		@media(min-width: 641px) {
+			font-size: 36px;
 		}
 	}
+
+	@media(min-width: 641px) {
+		padding: ($line-height * 2) 0;
+	}
 }
+
 
 #main {
 	border-top: 1px solid $border-color;
 	margin-top: 0;
-	padding: $line-height 0 ($line-height * 2) 0;
+	padding: ($line-height * 1.5) 0 ($line-height * 3) 0;
 
 	@media(min-width: 641px) {
 		background: $body-background;
-		padding: ($line-height * 1.5) 0 ($line-height * 2) 0;
 	}
 	
 	#content {
@@ -377,6 +383,7 @@ body {
 
 		h1 {
 			margin-bottom: $line-height;
+			text-align: center;
 		}
 
 		.meta {
@@ -449,30 +456,31 @@ body {
 	}
 	
 	#credits {
-		box-sizing: border-box;
-		clear: both;
 		float: left;
 		margin: $line-height 0;
+		width: 100%;
 		
 		p {
 			margin: 0;
 		}
 		
 		#copyright { 
-			float: left;
+			text-align: center;
+			width: 100%;
 
-			@media(max-width: 640px) {
-				text-align: center;
-				width: 100%;
+			@media(min-width: 641px) {
+				float: left;
+				width: auto;
 			}
 		}
 		
 		nav { 
-			float: right;
+			text-align: center;
+			width: 100%;
 
-			@media(max-width: 640px) {
-				text-align: center;
-				width: 100%;
+			@media(min-width: 641px) {
+				float: right;
+				width: auto;
 			}
 
 			div {
@@ -482,15 +490,10 @@ body {
 
 		ul {
 			margin: 0;
+			padding: 0;
 
 			li {
 				display: inline;
-
-				@media(max-width: 640px) {
-					a {
-						float: none;
-					}
-				}
 				
 				&:after {
 					color: #FFF;
