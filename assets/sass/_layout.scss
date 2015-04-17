@@ -141,7 +141,7 @@ body {
 	background-color: $footer-background;
 	display: none;
 	margin: 0;
-	padding: 10px 0;
+	padding: 15px 0;
 	z-index: 1;
 
 	@media(min-width: 641px) {
@@ -169,7 +169,19 @@ body {
 
 			a {
 				color: #FFF;
+				float: left;
 				text-decoration: none;
+				padding: 6px 0;
+				width: 100%;
+			}
+			
+			&.current-menu-ancestor,
+			&.current-menu-parent,
+			&.current-menu-item {
+
+				> a {
+					text-decoration: underline;
+				}
 			}
 
 			ul {
@@ -183,6 +195,10 @@ body {
 
 				li {
 					font-size: 12px;
+
+					a {
+						padding: 3px 0;
+					}
 
 					ul {
 						padding-bottom: 0;
