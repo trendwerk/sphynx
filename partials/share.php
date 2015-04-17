@@ -1,6 +1,6 @@
 <p class="addthis_toolbox">
 
-	<span><?php _e( 'Share this article', 'tp' ); ?></span>
+	<span class="label"><?php _e( 'Share this article', 'tp' ); ?></span>
 
 	<a title="<?php _e( 'Share this on Facebook', 'tp' ); ?>" class="addthis_button_facebook">
 		<i class="fa fa-facebook"></i>

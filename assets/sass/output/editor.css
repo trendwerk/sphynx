@@ -2169,40 +2169,40 @@ h6 {
   margin: 0 0 30px 0; }
 
 h1 {
-  font-size: 40px; }
-  @media (max-width: 640px) {
+  font-size: 28px; }
+  @media (min-width: 641px) {
     h1 {
-      font-size: 24px; } }
+      font-size: 40px; } }
 
 h2 {
-  font-size: 28px; }
-  @media (max-width: 640px) {
+  font-size: 20px; }
+  @media (min-width: 641px) {
     h2 {
-      font-size: 20px; } }
+      font-size: 28px; } }
 
 h3 {
-  font-size: 22px; }
-  @media (max-width: 640px) {
+  font-size: 18px; }
+  @media (min-width: 641px) {
     h3 {
-      font-size: 18px; } }
+      font-size: 22px; } }
 
 h4 {
-  font-size: 18px; }
-  @media (max-width: 640px) {
+  font-size: 16px; }
+  @media (min-width: 641px) {
     h4 {
-      font-size: 16px; } }
+      font-size: 18px; } }
 
 h5 {
-  font-size: 16px; }
-  @media (max-width: 640px) {
+  font-size: 14px; }
+  @media (min-width: 641px) {
     h5 {
-      font-size: 14px; } }
+      font-size: 16px; } }
 
 h6 {
-  font-size: 14px; }
-  @media (max-width: 640px) {
+  font-size: 12px; }
+  @media (min-width: 641px) {
     h6 {
-      font-size: 12px; } }
+      font-size: 14px; } }
 
 /**
  * @section    Typography
@@ -2927,5 +2927,9 @@ figure.alignnone img {
  */
 #tinymce {
   padding: 20px !important; }
+
+.video-container {
+  height: auto;
+  padding: 0; }
 
 /*# sourceMappingURL=editor.css.map */

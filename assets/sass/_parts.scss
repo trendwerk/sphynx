@@ -252,32 +252,46 @@ p.tags {
 .search-form {
 	form {
 		position: relative;
-		width: 265px;
+		width: 100%;
+
+		@media(min-width: 641px) {
+			width: 265px;
+		}
 
 		input[type="text"] {
 			@include placeholder(#999, $text-color);
 			color: $text-color;
+			font-size: 16px;
 			font-style: italic;
 			margin: 0;
 			right: 0;
 			width: 100%;
+
+			@media(min-width: 641px) {
+				font-size: 13px;
+			}
 		}
 
 		button[type="submit"] {
 			background: none;
 			box-shadow: none;
 			color: $text-light;
-			font-size: 13px;
+			font-size: 16px;
 			font-family: fontawesome;
 			font-weight: 400;
 			height: 39px;
-			margin: 0;
+			margin: 2px 0 0 0;
 			padding: 0 12px;
 			position: absolute;
 			right: 1px;
 			text-shadow: none;
 			top: 1px;
 			-webkit-font-smoothing: antialiased;
+
+			@media(min-width: 641px) {
+				font-size: 13px;
+				margin-top: 0;
+			}
 
 			&:active,
 			&:focus,
@@ -294,23 +308,23 @@ p.tags {
  */
 
 .addthis_toolbox {
-	span {
+	.label {
+		display: block;
 		float: left;
 		font-size: 13px;
-		width: 156px;
+		line-height: inherit;
+		margin-bottom: 10px;
+		width: 100%;
 
-		@media(max-width: 640px) {
+		@media(min-width: 441px) {
 			display: inline-block;
 			padding-right: 15px;
 			width: auto;
 		}
 
-		@media(max-width: 440px) {
-			display: block;
-			line-height: inherit;
-			margin-bottom: 10px;
-			line-height: 30px;
-			width: 100%;
+		@media(min-width: 641px) {
+			padding-right: 0;
+			width: 150px;
 		}
 	}
 }

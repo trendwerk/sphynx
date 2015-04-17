@@ -20,23 +20,19 @@ get_header();
 					<?php _e( 'in the category', 'tp' ) ?> <?php the_category( ', ' ) ?>
 				</p>
 
-				<div>
+				<figure>
+					<?php the_post_thumbnail( 'medium' ); ?>
+				</figure>
 
-					<figure>
-						<?php the_post_thumbnail( 'medium' ); ?>
-					</figure>
+				<?php 
+					the_content();
 
-					<?php 
-						the_content();
-
-						wp_link_pages( array(
-							'before'         => '<nav class="pages">',
-							'after'          => '</nav>',
-							'next_or_number' => 'next'
-						) );
-					?>
-
-				</div>
+					wp_link_pages( array(
+						'before'         => '<nav class="pages">',
+						'after'          => '</nav>',
+						'next_or_number' => 'next'
+					) );
+				?>
 
 				<?php get_template_part( 'partials/share' ); ?>
 

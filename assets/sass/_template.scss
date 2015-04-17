@@ -17,44 +17,7 @@
 
 .home {
 	#main {
-		@media (max-width: 640px) {
-			border-top: 0;
-		}
-
-		#content {
-			padding-left: 0;
-		}
-	}
-
-	@media (max-width: 640px) {
-		#sub-header {
-			padding: 45px 0 60px 0;
-
-			h1 {
-				font-size: 32px;
-				margin-bottom: 10px;
-			}
-
-			h2 {
-				font-size: 20px;
-			}
-		}
-	}
-}
-
-/**
- * @section    Templates
- * @subsection page.php
- */
-
-.page {
-	#content {
-		padding-right: 0;
-		padding-left: 20px;
-
-		@media (max-width: 640px) {
-			padding-left: 0;
-		}
+		border-top: 0;
 	}
 }
 
@@ -159,10 +122,5 @@
 }
 
 .search-no-results #main #content {
-	margin-bottom: $line-height * 2;
-}
-
-.error404 #main #content {
-	@include column-10;
 	margin-bottom: $line-height * 2;
 }
