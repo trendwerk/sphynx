@@ -6,17 +6,6 @@
  */
 
 /**
- * Debug a variable
- * 
- * @param mixed $var
- */
-function dbg( $var ) {
-	echo '<pre>';
-	print_r( $var );
-	echo '</pre>';
-}
-
-/**
  * Convert a string to an URL (Add http:// if necessary)
  *
  * @param string $url
