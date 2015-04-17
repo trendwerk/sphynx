@@ -49,9 +49,11 @@ class TP_Editor {
 	 * Define buttons
 	 */
 	function buttons( $settings ) {
-		$settings['toolbar1'] = 'formatselect, bold, italic, bullist, numlist, link, unlink, wp_more, fullscreen';
-		$settings['toolbar2'] = 'styleselect, undo, redo, charmap, blockquote, pastetext, removeformat';
+		$dfw_fs = ( 0 < strpos( $settings['toolbar1'], 'dfw' ) ) ? 'dfw' : 'fullscreen';
 
+		$settings['toolbar1'] = 'formatselect, bold, italic, bullist, numlist, link, unlink, wp_more, ' . $dfw_fs;
+		$settings['toolbar2'] = 'styleselect, undo, redo, charmap, blockquote, pastetext, removeformat';
+		
 		$settings['wordpress_adv_hidden'] = false;
 
 		return $settings;
