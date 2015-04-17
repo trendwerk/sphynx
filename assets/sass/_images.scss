@@ -266,16 +266,21 @@ figure.alignnone {
  */
 
 .video-container {
-	height: 0;
 	margin-bottom: 30px;
-	padding-top: 30px;
-	padding-bottom: 56.25%;
-	position: relative;
+}
 
-	iframe,
-	object,
-	embed,
-	video {
+@media(max-width: 740px) {
+	.video-container { 
+		height: 0;
+		padding-top: 30px;
+		padding-bottom: 56.25%;
+		position: relative;
+	}
+
+	.video-container iframe,
+	.video-container object,
+	.video-container embed,
+	.video-container video {
 		height: 100%;
 		left: 0;
 		position: absolute;
