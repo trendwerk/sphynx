@@ -3197,12 +3197,6 @@ body {
         color: #666; }
         #main #content .meta a:active, #main #content .meta a:focus, #main #content .meta a:hover {
           color: #1F6FD1; }
-    #main #content .tags span {
-      display: inline-block;
-      font-size: 13px;
-      padding-right: 125px;
-      position: relative;
-      top: 1px; }
     #main #content .tags .label {
       display: block;
       float: left;
