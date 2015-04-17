@@ -10,8 +10,6 @@ class TP_Editor {
 		add_action( 'init', array( $this, 'load_styles' ) );
 		add_action( 'tiny_mce_before_init', array( $this, 'styles' ) );
 		add_filter( 'tiny_mce_before_init', array( $this, 'buttons' ), 1 );
-
-		add_filter( 'embed_oembed_html', array( $this, 'video_embed' ) );
 	}
 
 	/**
@@ -57,12 +55,5 @@ class TP_Editor {
 		$settings['wordpress_adv_hidden'] = false;
 
 		return $settings;
-	}
-
-	/**
-	 * Responsive video container
-	 */
-	function video_embed( $html ) {
-		return '<div class="video-container">' . $html . '</div>';
 	}
 } new TP_Editor;
