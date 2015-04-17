@@ -21,6 +21,34 @@ body {
 	background: $body-background;
 }
 
+.container {
+	clear: both;
+	float: left;
+	margin: 0;
+	width: 100%;
+
+	.container-inner {
+		box-sizing: border-box;
+		margin: 0 auto;
+		padding: 0 20px;
+		width: 100%;
+
+		@media(min-width: 641px) {
+			padding: 0 40px;
+		}
+
+		@media(min-width: 981px) {
+			margin: 0 auto;
+			padding: 0;
+			width: 960px;
+		}
+
+		@media(min-width: 1201px) {
+			width: 1140px;
+		}
+	}
+}
+
 /**
  * @section    Layout
  * @subsection Page
@@ -28,28 +56,14 @@ body {
 
 #header {
 	background: $body-background;
-	padding: 10px 0;
+	box-sizing: border-box;
+	padding: 20px 0;
 	z-index: 1;
-
-	@media (max-width: 640px) {
-		box-sizing: border-box;
- 		margin: 0;
-	}
 
 	// logo, sitename and description
 
 	#logo {
-		@include column-6;
-
-		@media (max-width: 980px) {
-			clear: none;
-			margin: 10px 0;
-			width: 50%;
-		}
-
-		@media (max-width: 640px) {
-			width: 75%;
-		}
+		float: left;
 
 		#sitename {
 			font: bold 28px/35px $heading-font;
@@ -71,55 +85,46 @@ body {
 	// mobile navigation and search buttons
 
 	#mobile {
-		display: none;
+		float: right;
+		margin-top: 10px;
 
-		@media (max-width: 640px) {
-			display: block;
-			position: absolute;
-			margin: 0;
-			right: 20px;
-			top: 30px;
+		#mobile-navigation, 
+		#mobile-search {
+			background-color: $secondary-color;
+			border-radius: 3px;
+			color: #FFF;
+			cursor: pointer;
+			float: left;
+			font-size: 16px;
+			height: 40px;
+			line-height: 40px;
+			margin-left: 10px;
+			text-align: center;
+			width: 40px;
 
-			#mobile-navigation, 
-			#mobile-search {
-				background-color: $secondary-color;
-				border-radius: 3px;
-				color: #FFF;
-				cursor: pointer;
-				float: left;
-				font-size: 16px;
-				height: 40px;
-				line-height: 40px;
-				margin-left: 10px;
-				text-align: center;
-				width: 40px;
-
-				&.active,
-				&:hover {
-					background-color: $primary-color;
-				}
+			&.active,
+			&:hover {
+				background-color: $primary-color;
 			}
+		}
+
+		@media (min-width: 641px) {
+			display: none;
 		}
 	}
 
 	// search form
 
 	#search {
-		@include column-6;
-		margin-top: 20px;
-
-		@media (max-width: 980px) {
-			clear: none;
-			margin: 20px 0 10px 0;
-			width: 50%;
-		}
+		box-sizing: border-box;
+		float: right;
+		margin-top: 10px;
 
 		@media (max-width: 640px) {
-			background: $footer-background;
 			box-sizing: border-box;
 			border-radius: 3px;
 			display: none;
-			margin: 0;
+			margin-top: 10px;
 			width: 100%;
 		}
 
@@ -142,12 +147,6 @@ body {
 				}
 			}
 		}
-	}
-}
-
-@media (max-width: 640px) {
-	.logged-in #header #mobile {
-		top: 76px;
 	}
 }
 
@@ -394,12 +393,17 @@ body {
 	// content
 	
 	#content {
-		@include column-8;
-		padding-right: 20px;
+		box-sizing: border-box;
+		float: left;
+		width: 620px;
 
-		@media (max-width: 980px) {
-			padding-bottom: $line-height;
-			padding-right: 0;
+		@media(min-width: 1200px) {
+			width: 740px;
+		}
+
+		@media(max-width: 980px) {
+			clear: both;
+			width: 100%;
 		}
 
 		h1 {
@@ -460,7 +464,19 @@ body {
 	// sidebar
 
 	aside {
-		@include column-4;
+		box-sizing: border-box;
+		float: left;
+		margin: 10px;
+		width: 300px;
+
+		@media(max-width: 980px) {
+			clear: both;
+			width: 100%;
+		}
+
+		@media(min-width: 1200px) {
+			width: 360px;
+		}
 
 		@media (max-width: 980px) {
 			margin: 0 0 $line-height 0;
@@ -525,18 +541,27 @@ body {
 		width: 100%;
 	
 		.widget {
-			@include column-3;
 			background: none;
+			box-sizing: border-box;
 			clear: none;
 			float: left;
-			margin-top: $line-height;
-			margin-bottom: 0;
+			margin: $line-height 10px 0 10px;
 			padding: 0;
+			width: 220px;
+
+			@media(max-width: 980px) {
+				clear: both;
+				width: 100%;
+			}
+
+			@media(min-width: 1200px) {
+				width: 265px;
+			}
 
 			@media (max-width: 980px) {
 				clear: none;
 				width: 48%;
-			}
+			} //CHECKEN
 
 			@media (max-width: 640px) {
 				margin-right: 0;
@@ -589,9 +614,19 @@ body {
 	// credits
 	
 	#credits {
-		@include column-12;
-		margin-top: $line-height;
-		margin-bottom: $line-height;
+		box-sizing: border-box;
+		float: left;
+		margin: $line-height 10px $line-height 10px;
+		width: 940px;
+
+		@media(min-width: 1200px) {
+			width: 1120px;
+		}
+
+		@media(max-width: 980px) {
+			clear: both;
+			width: 100%;
+		}
 		
 		p {
 			margin: 0;

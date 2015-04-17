@@ -2867,15 +2867,11 @@ figure.alignnone img {
  * @subsection  Video-container for better responsive videos
  */
 .video-container {
-  margin-bottom: 30px; }
-
-@media (max-width: 740px) {
-  .video-container {
-    height: 0;
-    padding-top: 30px;
-    padding-bottom: 56.25%;
-    position: relative; }
-
+  height: 0;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  position: relative; }
   .video-container iframe,
   .video-container object,
   .video-container embed,
@@ -2884,7 +2880,8 @@ figure.alignnone img {
     left: 0;
     position: absolute;
     top: 0;
-    width: 100%; } }
+    width: 100%; }
+
 /**
  * @section WYSIWYG style
  *

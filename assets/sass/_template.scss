@@ -44,22 +44,6 @@
 
 /**
  * @section    Templates
- * @subsection page.php
- */
-
-.page {
-	#content {
-		padding-right: 0;
-		padding-left: 20px;
-
-		@media (max-width: 640px) {
-			padding-left: 0;
-		}
-	}
-}
-
-/**
- * @section    Templates
  * @subsection index.php
  * @subsection search.php
  */
@@ -163,6 +147,19 @@
 }
 
 .error404 #main #content {
-	@include column-10;
+	box-sizing: border-box;
+	float: left;
+	margin: 10px;
+	width: 780px;
+
+	@media(min-width: 1200px) {
+		width: 930px;
+	}
+
+	@media(max-width: 980px) {
+		clear: both;
+		width: 100%;
+	}
+
 	margin-bottom: $line-height * 2;
 }
