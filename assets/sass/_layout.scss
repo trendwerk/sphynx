@@ -59,8 +59,6 @@ body {
 	padding: 20px 0;
 	z-index: 1;
 
-	// logo, sitename and description
-
 	#logo {
 		text-align: center;
 		width: 100%;
@@ -87,8 +85,6 @@ body {
 			margin: 0;
 		}
 	}
-
-	// mobile navigation and search buttons
 
 	#mobile {
 		margin-top: 10px;
@@ -141,8 +137,6 @@ body {
 	}
 }
 
-// main navigation
-
 #main-navigation {
 	background-color: $footer-background;
 	display: none;
@@ -150,13 +144,28 @@ body {
 	padding: 10px 0;
 	z-index: 1;
 
+	@media(min-width: 641px) {
+		display: block;
+		padding: 0;
+	}
+
 	ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 
+		@media(min-width: 641px) {
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+
 		li {
 			display: block;
+
+			@media(min-width: 641px) {
+				float: left;
+			}
 
 			a {
 				color: #FFF;
@@ -165,7 +174,12 @@ body {
 
 			ul {
 				box-sizing: border-box;
+				padding: 5px 10px;
 				width: 100%;
+
+				@media(min-width: 641px) {
+					padding: 0;
+				}
 
 				li {
 					font-size: 12px;
@@ -176,22 +190,10 @@ body {
 				}
 			}
 		}
-	}
 
-	@media(min-width: 641px) {
-		display: block;
-		padding: 0;
-
-		ul {
-			margin: 0;
-			padding: 0;
-			position: relative;
-
+		@media(min-width: 641px) {
 			li {
-				float: left;
-
 				// show sub-menu
-
 				&:active,
 				&:focus,
 				&:hover {
@@ -202,7 +204,6 @@ body {
 				}
 
 				// if item has children, show indicator
-
 				&.page_item_has_children,
 				&.menu-item-has-children,
 				&.has-children {
@@ -231,7 +232,6 @@ body {
 			}
 
 			// first level only
-
 			> li {
 				position: relative;
 				display: block;
@@ -257,7 +257,6 @@ body {
 			}
 
 			// second level, third level
-
 			ul, ul ul {
 				display: none;
 				margin: 0;
@@ -313,7 +312,6 @@ body {
 					}
 
 					// third level
-
 					ul {
 						margin-left: 0;
 						left: 100%;
@@ -328,8 +326,6 @@ body {
 		}
 	}
 }
-
-// sub-header
 
 #sub-header {
 	background-color: #CCC;

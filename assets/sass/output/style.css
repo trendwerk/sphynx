@@ -2169,40 +2169,40 @@ h6 {
   margin: 0 0 30px 0; }
 
 h1 {
-  font-size: 40px; }
-  @media (max-width: 640px) {
+  font-size: 28px; }
+  @media (min-width: 641px) {
     h1 {
-      font-size: 28px; } }
+      font-size: 40px; } }
 
 h2 {
-  font-size: 28px; }
-  @media (max-width: 640px) {
+  font-size: 20px; }
+  @media (min-width: 641px) {
     h2 {
-      font-size: 20px; } }
+      font-size: 28px; } }
 
 h3 {
-  font-size: 22px; }
-  @media (max-width: 640px) {
+  font-size: 18px; }
+  @media (min-width: 641px) {
     h3 {
-      font-size: 18px; } }
+      font-size: 22px; } }
 
 h4 {
-  font-size: 18px; }
-  @media (max-width: 640px) {
+  font-size: 16px; }
+  @media (min-width: 641px) {
     h4 {
-      font-size: 16px; } }
+      font-size: 18px; } }
 
 h5 {
-  font-size: 16px; }
-  @media (max-width: 640px) {
+  font-size: 14px; }
+  @media (min-width: 641px) {
     h5 {
-      font-size: 14px; } }
+      font-size: 16px; } }
 
 h6 {
-  font-size: 14px; }
-  @media (max-width: 640px) {
+  font-size: 12px; }
+  @media (min-width: 641px) {
     h6 {
-      font-size: 12px; } }
+      font-size: 14px; } }
 
 /**
  * @section    Typography
@@ -3034,102 +3034,109 @@ body {
   margin: 0;
   padding: 10px 0;
   z-index: 1; }
+  @media (min-width: 641px) {
+    #main-navigation {
+      display: block;
+      padding: 0; } }
   #main-navigation ul {
     list-style-type: none;
     margin: 0;
     padding: 0; }
+    @media (min-width: 641px) {
+      #main-navigation ul {
+        margin: 0;
+        padding: 0;
+        position: relative; } }
     #main-navigation ul li {
       display: block; }
+      @media (min-width: 641px) {
+        #main-navigation ul li {
+          float: left; } }
       #main-navigation ul li a {
         color: #FFF;
         text-decoration: none; }
       #main-navigation ul li ul {
         box-sizing: border-box;
+        padding: 5px 10px;
         width: 100%; }
+        @media (min-width: 641px) {
+          #main-navigation ul li ul {
+            padding: 0; } }
         #main-navigation ul li ul li {
           font-size: 12px; }
           #main-navigation ul li ul li ul {
             padding-bottom: 0; }
-  @media (min-width: 641px) {
-    #main-navigation {
-      display: block;
-      padding: 0; }
-      #main-navigation ul {
-        margin: 0;
-        padding: 0;
-        position: relative; }
-        #main-navigation ul li {
-          float: left; }
-          #main-navigation ul li:active > ul, #main-navigation ul li:focus > ul, #main-navigation ul li:hover > ul {
-            display: block; }
-          #main-navigation ul li.page_item_has_children, #main-navigation ul li.menu-item-has-children, #main-navigation ul li.has-children {
-            padding-right: 10px; }
-            #main-navigation ul li.page_item_has_children > a:after, #main-navigation ul li.menu-item-has-children > a:after, #main-navigation ul li.has-children > a:after {
-              content: "\f0d7";
-              display: inline-block;
-              font-family: FontAwesome;
-              font-size: 10px;
-              position: absolute;
-              padding-left: 5px;
-              padding-right: 5px; }
-          #main-navigation ul li.current-menu-item, #main-navigation ul li.current-menu-parent, #main-navigation ul li.current-menu-ancestor {
-            background-color: #222; }
-          #main-navigation ul li a {
-            text-decoration: none; }
-        #main-navigation ul > li {
-          position: relative;
+    @media (min-width: 641px) {
+      #main-navigation ul li:active > ul, #main-navigation ul li:focus > ul, #main-navigation ul li:hover > ul {
+        display: block; }
+      #main-navigation ul li.page_item_has_children, #main-navigation ul li.menu-item-has-children, #main-navigation ul li.has-children {
+        padding-right: 10px; }
+        #main-navigation ul li.page_item_has_children > a:after, #main-navigation ul li.menu-item-has-children > a:after, #main-navigation ul li.has-children > a:after {
+          content: "\f0d7";
+          display: inline-block;
+          font-family: FontAwesome;
+          font-size: 10px;
+          position: absolute;
+          padding-left: 5px;
+          padding-right: 5px; }
+      #main-navigation ul li.current-menu-item, #main-navigation ul li.current-menu-parent, #main-navigation ul li.current-menu-ancestor {
+        background-color: #222; }
+      #main-navigation ul li a {
+        text-decoration: none; }
+      #main-navigation ul > li {
+        position: relative;
+        display: block;
+        float: left;
+        line-height: 60px;
+        padding: 0; }
+        #main-navigation ul > li:active, #main-navigation ul > li:focus, #main-navigation ul > li:hover {
+          background-color: #222; }
+        #main-navigation ul > li > a {
+          color: #FFF;
           display: block;
-          float: left;
+          font-size: 14px;
+          font-weight: bold;
           line-height: 60px;
-          padding: 0; }
-          #main-navigation ul > li:active, #main-navigation ul > li:focus, #main-navigation ul > li:hover {
-            background-color: #222; }
-          #main-navigation ul > li > a {
+          padding: 0 20px;
+          text-transform: uppercase; }
+      #main-navigation ul ul, #main-navigation ul ul ul {
+        display: none;
+        margin: 0;
+        position: absolute;
+        top: auto;
+        width: 220px;
+        z-index: 1; }
+        #main-navigation ul ul li, #main-navigation ul ul ul li {
+          clear: both;
+          display: block;
+          height: 40px;
+          width: 100%; }
+          #main-navigation ul ul li a, #main-navigation ul ul ul li a {
+            box-sizing: border-box;
+            background: #222;
             color: #FFF;
             display: block;
-            font-size: 14px;
-            font-weight: bold;
-            line-height: 60px;
-            padding: 0 20px;
-            text-transform: uppercase; }
-        #main-navigation ul ul, #main-navigation ul ul ul {
-          display: none;
-          margin: 0;
-          position: absolute;
-          top: auto;
-          width: 220px;
-          z-index: 1; }
-          #main-navigation ul ul li, #main-navigation ul ul ul li {
-            clear: both;
-            display: block;
+            font-size: 12px;
+            line-height: 40px;
             height: 40px;
+            padding: 0 20px;
+            text-transform: none;
             width: 100%; }
-            #main-navigation ul ul li a, #main-navigation ul ul ul li a {
-              box-sizing: border-box;
-              background: #222;
-              color: #FFF;
-              display: block;
-              font-size: 12px;
-              line-height: 40px;
-              height: 40px;
-              padding: 0 20px;
-              text-transform: none;
-              width: 100%; }
-              #main-navigation ul ul li a:active, #main-navigation ul ul li a:focus, #main-navigation ul ul li a:hover, #main-navigation ul ul ul li a:active, #main-navigation ul ul ul li a:focus, #main-navigation ul ul ul li a:hover {
-                text-decoration: underline; }
-            #main-navigation ul ul li.page_item_has_children, #main-navigation ul ul li.menu-item-has-children, #main-navigation ul ul li.has-children, #main-navigation ul ul ul li.page_item_has_children, #main-navigation ul ul ul li.menu-item-has-children, #main-navigation ul ul ul li.has-children {
-              padding-right: 0; }
-              #main-navigation ul ul li.page_item_has_children > a:after, #main-navigation ul ul li.menu-item-has-children > a:after, #main-navigation ul ul li.has-children > a:after, #main-navigation ul ul ul li.page_item_has_children > a:after, #main-navigation ul ul ul li.menu-item-has-children > a:after, #main-navigation ul ul ul li.has-children > a:after {
-                content: "\f0da";
-                display: inline-block; }
-              #main-navigation ul ul li.page_item_has_children > a:active:after, #main-navigation ul ul li.page_item_has_children > a:focus:after, #main-navigation ul ul li.page_item_has_children > a:hover:after, #main-navigation ul ul li.menu-item-has-children > a:active:after, #main-navigation ul ul li.menu-item-has-children > a:focus:after, #main-navigation ul ul li.menu-item-has-children > a:hover:after, #main-navigation ul ul li.has-children > a:active:after, #main-navigation ul ul li.has-children > a:focus:after, #main-navigation ul ul li.has-children > a:hover:after, #main-navigation ul ul ul li.page_item_has_children > a:active:after, #main-navigation ul ul ul li.page_item_has_children > a:focus:after, #main-navigation ul ul ul li.page_item_has_children > a:hover:after, #main-navigation ul ul ul li.menu-item-has-children > a:active:after, #main-navigation ul ul ul li.menu-item-has-children > a:focus:after, #main-navigation ul ul ul li.menu-item-has-children > a:hover:after, #main-navigation ul ul ul li.has-children > a:active:after, #main-navigation ul ul ul li.has-children > a:focus:after, #main-navigation ul ul ul li.has-children > a:hover:after {
-                text-decoration: none; }
-            #main-navigation ul ul li ul, #main-navigation ul ul ul li ul {
-              margin-left: 0;
-              left: 100%;
-              margin-top: -40px; }
-              #main-navigation ul ul li ul ul, #main-navigation ul ul ul li ul ul {
-                margin-top: -40px; } }
+            #main-navigation ul ul li a:active, #main-navigation ul ul li a:focus, #main-navigation ul ul li a:hover, #main-navigation ul ul ul li a:active, #main-navigation ul ul ul li a:focus, #main-navigation ul ul ul li a:hover {
+              text-decoration: underline; }
+          #main-navigation ul ul li.page_item_has_children, #main-navigation ul ul li.menu-item-has-children, #main-navigation ul ul li.has-children, #main-navigation ul ul ul li.page_item_has_children, #main-navigation ul ul ul li.menu-item-has-children, #main-navigation ul ul ul li.has-children {
+            padding-right: 0; }
+            #main-navigation ul ul li.page_item_has_children > a:after, #main-navigation ul ul li.menu-item-has-children > a:after, #main-navigation ul ul li.has-children > a:after, #main-navigation ul ul ul li.page_item_has_children > a:after, #main-navigation ul ul ul li.menu-item-has-children > a:after, #main-navigation ul ul ul li.has-children > a:after {
+              content: "\f0da";
+              display: inline-block; }
+            #main-navigation ul ul li.page_item_has_children > a:active:after, #main-navigation ul ul li.page_item_has_children > a:focus:after, #main-navigation ul ul li.page_item_has_children > a:hover:after, #main-navigation ul ul li.menu-item-has-children > a:active:after, #main-navigation ul ul li.menu-item-has-children > a:focus:after, #main-navigation ul ul li.menu-item-has-children > a:hover:after, #main-navigation ul ul li.has-children > a:active:after, #main-navigation ul ul li.has-children > a:focus:after, #main-navigation ul ul li.has-children > a:hover:after, #main-navigation ul ul ul li.page_item_has_children > a:active:after, #main-navigation ul ul ul li.page_item_has_children > a:focus:after, #main-navigation ul ul ul li.page_item_has_children > a:hover:after, #main-navigation ul ul ul li.menu-item-has-children > a:active:after, #main-navigation ul ul ul li.menu-item-has-children > a:focus:after, #main-navigation ul ul ul li.menu-item-has-children > a:hover:after, #main-navigation ul ul ul li.has-children > a:active:after, #main-navigation ul ul ul li.has-children > a:focus:after, #main-navigation ul ul ul li.has-children > a:hover:after {
+              text-decoration: none; }
+          #main-navigation ul ul li ul, #main-navigation ul ul ul li ul {
+            margin-left: 0;
+            left: 100%;
+            margin-top: -40px; }
+            #main-navigation ul ul li ul ul, #main-navigation ul ul ul li ul ul {
+              margin-top: -40px; } }
 
 #sub-header {
   background-color: #CCC;
