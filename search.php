@@ -49,10 +49,6 @@ get_header();
 			<?php endif; ?>	   
 			 
 		</section>
-
-		<aside>
-			<?php dynamic_sidebar( 'page' ); ?>
-		</aside>		
 				
 	</div>
 	

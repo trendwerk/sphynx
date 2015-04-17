@@ -1,10 +1,6 @@
 		<footer id="footer" class="container">
 		
 			<div class="container-inner">
-			
-				<aside>
-					<?php dynamic_sidebar( 'footer' ); ?>
-				</aside>
 				
 				<div id="credits">
 				

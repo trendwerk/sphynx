@@ -5,10 +5,6 @@ get_header();
 <section id="main" class="container">
 
 	<div class="container-inner">
-	
-		<aside>
-			<?php dynamic_sidebar( 'page' ); ?>
-		</aside>
 		
 		<article id="content">	
 			

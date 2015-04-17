@@ -1,7 +1,4 @@
 $(function() {
-  if (window.innerWidth < 980) {
-    $('#main aside').insertAfter('#main #content');
-  }
   return $('#mobile-navigation, #mobile-search').click(function() {
     $($(this).data('toggle')).slideToggle('fast', function() {
       if (!$(this).is(':visible')) {

@@ -42,10 +42,6 @@ get_header();
 			?>
 			
 		</section>
-				
-		<aside>
-			<?php dynamic_sidebar( 'blog' ); ?>
-		</aside>
 		
 	</div>
 	
