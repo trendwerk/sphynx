@@ -6,7 +6,6 @@
  */
 
 class TP_Enqueue {
-	
 	function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'frontend' ) );
 	}
@@ -39,5 +38,4 @@ class TP_Enqueue {
 		wp_deregister_script( 'jquery' );
 		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' );
 	}
-
 } new TP_Enqueue;
