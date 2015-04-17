@@ -54,32 +54,26 @@ module.exports = function( grunt ) {
 		 * Watch things
 		 */
 		watch: {
-			sass: {
-				files: [
-					'assets/sass/*'
-				],
-				tasks: [ 'sass' ],
-				options: {
-					livereload: true
-				},
-			},
 			coffee: {
-				files: [
-					'assets/coffee/*'
-				],
+				files: [ 'assets/coffee/*' ],
 				tasks: [ 'coffee' ],
 				options: {
 					livereload: true
 				},
 			},
 			coffeelint: {
-				files: [
-					'assets/coffee/*'
-				],
+				files: [ 'assets/coffee/*' ],
 				tasks: [ 'coffeelint' ],
 				options: {
 					livereload: true
 				},				
+			},
+			sass: {
+				files: [ 'assets/sass/*' ],
+				tasks: [ 'sass' ],
+				options: {
+					livereload: true
+				},
 			}
 		}
 
@@ -89,9 +83,9 @@ module.exports = function( grunt ) {
 	 * Load tasks
 	 */
 	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
+	grunt.loadNpmTasks( 'grunt-coffeelint' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-coffeelint' );
 
 	/**
 	 * Run tasks
