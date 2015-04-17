@@ -3041,14 +3041,28 @@ body {
     padding: 0; }
     @media (min-width: 641px) {
       #main-navigation ul {
-        margin: 0;
-        padding: 0;
         position: relative; } }
     #main-navigation ul li {
       display: block; }
       @media (min-width: 641px) {
         #main-navigation ul li {
-          float: left; } }
+          float: left; }
+          #main-navigation ul li:active > ul, #main-navigation ul li:focus > ul, #main-navigation ul li:hover > ul {
+            display: block; }
+          #main-navigation ul li.page_item_has_children, #main-navigation ul li.menu-item-has-children, #main-navigation ul li.has-children {
+            padding-right: 10px; }
+            #main-navigation ul li.page_item_has_children > a:after, #main-navigation ul li.menu-item-has-children > a:after, #main-navigation ul li.has-children > a:after {
+              content: "\f0d7";
+              display: inline-block;
+              font-family: FontAwesome;
+              font-size: 10px;
+              position: absolute;
+              padding-left: 5px;
+              padding-right: 5px; }
+          #main-navigation ul li.current-menu-item, #main-navigation ul li.current-menu-parent, #main-navigation ul li.current-menu-ancestor {
+            background-color: #222; }
+          #main-navigation ul li a {
+            text-decoration: none; } }
       #main-navigation ul li a {
         color: #FFF;
         float: left;
@@ -3063,30 +3077,19 @@ body {
         width: 100%; }
         @media (min-width: 641px) {
           #main-navigation ul li ul {
-            padding: 0; } }
+            padding: 0;
+            top: 60px;
+            width: 220px; } }
         #main-navigation ul li ul li {
           font-size: 12px; }
           #main-navigation ul li ul li a {
-            padding: 3px 0; }
+            padding: 5px 10px; }
+            @media (min-width: 641px) {
+              #main-navigation ul li ul li a {
+                padding: 5px 20px; } }
           #main-navigation ul li ul li ul {
             padding-bottom: 0; }
     @media (min-width: 641px) {
-      #main-navigation ul li:active > ul, #main-navigation ul li:focus > ul, #main-navigation ul li:hover > ul {
-        display: block; }
-      #main-navigation ul li.page_item_has_children, #main-navigation ul li.menu-item-has-children, #main-navigation ul li.has-children {
-        padding-right: 10px; }
-        #main-navigation ul li.page_item_has_children > a:after, #main-navigation ul li.menu-item-has-children > a:after, #main-navigation ul li.has-children > a:after {
-          content: "\f0d7";
-          display: inline-block;
-          font-family: FontAwesome;
-          font-size: 10px;
-          position: absolute;
-          padding-left: 5px;
-          padding-right: 5px; }
-      #main-navigation ul li.current-menu-item, #main-navigation ul li.current-menu-parent, #main-navigation ul li.current-menu-ancestor {
-        background-color: #222; }
-      #main-navigation ul li a {
-        text-decoration: none; }
       #main-navigation ul > li {
         position: relative;
         display: block;
@@ -3108,7 +3111,6 @@ body {
         margin: 0;
         position: absolute;
         top: auto;
-        width: 220px;
         z-index: 1; }
         #main-navigation ul ul li, #main-navigation ul ul ul li {
           clear: both;
@@ -3122,8 +3124,7 @@ body {
             display: block;
             font-size: 12px;
             line-height: 40px;
-            height: 40px;
-            padding: 0 20px;
+            padding: 5px 20px;
             text-transform: none;
             width: 100%; }
             #main-navigation ul ul li a:active, #main-navigation ul ul li a:focus, #main-navigation ul ul li a:hover, #main-navigation ul ul ul li a:active, #main-navigation ul ul ul li a:focus, #main-navigation ul ul ul li a:hover {
@@ -3137,10 +3138,7 @@ body {
               text-decoration: none; }
           #main-navigation ul ul li ul, #main-navigation ul ul ul li ul {
             margin-left: 0;
-            left: 100%;
-            margin-top: -40px; }
-            #main-navigation ul ul li ul ul, #main-navigation ul ul ul li ul ul {
-              margin-top: -40px; } }
+            left: 100%; } }
 
 #sub-header {
   background-color: #CCC;

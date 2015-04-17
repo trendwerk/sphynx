@@ -155,8 +155,6 @@ body {
 		padding: 0;
 
 		@media(min-width: 641px) {
-			margin: 0;
-			padding: 0;
 			position: relative;
 		}
 
@@ -165,50 +163,7 @@ body {
 
 			@media(min-width: 641px) {
 				float: left;
-			}
 
-			a {
-				color: #FFF;
-				float: left;
-				text-decoration: none;
-				padding: 6px 0;
-				width: 100%;
-			}
-			
-			&.current-menu-ancestor,
-			&.current-menu-parent,
-			&.current-menu-item {
-
-				> a {
-					text-decoration: underline;
-				}
-			}
-
-			ul {
-				box-sizing: border-box;
-				padding: 5px 10px;
-				width: 100%;
-
-				@media(min-width: 641px) {
-					padding: 0;
-				}
-
-				li {
-					font-size: 12px;
-
-					a {
-						padding: 3px 0;
-					}
-
-					ul {
-						padding-bottom: 0;
-					}
-				}
-			}
-		}
-
-		@media(min-width: 641px) {
-			li {
 				// show sub-menu
 				&:active,
 				&:focus,
@@ -247,6 +202,54 @@ body {
 				}
 			}
 
+			a {
+				color: #FFF;
+				float: left;
+				text-decoration: none;
+				padding: 6px 0;
+				width: 100%;
+			}
+			
+			&.current-menu-ancestor,
+			&.current-menu-parent,
+			&.current-menu-item {
+
+				> a {
+					text-decoration: underline;
+				}
+			}
+
+			ul {
+				box-sizing: border-box;
+				padding: 5px 10px;
+				width: 100%;
+
+				@media(min-width: 641px) {
+					padding: 0;
+					top: 60px;
+					width: 220px;
+				}
+
+				li {
+					font-size: 12px;
+
+					a {
+						padding: 5px 10px;
+
+						@media(min-width: 641px) {
+							padding: 5px 20px;
+						}
+					}
+
+					ul {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+
+		@media(min-width: 641px) {
+
 			// first level only
 			> li {
 				position: relative;
@@ -278,7 +281,6 @@ body {
 				margin: 0;
 				position: absolute;
 				top: auto;
-				width: 220px;
 				z-index: 1;
 
 				li {
@@ -294,8 +296,7 @@ body {
 						display: block;	
 						font-size: 12px;
 						line-height: 40px;
-						height: 40px;
-						padding: 0 20px;
+						padding: 5px 20px;
 						text-transform: none;
 						width: 100%;
 
@@ -331,11 +332,6 @@ body {
 					ul {
 						margin-left: 0;
 						left: 100%;
-						margin-top: -40px;
-
-						ul {
-							margin-top: -40px;
-						}
 					}
 				}
 			}
