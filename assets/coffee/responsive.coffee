@@ -1,9 +1,5 @@
 $ ->
 
-  # Sidebar
-  if window.innerWidth < 980
-    $( '#main aside' ).insertAfter( '#main #content' )
-
   # Toggle navigation search
   $( '#mobile-navigation, #mobile-search' ).click ->
     $( $( this ).data 'toggle' ).slideToggle 'fast', ->

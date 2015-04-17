@@ -36,10 +36,6 @@ get_header();
 					
 		</article>
 		
-		<aside>
-			<?php dynamic_sidebar( 'home' ); ?>
-		</aside>
-		
 	</div>
 	
 </section>

@@ -56,10 +56,6 @@ get_header();
 
 		</article>
 
-		<aside>
-			<?php dynamic_sidebar( 'blog' ); ?>
-		</aside>
-
 	</div>
 
 </section>
