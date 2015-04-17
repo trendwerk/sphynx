@@ -3011,9 +3011,8 @@ body {
         #header #mobile #mobile-navigation,
         #header #mobile #mobile-search {
           float: left; } }
-      #header #mobile #mobile-navigation.active, #header #mobile #mobile-navigation:hover,
-      #header #mobile #mobile-search.active,
-      #header #mobile #mobile-search:hover {
+      #header #mobile #mobile-navigation.active,
+      #header #mobile #mobile-search.active {
         background-color: #333; }
   #header #search {
     display: none;

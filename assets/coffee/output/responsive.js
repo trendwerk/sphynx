@@ -1,5 +1,6 @@
 $(function() {
   return $('#mobile-navigation, #mobile-search').click(function() {
+    $(this).toggleClass('active');
     $($(this).data('toggle')).slideToggle('fast', function() {
       if (!$(this).is(':visible')) {
         return $(this).css({
