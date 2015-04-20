@@ -1,92 +1,4 @@
 @charset "UTF-8";
-/**
- * Main stylesheet
- *
- * @package			WordPress
- * @subpackage		TrendPress
- * @author			Trendwerk
- * @license			GPL v2
- * 
- */
-/**
- * @section Import
- *
- * Import other SASS files
- */
-/**
- * @section Variables
- *
- * This is where you should include all the recurring colors, 
- * fonts, etc.te
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
-/**
- * @section Variables
- *
- * Defines recurring colors and fonts
- */
-/**
- * @section Mixins
- *
- * Mixins allow you to embed all the properties of a class into another class 
- * by simply including the class name as one of its properties. It’s just like 
- * variables, but for whole classes. Mixins can also behave like functions, 
- * and take arguments.
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
-/**
- * @section 	Mixins
- * @subsection  Animate 
- */
-/**
- * @section    Mixins
- * @subsection Collumns
- */
-/**
- * @section    Mixins
- * @subsection Font Awesome
- * 
- * website: http://fontawesome.io/icons/
- * cheatsheet: http://fortawesome.github.io/Font-Awesome/cheatsheet/
- */
-/**
- * @section    Mixins
- * @subsection Gradient
- */
-/**
- * @section    Mixins
- * @subsection Placeholder
- */
-/**
- * @section    Mixins
- * @subsection Sprites
- */
-/**
- * @section Extends
- *
- * Extends are like mixins but without the variables. Use them
- * to build pre-defined styles
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
-/** 
- * @section    Extends
- * @subsection Ellipsis
- */
 .ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -450,21 +362,6 @@ td,
 th {
   padding: 0; }
 
-/**
- * @section Reset
- *
- * Resets all elements to render everything the same in all browsers
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
-/**
- * @section    Forms
- * @subsection Forms reset (based on Formalize)
- */
 input[type="search"]::-webkit-search-decoration {
   display: none; }
 
@@ -531,10 +428,10 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select {
+  -webkit-appearance: none;
   box-sizing: border-box;
   text-align: left;
-  vertical-align: top;
-  -webkit-appearance: none; }
+  vertical-align: top; }
 
 textarea {
   line-height: 24px;
@@ -591,12 +488,12 @@ input.placeholder_text {
   color: #888; }
 
 select {
+  -moz-appearance: none;
   background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
-  background-repeat: no-repeat;
   background-position: right center;
-  text-indent: 0.01px;
-  text-overflow: '';
-  -moz-appearance: none; }
+  background-repeat: no-repeat;
+  text-indent: .01px;
+  text-overflow: ''; }
 
 select[multiple],
 select[size],
@@ -625,8 +522,8 @@ select[size="1"] {
   ::-webkit-validation-bubble-message {
     box-shadow: none;
     background-color: #333;
-    border: none;
-    color: #FFF;
+    border: 0;
+    color: #fff;
     font-family: "Helvetica Neue", sans-serif;
     font-size: 14px;
     min-height: 16px;
@@ -640,21 +537,6 @@ select[size="1"] {
     box-shadow: none;
     background: #666;
     border-color: #666; } }
-/**
- * @section Typography
- * 
- * Defines the styling of text elements
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
-/**
- * @section    Typography
- * @subsection Import Font Awesome
- */
 @font-face {
   font-family: 'FontAwesome';
   src: url("../../../assets/fonts/fontawesome-webfont.eot?v=4.1.0");
@@ -2134,28 +2016,16 @@ select[size="1"] {
 .fa-bomb:before {
   content: "\f1e2"; }
 
-/**
- * @section    Typography
- * @subsection Render settings
- */
 html {
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-size-adjust: none; }
 
-/**
- * @section    Typography
- * @subsection Content
- */
 body {
   color: #666;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   line-height: 30px; }
 
-/**
- * @section    Typography
- * @subsection Headings
- */
 h1,
 h2,
 h3,
@@ -2166,7 +2036,7 @@ h6 {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 700;
   line-height: 1.325em;
-  margin: 0 0 30px 0; }
+  margin: 0 0 30px; }
 
 h1 {
   font-size: 28px; }
@@ -2204,20 +2074,12 @@ h6 {
     h6 {
       font-size: 14px; } }
 
-/**
- * @section    Typography
- * @subsection Links
- */
 a {
-  color: #1F6FD1;
+  color: #1d6fd1;
   outline: 0;
-  text-decoration: underline;
-  /* more link */
-  /* add characters to links */
-  /* call to action buttons */
-  /* style for tags */ }
+  text-decoration: underline; }
   a:active, a:focus, a:hover {
-    color: #154c8e;
+    color: #144b8e;
     text-decoration: underline; }
   a.more-link {
     white-space: nowrap; }
@@ -2226,61 +2088,52 @@ a {
     font-family: fontawesome;
     font-size: 9px; }
   a.back:before, a.prev:before {
-    content: "\f053";
+    content: '\f053';
     padding-right: 4px; }
   a.more-link:after, a.next:after {
-    content: "\f054";
+    content: '\f054';
     padding-left: 4px; }
   a.button {
     background: #333;
     border-radius: 3px;
-    color: #FFF;
+    color: #fff;
     display: inline-block;
     font-weight: bold;
     height: 50px;
     line-height: 50px;
-    margin: 0 10px 10px 0;
+    margin: 0 10px 10px;
     padding: 0 35px;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    white-space: nowrap;
-    /* secondary button */ }
+    white-space: nowrap; }
     a.button:active {
       top: 1px; }
     a.button:active, a.button:focus, a.button:hover {
       background: #0d0d0d; }
     a.button.secondary {
       background: #999;
-      color: #FFF; }
+      color: #fff; }
       a.button.secondary:active, a.button.secondary:focus, a.button.secondary:hover {
         background: #737373; }
-  a[rel="tag"] {
-    background: #CCC;
+  a[rel='tag'] {
+    background: #ccc;
     border-radius: 3px;
     color: #666;
     display: inline-block;
-    font-size: 12px !important;
+    font-size: 12px;
     line-height: 25px;
-    margin: 0 10px 10px 0;
+    margin: 0 10px 10px;
     padding: 0 10px;
     text-decoration: none;
     text-transform: lowercase; }
-    a[rel="tag"]:active, a[rel="tag"]:focus, a[rel="tag"]:hover {
+    a[rel='tag']:active, a[rel='tag']:focus, a[rel='tag']:hover {
       background: #333;
-      color: #FFF; }
+      color: #fff; }
 
-/**
- * @section    Typography
- * @subsection Paragraphs
- */
 p {
-  margin: 0 0 30px 0; }
+  margin: 0 0 30px; }
 
-/**
- * @section    Typography
- * @subsection Text styles
- */
 strong,
 b {
   font-weight: bold; }
@@ -2289,10 +2142,6 @@ em,
 i {
   font-style: italic; }
 
-/**
- * @section    Typography
- * @subsection Lists
- */
 ul {
   list-style-position: outside;
   margin: 0 0 30px 20px; }
@@ -2307,41 +2156,33 @@ ol {
     list-style-type: lower-alpha;
     margin: 0 0 0 20px; }
 
-/**
- * @section    Typography
- * @subsection Tables
- */
 table {
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-collapse: collapse;
   border-spacing: 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 30px;
   width: 100%; }
   table tr {
-    border-bottom: 1px solid #CCC;
-    border-right: 1px solid #CCC; }
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc; }
     table tr:nth-child(even) {
-      background: #EEE; }
+      background: #eee; }
     table tr td,
     table tr th {
-      border-right: 1px solid #CCC;
+      border-right: 1px solid #ccc;
       padding: 5px 10px;
       text-align: left; }
     table tr th {
       font-weight: bold; }
   table thead tr {
-    background: #EEE; }
+    background: #eee; }
 
-/**
- * @section    Typography
- * @subsection Quotes
- */
 blockquote {
   color: #999;
   display: inline-block;
   font-size: 16px;
   font-style: italic;
-  margin: 0 0 30px 0;
+  margin: 0 0 30px;
   text-align: center;
   width: 100%; }
   blockquote p {
@@ -2356,17 +2197,13 @@ cite {
   display: block;
   font-style: normal;
   font-weight: bold;
-  margin: 5px 0 10px 0; }
+  margin: 5px 0 10px; }
   cite a {
     color: #666; }
 
-/**
- * @section    Typography
- * @subsection Code snippets
- */
 code,
 pre {
-  background: #FFEFB4;
+  background: #ffefb4;
   color: #333;
   font-size: 13px; }
 
@@ -2377,10 +2214,6 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap; }
 
-/**
- * @section    Typography
- * @subsection Abbreviations
- */
 acronym,
 abbr {
   border-bottom: 1px dotted #666;
@@ -2391,10 +2224,6 @@ abbr {
   abbr:hover {
     border-bottom-style: solid; }
 
-/**
- * @section    Typography
- * @subsection Deleted and inserted text 
- */
 del {
   color: #999;
   text-decoration: line-through; }
@@ -2402,25 +2231,17 @@ del {
 ins {
   text-decoration: none; }
 
-/**
- * @section    Typography
- * @subsection Selection 
- */
 ::-moz-selection,
 ::selection {
   background-color: #333;
-  color: #FFF; }
+  color: #fff; }
 
-/**
- * @section    Typography
- * @subsection Misc
- */
 hr {
   border: 0;
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #ccc;
   display: block;
   height: 1px;
-  margin: 0 0 30px 0;
+  margin: 0 0 30px;
   padding: 0; }
 
 .telephone {
@@ -2428,32 +2249,17 @@ hr {
   font-size: 24px;
   font-weight: bold; }
   .telephone:before {
-    content: "\f095";
+    content: '\f095';
     font-family: FontAwesome;
     font-size: 30px;
     display: inline-block;
-    margin: 0 7px 0 0;
+    margin: 0 7px 0;
     position: relative;
     top: 4px; }
   .telephone a[href^=tel] {
     color: #333;
     text-decoration: none; }
 
-/**
- * @section forms
- *
- * Defines the styling of forms
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
-/**
- * @section    Forms
- * @subsection Default form styles
- */
 input[type="datetime-local"],
 input[type="datetime"],
 input[type="password"],
@@ -2470,7 +2276,7 @@ input[type="url"],
 textarea,
 select {
   background-color: #fff;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 3px;
   color: #666;
   display: block;
@@ -2655,52 +2461,18 @@ button {
     background-color: #262626;
     outline: none; }
 
-/**
- * @section    Forms
- * @subsection Fix for admin-bar search form 
- */
-#adminbar-search {
+.adminbar-input {
   min-width: 0; }
 
-/**
- * @section Helpers
- *
- * Defines helpers
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- *
- */
-/**
- * @section    Helpers
- * @subsection Classes
- */
 .clear {
   clear: both; }
 
 .hide {
   display: none; }
 
-/**
- * @section Images
- * 
- * Defines the default styling of images
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- *
- */
-/**
- * @section     Images
- * @subsection  Alignment
- */
 .alignleft {
   float: left;
-  margin: 10px 20px 10px 0; }
+  margin: 10px 20px 10px; }
 
 .alignright {
   float: right;
@@ -2710,12 +2482,8 @@ button {
   display: block;
   margin: 0 auto; }
 
-/**
- * @section     Images
- * @subsection  Captions
- */
 .wp-caption {
-  background: #EEE;
+  background: #eee;
   margin-bottom: 30px;
   max-width: 100%;
   text-align: center; }
@@ -2728,10 +2496,6 @@ button {
     line-height: 20px;
     margin: 0 10px 10px 10px; }
 
-/**
- * @section     Images
- * @subsection  Gallery
- */
 .gallery {
   clear: both;
   float: left;
@@ -2755,7 +2519,7 @@ button {
     transition: opacity 400ms ease-in-out;
     background-color: rgba(0, 0, 0, 0.7);
     box-sizing: border-box;
-    color: #FFF;
+    color: #fff;
     font-size: 12px;
     line-height: 1.3;
     margin: 0;
@@ -2769,7 +2533,7 @@ button {
     width: 100%; }
     .gallery .gallery-caption:before {
       box-shadow: 0 -10px 15px #000 inset;
-      content: "";
+      content: '';
       height: 100%;
       left: 0;
       min-height: 49px;
@@ -2783,49 +2547,41 @@ button {
 
 .gallery-columns-2 .gallery-item {
   max-width: 48%;
-  max-width: -webkit-calc(50% - 14px);
   max-width: calc(50% - 14px);
   width: auto; }
 
 .gallery-columns-3 .gallery-item {
   max-width: 32%;
-  max-width: -webkit-calc(33.3% - 11px);
   max-width: calc(33.3% - 11px);
   width: auto; }
 
 .gallery-columns-4 .gallery-item {
   max-width: 23%;
-  max-width: -webkit-calc(25% - 9px);
   max-width: calc(25% - 9px);
   width: auto; }
 
 .gallery-columns-5 .gallery-item {
   max-width: 19%;
-  max-width: -webkit-calc(20% - 8px);
   max-width: calc(20% - 8px);
   width: auto; }
 
 .gallery-columns-6 .gallery-item {
   max-width: 15%;
-  max-width: -webkit-calc(16.7% - 7px);
   max-width: calc(16.7% - 7px);
   width: auto; }
 
 .gallery-columns-7 .gallery-item {
   max-width: 13%;
-  max-width: -webkit-calc(14.28% - 7px);
   max-width: calc(14.28% - 7px);
   width: auto; }
 
 .gallery-columns-8 .gallery-item {
   max-width: 11%;
-  max-width: -webkit-calc(12.5% - 6px);
   max-width: calc(12.5% - 6px);
   width: auto; }
 
 .gallery-columns-9 .gallery-item {
   max-width: 9%;
-  max-width: -webkit-calc(11.1% - 6px);
   max-width: calc(11.1% - 6px);
   width: auto; }
 
@@ -2868,18 +2624,10 @@ button {
 .gallery-columns-9 .gallery-caption {
   display: none; }
 
-/**
- * @section     Images
- * @subsection  WordPress smileys
- */
 .wp-smiley {
   margin: 0 !important;
   max-height: 1em; }
 
-/**
- * @section     Images
- * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
- */
 figure.aligncenter img,
 figure.alignright img,
 figure.alignleft img,
@@ -2896,10 +2644,6 @@ figure.alignnone img {
   max-width: 100%;
   height: auto; }
 
-/**
- * @section     Images
- * @subsection  Video-container for better responsive videos
- */
 .video-container {
   height: 0;
   margin-bottom: 30px;
@@ -2916,25 +2660,8 @@ figure.alignnone img {
     top: 0;
     width: 100%; }
 
-/**
- * @section    Layout
- *
- * Defines the default layout for a regular page, archive and post (e.g. position, 
- * size, margin, etc...)
- *
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- *
- */
-/**
- * @section    Layout
- * @subsection Default
- */
 body {
-  background: #FFF; }
+  background: #fff; }
 
 .container {
   clear: both;
@@ -2957,12 +2684,8 @@ body {
       .container .container-inner {
         width: 1160px; } }
 
-/**
- * @section    Layout
- * @subsection Page
- */
 #header {
-  background: #FFF;
+  background: #fff;
   box-sizing: border-box;
   padding: 20px 0;
   z-index: 1; }
@@ -3003,7 +2726,7 @@ body {
     #header #mobile #mobile-search {
       background-color: #999;
       border-radius: 3px;
-      color: #FFF;
+      color: #fff;
       cursor: pointer;
       display: inline-block;
       font-size: 16px;
@@ -3071,7 +2794,7 @@ body {
           #main-navigation ul li a {
             text-decoration: none; } }
       #main-navigation ul li a {
-        color: #FFF;
+        color: #fff;
         float: left;
         text-decoration: none;
         padding: 6px 0;
@@ -3106,7 +2829,7 @@ body {
         #main-navigation ul > li:active, #main-navigation ul > li:focus, #main-navigation ul > li:hover {
           background-color: #222; }
         #main-navigation ul > li > a {
-          color: #FFF;
+          color: #fff;
           display: block;
           font-size: 14px;
           font-weight: bold;
@@ -3127,7 +2850,7 @@ body {
           #main-navigation ul ul li a, #main-navigation ul ul ul li a {
             box-sizing: border-box;
             background: #222;
-            color: #FFF;
+            color: #fff;
             display: block;
             font-size: 12px;
             line-height: 40px;
@@ -3148,7 +2871,7 @@ body {
             left: 100%; } }
 
 #sub-header {
-  background-color: #CCC;
+  background-color: #ccc;
   padding: 45px 0 60px 0;
   text-align: center; }
   #sub-header h1 {
@@ -3171,12 +2894,12 @@ body {
       padding: 60px 0; } }
 
 #main {
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #ccc;
   margin-top: 0;
   padding: 45px 0 90px 0; }
   @media (min-width: 641px) {
     #main {
-      background: #FFF; } }
+      background: #fff; } }
   #main #content {
     box-sizing: border-box;
     margin: 0 auto;
@@ -3196,7 +2919,7 @@ body {
       #main #content .meta a {
         color: #666; }
         #main #content .meta a:active, #main #content .meta a:focus, #main #content .meta a:hover {
-          color: #1F6FD1; }
+          color: #1d6fd1; }
     #main #content .tags .label {
       display: block;
       float: left;
@@ -3218,12 +2941,12 @@ body {
 
 #footer {
   background: #333;
-  color: #FFF;
+  color: #fff;
   margin-bottom: 0; }
   #footer a {
-    color: #FFF; }
+    color: #fff; }
     #footer a:active, #footer a:focus, #footer a:hover {
-      color: #CCC; }
+      color: #ccc; }
   #footer #credits {
     float: left;
     margin: 30px 0;
@@ -3252,35 +2975,15 @@ body {
       #footer #credits ul li {
         display: inline; }
         #footer #credits ul li:after {
-          color: #FFF;
+          color: #fff;
           content: "|";
           padding: 0 5px 0 10px; }
         #footer #credits ul li:last-child:after {
           display: none; }
 
-/**
- * @section Templates
- *
- * Defines the template specific styling
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    	 	Trendwerk
- * @license   		GPL v2
- *
- */
-/** 
- * @section    Templates
- * @subsection front-page.php
- */
 .home #main {
   border-top: 0; }
 
-/**
- * @section    Templates
- * @subsection index.php
- * @subsection search.php
- */
 .archive article,
 .search article,
 .blog article {
@@ -3308,7 +3011,7 @@ body {
       .blog article h2 a:active,
       .blog article h2 a:focus,
       .blog article h2 a:hover {
-        color: #1F6FD1;
+        color: #1d6fd1;
         text-decoration: underline; }
   .archive article figure,
   .search article figure,
@@ -3318,22 +3021,18 @@ body {
   .archive article.sticky,
   .search article.sticky,
   .blog article.sticky {
-    background: #EEE;
+    background: #eee;
     box-sizing: border-box;
     padding: 30px;
-    margin-bottom: 60px; }
+    margin-bottom: 30px; }
 
-/**
- * @section    Templates
- * @subsection single.php
- */
 .single #main #content figure {
   float: right;
   margin: 5px 0 10px 20px; }
 .single #main #content nav.pages {
   margin-bottom: 30px; }
   .single #main #content nav.pages a {
-    background-color: #EEE;
+    background-color: #eee;
     border-radius: 3px;
     color: #666;
     display: inline-block;
@@ -3346,39 +3045,18 @@ body {
     .single #main #content nav.pages a:active, .single #main #content nav.pages a:focus, .single #main #content nav.pages a:hover {
       background: #d4d4d4; }
 
-/**
- * @section    Templates
- * @subsection search.php
- * @subsection error404.php
- */
 .search article h2,
 .error404 article h2 {
   margin-bottom: 30px; }
 
 .search-no-results #main #content {
-  margin-bottom: 60px; }
+  margin-bottom: 30px; }
 
-/**
- * @section Parts
- *
- * Defines the styling for recurring template parts
- *
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- *
- */
-/**
- * @section    Parts
- * @subsection Respond
- */
 #respond {
   clear: both;
   float: left;
   position: relative;
-  margin: 0 0 30px 0;
+  margin: 0 0 30px;
   width: 100%; }
   #respond p {
     clear: both;
@@ -3412,10 +3090,6 @@ p.tags {
     margin-right: 5px;
     margin-bottom: 0; }
 
-/**
- * @section    Parts
- * @subsection Comments
- */
 #comments {
   clear: both;
   float: left;
@@ -3450,7 +3124,7 @@ p.tags {
         margin-bottom: 30px; }
     #comments ol .comment-body {
       box-sizing: border-box;
-      background-color: #EEE;
+      background-color: #eee;
       clear: both;
       float: left;
       position: relative;
@@ -3480,7 +3154,7 @@ p.tags {
       #comments ol .comment-body .comment-content {
         box-sizing: border-box;
         float: left;
-        margin: -20px 0 20px 0;
+        margin: -20px 0 20px;
         padding-left: 80px;
         width: 100%; }
       #comments ol .comment-body .reply {
@@ -3500,10 +3174,6 @@ p.tags {
     #comments ol.bypostauthor .comment-body {
       background-color: #e1e1e1; }
 
-/**
- * @section    Parts
- * @subsection Pager
- */
 #pager {
   clear: both;
   font-size: 13px;
@@ -3513,8 +3183,8 @@ p.tags {
   #pager .page-numbers,
   #pager .prev,
   #pager .next {
-    background-color: #EEE;
-    border: 2px solid #EEE;
+    background-color: #eee;
+    border: 2px solid #eee;
     border-radius: 3px;
     color: #666;
     display: inline-block;
@@ -3531,16 +3201,12 @@ p.tags {
   #pager .page-numbers {
     width: 38px; }
     #pager .page-numbers.current, #pager .page-numbers.dots {
-      background-color: #FFF; }
+      background-color: #fff; }
   #pager .prev,
   #pager .next {
     padding: 0 15px;
     width: auto; }
 
-/**
- * @section    Parts
- * @subsection Search
- */
 .search-form form {
   position: relative;
   width: 100%; }
@@ -3581,7 +3247,7 @@ p.tags {
     font-family: fontawesome;
     font-weight: 400;
     height: 39px;
-    margin: 2px 0 0 0;
+    margin: 2px 0 0;
     padding: 0 12px;
     position: absolute;
     right: 1px;
@@ -3595,41 +3261,36 @@ p.tags {
     .search-form form button[type="submit"]:active, .search-form form button[type="submit"]:focus, .search-form form button[type="submit"]:hover {
       color: #666; }
 
-/**
- * @section    Parts
- * @subsection AddThis
- */
-.addthis_toolbox .label {
-  display: block;
-  float: left;
-  font-size: 13px;
-  line-height: inherit;
-  margin-bottom: 10px;
-  width: 100%; }
-  @media (min-width: 441px) {
-    .addthis_toolbox .label {
-      display: inline-block;
-      padding-right: 15px;
-      width: auto; } }
-  @media (min-width: 641px) {
-    .addthis_toolbox .label {
-      padding-right: 0;
-      width: 150px; } }
+@section Parts
+@subsection AddThis
 
-/**
- * @section    Parts
- * @subsection AddThis
- */
+.addthis_toolbox {
+  .label {
+    display: block;
+    float: left;
+    font-size: 13px;
+    line-height: inherit;
+    margin-bottom: 10px;
+    width: 100%; }
+    @media (min-width: 441px) {
+      .label {
+        display: inline-block;
+        padding-right: 15px;
+        width: auto; } }
+    @media (min-width: 641px) {
+      .label {
+        padding-right: 0;
+        width: 150px; } } }
 .addthis_toolbox a {
   background-color: #999;
   border-radius: 999px;
-  color: #FFF;
+  color: #fff;
   display: block;
   float: left;
   font-size: 14px;
   height: 30px;
   line-height: 30px;
-  margin: 0 5px 0 0;
+  margin: 0 5px 0;
   position: relative;
   text-align: center;
   text-decoration: none;

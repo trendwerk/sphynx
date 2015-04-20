@@ -1,19 +1,16 @@
-/**
- * @section Reset
- *
- * Resets all elements to render everything the same in all browsers
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
+//
+// @section Reset
+//
+// Resets all elements to render everything the same in all browsers
+//
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   	GPL v2
+// 
 
-/**
- * @section    Forms
- * @subsection Forms reset (based on Formalize)
- */
+// @section    Forms
+// @subsection Forms reset (based on Formalize)
 
 input[type="search"]::-webkit-search-decoration {
 	display: none;
@@ -85,10 +82,10 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select {
+	-webkit-appearance: none;
 	box-sizing: border-box;
 	text-align: left;
 	vertical-align: top;
-	-webkit-appearance: none;
 }
 
 textarea {
@@ -152,12 +149,12 @@ input.placeholder_text {
 }
 
 select {
-	background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
-	background-repeat: no-repeat;
-	background-position: right center;
-	text-indent: 0.01px;
-	text-overflow: '';
 	-moz-appearance: none;
+	background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+	background-position: right center;
+	background-repeat: no-repeat;
+	text-indent: .01px;
+	text-overflow: '';
 }
 
 select[multiple],
@@ -191,8 +188,8 @@ select[size="1"] {
 	::-webkit-validation-bubble-message {
 		box-shadow: none;
 		background-color: $primary-color;
-		border: none;
-		color: #FFF;
+		border: 0;
+		color: $white;
 		font-family: $text-font;
 		font-size: 14px;
 		min-height: 16px;

@@ -1,19 +1,16 @@
-/**
- * @section Templates
- *
- * Defines the template specific styling
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    	 	Trendwerk
- * @license   		GPL v2
- *
- */
+//
+// @section Templates
+//
+// Defines the template specific styling
+//
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   	GPL v2
+//
 
-/** 
- * @section    Templates
- * @subsection front-page.php
- */
+// @section    Templates
+// @subsection front-page.php
 
 .home {
 	#main {
@@ -21,11 +18,9 @@
 	}
 }
 
-/**
- * @section    Templates
- * @subsection index.php
- * @subsection search.php
- */
+// @section    Templates
+// @subsection index.php
+// @subsection search.php
 
 .archive,
 .search,
@@ -65,15 +60,13 @@
 			background: $light-background;
 			box-sizing: border-box;
 			padding: 30px;
-			margin-bottom: $line-height * 2;
+			margin-bottom: $line-height// 2;
 		}
 	}
 }
 
-/**
- * @section    Templates
- * @subsection single.php
- */
+// @section    Templates
+// @subsection single.php
 
 .single #main #content {
 
@@ -106,11 +99,9 @@
 	}
 }
 
-/**
- * @section    Templates
- * @subsection search.php
- * @subsection error404.php
- */
+// @section    Templates
+// @subsection search.php
+// @subsection error404.php
 
 .search,
 .error404 {
@@ -120,5 +111,5 @@
 }
 
 .search-no-results #main #content {
-	margin-bottom: $line-height * 2;
+	margin-bottom: $line-height// 2;
 }

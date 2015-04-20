@@ -1,26 +1,23 @@
-/**
- * @section Parts
- *
- * Defines the styling for recurring template parts
- *
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- *
- */
+//
+// @section Parts
+//
+// Defines the styling for recurring template parts
+//
+//
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   	GPL v2
+//
 
-/**
- * @section    Parts
- * @subsection Respond
- */
+// @section    Parts
+// @subsection Respond
 
 #respond {
 	clear: both;
 	float: left;
 	position: relative;
-	margin: 0 0 $line-height 0;
+	margin: 0 0 $line-height;
 	width: 100%;
 	
 	p {
@@ -70,11 +67,9 @@ p.tags {
 	}
 }
 
-/**
- * @section    Parts
- * @subsection Comments
- */
-
+// @section    Parts
+// @subsection Comments
+ 
 #comments {
 	clear: both;
 	float: left;
@@ -166,7 +161,7 @@ p.tags {
 			.comment-content {
 				box-sizing: border-box;
 				float: left;
-				margin: -20px 0 20px 0;
+				margin: -20px 0 20px;
 				padding-left: 80px;
 				width: 100%;
 			}
@@ -190,11 +185,9 @@ p.tags {
 	}
 }
 
-/**
- * @section    Parts
- * @subsection Pager
- */
-
+// @section    Parts
+// @subsection Pager
+ 
 #pager {
 	clear: both;
 	font-size: 13px;
@@ -233,7 +226,7 @@ p.tags {
 
 		&.current,
 		&.dots {
-			background-color: #FFF;
+			background-color: $white;
 		}
 	}
 
@@ -244,10 +237,8 @@ p.tags {
 	}
 }
 
-/**
- * @section    Parts
- * @subsection Search
- */
+// @section    Parts
+// @subsection Search 
 
 .search-form {
 	form {
@@ -280,7 +271,7 @@ p.tags {
 			font-family: fontawesome;
 			font-weight: 400;
 			height: 39px;
-			margin: 2px 0 0 0;
+			margin: 2px 0 0;
 			padding: 0 12px;
 			position: absolute;
 			right: 1px;
@@ -302,10 +293,8 @@ p.tags {
 	}
 }
 
-/**
- * @section    Parts
- * @subsection AddThis
- */
+@section    Parts
+@subsection AddThis
 
 .addthis_toolbox {
 	.label {
@@ -329,22 +318,20 @@ p.tags {
 	}
 }
 
-/**
- * @section    Parts
- * @subsection AddThis
- */
+// @section    Parts
+// @subsection AddThis
 
 .addthis_toolbox {
 	a {
 		background-color: #999;
 		border-radius: 999px;
-		color: #FFF;
+		color: $white;
 		display: block;
 		float: left;
 		font-size: 14px;
 		height: 30px;
 		line-height: 30px;
-		margin: 0 5px 0 0;
+		margin: 0 5px 0;
 		position: relative;
 		text-align: center;
 		text-decoration: none;

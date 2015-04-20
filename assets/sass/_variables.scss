@@ -1,21 +1,17 @@
-/**
- * @section Variables
- *
- * This is where you should include all the recurring colors, 
- * fonts, etc.te
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
+//
+// @section Variables
+//
+// This is where you should include all the recurring colors, 
+// fonts, etc.te
+//
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   	GPL v2
+// 
 
-/**
- * @section Variables
- *
- * Defines recurring colors and fonts
- */
+// @section Variables
+// Defines recurring colors and fonts
 
 $heading-font:		'Helvetica Neue', sans-serif;
 $text-font:			'Helvetica Neue', sans-serif;
@@ -23,16 +19,18 @@ $text-font:			'Helvetica Neue', sans-serif;
 $primary-color:		#333;
 $secondary-color:	#999;
 
-$light-background:	#EEE;
-$body-background:	#FFF;
-$border-color:		#CCC;
-$footer-background:	#333; 
+$white:				#fff;
+
+$light-background:	#eee;
+$body-background:	#fff;
+$border-color:		#ccc;
+$footer-background:	#333;
 
 $heading-color:		#333;
 $text-color:		#666;
 $text-light:		#999;
-$link-color:		#1F6FD1;
+$link-color:		#1d6fd1;
 
 $line-height:		30px;
 
-$error-red: 		#C44741;
+$red: 		#c44741;

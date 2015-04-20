@@ -1,21 +1,18 @@
-/**
- * @section    Layout
- *
- * Defines the default layout for a regular page, archive and post (e.g. position, 
- * size, margin, etc...)
- *
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- *
- */
+//
+// @section    Layout
+//
+// Defines the default layout for a regular page, archive and post (e.g. position, 
+// size, margin, etc...)
+//
+//
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   		GPL v2
+//
 
-/**
- * @section    Layout
- * @subsection Default
- */
+// @section    Layout
+// @subsection Default
 
 body {
 	background: $body-background;
@@ -48,10 +45,8 @@ body {
 	}
 }
 
-/**
- * @section    Layout
- * @subsection Page
- */
+// @section    Layout
+// @subsection Page
 
 #header {
 	background: $body-background;
@@ -109,7 +104,7 @@ body {
 		#mobile-search {
 			background-color: $secondary-color;
 			border-radius: 3px;
-			color: #FFF;
+			color: $white;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 16px;
@@ -212,7 +207,7 @@ body {
 			}
 
 			a {
-				color: #FFF;
+				color: $white;
 				float: left;
 				text-decoration: none;
 				padding: 6px 0;
@@ -274,7 +269,7 @@ body {
 				}
 
 				> a {
-					color: #FFF;
+					color: $white;
 					display: block;
 					font-size: 14px;
 					font-weight: bold;
@@ -301,7 +296,7 @@ body {
 					a {
 						box-sizing: border-box;
 						background: #222;
-						color: #FFF;
+						color: $white;
 						display: block;	
 						font-size: 12px;
 						line-height: 40px;
@@ -349,7 +344,7 @@ body {
 }
 
 #sub-header {
-	background-color: #CCC;
+	background-color: #ccc;
 	padding: 45px 0 60px 0;
 	text-align: center;
 
@@ -378,7 +373,6 @@ body {
 		padding: ($line-height * 2) 0;
 	}
 }
-
 
 #main {
 	border-top: 1px solid $border-color;
@@ -452,16 +446,16 @@ body {
 
 #footer {
 	background: $footer-background;
-	color: #FFF;
+	color: $white;
 	margin-bottom: 0;
 	
 	a { 
-		color: #FFF;
+		color: $white;
 
 		&:active,
 		&:focus,
 		&:hover {
-			color: #CCC;
+			color: #ccc;
 		}
 	}
 	
@@ -506,7 +500,7 @@ body {
 				display: inline;
 				
 				&:after {
-					color: #FFF;
+					color: $white;
 					content: "|";
 					padding: 0 5px 0 10px;
 				}

@@ -1,23 +1,20 @@
-/**
- * @section Images
- * 
- * Defines the default styling of images
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- *
- */
+//
+// @section Images
+// 
+// Defines the default styling of images
+//
+// @package     WordPress
+// @subpackage  TrendPress
+// @author      Trendwerk
+// @license     GPL v2
+//
 
-/**
- * @section     Images
- * @subsection  Alignment
- */
+// @section     Images
+// @subsection  Alignment
 
 .alignleft {
 	float: left;
-	margin: 10px 20px 10px 0;
+	margin: 10px 20px 10px;
 }
 
 .alignright {
@@ -30,10 +27,8 @@
 	margin: 0 auto;
 }
 
-/**
- * @section     Images
- * @subsection  Captions
- */
+// @section     Images
+// @subsection  Captions
 
 .wp-caption {
 	background: $light-background;
@@ -54,10 +49,8 @@
 	}
 }
 
-/**
- * @section     Images
- * @subsection  Gallery
- */
+// @section     Images
+// @subsection  Gallery
 
 .gallery {
 	clear: both;
@@ -89,7 +82,7 @@
 		@include animate-this(opacity, 400ms, ease-in-out);
 		background-color: rgba(0,0,0,0.7);
 		box-sizing: border-box;
-		color: #FFF;
+		color: $white;
 		font-size: 12px;
 		line-height: 1.3;
 		margin: 0;
@@ -104,7 +97,7 @@
 
 		&:before {
 			box-shadow: 0 -10px 15px #000 inset;
-			content: "";
+			content: '';
 			height: 100%;
 			left: 0;
 			min-height: 49px;
@@ -124,56 +117,48 @@
 
 .gallery-columns-2 .gallery-item {
 	max-width: 48%;
-	max-width: -webkit-calc(50% - 14px);
 	max-width: calc(50% - 14px);
 	width: auto;
 }
 
 .gallery-columns-3 .gallery-item {
 	max-width: 32%;
-	max-width: -webkit-calc(33.3% - 11px);
 	max-width: calc(33.3% - 11px);
 	width: auto;
 }
 
 .gallery-columns-4 .gallery-item {
 	max-width: 23%;
-	max-width: -webkit-calc(25% - 9px);
 	max-width: calc(25% - 9px);
 	width: auto;
 }
 
 .gallery-columns-5 .gallery-item {
 	max-width: 19%;
-	max-width: -webkit-calc(20% - 8px);
 	max-width: calc(20% - 8px);
 	width: auto;
 }
 
 .gallery-columns-6 .gallery-item {
 	max-width: 15%;
-	max-width: -webkit-calc(16.7% - 7px);
 	max-width: calc(16.7% - 7px);
 	width: auto;
 }
 
 .gallery-columns-7 .gallery-item {
 	max-width: 13%;
-	max-width: -webkit-calc(14.28% - 7px);
 	max-width: calc(14.28% - 7px);
 	width: auto;
 }
 
 .gallery-columns-8 .gallery-item {
 	max-width: 11%;
-	max-width: -webkit-calc(12.5% - 6px);
 	max-width: calc(12.5% - 6px);
 	width: auto;
 }
 
 .gallery-columns-9 .gallery-item {
 	max-width: 9%;
-	max-width: -webkit-calc(11.1% - 6px);
 	max-width: calc(11.1% - 6px);
 	width: auto;
 }
@@ -225,20 +210,16 @@
 	display: none;
 }
 
-/**
- * @section     Images
- * @subsection  WordPress smileys
- */
+// @section     Images
+// @subsection  WordPress smileys
 
 .wp-smiley {
 	margin: 0 !important;
 	max-height: 1em;
 }
 
-/**
- * @section     Images
- * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
- */
+// @section     Images
+// @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
 
 figure.aligncenter,
 figure.alignright,
@@ -260,10 +241,8 @@ figure.alignnone {
 	height: auto;
 }
 
-/**
- * @section     Images
- * @subsection  Video-container for better responsive videos
- */
+// @section     Images
+// @subsection  Video-container for better responsive videos
 
 .video-container {
 	height: 0;

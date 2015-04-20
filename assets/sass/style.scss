@@ -1,20 +1,16 @@
-/**
- * Main stylesheet
- *
- * @package			WordPress
- * @subpackage		TrendPress
- * @author			Trendwerk
- * @license			GPL v2
- * 
- */
+//
+// @section Main stylesheet
+//
+// @package		WordPress
+// @subpackage	TrendPress
+// @author		Trendwerk
+// @license		GPL v2
+//
 
-@charset "UTF-8";
+@charset 'UTF-8';
 
-/**
- * @section Import
- *
- * Import other SASS files
- */
+// @section Import
+// Import other SASS files
 
 @import 'variables';
 @import 'mixins';

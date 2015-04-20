@@ -1,20 +1,17 @@
-/**
- * @section Extends
- *
- * Extends are like mixins but without the variables. Use them
- * to build pre-defined styles
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
+//
+// @section Extends
+//
+// Extends are like mixins but without the variables. Use them
+// to build pre-defined styles
+//
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   	GPL v2
+// 
 
-/** 
- * @section    Extends
- * @subsection Ellipsis
- */
+// @section    Extends
+// @subsection Ellipsis
 
 .ellipsis {
 	overflow: hidden;

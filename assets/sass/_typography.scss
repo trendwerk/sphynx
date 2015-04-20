@@ -1,36 +1,29 @@
-/**
- * @section Typography
- * 
- * Defines the styling of text elements
- *
- * @package   		WordPress
- * @subpackage 		TrendPress
- * @author    		Trendwerk
- * @license   		GPL v2
- * 
- */
+//
+// @section Typography
+// 
+// Defines the styling of text elements
+//
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   	GPL v2
+// 
 
-/**
- * @section    Typography
- * @subsection Import Font Awesome
- */
+// @section    Typography
+// @subsection Import Font Awesome
 
-@import "lib/_fontawesome.scss";
+@import 'lib/_fontawesome';
 
-/**
- * @section    Typography
- * @subsection Render settings
- */
+// @section    Typography
+// @subsection Render settings
 
 html {
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-text-size-adjust: none;
 }
 
-/**
- * @section    Typography
- * @subsection Content
- */
+// @section    Typography
+// @subsection Content
 
 body {
 	color: $text-color; 
@@ -39,10 +32,8 @@ body {
 	line-height: $line-height;
 }
 
-/**
- * @section    Typography
- * @subsection Headings
- */
+// @section    Typography
+// @subsection Headings
 
 h1,
 h2,
@@ -54,7 +45,7 @@ h6 {
 	font-family: $heading-font;
 	font-weight: 700;
 	line-height: 1.325em;
-	margin: 0 0 $line-height 0;
+	margin: 0 0 $line-height;
 }
 
 h1 {
@@ -105,10 +96,8 @@ h6 {
 	}
 }
 
-/**
- * @section    Typography
- * @subsection Links
- */
+// @section    Typography
+// @subsection Links
 
 a {
 	color: $link-color;
@@ -122,13 +111,13 @@ a {
 		text-decoration: underline;
 	}
 
-	/* more link */
+	// more link
 
 	&.more-link {
 		white-space: nowrap;
 	}
 
-	/* add characters to links */
+	// add characters to link
 
 	&.more-link:after,
 	&.back:before,
@@ -141,27 +130,27 @@ a {
 
 	&.back:before,
 	&.prev:before {
-		content: "\f053";
+		content: '\f053';
 		padding-right: 4px;
 	}
 
 	&.more-link:after,
 	&.next:after {
-		content: "\f054";
+		content: '\f054';
 		padding-left: 4px;
 	}
 
-	/* call to action buttons */
+	// call to action button
 
 	&.button {
 		background: $primary-color;
 		border-radius: 3px;
-		color: #FFF;		
+		color: $white;		
 		display: inline-block;
 		font-weight: bold;
 		height: 50px;
 		line-height: 50px;
-		margin: 0 10px 10px 0;
+		margin: 0 10px 10px;
 		padding: 0 35px;
 		position: relative;
 		text-decoration: none;
@@ -178,11 +167,11 @@ a {
 			background: darken($primary-color, 15%);
 		}
 
-		/* secondary button */
+		// secondary butto
 
 		&.secondary {
 			background: $secondary-color;
-			color: #FFF;
+			color: $white;
 
 			&:active,
 			&:focus,
@@ -192,16 +181,16 @@ a {
 		}
 	}
 
-	/* style for tags */
+	// style for tag
 
-	&[rel="tag"] {
-		background: #CCC;
+	&[rel='tag'] {
+		background: #ccc;
 		border-radius: 3px;
 		color: $text-color;
 		display: inline-block;
-		font-size: 12px !important;
+		font-size: 12px;
 		line-height: 25px;
-		margin: 0 10px 10px 0;
+		margin: 0 10px 10px;
 		padding: 0 10px;
 		text-decoration: none;
 		text-transform: lowercase;
@@ -210,24 +199,20 @@ a {
 		&:focus,
 		&:hover {
 			background: $heading-color;
-			color: #FFF;
+			color: $white;
 		}
 	}
 }
 
-/**
- * @section    Typography
- * @subsection Paragraphs
- */
+// @section    Typography
+// @subsection Paragraphs
 
 p {
-	margin: 0 0 30px 0;
+	margin: 0 0 30px;
 }
 
-/**
- * @section    Typography
- * @subsection Text styles
- */
+// @section    Typography
+// @subsection Text styles
 
 strong,
 b {
@@ -239,10 +224,8 @@ i {
 	font-style: italic;
 }
 
-/**
- * @section    Typography
- * @subsection Lists
- */
+// @section    Typography
+// @subsection Lists
 
 ul { 
 	list-style-position: outside;
@@ -264,16 +247,14 @@ ol {
 	}
 }
 
-/**
- * @section    Typography
- * @subsection Tables
- */
+// @section    Typography
+// @subsection Tables
 
 table { 
 	border: 1px solid $border-color;
 	border-collapse: collapse;
 	border-spacing: 0;	
-	margin: 0 0 $line-height 0;
+	margin: 0 0 $line-height;
 	width: 100%;
 
 	tr { 
@@ -301,17 +282,15 @@ table {
 	}
 }
 
-/**
- * @section    Typography
- * @subsection Quotes
- */
+// @section    Typography
+// @subsection Quotes
 
 blockquote {
 	color: $text-light;
 	display: inline-block;
 	font-size: 16px;
 	font-style: italic;
-	margin: 0 0 $line-height 0;
+	margin: 0 0 $line-height;
 	text-align: center;
 	width: 100%;
 
@@ -331,21 +310,19 @@ cite {
 	display: block;
 	font-style: normal;
 	font-weight: bold;
-	margin: 5px 0 10px 0; 
+	margin: 5px 0 10px; 
 
 	a {
 		color: $text-color;
 	}
 }
 
-/**
- * @section    Typography
- * @subsection Code snippets
- */
+// @section    Typography
+// @subsection Code snippets
 
 code,
 pre {
-	background: #FFEFB4;
+	background: #ffefb4;
 	color: #333;
 	font-size: 13px;
 }
@@ -358,10 +335,8 @@ pre {
 	white-space: -o-pre-wrap;
 }
 
-/**
- * @section    Typography
- * @subsection Abbreviations
- */
+// @section    Typography
+// @subsection Abbreviations
 
 acronym,
 abbr {
@@ -375,10 +350,8 @@ abbr {
 	}
 }
 
-/**
- * @section    Typography
- * @subsection Deleted and inserted text 
- */
+// @section    Typography
+// @subsection Deleted and inserted text 
 
 del {
 	color: $text-light;
@@ -389,28 +362,24 @@ ins {
 	text-decoration: none;
 }
 
-/**
- * @section    Typography
- * @subsection Selection 
- */
+// @section    Typography
+// @subsection Selection 
 
 ::-moz-selection,
 ::selection {
 	background-color: $primary-color;
-	color: #FFF;
+	color: $white;
 }
 
-/**
- * @section    Typography
- * @subsection Misc
- */
+// @section    Typography
+// @subsection Misc
 
 hr {
 	border: 0;
 	border-top: 1px solid $border-color;
 	display: block;
 	height: 1px;
-	margin: 0 0 $line-height 0;
+	margin: 0 0 $line-height;
 	padding: 0;
 }
 
@@ -420,11 +389,11 @@ hr {
 	font-weight: bold;
 
 	&:before {
-		content: "\f095";
+		content: '\f095';
 		font-family: FontAwesome;
 		font-size: 30px;
 		display: inline-block;
-		margin: 0 7px 0 0;
+		margin: 0 7px 0;
 		position: relative;
 		top: 4px;
 	}
