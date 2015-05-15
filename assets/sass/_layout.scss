@@ -157,12 +157,13 @@ body {
 
 			a {
 				color: $white;
+				line-height: 40px;
 				text-decoration: none;
 
 				@media(min-width: 641px) {
 					display: block;
 					float: left;
-					padding: 10px 15px;
+					padding: 5px 15px;
 				}
 
 				&:hover {
@@ -193,6 +194,7 @@ body {
 
 			@media(min-width: 641px) {
 
+				&.menu-item-has-children > a::after,
 				&.page_item_has_children > a::after {
 					border-color: $white transparent transparent transparent;
 					border-style: solid;
@@ -215,11 +217,13 @@ body {
 					position: absolute;
 					text-transform: none;
 					top: 50px;
-					width: 300px;
+					width: 260px;
+					z-index: 1;
 
 					li {
 						width: 100%;
 
+						&.menu-item-has-children > a::after,
 						&.page_item_has_children > a::after {
 							border-color: transparent transparent transparent $white;
 							border-style: solid;
@@ -249,7 +253,7 @@ body {
 
 						&:hover ul {
 							display: block;
-							left: 300px;
+							left: 260px;
 							top: 0;
 						}
 					}
