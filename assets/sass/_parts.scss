@@ -255,7 +255,7 @@ p.tags {
 			font-size: 16px;
 			font-style: italic;
 			margin: 0;
-			padding: 12px 43px 12px 12px;
+			padding: 12px 45px 12px 12px;
 			right: 0;
 			width: 100%;
 
@@ -267,12 +267,12 @@ p.tags {
 		button[type="submit"] {
 			background: #fff;
 			height: 39px;
-			margin: 0 15px 0 0;
+			margin: 0;
 			padding: 0;
 			position: absolute;
-			right: 0;
+			right: 1px;
 			top: 1px;
-			width: 20px;
+			width: 30px;
 		}
 
 		.glass {
@@ -297,7 +297,6 @@ p.tags {
 .glass {
 	border: 3px solid $text-light;
 	border-radius: 100%;
-	cursor: pointer;
 	display: block;
 	height: 10px;
 	position: relative;
@@ -325,7 +324,6 @@ p.tags {
 }
 
 .burger {
-	cursor: pointer;
 	height: 19px;
 	position: relative;
 	width: 24px;

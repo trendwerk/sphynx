@@ -2706,7 +2706,7 @@ body {
       margin: 0; }
   #header #mobile {
     float: right;
-    margin-top: 18px;
+    margin: 8px -10px 0 0;
     text-align: center;
     width: auto; }
     @media (min-width: 641px) {
@@ -2714,11 +2714,14 @@ body {
         display: none; } }
     #header #mobile #mobile-navigation,
     #header #mobile #mobile-search {
+      cursor: pointer;
+      padding: 10px;
+      float: left; }
+    #header #mobile #mobile-search {
       float: left;
       height: 19px;
-      width: 24px; }
-    #header #mobile #mobile-search {
-      margin-right: 20px; }
+      margin-right: 5px;
+      width: 20px; }
   #header #search {
     display: none;
     float: right;
@@ -3166,7 +3169,7 @@ p.tags {
     font-size: 16px;
     font-style: italic;
     margin: 0;
-    padding: 12px 43px 12px 12px;
+    padding: 12px 45px 12px 12px;
     right: 0;
     width: 100%; }
     .search-form form input[type="text"]:-moz-placeholder {
@@ -3191,12 +3194,12 @@ p.tags {
   .search-form form button[type="submit"] {
     background: #fff;
     height: 39px;
-    margin: 0 15px 0 0;
+    margin: 0;
     padding: 0;
     position: absolute;
-    right: 0;
+    right: 1px;
     top: 1px;
-    width: 20px; }
+    width: 30px; }
   .search-form form .glass {
     border: 2px solid #999;
     height: 8px;
@@ -3211,7 +3214,6 @@ p.tags {
 .glass {
   border: 3px solid #999;
   border-radius: 100%;
-  cursor: pointer;
   display: block;
   height: 10px;
   position: relative;
@@ -3234,7 +3236,6 @@ p.tags {
     transform: rotate(360deg); }
 
 .burger {
-  cursor: pointer;
   height: 19px;
   position: relative;
   width: 24px; }
