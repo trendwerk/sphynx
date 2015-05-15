@@ -15,8 +15,12 @@
 .home {
 	#sub-header {
 		background-color: #ccc;
-		padding: 45px 0 60px 0;
+		padding: 45px 0 45px 0;
 		text-align: center;
+
+		@media(min-width: 641px) {
+			padding: ($line-height * 2) 0;
+		}
 
 		h1 {
 			font-size: 32px;
@@ -32,15 +36,13 @@
 		h2 {
 			font-size: 18px;
 			font-weight: normal;
+			line-height: 28px;
 			margin-bottom: 0;
 
 			@media(min-width: 641px) {
 				font-size: 36px;
+				line-height: 1.325em;
 			}
-		}
-
-		@media(min-width: 641px) {
-			padding: ($line-height * 2) 0;
 		}
 	}
 
