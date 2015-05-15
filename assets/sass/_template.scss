@@ -25,6 +25,11 @@
 .archive,
 .search,
 .blog {
+	.archive-description {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
 	article {
 		clear: both;
 		padding: 0 0 $line-height 0;
