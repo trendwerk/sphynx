@@ -1,17 +1,20 @@
 (function() {
   $(function() {
-    return $('#mobile-navigation, #mobile-search').click(function() {
-      $(this).toggleClass('active');
-      $($(this).data('toggle')).slideToggle('fast', function() {
+    $('#mobile-navigation, #mobile-search').click(function() {
+      return $($(this).data('toggle')).slideToggle('fast', function() {
         if (!$(this).is(':visible')) {
           return $(this).css({
             'display': ''
           });
         }
       });
-      return $('#mobile-search').click(function() {
-        return $($(this).data('toggle')).find('input[type="text"]').focus();
-      });
+    });
+    $('#mobile-navigation').click(function() {
+      return $('.burger', this).toggleClass('active');
+    });
+    return $('#mobile-search').click(function() {
+      $($(this).data('toggle')).find('input[type="text"]').focus();
+      return $('.glass', this).toggleClass('active');
     });
   });
 

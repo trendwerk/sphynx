@@ -44,11 +44,15 @@
 				<div id="mobile">
 
 					<div id="mobile-search" data-toggle="#search">
-						<i class="fa fa-search"></i>
+						<div class="glass"></div>
 					</div>
 
 					<div id="mobile-navigation" data-toggle="#main-navigation">
-						<i class="fa fa-reorder"></i>
+						<div class="burger">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
+						</div>
 					</div>
 
 				</div>
