@@ -18,6 +18,8 @@ get_header();
 			</h1>
 
 			<?php
+				the_archive_description( '<div class="archive-description">', '</div>' );
+
 				if( have_posts() ) {
 
 					while( have_posts() ) {

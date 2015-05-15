@@ -2984,6 +2984,11 @@ body {
 .home #main {
   border-top: 0; }
 
+.archive .archive-description,
+.search .archive-description,
+.blog .archive-description {
+  margin-bottom: 30px;
+  text-align: center; }
 .archive article,
 .search article,
 .blog article {
