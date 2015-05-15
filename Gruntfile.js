@@ -40,9 +40,11 @@ module.exports = function( grunt ) {
 		 * Compile SASS to CSS 
 		 */	
 		sass: {
-			compile: {
-				'assets/sass/output/editor.css': 'assets/sass/editor.scss',
-				'assets/sass/output/style.css': 'assets/sass/style.scss'
+			dist: {
+				files: {
+					'assets/sass/output/editor.css': 'assets/sass/editor.scss',
+					'assets/sass/output/style.css': 'assets/sass/style.scss'
+				}
 			}
 		},
 

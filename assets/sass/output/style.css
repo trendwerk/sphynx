@@ -2706,7 +2706,7 @@ body {
       margin: 0; }
   #header #mobile {
     float: right;
-    margin-top: 10px;
+    margin-top: 18px;
     text-align: center;
     width: auto; }
     @media (min-width: 641px) {
@@ -2714,20 +2714,11 @@ body {
         display: none; } }
     #header #mobile #mobile-navigation,
     #header #mobile #mobile-search {
-      background-color: #999;
-      border-radius: 3px;
-      color: #fff;
-      cursor: pointer;
-      display: block;
       float: left;
-      font-size: 16px;
-      height: 40px;
-      line-height: 40px;
-      margin: 0 0 0 10px;
-      width: 40px; }
-      #header #mobile #mobile-navigation.active,
-      #header #mobile #mobile-search.active {
-        background-color: #333; }
+      height: 19px;
+      width: 24px; }
+    #header #mobile #mobile-search {
+      margin-right: 20px; }
   #header #search {
     display: none;
     float: right;
@@ -2780,6 +2771,15 @@ body {
     #main-navigation ul li ul {
       margin: 0 0 0 20px; }
     @media (min-width: 641px) {
+      #main-navigation ul li.page_item_has_children > a::after {
+        border-color: #fff transparent transparent transparent;
+        border-style: solid;
+        border-width: 4px 4px 0 4px;
+        content: '';
+        display: inline-block;
+        height: 0;
+        margin: 0 0 3px 5px;
+        width: 0; }
       #main-navigation ul li ul {
         display: none; }
       #main-navigation ul li:hover ul {
@@ -2792,6 +2792,15 @@ body {
         width: 300px; }
         #main-navigation ul li:hover ul li {
           width: 100%; }
+          #main-navigation ul li:hover ul li.page_item_has_children > a::after {
+            border-color: transparent transparent transparent #fff;
+            border-style: solid;
+            border-width: 4px 0 4px 4px;
+            content: '';
+            display: inline-block;
+            height: 0;
+            margin: 0 0 1px 5px;
+            width: 0; }
           #main-navigation ul li:hover ul li a {
             box-sizing: border-box;
             padding: 5px 20px;
@@ -3179,25 +3188,6 @@ p.tags {
     @media (min-width: 641px) {
       .search-form form input[type="text"] {
         font-size: 13px; } }
-  .search-form form #glass {
-    border: 2px solid #999;
-    border-radius: 100%;
-    display: block;
-    height: 8px;
-    position: relative;
-    top: -1px;
-    width: 8px; }
-    .search-form form #glass:after {
-      background: #999;
-      content: '';
-      height: 2px;
-      position: absolute;
-      right: -5px;
-      top: 9px;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-      width: 6px; }
   .search-form form button[type="submit"] {
     background: #fff;
     height: 39px;
@@ -3207,5 +3197,64 @@ p.tags {
     right: 0;
     top: 1px;
     width: 20px; }
+  .search-form form .glass {
+    border: 2px solid #999;
+    height: 8px;
+    top: -1px;
+    width: 8px; }
+    .search-form form .glass:after {
+      height: 2px;
+      right: -5px;
+      top: 9px;
+      width: 6px; }
+
+.glass {
+  border: 3px solid #999;
+  border-radius: 100%;
+  cursor: pointer;
+  display: block;
+  height: 10px;
+  position: relative;
+  transition: transform 0.2s ease-out;
+  width: 10px; }
+  .glass:after {
+    background: #999;
+    content: '';
+    height: 3px;
+    position: absolute;
+    right: -7px;
+    top: 11px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 8px; }
+  .glass.active {
+    transform: rotate(360deg); }
+
+.burger {
+  cursor: pointer;
+  height: 19px;
+  position: relative;
+  width: 24px; }
+  .burger .line {
+    background: #999;
+    height: 3px;
+    position: absolute;
+    transition: transform 0.2s ease-out;
+    width: 24px; }
+  .burger .line:nth-child(1) {
+    top: 0; }
+  .burger .line:nth-child(2) {
+    top: 8px; }
+  .burger .line:nth-child(3) {
+    top: 16px; }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5.3px, 5.3px); }
+  .burger.active .line:nth-child(2) {
+    transform: scale(0, 1); }
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px); }
 
 /*# sourceMappingURL=style.css.map */

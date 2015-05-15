@@ -184,12 +184,15 @@ body {
 
 			@media(min-width: 641px) {
 
-				&.page_item_has_children a:after {
-					width: 0;
-					height: 0;
+				&.page_item_has_children > a::after {
+					border-color: $white transparent transparent transparent;
 					border-style: solid;
-					border-width: 5px 5px 0 5px;
-					border-color: #000000 transparent transparent transparent;
+					border-width: 4px 4px 0 4px;
+					content: '';
+					display: inline-block;
+					height: 0;
+					margin: 0 0 3px 5px;
+					width: 0;
 				}
 
 				ul { 
@@ -207,6 +210,17 @@ body {
 
 					li {
 						width: 100%;
+
+						&.page_item_has_children > a::after {
+							border-color: transparent transparent transparent $white;
+							border-style: solid;
+							border-width: 4px 0 4px 4px;
+							content: '';
+							display: inline-block;
+							height: 0;
+							margin: 0 0 1px 5px;
+							width: 0;
+						}
 
 						 a { 
 							box-sizing: border-box;
