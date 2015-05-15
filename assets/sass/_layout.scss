@@ -46,7 +46,7 @@ body {
 }
 
 // @section    Layout
-// @subsection Page
+// @subsection Header
 
 #header {
 	background: $body-background;
@@ -125,238 +125,45 @@ body {
 	}
 }
 
+// @section    Layout
+// @subsection Main navigation
+
 #main-navigation {
 	background-color: $footer-background;
 	display: none;
 	margin: 0;
-	padding: 15px 0;
-	z-index: 1;
+	padding: 15px 0 20px 0;
 
-	@media(min-width: 641px) {
-		display: block;
-		padding: 0;
-	}
-
-	ul {
-		list-style-type: none;
+	ul { 
+		list-style: none;
 		margin: 0;
 		padding: 0;
 
-		@media(min-width: 641px) {
-			position: relative;
-		}
-
 		li {
-			display: block;
-
-			@media(min-width: 641px) {
-				float: left;
-
-				// show sub-menu
-				&:active,
-				&:focus,
-				&:hover {
-					
-					> ul {
-						display: block;
-					}
-				}
-
-				// if item has children, show indicator
-				&.page_item_has_children,
-				&.menu-item-has-children,
-				&.has-children {
-					padding-right: 10px;
-
-					> a:after {
-						content: "\f0d7";
-						display: inline-block;
-						font-family: FontAwesome;
-						font-size: 10px;
-						position: absolute;
-						padding-left: 5px;
-						padding-right: 5px;
-					}
-				}
-
-				&.current-menu-item,
-				&.current-menu-parent,
-				&.current-menu-ancestor {
-					background-color: #222;
-				}
-
-				a {
-					text-decoration: none;
-				}
-			}
 
 			a {
 				color: $white;
-				float: left;
 				text-decoration: none;
-				padding: 6px 0;
-				width: 100%;
-			}
 			
-			&.current-menu-ancestor,
-			&.current-menu-parent,
-			&.current-menu-item {
-
-				> a {
+				&:hover {
 					text-decoration: underline;
 				}
+
 			}
 
-			ul {
-				box-sizing: border-box;
-				padding: 5px 10px;
-				width: 100%;
+			ul { margin: 0 0 0 20px; }
 
-				@media(min-width: 641px) {
-					padding: 0;
-					top: 60px;
-					width: 220px;
-				}
+			// Current menu item
 
-				li {
-					font-size: 12px;
-
-					a {
-						padding: 5px 10px;
-
-						@media(min-width: 641px) {
-							padding: 5px 20px;
-						}
-					}
-
-					ul {
-						padding-bottom: 0;
-					}
-				}
-			}
-		}
-
-		@media(min-width: 641px) {
-
-			// first level only
-			> li {
-				position: relative;
-				display: block;
-				float: left;
-				line-height: 60px;
-				padding: 0;
-
-				&:active, 
-				&:focus,
-				&:hover {
-					background-color: #222;
-				}
-
-				> a {
-					color: $white;
-					display: block;
-					font-size: 14px;
-					font-weight: bold;
-					line-height: 60px;
-					padding: 0 20px;
-					text-transform: uppercase;
-				}
-			}
-
-			// second level, third level
-			ul, ul ul {
-				display: none;
-				margin: 0;
-				position: absolute;
-				top: auto;
-				z-index: 1;
-
-				li {
-					clear: both;
-					display: block;
-					height: 40px;
-					width: 100%;
-
-					a {
-						box-sizing: border-box;
-						background: #222;
-						color: $white;
-						display: block;	
-						font-size: 12px;
-						line-height: 40px;
-						padding: 5px 20px;
-						text-transform: none;
-						width: 100%;
-
-						&:active,
-						&:focus,
-						&:hover {
-							text-decoration: underline;
-						}
-					}	
-		
-					&.page_item_has_children,
-					&.menu-item-has-children,
-					&.has-children {
-						padding-right: 0;
-
-						> a {
-							&:after {
-								content: "\f0da";
-								display: inline-block;
-							}
-						
-							&:active,
-							&:focus,
-							&:hover {
-								&:after {
-									text-decoration: none;
-								}
-							}
-						}
-					}
-
-					// third level
-					ul {
-						margin-left: 0;
-						left: 100%;
-					}
-				}
+			&.current_page_item > a {
+				font-weight: bold;
 			}
 		}
 	}
 }
 
-#sub-header {
-	background-color: #ccc;
-	padding: 45px 0 60px 0;
-	text-align: center;
-
-	h1 {
-		font-size: 32px;
-		line-height: 1;
-		margin-bottom: 10px;
-
-		@media(min-width: 641px) {
-			font-size: 64px;
-			margin-bottom: 15px;
-		}
-	}
-
-	h2 {
-		font-size: 18px;
-		font-weight: normal;
-		margin-bottom: 0;
-
-		@media(min-width: 641px) {
-			font-size: 36px;
-		}
-	}
-
-	@media(min-width: 641px) {
-		padding: ($line-height * 2) 0;
-	}
-}
+// @section    Layout
+// @subsection Main
 
 #main {
 	border-top: 1px solid $border-color;
@@ -427,6 +234,9 @@ body {
 		}
 	}
 }
+
+// @section    Layout
+// @subsection Footer
 
 #footer {
 	background: $footer-background;

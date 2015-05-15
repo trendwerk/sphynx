@@ -13,6 +13,37 @@
 // @subsection front-page.php
 
 .home {
+	#sub-header {
+		background-color: #ccc;
+		padding: 45px 0 60px 0;
+		text-align: center;
+
+		h1 {
+			font-size: 32px;
+			line-height: 1;
+			margin-bottom: 10px;
+
+			@media(min-width: 641px) {
+				font-size: 64px;
+				margin-bottom: 15px;
+			}
+		}
+
+		h2 {
+			font-size: 18px;
+			font-weight: normal;
+			margin-bottom: 0;
+
+			@media(min-width: 641px) {
+				font-size: 36px;
+			}
+		}
+
+		@media(min-width: 641px) {
+			padding: ($line-height * 2) 0;
+		}
+	}
+
 	#main {
 		border-top: 0;
 	}
