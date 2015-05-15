@@ -55,22 +55,14 @@ body {
 	z-index: 1;
 
 	#logo {
-		text-align: center;
-		width: 100%;
-
-		@media(min-width: 401px) {
-			text-align: left;
-			float: left;
-			width: auto;
-		}
+		text-align: left;
+		float: left;
+		width: auto;
+		
 
 		#sitename {
 			font: bold 28px/35px $heading-font;
-			margin: 0 0 10px 0;
-
-			@media(min-width: 401px) {
-				margin-bottom: 0;
-			}
+			margin: 0;
 
 			a {
 				color: $heading-color;
@@ -87,14 +79,10 @@ body {
 	}
 
 	#mobile {
+		float: right;
 		margin-top: 10px;
 		text-align: center;
-		width: 100%;
-
-		@media(min-width: 401px) {
-			width: auto;
-			float: right;
-		}
+		width: auto;
 
 		@media(min-width: 641px) {
 			display: none;
@@ -106,17 +94,13 @@ body {
 			border-radius: 3px;
 			color: $white;
 			cursor: pointer;
-			display: inline-block;
+			display: block;
+			float: left;
 			font-size: 16px;
 			height: 40px;
 			line-height: 40px;
-			margin: 0 5px;
+			margin: 0 0 0 10px;
 			width: 40px;
-
-			@media(min-width: 401px) {
-				float: left;
-				margin: 0 0 0 10px;
-			}
 
 			&.active {
 				background-color: $primary-color;

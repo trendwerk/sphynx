@@ -2690,19 +2690,12 @@ body {
   padding: 20px 0;
   z-index: 1; }
   #header #logo {
-    text-align: center;
-    width: 100%; }
-    @media (min-width: 401px) {
-      #header #logo {
-        text-align: left;
-        float: left;
-        width: auto; } }
+    text-align: left;
+    float: left;
+    width: auto; }
     #header #logo #sitename {
       font: bold 28px/35px "Helvetica Neue", sans-serif;
-      margin: 0 0 10px 0; }
-      @media (min-width: 401px) {
-        #header #logo #sitename {
-          margin-bottom: 0; } }
+      margin: 0; }
       #header #logo #sitename a {
         color: #333;
         text-decoration: none; }
@@ -2712,13 +2705,10 @@ body {
       line-height: 1.5;
       margin: 0; }
   #header #mobile {
+    float: right;
     margin-top: 10px;
     text-align: center;
-    width: 100%; }
-    @media (min-width: 401px) {
-      #header #mobile {
-        width: auto;
-        float: right; } }
+    width: auto; }
     @media (min-width: 641px) {
       #header #mobile {
         display: none; } }
@@ -2728,17 +2718,13 @@ body {
       border-radius: 3px;
       color: #fff;
       cursor: pointer;
-      display: inline-block;
+      display: block;
+      float: left;
       font-size: 16px;
       height: 40px;
       line-height: 40px;
-      margin: 0 5px;
+      margin: 0 0 0 10px;
       width: 40px; }
-      @media (min-width: 401px) {
-        #header #mobile #mobile-navigation,
-        #header #mobile #mobile-search {
-          float: left;
-          margin: 0 0 0 10px; } }
       #header #mobile #mobile-navigation.active,
       #header #mobile #mobile-search.active {
         background-color: #333; }
