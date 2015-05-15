@@ -79,6 +79,10 @@ body {
 			font: normal 14px/25px $text-font;
 			line-height: 1.5;
 			margin: 0;
+
+			@media(max-width: 640px) {
+				display: none;
+			}
 		}
 	}
 

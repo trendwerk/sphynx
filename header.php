@@ -47,6 +47,10 @@
 						</a>
 					</p>
 
+					<p id="description">
+						<?php bloginfo( 'description' ); ?>
+					</p>
+
 				</div>
 
 				<div id="search">

@@ -2708,6 +2708,9 @@ body {
       font: normal 14px/25px "Helvetica Neue", sans-serif;
       line-height: 1.5;
       margin: 0; }
+      @media (max-width: 640px) {
+        #header #logo #description {
+          display: none; } }
   #header #mobile-navigation,
   #header #mobile-search {
     cursor: pointer;
@@ -3197,6 +3200,7 @@ p.tags {
       .search-form form input[type="text"] {
         font-size: 13px; } }
   .search-form form button[type="submit"] {
+    background: none;
     height: 39px;
     margin: 0;
     padding: 0 0 0 15px;
