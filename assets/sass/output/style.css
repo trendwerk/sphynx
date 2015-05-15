@@ -2688,11 +2688,15 @@ body {
   background: #fff;
   box-sizing: border-box;
   padding: 20px 0;
+  text-align: center;
   z-index: 1; }
   #header #logo {
-    text-align: left;
-    float: left;
-    width: auto; }
+    display: inline-block; }
+    @media (min-width: 641px) {
+      #header #logo {
+        display: block;
+        float: left;
+        text-align: left; } }
     #header #logo #sitename {
       font: bold 28px/35px "Helvetica Neue", sans-serif;
       margin: 0; }
@@ -2704,24 +2708,23 @@ body {
       font: normal 14px/25px "Helvetica Neue", sans-serif;
       line-height: 1.5;
       margin: 0; }
-  #header #mobile {
-    float: right;
-    margin: 8px -10px 0 0;
-    text-align: center;
-    width: auto; }
+  #header #mobile-navigation,
+  #header #mobile-search {
+    cursor: pointer;
+    padding: 10px;
+    float: left; }
     @media (min-width: 641px) {
-      #header #mobile {
+      #header #mobile-navigation,
+      #header #mobile-search {
         display: none; } }
-    #header #mobile #mobile-navigation,
-    #header #mobile #mobile-search {
-      cursor: pointer;
-      padding: 10px;
-      float: left; }
-    #header #mobile #mobile-search {
-      float: left;
-      height: 19px;
-      margin-right: 5px;
-      width: 20px; }
+  #header #mobile-navigation {
+    float: right;
+    margin: 10px -10px 0 0; }
+  #header #mobile-search {
+    float: left;
+    height: 19px;
+    margin: 10px 0 0 -10px;
+    width: 20px; }
   #header #search {
     display: none;
     float: right;

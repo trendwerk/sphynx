@@ -26,6 +26,18 @@
 		<header id="header" class="container">
 		
 			<div class="container-inner">
+
+				<div id="mobile-search" data-toggle="#search">
+					<div class="glass"></div>
+				</div>
+
+				<div id="mobile-navigation" data-toggle="#main-navigation">
+					<div class="burger">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
 				
 				<div id="logo">
 
@@ -38,22 +50,6 @@
 					<p id="description">
 						<?php bloginfo( 'description' ); ?>
 					</p>
-
-				</div>	
-				
-				<div id="mobile">
-
-					<div id="mobile-search" data-toggle="#search">
-						<div class="glass"></div>
-					</div>
-
-					<div id="mobile-navigation" data-toggle="#main-navigation">
-						<div class="burger">
-							<div class="line"></div>
-							<div class="line"></div>
-							<div class="line"></div>
-						</div>
-					</div>
 
 				</div>
 

@@ -52,13 +52,17 @@ body {
 	background: $body-background;
 	box-sizing: border-box;
 	padding: 20px 0;
+	text-align: center;
 	z-index: 1;
 
 	#logo {
-		text-align: left;
-		float: left;
-		width: auto;
-		
+		display: inline-block;
+
+		@media(min-width: 641px) {
+			display: block;
+			float: left;
+			text-align: left;
+		}
 
 		#sitename {
 			font: bold 28px/35px $heading-font;
@@ -78,29 +82,27 @@ body {
 		}
 	}
 
-	#mobile {
-		float: right;
-		margin: 8px -10px 0 0;
-		text-align: center;
-		width: auto;
+	#mobile-navigation,
+	#mobile-search {
+		cursor: pointer;
+		padding: 10px;
+		float: left;
 
 		@media(min-width: 641px) {
 			display: none;
 		}
+	}
 
-		#mobile-navigation,
-		#mobile-search {
-			cursor: pointer;
-			padding: 10px;
-			float: left;
-		}
+	#mobile-navigation {
+		float: right;
+		margin: 10px -10px 0 0;
+	}
 
-		#mobile-search {
-			float: left;
-			height: 19px;
-			margin-right: 5px;
-			width: 20px;
-		}
+	#mobile-search {
+		float: left;
+		height: 19px;
+		margin: 10px 0 0 -10px;
+		width: 20px;
 	}
 
 	#search {
