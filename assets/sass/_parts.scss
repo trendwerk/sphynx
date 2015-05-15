@@ -300,6 +300,10 @@ p.tags {
 	display: block;
 	height: 10px;
 	position: relative;
+	-webkit-transition: -webkit-transform 0.2s ease-out;
+	-moz-transition: -moz-transform 0.2s ease-out;
+	-ms-transition: -ms-transform 0.2s ease-out;
+	-o-transition: -o-transform 0.2s ease-out;
 	transition: transform 0.2s ease-out;
 	width: 10px;
 
@@ -319,7 +323,11 @@ p.tags {
 	}
 
 	&.active {
-		transform: rotate(360deg);
+		-webkit-transform:	rotate(360deg);
+		-moz-transform:		rotate(360deg);
+		-ms-transform:		rotate(360deg);
+		-o-transform:		rotate(360deg);
+		transform:			rotate(360deg);
 	}
 }
 
@@ -332,6 +340,10 @@ p.tags {
 		background: $text-light;
 		height: 3px;
 		position: absolute;
+		-webkit-transition: -webkit-transform 0.2s ease-out;
+		-moz-transition: -moz-transform 0.2s ease-out;
+		-ms-transition: -ms-transform 0.2s ease-out;
+		-o-transition: -o-transform 0.2s ease-out;
 		transition: transform 0.2s ease-out;
 		width: 24px;
 	}
@@ -350,14 +362,26 @@ p.tags {
 
 	&.active {
 		.line:nth-child(1) {
+			-webkit-transform: rotate(45deg) translate(5.3px, 5.3px);
+			-moz-transform: rotate(45deg) translate(5.3px, 5.3px);
+			-ms-transform: rotate(45deg) translate(5.3px, 5.3px);
+			-o-transform: rotate(45deg) translate(5.3px, 5.3px);
 			transform: rotate(45deg) translate(5.3px, 5.3px);
 		}
 
 		.line:nth-child(2) {
+			-webkit-transform: scale(0, 1);
+			-moz-transform: scale(0, 1);
+			-ms-transform: scale(0, 1);
+			-o-transform: scale(0, 1);
 			transform: scale(0, 1);
 		}
 
 		.line:nth-child(3) {
+			-webkit-transform: rotate(-45deg) translate(6px, -6px);
+			-moz-transform: rotate(-45deg) translate(6px, -6px);
+			-ms-transform: rotate(-45deg) translate(6px, -6px);
+			-o-transform: rotate(-45deg) translate(6px, -6px);
 			transform: rotate(-45deg) translate(6px, -6px);
 		}
 	}
