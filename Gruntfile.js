@@ -10,8 +10,7 @@ module.exports = function( grunt ) {
 		coffee: {
 			compile: {
 				options: {
-					sourceMap: true,
-					bare: true
+					sourceMap: true
 				},
 				files: {
 					'assets/coffee/output/functions.js': 'assets/coffee/functions.coffee',
