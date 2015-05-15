@@ -36,21 +36,6 @@ module.exports = function( grunt ) {
 	    },
 
 		/**
-		 * Lint SASS
-		 */
-		scsslint: {
-			allFiles: [
-				'assets/sass/*.scss',
-			],
-			options: {
-				colorizeOutput: true,
-				config: 'assets/sass/lint/scss-lint.yml',
-				force: true,
-				reporterOutput: 'assets/sass/lint/scss-lint-report.xml'
-			}
-		},
-
-		/**
 		 * Compile SASS to CSS 
 		 */	
 		sass: {
@@ -83,13 +68,6 @@ module.exports = function( grunt ) {
 					livereload: true
 				},				
 			},
-			scsslint: {
-				files: [ 'assets/sass/*' ],
-				tasks: [ 'scsslint' ],
-				options: {
-					livereload: true
-				},			
-			},
 			sass: {
 				files: [ 'assets/sass/*' ],
 				tasks: [ 'sass' ],
@@ -108,11 +86,10 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-coffeelint' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-scss-lint' );
 
 	/**
 	 * Run tasks
 	 */
-	grunt.registerTask( 'default', [ 'coffee', 'coffeelint', 'sass', 'watch', 'scsslint' ] );
+	grunt.registerTask( 'default', [ 'coffee', 'coffeelint', 'sass', 'watch' ] );
 
 };
