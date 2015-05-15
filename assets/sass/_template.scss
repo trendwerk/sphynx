@@ -15,7 +15,7 @@
 .home {
 	#sub-header {
 		background-color: #ccc;
-		padding: 45px 0 45px 0;
+		padding: ($line-height * 1.5) 0;
 		text-align: center;
 
 		@media(min-width: 641px) {

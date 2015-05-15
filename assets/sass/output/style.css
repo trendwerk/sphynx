@@ -2910,7 +2910,7 @@ body {
 
 .home #sub-header {
   background-color: #ccc;
-  padding: 45px 0 45px 0;
+  padding: 45px 0;
   text-align: center; }
   @media (min-width: 641px) {
     .home #sub-header {
@@ -3197,14 +3197,13 @@ p.tags {
       .search-form form input[type="text"] {
         font-size: 13px; } }
   .search-form form button[type="submit"] {
-    background: #fff;
     height: 39px;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 15px;
     position: absolute;
     right: 1px;
     top: 1px;
-    width: 30px; }
+    width: 40px; }
   .search-form form .glass {
     border: 2px solid #999;
     height: 8px;
