@@ -136,67 +136,99 @@ body {
 		margin: 0;
 		padding: 0;
 
-		li a {
-			color: $white;
-			text-decoration: none;
-		
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-
-		li ul { 
-			margin: 0 0 0 20px;
-		}
-
-		// Current page
-		
-		li.current_page_item > a,
-		li.current_page_parent > a,
-		li.current_page_ancestor > a {
-		 	font-weight: bold;
-		}
-	}
-
-	@media(min-width: 641px) {
-
-		ul {
+		@media(min-width: 641px) {
 			text-transform: uppercase;
+		}
 
-			li {
+		li {
+			@media(min-width: 641px) {
 				position: relative;
 				float: left;
+			}
 
-				a {
+			a {
+				color: $white;
+				text-decoration: none;
+
+				@media(min-width: 641px) {
 					display: block;
 					float: left;
 					padding: 10px 15px;
-
-					&:hover {
-						background: #222;
-						text-decoration: none;
-					}
 				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			&:hover a {
+				@media(min-width: 641px) {
+					background: #222;
+					text-decoration: none;
+				}
+			}
+
+			// Current page
+
+			&.current_page_item > a,
+			&.current_page_parent > a,
+			&.current_page_ancestor > a {
+			 	font-weight: bold;
+			}
+
+			ul { 
+				margin: 0 0 0 20px;
 			}
 
 			// Drop-down menu
 
-			li ul { display: none; }
+			@media(min-width: 641px) {
 
-			li:hover ul {
-				background: #222;
-				display: block;
-				margin: 0;
-				position: absolute;
-				text-transform: none;
-				top: 50px;
-				width: 220px;
+				&.page_item_has_children a:after {
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 5px 5px 0 5px;
+					border-color: #000000 transparent transparent transparent;
+				}
 
-				li {
-					width: 100%;
+				ul { 
+					display: none; 
+				}
 
-					 a { 
-						padding: 10px 20px;
+				&:hover ul {
+					background: #222;
+					display: block;
+					margin: 0 0 10px 0;
+					position: absolute;
+					text-transform: none;
+					top: 50px;
+					width: 300px;
+
+					li {
+						width: 100%;
+
+						 a { 
+							box-sizing: border-box;
+							padding: 5px 20px;
+							width: 100%;
+
+							&:hover {
+								background: #111;
+							}
+						}
+
+						// Level 2
+						
+						ul { 
+							display: none;
+						}
+
+						&:hover ul {
+							display: block;
+							left: 300px;
+							top: 0;
+						}
 					}
 				}
 			}

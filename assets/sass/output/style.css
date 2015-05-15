@@ -2754,44 +2754,56 @@ body {
     list-style: none;
     margin: 0;
     padding: 0; }
+    @media (min-width: 641px) {
+      #main-navigation ul {
+        text-transform: uppercase; } }
+    @media (min-width: 641px) {
+      #main-navigation ul li {
+        position: relative;
+        float: left; } }
     #main-navigation ul li a {
       color: #fff;
       text-decoration: none; }
-      #main-navigation ul li a:hover {
-        text-decoration: underline; }
-    #main-navigation ul li ul {
-      margin: 0 0 0 20px; }
-    #main-navigation ul li.current_page_item > a,
-    #main-navigation ul li.current_page_parent > a,
-    #main-navigation ul li.current_page_ancestor > a {
-      font-weight: bold; }
-  @media (min-width: 641px) {
-    #main-navigation ul {
-      text-transform: uppercase; }
-      #main-navigation ul li {
-        position: relative;
-        float: left; }
+      @media (min-width: 641px) {
         #main-navigation ul li a {
           display: block;
           float: left;
-          padding: 10px 15px; }
-          #main-navigation ul li a:hover {
-            background: #222;
-            text-decoration: none; }
+          padding: 10px 15px; } }
+      #main-navigation ul li a:hover {
+        text-decoration: underline; }
+    @media (min-width: 641px) {
+      #main-navigation ul li:hover a {
+        background: #222;
+        text-decoration: none; } }
+    #main-navigation ul li.current_page_item > a, #main-navigation ul li.current_page_parent > a, #main-navigation ul li.current_page_ancestor > a {
+      font-weight: bold; }
+    #main-navigation ul li ul {
+      margin: 0 0 0 20px; }
+    @media (min-width: 641px) {
       #main-navigation ul li ul {
         display: none; }
       #main-navigation ul li:hover ul {
         background: #222;
         display: block;
-        margin: 0;
+        margin: 0 0 10px 0;
         position: absolute;
         text-transform: none;
         top: 50px;
-        width: 220px; }
+        width: 300px; }
         #main-navigation ul li:hover ul li {
           width: 100%; }
           #main-navigation ul li:hover ul li a {
-            padding: 10px 20px; } }
+            box-sizing: border-box;
+            padding: 5px 20px;
+            width: 100%; }
+            #main-navigation ul li:hover ul li a:hover {
+              background: #111; }
+          #main-navigation ul li:hover ul li ul {
+            display: none; }
+          #main-navigation ul li:hover ul li:hover ul {
+            display: block;
+            left: 300px;
+            top: 0; } }
 
 #main {
   border-top: 1px solid #ccc;
