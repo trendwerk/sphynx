@@ -12,10 +12,15 @@ module.exports = function( grunt ) {
 				options: {
 					sourceMap: true
 				},
-				files: {
-					'assets/coffee/output/functions.js': 'assets/coffee/functions.coffee',
-					'assets/coffee/output/responsive.js': 'assets/coffee/responsive.coffee'
-				}
+				files: [
+					{
+						expand: true,
+						cwd: 'assets/coffee',
+						src: [ '**/*.coffee' ],
+						dest: 'assets/coffee/output/',
+						ext: '.js'
+					}
+				]
 			}
 		},
 
@@ -24,8 +29,7 @@ module.exports = function( grunt ) {
 		 */
 	    coffeelint: {
 			app: [ 
-				'assets/coffee/functions.coffee', 
-				'assets/coffee/responsive.coffee'
+				'assets/coffee/*.coffee'
 			],
 			options: {
 				'max_line_length': {
@@ -65,7 +69,7 @@ module.exports = function( grunt ) {
 		 */
 		watch: {
 			coffee: {
-				files: [ 'assets/coffee/*' ],
+				files: [ 'assets/coffee/*.coffee' ],
 				tasks: [ 'coffee', 'coffeelint' ],
 				options: {
 					livereload: true
