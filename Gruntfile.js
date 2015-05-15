@@ -16,7 +16,7 @@ module.exports = function( grunt ) {
 					{
 						expand: true,
 						cwd: 'assets/coffee',
-						src: [ '**/*.coffee' ],
+						src: [ '*.coffee' ],
 						dest: 'assets/coffee/output/',
 						ext: '.js'
 					}
@@ -28,9 +28,7 @@ module.exports = function( grunt ) {
 		 * Lint Coffee
 		 */
 	    coffeelint: {
-			app: [ 
-				'assets/coffee/*.coffee'
-			],
+			lint: [ 'assets/coffee/*.coffee' ],
 			options: {
 				'max_line_length': {
 					'level': 'ignore'
@@ -42,14 +40,9 @@ module.exports = function( grunt ) {
 		 * Compile SASS to CSS 
 		 */	
 		sass: {
-			options: {
-				style: 'nested'
-			},
-			dist: {
-				files: {
-					'assets/sass/output/editor.css': 'assets/sass/editor.scss',
-					'assets/sass/output/style.css': 'assets/sass/style.scss'
-				}
+			compile: {
+				'assets/sass/output/editor.css': 'assets/sass/editor.scss',
+				'assets/sass/output/style.css': 'assets/sass/style.scss'
 			}
 		},
 
@@ -57,7 +50,7 @@ module.exports = function( grunt ) {
 		 * Lint PHP
 		 */
 		phplint: {
-			files: [
+			lint: [
 				'*.php',
 				'assets/**/*.php',
 				'partials/**/*.php'
