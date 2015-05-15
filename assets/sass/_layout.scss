@@ -80,7 +80,7 @@ body {
 
 	#mobile {
 		float: right;
-		margin-top: 18px;
+		margin: 8px -10px 0 0;
 		text-align: center;
 		width: auto;
 
@@ -88,15 +88,18 @@ body {
 			display: none;
 		}
 
-		#mobile-navigation, 
+		#mobile-navigation,
 		#mobile-search {
+			cursor: pointer;
+			padding: 10px;
 			float: left;
-			height: 19px;
-			width: 24px;
 		}
 
 		#mobile-search {
-			margin-right: 20px;
+			float: left;
+			height: 19px;
+			margin-right: 5px;
+			width: 20px;
 		}
 	}
 
