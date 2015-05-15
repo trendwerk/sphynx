@@ -3145,6 +3145,7 @@ p.tags {
     font-size: 16px;
     font-style: italic;
     margin: 0;
+    padding: 12px 43px 12px 12px;
     right: 0;
     width: 100%; }
     .search-form form input[type="text"]:-moz-placeholder {
@@ -3166,26 +3167,33 @@ p.tags {
     @media (min-width: 641px) {
       .search-form form input[type="text"] {
         font-size: 13px; } }
+  .search-form form #glass {
+    border: 2px solid #999;
+    border-radius: 100%;
+    display: block;
+    height: 8px;
+    position: relative;
+    top: -1px;
+    width: 8px; }
+    .search-form form #glass:after {
+      background: #999;
+      content: '';
+      height: 2px;
+      position: absolute;
+      right: -5px;
+      top: 9px;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      width: 6px; }
   .search-form form button[type="submit"] {
-    background: none;
-    box-shadow: none;
-    color: #999;
-    font-size: 16px;
-    font-family: fontawesome;
-    font-weight: 400;
+    background: #fff;
     height: 39px;
-    margin: 2px 0 0;
-    padding: 0 12px;
+    margin: 0 15px 0 0;
+    padding: 0;
     position: absolute;
-    right: 1px;
-    text-shadow: none;
+    right: 0;
     top: 1px;
-    -webkit-font-smoothing: antialiased; }
-    @media (min-width: 641px) {
-      .search-form form button[type="submit"] {
-        font-size: 13px;
-        margin-top: 0; } }
-    .search-form form button[type="submit"]:active, .search-form form button[type="submit"]:focus, .search-form form button[type="submit"]:hover {
-      color: #666; }
+    width: 20px; }
 
 /*# sourceMappingURL=style.css.map */

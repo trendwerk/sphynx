@@ -255,6 +255,7 @@ p.tags {
 			font-size: 16px;
 			font-style: italic;
 			margin: 0;
+			padding: 12px 43px 12px 12px;
 			right: 0;
 			width: 100%;
 
@@ -263,32 +264,38 @@ p.tags {
 			}
 		}
 
+		#glass {
+			border: 2px solid $text-light;
+			border-radius: 100%;
+			display: block;
+			height: 8px;
+			position: relative;
+			top: -1px;
+			width: 8px;
+
+			&:after {
+				background: $text-light;
+				content: '';
+				height: 2px;
+				position: absolute;
+				right: -5px;
+				top: 9px;
+				-webkit-transform:	rotate(45deg);
+				-ms-transform:		rotate(45deg);
+				transform:			rotate(45deg);
+				width: 6px;
+			}
+		}
+
 		button[type="submit"] {
-			background: none;
-			box-shadow: none;
-			color: $text-light;
-			font-size: 16px;
-			font-family: fontawesome;
-			font-weight: 400;
+			background: #fff;
 			height: 39px;
-			margin: 2px 0 0;
-			padding: 0 12px;
+			margin: 0 15px 0 0;
+			padding: 0;
 			position: absolute;
-			right: 1px;
-			text-shadow: none;
+			right: 0;
 			top: 1px;
-			-webkit-font-smoothing: antialiased;
-
-			@media(min-width: 641px) {
-				font-size: 13px;
-				margin-top: 0;
-			}
-
-			&:active,
-			&:focus,
-			&:hover {
-				color: $text-color;
-			}
+			width: 20px;
 		}
 	}
 }

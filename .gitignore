@@ -4,3 +4,5 @@ node_modules
 
 # Composer
 vendor/*
+
+assets/sass/output/style.css.map

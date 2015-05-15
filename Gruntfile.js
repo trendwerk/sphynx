@@ -10,13 +10,17 @@ module.exports = function( grunt ) {
 		coffee: {
 			compile: {
 				options: {
-					sourceMap: true,
-					bare: true
+					sourceMap: true
 				},
-				files: {
-					'assets/coffee/output/functions.js': 'assets/coffee/functions.coffee',
-					'assets/coffee/output/responsive.js': 'assets/coffee/responsive.coffee'
-				}
+				files: [
+					{
+						expand: true,
+						cwd: 'assets/coffee',
+						src: [ '*.coffee' ],
+						dest: 'assets/coffee/output/',
+						ext: '.js'
+					}
+				]
 			}
 		},
 
@@ -24,10 +28,7 @@ module.exports = function( grunt ) {
 		 * Lint Coffee
 		 */
 	    coffeelint: {
-			app: [ 
-				'assets/coffee/functions.coffee', 
-				'assets/coffee/responsive.coffee'
-			],
+			lint: [ 'assets/coffee/*.coffee' ],
 			options: {
 				'max_line_length': {
 					'level': 'ignore'
@@ -39,15 +40,21 @@ module.exports = function( grunt ) {
 		 * Compile SASS to CSS 
 		 */	
 		sass: {
-			options: {
-				style: 'nested'
-			},
-			dist: {
-				files: {
-					'assets/sass/output/editor.css': 'assets/sass/editor.scss',
-					'assets/sass/output/style.css': 'assets/sass/style.scss'
-				}
+			compile: {
+				'assets/sass/output/editor.css': 'assets/sass/editor.scss',
+				'assets/sass/output/style.css': 'assets/sass/style.scss'
 			}
+		},
+
+		/**
+		 * Lint PHP
+		 */
+		phplint: {
+			lint: [
+				'*.php',
+				'assets/**/*.php',
+				'partials/**/*.php'
+			]
 		},
 
 		/**
@@ -55,18 +62,11 @@ module.exports = function( grunt ) {
 		 */
 		watch: {
 			coffee: {
-				files: [ 'assets/coffee/*' ],
-				tasks: [ 'coffee' ],
+				files: [ 'assets/coffee/*.coffee' ],
+				tasks: [ 'coffee', 'coffeelint' ],
 				options: {
 					livereload: true
 				},
-			},
-			coffeelint: {
-				files: [ 'assets/coffee/*' ],
-				tasks: [ 'coffeelint' ],
-				options: {
-					livereload: true
-				},				
 			},
 			sass: {
 				files: [ 'assets/sass/*' ],
@@ -74,6 +74,14 @@ module.exports = function( grunt ) {
 				options: {
 					livereload: true
 				},
+			},
+			phplint: {
+				files: [
+					'*.php',
+					'assets/**/*.php',
+					'partials/**/*.php'
+				],
+				tasks: [ 'phplint' ]
 			}
 		}
 
@@ -85,11 +93,12 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
 	grunt.loadNpmTasks( 'grunt-coffeelint' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
+	grunt.loadNpmTasks( 'grunt-phplint' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 	/**
 	 * Run tasks
 	 */
-	grunt.registerTask( 'default', [ 'coffee', 'coffeelint', 'sass', 'watch' ] );
+	grunt.registerTask( 'default', [ 'coffee', 'coffeelint', 'sass', 'phplint', 'watch' ] );
 
 };
