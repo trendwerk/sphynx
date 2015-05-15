@@ -51,22 +51,26 @@ module.exports = function( grunt ) {
 		},
 
 		/**
+		 * Lint PHP
+		 */
+		phplint: {
+			files: [
+				'*.php',
+				'assets/**/*.php',
+				'partials/**/*.php'
+			]
+		},
+
+		/**
 		 * Watch things
 		 */
 		watch: {
 			coffee: {
 				files: [ 'assets/coffee/*' ],
-				tasks: [ 'coffee' ],
+				tasks: [ 'coffee', 'coffeelint' ],
 				options: {
 					livereload: true
 				},
-			},
-			coffeelint: {
-				files: [ 'assets/coffee/*' ],
-				tasks: [ 'coffeelint' ],
-				options: {
-					livereload: true
-				},				
 			},
 			sass: {
 				files: [ 'assets/sass/*' ],
@@ -74,6 +78,14 @@ module.exports = function( grunt ) {
 				options: {
 					livereload: true
 				},
+			},
+			phplint: {
+				files: [
+					'*.php',
+					'assets/**/*.php',
+					'partials/**/*.php'
+				],
+				tasks: [ 'phplint' ]
 			}
 		}
 
@@ -85,11 +97,12 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
 	grunt.loadNpmTasks( 'grunt-coffeelint' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
+	grunt.loadNpmTasks( 'grunt-phplint' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 	/**
 	 * Run tasks
 	 */
-	grunt.registerTask( 'default', [ 'coffee', 'coffeelint', 'sass', 'watch' ] );
+	grunt.registerTask( 'default', [ 'coffee', 'coffeelint', 'sass', 'phplint', 'watch' ] );
 
 };
