@@ -1,6 +1,6 @@
 <?php
 $context = Timber::get_context();
-$context['posts'] = Timber::get_posts();
+$context['has_posts'] = ( 0 < count( Timber::get_posts() ) );
 
 if( is_archive() )
 	$context['title'] = get_the_archive_title();
