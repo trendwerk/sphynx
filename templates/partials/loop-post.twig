@@ -1,0 +1,29 @@
+<article class="{{post.class}}">
+
+	<h2>
+		<a href="{{post.permalink}}">
+			{{post.title}}
+		</a>
+	</h2>
+	
+	<p class="meta">
+		{{__( 'Posted on', 'tp' )}} <time datetime="{{post.post_date|date( 'Y-m-d' )}}">{{post.date}}</time>
+		{{__( 'by', 'tp' )}} <a href="{{post.author.path}}">{{post.author.name}}</a>
+		{{__( 'in the category', 'tp' )}} {{fn('the_category', ', ')}}
+	</p>
+
+	{% if post.thumbnail.src %}
+
+		<figure>
+
+			<a href="{{post.permalink}}">
+				{{fn( 'the_post_thumbnail', 'thumbnail' )}}
+			</a>
+
+		</figure>
+
+	{% endif %}
+	
+	{{post.get_preview( 100, false, __( 'Read more', 'tp' ) )}}
+
+</article>
