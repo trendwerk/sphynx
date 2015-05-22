@@ -1,0 +1,19 @@
+{% include 'header.twig' %}
+
+<section id="main" class="container">
+
+	<div class="container-inner">
+		
+		<article id="content">
+
+			{% block content %}
+				{{ __( 'No results found.', 'tp' ) }}
+			{% endblock %}
+			
+		</article>
+
+	</div>
+	
+</section>
+
+{% include 'footer.twig' %}
