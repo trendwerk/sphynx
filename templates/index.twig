@@ -9,13 +9,19 @@
 	{{description}}
 	
 	{% if have_posts %}
+
 		{% for post in posts %}
 			{% include 'partials/loop-post.twig' %}
 		{% endfor %}
 
 		{{fn( 'tp_pagination' )}}
+
 	{% else %}
-		<p>No results found.</p>
+
+		<p>
+			{{__( 'No results found.', 'tp' )}}
+		</p>
+
 	{% endif %}
 
 {% endblock %}
