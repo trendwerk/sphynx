@@ -1,0 +1,25 @@
+<article class="{{post.class}}">
+
+	<h2>
+		<a href="{{post.permalink}}">
+			{{post.title}}
+		</a>
+	</h2>
+	
+	{% include 'partials/post-meta.twig' %}
+
+	{% if post.thumbnail.src %}
+
+		<figure>
+
+			<a href="{{post.permalink}}">
+				{{fn( 'the_post_thumbnail', 'thumbnail' )}}
+			</a>
+
+		</figure>
+
+	{% endif %}
+	
+	{{post.get_preview( 100, false, __( 'Read more', 'tp' ) )|wpautop}}
+
+</article>

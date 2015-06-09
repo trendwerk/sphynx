@@ -1,0 +1,15 @@
+<article>
+
+	<h2>
+		<a href="{{post.permalink}}">
+			{{post.title}}
+		</a>
+	</h2>
+	
+	{{fn( 'the_excerpt' )}}
+
+	<a class="more-link" href="{{post.permalink}}">
+		{{__( 'Read more', 'tp' )}}
+	</a>
+
+</article>

@@ -1,0 +1,27 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+	<h1>
+		{{title}}
+	</h1>
+
+	{{description}}
+	
+	{% if have_posts %}
+
+		{% for post in posts %}
+			{% include 'partials/loop-post.twig' %}
+		{% endfor %}
+
+		{{fn( 'tp_pagination' )}}
+
+	{% else %}
+
+		<p>
+			{{__( 'No results found.', 'tp' )}}
+		</p>
+
+	{% endif %}
+
+{% endblock %}

@@ -1,40 +1,21 @@
 <?php
 if ( post_password_required() )
 	return;
-?>
 
-<div id="comments">
+$context = Timber::get_context();
+$context['post'] = new TimberPost();
 
-	<?php 
-		if ( have_comments() ) { 
-			?>
-	
-			<h2>
-				<?php printf( _n( 'One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'tp' ), get_comments_number(), '<span>' . get_the_title() . '</span>' ); ?>
-			</h2>
-			
-			<ol>
-				<?php 
-					wp_list_comments( array(
-						'avatar_size' => 60,
-					) );
-				?>
-			</ol>
-		
-			<?php
-			$pagination = paginate_comments_links( array(
-				'next_text' => __( 'Next', 'tp' ),
-				'prev_text' => __( 'Previous', 'tp' ),
-				'echo'      => false,
-			) );
+$context['have_comments'] = have_comments();
 
-			if( 0 < strlen( $pagination ) )
-				echo '<nav id="pager">' . $pagination . '</nav>';
-		}
+$context['comment_list'] = wp_list_comments( array(
+	'avatar_size' => 60,
+	'echo'        => false,
+) );
 
-		comment_form( array(
-			'comment_notes_after' => '',
-		) );
-	?>
+$context['comment_pages'] = paginate_comments_links( array(
+	'next_text' => __( 'Next', 'tp' ),
+	'prev_text' => __( 'Previous', 'tp' ),
+	'echo'      => false,
+) );
 
-</div>
+Timber::render( 'partials/comments.twig', $context );

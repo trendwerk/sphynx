@@ -1,51 +1,12 @@
 <?php
-get_header();
-?>
+$context = Timber::get_context();
+$context['have_posts'] = have_posts();
 
-<section id="main" class="container">
+if( is_archive() )
+	$context['title'] = get_the_archive_title();
+else
+	$context['title'] = get_the_title( get_option( 'page_for_posts' ) );
 
-	<div class="container-inner">	
-	
-		<section id="content">
-			
-			<h1>
-				<?php
-					if( is_archive() )
-						the_archive_title();
-					else
-						echo get_the_title( get_option( 'page_for_posts' ) );
-				?>
-			</h1>
+$context['description'] = get_the_archive_description( '<div class="archive-description">', '</div>' );
 
-			<?php
-				the_archive_description( '<div class="archive-description">', '</div>' );
-
-				if( have_posts() ) {
-
-					while( have_posts() ) {
-						the_post();
-						get_template_part( 'partials/loop', 'post' );
-			
-					}
-
-					tp_pagination();
-					
-				} else {
-					?>
-
-					<p>
-						<?php _e( 'No results found.', 'tp' ); ?>
-					</p>
-
-					<?php
-				}
-			?>
-			
-		</section>
-		
-	</div>
-	
-</section>
-
-<?php
-get_footer();
+Timber::render( 'index.twig', $context );

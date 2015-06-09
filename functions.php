@@ -13,6 +13,12 @@ include_once( 'assets/inc/class-tp-includer.php' );
 new TP_Includer( get_template_directory() . '/assets/inc/' );
 
 /**
+ * Timber
+ */
+if( class_exists( 'Timber' ) )
+	Timber::$dirname = array( 'templates/base', 'templates' );
+
+/**
  * Add theme support for RSS links
  */
 add_theme_support( 'automatic-feed-links' );
