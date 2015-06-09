@@ -15,7 +15,8 @@ new TP_Includer( get_template_directory() . '/assets/inc/' );
 /**
  * Timber
  */
-Timber::$dirname = array( 'templates/base', 'templates' );
+if( class_exists( 'Timber' ) )
+	Timber::$dirname = array( 'templates/base', 'templates' );
 
 /**
  * Add theme support for RSS links
