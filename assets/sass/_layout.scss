@@ -18,13 +18,17 @@ body {
 	background: $body-background;
 }
 
-.container {
+#main-navigation,
+#sub-header,
+#header,
+#footer,
+#main {
 	clear: both;
 	float: left;
 	margin: 0;
 	width: 100%;
 
-	.container-inner {
+	.wrapper {
 		box-sizing: border-box;
 		padding: 0 20px;
 		width: 100%;
