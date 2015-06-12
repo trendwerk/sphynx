@@ -1,4 +1,4 @@
-.button-style, a.button, input[type="submit"],
+.button, input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
@@ -15,18 +15,18 @@ button {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap; }
-  .button-style:active, a.button:active, input[type="submit"]:active,
+  .button:active, input[type="submit"]:active,
   input[type="button"]:active,
   input[type="reset"]:active,
   button:active {
     top: 1px; }
-  .button-style:active, a.button:active, input[type="submit"]:active,
+  .button:active, input[type="submit"]:active,
   input[type="button"]:active,
   input[type="reset"]:active,
-  button:active, .button-style:focus, a.button:focus, input[type="submit"]:focus,
+  button:active, .button:focus, input[type="submit"]:focus,
   input[type="button"]:focus,
   input[type="reset"]:focus,
-  button:focus, .button-style:hover, a.button:hover, input[type="submit"]:hover,
+  button:focus, .button:hover, input[type="submit"]:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   button:hover {
@@ -34,6 +34,23 @@ button {
     color: #fff;
     outline: none;
     text-decoration: none; }
+  .button.secondary, input.secondary[type="submit"],
+  input.secondary[type="button"],
+  input.secondary[type="reset"],
+  button.secondary {
+    background: #999;
+    color: #fff; }
+    .button.secondary:active, input.secondary[type="submit"]:active,
+    input.secondary[type="button"]:active,
+    input.secondary[type="reset"]:active,
+    button.secondary:active, .button.secondary:focus, input.secondary[type="submit"]:focus,
+    input.secondary[type="button"]:focus,
+    input.secondary[type="reset"]:focus,
+    button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover,
+    input.secondary[type="button"]:hover,
+    input.secondary[type="reset"]:hover,
+    button.secondary:hover {
+      background: #737373; }
 
 .ellipsis {
   overflow: hidden;
@@ -297,11 +314,6 @@ a {
   a.more-link:after, a.next:after {
     content: '\f054';
     padding-left: 4px; }
-  a.button.secondary {
-    background: #999;
-    color: #fff; }
-    a.button.secondary:active, a.button.secondary:focus, a.button.secondary:hover {
-      background: #737373; }
   a[rel='tag'] {
     background: #ccc;
     border-radius: 3px;
