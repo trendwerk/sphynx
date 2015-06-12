@@ -15,9 +15,9 @@ module.exports = function( grunt ) {
 				files: [
 					{
 						expand: true,
-						cwd: 'assets/coffee',
+						cwd: 'assets/scripts',
 						src: [ '*.coffee' ],
-						dest: 'assets/coffee/output/',
+						dest: 'assets/scripts/output/',
 						ext: '.js'
 					}
 				]
@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
 		 * Lint Coffee
 		 */
 	    coffeelint: {
-			lint: [ 'assets/coffee/*.coffee' ],
+			lint: [ 'assets/scripts/*.coffee' ],
 			options: {
 				'max_line_length': {
 					'level': 'ignore'
@@ -42,8 +42,8 @@ module.exports = function( grunt ) {
 		sass: {
 			compile: {
 				files: {
-					'assets/sass/output/editor.css': 'assets/sass/editor.scss',
-					'assets/sass/output/style.css': 'assets/sass/style.scss'
+					'assets/styles/output/editor.css': 'assets/styles/editor.scss',
+					'assets/styles/output/style.css': 'assets/styles/style.scss'
 				}
 			}
 		},
@@ -64,14 +64,14 @@ module.exports = function( grunt ) {
 		 */
 		watch: {
 			coffee: {
-				files: [ 'assets/coffee/*.coffee' ],
+				files: [ 'assets/scripts/*.coffee' ],
 				tasks: [ 'coffee', 'coffeelint' ],
 				options: {
 					livereload: true
 				},
 			},
 			sass: {
-				files: [ 'assets/sass/*' ],
+				files: [ 'assets/styles/*' ],
 				tasks: [ 'sass' ],
 				options: {
 					livereload: true

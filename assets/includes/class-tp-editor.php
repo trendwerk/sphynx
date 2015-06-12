@@ -16,7 +16,7 @@ class TP_Editor {
 	 * Load editor styles
 	 */
 	function load_styles() {
-		add_editor_style( 'assets/sass/output/editor.css' );
+		add_editor_style( 'assets/styles/output/editor.css' );
 	}
 
 	/**

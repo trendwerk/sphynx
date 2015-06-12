@@ -8,9 +8,9 @@
 /**
  * Includes
  */
-include_once( 'assets/inc/class-tp-includer.php' );
+include_once( 'assets/includes/class-tp-includer.php' );
 
-new TP_Includer( get_template_directory() . '/assets/inc/' );
+new TP_Includer( get_template_directory() . '/assets/includes/' );
 
 /**
  * Timber
@@ -45,4 +45,4 @@ add_action( 'init', function() {
 /**
  * Add localization support
  */
-load_theme_textdomain( 'tp', get_template_directory() . '/assets/lang' );
+load_theme_textdomain( 'tp', get_template_directory() . '/assets/languages' );
