@@ -48,28 +48,10 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
+	@extend .button-style;
 	-webkit-appearance: none;
-	background-color: $primary-color;
 	border: 0;
-	border-radius: 3px;
-	color: $white;
-	font-family: $text-font;
-	font-size: 12px;
-	font-weight: bold;
-	height: 40px;
-	margin-right: 10px;
-	padding: 0 35px;
-	text-transform: uppercase;
-
-	&:hover { 
-		background-color: lighten($primary-color, 5%);
-	}
-
-	&:active,
-	&:focus {
-		background-color: darken($primary-color, 5%);
-		outline: none;
-	}
+	outline: 0;
 }
 
 // @section    Forms

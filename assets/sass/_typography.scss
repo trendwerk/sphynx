@@ -138,31 +138,9 @@ a {
 	// call to action button
 
 	&.button {
-		background: $primary-color;
-		border-radius: 3px;
-		color: $white;		
-		display: inline-block;
-		font-weight: bold;
-		height: 50px;
-		line-height: 50px;
-		margin: 0 10px 10px;
-		padding: 0 35px;
-		position: relative;
-		text-decoration: none;
-		text-transform: uppercase;
-		white-space: nowrap;
+		@extend .button-style;
 
-		&:active {
-			top: 1px;
-		}
-
-		&:active,
-		&:focus,
-		&:hover { 
-			background: darken($primary-color, 15%);
-		}
-
-		// secondary butto
+		// secondary button
 
 		&.secondary {
 			background: $secondary-color;
