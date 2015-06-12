@@ -1366,8 +1366,7 @@ body {
     .single #main #content nav.pages a:active, .single #main #content nav.pages a:focus, .single #main #content nav.pages a:hover {
       background: #d4d4d4; }
 
-.search article h2,
-.error404 article h2 {
+.search article h2 {
   margin-bottom: 30px; }
 
 .search-no-results #main #content {
