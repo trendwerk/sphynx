@@ -65,7 +65,7 @@ module.exports = function( grunt ) {
 		watch: {
 			coffee: {
 				files: [ 'assets/scripts/*.coffee' ],
-				tasks: [ 'coffee', 'coffeelint' ],
+				tasks: [ 'coffeelint', 'coffee' ],
 				options: {
 					livereload: true
 				},
