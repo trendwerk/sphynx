@@ -28,6 +28,7 @@ input[type="url"],
 textarea, 
 select {
 	@include placeholder(#666, #ccc);
+	-webkit-appearance: none;
 	background-color: $white;
 	border: 1px solid $border-color;
 	border-radius: 3px;
@@ -52,6 +53,12 @@ button {
 	-webkit-appearance: none;
 	border: 0;
 	outline: 0;
+}
+
+select {
+	background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+	background-position: 95% center;
+	background-repeat: no-repeat;
 }
 
 // @section    Forms
