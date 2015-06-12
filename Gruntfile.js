@@ -5,7 +5,30 @@ module.exports = function( grunt ) {
 		pkg: grunt.file.readJSON( 'package.json' ),
 
 		/**
-		 * Compile Coffee
+		 * Lint PHP
+		 */
+		phplint: {
+			lint: [
+				'*.php',
+				'assets/**/*.php',
+				'partials/**/*.php'
+			]
+		},
+
+		/**
+		 * Lint CoffeeScript
+		 */
+		coffeelint: {
+			lint: [ 'assets/scripts/*.coffee' ],
+			options: {
+				'max_line_length': {
+					'level': 'ignore'
+				}
+			}
+		},
+
+		/**
+		 * Compile CoffeeScript to JavaScript
 		 */	
 		coffee: {
 			compile: {
@@ -25,18 +48,6 @@ module.exports = function( grunt ) {
 		},
 
 		/**
-		 * Lint Coffee
-		 */
-	    coffeelint: {
-			lint: [ 'assets/scripts/*.coffee' ],
-			options: {
-				'max_line_length': {
-					'level': 'ignore'
-				}
-			}
-	    },
-
-		/**
 		 * Compile SASS to CSS 
 		 */	
 		sass: {
@@ -46,17 +57,6 @@ module.exports = function( grunt ) {
 					'assets/styles/output/style.css': 'assets/styles/style.scss'
 				}
 			}
-		},
-
-		/**
-		 * Lint PHP
-		 */
-		phplint: {
-			lint: [
-				'*.php',
-				'assets/**/*.php',
-				'partials/**/*.php'
-			]
 		},
 
 		/**
@@ -92,15 +92,15 @@ module.exports = function( grunt ) {
 	/**
 	 * Load tasks
 	 */
-	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
-	grunt.loadNpmTasks( 'grunt-coffeelint' );
-	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-phplint' );
+	grunt.loadNpmTasks( 'grunt-coffeelint' );
+	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
+	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 	/**
 	 * Run tasks
 	 */
-	grunt.registerTask( 'default', [ 'coffee', 'coffeelint', 'sass', 'phplint', 'watch' ] );
+	grunt.registerTask( 'default', [ 'phplint', 'coffeelint', 'coffee', 'sass', 'watch' ] );
 
 };
