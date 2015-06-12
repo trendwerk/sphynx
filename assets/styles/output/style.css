@@ -1288,13 +1288,13 @@ body {
       .home #sub-header h1 {
         font-size: 64px;
         margin-bottom: 15px; } }
-  .home #sub-header h2 {
+  .home #sub-header .description {
     font-size: 18px;
     font-weight: normal;
     line-height: 28px;
     margin-bottom: 0; }
     @media (min-width: 641px) {
-      .home #sub-header h2 {
+      .home #sub-header .description {
         font-size: 36px;
         line-height: 1.325em; } }
 .home #main {
