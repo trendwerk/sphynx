@@ -148,7 +148,7 @@ body {
 // @subsection Main navigation
 
 #main-navigation {
-	background-color: $footer-background;
+	background-color: $primary-color;
 	display: none;
 	margin: 0;
 	padding: 0 0 20px 0;
@@ -351,7 +351,7 @@ body {
 // @subsection Footer
 
 #footer {
-	background: $footer-background;
+	background: $primary-color;
 	color: $white;
 	margin-bottom: 0;
 	
