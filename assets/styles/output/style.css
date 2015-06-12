@@ -1044,11 +1044,14 @@ body {
         width: 1160px; } }
 
 #header {
-  background: #fff;
+  background: #333;
   box-sizing: border-box;
   padding: 20px 0;
   text-align: center;
   z-index: 1; }
+  @media (min-width: 641px) {
+    #header {
+      background: #fff; } }
   #header #logo {
     display: inline-block; }
     @media (min-width: 641px) {
@@ -1060,8 +1063,11 @@ body {
       font: bold 28px/35px "Helvetica Neue", sans-serif;
       margin: 0; }
       #header #logo #sitename a {
-        color: #333;
+        color: #fff;
         text-decoration: none; }
+        @media (min-width: 641px) {
+          #header #logo #sitename a {
+            color: #333; } }
     #header #logo #description {
       color: #666;
       font: normal 14px/25px "Helvetica Neue", sans-serif;
@@ -1083,7 +1089,6 @@ body {
     float: right;
     margin-right: -10px; }
   #header #mobile-search {
-    float: left;
     height: 19px;
     margin-left: -10px;
     width: 20px; }
@@ -1099,12 +1104,15 @@ body {
       #header #search {
         display: block;
         width: auto; } }
+    @media (max-width: 640px) {
+      #header #search input {
+        border: none; } }
 
 #main-navigation {
   background-color: #333;
   display: none;
   margin: 0;
-  padding: 15px 0 20px 0; }
+  padding: 0 0 20px 0; }
   @media (min-width: 641px) {
     #main-navigation {
       display: block;
@@ -1178,7 +1186,6 @@ body {
             top: 0; } }
 
 #main {
-  border-top: 1px solid #ccc;
   margin-top: 0;
   padding: 45px 0 90px 0; }
   @media (min-width: 641px) {
@@ -1568,20 +1575,21 @@ p.tags {
     top: -1px;
     width: 8px; }
     .search-form form .glass:after {
+      background: #999;
       height: 2px;
       right: -5px;
       top: 9px;
       width: 6px; }
 
 .glass {
-  border: 3px solid #999;
+  border: 3px solid #fff;
   border-radius: 100%;
   display: block;
   height: 10px;
   position: relative;
   width: 10px; }
   .glass:after {
-    background: #999;
+    background: #fff;
     content: '';
     height: 3px;
     position: absolute;
@@ -1599,7 +1607,7 @@ p.tags {
   position: relative;
   width: 24px; }
   .burger .line {
-    background: #999;
+    background: #fff;
     height: 3px;
     position: absolute;
     -webkit-transition: -webkit-transform 0.2s ease-out;

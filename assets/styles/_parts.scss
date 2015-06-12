@@ -282,6 +282,7 @@ p.tags {
 			width: 8px;
 
 			&:after {
+				background: $text-light;
 				height: 2px;
 				right: -5px;
 				top: 9px;
@@ -295,7 +296,7 @@ p.tags {
 // @subsection Icons
 
 .glass {
-	border: 3px solid $text-light;
+	border: 3px solid $white;
 	border-radius: 100%;
 	display: block;
 	height: 10px;
@@ -303,7 +304,7 @@ p.tags {
 	width: 10px;
 
 	&:after {
-		background: $text-light;
+		background: $white;
 		content: '';
 		height: 3px;
 		position: absolute;
@@ -324,7 +325,7 @@ p.tags {
 	width: 24px;
 
 	.line {
-		background: $text-light;
+		background: $white;
 		height: 3px;
 		position: absolute;
 		-webkit-transition: -webkit-transform 0.2s ease-out;
