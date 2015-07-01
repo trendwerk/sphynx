@@ -16,6 +16,22 @@ module.exports = function( grunt ) {
 		},
 
 		/**
+		 * PHP Code Sniffer
+		 */
+		phpcs: {
+			application: {
+				src: [
+					'*.php',
+					'assets/**/*.php',
+					'partials/**/*.php'
+				]
+			},
+			options: {
+				standard: 'PSR2'
+			}
+		},
+
+		/**
 		 * Lint CoffeeScript
 		 */
 		coffeelint: {
@@ -97,10 +113,11 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-phpcs' );
 
 	/**
 	 * Run tasks
 	 */
-	grunt.registerTask( 'default', [ 'phplint', 'coffeelint', 'coffee', 'sass', 'watch' ] );
+	grunt.registerTask( 'default', [ 'phplint', 'phpcs', 'coffeelint', 'coffee', 'sass', 'watch' ] );
 
 };
