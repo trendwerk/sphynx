@@ -2,6 +2,7 @@
 /**
  * Contains helpers and template tags.
  */
+
 namespace Trendwerk\TrendPress;
 
 /**
