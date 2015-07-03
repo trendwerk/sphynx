@@ -1,16 +1,14 @@
 <?php
 /**
  * Includes, theme support and localization
- *
- * @package TrendPress
  */
 
 /**
  * Includes
  */
-include_once('assets/includes/class-tp-includer.php');
+include_once('assets/includes/includer.php');
 
-new TP_Includer(get_template_directory() . '/assets/includes/');
+new Trendwerk\TrendPress\Includer(get_template_directory() . '/assets/includes/');
 
 /**
  * Timber
