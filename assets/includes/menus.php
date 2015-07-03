@@ -1,8 +1,6 @@
 <?php
 /**
  * Menu's
- *
- * @package TrendPress
  */
 
 namespace Trendwerk\TrendPress;
