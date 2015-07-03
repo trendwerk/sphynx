@@ -1,14 +1,9 @@
 <?php
 /**
- * Includes, theme support and localization
+ * Autoload classes
  */
-
-/**
- * Includes
- */
-include_once('assets/includes/includer.php');
-
-new Trendwerk\TrendPress\Includer(get_template_directory() . '/assets/includes/');
+include_once('assets/includes/autoload.php');
+include_once('assets/includes/template-tags.php');
 
 /**
  * Timber
@@ -45,3 +40,11 @@ add_action('init', function () {
  * Add localization support
  */
 load_theme_textdomain('tp', get_template_directory() . '/assets/languages');
+
+/**
+ * Instantiate classes
+ */
+new Trendwerk\TrendPress\Editor;
+new Trendwerk\TrendPress\Enqueue;
+new Trendwerk\TrendPress\Media;
+new Trendwerk\TrendPress\Menus;
