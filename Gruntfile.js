@@ -10,8 +10,7 @@ module.exports = function( grunt ) {
 		phplint: {
 			lint: [
 				'*.php',
-				'assets/**/*.php',
-				'partials/**/*.php'
+				'assets/**/*.php'
 			]
 		},
 
@@ -22,8 +21,7 @@ module.exports = function( grunt ) {
 			application: {
 				src: [
 					'*.php',
-					'assets/**/*.php',
-					'partials/**/*.php'
+					'assets/**/*.php'
 				]
 			},
 			options: {
@@ -96,8 +94,7 @@ module.exports = function( grunt ) {
 			phplint: {
 				files: [
 					'*.php',
-					'assets/**/*.php',
-					'partials/**/*.php'
+					'assets/**/*.php'
 				],
 				tasks: [ 'phplint' ]
 			}
