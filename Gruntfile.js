@@ -91,12 +91,12 @@ module.exports = function( grunt ) {
 					livereload: true
 				},
 			},
-			phplint: {
+			php: {
 				files: [
 					'*.php',
 					'assets/**/*.php'
 				],
-				tasks: [ 'phplint' ]
+				tasks: [ 'phplint', 'phpcs' ]
 			}
 		}
 
