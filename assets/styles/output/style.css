@@ -21,13 +21,19 @@ button {
   input[type="reset"]:active,
   button:active {
     top: 1px; }
-  .button-style:active, a.button:active, input[type="submit"]:active,
+  .button-style:active,
+  a.button:active,
+  input[type="submit"]:active,
   input[type="button"]:active,
   input[type="reset"]:active,
-  button:active, .button-style:focus, a.button:focus, input[type="submit"]:focus,
+  button:active,
+  .button-style:focus,
+  a.button:focus,
+  input[type="submit"]:focus,
   input[type="button"]:focus,
   input[type="reset"]:focus,
-  button:focus, .button-style:hover, a.button:hover, input[type="submit"]:hover,
+  button:focus,
+  .button-style:hover, a.button:hover, input[type="submit"]:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   button:hover {
@@ -283,25 +289,34 @@ a {
   color: #1d6fd1;
   outline: 0;
   text-decoration: underline; }
-  a:active, a:focus, a:hover {
+  a:active,
+  a:focus,
+  a:hover {
     color: #144b8e;
     text-decoration: underline; }
   a.more-link {
     white-space: nowrap; }
-  a.more-link:after, a.back:before, a.prev:before, a.next:after {
+  a.more-link:after,
+  a.back:before,
+  a.prev:before,
+  a.next:after {
     display: inline-block;
     font-family: fontawesome;
     font-size: 9px; }
-  a.back:before, a.prev:before {
+  a.back:before,
+  a.prev:before {
     content: '\f053';
     padding-right: 4px; }
-  a.more-link:after, a.next:after {
+  a.more-link:after,
+  a.next:after {
     content: '\f054';
     padding-left: 4px; }
   a.button.secondary {
     background: #999;
     color: #fff; }
-    a.button.secondary:active, a.button.secondary:focus, a.button.secondary:hover {
+    a.button.secondary:active,
+    a.button.secondary:focus,
+    a.button.secondary:hover {
       background: #737373; }
   a[rel='tag'] {
     background: #ccc;
@@ -314,7 +329,9 @@ a {
     padding: 0 10px;
     text-decoration: none;
     text-transform: lowercase; }
-    a[rel='tag']:active, a[rel='tag']:focus, a[rel='tag']:hover {
+    a[rel='tag']:active,
+    a[rel='tag']:focus,
+    a[rel='tag']:hover {
       background: #333;
       color: #fff; }
 
@@ -405,7 +422,9 @@ acronym,
 abbr {
   border-bottom: 1px dotted #666;
   cursor: help; }
-  acronym:active, acronym:focus, acronym:hover,
+  acronym:active,
+  acronym:focus,
+  acronym:hover,
   abbr:active,
   abbr:focus,
   abbr:hover {
@@ -975,12 +994,15 @@ body {
       #main-navigation ul li:hover a {
         background: #222;
         text-decoration: none; } }
-    #main-navigation ul li.current_page_item > a, #main-navigation ul li.current_page_parent > a, #main-navigation ul li.current_page_ancestor > a {
+    #main-navigation ul li.current_page_item > a,
+    #main-navigation ul li.current_page_parent > a,
+    #main-navigation ul li.current_page_ancestor > a {
       font-weight: bold; }
     #main-navigation ul li ul {
       margin: 0 0 0 20px; }
     @media (min-width: 641px) {
-      #main-navigation ul li.menu-item-has-children > a::after, #main-navigation ul li.page_item_has_children > a::after {
+      #main-navigation ul li.menu-item-has-children > a::after,
+      #main-navigation ul li.page_item_has_children > a::after {
         border-color: #fff transparent transparent transparent;
         border-style: solid;
         border-width: 4px 4px 0 4px;
@@ -1002,7 +1024,8 @@ body {
         z-index: 1; }
         #main-navigation ul li:hover ul li {
           width: 100%; }
-          #main-navigation ul li:hover ul li.menu-item-has-children > a::after, #main-navigation ul li:hover ul li.page_item_has_children > a::after {
+          #main-navigation ul li:hover ul li.menu-item-has-children > a::after,
+          #main-navigation ul li:hover ul li.page_item_has_children > a::after {
             display: none; }
           #main-navigation ul li:hover ul li a {
             box-sizing: border-box;
@@ -1041,7 +1064,9 @@ body {
       text-align: center; }
       #main #content .meta a {
         color: #666; }
-        #main #content .meta a:active, #main #content .meta a:focus, #main #content .meta a:hover {
+        #main #content .meta a:active,
+        #main #content .meta a:focus,
+        #main #content .meta a:hover {
           color: #1d6fd1; }
     #main #content .tags .label {
       display: block;
@@ -1068,7 +1093,9 @@ body {
   margin-bottom: 0; }
   #footer a {
     color: #fff; }
-    #footer a:active, #footer a:focus, #footer a:hover {
+    #footer a:active,
+    #footer a:focus,
+    #footer a:hover {
       color: #ccc; }
   #footer #credits {
     float: left;
@@ -1128,6 +1155,7 @@ body {
       .home #sub-header .description {
         font-size: 36px;
         line-height: 1.325em; } }
+
 .home #main {
   border-top: 0; }
 
@@ -1136,6 +1164,7 @@ body {
 .blog .archive-description {
   margin-bottom: 30px;
   text-align: center; }
+
 .archive article,
 .search article,
 .blog article {
@@ -1156,7 +1185,9 @@ body {
     .blog article h2 a {
       color: #333;
       text-decoration: none; }
-      .archive article h2 a:active, .archive article h2 a:focus, .archive article h2 a:hover,
+      .archive article h2 a:active,
+      .archive article h2 a:focus,
+      .archive article h2 a:hover,
       .search article h2 a:active,
       .search article h2 a:focus,
       .search article h2 a:hover,
@@ -1181,6 +1212,7 @@ body {
 .single #main #content figure {
   float: right;
   margin: 5px 0 10px 20px; }
+
 .single #main #content nav.pages {
   margin-bottom: 30px; }
   .single #main #content nav.pages a {
@@ -1194,7 +1226,9 @@ body {
     margin-right: 5px;
     padding: 0 20px;
     text-decoration: none; }
-    .single #main #content nav.pages a:active, .single #main #content nav.pages a:focus, .single #main #content nav.pages a:hover {
+    .single #main #content nav.pages a:active,
+    .single #main #content nav.pages a:focus,
+    .single #main #content nav.pages a:hover {
       background: #d4d4d4; }
 
 .search article h2 {
@@ -1317,7 +1351,7 @@ p.tags {
           position: relative;
           font-weight: 700; }
           #comments ol .comment-body .reply a:before {
-            content: " ";
+            content: "  ";
             font-family: FontAwesome;
             font-style: normal;
             font-weight: normal;
@@ -1346,12 +1380,15 @@ p.tags {
     text-align: center; }
   #pager a {
     text-decoration: none; }
-    #pager a:active, #pager a:focus, #pager a:hover {
+    #pager a:active,
+    #pager a:focus,
+    #pager a:hover {
       background: #d4d4d4;
       border-color: #d4d4d4; }
   #pager .page-numbers {
     width: 38px; }
-    #pager .page-numbers.current, #pager .page-numbers.dots {
+    #pager .page-numbers.current,
+    #pager .page-numbers.dots {
       background-color: #fff; }
   #pager .prev,
   #pager .next {
@@ -1472,4 +1509,4 @@ p.tags {
     -o-transform: rotate(45deg) translate(-6px, -6px);
     transform: rotate(45deg) translate(-6px, -6px); }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=assets/styles/output/style.css.map */
