@@ -135,25 +135,6 @@ a {
 		padding-left: 4px;
 	}
 
-	// call to action button
-
-	&.button {
-		@extend .button-style;
-
-		// secondary button
-
-		&.secondary {
-			background: $secondary-color;
-			color: $white;
-
-			&:active,
-			&:focus,
-			&:hover {
-				background: darken($secondary-color, 15%);
-			}
-		}
-	}
-
 	// style for tag
 
 	&[rel='tag'] {

@@ -49,7 +49,7 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
-	@extend .button-style;
+	@extend .button;
 	-webkit-appearance: none;
 	border: 0;
 	outline: 0;

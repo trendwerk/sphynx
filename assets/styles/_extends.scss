@@ -13,7 +13,7 @@
 // @section    Extends
 // @subsection Button
 
-.button-style {
+.button {
 	background: $primary-color;
 	border-radius: 3px;
 	color: $white;		
@@ -39,7 +39,18 @@
 		color: $white;
 		outline: none;
 		text-decoration: none;
-	}	
+	}
+	
+	&.secondary {
+		background: $secondary-color;
+		color: $white;
+
+		&:active,
+		&:focus,
+		&:hover {
+			background: darken($secondary-color, 15%);
+		}
+	}
 }
 
 // @section    Extends
