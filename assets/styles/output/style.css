@@ -471,7 +471,7 @@ hr {
     font-family: FontAwesome;
     font-size: 30px;
     display: inline-block;
-    margin: 0 7px 0;
+    margin: 0 7px;
     position: relative;
     top: 4px; }
   .telephone a[href^=tel] {

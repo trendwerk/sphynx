@@ -15,11 +15,11 @@ function maybeAddHttp($url)
     if (! $url) {
         return;
     }
-    
+
     if (! strstr($url, 'http://') && ! strstr($url, 'https://')) {
         $url = 'http://' . $url;
     }
-    
+
     return $url;
 }
 

@@ -58,7 +58,7 @@ final class Editor
 
         $settings['toolbar1'] = 'formatselect, bold, italic, bullist, numlist, link, unlink, wp_more, ' . $dfw_fs;
         $settings['toolbar2'] = 'styleselect, undo, redo, charmap, blockquote, pastetext, removeformat';
-        
+
         $settings['wordpress_adv_hidden'] = false;
 
         return $settings;

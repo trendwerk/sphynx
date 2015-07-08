@@ -5,7 +5,7 @@
 	<h1>
 		{{__( 'Search Results for: %1$s', 'tp' )|format( fn( 'get_search_query' ) )}}
 	</h1>
-	
+
 	{% if have_posts %}
 
 		{% for post in posts %}

@@ -2,7 +2,8 @@ $ ->
 
   # Fancybox for images
   $( 'a:has(img)' ).each ->
-    $( this ).fancybox() if /(jpeg|jpg|png|gif|bmp)$/i.test( $( this ).prop( 'href' ) )
+    $( this ).fancybox() if /(jpeg|jpg|png|gif|bmp)$/i
+    .test( $( this ).prop( 'href' ) )
 
   # Fancybox for galleries
   $( '.gallery' ).each ( i ) ->
