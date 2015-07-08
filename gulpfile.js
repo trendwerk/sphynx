@@ -9,6 +9,7 @@ var gutil = require('gulp-util');
 var scsslint = require('gulp-scss-lint');
 var coffeelint = require('gulp-coffeelint');
 var phpcs = require('gulp-phpcs');
+var livereload = require('gulp-livereload');
 
 /**
  * Compile Sass
@@ -18,7 +19,8 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('assets/styles/output/'))
-    .pipe(gulp.dest('assets/styles/output/'));
+    .pipe(gulp.dest('assets/styles/output/'))
+    .pipe(livereload())
 });
 
 /**
@@ -28,6 +30,7 @@ gulp.task('coffee', function() {
   gulp.src('assets/scripts/**/*.coffee')
     .pipe(coffee({bare: true}).on('error', gutil.log))
     .pipe(gulp.dest('assets/scripts/output/'))
+    .pipe(livereload())
 });
 
 /**
@@ -37,7 +40,7 @@ gulp.task('scss-lint', function() {
   gulp.src('assets/styles/**/*.scss')
     .pipe(scsslint({
       'config': 'lint.yml',
-    }));
+    }))
 });
 
 /**
@@ -59,7 +62,8 @@ gulp.task('phpcs', function() {
       standard: 'PSR2',
       warningSeverity: 0
     }))
-    .pipe(phpcs.reporter('log'));
+    .pipe(phpcs.reporter('log'))
+    .pipe(livereload())
 });
 
 /**
@@ -69,4 +73,5 @@ gulp.task('default',function() {
   gulp.watch('assets/styles/**/*.scss',['sass', 'scss-lint']);
   gulp.watch('assets/scripts/**/*.coffee',['coffee', 'coffeelint']);
   gulp.watch('**/*.php',['phpcs']);
+  livereload.listen();
 });
