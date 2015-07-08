@@ -64,5 +64,3 @@ final class Editor
         return $settings;
     }
 }
-
-new Editor;

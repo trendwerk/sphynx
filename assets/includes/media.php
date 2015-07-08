@@ -38,5 +38,3 @@ final class Media
         return '<div class="video-container">' . $html . '</div>';
     }
 }
-
-new Media;
