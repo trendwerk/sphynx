@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Require dependencies
  */
@@ -8,6 +6,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var coffee = require('gulp-coffee');
 var gutil = require('gulp-util');
+var phpcs = require('gulp-phpcs');
 
 /**
  * Compile Sass
@@ -35,4 +34,14 @@ gulp.task('coffee', function() {
 gulp.task('default',function() {
   gulp.watch('assets/styles/**/*.scss',['sass']);
   gulp.watch('assets/scripts/**/*.coffee',['coffee']);
+
+  return gulp.src(['**/*.php', '!node_modules/**/*.*'])
+      // Validate files using PHP Code Sniffer
+      .pipe(phpcs({
+          bin: '~/.composer/vendor/bin/phpcs',
+          standard: 'PSR2',
+          warningSeverity: 0
+      }))
+      // Log all problems that was found
+      .pipe(phpcs.reporter('log'));
 });

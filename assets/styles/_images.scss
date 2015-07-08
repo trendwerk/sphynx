@@ -1,6 +1,6 @@
 //
 // @section Images
-// 
+//
 // Defines the default styling of images
 //
 // @package     WordPress
@@ -36,11 +36,11 @@
 	max-width: 100%;
 	text-align: center;
 
-	img { 
+	img {
 		box-sizing: border-box;
 		padding: 5px;
 	}
-		
+
 	.wp-caption-text {
 		display: inline-block;
 		font-size: 12px;
@@ -63,7 +63,7 @@
 		margin: 0 4px 4px 0;
 		overflow: hidden;
 		padding: 0;
-		position: relative;	
+		position: relative;
 
 		img {
 			display: block;
@@ -71,7 +71,7 @@
 			height: auto;
 			width: 100%;
 		}
-		
+
 		&:hover .gallery-caption {
 			opacity: 1;
 		}
@@ -235,7 +235,7 @@ figure.alignnone {
 .size-medium,
 .size-large,
 .size-auto,
-.alignnone, 
+.alignnone,
 .size-full {
 	max-width: 100%;
 	height: auto;
