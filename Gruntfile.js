@@ -10,9 +10,23 @@ module.exports = function( grunt ) {
 		phplint: {
 			lint: [
 				'*.php',
-				'assets/**/*.php',
-				'partials/**/*.php'
+				'assets/**/*.php'
 			]
+		},
+
+		/**
+		 * PHP Code Sniffer
+		 */
+		phpcs: {
+			application: {
+				src: [
+					'*.php',
+					'assets/**/*.php'
+				]
+			},
+			options: {
+				standard: 'PSR2'
+			}
 		},
 
 		/**
@@ -77,13 +91,12 @@ module.exports = function( grunt ) {
 					livereload: true
 				},
 			},
-			phplint: {
+			php: {
 				files: [
 					'*.php',
-					'assets/**/*.php',
-					'partials/**/*.php'
+					'assets/**/*.php'
 				],
-				tasks: [ 'phplint' ]
+				tasks: [ 'phplint', 'phpcs' ]
 			}
 		}
 
@@ -97,10 +110,11 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-phpcs' );
 
 	/**
 	 * Run tasks
 	 */
-	grunt.registerTask( 'default', [ 'phplint', 'coffeelint', 'coffee', 'sass', 'watch' ] );
+	grunt.registerTask( 'default', [ 'phplint', 'phpcs', 'coffeelint', 'coffee', 'sass', 'watch' ] );
 
 };
