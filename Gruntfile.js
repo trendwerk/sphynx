@@ -18,7 +18,7 @@ module.exports = function( grunt ) {
 		 * PHP Code Sniffer
 		 */
 		phpcs: {
-			application: {
+			lint: {
 				src: [
 					'*.php',
 					'assets/**/*.php'
