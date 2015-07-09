@@ -2,7 +2,6 @@
 /**
  * Autoload classes
  */
-
 include_once('assets/includes/autoload.php');
 include_once('assets/includes/template-tags.php');
 
