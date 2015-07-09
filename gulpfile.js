@@ -67,9 +67,39 @@ gulp.task('phpcs', function() {
 });
 
 /**
+ * Welcome message
+ */
+var welcomeMessage = function() {
+  console.log('                                 ');
+  console.log('            ________             ');
+  console.log('           //   |\\ \\\\            ');
+  console.log('          //    | \\ \\\\           ');
+  console.log('    |\\\\  //     |  \\ \\\\  //|     ');
+  console.log('    ||\\\\//       —-—  \\\\//||     ');
+  console.log('    || \\/______________\\/ ||     ');
+  console.log('    ||                    ||     ');
+  console.log('    ||                    ||     ');
+  console.log('    ||    ( )       ( )   ||     ');
+  console.log('    ||        ____        ||     ');
+  console.log('    ||        \\  /        ||     ');
+  console.log('    ||         ||         ||     ');
+  console.log('    ||     \\__/  \\__/     ||     ');
+  console.log('    ||                    ||     ');
+  console.log('    ||                    ||     ');
+  console.log('                                 ');
+  console.log('  #   #  ###  #     #      ###   ');
+  console.log('  #   # #   # #     #     #   #  ');
+  console.log('  ##### ##### #     #     #   #  ');
+  console.log('  #   # #   # #     #     #   #  ');
+  console.log('  #   # #   # ##### #####  ###   ');
+  console.log('                                 ');
+};
+
+/**
  * Watch things
  */
 gulp.task('default',function() {
+  welcomeMessage();
   gulp.watch('assets/styles/**/*.scss',['sass', 'scss-lint']);
   gulp.watch('assets/scripts/**/*.coffee',['coffee', 'coffeelint']);
   gulp.watch('**/*.php',['phpcs']);
