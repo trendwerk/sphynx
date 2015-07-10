@@ -304,11 +304,11 @@ a {
     text-decoration: underline; }
   a.more-link {
     white-space: nowrap; }
-  a.more-link:after, a.back:before, a.prev:before, a.next:after {
+  a.more-link:after, a.prev:before, a.next:after {
     display: inline-block;
     font-family: fontawesome;
     font-size: 9px; }
-  a.back:before, a.prev:before {
+  a.prev:before {
     content: '\f053';
     padding-right: 4px; }
   a.more-link:after, a.next:after {

@@ -22,12 +22,6 @@
 		{{fn( 'the_tags', '<span class="label">Tags</span>', '' )}}
 	</p>
 
-	<p>
-		<a class="back" href="{{fn( 'get_permalink', fn( 'get_option', 'page_for_posts' ) )}}">
-			{{__( 'Back to the overview', 'tp' )}}
-		</a>
-	</p>
-
 	{{fn( 'comments_template' )}}
 
 {% endblock %}

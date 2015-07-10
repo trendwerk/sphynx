@@ -115,7 +115,6 @@ a {
 	// add characters to link
 
 	&.more-link:after,
-	&.back:before,
 	&.prev:before,
 	&.next:after {
 		display: inline-block;
@@ -123,7 +122,6 @@ a {
 		font-size: 9px;
 	}
 
-	&.back:before,
 	&.prev:before {
 		content: '\f053';
 		padding-right: 4px;
