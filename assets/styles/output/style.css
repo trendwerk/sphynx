@@ -413,16 +413,6 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap; }
 
-acronym,
-abbr {
-  border-bottom: 1px dotted #666;
-  cursor: help; }
-  acronym:active, acronym:focus, acronym:hover,
-  abbr:active,
-  abbr:focus,
-  abbr:hover {
-    border-bottom-style: solid; }
-
 del {
   color: #999;
   text-decoration: line-through; }
@@ -442,22 +432,6 @@ hr {
   height: 1px;
   margin: 0 0 30px;
   padding: 0; }
-
-.telephone {
-  color: #333;
-  font-size: 24px;
-  font-weight: bold; }
-  .telephone:before {
-    content: '\f095';
-    font-family: FontAwesome;
-    font-size: 30px;
-    display: inline-block;
-    margin: 0 7px 0;
-    position: relative;
-    top: 4px; }
-  .telephone a[href^=tel] {
-    color: #333;
-    text-decoration: none; }
 
 input[type="datetime-local"],
 input[type="datetime"],

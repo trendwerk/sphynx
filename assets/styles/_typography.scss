@@ -290,21 +290,6 @@ pre {
 }
 
 // @section    Typography
-// @subsection Abbreviations
-
-acronym,
-abbr {
-	border-bottom: 1px dotted $text-color;
-	cursor: help;
-
-	&:active,
-	&:focus,
-	&:hover {
-		border-bottom-style: solid;
-	}
-}
-
-// @section    Typography
 // @subsection Deleted and inserted text 
 
 del {
@@ -335,25 +320,4 @@ hr {
 	height: 1px;
 	margin: 0 0 $line-height;
 	padding: 0;
-}
-
-.telephone {
-	color: $heading-color;
-	font-size: 24px;
-	font-weight: bold;
-
-	&:before {
-		content: '\f095';
-		font-family: FontAwesome;
-		font-size: 30px;
-		display: inline-block;
-		margin: 0 7px 0;
-		position: relative;
-		top: 4px;
-	}
-
-	a[href^=tel] {
-		color: $heading-color;
-		text-decoration: none;
-	}
 }
