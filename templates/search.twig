@@ -5,8 +5,8 @@
 	<h1>
 		{{__('Search Results for: %1$s', 'tp')|format(search_query)}}
 	</h1>
-	
-	{% if have_posts %}
+
+	{% if posts is not empty %}
 
 		{% for post in posts %}
 			{% include 'partials/loop-search.twig' %}

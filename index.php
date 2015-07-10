@@ -1,6 +1,6 @@
 <?php
 $context = Timber::get_context();
-$context['have_posts'] = have_posts();
+$context['posts'] = Timber::get_posts();
 
 if (is_archive()) {
     $context['title'] = get_the_archive_title();
@@ -9,7 +9,6 @@ if (is_archive()) {
 }
 
 $context['description'] = get_the_archive_description('<div class="archive-description">', '</div>');
-
 $context['pagination'] = Trendwerk\TrendPress\pagination();
 
 Timber::render('index.twig', $context);
