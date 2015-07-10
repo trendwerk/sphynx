@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-03 16:26+0100\n"
-"PO-Revision-Date: 2015-04-03 16:27+0100\n"
+"POT-Creation-Date: 2015-07-10 13:04+0100\n"
+"PO-Revision-Date: 2015-07-10 13:04+0100\n"
 "Last-Translator: Harold <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -17,11 +17,45 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../../404.php:12
+#: ../../comments.php:17 ../../assets/includes/template-tags.php:22
+#: ../includes/template-tags.php:22
+msgid "Next"
+msgstr "Volgende"
+
+#: ../../comments.php:18 ../../assets/includes/template-tags.php:21
+#: ../includes/template-tags.php:21
+msgid "Previous"
+msgstr "Vorige"
+
+#: ../../assets/includes/Editor.php:32 ../includes/Editor.php:32
+msgid "Button"
+msgstr "Knop"
+
+#: ../../assets/includes/Editor.php:37 ../includes/Editor.php:37
+msgid "Secondary button"
+msgstr "Secondaire knop"
+
+#: ../../assets/includes/Editor.php:42 ../includes/Editor.php:42
+msgid "More link"
+msgstr "Lees meer link"
+
+#: ../../assets/includes/Menus.php:21 ../includes/Menus.php:21
+msgid "Main navigation"
+msgstr "Hoofdnavigatie"
+
+#: ../../assets/includes/Menus.php:22 ../includes/Menus.php:22
+msgid "Footer"
+msgstr "Footer"
+
+#: ../../assets/includes/Menus.php:23 ../includes/Menus.php:23
+msgid "Sitemap"
+msgstr "Sitemap"
+
+#: ../../templates/404.twig:6
 msgid "The page you are looking for doesn't exist."
 msgstr "De pagina die je zoekt bestaat niet."
 
-#: ../../404.php:17
+#: ../../templates/404.twig:10
 msgid ""
 "Seems like the page you were looking for might have been moved or just "
 "didn't exist in the first place."
@@ -29,71 +63,15 @@ msgstr ""
 "Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of "
 "nooit heeft bestaan."
 
-#: ../../404.php:22
-#, php-format
-msgid ""
-"You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
-"searchform below to find the page you are looking for."
-msgstr ""
-"Bekijk onze <a href=\"%1$s\">sitemap</a> of gebruik het onderstaande "
-"zoekformulier om te vinden wat je zoekt."
-
-#: ../../404.php:22
-msgid "sitemap"
-msgstr "sitemap"
-
-#: ../../comments.php:13
-#, php-format
-msgid "One response to &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
-msgstr[0] "Één reactie op &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
-
-#: ../../comments.php:26 ../../assets/inc/template-tags.php:47
-#: ../inc/template-tags.php:47
-msgid "Next"
-msgstr "Volgende"
-
-#: ../../comments.php:27 ../../assets/inc/template-tags.php:46
-#: ../inc/template-tags.php:46
-msgid "Previous"
-msgstr "Vorige"
-
-#: ../../footer.php:13
-msgid "Copyright"
-msgstr "Copyright"
-
-#: ../../index.php:14
-msgid "Posts about"
-msgstr "Berichten over"
-
-#: ../../index.php:16
-msgid "Posts by"
-msgstr "Berichten van"
-
-#: ../../index.php:18 ../../page-sitemap.php:93
-msgid "News"
-msgstr "Nieuws"
-
-#: ../../index.php:37
+#: ../../templates/index.twig:22 ../../templates/base/base.twig:10
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
-#: ../../page-sitemap.php:25
-msgid "Pages"
-msgstr "Pagina's"
-
-#: ../../search.php:12
-#, php-format
+#: ../../templates/search.twig:6
 msgid "Search Results for: %1$s"
 msgstr "Zoek resultaten voor:  %1$s"
 
-#: ../../search.php:32 ../../partials/loop-post.php:33
-msgid "Read more"
-msgstr "Lees verder"
-
-#: ../../search.php:44
-#, php-format
+#: ../../templates/search.twig:20
 msgid ""
 "Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
 "Please make sure all your words are spelled correctly or try different "
@@ -103,91 +81,89 @@ msgstr ""
 "opgeleverd. Controleer of alle woorden correct gespeld zijn of probeer een "
 "andere zoekterm."
 
-#: ../../searchform.php:4
-msgid "Search"
-msgstr "Zoeken"
+#: ../../templates/base/footer.twig:9
+msgid "Copyright"
+msgstr "Copyright"
 
-#: ../../single.php:18 ../../partials/loop-post.php:16
+#: ../../templates/partials/loop-post.twig:23
+#: ../../templates/partials/loop-search.twig:12
+msgid "Read more"
+msgstr "Lees verder"
+
+#: ../../templates/partials/post-meta.twig:2
 msgid "Posted on"
 msgstr "Geplaatst op"
 
-#: ../../single.php:19 ../../partials/loop-post.php:17
+#: ../../templates/partials/post-meta.twig:3
 msgid "by"
 msgstr "door"
 
-#: ../../single.php:20 ../../partials/loop-post.php:18
+#: ../../templates/partials/post-meta.twig:4
 msgid "in the category"
 msgstr "in de categorie"
 
-#: ../../single.php:49
-msgid "Back to the overview"
-msgstr "Terug naar het overzicht"
+#~ msgid ""
+#~ "You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
+#~ "searchform below to find the page you are looking for."
+#~ msgstr ""
+#~ "Bekijk onze <a href=\"%1$s\">sitemap</a> of gebruik het onderstaande "
+#~ "zoekformulier om te vinden wat je zoekt."
 
-#: ../../assets/inc/class-tp-editor.php:30 ../inc/class-tp-editor.php:30
-msgid "Button"
-msgstr "Knop"
+#~ msgid "sitemap"
+#~ msgstr "sitemap"
 
-#: ../../assets/inc/class-tp-editor.php:35 ../inc/class-tp-editor.php:35
-msgid "Secondary button"
-msgstr "Secondaire knop"
+#~ msgid "One response to &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Één reactie op &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
 
-#: ../../assets/inc/class-tp-editor.php:40 ../inc/class-tp-editor.php:40
-msgid "More link"
-msgstr "Lees meer link"
+#~ msgid "Posts about"
+#~ msgstr "Berichten over"
 
-#: ../../assets/inc/class-tp-menus.php:17 ../inc/class-tp-menus.php:17
-msgid "Main navigation"
-msgstr "Hoofdnavigatie"
+#~ msgid "Posts by"
+#~ msgstr "Berichten van"
 
-#: ../../assets/inc/class-tp-menus.php:18
-#: ../../assets/inc/class-tp-sidebars.php:37 ../inc/class-tp-menus.php:18
-#: ../inc/class-tp-sidebars.php:37
-msgid "Footer"
-msgstr "Footer"
+#~ msgid "News"
+#~ msgstr "Nieuws"
 
-#: ../../assets/inc/class-tp-menus.php:19 ../inc/class-tp-menus.php:19
-msgid "Sitemap"
-msgstr "Sitemap"
+#~ msgid "Pages"
+#~ msgstr "Pagina's"
 
-#: ../../assets/inc/class-tp-sidebars.php:25 ../inc/class-tp-sidebars.php:25
-msgid "Home"
-msgstr "Home"
+#~ msgid "Search"
+#~ msgstr "Zoeken"
 
-#: ../../assets/inc/class-tp-sidebars.php:29 ../inc/class-tp-sidebars.php:29
-msgid "Page"
-msgstr "Pagina"
+#~ msgid "Back to the overview"
+#~ msgstr "Terug naar het overzicht"
 
-#: ../../assets/inc/class-tp-sidebars.php:33 ../inc/class-tp-sidebars.php:33
-msgid "Blog"
-msgstr "Blog"
+#~ msgid "Home"
+#~ msgstr "Home"
 
-#: ../../partials/share.php:3
-msgid "Share this article"
-msgstr "Deel dit artikel"
+#~ msgid "Page"
+#~ msgstr "Pagina"
 
-#: ../../partials/share.php:5
-msgid "Share this on Facebook"
-msgstr "Delen via Facebook"
+#~ msgid "Blog"
+#~ msgstr "Blog"
 
-#: ../../partials/share.php:9
-msgid "Share this on Twitter"
-msgstr "Delen via Twitter"
+#~ msgid "Share this article"
+#~ msgstr "Deel dit artikel"
 
-#: ../../partials/share.php:13
-msgid "Share this on Google Plus"
-msgstr "Delen via Google Plus"
+#~ msgid "Share this on Facebook"
+#~ msgstr "Delen via Facebook"
 
-#: ../../partials/share.php:17
-msgid "Share this on LinkedIn"
-msgstr "Delen via LinkedIn"
+#~ msgid "Share this on Twitter"
+#~ msgstr "Delen via Twitter"
 
-#: ../../partials/share.php:21
-msgid "Email this"
-msgstr "E-mail dit artikel"
+#~ msgid "Share this on Google Plus"
+#~ msgstr "Delen via Google Plus"
 
-#: ../../partials/share.php:25
-msgid "Share this on other networks"
-msgstr "Delen via andere netwerken"
+#~ msgid "Share this on LinkedIn"
+#~ msgstr "Delen via LinkedIn"
+
+#~ msgid "Email this"
+#~ msgstr "E-mail dit artikel"
+
+#~ msgid "Share this on other networks"
+#~ msgstr "Delen via andere netwerken"
 
 #~ msgid "General settings"
 #~ msgstr "Algemene instellingen"
