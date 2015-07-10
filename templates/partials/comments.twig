@@ -3,7 +3,7 @@
 	{% if have_comments %}
 
 		<h2>
-			{{fn( '_n', 'One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', post.comment_count, 'tp' )|format(post.comment_count,'<span>'~post.title~'</span>')}}
+			{{fn('_n', 'One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', post.comment_count, 'tp')|format(post.comment_count,'<span>'~post.title~'</span>')}}
 		</h2>
 		
 		<ol>
@@ -18,6 +18,6 @@
 
 	{% endif %}
 
-	{{fn( 'comment_form', { 'comment_notes_after': '' } )}}
+	{{fn('comment_form', { 'comment_notes_after': '' })}}
 
 </div>
