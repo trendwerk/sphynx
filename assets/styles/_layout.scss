@@ -21,7 +21,7 @@ body {
 #main-navigation,
 #header,
 #footer,
-#main {
+main {
 	clear: both;
 	float: left;
 	margin: 0;
@@ -277,7 +277,7 @@ body {
 // @section    Layout
 // @subsection Main
 
-#main {
+main {
 	margin-top: 0;
 	padding: ($line-height * 1.5) 0 ($line-height * 3) 0;
 
