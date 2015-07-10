@@ -8,10 +8,10 @@
 	
 	{% include 'partials/post-meta.twig' %}
 
-	{% if post.thumbnail.src %}
+	{% if post.thumbnail %}
 
 		<figure>
-			{{fn( 'the_post_thumbnail', 'medium' )}}
+			<img src="{{post.thumbnail.src('medium')}}" alt="{{post.thumbnail.title}}">
 		</figure>
 
 	{% endif %}
