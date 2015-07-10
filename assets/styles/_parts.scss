@@ -251,6 +251,7 @@ p.tags {
 
 		input[type="text"] {
 			@include placeholder(#999, $text-color);
+			box-sizing: border-box;
 			color: $text-color;
 			font-size: 16px;
 			font-style: italic;

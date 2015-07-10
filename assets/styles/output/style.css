@@ -1319,6 +1319,7 @@ p.tags {
     .search-form form {
       width: 265px; } }
   .search-form form input[type="text"] {
+    box-sizing: border-box;
     color: #666;
     font-size: 16px;
     font-style: italic;
