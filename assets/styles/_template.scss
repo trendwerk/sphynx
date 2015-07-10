@@ -10,48 +10,6 @@
 //
 
 // @section    Templates
-// @subsection front-page.php
-
-.home {
-	#sub-header {
-		background-color: #ccc;
-		padding: ($line-height * 1.5) 0;
-		text-align: center;
-
-		@media(min-width: 641px) {
-			padding: ($line-height * 2) 0;
-		}
-
-		h1 {
-			font-size: 32px;
-			line-height: 1;
-			margin-bottom: 10px;
-
-			@media(min-width: 641px) {
-				font-size: 64px;
-				margin-bottom: 15px;
-			}
-		}
-
-		.description {
-			font-size: 18px;
-			font-weight: normal;
-			line-height: 28px;
-			margin-bottom: 0;
-
-			@media(min-width: 641px) {
-				font-size: 36px;
-				line-height: 1.325em;
-			}
-		}
-	}
-
-	#main {
-		border-top: 0;
-	}
-}
-
-// @section    Templates
 // @subsection index.php
 // @subsection search.php
 
