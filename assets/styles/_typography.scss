@@ -99,8 +99,6 @@ a {
 	outline: 0;
 	text-decoration: underline;
 
-	&:active,
-	&:focus,
 	&:hover { 
 		color: darken($link-color, 15%);
 		text-decoration: underline;
@@ -135,20 +133,18 @@ a {
 
 	// style for tag
 
-	&[rel='tag'] {
+	&.tag {
 		background: #ccc;
 		border-radius: 3px;
 		color: $text-color;
 		display: inline-block;
 		font-size: 12px;
 		line-height: 25px;
-		margin: 0 10px 10px;
+		margin: 0 0 5px 5px;
 		padding: 0 10px;
 		text-decoration: none;
 		text-transform: lowercase;
 
-		&:active,
-		&:focus,
 		&:hover {
 			background: $heading-color;
 			color: $white;
