@@ -822,7 +822,7 @@ body {
 #main-navigation,
 #header,
 #footer,
-#main {
+main {
   clear: both;
   float: left;
   margin: 0;
@@ -830,7 +830,7 @@ body {
   #main-navigation .wrapper,
   #header .wrapper,
   #footer .wrapper,
-  #main .wrapper {
+  main .wrapper {
     box-sizing: border-box;
     padding: 0 20px;
     width: 100%; }
@@ -838,13 +838,13 @@ body {
       #main-navigation .wrapper,
       #header .wrapper,
       #footer .wrapper,
-      #main .wrapper {
+      main .wrapper {
         padding: 0 40px; } }
     @media (min-width: 981px) {
       #main-navigation .wrapper,
       #header .wrapper,
       #footer .wrapper,
-      #main .wrapper {
+      main .wrapper {
         margin: 0 auto;
         padding: 0 20px;
         width: 980px; } }
@@ -852,7 +852,7 @@ body {
       #main-navigation .wrapper,
       #header .wrapper,
       #footer .wrapper,
-      #main .wrapper {
+      main .wrapper {
         width: 1160px; } }
 
 #header {
@@ -998,33 +998,33 @@ body {
             left: 260px;
             top: 0; } }
 
-#main {
+main {
   margin-top: 0;
   padding: 45px 0 90px 0; }
   @media (min-width: 641px) {
-    #main {
+    main {
       background: #fff; } }
-  #main #content {
+  main #content {
     box-sizing: border-box;
     margin: 0 auto;
     width: 100%; }
     @media (min-width: 821px) {
-      #main #content {
+      main #content {
         width: 740px; } }
-    #main #content h1 {
+    main #content h1 {
       margin-bottom: 30px;
       text-align: center; }
-    #main #content .meta {
+    main #content .meta {
       color: #999;
       font-size: 13px;
       font-weight: bold;
       margin: 0 0 30px 0;
       text-align: center; }
-      #main #content .meta a {
+      main #content .meta a {
         color: #666; }
-        #main #content .meta a:active, #main #content .meta a:focus, #main #content .meta a:hover {
+        main #content .meta a:active, main #content .meta a:focus, main #content .meta a:hover {
           color: #1d6fd1; }
-    #main #content .tags .label {
+    main #content .tags .label {
       display: block;
       float: left;
       font-size: 13px;
@@ -1032,15 +1032,15 @@ body {
       margin-bottom: 10px;
       width: 100%; }
       @media (min-width: 441px) {
-        #main #content .tags .label {
+        main #content .tags .label {
           display: inline-block;
           padding-right: 15px;
           width: auto; } }
       @media (min-width: 641px) {
-        #main #content .tags .label {
+        main #content .tags .label {
           padding-right: 0;
           width: 150px; } }
-    #main #content p:last-child {
+    main #content p:last-child {
       margin-bottom: 0; }
 
 #footer {
@@ -1132,12 +1132,12 @@ body {
     padding: 30px;
     margin-bottom: 15px; }
 
-.single #main #content figure {
+.single main #content figure {
   float: right;
   margin: 5px 0 10px 20px; }
-.single #main #content nav.pages {
+.single main #content nav.pages {
   margin-bottom: 30px; }
-  .single #main #content nav.pages a {
+  .single main #content nav.pages a {
     background-color: #eee;
     border-radius: 3px;
     color: #666;
@@ -1148,13 +1148,13 @@ body {
     margin-right: 5px;
     padding: 0 20px;
     text-decoration: none; }
-    .single #main #content nav.pages a:active, .single #main #content nav.pages a:focus, .single #main #content nav.pages a:hover {
+    .single main #content nav.pages a:active, .single main #content nav.pages a:focus, .single main #content nav.pages a:hover {
       background: #d4d4d4; }
 
 .search article h2 {
   margin-bottom: 30px; }
 
-.search-no-results #main #content {
+.search-no-results main #content {
   margin-bottom: 15px; }
 
 #respond {

@@ -64,7 +64,7 @@
 // @section    Templates
 // @subsection single.php
 
-.single #main #content {
+.single main #content {
 
 	figure {
 		float: right;
@@ -104,6 +104,6 @@
 	}
 }
 
-.search-no-results #main #content {
+.search-no-results main #content {
 	margin-bottom: $line-height / 2;
 }
