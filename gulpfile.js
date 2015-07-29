@@ -16,11 +16,11 @@ var livereload = require('gulp-livereload');
  */
 gulp.task('sass', function() {
   gulp.src('assets/styles/**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write('assets/styles/output/'))
-    .pipe(gulp.dest('assets/styles/output/'))
-    .pipe(livereload())
+  .pipe(sourcemaps.init())
+  .pipe(sass().on('error', sass.logError))
+  .pipe(sourcemaps.write('/'))
+  .pipe(gulp.dest('assets/styles/output/'))
+  .pipe(livereload())
 });
 
 /**
@@ -28,9 +28,9 @@ gulp.task('sass', function() {
  */
 gulp.task('coffee', function() {
   gulp.src('assets/scripts/**/*.coffee')
-    .pipe(coffee({bare: true}).on('error', gutil.log))
-    .pipe(gulp.dest('assets/scripts/output/'))
-    .pipe(livereload())
+  .pipe(coffee({bare: true}).on('error', gutil.log))
+  .pipe(gulp.dest('assets/scripts/output/'))
+  .pipe(livereload())
 });
 
 /**
@@ -38,9 +38,9 @@ gulp.task('coffee', function() {
  */
 gulp.task('scss-lint', function() {
   gulp.src('assets/styles/**/*.scss')
-    .pipe(scsslint({
-      'config': 'lint.yml',
-    }))
+  .pipe(scsslint({
+    'config': 'lint.yml',
+  }))
 });
 
 /**
@@ -48,8 +48,8 @@ gulp.task('scss-lint', function() {
  */
 gulp.task('coffeelint', function () {
   gulp.src('assets/scripts/**/*.coffee')
-    .pipe(coffeelint())
-    .pipe(coffeelint.reporter())
+  .pipe(coffeelint())
+  .pipe(coffeelint.reporter())
 });
 
 /**
@@ -57,13 +57,13 @@ gulp.task('coffeelint', function () {
  */
 gulp.task('phpcs', function() {
   gulp.src(['**/*.php', '!node_modules/**/*.*'])
-    .pipe(phpcs({
-      bin: '~/.composer/vendor/bin/phpcs',
-      standard: 'PSR2',
-      warningSeverity: 0
-    }))
-    .pipe(phpcs.reporter('log'))
-    .pipe(livereload())
+  .pipe(phpcs({
+    bin: '~/.composer/vendor/bin/phpcs',
+    standard: 'PSR2',
+    warningSeverity: 0
+  }))
+  .pipe(phpcs.reporter('log'))
+  .pipe(livereload())
 });
 
 /**
