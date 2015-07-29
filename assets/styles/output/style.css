@@ -1119,9 +1119,9 @@ main {
       .blog article h2 a:hover {
         color: #1d6fd1;
         text-decoration: underline; }
-  .archive article figure,
-  .search article figure,
-  .blog article figure {
+  .archive article .featured-image,
+  .search article .featured-image,
+  .blog article .featured-image {
     float: right;
     margin: 0 0 30px 20px; }
   .archive article.sticky,
@@ -1132,7 +1132,7 @@ main {
     padding: 30px;
     margin-bottom: 15px; }
 
-.single main #content figure {
+.single main #content .featured-image {
   float: right;
   margin: 5px 0 10px 20px; }
 .single main #content nav.pages {

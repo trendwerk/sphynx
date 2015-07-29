@@ -10,9 +10,7 @@
 
 	{% if post.thumbnail %}
 
-		<figure>
-			<img src="{{post.thumbnail.src('medium')}}" alt="{{post.thumbnail.title}}">
-		</figure>
+		<img class="featured-image" src="{{post.thumbnail.src('medium')}}" alt="{{post.thumbnail.title}}">
 
 	{% endif %}
 

@@ -10,13 +10,9 @@
 
 	{% if post.thumbnail %}
 
-		<figure>
-
-			<a href="{{post.permalink}}">
-				<img src="{{post.thumbnail.src('thumbnail')}}" alt="{{post.thumbnail.title}}">
-			</a>
-
-		</figure>
+		<a href="{{post.permalink}}">
+			<img class="featured-image" src="{{post.thumbnail.src('thumbnail')}}" alt="{{post.thumbnail.title}}">
+		</a>
 
 	{% endif %}
 	
