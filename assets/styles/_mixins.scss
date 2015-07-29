@@ -1,28 +1,27 @@
-//
-// @section Mixins
-//
-// Mixins allow you to embed all the properties of a class into another class 
-// by simply including the class name as one of its properties. It’s just like 
-// variables, but for whole classes. Mixins can also behave like functions, 
-// and take arguments.
-//
-// @package   	WordPress
-// @subpackage 	TrendPress
-// @author    	Trendwerk
-// @license   	GPL v2
-// 
+///
+/// @section Mixins
+///
+/// Mixins allow you to embed all the properties of a class into another class 
+/// by simply including the class name as one of its properties. It’s just like 
+/// variables, but for whole classes. Mixins can also behave like functions, 
+/// and take arguments.
+///
+/// @package   	WordPress
+/// @subpackage 	TrendPress
+/// @author    	Trendwerk
+/// @license   	GPL v2
+/// 
 
-//
-// @section 	Mixins
-// @subsection  Animate 
+/// @section 	Mixins
+/// @subsection  Animate 
 
 @mixin animate-this( $what: all, $time: 0.5s, $ease: ease-in-out ) {
 	-webkit-transition: $what $time $ease;
 	transition: $what $time $ease;
 }
 
-// @section    Mixins
-// @subsection Collumns
+/// @section    Mixins
+/// @subsection Collumns
 
 @mixin columns( $number, $gap ) {
 	-moz-column-count: $number;
@@ -33,8 +32,8 @@
 	column-gap: $gap;
 }
 
-// @section    Mixins
-// @subsection Gradient
+/// @section    Mixins
+/// @subsection Gradient
 
 @mixin gradient($direction,$startColor,$endColor) {
 	background-color: $startColor;
@@ -55,8 +54,8 @@
     }
 }
 
-// @section    Mixins
-// @subsection Placeholder
+/// @section    Mixins
+/// @subsection Placeholder
 
 @mixin placeholder($out,$on) {
 
@@ -93,8 +92,8 @@
 	}
 }
 
-// @section    Mixins
-// @subsection Sprites
+/// @section    Mixins
+/// @subsection Sprites
 
 @mixin sprite($top,$left) {
 	background-image: url('../../../assets/images/sprite-x1.png');
