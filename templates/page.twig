@@ -2,19 +2,9 @@
 
 {% block content %}
 
-	{% if subheader %}
-
-		<h2>
-			{{post.title}}
-		</h2>
-
-	{% else %}
-
-		<h1>
-			{{post.title}}
-		</h1>
-
-	{% endif %}
+	<h1>
+		{{post.title}}
+	</h1>
 
 	{{post.content}}
 

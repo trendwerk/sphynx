@@ -3,53 +3,11 @@
 //
 // Defines the template specific styling
 //
-// @package    WordPress
-// @subpackage TrendPress
-// @author     Trendwerk
-// @license    GPL v2
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   	GPL v2
 //
-
-// @section    Templates
-// @subsection front-page.php
-
-.home {
-  #sub-header {
-    background-color: #ccc;
-    padding: ($line-height * 1.5) 0;
-    text-align: center;
-
-    @media(min-width: 641px) {
-      padding: ($line-height * 2) 0;
-    }
-
-    h1 {
-      font-size: 32px;
-      line-height: 1;
-      margin-bottom: 10px;
-
-      @media(min-width: 641px) {
-        font-size: 64px;
-        margin-bottom: 15px;
-      }
-    }
-
-    .description {
-      font-size: 18px;
-      font-weight: normal;
-      line-height: 28px;
-      margin-bottom: 0;
-
-      @media(min-width: 641px) {
-        font-size: 36px;
-        line-height: 1.325em;
-      }
-    }
-  }
-
-  #main {
-    border-top: 0;
-  }
-}
 
 // @section    Templates
 // @subsection index.php
@@ -58,94 +16,95 @@
 .archive,
 .search,
 .blog {
-  .archive-description {
-    margin-bottom: 30px;
-    text-align: center;
-  }
+	.archive-description {
+		margin-bottom: 30px;
+		text-align: center;
+	}
 
-  article {
-    clear: both;
-    padding: 0 0 $line-height 0;
-    width: 100%;
+	article {
+		clear: both;
+		padding: 0 0 $line-height 0;
+		text-align: left;
+		width: 100%;
 
-    &:last-of-type {
-      padding-bottom: 0;
-    }
+		&:last-of-type {
+			padding-bottom: 0;
+		}
 
-    h2 {
-      margin: 0 0 4px 0;
-      text-align: center;
+		h2 {
+			margin: 0 0 4px 0;
+			text-align: center;
+			
+			a {
+				color: $heading-color;
+				text-decoration: none;
+				
+				&:active,
+				&:focus,
+				&:hover {
+					color: $link-color;
+					text-decoration: underline;
+				}
+			}
+		}
 
-      a {
-        color: $heading-color;
-        text-decoration: none;
+		.featured-image {
+			float: right;
+			margin: 0 0 $line-height 20px;
+		}
 
-        &:active,
-        &:focus,
-        &:hover {
-          color: $link-color;
-          text-decoration: underline;
-        }
-      }
-    }
-
-    figure {
-      float: right;
-      margin: 0 0 $line-height 20px;
-    }
-
-    &.sticky {
-      background: $light-background;
-      box-sizing: border-box;
-      padding: 30px;
-      margin-bottom: $line-height / 2;
-    }
-  }
+		&.sticky { 
+			background: $light-background;
+			box-sizing: border-box;
+			padding: 30px;
+			margin-bottom: $line-height / 2;
+		}
+	}
 }
 
 // @section    Templates
 // @subsection single.php
 
-.single #main #content {
+.single main {
 
-  figure {
-    float: right;
-    margin: 5px 0 10px 20px;
-  }
+	.featured-image {
+		float: right;
+		margin: 5px 0 10px 20px; 
+	}
 
-  nav.pages {
-    margin-bottom: $line-height;
+	nav.pages {
+		margin-bottom: $line-height;
 
-    a {
-      background-color: $light-background;
-      border-radius: 3px;
-      color: $text-color;
-      display: inline-block;
-      font-size: 13px;
-      height: 40px;
-      line-height: 40px;
-      margin-right: 5px;
-      padding: 0 20px;
-      text-decoration: none;
+		a {
+			background-color: $light-background;
+			border-radius: 3px;
+			color: $text-color;
+			display: inline-block;
+			font-size: 13px;
+			height: 40px;
+			line-height: 40px;
+			margin-right: 5px;
+			padding: 0 20px;
+			text-decoration: none;
 
-      &:active,
-      &:focus,
-      &:hover {
-        background: darken($light-background, 10%);
-      }
-    }
-  }
+			&:active,
+			&:focus,
+			&:hover {
+				background: darken($light-background, 10%);
+			}
+		}
+	}
 }
 
 // @section    Templates
 // @subsection search.php
 
 .search {
-  article h2 {
-    margin-bottom: $line-height;
-  }
+	article h2 {
+		margin-bottom: $line-height;
+	}
 }
 
-.search-no-results #main #content {
-  margin-bottom: $line-height / 2;
+.search-no-results main #content {
+	margin-bottom: $line-height / 2;
 }

@@ -7,8 +7,8 @@
 	</h1>
 
 	{{description}}
-
-	{% if have_posts %}
+	
+	{% if posts is not empty %}
 
 		{% for post in posts %}
 			{% include 'partials/loop-post.twig' %}
@@ -19,7 +19,7 @@
 	{% else %}
 
 		<p>
-			{{__( 'No results found.', 'tp' )}}
+			{{__('No results found.', 'tp')}}
 		</p>
 
 	{% endif %}

@@ -4,373 +4,374 @@
 // Defines the styling for recurring template parts
 //
 //
-// @package    WordPress
-// @subpackage TrendPress
-// @author     Trendwerk
-// @license    GPL v2
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   	GPL v2
 //
 
 // @section    Parts
 // @subsection Respond
 
 #respond {
-  clear: both;
-  float: left;
-  position: relative;
-  margin: 0 0 $line-height;
-  width: 100%;
+	clear: both;
+	float: left;
+	position: relative;
+	margin: 0 0 $line-height;
+	width: 100%;
+	
+	p {
+		clear: both;
+		float: left;
+		width: 100%;
+		
+		label { 
+			float: left;
+			width: 25%;
+		}
 
-  p {
-    clear: both;
-    float: left;
-    width: 100%;
-
-    label {
-      float: left;
-      width: 25%;
-    }
-
-    &.form-submit {
-      margin-bottom: 0;
-    }
-  }
-
-  small {
-    font-size: 12px;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  textarea {
-    box-sizing: border-box;
-    display: block;
-    height: 200px;
-    margin: 0;
-    width: 75%;
-  }
-
-  input[type="submit"],
-  p.form-allowed-tags {
-    float: left;
-    margin-left: 25%;
-    width: auto;
-  }
+		&.form-submit {
+			margin-bottom: 0;
+		}
+	}
+	
+	small {
+		font-size: 12px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	
+	textarea { 
+		box-sizing: border-box;
+		display: block;
+		height: 200px;
+		margin: 0;
+		width: 75%; 
+	}
+	
+	input[type="submit"],
+	p.form-allowed-tags {
+		float: left;
+		margin-left: 25%;
+		width: auto;
+	}
 }
 
 p.tags {
-  display: block;
+	display: block;
 
-  a[rel="tag"] {
-    margin-right: 5px;
-    margin-bottom: 0;
-  }
+	a[rel="tag"] {
+		margin-right: 5px;
+		margin-bottom: 0;
+	}
 }
 
 // @section    Parts
 // @subsection Comments
-
+ 
 #comments {
-  clear: both;
-  float: left;
-  margin: 0;
-  width: 100%;
+	clear: both;
+	float: left;
+	margin: 0;
+	width: 100%;
 
-  ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+	ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
 
-    li {
-      clear: both;
-      float: left;
-      font-size: 14px;
-      margin-bottom: $line-height;
-      position: relative;
-      width: 100%;
+		li {
+			clear: both;
+			float: left;
+			font-size: 14px;
+			margin-bottom: $line-height;
+			position: relative;
+			width: 100%;
+			
+			&:first-of-type {
+				margin-top: 0;
+			}
 
-      &:first-of-type {
-        margin-top: 0;
-      }
+			&.parent {
+				margin-bottom: 0;
+			}
+		}
 
-      &.parent {
-        margin-bottom: 0;
-      }
-    }
+		ul.children {
+			clear: both;
+			float: left;
+			margin-top: $line-height;
+			margin-bottom: 0;
+			list-style-type: none;
+			width: 100%; 
 
-    ul.children {
-      clear: both;
-      float: left;
-      margin-top: $line-height;
-      margin-bottom: 0;
-      list-style-type: none;
-      width: 100%;
+			#respond { 
+				margin-top: $line-height;
+				margin-bottom: 0;
+			}
 
-      #respond {
-        margin-top: $line-height;
-        margin-bottom: 0;
-      }
+			li:last-of-type {
+				margin-bottom: $line-height;
+			}
+		}
 
-      li:last-of-type {
-        margin-bottom: $line-height;
-      }
-    }
+		.comment-body {
+			box-sizing: border-box;
+			background-color: $light-background;
+			clear: both;
+			float: left;
+			position: relative;
+			padding: 30px 30px 50px 30px;
+			width: 100%;
 
-    .comment-body {
-      box-sizing: border-box;
-      background-color: $light-background;
-      clear: both;
-      float: left;
-      position: relative;
-      padding: 30px 30px 50px 30px;
-      width: 100%;
+			.comment-meta {
+				clear: both;
+				float: left;
+				width: 100%;
 
-      .comment-meta {
-        clear: both;
-        float: left;
-        width: 100%;
+				.comment-author {
+					float: left;
+				}
 
-        .comment-author {
-          float: left;
-        }
+				img {
+					border-radius: 999px;
+					float: left;
+					margin-right: 20px;
+				}
 
-        img {
-          border-radius: 999px;
-          float: left;
-          margin-right: 20px;
-        }
+				.comment-metadata {
+					bottom: 30px;
+					color: $text-light;
+					font-size: 12px;
+					position: absolute;
+					left: 30px;
 
-        .comment-metadata {
-          bottom: 30px;
-          color: $text-light;
-          font-size: 12px;
-          position: absolute;
-          left: 30px;
+					a {
+						font-weight: 700;
+					}
+				}
 
-          a {
-            font-weight: 700;
-          }
-        }
+				.comment-awaiting-moderation {
+					float: right;
+					font-style: italic;
+				}
+			}
 
-        .comment-awaiting-moderation {
-          float: right;
-          font-style: italic;
-        }
-      }
+			.comment-content {
+				box-sizing: border-box;
+				float: left;
+				margin: -20px 0 20px;
+				padding-left: 80px;
+				width: 100%;
+			}
 
-      .comment-content {
-        box-sizing: border-box;
-        float: left;
-        margin: -20px 0 20px;
-        padding-left: 80px;
-        width: 100%;
-      }
+			.reply {
+				bottom: 30px;
+				font-size: 12px;
+				position: absolute;
+				right: 30px;
 
-      .reply {
-        bottom: 30px;
-        font-size: 12px;
-        position: absolute;
-        right: 30px;
+				a {
+					@include font-awesome( before, "\f112  " );
+					font-weight: 700;
+				}
+			}
+		}
 
-        a {
-          @include font-awesome( before, "\f112  " );
-          font-weight: 700;
-        }
-      }
-    }
-
-    &.bypostauthor .comment-body {
-      background-color: darken($light-background, 5%);
-    }
-  }
+		&.bypostauthor .comment-body {
+			background-color: darken($light-background, 5%);
+		}
+	}
 }
 
 // @section    Parts
 // @subsection Pager
-
+ 
 #pager {
-  clear: both;
-  font-size: 13px;
-  padding-top: $line-height;
-  text-align: center;
-  width: 100%;
+	clear: both;
+	font-size: 13px;
+	padding-top: $line-height;
+	text-align: center;
+	width: 100%;
 
-  .page-numbers,
-  .prev,
-  .next {
-    background-color: $light-background;
-    border: 2px solid $light-background;
-    border-radius: 3px;
-    color: $text-color;
-    display: inline-block;
-    font-size: 13px;
-    height: 36px;
-    line-height: 37px;
-    margin: 0 5px 10px 5px;
-    text-align: center;
-  }
+	.page-numbers,
+	.prev,
+	.next {
+		background-color: $light-background;
+		border: 2px solid $light-background;
+		border-radius: 3px;
+		color: $text-color;
+		display: inline-block;
+		font-size: 13px;
+		height: 36px;
+		line-height: 37px;
+		margin: 0 5px 10px 5px;
+		text-align: center;		
+	}
 
-  a {
-    text-decoration: none;
+	a {
+		text-decoration: none;
 
-    &:active,
-    &:focus,
-    &:hover {
-      background: darken($light-background, 10%);
-      border-color: darken($light-background, 10%);
-    }
-  }
+		&:active,
+		&:focus,
+		&:hover {
+			background: darken($light-background, 10%);
+			border-color: darken($light-background, 10%);
+		}
+	}
 
-  .page-numbers {
-    width: 38px;
+	.page-numbers {
+		width: 38px;
 
-    &.current,
-    &.dots {
-      background-color: $white;
-    }
-  }
+		&.current,
+		&.dots {
+			background-color: $white;
+		}
+	}
 
-  .prev,
-  .next {
-    padding: 0 15px;
-    width: auto;
-  }
+	.prev,
+	.next {
+		padding: 0 15px;
+		width: auto;
+	}
 }
 
 // @section    Parts
-// @subsection Search
+// @subsection Search 
 
 .search-form {
-  form {
-    position: relative;
-    width: 100%;
+	form {
+		position: relative;
+		width: 100%;
 
-    @media(min-width: 641px) {
-      width: 265px;
-    }
+		@media(min-width: 641px) {
+			width: 265px;
+		}
 
-    input[type="text"] {
-      @include placeholder(#999, $text-color);
-      color: $text-color;
-      font-size: 16px;
-      font-style: italic;
-      margin: 0;
-      padding: 12px 45px 12px 12px;
-      right: 0;
-      width: 100%;
+		input[type="text"] {
+			@include placeholder(#999, $text-color);
+			box-sizing: border-box;
+			color: $text-color;
+			font-size: 16px;
+			font-style: italic;
+			margin: 0;
+			padding: 12px 45px 12px 12px;
+			right: 0;
+			width: 100%;
 
-      @media(min-width: 641px) {
-        font-size: 13px;
-      }
-    }
+			@media(min-width: 641px) {
+				font-size: 13px;
+			}
+		}
 
-    button[type="submit"] {
-      background: none;
-      height: 39px;
-      margin: 0;
-      padding: 0 0 0 15px;
-      position: absolute;
-      right: 1px;
-      top: 1px;
-      width: 40px;
-    }
+		button[type="submit"] {
+			background: none;
+			height: 39px;
+			margin: 0;
+			padding: 0 0 0 15px;
+			position: absolute;
+			right: 1px;
+			top: 1px;
+			width: 40px;
+		}
 
-    .glass {
-      border: 2px solid $text-light;
-      height: 8px;
-      top: -1px;
-      width: 8px;
+		.glass {
+			border: 2px solid $text-light;
+			height: 8px;
+			top: -1px;
+			width: 8px;
 
-      &:after {
-        background: $text-light;
-        height: 2px;
-        right: -5px;
-        top: 9px;
-        width: 6px;
-      }
-    }
-  }
+			&:after {
+				background: $text-light;
+				height: 2px;
+				right: -5px;
+				top: 9px;
+				width: 6px;
+			}
+		}
+	}
 }
 
 // @section    Parts
 // @subsection Icons
 
 .glass {
-  border: 3px solid $white;
-  border-radius: 100%;
-  display: block;
-  height: 10px;
-  position: relative;
-  width: 10px;
+	border: 3px solid $white;
+	border-radius: 100%;
+	display: block;
+	height: 10px;
+	position: relative;
+	width: 10px;
 
-  &:after {
-    background: $white;
-    content: '';
-    height: 3px;
-    position: absolute;
-    right: -7px;
-    top: 11px;
-    -webkit-transform:  rotate(45deg);
-    -moz-transform:    rotate(45deg);
-    -ms-transform:    rotate(45deg);
-    -o-transform:    rotate(45deg);
-    transform:      rotate(45deg);
-    width: 8px;
-  }
+	&:after {
+		background: $white;
+		content: '';
+		height: 3px;
+		position: absolute;
+		right: -7px;
+		top: 11px;
+		-webkit-transform:	rotate(45deg);
+		-moz-transform:		rotate(45deg);
+		-ms-transform:		rotate(45deg);
+		-o-transform:		rotate(45deg);
+		transform:			rotate(45deg);
+		width: 8px;
+	}
 }
 
 .burger {
-  height: 19px;
-  position: relative;
-  width: 24px;
+	height: 19px;
+	position: relative;
+	width: 24px;
 
-  .line {
-    background: $white;
-    height: 3px;
-    position: absolute;
-    -webkit-transition: -webkit-transform 0.2s ease-out;
-    -moz-transition: -moz-transform 0.2s ease-out;
-    -ms-transition: -ms-transform 0.2s ease-out;
-    -o-transition: -o-transform 0.2s ease-out;
-    transition: transform 0.2s ease-out;
-    width: 24px;
-  }
+	.line {
+		background: $white;
+		height: 3px;
+		position: absolute;
+		-webkit-transition: -webkit-transform 0.2s ease-out;
+		-moz-transition: -moz-transform 0.2s ease-out;
+		-ms-transition: -ms-transform 0.2s ease-out;
+		-o-transition: -o-transform 0.2s ease-out;
+		transition: transform 0.2s ease-out;
+		width: 24px;
+	}
 
-  .line:nth-child(1) {
-    top: 0;
-  }
+	.line:nth-child(1) {
+		top: 0;
+	}
 
-  .line:nth-child(2) {
-    top: 8px;
-  }
+	.line:nth-child(2) {
+		top: 8px;
+	}
 
-  .line:nth-child(3) {
-    top: 16px;
-  }
+	.line:nth-child(3) {
+		top: 16px;
+	}
 
-  &.active {
-    .line:nth-child(1) {
-      -webkit-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-      -moz-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-      -ms-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-      -o-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-      transform: rotate(-45deg) translate(-5.3px, 5.3px);
-    }
+	&.active {
+		.line:nth-child(1) {
+			-webkit-transform: rotate(-45deg) translate(-5.3px, 5.3px);
+			-moz-transform: rotate(-45deg) translate(-5.3px, 5.3px);
+			-ms-transform: rotate(-45deg) translate(-5.3px, 5.3px);
+			-o-transform: rotate(-45deg) translate(-5.3px, 5.3px);
+			transform: rotate(-45deg) translate(-5.3px, 5.3px);
+		}
 
-    .line:nth-child(2) {
-      -webkit-transform: scale(0, 1);
-      -moz-transform: scale(0, 1);
-      -ms-transform: scale(0, 1);
-      -o-transform: scale(0, 1);
-      transform: scale(0, 1);
-    }
+		.line:nth-child(2) {
+			-webkit-transform: scale(0, 1);
+			-moz-transform: scale(0, 1);
+			-ms-transform: scale(0, 1);
+			-o-transform: scale(0, 1);
+			transform: scale(0, 1);
+		}
 
-    .line:nth-child(3) {
-      -webkit-transform: rotate(45deg) translate(-6px, -6px);
-      -moz-transform: rotate(45deg) translate(-6px, -6px);
-      -ms-transform: rotate(45deg) translate(-6px, -6px);
-      -o-transform: rotate(45deg) translate(-6px, -6px);
-      transform: rotate(45deg) translate(-6px, -6px);
-    }
-  }
+		.line:nth-child(3) {
+			-webkit-transform: rotate(45deg) translate(-6px, -6px);
+			-moz-transform: rotate(45deg) translate(-6px, -6px);
+			-ms-transform: rotate(45deg) translate(-6px, -6px);
+			-o-transform: rotate(45deg) translate(-6px, -6px);
+			transform: rotate(45deg) translate(-6px, -6px);
+		}
+	}
 }

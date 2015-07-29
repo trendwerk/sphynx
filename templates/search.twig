@@ -3,21 +3,21 @@
 {% block content %}
 
 	<h1>
-		{{__( 'Search Results for: %1$s', 'tp' )|format( fn( 'get_search_query' ) )}}
+		{{__('Search Results for: %1$s', 'tp')|format(search_query)}}
 	</h1>
 
-	{% if have_posts %}
+	{% if posts is not empty %}
 
 		{% for post in posts %}
 			{% include 'partials/loop-search.twig' %}
 		{% endfor %}
 
-		{{fn( 'tp_pagination' )}}
+		{{pagination}}
 
 	{% else %}
 
 		<p>
-			{{__( 'Your search for <em>&quot;%1$s&quot;</em> did not match any documents. Please make sure all your words are spelled correctly or try different keywords.', 'tp' )|format( fn( 'get_search_query' ) )}}
+			{{__('Your search for <em>&quot;%1$s&quot;</em> did not match any documents. Please make sure all your words are spelled correctly or try different keywords.', 'tp')|format(search_query)}}
 		</p>
 
 		{% include 'partials/searchform.twig' %}

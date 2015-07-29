@@ -6,24 +6,6 @@
 namespace Trendwerk\TrendPress;
 
 /**
- * Convert a string to an URL (Add http:// if necessary)
- *
- * @param string $url
- */
-function maybeAddHttp($url)
-{
-    if (! $url) {
-        return;
-    }
-
-    if (! strstr($url, 'http://') && ! strstr($url, 'https://')) {
-        $url = 'http://' . $url;
-    }
-
-    return $url;
-}
-
-/**
  * Pagination
  *
  * @param array $args Additional arguments

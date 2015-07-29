@@ -20,17 +20,13 @@ button {
   input[type="reset"]:active,
   button:active {
     top: 1px; }
-  .button:active,
-  input[type="submit"]:active,
+  .button:active, input[type="submit"]:active,
   input[type="button"]:active,
   input[type="reset"]:active,
-  button:active,
-  .button:focus,
-  input[type="submit"]:focus,
+  button:active, .button:focus, input[type="submit"]:focus,
   input[type="button"]:focus,
   input[type="reset"]:focus,
-  button:focus,
-  .button:hover, input[type="submit"]:hover,
+  button:focus, .button:hover, input[type="submit"]:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   button:hover {
@@ -44,17 +40,13 @@ button {
   button.secondary {
     background: #999;
     color: #fff; }
-    .button.secondary:active,
-    input.secondary[type="submit"]:active,
+    .button.secondary:active, input.secondary[type="submit"]:active,
     input.secondary[type="button"]:active,
     input.secondary[type="reset"]:active,
-    button.secondary:active,
-    .button.secondary:focus,
-    input.secondary[type="submit"]:focus,
+    button.secondary:active, .button.secondary:focus, input.secondary[type="submit"]:focus,
     input.secondary[type="button"]:focus,
     input.secondary[type="reset"]:focus,
-    button.secondary:focus,
-    .button.secondary:hover, input.secondary[type="submit"]:hover,
+    button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover,
     input.secondary[type="button"]:hover,
     input.secondary[type="reset"]:hover,
     button.secondary:hover {
@@ -307,42 +299,33 @@ a {
   color: #1d6fd1;
   outline: 0;
   text-decoration: underline; }
-  a:active,
-  a:focus,
   a:hover {
     color: #144b8e;
     text-decoration: underline; }
-  a.more-link {
+  a.read-more {
     white-space: nowrap; }
-  a.more-link:after,
-  a.back:before,
-  a.prev:before,
-  a.next:after {
+  a.read-more:after, a.prev:before, a.next:after {
     display: inline-block;
     font-family: fontawesome;
     font-size: 9px; }
-  a.back:before,
   a.prev:before {
     content: '\f053';
     padding-right: 4px; }
-  a.more-link:after,
-  a.next:after {
+  a.read-more:after, a.next:after {
     content: '\f054';
     padding-left: 4px; }
-  a[rel='tag'] {
+  a.tag {
     background: #ccc;
     border-radius: 3px;
     color: #666;
     display: inline-block;
     font-size: 12px;
     line-height: 25px;
-    margin: 0 10px 10px;
+    margin: 0 0 5px 5px;
     padding: 0 10px;
     text-decoration: none;
     text-transform: lowercase; }
-    a[rel='tag']:active,
-    a[rel='tag']:focus,
-    a[rel='tag']:hover {
+    a.tag:hover {
       background: #333;
       color: #fff; }
 
@@ -429,18 +412,6 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap; }
 
-acronym,
-abbr {
-  border-bottom: 1px dotted #666;
-  cursor: help; }
-  acronym:active,
-  acronym:focus,
-  acronym:hover,
-  abbr:active,
-  abbr:focus,
-  abbr:hover {
-    border-bottom-style: solid; }
-
 del {
   color: #999;
   text-decoration: line-through; }
@@ -460,22 +431,6 @@ hr {
   height: 1px;
   margin: 0 0 30px;
   padding: 0; }
-
-.telephone {
-  color: #333;
-  font-size: 24px;
-  font-weight: bold; }
-  .telephone:before {
-    content: '\f095';
-    font-family: FontAwesome;
-    font-size: 30px;
-    display: inline-block;
-    margin: 0 7px;
-    position: relative;
-    top: 4px; }
-  .telephone a[href^=tel] {
-    color: #333;
-    text-decoration: none; }
 
 input[type="datetime-local"],
 input[type="datetime"],
@@ -867,4 +822,4 @@ figure.alignnone img {
   height: auto;
   padding: 0; }
 
-/*# sourceMappingURL=/editor.css.map */
+/*# sourceMappingURL=editor.css.map */

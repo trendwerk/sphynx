@@ -5,21 +5,17 @@
 			{{post.title}}
 		</a>
 	</h2>
-
+	
 	{% include 'partials/post-meta.twig' %}
 
-	{% if post.thumbnail.src %}
+	{% if post.thumbnail %}
 
-		<figure>
-
-			<a href="{{post.permalink}}">
-				{{fn( 'the_post_thumbnail', 'thumbnail' )}}
-			</a>
-
-		</figure>
+		<a href="{{post.permalink}}">
+			<img class="featured-image" src="{{post.thumbnail.src('thumbnail')}}" alt="{{post.thumbnail.title}}">
+		</a>
 
 	{% endif %}
-
-	{{post.get_preview( 100, false, __( 'Read more', 'tp' ) )|wpautop}}
+	
+	{{post.get_preview(100, false, __('Read more', 'tp'))|wpautop}}
 
 </article>

@@ -26,7 +26,7 @@ final class Media
 
         update_option('large_size_w', 720);
         update_option('large_size_h', '');
-
+        
         update_option('image_default_link_type', 'file');
     }
 
@@ -38,5 +38,3 @@ final class Media
         return '<div class="video-container">' . $html . '</div>';
     }
 }
-
-new Media;

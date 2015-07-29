@@ -3,11 +3,11 @@
 //
 // Defines the styling of forms
 //
-// @package    WordPress
-// @subpackage TrendPress
-// @author     Trendwerk
-// @license    GPL v2
-//
+// @package   	WordPress
+// @subpackage 	TrendPress
+// @author    	Trendwerk
+// @license   	GPL v2
+// 
 
 // @section    Forms
 // @subsection Default form styles
@@ -25,45 +25,45 @@ input[type="time"],
 input[type="week"],
 input[type="tel"],
 input[type="url"],
-textarea,
+textarea, 
 select {
-  @include placeholder(#666, #ccc);
-  -webkit-appearance: none;
-  background-color: $white;
-  border: 1px solid $border-color;
-  border-radius: 3px;
-  color: $text-color;
-  display: block;
-  font-family: $text-font;
-  font-size: 13px;
-  margin: 0;
-  outline: none;
-  padding: 12px;
+	@include placeholder(#666, #ccc);
+	-webkit-appearance: none;
+	background-color: $white;
+	border: 1px solid $border-color;
+	border-radius: 3px;
+	color: $text-color;
+	display: block;
+	font-family: $text-font;
+	font-size: 13px;
+	margin: 0;
+	outline: none;
+	padding: 12px;
 
-  &:focus {
-    border: 1px solid darken($border-color, 20%);
-  }
+	&:focus {
+		border: 1px solid darken($border-color, 20%);
+	}
 }
 
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
-  @extend .button;
-  -webkit-appearance: none;
-  border: 0;
-  outline: 0;
+	@extend .button;
+	-webkit-appearance: none;
+	border: 0;
+	outline: 0;
 }
 
 select {
-  background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
-  background-position: 95% center;
-  background-repeat: no-repeat;
+	background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+	background-position: 95% center;
+	background-repeat: no-repeat;
 }
 
 // @section    Forms
-// @subsection Fix for admin-bar search form
+// @subsection Fix for admin-bar search form 
 
 .adminbar-input {
-  min-width: 0;
+	min-width: 0;
 }

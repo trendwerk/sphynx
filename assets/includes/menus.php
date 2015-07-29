@@ -45,5 +45,3 @@ final class Menus
         return $context;
     }
 }
-
-new Menus;

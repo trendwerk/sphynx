@@ -39,9 +39,9 @@ final class Editor
                 'classes'  => 'button secondary',
             ),
             array(
-                'title'    => __('More link', 'tp'),
+                'title'    => __('Read more', 'tp'),
                 'selector' => 'a',
-                'classes'  => 'more-link',
+                'classes'  => 'read-more',
             ),
         );
         $settings['style_formats'] = json_encode($style_formats);
@@ -58,11 +58,9 @@ final class Editor
 
         $settings['toolbar1'] = 'formatselect, bold, italic, bullist, numlist, link, unlink, wp_more, ' . $dfw_fs;
         $settings['toolbar2'] = 'styleselect, undo, redo, charmap, blockquote, pastetext, removeformat';
-
+        
         $settings['wordpress_adv_hidden'] = false;
 
         return $settings;
     }
 }
-
-new Editor;

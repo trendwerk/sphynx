@@ -5,29 +5,19 @@
 	<h1>
 		{{post.title}}
 	</h1>
-
+	
 	{% include 'partials/post-meta.twig' %}
 
-	{% if post.thumbnail.src %}
+	{% if post.thumbnail %}
 
-		<figure>
-			{{fn( 'the_post_thumbnail', 'medium' )}}
-		</figure>
+		<img class="featured-image" src="{{post.thumbnail.src('medium')}}" alt="{{post.thumbnail.title}}">
 
 	{% endif %}
 
 	{{post.content}}
 
-	<p class="tags">
-		{{fn( 'the_tags', '<span class="label">Tags</span>', '' )}}
-	</p>
+	{% include 'partials/tags.twig' %}
 
-	<p>
-		<a class="back" href="{{fn( 'get_permalink', fn( 'get_option', 'page_for_posts' ) )}}">
-			{{__( 'Back to the overview', 'tp' )}}
-		</a>
-	</p>
-
-	{{fn( 'comments_template' )}}
+	{{fn('comments_template')}}
 
 {% endblock %}

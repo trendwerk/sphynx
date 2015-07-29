@@ -1,23 +1,15 @@
 {% include 'header.twig' %}
 
-{% if subheader %}
-	{% include 'partials/subheader.twig' %}
-{% endif %}
-
-<section id="main">
+<main>
 
 	<div class="wrapper">
-
-		<section id="content">
-
-			{% block content %}
-				{{__( 'No results found.', 'tp' )}}
-			{% endblock %}
-
-		</section>
-
+		
+		{% block content %}
+			{{__('No results found.', 'tp')}}
+		{% endblock %}
+			
 	</div>
-
-</section>
+	
+</main>
 
 {% include 'footer.twig' %}
