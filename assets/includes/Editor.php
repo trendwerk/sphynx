@@ -39,9 +39,9 @@ final class Editor
                 'classes'  => 'button secondary',
             ),
             array(
-                'title'    => __('More link', 'tp'),
+                'title'    => __('Read more', 'tp'),
                 'selector' => 'a',
-                'classes'  => 'more-link',
+                'classes'  => 'read-more',
             ),
         );
         $settings['style_formats'] = json_encode($style_formats);
