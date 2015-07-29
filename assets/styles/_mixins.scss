@@ -34,35 +34,6 @@
 }
 
 // @section    Mixins
-// @subsection Font Awesome
-// 
-// website: http://fontawesome.io/icons/
-// cheatsheet: http://fortawesome.github.io/Font-Awesome/cheatsheet/
-
-@mixin font-awesome($position,$glyph) {
-	position: relative;
-
-	@if $position == before {
-		&:before {
-			content: $glyph;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-decoration: inherit;
-		}
-
-	} @else if $position == after {
-		&:after {
-			content: $glyph;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-decoration: inherit;
-		}
-	}
-}
-
-// @section    Mixins
 // @subsection Gradient
 
 @mixin gradient($direction,$startColor,$endColor) {
