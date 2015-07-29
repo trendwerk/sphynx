@@ -32,7 +32,7 @@ add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 
  */
 add_theme_support('post-thumbnails');
 
-add_action('init', function () {
+add_action('init', function() {
     remove_post_type_support('page', 'thumbnail');
 });
 
