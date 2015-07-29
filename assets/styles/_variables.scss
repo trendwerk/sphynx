@@ -13,22 +13,22 @@
 /// @section     Variables
 /// @subsection  Defines recurring colors and fonts
 
-$heading-font:		'Helvetica Neue', sans-serif;
-$text-font:			'Helvetica Neue', sans-serif;
+$heading-font:     'Helvetica Neue', sans-serif;
+$text-font:        'Helvetica Neue', sans-serif;
 
-$primary-color:		#333;
-$secondary-color:	#999;
+$primary-color:     hsl(0,0%,20%);
+$secondary-color:   hsl(0,0%,60%);
 
-$white:				#fff;
-$red: 				#cc3d3d;
+$white:             white;
+$red:               hsl(0,58%, 52%);
 
-$light-background:	#eee;
-$body-background:	#fff;
-$border-color:		#ccc;
+$light-background:  hsl(0, 0%, 93%);
+$body-background:   white;
+$border-color:      hsl(0, 0%, 80%);
 
-$heading-color:		#333;
-$text-color:		#666;
-$text-light:		#999;
-$link-color:		#1d6fd1;
+$heading-color:     hsl(0, 0%, 20%);
+$text-color:        hsl(0, 0%, 40%);
+$text-light:        hsl(0, 0%, 60%);
+$link-color:        hsl(213, 76%, 47%);
 
-$line-height:		30px;
+$line-height:       30px;

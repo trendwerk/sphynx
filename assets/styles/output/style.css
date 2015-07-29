@@ -17,9 +17,9 @@
 input[type="button"],
 input[type="reset"],
 button {
-  background: #333;
+  background: #333333;
   border-radius: 3px;
-  color: #fff;
+  color: white;
   display: inline-block;
   font-weight: bold;
   height: 50px;
@@ -46,15 +46,15 @@ button {
   input[type="reset"]:hover,
   button:hover {
     background: #0d0d0d;
-    color: #fff;
+    color: white;
     outline: none;
     text-decoration: none; }
   .button.secondary, input.secondary[type="submit"],
   input.secondary[type="button"],
   input.secondary[type="reset"],
   button.secondary {
-    background: #999;
-    color: #fff; }
+    background: #999999;
+    color: white; }
     .button.secondary:active, input.secondary[type="submit"]:active,
     input.secondary[type="button"]:active,
     input.secondary[type="reset"]:active,
@@ -319,7 +319,7 @@ html {
  * @subsection  Content
  */
 body {
-  color: #666;
+  color: #666666;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   line-height: 30px; }
@@ -334,7 +334,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #333;
+  color: #333333;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 700;
   line-height: 1.325em;
@@ -381,11 +381,11 @@ h6 {
  * @subsection  Links
  */
 a {
-  color: #1d6fd1;
+  color: #1d6fd3;
   outline: 0;
   text-decoration: underline; }
   a:hover {
-    color: #144b8e;
+    color: #144b90;
     text-decoration: underline; }
   * more link
   a.read-more {
@@ -405,7 +405,7 @@ a {
   a.tag {
     background: #ccc;
     border-radius: 3px;
-    color: #666;
+    color: #666666;
     display: inline-block;
     font-size: 12px;
     line-height: 25px;
@@ -415,8 +415,8 @@ a {
     text-transform: lowercase; }
     * style for tag
     a.tag:hover {
-      background: #333;
-      color: #fff; }
+      background: #333333;
+      color: white; }
 
 /**
  * @section     Typography
@@ -460,32 +460,32 @@ ol {
  * @subsection  Tables
  */
 table {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-collapse: collapse;
   border-spacing: 0;
   margin: 0 0 30px;
   width: 100%; }
   table tr {
-    border-bottom: 1px solid #ccc;
-    border-right: 1px solid #ccc; }
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #cccccc; }
     table tr:nth-child(even) {
-      background: #eee; }
+      background: #ededed; }
     table tr td,
     table tr th {
-      border-right: 1px solid #ccc;
+      border-right: 1px solid #cccccc;
       padding: 5px 10px;
       text-align: left; }
     table tr th {
       font-weight: bold; }
   table thead tr {
-    background: #eee; }
+    background: #ededed; }
 
 /**
  * @section     Typography
  * @subsection  Quotes
  */
 blockquote {
-  color: #999;
+  color: #999999;
   display: inline-block;
   font-size: 16px;
   font-style: italic;
@@ -500,13 +500,13 @@ blockquote {
     margin-top: 10px; }
 
 cite {
-  color: #666;
+  color: #666666;
   display: block;
   font-style: normal;
   font-weight: bold;
   margin: 5px 0 10px; }
   cite a {
-    color: #666; }
+    color: #666666; }
 
 /**
  * @section     Typography
@@ -530,7 +530,7 @@ pre {
  * @subsection  Deleted and inserted text 
  */
 del {
-  color: #999;
+  color: #999999;
   text-decoration: line-through; }
 
 ins {
@@ -542,8 +542,8 @@ ins {
  */
 ::-moz-selection,
 ::selection {
-  background-color: #333;
-  color: #fff; }
+  background-color: #333333;
+  color: white; }
 
 /**
  * @section     Typography
@@ -551,7 +551,7 @@ ins {
  */
 hr {
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   display: block;
   height: 1px;
   margin: 0 0 30px;
@@ -587,10 +587,10 @@ input[type="url"],
 textarea,
 select {
   -webkit-appearance: none;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: white;
+  border: 1px solid #cccccc;
   border-radius: 3px;
-  color: #666;
+  color: #666666;
   display: block;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 13px;
@@ -813,7 +813,7 @@ select {
  * @subsection  Captions
  */
 .wp-caption {
-  background: #eee;
+  background: #ededed;
   margin-bottom: 30px;
   max-width: 100%;
   text-align: center; }
@@ -853,7 +853,7 @@ select {
     transition: opacity 400ms ease-in-out;
     background-color: rgba(0, 0, 0, 0.7);
     box-sizing: border-box;
-    color: #fff;
+    color: white;
     font-size: 12px;
     line-height: 1.3;
     margin: 0;
@@ -1023,7 +1023,7 @@ figure.alignnone img {
  * @subsection  Default
  */
 body {
-  background: #fff; }
+  background: white; }
 
 #main-navigation,
 #header,
@@ -1066,14 +1066,14 @@ main {
  * @subsection  Header
  */
 #header {
-  background: #333;
+  background: #333333;
   box-sizing: border-box;
   padding: 20px 0;
   text-align: center;
   z-index: 1; }
   @media (min-width: 641px) {
     #header {
-      background: #fff; } }
+      background: white; } }
   #header #logo {
     display: inline-block; }
     @media (min-width: 641px) {
@@ -1085,13 +1085,13 @@ main {
       font: bold 28px/35px "Helvetica Neue", sans-serif;
       margin: 0; }
       #header #logo #sitename a {
-        color: #fff;
+        color: white;
         text-decoration: none; }
         @media (min-width: 641px) {
           #header #logo #sitename a {
-            color: #333; } }
+            color: #333333; } }
     #header #logo #description {
-      color: #666;
+      color: #666666;
       font: normal 14px/25px "Helvetica Neue", sans-serif;
       line-height: 1.5;
       margin: 0; }
@@ -1135,7 +1135,7 @@ main {
  * @subsection  Main navigation
  */
 #main-navigation {
-  background-color: #333;
+  background-color: #333333;
   display: none;
   margin: 0;
   padding: 0 0 20px 0; }
@@ -1155,7 +1155,7 @@ main {
         position: relative;
         float: left; } }
     #main-navigation ul li a {
-      color: #fff;
+      color: white;
       font-weight: bold;
       line-height: 40px;
       text-decoration: none; }
@@ -1176,7 +1176,7 @@ main {
       margin: 0 0 0 20px; }
     @media (min-width: 641px) {
       #main-navigation ul li.menu-item-has-children > a::after, #main-navigation ul li.page_item_has_children > a::after {
-        border-color: #fff transparent transparent transparent;
+        border-color: white transparent transparent transparent;
         border-style: solid;
         border-width: 4px 4px 0 4px;
         content: '';
@@ -1221,7 +1221,7 @@ main {
   padding: 45px 0 90px 0; }
   @media (min-width: 641px) {
     main {
-      background: #fff; } }
+      background: white; } }
   main .wrapper {
     box-sizing: border-box;
     margin: 0 auto;
@@ -1233,15 +1233,15 @@ main {
       margin-bottom: 30px;
       text-align: center; }
     main .wrapper .meta {
-      color: #999;
+      color: #999999;
       font-size: 13px;
       font-weight: bold;
       margin: 0 0 30px 0;
       text-align: center; }
       main .wrapper .meta a {
-        color: #666; }
+        color: #666666; }
         main .wrapper .meta a:active, main .wrapper .meta a:focus, main .wrapper .meta a:hover {
-          color: #1d6fd1; }
+          color: #1d6fd3; }
     main .wrapper .tags span {
       display: block;
       float: left;
@@ -1266,11 +1266,11 @@ main {
  * @subsection  Footer
  */
 #footer {
-  background: #333;
-  color: #fff;
+  background: #333333;
+  color: white;
   margin-bottom: 0; }
   #footer a {
-    color: #fff; }
+    color: white; }
     #footer a:active, #footer a:focus, #footer a:hover {
       color: #ccc; }
   #footer #credits {
@@ -1301,7 +1301,7 @@ main {
       #footer #credits ul li {
         display: inline; }
         #footer #credits ul li:after {
-          color: #fff;
+          color: white;
           content: "|";
           padding: 0 5px 0 10px; }
         #footer #credits ul li:last-child:after {
@@ -1345,7 +1345,7 @@ main {
     .archive article h2 a,
     .search article h2 a,
     .blog article h2 a {
-      color: #333;
+      color: #333333;
       text-decoration: none; }
       .archive article h2 a:active, .archive article h2 a:focus, .archive article h2 a:hover,
       .search article h2 a:active,
@@ -1354,7 +1354,7 @@ main {
       .blog article h2 a:active,
       .blog article h2 a:focus,
       .blog article h2 a:hover {
-        color: #1d6fd1;
+        color: #1d6fd3;
         text-decoration: underline; }
   .archive article .featured-image,
   .search article .featured-image,
@@ -1364,7 +1364,7 @@ main {
   .archive article.sticky,
   .search article.sticky,
   .blog article.sticky {
-    background: #eee;
+    background: #ededed;
     box-sizing: border-box;
     padding: 30px;
     margin-bottom: 15px; }
@@ -1379,9 +1379,9 @@ main {
 .single main nav.pages {
   margin-bottom: 30px; }
   .single main nav.pages a {
-    background-color: #eee;
+    background-color: #ededed;
     border-radius: 3px;
-    color: #666;
+    color: #666666;
     display: inline-block;
     font-size: 13px;
     height: 40px;
@@ -1493,7 +1493,7 @@ p.tags {
         margin-bottom: 30px; }
     #comments ol .comment-body {
       box-sizing: border-box;
-      background-color: #eee;
+      background-color: #ededed;
       clear: both;
       float: left;
       position: relative;
@@ -1511,7 +1511,7 @@ p.tags {
           margin-right: 20px; }
         #comments ol .comment-body .comment-meta .comment-metadata {
           bottom: 30px;
-          color: #999;
+          color: #999999;
           font-size: 12px;
           position: absolute;
           left: 30px; }
@@ -1532,7 +1532,7 @@ p.tags {
         position: absolute;
         right: 30px; }
     #comments ol.bypostauthor .comment-body {
-      background-color: #e1e1e1; }
+      background-color: #e0e0e0; }
 
 /**
  * @section     Parts
@@ -1547,10 +1547,10 @@ p.tags {
   #pager .page-numbers,
   #pager .prev,
   #pager .next {
-    background-color: #eee;
-    border: 2px solid #eee;
+    background-color: #ededed;
+    border: 2px solid #ededed;
     border-radius: 3px;
-    color: #666;
+    color: #666666;
     display: inline-block;
     font-size: 13px;
     height: 36px;
@@ -1565,7 +1565,7 @@ p.tags {
   #pager .page-numbers {
     width: 38px; }
     #pager .page-numbers.current, #pager .page-numbers.dots {
-      background-color: #fff; }
+      background-color: white; }
   #pager .prev,
   #pager .next {
     padding: 0 15px;
@@ -1583,7 +1583,7 @@ p.tags {
       width: 265px; } }
   .search-form form input[type="text"] {
     box-sizing: border-box;
-    color: #666;
+    color: #666666;
     font-size: 16px;
     font-style: italic;
     margin: 0;
@@ -1599,13 +1599,13 @@ p.tags {
     .search-form form input[type="text"]::-webkit-input-placeholder {
       color: #999; }
     .search-form form input[type="text"]:focus:-moz-placeholder {
-      color: #666; }
+      color: #666666; }
     .search-form form input[type="text"]:focus::-moz-placeholder {
-      color: #666; }
+      color: #666666; }
     .search-form form input[type="text"]:focus:-ms-input-placeholder {
-      color: #666; }
+      color: #666666; }
     .search-form form input[type="text"]:focus::-webkit-input-placeholder {
-      color: #666; }
+      color: #666666; }
     @media (min-width: 641px) {
       .search-form form input[type="text"] {
         font-size: 13px; } }
@@ -1619,12 +1619,12 @@ p.tags {
     top: 1px;
     width: 40px; }
   .search-form form .glass {
-    border: 2px solid #999;
+    border: 2px solid #999999;
     height: 8px;
     top: -1px;
     width: 8px; }
     .search-form form .glass:after {
-      background: #999;
+      background: #999999;
       height: 2px;
       right: -5px;
       top: 9px;
@@ -1635,14 +1635,14 @@ p.tags {
  * @subsection  Icons
  */
 .glass {
-  border: 3px solid #fff;
+  border: 3px solid white;
   border-radius: 100%;
   display: block;
   height: 10px;
   position: relative;
   width: 10px; }
   .glass:after {
-    background: #fff;
+    background: white;
     content: '';
     height: 3px;
     position: absolute;
@@ -1660,7 +1660,7 @@ p.tags {
   position: relative;
   width: 24px; }
   .burger .line {
-    background: #fff;
+    background: white;
     height: 3px;
     position: absolute;
     -webkit-transition: -webkit-transform 0.2s ease-out;
