@@ -69,7 +69,7 @@ var welcomeMessage = function() {
   console.log('    || \\/______________\\/ ||     ');
   console.log('    ||                    ||     ');
   console.log('    ||                    ||     ');
-  console.log('    ||    ( )       ( )   ||     ');
+  console.log('    ||    ( )      ( )    ||     ');
   console.log('    ||        ____        ||     ');
   console.log('    ||        \\  /        ||     ');
   console.log('    ||         ||         ||     ');
