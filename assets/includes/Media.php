@@ -9,8 +9,8 @@ final class Media
 {
     public function __construct()
     {
-        add_action('after_switch_theme', array( $this, 'defaults' ));
-        add_filter('embed_oembed_html', array( $this, 'videoEmbed' ));
+        add_action('after_switch_theme', array($this, 'defaults'));
+        add_filter('embed_oembed_html', array($this, 'videoEmbed'));
     }
 
     /**
