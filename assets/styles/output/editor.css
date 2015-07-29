@@ -1,3 +1,30 @@
+/**
+ * @section Editor
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Editor
+ * @subsection  Import other SASS files
+ */
+/**
+ * @section Extends
+ *
+ * Extends are like mixins but without the variables. 
+ * Use them to build pre-defined styles
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Extends
+ * @subsection  Button
+ */
 .button, input[type="submit"],
 input[type="button"],
 input[type="reset"],
@@ -52,11 +79,27 @@ button {
     button.secondary:hover {
       background: #737373; }
 
+/**
+ * @section     Extends
+ * @subsection  Ellipsis
+ */
 .ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
 
+/**
+ * @section Normalize
+ * 
+ * Normalize.css makes browsers render all elements more consistently and in line with modern standards. 
+ * It precisely targets only the styles that need normalizing.
+ *
+ * @package     Normalize.css
+ * @version     3.0.2
+ * @author      Nicolas Gallagher & Jonathan Neal
+ * @license     MIT License
+ * @see         git.io/normalize
+ */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -65,6 +108,10 @@ html {
 body {
   margin: 0; }
 
+/**
+ * @section     Normalize
+ * @subsection  HTML5 display definitions
+ */
 article,
 aside,
 details,
@@ -95,6 +142,10 @@ audio:not([controls]) {
 template {
   display: none; }
 
+/**
+ * @section    Normalize
+ * @subsection Links
+ */
 a {
   background-color: transparent; }
 
@@ -102,6 +153,10 @@ a:active,
 a:hover {
   outline: 0; }
 
+/**
+ * @section    Normalize
+ * @subsection Text-level semantics
+ */
 abbr[title] {
   border-bottom: 1px dotted; }
 
@@ -136,12 +191,20 @@ sup {
 sub {
   bottom: -0.25em; }
 
+/**
+ * @section     Normalize
+ * @subsection  Embedded content
+ */
 img {
   border: 0; }
 
 svg:not(:root) {
   overflow: hidden; }
 
+/**
+ * @section     Normalize
+ * @subsection  Grouping content
+ */
 figure {
   margin: 1em 40px; }
 
@@ -160,6 +223,10 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
+/**
+ * @section     Normalize
+ * @subsection  Forms
+ */
 button,
 input,
 optgroup,
@@ -229,6 +296,10 @@ textarea {
 optgroup {
   font-weight: bold; }
 
+/**
+ * @section     Normalize
+ * @subsection  Tables
+ */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -237,16 +308,38 @@ td,
 th {
   padding: 0; }
 
+/**
+ * @section Typography
+ * 
+ * Defines the styling of text elements
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Typography
+ * @subsection  Render settings
+ */
 html {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none; }
 
+/**
+ * @section     Typography
+ * @subsection  Content
+ */
 body {
   color: #666;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   line-height: 30px; }
 
+/**
+ * @section     Typography
+ * @subsection  Headings
+ */
 h1,
 h2,
 h3,
@@ -295,6 +388,10 @@ h6 {
     h6 {
       font-size: 14px; } }
 
+/**
+ * @section     Typography 
+ * @subsection  Links
+ */
 a {
   color: #1d6fd1;
   outline: 0;
@@ -302,8 +399,10 @@ a {
   a:hover {
     color: #144b8e;
     text-decoration: underline; }
+  * more link
   a.read-more {
     white-space: nowrap; }
+  * add characters to link
   a.read-more:after, a.prev:before, a.next:after {
     display: inline-block;
     font-family: fontawesome;
@@ -314,6 +413,7 @@ a {
   a.read-more:after, a.next:after {
     content: '\f054';
     padding-left: 4px; }
+  * style for tag
   a.tag {
     background: #ccc;
     border-radius: 3px;
@@ -325,13 +425,22 @@ a {
     padding: 0 10px;
     text-decoration: none;
     text-transform: lowercase; }
+    * style for tag
     a.tag:hover {
       background: #333;
       color: #fff; }
 
+/**
+ * @section     Typography
+ * @subsection  Paragraphs
+ */
 p {
   margin: 0 0 30px; }
 
+/**
+ * @section     Typography
+ * @subsection  Text styles
+ */
 strong,
 b {
   font-weight: bold; }
@@ -340,6 +449,10 @@ em,
 i {
   font-style: italic; }
 
+/**
+ * @section     Typography
+ * @subsection  Lists
+ */
 ul {
   list-style-position: outside;
   margin: 0 0 30px 20px; }
@@ -354,6 +467,10 @@ ol {
     list-style-type: lower-alpha;
     margin: 0 0 0 20px; }
 
+/**
+ * @section     Typography
+ * @subsection  Tables
+ */
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -375,6 +492,10 @@ table {
   table thead tr {
     background: #eee; }
 
+/**
+ * @section     Typography
+ * @subsection  Quotes
+ */
 blockquote {
   color: #999;
   display: inline-block;
@@ -399,6 +520,10 @@ cite {
   cite a {
     color: #666; }
 
+/**
+ * @section     Typography
+ * @subsection  Code snippets
+ */
 code,
 pre {
   background: #ffefb4;
@@ -412,6 +537,10 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap; }
 
+/**
+ * @section     Typography
+ * @subsection  Deleted and inserted text 
+ */
 del {
   color: #999;
   text-decoration: line-through; }
@@ -419,11 +548,19 @@ del {
 ins {
   text-decoration: none; }
 
+/**
+ * @section     Typography
+ * @subsection  Selection 
+ */
 ::-moz-selection,
 ::selection {
   background-color: #333;
   color: #fff; }
 
+/**
+ * @section     Typography
+ * @subsection  Misc
+ */
 hr {
   border: 0;
   border-top: 1px solid #ccc;
@@ -432,6 +569,20 @@ hr {
   margin: 0 0 30px;
   padding: 0; }
 
+/**
+ * @section forms
+ * 
+ * Defines the styling of forms
+ * 
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Forms
+ * @subsection  Default form styles
+ */
 input[type="datetime-local"],
 input[type="datetime"],
 input[type="password"],
@@ -616,15 +767,47 @@ select {
   background-position: 95% center;
   background-repeat: no-repeat; }
 
+/**
+ * @section     Forms
+ * @subsection  Fix for admin-bar search form 
+ */
 .adminbar-input {
   min-width: 0; }
 
+/**
+ * @section Helpers
+ *
+ * Defines helpers
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Helpers
+ * @subsection  Classes
+ */
 .clear {
   clear: both; }
 
 .hide {
   display: none; }
 
+/**
+ * @section Images
+ * 
+ * Defines the default styling of images
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Images
+ * @subsection  Alignment
+ */
 .alignleft {
   float: left;
   margin: 10px 20px 10px; }
@@ -637,6 +820,10 @@ select {
   display: block;
   margin: 0 auto; }
 
+/**
+ * @section     Images
+ * @subsection  Captions
+ */
 .wp-caption {
   background: #eee;
   margin-bottom: 30px;
@@ -651,6 +838,10 @@ select {
     line-height: 20px;
     margin: 0 10px 10px 10px; }
 
+/**
+ * @section     Images
+ * @subsection  Gallery
+ */
 .gallery {
   clear: both;
   float: left;
@@ -779,10 +970,18 @@ select {
 .gallery-columns-9 .gallery-caption {
   display: none; }
 
+/**
+ * @section     Images
+ * @subsection  WordPress smileys
+ */
 .wp-smiley {
   margin: 0 !important;
   max-height: 1em; }
 
+/**
+ * @section     Images
+ * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
+ */
 figure.aligncenter img,
 figure.alignright img,
 figure.alignleft img,
@@ -799,6 +998,10 @@ figure.alignnone img {
   max-width: 100%;
   height: auto; }
 
+/**
+ * @section     Images
+ * @subsection  Video-container for better responsive videos
+ */
 .video-container {
   height: 0;
   margin-bottom: 30px;
@@ -815,6 +1018,10 @@ figure.alignnone img {
     top: 0;
     width: 100%; }
 
+/**
+ * @section     Editor
+ * @subsection  the style of the WYSIWYG itself
+ */
 #tinymce {
   padding: 20px !important; }
 

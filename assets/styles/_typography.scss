@@ -1,24 +1,28 @@
-//
-// @section Typography
-// 
-// Defines the styling of text elements
-//
-// @package   	WordPress
-// @subpackage 	TrendPress
-// @author    	Trendwerk
-// @license   	GPL v2
-//
+/**
+ * @section Typography
+ * 
+ * Defines the styling of text elements
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
 
-// @section    Typography
-// @subsection Render settings
+/**
+ * @section     Typography
+ * @subsection  Render settings
+ */
 
 html {
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: none;
 }
 
-// @section    Typography
-// @subsection Content
+/**
+ * @section     Typography
+ * @subsection  Content
+ */
 
 body {
 	color: $text-color; 
@@ -27,8 +31,10 @@ body {
 	line-height: $line-height;
 }
 
-// @section    Typography
-// @subsection Headings
+/**
+ * @section     Typography
+ * @subsection  Headings
+ */
 
 h1,
 h2,
@@ -91,9 +97,11 @@ h6 {
 	}
 }
 
-// @section    Typography
-// @subsection Links
-
+/**
+ * @section     Typography 
+ * @subsection  Links
+ */
+ 
 a {
 	color: $link-color;
 	outline: 0;
@@ -104,13 +112,13 @@ a {
 		text-decoration: underline;
 	}
 
-	// more link
+	* more link
 
 	&.read-more {
 		white-space: nowrap;
 	}
 
-	// add characters to link
+	* add characters to link
 
 	&.read-more:after,
 	&.prev:before,
@@ -131,7 +139,7 @@ a {
 		padding-left: 4px;
 	}
 
-	// style for tag
+	* style for tag
 
 	&.tag {
 		background: #ccc;
@@ -152,15 +160,19 @@ a {
 	}
 }
 
-// @section    Typography
-// @subsection Paragraphs
+/**
+ * @section     Typography
+ * @subsection  Paragraphs
+ */
 
 p {
 	margin: 0 0 $line-height;
 }
 
-// @section    Typography
-// @subsection Text styles
+/**
+ * @section     Typography
+ * @subsection  Text styles
+ */
 
 strong,
 b {
@@ -172,8 +184,10 @@ i {
 	font-style: italic;
 }
 
-// @section    Typography
-// @subsection Lists
+/**
+ * @section     Typography
+ * @subsection  Lists
+ */
 
 ul { 
 	list-style-position: outside;
@@ -195,8 +209,10 @@ ol {
 	}
 }
 
-// @section    Typography
-// @subsection Tables
+/**
+ * @section     Typography
+ * @subsection  Tables
+ */
 
 table { 
 	border: 1px solid $border-color;
@@ -230,8 +246,10 @@ table {
 	}
 }
 
-// @section    Typography
-// @subsection Quotes
+/**
+ * @section     Typography
+ * @subsection  Quotes
+ */
 
 blockquote {
 	color: $text-light;
@@ -265,8 +283,10 @@ cite {
 	}
 }
 
-// @section    Typography
-// @subsection Code snippets
+/**
+ * @section     Typography
+ * @subsection  Code snippets
+ */
 
 code,
 pre {
@@ -283,8 +303,10 @@ pre {
 	white-space: -o-pre-wrap;
 }
 
-// @section    Typography
-// @subsection Deleted and inserted text 
+/**
+ * @section     Typography
+ * @subsection  Deleted and inserted text 
+ */
 
 del {
 	color: $text-light;
@@ -295,8 +317,10 @@ ins {
 	text-decoration: none;
 }
 
-// @section    Typography
-// @subsection Selection 
+/**
+ * @section     Typography
+ * @subsection  Selection 
+ */
 
 ::-moz-selection,
 ::selection {
@@ -304,8 +328,10 @@ ins {
 	color: $white;
 }
 
-// @section    Typography
-// @subsection Misc
+/**
+ * @section     Typography
+ * @subsection  Misc
+ */
 
 hr {
 	border: 0;

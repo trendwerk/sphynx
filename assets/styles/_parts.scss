@@ -1,17 +1,19 @@
-//
-// @section Parts
-//
-// Defines the styling for recurring template parts
-//
-//
-// @package   	WordPress
-// @subpackage 	TrendPress
-// @author    	Trendwerk
-// @license   	GPL v2
-//
+/**
+ * 
+ * @section Parts
+ *
+ * Defines the styling for recurring template parts
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
 
-// @section    Parts
-// @subsection Respond
+/**
+ * @section     Parts
+ * @subsection  Respond
+ */
 
 #respond {
 	clear: both;
@@ -67,8 +69,10 @@ p.tags {
 	}
 }
 
-// @section    Parts
-// @subsection Comments
+/**
+ * @section     Parts
+ * @subsection  Comments
+ */
  
 #comments {
 	clear: both;
@@ -180,8 +184,10 @@ p.tags {
 	}
 }
 
-// @section    Parts
-// @subsection Pager
+/**
+ * @section     Parts
+ * @subsection  Pager
+ */
  
 #pager {
 	clear: both;
@@ -232,8 +238,10 @@ p.tags {
 	}
 }
 
-// @section    Parts
-// @subsection Search 
+/**
+ * @section     Parts
+ * @subsection  Search
+ */
 
 .search-form {
 	form {
@@ -288,8 +296,10 @@ p.tags {
 	}
 }
 
-// @section    Parts
-// @subsection Icons
+/**
+ * @section     Parts
+ * @subsection  Icons
+ */
 
 .glass {
 	border: 3px solid $white;

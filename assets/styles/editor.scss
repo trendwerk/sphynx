@@ -1,16 +1,18 @@
-//
-// @section Editor
-//
-// @package   	WordPress
-// @subpackage 	TrendPress
-// @author    	Trendwerk
-// @license   	GPL v2   
-// 
+/**
+ * @section Editor
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */ 
 
 @charset 'UTF-8';
 
-// @section Import
-// Import other SASS files
+/**
+ * @section     Editor
+ * @subsection  Import other SASS files
+ */
 
 @import 'variables';
 @import 'mixins';
@@ -21,8 +23,10 @@
 @import 'helpers';
 @import 'images'; 
 
-// @section WYSIWYG style
-// Sets the style of the WYSIWYG itself
+/**
+ * @section     Editor
+ * @subsection  the style of the WYSIWYG itself
+ */
  
 #tinymce {
 	padding: 20px !important;

@@ -6,13 +6,13 @@
 /// variables, but for whole classes. Mixins can also behave like functions, 
 /// and take arguments.
 ///
-/// @package   	WordPress
-/// @subpackage 	TrendPress
-/// @author    	Trendwerk
-/// @license   	GPL v2
+/// @package     WordPress
+/// @subpackage  TrendPress
+/// @author      Trendwerk
+/// @license     GPL v2
 /// 
 
-/// @section 	Mixins
+/// @section     Mixins
 /// @subsection  Animate 
 
 @mixin animate-this( $what: all, $time: 0.5s, $ease: ease-in-out ) {
@@ -20,8 +20,8 @@
 	transition: $what $time $ease;
 }
 
-/// @section    Mixins
-/// @subsection Collumns
+/// @section     Mixins
+/// @subsection  Collumns
 
 @mixin columns( $number, $gap ) {
 	-moz-column-count: $number;
@@ -54,8 +54,8 @@
     }
 }
 
-/// @section    Mixins
-/// @subsection Placeholder
+/// @section     Mixins
+/// @subsection  Placeholder
 
 @mixin placeholder($out,$on) {
 
@@ -92,8 +92,8 @@
 	}
 }
 
-/// @section    Mixins
-/// @subsection Sprites
+/// @section     Mixins
+/// @subsection  Sprites
 
 @mixin sprite($top,$left) {
 	background-image: url('../../../assets/images/sprite-x1.png');

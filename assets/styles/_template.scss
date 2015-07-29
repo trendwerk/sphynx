@@ -1,17 +1,17 @@
-//
-// @section Templates
-//
-// Defines the template specific styling
-//
-// @package   	WordPress
-// @subpackage 	TrendPress
-// @author    	Trendwerk
-// @license   	GPL v2
-//
-
-// @section    Templates
-// @subsection index.php
-// @subsection search.php
+/**
+ * @section Templates
+ * 
+ * Defines the template specific styling
+ * 
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ * 
+ * @section     Templates
+ * @subsection  index.php
+ * @subsection  search.php
+ */
 
 .archive,
 .search,
@@ -62,8 +62,10 @@
 	}
 }
 
-// @section    Templates
-// @subsection single.php
+/**
+ * @section     Templates
+ * @subsection  single.php
+ */
 
 .single main {
 
@@ -96,8 +98,10 @@
 	}
 }
 
-// @section    Templates
-// @subsection search.php
+/**
+ * @section     Templates
+ * @subsection  search.php
+ */
 
 .search {
 	article h2 {

@@ -1,16 +1,18 @@
-//
-// @section Images
-// 
-// Defines the default styling of images
-//
-// @package     WordPress
-// @subpackage  TrendPress
-// @author      Trendwerk
-// @license     GPL v2
-//
+/**
+ * @section Images
+ * 
+ * Defines the default styling of images
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
 
-// @section     Images
-// @subsection  Alignment
+/**
+ * @section     Images
+ * @subsection  Alignment
+ */
 
 .alignleft {
 	float: left;
@@ -27,8 +29,10 @@
 	margin: 0 auto;
 }
 
-// @section     Images
-// @subsection  Captions
+/**
+ * @section     Images
+ * @subsection  Captions
+ */
 
 .wp-caption {
 	background: $light-background;
@@ -49,8 +53,10 @@
 	}
 }
 
-// @section     Images
-// @subsection  Gallery
+/**
+ * @section     Images
+ * @subsection  Gallery
+ */
 
 .gallery {
 	clear: both;
@@ -210,16 +216,20 @@
 	display: none;
 }
 
-// @section     Images
-// @subsection  WordPress smileys
+/**
+ * @section     Images
+ * @subsection  WordPress smileys
+ */
 
 .wp-smiley {
 	margin: 0 !important;
 	max-height: 1em;
 }
 
-// @section     Images
-// @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
+/**
+ * @section     Images
+ * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
+ */
 
 figure.aligncenter,
 figure.alignright,
@@ -241,8 +251,10 @@ figure.alignnone {
 	height: auto;
 }
 
-// @section     Images
-// @subsection  Video-container for better responsive videos
+/**
+ * @section     Images
+ * @subsection  Video-container for better responsive videos
+ */
 
 .video-container {
 	height: 0;

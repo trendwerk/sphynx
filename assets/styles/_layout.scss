@@ -1,19 +1,21 @@
-//
-// @section    Layout
-//
-// Defines the default layout for a regular page, archive and post (e.g. position, 
-// size, margin, etc...)
-//
-//
-// @package   	WordPress
-// @subpackage 	TrendPress
-// @author    	Trendwerk
-// @license   	GPL v2
-//
+/**
+ * @section    Layout
+ *
+ * Defines the default layout for a regular page, archive and post (e.g. position, 
+ * size, margin, etc)
+ *
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
 
-// @section    Layout
-// @subsection Default
-
+/**
+ * @section     Layout
+ * @subsection  Default
+ */
+	
 body {
 	background: $body-background;
 }
@@ -48,8 +50,10 @@ main {
 	}
 }
 
-// @section    Layout
-// @subsection Header
+/**
+ * @section     Layout
+ * @subsection  Header
+ */
 
 #header {
 	background: $primary-color;
@@ -143,8 +147,10 @@ main {
 	}
 }
 
-// @section    Layout
-// @subsection Main navigation
+/**
+ * @section     Layout
+ * @subsection  Main navigation
+ */
 
 #main-navigation {
 	background-color: $primary-color;
@@ -196,8 +202,6 @@ main {
 				}
 			}
 
-			// Current page
-
 			&.current_page_item > a,
 			&.current_page_parent > a,
 			&.current_page_ancestor > a {
@@ -207,8 +211,6 @@ main {
 			ul { 
 				margin: 0 0 0 20px;
 			}
-
-			// Drop-down menu
 
 			@media(min-width: 641px) {
 
@@ -255,8 +257,6 @@ main {
 								background: #111;
 							}
 						}
-
-						// Level 2
 						
 						ul { 
 							display: none;
@@ -274,8 +274,10 @@ main {
 	}
 }
 
-// @section    Layout
-// @subsection Main
+/**
+ * @section     Layout
+ * @subsection  Main
+ */
 
 main {
 	margin-top: 0;
@@ -346,8 +348,10 @@ main {
 	}
 }
 
-// @section    Layout
-// @subsection Footer
+/**
+ * @section     Layout
+ * @subsection  Footer
+ */
 
 #footer {
 	background: $primary-color;

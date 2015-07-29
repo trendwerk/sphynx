@@ -1,15 +1,15 @@
-//
-// @section Normalize
-// 
-// Normalize.css makes browsers render all elements more consistently and in line with modern standards. 
-// It precisely targets only the styles that need normalizing.
-//
-// @package     Normalize.css
-// @version     3.0.2
-// @author      Nicolas Gallagher & Jonathan Neal
-// @license     MIT License
-// @see         git.io/normalize
-//
+/**
+ * @section Normalize
+ * 
+ * Normalize.css makes browsers render all elements more consistently and in line with modern standards. 
+ * It precisely targets only the styles that need normalizing.
+ *
+ * @package     Normalize.css
+ * @version     3.0.2
+ * @author      Nicolas Gallagher & Jonathan Neal
+ * @license     MIT License
+ * @see         git.io/normalize
+ */
 
 html {
   font-family: sans-serif;
@@ -21,8 +21,10 @@ body {
   margin: 0;
 }
 
-// @section    Normalize
-// @subsection HTML5 display definitions
+/**
+ * @section     Normalize
+ * @subsection  HTML5 display definitions
+ */
 
 article,
 aside,
@@ -58,8 +60,10 @@ template {
   display: none;
 }
 
-// @section    Normalize
-// @subsection Links
+/**
+ * @section    Normalize
+ * @subsection Links
+ */
 
 a {
   background-color: transparent;
@@ -70,8 +74,10 @@ a:hover {
   outline: 0;
 }
 
-// @section    Normalize
-// @subsection Text-level semantics
+/**
+ * @section    Normalize
+ * @subsection Text-level semantics
+ */
 
 abbr[title] {
   border-bottom: 1px dotted;
@@ -116,8 +122,10 @@ sub {
   bottom: -0.25em;
 }
 
-// @section    Normalize
-// @subsection Embedded content
+/**
+ * @section     Normalize
+ * @subsection  Embedded content
+ */
 
 img {
   border: 0;
@@ -127,8 +135,10 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-// @section    Normalize
-// @subsection Grouping content
+/**
+ * @section     Normalize
+ * @subsection  Grouping content
+ */
 
 figure {
   margin: 1em 40px;
@@ -152,8 +162,10 @@ samp {
   font-size: 1em;
 }
 
-// @section    Normalize
-// @subsection Forms
+/**
+ * @section     Normalize
+ * @subsection  Forms
+ */
 
 button,
 input,
@@ -239,8 +251,10 @@ optgroup {
   font-weight: bold;
 }
 
-// @section    Normalize
-// @subsection Tables
+/**
+ * @section     Normalize
+ * @subsection  Tables
+ */
 
 table {
   border-collapse: collapse;
