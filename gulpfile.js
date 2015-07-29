@@ -34,17 +34,7 @@ gulp.task('coffee', function() {
 });
 
 /**
- * Lint Sass
- */
-gulp.task('scss-lint', function() {
-  gulp.src('assets/styles/**/*.scss')
-  .pipe(scsslint({
-    'config': 'lint.yml',
-  }))
-});
-
-/**
- * Lint CoffeeScript
+ * LINT CoffeeScript
  */
 gulp.task('coffeelint', function () {
   gulp.src('assets/scripts/**/*.coffee')
@@ -53,10 +43,10 @@ gulp.task('coffeelint', function () {
 });
 
 /**
- * lint PHP
+ * LINT PHP
  */
 gulp.task('phpcs', function() {
-  gulp.src(['**/*.php', '!node_modules/**/*.*'])
+  gulp.src(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'])
   .pipe(phpcs({
     bin: '~/.composer/vendor/bin/phpcs',
     standard: 'PSR2',
@@ -96,12 +86,12 @@ var welcomeMessage = function() {
 };
 
 /**
- * Watch things
+ * Watch
  */
 gulp.task('default',function() {
   welcomeMessage();
-  gulp.watch('assets/styles/**/*.scss',['sass', 'scss-lint']);
+  gulp.watch('assets/styles/**/*.scss',['sass']);
   gulp.watch('assets/scripts/**/*.coffee',['coffee', 'coffeelint']);
-  gulp.watch('**/*.php',['phpcs']);
+  gulp.watch(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'],['phpcs']);
   livereload.listen();
 });
