@@ -6,8 +6,8 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var coffee = require('gulp-coffee');
 var gutil = require('gulp-util');
-var scsslint = require('gulp-scss-lint');
 var coffeelint = require('gulp-coffeelint');
+var phplint = require('phplint').lint;
 var phpcs = require('gulp-phpcs');
 var livereload = require('gulp-livereload');
 
@@ -44,6 +44,18 @@ gulp.task('coffeelint', function () {
 
 /**
  * LINT PHP
+ */
+gulp.task('phplint', function (cb) {
+  phplint(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'], {limit: 10}, function (err, stdout, stderr) {
+    if (err) {
+      console.log(err);
+    }
+    cb()
+  })
+});
+
+/**
+ * PHP codesniffer
  */
 gulp.task('phpcs', function() {
   gulp.src(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'])
@@ -92,6 +104,6 @@ gulp.task('default',function() {
   welcomeMessage();
   gulp.watch('assets/styles/**/*.scss',['sass']);
   gulp.watch('assets/scripts/**/*.coffee',['coffee', 'coffeelint']);
-  gulp.watch(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'],['phpcs']);
+  gulp.watch(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'],['phplint', 'phpcs']);
   livereload.listen();
 });
