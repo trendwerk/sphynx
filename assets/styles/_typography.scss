@@ -106,13 +106,13 @@ a {
 
 	// more link
 
-	&.more-link {
+	&.read-more {
 		white-space: nowrap;
 	}
 
 	// add characters to link
 
-	&.more-link:after,
+	&.read-more:after,
 	&.prev:before,
 	&.next:after {
 		display: inline-block;
@@ -125,7 +125,7 @@ a {
 		padding-right: 4px;
 	}
 
-	&.more-link:after,
+	&.read-more:after,
 	&.next:after {
 		content: '\f054';
 		padding-left: 4px;

@@ -302,16 +302,16 @@ a {
   a:hover {
     color: #144b8e;
     text-decoration: underline; }
-  a.more-link {
+  a.read-more {
     white-space: nowrap; }
-  a.more-link:after, a.prev:before, a.next:after {
+  a.read-more:after, a.prev:before, a.next:after {
     display: inline-block;
     font-family: fontawesome;
     font-size: 9px; }
   a.prev:before {
     content: '\f053';
     padding-right: 4px; }
-  a.more-link:after, a.next:after {
+  a.read-more:after, a.next:after {
     content: '\f054';
     padding-left: 4px; }
   a.tag {
