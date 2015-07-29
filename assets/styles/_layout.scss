@@ -285,13 +285,13 @@ main {
 		background: $body-background;
 	}
 	
-	#content {
+	.wrapper {
 		box-sizing: border-box;
 		margin: 0 auto;
 		width: 100%;
 
 		@media(min-width: 821px) {
-			width: 740px;
+			width: 780px;
 		}
 
 		h1 {
