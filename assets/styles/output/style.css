@@ -1399,7 +1399,7 @@ main {
 .search article h2 {
   margin-bottom: 30px; }
 
-.search-no-results main #content {
+.search-no-results main .wrapper {
   margin-bottom: 15px; }
 
 /**
