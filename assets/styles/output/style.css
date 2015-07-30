@@ -1601,7 +1601,7 @@ p.tags {
         font-size: 13px; } }
   .search-form form button[type="submit"] {
     background-color: transparent;
-    height: 39px;
+    height: 40px;
     margin: 0;
     padding: 0 0 0 15px;
     position: absolute;
