@@ -154,7 +154,7 @@ a {
 		text-transform: lowercase;
 
 		&:hover {
-			background: $heading-color;
+			background-color: $heading-color;
 			color: $white;
 		}
 	}
@@ -226,7 +226,7 @@ table {
 		border-right: 1px solid $border-color;
 
 		&:nth-child(even) {
-			background: $light-background;
+			background-color: $light-background;
 		}
 
 		td,
@@ -242,7 +242,7 @@ table {
 	}
 
 	thead tr {
-		background: $light-background;
+		background-color: $light-background;
 	}
 }
 

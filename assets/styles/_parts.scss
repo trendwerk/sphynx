@@ -217,7 +217,7 @@ p.tags {
 		&:active,
 		&:focus,
 		&:hover {
-			background: darken($light-background, 10%);
+			background-color: darken($light-background, 10%);
 			border-color: darken($light-background, 10%);
 		}
 	}
@@ -269,7 +269,7 @@ p.tags {
 		}
 
 		button[type="submit"] {
-			background: none;
+			background-color: none;
 			height: 39px;
 			margin: 0;
 			padding: 0 0 0 15px;
@@ -286,7 +286,7 @@ p.tags {
 			width: 8px;
 
 			&:after {
-				background: $text-light;
+				background-color: $text-light;
 				height: 2px;
 				right: -5px;
 				top: 9px;
@@ -310,7 +310,7 @@ p.tags {
 	width: 10px;
 
 	&:after {
-		background: $white;
+		background-color: $white;
 		content: '';
 		height: 3px;
 		position: absolute;
@@ -331,7 +331,7 @@ p.tags {
 	width: 24px;
 
 	.line {
-		background: $white;
+		background-color: $white;
 		height: 3px;
 		position: absolute;
 		-webkit-transition: -webkit-transform 0.2s ease-out;

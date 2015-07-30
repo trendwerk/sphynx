@@ -17,7 +17,7 @@
 input[type="button"],
 input[type="reset"],
 button {
-  background: #333333;
+  background-color: #333333;
   border-radius: 3px;
   color: white;
   display: inline-block;
@@ -45,7 +45,7 @@ button {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   button:hover {
-    background: #0d0d0d;
+    background-color: #0d0d0d;
     color: white;
     outline: none;
     text-decoration: none; }
@@ -53,7 +53,7 @@ button {
   input.secondary[type="button"],
   input.secondary[type="reset"],
   button.secondary {
-    background: #999999;
+    background-color: #999999;
     color: white; }
     .button.secondary:active, input.secondary[type="submit"]:active,
     input.secondary[type="button"]:active,
@@ -65,7 +65,7 @@ button {
     input.secondary[type="button"]:hover,
     input.secondary[type="reset"]:hover,
     button.secondary:hover {
-      background: #737373; }
+      background-color: #737373; }
 
 /**
  * @section     Extends
@@ -414,7 +414,7 @@ a {
     text-decoration: none;
     text-transform: lowercase; }
     a.tag:hover {
-      background: #333333;
+      background-color: #333333;
       color: white; }
 
 /**
@@ -468,7 +468,7 @@ table {
     border-bottom: 1px solid #cccccc;
     border-right: 1px solid #cccccc; }
     table tr:nth-child(even) {
-      background: #ededed; }
+      background-color: #ededed; }
     table tr td,
     table tr th {
       border-right: 1px solid #cccccc;
@@ -477,7 +477,7 @@ table {
     table tr th {
       font-weight: bold; }
   table thead tr {
-    background: #ededed; }
+    background-color: #ededed; }
 
 /**
  * @section     Typography
@@ -811,7 +811,7 @@ select {
  * @subsection  Captions
  */
 .wp-caption {
-  background: #ededed;
+  background-color: #ededed;
   margin-bottom: 30px;
   max-width: 100%;
   text-align: center; }
@@ -1013,7 +1013,7 @@ figure.alignnone img {
  * @subsection  Default
  */
 body {
-  background: white; }
+  background-color: white; }
 
 #main-navigation,
 #header,
@@ -1056,14 +1056,14 @@ main {
  * @subsection  Header
  */
 #header {
-  background: #333333;
+  background-color: #333333;
   box-sizing: border-box;
   padding: 20px 0;
   text-align: center;
   z-index: 1; }
   @media (min-width: 641px) {
     #header {
-      background: white; } }
+      background-color: white; } }
   #header #logo {
     display: inline-block; }
     @media (min-width: 641px) {
@@ -1158,7 +1158,7 @@ main {
         text-decoration: underline; }
     @media (min-width: 641px) {
       #main-navigation ul li:hover a {
-        background: black;
+        background-color: black;
         text-decoration: none; } }
     #main-navigation ul li.current_page_item > a, #main-navigation ul li.current_page_parent > a, #main-navigation ul li.current_page_ancestor > a {
       font-weight: bold; }
@@ -1177,7 +1177,7 @@ main {
       #main-navigation ul li ul {
         display: none; }
       #main-navigation ul li:hover ul {
-        background: black;
+        background-color: black;
         display: block;
         margin: 0 0 10px 0;
         position: absolute;
@@ -1209,7 +1209,7 @@ main {
   padding: 45px 0 90px 0; }
   @media (min-width: 641px) {
     main {
-      background: white; } }
+      background-color: white; } }
   main .wrapper {
     box-sizing: border-box;
     margin: 0 auto;
@@ -1254,7 +1254,7 @@ main {
  * @subsection  Footer
  */
 #footer {
-  background: #333333;
+  background-color: #333333;
   color: white;
   margin-bottom: 0; }
   #footer a {
@@ -1352,7 +1352,7 @@ main {
   .archive article.sticky,
   .search article.sticky,
   .blog article.sticky {
-    background: #ededed;
+    background-color: #ededed;
     box-sizing: border-box;
     padding: 30px;
     margin-bottom: 15px; }
@@ -1378,7 +1378,7 @@ main {
     padding: 0 20px;
     text-decoration: none; }
     .single main nav.pages a:active, .single main nav.pages a:focus, .single main nav.pages a:hover {
-      background: #d4d4d4; }
+      background-color: #d4d4d4; }
 
 /**
  * @section     Templates
@@ -1548,7 +1548,7 @@ p.tags {
   #pager a {
     text-decoration: none; }
     #pager a:active, #pager a:focus, #pager a:hover {
-      background: #d4d4d4;
+      background-color: #d4d4d4;
       border-color: #d4d4d4; }
   #pager .page-numbers {
     width: 38px; }
@@ -1598,7 +1598,7 @@ p.tags {
       .search-form form input[type="text"] {
         font-size: 13px; } }
   .search-form form button[type="submit"] {
-    background: none;
+    background-color: none;
     height: 39px;
     margin: 0;
     padding: 0 0 0 15px;
@@ -1612,7 +1612,7 @@ p.tags {
     top: -1px;
     width: 8px; }
     .search-form form .glass:after {
-      background: #999999;
+      background-color: #999999;
       height: 2px;
       right: -5px;
       top: 9px;
@@ -1630,7 +1630,7 @@ p.tags {
   position: relative;
   width: 10px; }
   .glass:after {
-    background: white;
+    background-color: white;
     content: '';
     height: 3px;
     position: absolute;
@@ -1648,7 +1648,7 @@ p.tags {
   position: relative;
   width: 24px; }
   .burger .line {
-    background: white;
+    background-color: white;
     height: 3px;
     position: absolute;
     -webkit-transition: -webkit-transform 0.2s ease-out;

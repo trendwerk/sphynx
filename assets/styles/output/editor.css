@@ -29,7 +29,7 @@
 input[type="button"],
 input[type="reset"],
 button {
-  background: #333333;
+  background-color: #333333;
   border-radius: 3px;
   color: white;
   display: inline-block;
@@ -57,7 +57,7 @@ button {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   button:hover {
-    background: #0d0d0d;
+    background-color: #0d0d0d;
     color: white;
     outline: none;
     text-decoration: none; }
@@ -65,7 +65,7 @@ button {
   input.secondary[type="button"],
   input.secondary[type="reset"],
   button.secondary {
-    background: #999999;
+    background-color: #999999;
     color: white; }
     .button.secondary:active, input.secondary[type="submit"]:active,
     input.secondary[type="button"]:active,
@@ -77,7 +77,7 @@ button {
     input.secondary[type="button"]:hover,
     input.secondary[type="reset"]:hover,
     button.secondary:hover {
-      background: #737373; }
+      background-color: #737373; }
 
 /**
  * @section     Extends
@@ -426,7 +426,7 @@ a {
     text-decoration: none;
     text-transform: lowercase; }
     a.tag:hover {
-      background: #333333;
+      background-color: #333333;
       color: white; }
 
 /**
@@ -480,7 +480,7 @@ table {
     border-bottom: 1px solid #cccccc;
     border-right: 1px solid #cccccc; }
     table tr:nth-child(even) {
-      background: #ededed; }
+      background-color: #ededed; }
     table tr td,
     table tr th {
       border-right: 1px solid #cccccc;
@@ -489,7 +489,7 @@ table {
     table tr th {
       font-weight: bold; }
   table thead tr {
-    background: #ededed; }
+    background-color: #ededed; }
 
 /**
  * @section     Typography
@@ -823,7 +823,7 @@ select {
  * @subsection  Captions
  */
 .wp-caption {
-  background: #ededed;
+  background-color: #ededed;
   margin-bottom: 30px;
   max-width: 100%;
   text-align: center; }

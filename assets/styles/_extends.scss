@@ -16,7 +16,7 @@
  */
 
 .button {
-	background: $primary-color;
+	background-color: $primary-color;
 	border-radius: 3px;
 	color: $white;		
 	display: inline-block;
@@ -37,20 +37,20 @@
 	&:active,
 	&:focus,
 	&:hover { 
-		background: darken($primary-color, 15%);
+		background-color: darken($primary-color, 15%);
 		color: $white;
 		outline: none;
 		text-decoration: none;
 	}
 	
 	&.secondary {
-		background: $secondary-color;
+		background-color: $secondary-color;
 		color: $white;
 
 		&:active,
 		&:focus,
 		&:hover {
-			background: darken($secondary-color, 15%);
+			background-color: darken($secondary-color, 15%);
 		}
 	}
 }

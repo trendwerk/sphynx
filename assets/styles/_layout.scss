@@ -17,7 +17,7 @@
  */
 	
 body {
-	background: $body-background;
+	background-color: $body-background;
 }
 
 #main-navigation,
@@ -56,15 +56,14 @@ main {
  */
 
 #header {
-	background: $primary-color;
+	background-color: $primary-color;
 	box-sizing: border-box;
-	
 	padding: 20px 0;
 	text-align: center;
 	z-index: 1;
 
 	@media(min-width: 641px) {
-		background: $body-background;
+		background-color: $body-background;
 	}
 
 	#logo {
@@ -197,7 +196,7 @@ main {
 
 			&:hover a {
 				@media(min-width: 641px) {
-					background: black;
+					background-color: black;
 					text-decoration: none;
 				}
 			}
@@ -231,7 +230,7 @@ main {
 				}
 
 				&:hover ul {
-					background: black;
+					background-color: black;
 					display: block;
 					margin: 0 0 10px 0;
 					position: absolute;
@@ -280,7 +279,7 @@ main {
 	padding: ($line-height * 1.5) 0 ($line-height * 3) 0;
 
 	@media(min-width: 641px) {
-		background: $body-background;
+		background-color: $body-background;
 	}
 	
 	.wrapper {
@@ -350,7 +349,7 @@ main {
  */
 
 #footer {
-	background: $primary-color;
+	background-color: $primary-color;
 	color: $white;
 	margin-bottom: 0;
 	

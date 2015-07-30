@@ -32,6 +32,11 @@
 	column-gap: $gap;
 }
 
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+
 /// @section    Mixins
 /// @subsection Gradient
 
@@ -107,4 +112,18 @@
 		background-position: $top x 2 $left x 2;
 		background-size: 500px 500px;
 	}
+}
+
+/// @section     Mixins
+/// @subsection  Tint
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// @section     Mixins
+/// @subsection  Shade
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
 }

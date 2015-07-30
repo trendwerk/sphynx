@@ -54,7 +54,7 @@
 		}
 
 		&.sticky { 
-			background: $light-background;
+			background-color: $light-background;
 			box-sizing: border-box;
 			padding: 30px;
 			margin-bottom: $line-height / 2;
@@ -92,7 +92,7 @@
 			&:active,
 			&:focus,
 			&:hover {
-				background: darken($light-background, 10%);
+				background-color: darken($light-background, 10%);
 			}
 		}
 	}
