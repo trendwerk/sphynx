@@ -248,7 +248,7 @@ p.tags {
 		position: relative;
 		width: 100%;
 
-		@media(min-width: 641px) {
+		@include respond-to('medium') {
 			width: 265px;
 		}
 
@@ -263,7 +263,7 @@ p.tags {
 			right: 0;
 			width: 100%;
 
-			@media(min-width: 641px) {
+			@include respond-to('medium') {
 				font-size: 13px;
 			}
 		}

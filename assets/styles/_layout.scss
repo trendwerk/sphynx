@@ -34,17 +34,17 @@ main {
 		padding: 0 20px;
 		width: 100%;
 
-		@media(min-width: 641px) {
+		@include respond-to('medium') {
 			padding: 0 40px;
 		}
 
-		@media(min-width: 981px) {
+		@include respond-to('large') {
 			margin: 0 auto;
 			padding: 0 20px;
 			width: 980px;
 		}
 
-		@media(min-width: 1161px) {
+		@include respond-to('huge') {
 			width: 1160px;
 		}
 	}
@@ -62,14 +62,14 @@ main {
 	text-align: center;
 	z-index: 1;
 
-	@media(min-width: 641px) {
+	@include respond-to('medium') {
 		background-color: $body-background;
 	}
 
 	#logo {
 		display: inline-block;
 
-		@media(min-width: 641px) {
+		@include respond-to('medium') {
 			display: block;
 			float: left;
 			text-align: left;
@@ -83,7 +83,7 @@ main {
 				color: $white;
 				text-decoration: none;
 
-				@media(min-width: 641px) {
+				@include respond-to('medium') {
 					color: $heading-color;
 				}
 			}
@@ -91,12 +91,13 @@ main {
 
 		#description {
 			color: $text-color;
+			display: none;
 			font: normal 14px/25px $text-font;
 			line-height: 1.5;
 			margin: 0;
 
-			@media(max-width: 640px) {
-				display: none;
+			@include respond-to('medium') {
+				display: block;
 			}
 		}
 	}
@@ -107,7 +108,7 @@ main {
 		padding: 10px;
 		float: left;
 
-		@media(min-width: 641px) {
+		@include respond-to('medium') {
 			display: none;
 		}
 	}
@@ -129,18 +130,20 @@ main {
 		margin-top: 20px;
 		width: 100%;
 
-		@media(min-width: 401px) {
+		@include respond-to('small') {
 			margin-top: 10px;
 		}
 
-		@media(min-width: 641px) {
+		@include respond-to('medium') {
 			display: block;
 			width: auto;
 		}
 
 		input {
-			@media(max-width: 640px) {
-				border: none; 
+			border: 0;
+
+			@include respond-to('medium') {
+				border: 1px solid $border-color; 
 			}
 		}
 	}
@@ -157,7 +160,7 @@ main {
 	margin: 0;
 	padding: 0 0 20px 0;
 
-	@media(min-width: 641px) {
+	@include respond-to('medium') {
 		display: block;
 		padding: 0;
 	}
@@ -167,12 +170,12 @@ main {
 		margin: 0;
 		padding: 0;
 
-		@media(min-width: 641px) {
+		@include respond-to('medium') {
 			text-transform: uppercase;
 		}
 
 		li {
-			@media(min-width: 641px) {
+			@include respond-to('medium') {
 				position: relative;
 				float: left;
 			}
@@ -183,7 +186,7 @@ main {
 				line-height: 40px;
 				text-decoration: none;
 
-				@media(min-width: 641px) {
+				@include respond-to('medium') {
 					display: block;
 					float: left;
 					padding: 5px 15px;
@@ -195,7 +198,7 @@ main {
 			}
 
 			&:hover a {
-				@media(min-width: 641px) {
+				@include respond-to('medium') {
 					background-color: black;
 					text-decoration: none;
 				}
@@ -211,7 +214,7 @@ main {
 				margin: 0 0 0 20px;
 			}
 
-			@media(min-width: 641px) {
+			@include respond-to('medium') {
 
 				&.menu-item-has-children > a::after,
 				&.page_item_has_children > a::after {
@@ -278,7 +281,7 @@ main {
 	margin-top: 0;
 	padding: ($line-height * 1.5) 0 ($line-height * 3) 0;
 
-	@media(min-width: 641px) {
+	@include respond-to('medium') {
 		background-color: $body-background;
 	}
 	
@@ -324,13 +327,13 @@ main {
 				margin-bottom: 10px;
 				width: 100%;
 
-				@media(min-width: 441px) {
+				@include respond-to('small') {
 					display: inline-block;
 					padding-right: 15px;
 					width: auto;
 				}
 
-				@media(min-width: 641px) {
+				@include respond-to('medium') {
 					padding-right: 0;
 					width: 150px;
 				}
@@ -376,7 +379,7 @@ main {
 			text-align: center;
 			width: 100%;
 
-			@media(min-width: 641px) {
+			@include respond-to('medium') {
 				float: left;
 				width: auto;
 			}
@@ -386,7 +389,7 @@ main {
 			text-align: center;
 			width: 100%;
 
-			@media(min-width: 641px) {
+			@include respond-to('medium') {
 				float: right;
 				width: auto;
 			}

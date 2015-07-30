@@ -1082,12 +1082,13 @@ main {
             color: #333333; } }
     #header #logo #description {
       color: #666666;
+      display: none;
       font: normal 14px/25px "Helvetica Neue", sans-serif;
       line-height: 1.5;
       margin: 0; }
-      @media (max-width: 640px) {
+      @media (min-width: 641px) {
         #header #logo #description {
-          display: none; } }
+          display: block; } }
   #header #mobile-navigation,
   #header #mobile-search {
     cursor: pointer;
@@ -1109,16 +1110,18 @@ main {
     float: right;
     margin-top: 20px;
     width: 100%; }
-    @media (min-width: 401px) {
+    @media (min-width: 421px) {
       #header #search {
         margin-top: 10px; } }
     @media (min-width: 641px) {
       #header #search {
         display: block;
         width: auto; } }
-    @media (max-width: 640px) {
-      #header #search input {
-        border: none; } }
+    #header #search input {
+      border: 0; }
+      @media (min-width: 641px) {
+        #header #search input {
+          border: 1px solid #cccccc; } }
 
 /**
  * @section     Layout
@@ -1237,7 +1240,7 @@ main {
       line-height: inherit;
       margin-bottom: 10px;
       width: 100%; }
-      @media (min-width: 441px) {
+      @media (min-width: 421px) {
         main .wrapper .tags span {
           display: inline-block;
           padding-right: 15px;

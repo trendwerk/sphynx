@@ -33,3 +33,10 @@ $text-light:        hsl(0, 0%, 60%);
 $link-color:        hsl(213, 76%, 47%);
 
 $line-height:       30px;
+
+$breakpoints: (
+	'small':       (min-width: 421px),
+	'medium':      (min-width: 641px),
+	'large':       (min-width: 981px),
+	'huge':        (min-width: 1161px),
+);
