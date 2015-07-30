@@ -92,7 +92,7 @@
 			&:active,
 			&:focus,
 			&:hover {
-				background-color: darken($light-background, 10%);
+				background-color: shade($light-background, 10%);
 			}
 		}
 	}

@@ -45,7 +45,7 @@ button {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   button:hover {
-    background-color: #0d0d0d;
+    background-color: #2b2b2b;
     color: white;
     outline: none;
     text-decoration: none; }
@@ -65,7 +65,7 @@ button {
     input.secondary[type="button"]:hover,
     input.secondary[type="reset"]:hover,
     button.secondary:hover {
-      background-color: #737373; }
+      background-color: #828282; }
 
 /**
  * @section     Extends
@@ -388,7 +388,7 @@ a {
   /* add characters to link */
   /* style for tag */ }
   a:hover {
-    color: #144b90;
+    color: #185eb3;
     text-decoration: underline; }
   a.read-more {
     white-space: nowrap; }
@@ -738,7 +738,7 @@ select {
   input[type="url"]:focus,
   textarea:focus,
   select:focus {
-    border: 1px solid #999999; }
+    border: 1px solid #a3a3a3; }
 
 input[type="submit"],
 input[type="button"],
@@ -1378,7 +1378,7 @@ main {
     padding: 0 20px;
     text-decoration: none; }
     .single main nav.pages a:active, .single main nav.pages a:focus, .single main nav.pages a:hover {
-      background-color: #d4d4d4; }
+      background-color: #d5d5d5; }
 
 /**
  * @section     Templates
@@ -1520,7 +1520,7 @@ p.tags {
         position: absolute;
         right: 30px; }
     #comments ol.bypostauthor .comment-body {
-      background-color: #e0e0e0; }
+      background-color: #e1e1e1; }
 
 /**
  * @section     Parts
@@ -1548,8 +1548,8 @@ p.tags {
   #pager a {
     text-decoration: none; }
     #pager a:active, #pager a:focus, #pager a:hover {
-      background-color: #d4d4d4;
-      border-color: #d4d4d4; }
+      background-color: #d5d5d5;
+      border-color: #d5d5d5; }
   #pager .page-numbers {
     width: 38px; }
     #pager .page-numbers.current, #pager .page-numbers.dots {

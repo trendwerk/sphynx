@@ -179,7 +179,7 @@ p.tags {
 		}
 
 		&.bypostauthor .comment-body {
-			background-color: darken($light-background, 5%);
+			background-color: shade($light-background, 5%);
 		}
 	}
 }
@@ -217,8 +217,8 @@ p.tags {
 		&:active,
 		&:focus,
 		&:hover {
-			background-color: darken($light-background, 10%);
-			border-color: darken($light-background, 10%);
+			background-color: shade($light-background, 10%);
+			border-color: shade($light-background, 10%);
 		}
 	}
 

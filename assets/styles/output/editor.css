@@ -57,7 +57,7 @@ button {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   button:hover {
-    background-color: #0d0d0d;
+    background-color: #2b2b2b;
     color: white;
     outline: none;
     text-decoration: none; }
@@ -77,7 +77,7 @@ button {
     input.secondary[type="button"]:hover,
     input.secondary[type="reset"]:hover,
     button.secondary:hover {
-      background-color: #737373; }
+      background-color: #828282; }
 
 /**
  * @section     Extends
@@ -400,7 +400,7 @@ a {
   /* add characters to link */
   /* style for tag */ }
   a:hover {
-    color: #144b90;
+    color: #185eb3;
     text-decoration: underline; }
   a.read-more {
     white-space: nowrap; }
@@ -750,7 +750,7 @@ select {
   input[type="url"]:focus,
   textarea:focus,
   select:focus {
-    border: 1px solid #999999; }
+    border: 1px solid #a3a3a3; }
 
 input[type="submit"],
 input[type="button"],

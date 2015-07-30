@@ -37,7 +37,7 @@
 	&:active,
 	&:focus,
 	&:hover { 
-		background-color: darken($primary-color, 15%);
+		background-color: shade($primary-color, 15%);
 		color: $white;
 		outline: none;
 		text-decoration: none;
@@ -50,7 +50,7 @@
 		&:active,
 		&:focus,
 		&:hover {
-			background-color: darken($secondary-color, 15%);
+			background-color: shade($secondary-color, 15%);
 		}
 	}
 }

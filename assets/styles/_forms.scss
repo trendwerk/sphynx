@@ -43,7 +43,7 @@ select {
 	padding: 12px;
 
 	&:focus {
-		border: 1px solid darken($border-color, 20%);
+		border: 1px solid shade($border-color, 20%);
 	}
 }
 
