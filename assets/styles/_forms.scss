@@ -29,7 +29,7 @@ input[type="tel"],
 input[type="url"],
 textarea, 
 select {
-	@include placeholder(#666, #ccc);
+	@include placeholder($text-color, $text-light);
 	-webkit-appearance: none;
 	background-color: $white;
 	border: 1px solid $border-color;

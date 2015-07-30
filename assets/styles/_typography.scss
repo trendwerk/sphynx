@@ -112,13 +112,13 @@ a {
 		text-decoration: underline;
 	}
 
-	* more link
+	/* more link */
 
 	&.read-more {
 		white-space: nowrap;
 	}
 
-	* add characters to link
+	/* add characters to link */
 
 	&.read-more:after,
 	&.prev:before,
@@ -139,10 +139,10 @@ a {
 		padding-left: 4px;
 	}
 
-	* style for tag
+	/* style for tag */
 
 	&.tag {
-		background: #ccc;
+		background-color: $light-background;
 		border-radius: 3px;
 		color: $text-color;
 		display: inline-block;
@@ -290,8 +290,8 @@ cite {
 
 code,
 pre {
-	background: #ffefb4;
-	color: #333;
+	background-color: $marker;
+	color: $text-color;
 	font-size: 13px;
 }
 	

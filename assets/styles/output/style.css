@@ -383,14 +383,15 @@ h6 {
 a {
   color: #1d6fd3;
   outline: 0;
-  text-decoration: underline; }
+  text-decoration: underline;
+  /* more link */
+  /* add characters to link */
+  /* style for tag */ }
   a:hover {
     color: #144b90;
     text-decoration: underline; }
-  * more link
   a.read-more {
     white-space: nowrap; }
-  * add characters to link
   a.read-more:after, a.prev:before, a.next:after {
     display: inline-block;
     font-family: fontawesome;
@@ -401,9 +402,8 @@ a {
   a.read-more:after, a.next:after {
     content: '\f054';
     padding-left: 4px; }
-  * style for tag
   a.tag {
-    background: #ccc;
+    background-color: #ededed;
     border-radius: 3px;
     color: #666666;
     display: inline-block;
@@ -413,7 +413,6 @@ a {
     padding: 0 10px;
     text-decoration: none;
     text-transform: lowercase; }
-    * style for tag
     a.tag:hover {
       background: #333333;
       color: white; }
@@ -514,8 +513,8 @@ cite {
  */
 code,
 pre {
-  background: #ffefb4;
-  color: #333;
+  background-color: #ffeeb3;
+  color: #666666;
   font-size: 13px; }
 
 pre {
@@ -612,7 +611,7 @@ select {
   input[type="url"]:-moz-placeholder,
   textarea:-moz-placeholder,
   select:-moz-placeholder {
-    color: #666; }
+    color: #666666; }
   input[type="datetime-local"]::-moz-placeholder,
   input[type="datetime"]::-moz-placeholder,
   input[type="password"]::-moz-placeholder,
@@ -628,7 +627,7 @@ select {
   input[type="url"]::-moz-placeholder,
   textarea::-moz-placeholder,
   select::-moz-placeholder {
-    color: #666; }
+    color: #666666; }
   input[type="datetime-local"]:-ms-input-placeholder,
   input[type="datetime"]:-ms-input-placeholder,
   input[type="password"]:-ms-input-placeholder,
@@ -644,7 +643,7 @@ select {
   input[type="url"]:-ms-input-placeholder,
   textarea:-ms-input-placeholder,
   select:-ms-input-placeholder {
-    color: #666; }
+    color: #666666; }
   input[type="datetime-local"]::-webkit-input-placeholder,
   input[type="datetime"]::-webkit-input-placeholder,
   input[type="password"]::-webkit-input-placeholder,
@@ -660,7 +659,7 @@ select {
   input[type="url"]::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder,
   select::-webkit-input-placeholder {
-    color: #666; }
+    color: #666666; }
   input[type="datetime-local"]:focus:-moz-placeholder,
   input[type="datetime"]:focus:-moz-placeholder,
   input[type="password"]:focus:-moz-placeholder,
@@ -676,7 +675,7 @@ select {
   input[type="url"]:focus:-moz-placeholder,
   textarea:focus:-moz-placeholder,
   select:focus:-moz-placeholder {
-    color: #ccc; }
+    color: #999999; }
   input[type="datetime-local"]:focus::-moz-placeholder,
   input[type="datetime"]:focus::-moz-placeholder,
   input[type="password"]:focus::-moz-placeholder,
@@ -692,7 +691,7 @@ select {
   input[type="url"]:focus::-moz-placeholder,
   textarea:focus::-moz-placeholder,
   select:focus::-moz-placeholder {
-    color: #ccc; }
+    color: #999999; }
   input[type="datetime-local"]:focus:-ms-input-placeholder,
   input[type="datetime"]:focus:-ms-input-placeholder,
   input[type="password"]:focus:-ms-input-placeholder,
@@ -708,7 +707,7 @@ select {
   input[type="url"]:focus:-ms-input-placeholder,
   textarea:focus:-ms-input-placeholder,
   select:focus:-ms-input-placeholder {
-    color: #ccc; }
+    color: #999999; }
   input[type="datetime-local"]:focus::-webkit-input-placeholder,
   input[type="datetime"]:focus::-webkit-input-placeholder,
   input[type="password"]:focus::-webkit-input-placeholder,
@@ -724,7 +723,7 @@ select {
   input[type="url"]:focus::-webkit-input-placeholder,
   textarea:focus::-webkit-input-placeholder,
   select:focus::-webkit-input-placeholder {
-    color: #ccc; }
+    color: #999999; }
   input[type="datetime-local"]:focus,
   input[type="datetime"]:focus,
   input[type="password"]:focus,
@@ -851,7 +850,7 @@ select {
   .gallery .gallery-caption {
     -webkit-transition: opacity 400ms ease-in-out;
     transition: opacity 400ms ease-in-out;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #ededed;
     box-sizing: border-box;
     color: white;
     font-size: 12px;
@@ -866,7 +865,7 @@ select {
     text-align: left;
     width: 100%; }
     .gallery .gallery-caption:before {
-      box-shadow: 0 -10px 15px #000 inset;
+      box-shadow: 0 -10px 15px black inset;
       content: '';
       height: 100%;
       left: 0;
@@ -957,14 +956,6 @@ select {
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
   display: none; }
-
-/**
- * @section     Images
- * @subsection  WordPress smileys
- */
-.wp-smiley {
-  margin: 0 !important;
-  max-height: 1em; }
 
 /**
  * @section     Images
@@ -1168,7 +1159,7 @@ main {
         text-decoration: underline; }
     @media (min-width: 641px) {
       #main-navigation ul li:hover a {
-        background: #222;
+        background: black;
         text-decoration: none; } }
     #main-navigation ul li.current_page_item > a, #main-navigation ul li.current_page_parent > a, #main-navigation ul li.current_page_ancestor > a {
       font-weight: bold; }
@@ -1187,7 +1178,7 @@ main {
       #main-navigation ul li ul {
         display: none; }
       #main-navigation ul li:hover ul {
-        background: #222;
+        background: black;
         display: block;
         margin: 0 0 10px 0;
         position: absolute;
@@ -1203,8 +1194,6 @@ main {
             box-sizing: border-box;
             padding: 5px 20px;
             width: 100%; }
-            #main-navigation ul li:hover ul li a:hover {
-              background: #111; }
           #main-navigation ul li:hover ul li ul {
             display: none; }
           #main-navigation ul li:hover ul li:hover ul {
@@ -1272,7 +1261,7 @@ main {
   #footer a {
     color: white; }
     #footer a:active, #footer a:focus, #footer a:hover {
-      color: #ccc; }
+      color: #999999; }
   #footer #credits {
     float: left;
     margin: 30px 0;
@@ -1506,7 +1495,7 @@ p.tags {
         #comments ol .comment-body .comment-meta .comment-author {
           float: left; }
         #comments ol .comment-body .comment-meta img {
-          border-radius: 999px;
+          border-radius: 100%;
           float: left;
           margin-right: 20px; }
         #comments ol .comment-body .comment-meta .comment-metadata {
@@ -1591,13 +1580,13 @@ p.tags {
     right: 0;
     width: 100%; }
     .search-form form input[type="text"]:-moz-placeholder {
-      color: #999; }
+      color: #999999; }
     .search-form form input[type="text"]::-moz-placeholder {
-      color: #999; }
+      color: #999999; }
     .search-form form input[type="text"]:-ms-input-placeholder {
-      color: #999; }
+      color: #999999; }
     .search-form form input[type="text"]::-webkit-input-placeholder {
-      color: #999; }
+      color: #999999; }
     .search-form form input[type="text"]:focus:-moz-placeholder {
       color: #666666; }
     .search-form form input[type="text"]:focus::-moz-placeholder {

@@ -139,7 +139,7 @@ p.tags {
 				}
 
 				img {
-					border-radius: 999px;
+					border-radius: 100%;
 					float: left;
 					margin-right: 20px;
 				}
@@ -253,7 +253,7 @@ p.tags {
 		}
 
 		input[type="text"] {
-			@include placeholder(#999, $text-color);
+			@include placeholder($text-light, $text-color);
 			box-sizing: border-box;
 			color: $text-color;
 			font-size: 16px;

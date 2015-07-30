@@ -197,7 +197,7 @@ main {
 
 			&:hover a {
 				@media(min-width: 641px) {
-					background: #222;
+					background: black;
 					text-decoration: none;
 				}
 			}
@@ -231,7 +231,7 @@ main {
 				}
 
 				&:hover ul {
-					background: #222;
+					background: black;
 					display: block;
 					margin: 0 0 10px 0;
 					position: absolute;
@@ -252,10 +252,6 @@ main {
 							box-sizing: border-box;
 							padding: 5px 20px;
 							width: 100%;
-
-							&:hover {
-								background: #111;
-							}
 						}
 						
 						ul { 
@@ -364,7 +360,7 @@ main {
 		&:active,
 		&:focus,
 		&:hover {
-			color: #ccc;
+			color: $text-light;
 		}
 	}
 	
