@@ -1344,9 +1344,9 @@ main {
       .blog article h2 a:hover {
         color: #1d6fd3;
         text-decoration: underline; }
-  .archive article .featured-image,
-  .search article .featured-image,
-  .blog article .featured-image {
+  .archive article .featured,
+  .search article .featured,
+  .blog article .featured {
     float: right;
     margin: 0 0 30px 20px; }
   .archive article.sticky,
@@ -1361,7 +1361,7 @@ main {
  * @section     Templates
  * @subsection  single.php
  */
-.single main .featured-image {
+.single main .featured {
   float: right;
   margin: 5px 0 10px 20px; }
 .single main nav.pages {
@@ -1598,7 +1598,7 @@ p.tags {
       .search-form form input[type="text"] {
         font-size: 13px; } }
   .search-form form button[type="submit"] {
-    background-color: none;
+    background-color: transparent;
     height: 39px;
     margin: 0;
     padding: 0 0 0 15px;
