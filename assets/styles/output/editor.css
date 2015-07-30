@@ -504,8 +504,7 @@ blockquote {
   text-align: center;
   width: 100%; }
   blockquote p {
-    display: inline;
-    margin: 0; }
+    display: inline; }
   blockquote cite {
     display: block;
     margin-top: 10px; }
