@@ -40,7 +40,6 @@ main {
 
 		@include respond-to('large') {
 			margin: 0 auto;
-			padding: 0 20px;
 			width: 980px;
 		}
 
