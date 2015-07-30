@@ -32,11 +32,6 @@
 	column-gap: $gap;
 }
 
-@function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
-}
-
-
 /// @section    Mixins
 /// @subsection Gradient
 
