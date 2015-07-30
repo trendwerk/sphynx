@@ -105,9 +105,9 @@
 		@media #{$query} {
 			@content;
 		}
+
 	} @else {
-	@error 'No value found for `#{$breakpoint}`. '
-		+ 'Please make sure it is defined in `$breakpoints` map.';
+		@error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in the `$breakpoints` map.';
 	}
 }
 
@@ -115,7 +115,7 @@
 /// @subsection  Shade
 
 @function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
+	@return mix(black, $color, $percentage);
 }
 
 /// @section     Mixins
@@ -139,5 +139,5 @@
 /// @subsection  Tint
 
 @function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
+	@return mix(white, $color, $percentage);
 }
