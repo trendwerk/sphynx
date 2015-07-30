@@ -79,7 +79,7 @@ main {
 			margin: 0;
 
 			a {
-				color: $white;
+				color: white;
 				text-decoration: none;
 
 				@include respond-to('medium') {
@@ -180,7 +180,7 @@ main {
 			}
 
 			a {
-				color: $white;
+				color: white;
 				font-weight: bold;
 				line-height: 40px;
 				text-decoration: none;
@@ -217,7 +217,7 @@ main {
 
 				&.menu-item-has-children > a::after,
 				&.page_item_has_children > a::after {
-					border-color: $white transparent transparent transparent;
+					border-color: white transparent transparent transparent;
 					border-style: solid;
 					border-width: 4px 4px 0 4px;
 					content: '';
@@ -352,11 +352,11 @@ main {
 
 #footer {
 	background-color: $primary-color;
-	color: $white;
+	color: white;
 	margin-bottom: 0;
 	
 	a { 
-		color: $white;
+		color: white;
 
 		&:active,
 		&:focus,
@@ -406,7 +406,7 @@ main {
 				display: inline;
 				
 				&:after {
-					color: $white;
+					color: white;
 					content: "|";
 					padding: 0 5px 0 10px;
 				}

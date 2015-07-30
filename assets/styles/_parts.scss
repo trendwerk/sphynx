@@ -227,7 +227,7 @@ p.tags {
 
 		&.current,
 		&.dots {
-			background-color: $white;
+			background-color: white;
 		}
 	}
 
@@ -302,7 +302,7 @@ p.tags {
  */
 
 .glass {
-	border: 3px solid $white;
+	border: 3px solid white;
 	border-radius: 100%;
 	display: block;
 	height: 10px;
@@ -310,7 +310,7 @@ p.tags {
 	width: 10px;
 
 	&:after {
-		background-color: $white;
+		background-color: white;
 		content: '';
 		height: 3px;
 		position: absolute;
@@ -331,7 +331,7 @@ p.tags {
 	width: 24px;
 
 	.line {
-		background-color: $white;
+		background-color: white;
 		height: 3px;
 		position: absolute;
 		-webkit-transition: -webkit-transform 0.2s ease-out;

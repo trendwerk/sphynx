@@ -155,7 +155,7 @@ a {
 
 		&:hover {
 			background-color: $heading-color;
-			color: $white;
+			color: white;
 		}
 	}
 }
@@ -324,7 +324,7 @@ ins {
 ::-moz-selection,
 ::selection {
 	background-color: $primary-color;
-	color: $white;
+	color: white;
 }
 
 /**
