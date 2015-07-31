@@ -15,38 +15,38 @@
  * @section     Layout
  * @subsection  Default
  */
-	
+  
 body {
-	background-color: $body-background;
+  background-color: $body-background;
 }
 
 #main-navigation,
 #header,
 #footer,
 main {
-	clear: both;
-	float: left;
-	margin: 0;
-	width: 100%;
+  clear: both;
+  float: left;
+  margin: 0;
+  width: 100%;
 
-	.wrapper {
-		box-sizing: border-box;
-		padding: 0 20px;
-		width: 100%;
+  .wrapper {
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 100%;
 
-		@include respond-to('medium') {
-			padding: 0 40px;
-		}
+    @include respond-to('medium') {
+      padding: 0 40px;
+    }
 
-		@include respond-to('large') {
-			margin: 0 auto;
-			width: 980px;
-		}
+    @include respond-to('large') {
+      margin: 0 auto;
+      width: 980px;
+    }
 
-		@include respond-to('huge') {
-			width: 1160px;
-		}
-	}
+    @include respond-to('huge') {
+      width: 1160px;
+    }
+  }
 }
 
 /**
@@ -55,97 +55,98 @@ main {
  */
 
 #header {
-	background-color: $primary-color;
-	box-sizing: border-box;
-	padding: 20px 0;
-	text-align: center;
-	z-index: 1;
+  background-color: $primary-color;
+  box-sizing: border-box;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1;
 
-	@include respond-to('medium') {
-		background-color: $body-background;
-	}
+  @include respond-to('large') {
+    background-color: $body-background;
+  }
 
-	#logo {
-		display: inline-block;
+  a {
+    color: white;
+    text-decoration: none;
 
-		@include respond-to('medium') {
-			display: block;
-			float: left;
-			text-align: left;
-		}
+    @include respond-to('large') {
+      color: $heading-color;
+    }
+  }
 
-		#sitename {
-			font: bold 28px/35px $heading-font;
-			margin: 0;
+  #logo {
+    display: inline-block;
 
-			a {
-				color: white;
-				text-decoration: none;
+    @include respond-to('large') {
+      display: block;
+      float: left;
+      text-align: left;
+    }
 
-				@include respond-to('medium') {
-					color: $heading-color;
-				}
-			}
-		}
+    #sitename {
+      font-size: 28px;
+      font-family: $heading-font;
+      font-weight: 700;
+      margin: 0;
+    }
 
-		#description {
-			color: $text-color;
-			display: none;
-			font: normal 14px/25px $text-font;
-			line-height: 1.5;
-			margin: 0;
+    #description {
+      color: $text-color;
+      display: none;
+      font-size: 14px;
+      margin: 0;
 
-			@include respond-to('medium') {
-				display: block;
-			}
-		}
-	}
+      @include respond-to('large') {
+        display: block;
+      }
+    }
+  }
 
-	#mobile-navigation,
-	#mobile-search {
-		cursor: pointer;
-		padding: 10px;
-		float: left;
+  #mobile-navigation,
+  #mobile-search {
+    cursor: pointer;
+    padding: 10px;
+    float: left;
 
-		@include respond-to('medium') {
-			display: none;
-		}
-	}
+    @include respond-to('large') {
+      display: none;
+    }
+  }
 
-	#mobile-navigation {
-		float: right;
-		margin-right: -10px;
-	}
+  #mobile-navigation {
+    float: right;
+    margin-right: -10px;
+  }
 
-	#mobile-search {
-		height: 19px;
-		margin-left: -10px;
-		width: 20px;
-	}
+  #mobile-search {
+    height: 19px;
+    margin-left: -10px;
+    width: 20px;
+  }
 
-	#search {
-		display: none;
-		float: right;
-		margin-top: 20px;
-		width: 100%;
+  #search {
+    display: none;
+    float: right;
+    margin-top: 20px;
+    width: 100%;
 
-		@include respond-to('small') {
-			margin-top: 10px;
-		}
+    @include respond-to('small') {
+      margin-top: 10px;
+    }
 
-		@include respond-to('medium') {
-			display: block;
-			width: auto;
-		}
+    @include respond-to('large') {
+      display: block;
+      width: auto;
+    }
 
-		input {
-			border: 0;
+    input {
+      border: 0;
 
-			@include respond-to('medium') {
-				border: 1px solid $border-color; 
-			}
-		}
-	}
+      @include respond-to('large') {
+        border: 1px solid $border-color; 
+      }
+    }
+  }
 }
 
 /**
@@ -154,121 +155,121 @@ main {
  */
 
 #main-navigation {
-	background-color: $primary-color;
-	display: none;
-	margin: 0;
-	padding: 0 0 20px 0;
+  background-color: $primary-color;
+  display: none;
+  margin: 0;
+  padding: 0 0 20px;
 
-	@include respond-to('medium') {
-		display: block;
-		padding: 0;
-	}
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
-	ul { 
-		list-style: none;
-		margin: 0;
-		padding: 0;
+  li {
+    font-weight: 700;
+    position: relative;
+  }
 
-		@include respond-to('medium') {
-			text-transform: uppercase;
-		}
+  li li {
+    font-weight: 400;
+  }
 
-		li {
-			@include respond-to('medium') {
-				position: relative;
-				float: left;
-			}
+  ul ul {
+    padding: 5px 10px;
+  }
 
-			a {
-				color: white;
-				font-weight: bold;
-				line-height: 40px;
-				text-decoration: none;
+  a {
+    color: white;
+    text-decoration: none;
 
-				@include respond-to('medium') {
-					display: block;
-					float: left;
-					padding: 5px 15px;
-				}
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  /* Desktop navigation */
+  
+  @include respond-to('large') {
+    display: block;
+    padding-bottom: 0;
 
-				&:hover {
-					text-decoration: underline;
-				}
-			}
+    /* Top level */
 
-			&:hover a {
-				@include respond-to('medium') {
-					background-color: black;
-					text-decoration: none;
-				}
-			}
+    li {
+      float: left;
+    }
 
-			&.current_page_item > a,
-			&.current_page_parent > a,
-			&.current_page_ancestor > a {
-			 	font-weight: bold;
-			}
+    li:hover {
+      background-color: black;
 
-			ul { 
-				margin: 0 0 0 20px;
-			}
+      /* Display drop-down on hover */
 
-			@include respond-to('medium') {
+      .children {
+        display: block;
+      }
+    }
 
-				&.menu-item-has-children > a::after,
-				&.page_item_has_children > a::after {
-					border-color: white transparent transparent transparent;
-					border-style: solid;
-					border-width: 4px 4px 0 4px;
-					content: '';
-					display: inline-block;
-					height: 0;
-					margin: 0 0 3px 5px;
-					width: 0;
-				}
+    a {
+      display: block;
+      padding: 10px 15px;
 
-				ul { 
-					display: none; 
-				}
+      &:hover {
+        text-decoration: none;
+      }
+    }
 
-				&:hover ul {
-					background-color: black;
-					display: block;
-					margin: 0 0 10px 0;
-					position: absolute;
-					text-transform: none;
-					top: 50px;
-					width: 260px;
-					z-index: 1;
+    /* Add arrow list items with children */
 
-					li {
-						width: 100%;
+    .menu-item-has-children > a::after,
+    .page_item_has_children > a::after {
+      border-color: white transparent transparent;
+      border-style: solid;
+      border-width: 4px 4px 0;
+      content: '';
+      display: inline-block;
+      height: 0;
+      margin: 0 0 3px 5px;
+      width: 0;
+    }
 
-						&.menu-item-has-children > a::after,
-						&.page_item_has_children > a::after {
-							display: none;
-						}
+    /* Currently active items */
+    
+    .current_page_ancestor > a,
+    .current_page_parent > a,
+    .current_page_item > a {
+      text-decoration: underline;
+    }
 
-						 a { 
-							box-sizing: border-box;
-							padding: 5px 20px;
-							width: 100%;
-						}
-						
-						ul { 
-							display: none;
-						}
+    /* Drop-down */
 
-						&:hover ul {
-							display: block;
-							left: 260px;
-							top: 0;
-						}
-					}
-				}
-			}
-		}
-	}
+    .children {
+      background-color: black;
+      display: none;
+      padding: 10px 0;
+      position: absolute;
+      width: 260px;
+    
+      li {
+        clear: both;
+        width: 100%;
+      }
+
+      a {
+        padding: 5px 15px;
+      }
+
+      /* Hide arrow list items with children */
+
+      a:after {
+        display: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 /**
@@ -277,72 +278,31 @@ main {
  */
 
 main {
-	margin-top: 0;
-	padding: ($line-height * 1.5) 0 ($line-height * 3) 0;
+  margin-top: 0;
+  padding: ($line-height * 1.5) 0 ($line-height * 3);
 
-	@include respond-to('medium') {
-		background-color: $body-background;
-	}
-	
-	.wrapper {
-		box-sizing: border-box;
-		margin: 0 auto;
-		width: 100%;
+  @include respond-to('medium') {
+    background-color: $body-background;
+  }
+  
+  .wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
 
-		@media(min-width: 821px) {
-			width: 780px;
-		}
+    @media(min-width: 821px) {
+      width: 780px;
+    }
 
-		h1 {
-			margin-bottom: $line-height;
-			text-align: center;
-		}
+    h1 {
+      margin-bottom: $line-height;
+      text-align: center;
+    }
 
-		.meta {
-			color: $text-light;
-			font-size: 13px;
-			font-weight: bold; 
-			margin: 0 0 30px 0;
-			text-align: center;
-
-			a {
-				color: $text-color;
-
-				&:active,
-				&:focus,
-				&:hover {
-					color: $link-color; 
-				}
-			}
-		}
-
-		.tags {
-
-			span {
-				display: block;
-				float: left;
-				font-size: 13px;
-				line-height: inherit;
-				margin-bottom: 10px;
-				width: 100%;
-
-				@include respond-to('small') {
-					display: inline-block;
-					padding-right: 15px;
-					width: auto;
-				}
-
-				@include respond-to('medium') {
-					padding-right: 0;
-					width: 150px;
-				}
-			}
-		}
-
-		p:last-child {
-			margin-bottom: 0;
-		}
-	}
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 /**
@@ -351,70 +311,66 @@ main {
  */
 
 #footer {
-	background-color: $primary-color;
-	color: white;
-	margin-bottom: 0;
-	
-	a { 
-		color: white;
+  background-color: $primary-color;
+  color: white;
+  margin-bottom: 0;
+  
+  a { 
+    color: white;
 
-		&:active,
-		&:focus,
-		&:hover {
-			color: $text-light;
-		}
-	}
-	
-	#credits {
-		float: left;
-		margin: $line-height 0;
-		width: 100%;
-		
-		p {
-			margin: 0;
-		}
-		
-		#copyright { 
-			text-align: center;
-			width: 100%;
+    &:active,
+    &:focus,
+    &:hover {
+      color: $text-light;
+    }
+  }
+  
+  #credits {
+    float: left;
+    margin: $line-height 0;
+    width: 100%;
+    
+    p {
+      margin: 0;
+    }
+    
+    #copyright { 
+      text-align: center;
+      width: 100%;
 
-			@include respond-to('medium') {
-				float: left;
-				width: auto;
-			}
-		}
-		
-		nav { 
-			text-align: center;
-			width: 100%;
+      @include respond-to('medium') {
+        float: left;
+        width: auto;
+      }
+    }
+    
+    nav { 
+      text-align: center;
+      width: 100%;
 
-			@include respond-to('medium') {
-				float: right;
-				width: auto;
-			}
+      @include respond-to('medium') {
+        float: right;
+        width: auto;
+      }
+    }
 
-			div {
-				display: inline-block;
-			}
-		}
+    ul {
+      margin: 0;
+      padding: 0;
+    }
 
-		ul {
-			margin: 0;
-			padding: 0;
+    li {
+      display: inline;
+    }
 
-			li {
-				display: inline;
-				
-				&:after {
-					color: white;
-					content: "|";
-					padding: 0 5px 0 10px;
-				}
-				
-				&:last-child:after {
-					display: none;
-				}
-			}
-		}
-	}
+    li:after {
+      color: white;
+      content: '|';
+      padding: 0 5px 0 10px;
+    }
+  
+    li:last-child:after {
+      display: none;
+    }
+  }
 }

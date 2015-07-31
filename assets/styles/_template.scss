@@ -16,50 +16,38 @@
 .archive,
 .search,
 .blog {
-	.archive-description {
-		margin-bottom: 30px;
-		text-align: center;
-	}
+  .archive-description {
+    margin-bottom: 30px;
+    text-align: center;
+  }
 
-	article {
-		clear: both;
-		padding: 0 0 $line-height 0;
-		text-align: left;
-		width: 100%;
+  article {
+    clear: both;
+    padding: 0 0 $line-height;
+    text-align: left;
+    width: 100%;
 
-		&:last-of-type {
-			padding-bottom: 0;
-		}
+    &:last-of-type {
+      padding-bottom: 0;
+    }
 
-		h2 {
-			margin: 0 0 4px 0;
-			text-align: center;
-			
-			a {
-				color: $heading-color;
-				text-decoration: none;
-				
-				&:active,
-				&:focus,
-				&:hover {
-					color: $link-color;
-					text-decoration: underline;
-				}
-			}
-		}
+    h2 {
+      margin: 0 0 4px;
+      text-align: center;
+    }
 
-		.featured {
-			float: right;
-			margin: 0 0 $line-height 20px;
-		}
+    .featured {
+      float: right;
+      margin: 0 0 $line-height 20px;
+    }
 
-		&.sticky { 
-			background-color: $light-background;
-			box-sizing: border-box;
-			padding: 30px;
-			margin-bottom: $line-height / 2;
-		}
-	}
+    &.sticky { 
+      background-color: $light-background;
+      box-sizing: border-box;
+      padding: 30px;
+      margin-bottom: $line-height / 2;
+    }
+  }
 }
 
 /**
@@ -69,33 +57,11 @@
 
 .single main {
 
-	.featured {
-		float: right;
-		margin: 5px 0 10px 20px; 
-	}
+  .featured {
+    float: right;
+    margin: 5px 0 10px 20px; 
+  }
 
-	nav.pages {
-		margin-bottom: $line-height;
-
-		a {
-			background-color: $light-background;
-			border-radius: 3px;
-			color: $text-color;
-			display: inline-block;
-			font-size: 13px;
-			height: 40px;
-			line-height: 40px;
-			margin-right: 5px;
-			padding: 0 20px;
-			text-decoration: none;
-
-			&:active,
-			&:focus,
-			&:hover {
-				background-color: shade($light-background, 10%);
-			}
-		}
-	}
 }
 
 /**
@@ -104,11 +70,11 @@
  */
 
 .search {
-	article h2 {
-		margin-bottom: $line-height;
-	}
+  article h2 {
+    margin-bottom: $line-height;
+  }
 }
 
 .search-no-results main .wrapper {
-	margin-bottom: $line-height / 2;
+  margin-bottom: $line-height / 2;
 }

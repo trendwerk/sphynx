@@ -15,8 +15,8 @@
  */
 
 html {
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
 }
 
 /**
@@ -25,10 +25,10 @@ html {
  */
 
 body {
-	color: $text-color; 
-	font-family: $text-font;
-	font-size: 14px;
-	line-height: $line-height;
+  color: $text-color; 
+  font-family: $text-font;
+  font-size: 14px;
+  line-height: $line-height;
 }
 
 /**
@@ -42,59 +42,69 @@ h3,
 h4,
 h5,
 h6 {
-	color: $heading-color;
-	font-family: $heading-font;
-	font-weight: 700;
-	line-height: 1.325em;
-	margin: 0 0 $line-height;
+  color: $heading-color;
+  font-family: $heading-font;
+  font-weight: 700;
+  line-height: 1.325em;
+  margin: 0 0 $line-height;
+
+  a {
+    color: $heading-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
 }
 
 h1 {
-	font-size: 28px;
+  font-size: 28px;
 
-	@include respond-to('medium') {
-		font-size: 40px;
-	}
+  @include respond-to('medium') {
+    font-size: 40px;
+  }
 }
 
 h2 {
-	font-size: 20px;
+  font-size: 20px;
 
-	@include respond-to('medium') {
-		font-size: 28px;
-	}
+  @include respond-to('medium') {
+    font-size: 28px;
+  }
 }
 
 h3 {
-	font-size: 18px;
+  font-size: 18px;
 
-	@include respond-to('medium') {
-		font-size: 22px;
-	}
+  @include respond-to('medium') {
+    font-size: 22px;
+  }
 }
 
 h4 {
-	font-size: 16px;
+  font-size: 16px;
 
-	@include respond-to('medium') {
-		font-size: 18px;
-	}
+  @include respond-to('medium') {
+    font-size: 18px;
+  }
 }
 
 h5 {
-	font-size: 14px;
+  font-size: 14px;
 
-	@include respond-to('medium') {
-		font-size: 16px;
-	}
+  @include respond-to('medium') {
+    font-size: 16px;
+  }
 }
 
 h6 {
-	font-size: 12px;
+  font-size: 12px;
 
-	@include respond-to('medium') {
-		font-size: 14px;
-	}
+  @include respond-to('medium') {
+    font-size: 14px;
+  }
 }
 
 /**
@@ -103,61 +113,61 @@ h6 {
  */
  
 a {
-	color: $link-color;
-	outline: 0;
-	text-decoration: underline;
+  color: $link-color;
+  outline: 0;
+  text-decoration: underline;
 
-	&:hover { 
-		color: shade($link-color, 15%);
-		text-decoration: underline;
-	}
+  &:hover { 
+    color: shade($link-color, 15%);
+    text-decoration: underline;
+  }
 
-	/* more link */
+  /* more link */
 
-	&.read-more {
-		white-space: nowrap;
-	}
+  &.read-more {
+    white-space: nowrap;
+  }
 
-	/* add characters to link */
+  /* add characters to link */
 
-	&.read-more:after,
-	&.prev:before,
-	&.next:after {
-		display: inline-block;
-		font-family: fontawesome;
-		font-size: 9px;
-	}
+  &.read-more:after,
+  &.prev:before,
+  &.next:after {
+    display: inline-block;
+    font-family: fontawesome;
+    font-size: 9px;
+  }
 
-	&.prev:before {
-		content: '\f053';
-		padding-right: 4px;
-	}
+  &.prev:before {
+    content: '\f053';
+    padding-right: 4px;
+  }
 
-	&.read-more:after,
-	&.next:after {
-		content: '\f054';
-		padding-left: 4px;
-	}
+  &.read-more:after,
+  &.next:after {
+    content: '\f054';
+    padding-left: 4px;
+  }
 
-	/* style for tag */
+  /* style for tag */
 
-	&.tag {
-		background-color: $light-background;
-		border-radius: 3px;
-		color: $text-color;
-		display: inline-block;
-		font-size: 12px;
-		line-height: 25px;
-		margin: 0 0 5px 5px;
-		padding: 0 10px;
-		text-decoration: none;
-		text-transform: lowercase;
+  &.tag {
+    background-color: $light-background;
+    border-radius: 3px;
+    color: $text-color;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 25px;
+    margin: 0 0 5px 5px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: lowercase;
 
-		&:hover {
-			background-color: $heading-color;
-			color: white;
-		}
-	}
+    &:hover {
+      background-color: $heading-color;
+      color: white;
+    }
+  }
 }
 
 /**
@@ -166,7 +176,7 @@ a {
  */
 
 p {
-	margin: 0 0 $line-height;
+  margin: 0 0 $line-height;
 }
 
 /**
@@ -176,12 +186,12 @@ p {
 
 strong,
 b {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 em,
 i {
-	font-style: italic;
+  font-style: italic;
 }
 
 /**
@@ -190,23 +200,23 @@ i {
  */
 
 ul { 
-	list-style-position: outside;
-	margin: 0 0 $line-height 20px;
+  list-style-position: outside;
+  margin: 0 0 $line-height 20px;
 
-	ul {
-		margin: 0 0 0 20px;
-	}
+  ul {
+    margin: 0 0 0 20px;
+  }
 }
 
 ol {
-	list-style-position: outside;
-	list-style-type: decimal;
-	margin: 0 0 $line-height 20px;
+  list-style-position: outside;
+  list-style-type: decimal;
+  margin: 0 0 $line-height 20px;
 
-	ol {
-		list-style-type: lower-alpha;
-		margin: 0 0 0 20px;
-	}
+  ol {
+    list-style-type: lower-alpha;
+    margin: 0 0 0 20px;
+  }
 }
 
 /**
@@ -215,35 +225,35 @@ ol {
  */
 
 table { 
-	border: 1px solid $border-color;
-	border-collapse: collapse;
-	border-spacing: 0;	
-	margin: 0 0 $line-height;
-	width: 100%;
+  border: 1px solid $border-color;
+  border-collapse: collapse;
+  border-spacing: 0;  
+  margin: 0 0 $line-height;
+  width: 100%;
 
-	tr { 
-		border-bottom: 1px solid $border-color;
-		border-right: 1px solid $border-color;
+  tr { 
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
 
-		&:nth-child(even) {
-			background-color: $light-background;
-		}
+    &:nth-child(even) {
+      background-color: $light-background;
+    }
 
-		td,
-		th { 
-			border-right: 1px solid $border-color;
-			padding: 5px 10px;
-			text-align: left;
-		}
+    td,
+    th { 
+      border-right: 1px solid $border-color;
+      padding: 5px 10px;
+      text-align: left;
+    }
 
-		th { 
-			font-weight: bold;
-		}
-	}
+    th { 
+      font-weight: bold;
+    }
+  }
 
-	thead tr {
-		background-color: $light-background;
-	}
+  thead tr {
+    background-color: $light-background;
+  }
 }
 
 /**
@@ -252,34 +262,34 @@ table {
  */
 
 blockquote {
-	color: $text-light;
-	display: inline-block;
-	font-size: 16px;
-	font-style: italic;
-	margin: 0 0 $line-height;
-	text-align: center;
-	width: 100%;
+  color: $text-light;
+  display: inline-block;
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 0 $line-height;
+  text-align: center;
+  width: 100%;
 
-	p {
-		display: inline;
-	}
+  p {
+    display: inline;
+  }
 
-	cite {
-		display: block;
-		margin-top: 10px;
-	}
+  cite {
+    display: block;
+    margin-top: 10px;
+  }
 }
 
 cite {
-	color: $text-color;
-	display: block;
-	font-style: normal;
-	font-weight: bold;
-	margin: 5px 0 10px; 
+  color: $text-color;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  margin: 5px 0 10px; 
 
-	a {
-		color: $text-color;
-	}
+  a {
+    color: $text-color;
+  }
 }
 
 /**
@@ -289,17 +299,17 @@ cite {
 
 code,
 pre {
-	background-color: $marker;
-	color: $text-color;
-	font-size: 13px;
+  background-color: $marker;
+  color: $text-color;
+  font-size: 13px;
 }
-	
+  
 pre {
-	margin-bottom: 20px; 
-	padding: 20px; 
-	white-space: pre-wrap;
-	white-space: -moz-pre-wrap;
-	white-space: -o-pre-wrap;
+  margin-bottom: 20px; 
+  padding: 20px; 
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
 }
 
 /**
@@ -308,12 +318,12 @@ pre {
  */
 
 del {
-	color: $text-light;
-	text-decoration: line-through;
+  color: $text-light;
+  text-decoration: line-through;
 }
 
 ins {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /**
@@ -323,8 +333,8 @@ ins {
 
 ::-moz-selection,
 ::selection {
-	background-color: $primary-color;
-	color: white;
+  background-color: $primary-color;
+  color: white;
 }
 
 /**
@@ -333,10 +343,10 @@ ins {
  */
 
 hr {
-	border: 0;
-	border-top: 1px solid $border-color;
-	display: block;
-	height: 1px;
-	margin: 0 0 $line-height;
-	padding: 0;
+  border: 0;
+  border-top: 1px solid $border-color;
+  display: block;
+  height: 1px;
+  margin: 0 0 $line-height;
+  padding: 0;
 }

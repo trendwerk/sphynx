@@ -29,38 +29,44 @@ input[type="tel"],
 input[type="url"],
 textarea, 
 select {
-	@include placeholder($text-color, $text-light);
-	-webkit-appearance: none;
-	background-color: white;
-	border: 1px solid $border-color;
-	border-radius: 3px;
-	color: $text-color;
-	display: block;
-	font-family: $text-font;
-	font-size: 13px;
-	margin: 0;
-	outline: none;
-	padding: 12px;
+  @include placeholder($text-color, $text-light);
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  color: $text-color;
+  display: block;
+  font-family: $text-font;
+  font-size: 14px;
+  height: 40px;
+  line-height: 25px;
+  margin: 0;
+  outline: none;
+  padding: 0 12px;
 
-	&:focus {
-		border: 1px solid shade($border-color, 20%);
-	}
+  &:focus {
+    border: 1px solid shade($border-color, 20%);
+  }
+}
+
+textarea {
+  padding: 6px 12px;
 }
 
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
 button {
-	@extend .button;
-	-webkit-appearance: none;
-	border: 0;
-	outline: 0;
+  @extend .button;
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
 }
 
 select {
-	background-image: url('data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
-	background-position: 95% center;
-	background-repeat: no-repeat;
+  background-image: url('data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
+  background-position: 95% center;
+  background-repeat: no-repeat;
 }
 
 /**
@@ -69,5 +75,5 @@ select {
  */
 
 .adminbar-input {
-	min-width: 0;
+  min-width: 0;
 }

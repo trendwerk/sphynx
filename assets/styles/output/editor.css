@@ -80,9 +80,9 @@ button {
       background-color: #828282; }
 
 /**
- * @section     Extends
- * @subsection  Ellipsis
- */
+* @section     Extends
+* @subsection  Ellipsis
+*/
 .ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -351,6 +351,22 @@ h6 {
   font-weight: 700;
   line-height: 1.325em;
   margin: 0 0 30px; }
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    color: #333333;
+    text-decoration: none; }
+  h1 a:hover,
+  h2 a:hover,
+  h3 a:hover,
+  h4 a:hover,
+  h5 a:hover,
+  h6 a:hover {
+    color: #1d6fd3;
+    text-decoration: none; }
 
 h1 {
   font-size: 28px; }
@@ -603,10 +619,12 @@ select {
   color: #666666;
   display: block;
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 25px;
   margin: 0;
   outline: none;
-  padding: 12px; }
+  padding: 0 12px; }
   input[type="datetime-local"]:-moz-placeholder,
   input[type="datetime"]:-moz-placeholder,
   input[type="password"]:-moz-placeholder,
@@ -752,6 +770,9 @@ select {
   select:focus {
     border: 1px solid #a3a3a3; }
 
+textarea {
+  padding: 6px 12px; }
+
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
@@ -808,7 +829,7 @@ select {
  */
 .alignleft {
   float: left;
-  margin: 10px 20px 10px; }
+  margin: 10px 20px; }
 
 .alignright {
   float: right;
@@ -834,7 +855,7 @@ select {
     display: inline-block;
     font-size: 12px;
     line-height: 20px;
-    margin: 0 10px 10px 10px; }
+    margin: 0 10px 10px; }
 
 /**
  * @section     Images
@@ -972,10 +993,10 @@ select {
  * @section     Images
  * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
  */
-figure.aligncenter img,
-figure.alignright img,
-figure.alignleft img,
-figure.alignnone img {
+.aligncenter img,
+.alignright img,
+.alignleft img,
+.alignnone img {
   max-width: 100%;
   height: auto; }
 
