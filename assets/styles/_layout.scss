@@ -93,7 +93,6 @@ main {
     #description {
       color: $text-color;
       display: none;
-      font-size: 14px;
       margin: 0;
 
       @include respond-to('large') {
@@ -137,14 +136,6 @@ main {
     @include respond-to('large') {
       display: block;
       width: auto;
-    }
-
-    input {
-      border: 0;
-
-      @include respond-to('large') {
-        border: 1px solid $border-color; 
-      }
     }
   }
 }
@@ -279,7 +270,7 @@ main {
 
 main {
   margin-top: 0;
-  padding: ($line-height * 1.5) 0 ($line-height * 3);
+  padding: ($line-height * 2) 0 $line-height;
 
   @include respond-to('medium') {
     background-color: $body-background;
@@ -292,15 +283,6 @@ main {
 
     @media(min-width: 821px) {
       width: 780px;
-    }
-
-    h1 {
-      margin-bottom: $line-height;
-      text-align: center;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
     }
   }
 }

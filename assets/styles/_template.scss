@@ -7,61 +7,23 @@
  * @subpackage  TrendPress
  * @author      Trendwerk
  * @license     GPL v2
- * 
- * @section     Templates
- * @subsection  index.php
- * @subsection  search.php
+ *
  */
-
-.archive,
-.search,
-.blog {
-  .archive-description {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  article {
-    clear: both;
-    padding: 0 0 $line-height;
-    text-align: left;
-    width: 100%;
-
-    &:last-of-type {
-      padding-bottom: 0;
-    }
-
-    h2 {
-      margin: 0 0 4px;
-      text-align: center;
-    }
-
-    .featured {
-      float: right;
-      margin: 0 0 $line-height 20px;
-    }
-
-    &.sticky { 
-      background-color: $light-background;
-      box-sizing: border-box;
-      padding: 30px;
-      margin-bottom: $line-height / 2;
-    }
-  }
-}
 
 /**
  * @section     Templates
  * @subsection  single.php
  */
 
-.single main {
+.single {
+  h1 {
+    margin-bottom: 0;
+  }
 
   .featured {
     float: right;
     margin: 5px 0 10px 20px; 
   }
-
 }
 
 /**
@@ -69,12 +31,10 @@
  * @subsection  search.php
  */
 
-.search {
-  article h2 {
-    margin-bottom: $line-height;
-  }
+.search h2 {
+  margin-bottom: $line-height;
 }
 
-.search-no-results main .wrapper {
+.search-no-results .wrapper {
   margin-bottom: $line-height / 2;
 }

@@ -12,68 +12,46 @@
 
 /**
  * @section     Parts
- * @subsection  Respond
+ * @subsection  Burger
  */
 
-#respond {
-  clear: both;
-  float: left;
+.burger {
+  height: 19px;
   position: relative;
-  margin: $line-height 0;
-  width: 100%;
-  
-  p {
-    clear: both;
-    float: left;
-    width: 100%;
-    
-    label { 
-      float: left;
-      width: 25%;
-    }
+  width: 24px;
 
-    &.form-submit {
-      margin-bottom: 0;
-    }
-  }
-
-  p:last-of-type {
-    margin-bottom: 0;
-  }
-  
-  small {
-    font-size: 12px;
+  .line {
+    @include transition(-webkit-transform 0.2s ease-out);
+    background-color: white;
+    height: 3px;
     position: absolute;
-    right: 0;
+    width: 24px;
+  }
+
+  .line:nth-child(1) {
     top: 0;
   }
-  
-  textarea { 
-    box-sizing: border-box;
-    display: block;
-    height: 200px;
-    margin: 0;
-    width: 75%; 
-  }
-  
-  .form-allowed-tags,
-  .submit {
-    float: left;
-    margin-left: 25%;
-    width: auto;
+
+  .line:nth-child(2) {
+    top: 8px;
   }
 
-  .submit {
-    margin-bottom: 0;
+  .line:nth-child(3) {
+    top: 16px;
   }
-}
 
-.tags {
-  display: block;
+  &.active {
+    .line:nth-child(1) {
+      @include transform(rotate(-45deg) translate(-5.3px, 5.3px));
+    }
 
-  .tag {
-    margin-right: 5px;
-    margin-bottom: 0;
+    .line:nth-child(2) {
+      @include transform(scale(0, 1));
+    }
+
+    .line:nth-child(3) {
+      @include transform(rotate(45deg) translate(-6px, -6px));
+    }
   }
 }
 
@@ -133,6 +111,10 @@
 
   .comment-content {
     padding: ($line-height / 2) 0;
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
   }
   
   .comment-content,
@@ -145,13 +127,56 @@
 
 /**
  * @section     Parts
+ * @subsection  Glast
+ */
+
+.glass {
+  border: 3px solid white;
+  border-radius: 100%;
+  display: block;
+  height: 10px;
+  position: relative;
+  width: 10px;
+
+  &:after {
+    @include transform(rotate(45deg));
+    background-color: white;
+    content: '';
+    height: 3px;
+    position: absolute;
+    right: -7px;
+    top: 11px;
+    width: 8px;
+  }
+}
+
+/**
+ * @section     Parts
+ * @subsection  Meta
+ */
+
+.meta {
+  color: $text-light;
+  font-size: 13px;
+  margin: 0 0 ($line-height / 2);
+
+  a {
+    color: $text-color;
+
+    &:hover {
+      color: $link-color; 
+    }
+  }
+}
+
+/**
+ * @section     Parts
  * @subsection  Pager
  */
  
 #pager {
   clear: both;
-  font-size: 13px;
-  padding-top: $line-height;
+  padding: $line-height 0;
   text-align: center;
   width: 100%;
 
@@ -163,7 +188,6 @@
     border-radius: 3px;
     color: $text-color;
     display: inline-block;
-    font-size: 13px;
     height: 36px;
     line-height: 37px;
     margin: 0 5px 10px;
@@ -173,8 +197,6 @@
   a {
     text-decoration: none;
 
-    &:active,
-    &:focus,
     &:hover {
       background-color: shade($light-background, 10%);
       border-color: shade($light-background, 10%);
@@ -218,8 +240,6 @@
   padding: 0 20px;
   text-decoration: none;
 
-  &:active,
-  &:focus,
   &:hover {
     background-color: shade($light-background, 10%);
   }
@@ -227,87 +247,92 @@
 
 /**
  * @section     Parts
- * @subsection  Icons
+ * @subsection  Respond
  */
 
-.glass {
-  border: 3px solid white;
-  border-radius: 100%;
-  display: block;
-  height: 10px;
+#respond {
+  clear: both;
+  float: left;
   position: relative;
-  width: 10px;
+  margin: $line-height 0;
+  width: 100%;
+  
+  p {
+    clear: both;
+    float: left;
+    width: 100%;
+    
+    label { 
+      float: left;
+      width: 25%;
+    }
 
-  &:after {
-    @include transform(rotate(45deg));
-    background-color: white;
-    content: '';
-    height: 3px;
-    position: absolute;
-    right: -7px;
-    top: 11px;
-    width: 8px;
-  }
-}
-
-.burger {
-  height: 19px;
-  position: relative;
-  width: 24px;
-
-  .line {
-    @include transition(-webkit-transform 0.2s ease-out);
-    background-color: white;
-    height: 3px;
-    position: absolute;
-    width: 24px;
+    &.form-submit {
+      margin-bottom: 0;
+    }
   }
 
-  .line:nth-child(1) {
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  small {
+    font-size: 12px;
+    position: absolute;
+    right: 0;
     top: 0;
   }
-
-  .line:nth-child(2) {
-    top: 8px;
+  
+  textarea { 
+    box-sizing: border-box;
+    display: block;
+    height: 200px;
+    margin: 0;
+    width: 75%; 
+  }
+  
+  .form-allowed-tags,
+  .submit {
+    float: left;
+    margin-left: 25%;
+    width: auto;
   }
 
-  .line:nth-child(3) {
-    top: 16px;
-  }
-
-  &.active {
-    .line:nth-child(1) {
-      @include transform(rotate(-45deg) translate(-5.3px, 5.3px));
-    }
-
-    .line:nth-child(2) {
-      @include transform(scale(0, 1));
-    }
-
-    .line:nth-child(3) {
-      @include transform(rotate(45deg) translate(-6px, -6px));
-    }
+  .submit {
+    margin-bottom: 0;
   }
 }
 
 /**
  * @section     Parts
- * @subsection  Meta
+ * @subsection  Hentry
  */
 
-.meta {
-  color: $text-light;
-  font-size: 13px;
-  font-weight: bold; 
-  margin: 0 0 30px;
-  text-align: center;
+.hentry {
+  clear: both;
+  padding: 0 0 $line-height;
+  margin: 0 0 $line-height;
+  text-align: left;
+  width: 100%;
 
-  a {
-    color: $text-color;
+  &.sticky { 
+    background-color: $light-background;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: ($line-height * 2);
+  }
 
-    &:hover {
-      color: $link-color; 
-    }
+  h2 {
+    margin: 0 0 10px;
+  }
+
+  .featured {
+    float: right;
+    margin: 0 0 $line-height 20px;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
   }
 }
 
@@ -377,22 +402,8 @@
 .tags {
 
   span {
-    display: block;
-    float: left;
-    font-size: 13px;
+    display: inline-block;
     line-height: inherit;
-    margin-bottom: 10px;
-    width: 100%;
-
-    @include respond-to('small') {
-      display: inline-block;
-      padding-right: 15px;
-      width: auto;
-    }
-
-    @include respond-to('medium') {
-      padding-right: 0;
-      width: 150px;
-    }
+    padding-right: 15px;
   }
 }

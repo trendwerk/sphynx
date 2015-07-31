@@ -46,7 +46,6 @@ h6 {
   font-family: $heading-font;
   font-weight: 700;
   line-height: 1.325em;
-  margin: 0 0 $line-height;
 
   a {
     color: $heading-color;
@@ -61,6 +60,7 @@ h6 {
 
 h1 {
   font-size: 28px;
+  margin: 0 0 $line-height;
 
   @include respond-to('medium') {
     font-size: 40px;
@@ -122,41 +122,38 @@ a {
     text-decoration: underline;
   }
 
-  /* more link */
+  /* More link */
 
   &.read-more {
     white-space: nowrap;
   }
 
-  /* add characters to link */
+  /* Add characters :before/:after link */
 
   &.read-more:after,
   &.prev:before,
   &.next:after {
     display: inline-block;
-    font-family: fontawesome;
-    font-size: 9px;
   }
 
   &.prev:before {
-    content: '\f053';
+    content: '«';
     padding-right: 4px;
   }
 
   &.read-more:after,
   &.next:after {
-    content: '\f054';
+    content: '»';
     padding-left: 4px;
   }
 
-  /* style for tag */
+  /* Style for tags */
 
   &.tag {
     background-color: $light-background;
     border-radius: 3px;
     color: $text-color;
     display: inline-block;
-    font-size: 12px;
     line-height: 25px;
     margin: 0 0 5px 5px;
     padding: 0 10px;
@@ -199,22 +196,13 @@ i {
  * @subsection  Lists
  */
 
-ul { 
+ul,
+ol { 
   list-style-position: outside;
   margin: 0 0 $line-height 20px;
 
-  ul {
-    margin: 0 0 0 20px;
-  }
-}
-
-ol {
-  list-style-position: outside;
-  list-style-type: decimal;
-  margin: 0 0 $line-height 20px;
-
+  ul,
   ol {
-    list-style-type: lower-alpha;
     margin: 0 0 0 20px;
   }
 }
@@ -234,10 +222,6 @@ table {
   tr { 
     border-bottom: 1px solid $border-color;
     border-right: 1px solid $border-color;
-
-    &:nth-child(even) {
-      background-color: $light-background;
-    }
 
     td,
     th { 
@@ -307,9 +291,9 @@ pre {
 pre {
   margin-bottom: 20px; 
   padding: 20px; 
-  white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
+  white-space: pre-wrap;
 }
 
 /**
@@ -331,7 +315,6 @@ ins {
  * @subsection  Selection 
  */
 
-::-moz-selection,
 ::selection {
   background-color: $primary-color;
   color: white;

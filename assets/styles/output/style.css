@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * @section Extends
  *
@@ -24,7 +25,7 @@ button {
   font-weight: bold;
   height: 50px;
   line-height: 50px;
-  margin: 0 10px 10px;
+  margin: 0 10px 10px 0;
   padding: 0 35px;
   position: relative;
   text-decoration: none;
@@ -337,8 +338,7 @@ h6 {
   color: #333333;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 700;
-  line-height: 1.325em;
-  margin: 0 0 30px; }
+  line-height: 1.325em; }
   h1 a,
   h2 a,
   h3 a,
@@ -357,7 +357,8 @@ h6 {
     text-decoration: none; }
 
 h1 {
-  font-size: 28px; }
+  font-size: 28px;
+  margin: 0 0 30px; }
   @media (min-width: 641px) {
     h1 {
       font-size: 40px; } }
@@ -400,30 +401,27 @@ a {
   color: #1d6fd3;
   outline: 0;
   text-decoration: underline;
-  /* more link */
-  /* add characters to link */
-  /* style for tag */ }
+  /* More link */
+  /* Add characters :before/:after link */
+  /* Style for tags */ }
   a:hover {
     color: #185eb3;
     text-decoration: underline; }
   a.read-more {
     white-space: nowrap; }
   a.read-more:after, a.prev:before, a.next:after {
-    display: inline-block;
-    font-family: fontawesome;
-    font-size: 9px; }
+    display: inline-block; }
   a.prev:before {
-    content: '\f053';
+    content: '«';
     padding-right: 4px; }
   a.read-more:after, a.next:after {
-    content: '\f054';
+    content: '»';
     padding-left: 4px; }
   a.tag {
     background-color: #ededed;
     border-radius: 3px;
     color: #666666;
     display: inline-block;
-    font-size: 12px;
     line-height: 25px;
     margin: 0 0 5px 5px;
     padding: 0 10px;
@@ -456,18 +454,14 @@ i {
  * @section     Typography
  * @subsection  Lists
  */
-ul {
-  list-style-position: outside;
-  margin: 0 0 30px 20px; }
-  ul ul {
-    margin: 0 0 0 20px; }
-
+ul,
 ol {
   list-style-position: outside;
-  list-style-type: decimal;
   margin: 0 0 30px 20px; }
+  ul ul,
+  ul ol,
+  ol ul,
   ol ol {
-    list-style-type: lower-alpha;
     margin: 0 0 0 20px; }
 
 /**
@@ -483,8 +477,6 @@ table {
   table tr {
     border-bottom: 1px solid #cccccc;
     border-right: 1px solid #cccccc; }
-    table tr:nth-child(even) {
-      background-color: #ededed; }
     table tr td,
     table tr th {
       border-right: 1px solid #cccccc;
@@ -535,9 +527,9 @@ pre {
 pre {
   margin-bottom: 20px;
   padding: 20px;
-  white-space: pre-wrap;
   white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap; }
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap; }
 
 /**
  * @section     Typography
@@ -554,7 +546,6 @@ ins {
  * @section     Typography
  * @subsection  Selection 
  */
-::-moz-selection,
 ::selection {
   background-color: #333333;
   color: white; }
@@ -870,7 +861,7 @@ select {
   .gallery .gallery-caption {
     -webkit-transition: opacity 400ms ease-in-out;
     transition: opacity 400ms ease-in-out;
-    background-color: #ededed;
+    background-color: black;
     box-sizing: border-box;
     color: white;
     font-size: 12px;
@@ -1105,7 +1096,6 @@ main {
     #header #logo #description {
       color: #666666;
       display: none;
-      font-size: 14px;
       margin: 0; }
       @media (min-width: 981px) {
         #header #logo #description {
@@ -1138,11 +1128,6 @@ main {
       #header #search {
         display: block;
         width: auto; } }
-    #header #search input {
-      border: 0; }
-      @media (min-width: 981px) {
-        #header #search input {
-          border: 1px solid #cccccc; } }
 
 /**
  * @section     Layout
@@ -1227,7 +1212,7 @@ main {
  */
 main {
   margin-top: 0;
-  padding: 45px 0 90px; }
+  padding: 60px 0 30px; }
   @media (min-width: 641px) {
     main {
       background-color: white; } }
@@ -1238,11 +1223,6 @@ main {
     @media (min-width: 821px) {
       main .wrapper {
         width: 780px; } }
-    main .wrapper h1 {
-      margin-bottom: 30px;
-      text-align: center; }
-    main .wrapper p:last-child {
-      margin-bottom: 0; }
 
 /**
  * @section     Layout
@@ -1297,50 +1277,15 @@ main {
  * @subpackage  TrendPress
  * @author      Trendwerk
  * @license     GPL v2
- * 
- * @section     Templates
- * @subsection  index.php
- * @subsection  search.php
+ *
  */
-.archive .archive-description,
-.search .archive-description,
-.blog .archive-description {
-  margin-bottom: 30px;
-  text-align: center; }
-.archive article,
-.search article,
-.blog article {
-  clear: both;
-  padding: 0 0 30px;
-  text-align: left;
-  width: 100%; }
-  .archive article:last-of-type,
-  .search article:last-of-type,
-  .blog article:last-of-type {
-    padding-bottom: 0; }
-  .archive article h2,
-  .search article h2,
-  .blog article h2 {
-    margin: 0 0 4px;
-    text-align: center; }
-  .archive article .featured,
-  .search article .featured,
-  .blog article .featured {
-    float: right;
-    margin: 0 0 30px 20px; }
-  .archive article.sticky,
-  .search article.sticky,
-  .blog article.sticky {
-    background-color: #ededed;
-    box-sizing: border-box;
-    padding: 30px;
-    margin-bottom: 15px; }
-
 /**
  * @section     Templates
  * @subsection  single.php
  */
-.single main .featured {
+.single h1 {
+  margin-bottom: 0; }
+.single .featured {
   float: right;
   margin: 5px 0 10px 20px; }
 
@@ -1348,10 +1293,10 @@ main {
  * @section     Templates
  * @subsection  search.php
  */
-.search article h2 {
+.search h2 {
   margin-bottom: 30px; }
 
-.search-no-results main .wrapper {
+.search-no-results .wrapper {
   margin-bottom: 15px; }
 
 /**
@@ -1367,49 +1312,38 @@ main {
  */
 /**
  * @section     Parts
- * @subsection  Respond
+ * @subsection  Burger
  */
-#respond {
-  clear: both;
-  float: left;
+.burger {
+  height: 19px;
   position: relative;
-  margin: 30px 0;
-  width: 100%; }
-  #respond p {
-    clear: both;
-    float: left;
-    width: 100%; }
-    #respond p label {
-      float: left;
-      width: 25%; }
-    #respond p.form-submit {
-      margin-bottom: 0; }
-  #respond p:last-of-type {
-    margin-bottom: 0; }
-  #respond small {
-    font-size: 12px;
+  width: 24px; }
+  .burger .line {
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    -ms-transition: -webkit-transform 0.2s ease-out;
+    transition: -webkit-transform 0.2s ease-out;
+    background-color: white;
+    height: 3px;
     position: absolute;
-    right: 0;
+    width: 24px; }
+  .burger .line:nth-child(1) {
     top: 0; }
-  #respond textarea {
-    box-sizing: border-box;
-    display: block;
-    height: 200px;
-    margin: 0;
-    width: 75%; }
-  #respond .form-allowed-tags,
-  #respond .submit {
-    float: left;
-    margin-left: 25%;
-    width: auto; }
-  #respond .submit {
-    margin-bottom: 0; }
-
-.tags {
-  display: block; }
-  .tags .tag {
-    margin-right: 5px;
-    margin-bottom: 0; }
+  .burger .line:nth-child(2) {
+    top: 8px; }
+  .burger .line:nth-child(3) {
+    top: 16px; }
+  .burger.active .line:nth-child(1) {
+    -webkit-transform: rotate(-45deg) translate(-5.3px, 5.3px);
+    -ms-transform: rotate(-45deg) translate(-5.3px, 5.3px);
+    transform: rotate(-45deg) translate(-5.3px, 5.3px); }
+  .burger.active .line:nth-child(2) {
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1); }
+  .burger.active .line:nth-child(3) {
+    -webkit-transform: rotate(45deg) translate(-6px, -6px);
+    -ms-transform: rotate(45deg) translate(-6px, -6px);
+    transform: rotate(45deg) translate(-6px, -6px); }
 
 /**
  * @section     Parts
@@ -1452,6 +1386,8 @@ main {
     float: right; }
   #comments ol .comment-content {
     padding: 15px 0; }
+    #comments ol .comment-content p:last-of-type {
+      margin-bottom: 0; }
   #comments ol .comment-content,
   #comments ol .reply {
     clear: both;
@@ -1460,12 +1396,47 @@ main {
 
 /**
  * @section     Parts
+ * @subsection  Glast
+ */
+.glass {
+  border: 3px solid white;
+  border-radius: 100%;
+  display: block;
+  height: 10px;
+  position: relative;
+  width: 10px; }
+  .glass:after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: white;
+    content: '';
+    height: 3px;
+    position: absolute;
+    right: -7px;
+    top: 11px;
+    width: 8px; }
+
+/**
+ * @section     Parts
+ * @subsection  Meta
+ */
+.meta {
+  color: #999999;
+  font-size: 13px;
+  margin: 0 0 15px; }
+  .meta a {
+    color: #666666; }
+    .meta a:hover {
+      color: #1d6fd3; }
+
+/**
+ * @section     Parts
  * @subsection  Pager
  */
 #pager {
   clear: both;
-  font-size: 13px;
-  padding-top: 30px;
+  padding: 30px 0;
   text-align: center;
   width: 100%; }
   #pager .page-numbers,
@@ -1476,14 +1447,13 @@ main {
     border-radius: 3px;
     color: #666666;
     display: inline-block;
-    font-size: 13px;
     height: 36px;
     line-height: 37px;
     margin: 0 5px 10px;
     text-align: center; }
   #pager a {
     text-decoration: none; }
-    #pager a:active, #pager a:focus, #pager a:hover {
+    #pager a:hover {
       background-color: #d5d5d5;
       border-color: #d5d5d5; }
   #pager .page-numbers {
@@ -1513,77 +1483,71 @@ main {
   margin-right: 5px;
   padding: 0 20px;
   text-decoration: none; }
-  .pages a:active, .pages a:focus, .pages a:hover {
+  .pages a:hover {
     background-color: #d5d5d5; }
 
 /**
  * @section     Parts
- * @subsection  Icons
+ * @subsection  Respond
  */
-.glass {
-  border: 3px solid white;
-  border-radius: 100%;
-  display: block;
-  height: 10px;
+#respond {
+  clear: both;
+  float: left;
   position: relative;
-  width: 10px; }
-  .glass:after {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    background-color: white;
-    content: '';
-    height: 3px;
+  margin: 30px 0;
+  width: 100%; }
+  #respond p {
+    clear: both;
+    float: left;
+    width: 100%; }
+    #respond p label {
+      float: left;
+      width: 25%; }
+    #respond p.form-submit {
+      margin-bottom: 0; }
+  #respond p:last-of-type {
+    margin-bottom: 0; }
+  #respond small {
+    font-size: 12px;
     position: absolute;
-    right: -7px;
-    top: 11px;
-    width: 8px; }
-
-.burger {
-  height: 19px;
-  position: relative;
-  width: 24px; }
-  .burger .line {
-    -webkit-transition: -webkit-transform 0.2s ease-out;
-    -ms-transition: -webkit-transform 0.2s ease-out;
-    transition: -webkit-transform 0.2s ease-out;
-    background-color: white;
-    height: 3px;
-    position: absolute;
-    width: 24px; }
-  .burger .line:nth-child(1) {
+    right: 0;
     top: 0; }
-  .burger .line:nth-child(2) {
-    top: 8px; }
-  .burger .line:nth-child(3) {
-    top: 16px; }
-  .burger.active .line:nth-child(1) {
-    -webkit-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-    -ms-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-    transform: rotate(-45deg) translate(-5.3px, 5.3px); }
-  .burger.active .line:nth-child(2) {
-    -webkit-transform: scale(0, 1);
-    -ms-transform: scale(0, 1);
-    transform: scale(0, 1); }
-  .burger.active .line:nth-child(3) {
-    -webkit-transform: rotate(45deg) translate(-6px, -6px);
-    -ms-transform: rotate(45deg) translate(-6px, -6px);
-    transform: rotate(45deg) translate(-6px, -6px); }
+  #respond textarea {
+    box-sizing: border-box;
+    display: block;
+    height: 200px;
+    margin: 0;
+    width: 75%; }
+  #respond .form-allowed-tags,
+  #respond .submit {
+    float: left;
+    margin-left: 25%;
+    width: auto; }
+  #respond .submit {
+    margin-bottom: 0; }
 
 /**
  * @section     Parts
- * @subsection  Meta
+ * @subsection  Hentry
  */
-.meta {
-  color: #999999;
-  font-size: 13px;
-  font-weight: bold;
+.hentry {
+  clear: both;
+  padding: 0 0 30px;
   margin: 0 0 30px;
-  text-align: center; }
-  .meta a {
-    color: #666666; }
-    .meta a:hover {
-      color: #1d6fd3; }
+  text-align: left;
+  width: 100%; }
+  .hentry.sticky {
+    background-color: #ededed;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: 60px; }
+  .hentry h2 {
+    margin: 0 0 10px; }
+  .hentry .featured {
+    float: right;
+    margin: 0 0 30px 20px; }
+  .hentry p:last-of-type {
+    margin-bottom: 0; }
 
 /**
  * @section     Parts
@@ -1649,20 +1613,8 @@ main {
  * @subsection  Tags
  */
 .tags span {
-  display: block;
-  float: left;
-  font-size: 13px;
+  display: inline-block;
   line-height: inherit;
-  margin-bottom: 10px;
-  width: 100%; }
-  @media (min-width: 421px) {
-    .tags span {
-      display: inline-block;
-      padding-right: 15px;
-      width: auto; } }
-  @media (min-width: 641px) {
-    .tags span {
-      padding-right: 0;
-      width: 150px; } }
+  padding-right: 15px; }
 
 /*# sourceMappingURL=style.css.map */

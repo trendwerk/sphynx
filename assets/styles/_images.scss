@@ -81,12 +81,11 @@
     &:hover .gallery-caption {
       opacity: 1;
     }
-
   }
 
   .gallery-caption {
     @include animate-this(opacity, 400ms, ease-in-out);
-    background-color: $light-background;
+    background-color: black;
     box-sizing: border-box;
     color: white;
     font-size: 12px;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * @section Editor
  *
@@ -36,7 +37,7 @@ button {
   font-weight: bold;
   height: 50px;
   line-height: 50px;
-  margin: 0 10px 10px;
+  margin: 0 10px 10px 0;
   padding: 0 35px;
   position: relative;
   text-decoration: none;
@@ -349,8 +350,7 @@ h6 {
   color: #333333;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 700;
-  line-height: 1.325em;
-  margin: 0 0 30px; }
+  line-height: 1.325em; }
   h1 a,
   h2 a,
   h3 a,
@@ -369,7 +369,8 @@ h6 {
     text-decoration: none; }
 
 h1 {
-  font-size: 28px; }
+  font-size: 28px;
+  margin: 0 0 30px; }
   @media (min-width: 641px) {
     h1 {
       font-size: 40px; } }
@@ -412,30 +413,27 @@ a {
   color: #1d6fd3;
   outline: 0;
   text-decoration: underline;
-  /* more link */
-  /* add characters to link */
-  /* style for tag */ }
+  /* More link */
+  /* Add characters :before/:after link */
+  /* Style for tags */ }
   a:hover {
     color: #185eb3;
     text-decoration: underline; }
   a.read-more {
     white-space: nowrap; }
   a.read-more:after, a.prev:before, a.next:after {
-    display: inline-block;
-    font-family: fontawesome;
-    font-size: 9px; }
+    display: inline-block; }
   a.prev:before {
-    content: '\f053';
+    content: '«';
     padding-right: 4px; }
   a.read-more:after, a.next:after {
-    content: '\f054';
+    content: '»';
     padding-left: 4px; }
   a.tag {
     background-color: #ededed;
     border-radius: 3px;
     color: #666666;
     display: inline-block;
-    font-size: 12px;
     line-height: 25px;
     margin: 0 0 5px 5px;
     padding: 0 10px;
@@ -468,18 +466,14 @@ i {
  * @section     Typography
  * @subsection  Lists
  */
-ul {
-  list-style-position: outside;
-  margin: 0 0 30px 20px; }
-  ul ul {
-    margin: 0 0 0 20px; }
-
+ul,
 ol {
   list-style-position: outside;
-  list-style-type: decimal;
   margin: 0 0 30px 20px; }
+  ul ul,
+  ul ol,
+  ol ul,
   ol ol {
-    list-style-type: lower-alpha;
     margin: 0 0 0 20px; }
 
 /**
@@ -495,8 +489,6 @@ table {
   table tr {
     border-bottom: 1px solid #cccccc;
     border-right: 1px solid #cccccc; }
-    table tr:nth-child(even) {
-      background-color: #ededed; }
     table tr td,
     table tr th {
       border-right: 1px solid #cccccc;
@@ -547,9 +539,9 @@ pre {
 pre {
   margin-bottom: 20px;
   padding: 20px;
-  white-space: pre-wrap;
   white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap; }
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap; }
 
 /**
  * @section     Typography
@@ -566,7 +558,6 @@ ins {
  * @section     Typography
  * @subsection  Selection 
  */
-::-moz-selection,
 ::selection {
   background-color: #333333;
   color: white; }
@@ -882,7 +873,7 @@ select {
   .gallery .gallery-caption {
     -webkit-transition: opacity 400ms ease-in-out;
     transition: opacity 400ms ease-in-out;
-    background-color: #ededed;
+    background-color: black;
     box-sizing: border-box;
     color: white;
     font-size: 12px;
