@@ -417,7 +417,7 @@ a {
   /* Add characters :before/:after link */
   /* Style for tags */ }
   a:hover {
-    color: #185eb3;
+    color: #1758a8;
     text-decoration: underline; }
   a.read-more {
     white-space: nowrap; }
@@ -506,7 +506,6 @@ table {
 blockquote {
   color: #999999;
   display: inline-block;
-  font-size: 16px;
   font-style: italic;
   margin: 0 0 30px;
   text-align: center;
@@ -558,6 +557,10 @@ ins {
  * @section     Typography
  * @subsection  Selection 
  */
+::-moz-selection {
+  background-color: #333333;
+  color: white; }
+
 ::selection {
   background-color: #333333;
   color: white; }
@@ -610,7 +613,7 @@ select {
   color: #666666;
   display: block;
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   height: 40px;
   line-height: 25px;
   margin: 0;
@@ -744,6 +747,23 @@ select {
   textarea:focus::-webkit-input-placeholder,
   select:focus::-webkit-input-placeholder {
     color: #999999; }
+  @media (min-width: 641px) {
+    input[type="datetime-local"],
+    input[type="datetime"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    input[type="month"],
+    input[type="email"],
+    input[type="date"],
+    input[type="text"],
+    input[type="time"],
+    input[type="week"],
+    input[type="tel"],
+    input[type="url"],
+    textarea,
+    select {
+      font-size: 14px; } }
   input[type="datetime-local"]:focus,
   input[type="datetime"]:focus,
   input[type="password"]:focus,
@@ -762,7 +782,7 @@ select {
     border: 1px solid #a3a3a3; }
 
 textarea {
-  padding: 6px 12px; }
+  padding: 8px 12px; }
 
 input[type="submit"],
 input[type="button"],

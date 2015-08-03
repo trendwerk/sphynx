@@ -76,7 +76,11 @@
     box-sizing: border-box;
     list-style-type: none;
     margin: 0;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 15px;
+
+    @include respond-to('medium') {
+      padding-left: 30px;
+    }
   }
 
   .comment-body {
@@ -86,8 +90,13 @@
     clear: both;
     float: left;
     margin-bottom: $line-height;
-    padding: 30px 30px 30px 120px;
+    padding: 20px;
     width: 100%;
+
+    @include respond-to('medium') {
+      padding: 30px 30px 30px 120px;
+    }
+
   }
 
   .comment-meta {
@@ -97,8 +106,13 @@
 
   .avatar {
     border-radius: 3px;
-    position: absolute;
-    left: -90px;
+    display: block;
+    margin-bottom: 10px;
+
+    @include respond-to('medium') {
+      left: -90px;
+      position: absolute;
+    }
   }
 
   .comment-author {
@@ -107,6 +121,12 @@
 
   .comment-metadata {
     float: right;
+    width: 100%;
+
+    @include respond-to('medium') {
+      float: left;
+      width: inherit;
+    }
   }
 
   .comment-content {
@@ -260,11 +280,22 @@
   p {
     clear: both;
     float: left;
+    margin-bottom: ($line-height / 2);
     width: 100%;
+
+    @include respond-to('medium') {
+      margin-bottom: 30px;
+    }
     
     label { 
       float: left;
-      width: 25%;
+      margin-bottom: ($line-height / 2);
+      width: 100%;
+
+      @include respond-to('medium') {
+        margin-bottom: 0;
+        width: 25%;
+      }
     }
 
     &.form-submit {
@@ -288,18 +319,41 @@
     display: block;
     height: 200px;
     margin: 0;
-    width: 75%; 
+    width: 100%;
+
+    @include respond-to('medium') {
+      width: 75%; 
+    }
+  }
+
+  #author,
+  #email,
+  #url {
+    box-sizing: border-box;
+    width: 100%;
+
+     @include respond-to('medium') {
+      width: 50%; 
+    }   
   }
   
   .form-allowed-tags,
   .submit {
     float: left;
-    margin-left: 25%;
     width: auto;
+
+    @include respond-to('medium') {
+      margin-left: 25%;
+    }
   }
 
   .submit {
+    margin-top: 10px;
     margin-bottom: 0;
+
+    @include respond-to('medium') {
+      margin-top: 0;
+    }
   }
 }
 

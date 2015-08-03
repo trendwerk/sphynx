@@ -37,12 +37,16 @@ select {
   color: $text-color;
   display: block;
   font-family: $text-font;
-  font-size: 14px;
+  font-size: 16px;
   height: 40px;
   line-height: 25px;
   margin: 0;
   outline: none;
   padding: 0 12px;
+
+  @include respond-to('medium') {
+    font-size: 14px;
+  }
 
   &:focus {
     border: 1px solid shade($border-color, 20%);
@@ -50,7 +54,7 @@ select {
 }
 
 textarea {
-  padding: 6px 12px;
+  padding: 8px 12px;
 }
 
 input[type="submit"],

@@ -405,7 +405,7 @@ a {
   /* Add characters :before/:after link */
   /* Style for tags */ }
   a:hover {
-    color: #185eb3;
+    color: #1758a8;
     text-decoration: underline; }
   a.read-more {
     white-space: nowrap; }
@@ -494,7 +494,6 @@ table {
 blockquote {
   color: #999999;
   display: inline-block;
-  font-size: 16px;
   font-style: italic;
   margin: 0 0 30px;
   text-align: center;
@@ -546,6 +545,10 @@ ins {
  * @section     Typography
  * @subsection  Selection 
  */
+::-moz-selection {
+  background-color: #333333;
+  color: white; }
+
 ::selection {
   background-color: #333333;
   color: white; }
@@ -598,7 +601,7 @@ select {
   color: #666666;
   display: block;
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   height: 40px;
   line-height: 25px;
   margin: 0;
@@ -732,6 +735,23 @@ select {
   textarea:focus::-webkit-input-placeholder,
   select:focus::-webkit-input-placeholder {
     color: #999999; }
+  @media (min-width: 641px) {
+    input[type="datetime-local"],
+    input[type="datetime"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    input[type="month"],
+    input[type="email"],
+    input[type="date"],
+    input[type="text"],
+    input[type="time"],
+    input[type="week"],
+    input[type="tel"],
+    input[type="url"],
+    textarea,
+    select {
+      font-size: 14px; } }
   input[type="datetime-local"]:focus,
   input[type="datetime"]:focus,
   input[type="password"]:focus,
@@ -750,7 +770,7 @@ select {
     border: 1px solid #a3a3a3; }
 
 textarea {
-  padding: 6px 12px; }
+  padding: 8px 12px; }
 
 input[type="submit"],
 input[type="button"],
@@ -1082,11 +1102,13 @@ main {
       #header a {
         color: #333333; } }
   #header #logo {
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 5px; }
     @media (min-width: 981px) {
       #header #logo {
         display: block;
         float: left;
+        margin-top: 0;
         text-align: left; } }
     #header #logo #sitename {
       font-size: 28px;
@@ -1363,7 +1385,10 @@ main {
     box-sizing: border-box;
     list-style-type: none;
     margin: 0;
-    padding: 0 0 0 30px; }
+    padding: 0 0 0 15px; }
+    @media (min-width: 641px) {
+      #comments ol .children {
+        padding-left: 30px; } }
   #comments ol .comment-body {
     background-color: #ededed;
     box-sizing: border-box;
@@ -1371,19 +1396,31 @@ main {
     clear: both;
     float: left;
     margin-bottom: 30px;
-    padding: 30px 30px 30px 120px;
+    padding: 20px;
     width: 100%; }
+    @media (min-width: 641px) {
+      #comments ol .comment-body {
+        padding: 30px 30px 30px 120px; } }
   #comments ol .comment-meta {
     position: relative;
     width: 100%; }
   #comments ol .avatar {
     border-radius: 3px;
-    position: absolute;
-    left: -90px; }
+    display: block;
+    margin-bottom: 10px; }
+    @media (min-width: 641px) {
+      #comments ol .avatar {
+        left: -90px;
+        position: absolute; } }
   #comments ol .comment-author {
     float: left; }
   #comments ol .comment-metadata {
-    float: right; }
+    float: right;
+    width: 100%; }
+    @media (min-width: 641px) {
+      #comments ol .comment-metadata {
+        float: left;
+        width: inherit; } }
   #comments ol .comment-content {
     padding: 15px 0; }
     #comments ol .comment-content p:last-of-type {
@@ -1499,10 +1536,19 @@ main {
   #respond p {
     clear: both;
     float: left;
+    margin-bottom: 15px;
     width: 100%; }
+    @media (min-width: 641px) {
+      #respond p {
+        margin-bottom: 30px; } }
     #respond p label {
       float: left;
-      width: 25%; }
+      margin-bottom: 15px;
+      width: 100%; }
+      @media (min-width: 641px) {
+        #respond p label {
+          margin-bottom: 0;
+          width: 25%; } }
     #respond p.form-submit {
       margin-bottom: 0; }
   #respond p:last-of-type {
@@ -1517,14 +1563,34 @@ main {
     display: block;
     height: 200px;
     margin: 0;
-    width: 75%; }
+    width: 100%; }
+    @media (min-width: 641px) {
+      #respond textarea {
+        width: 75%; } }
+  #respond #author,
+  #respond #email,
+  #respond #url {
+    box-sizing: border-box;
+    width: 100%; }
+    @media (min-width: 641px) {
+      #respond #author,
+      #respond #email,
+      #respond #url {
+        width: 50%; } }
   #respond .form-allowed-tags,
   #respond .submit {
     float: left;
-    margin-left: 25%;
     width: auto; }
+    @media (min-width: 641px) {
+      #respond .form-allowed-tags,
+      #respond .submit {
+        margin-left: 25%; } }
   #respond .submit {
+    margin-top: 10px;
     margin-bottom: 0; }
+    @media (min-width: 641px) {
+      #respond .submit {
+        margin-top: 0; } }
 
 /**
  * @section     Parts

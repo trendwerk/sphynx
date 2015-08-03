@@ -118,7 +118,7 @@ a {
   text-decoration: underline;
 
   &:hover { 
-    color: shade($link-color, 15%);
+    color: shade($link-color, 20%);
     text-decoration: underline;
   }
 
@@ -248,7 +248,6 @@ table {
 blockquote {
   color: $text-light;
   display: inline-block;
-  font-size: 16px;
   font-style: italic;
   margin: 0 0 $line-height;
   text-align: center;
@@ -314,6 +313,11 @@ ins {
  * @section     Typography
  * @subsection  Selection 
  */
+
+::-moz-selection {
+  background-color: $primary-color;
+  color: white;  
+}
 
 ::selection {
   background-color: $primary-color;
