@@ -311,21 +311,6 @@ ins {
 
 /**
  * @section     Typography
- * @subsection  Selection 
- */
-
-::-moz-selection {
-  background-color: $primary-color;
-  color: white;  
-}
-
-::selection {
-  background-color: $primary-color;
-  color: white;
-}
-
-/**
- * @section     Typography
  * @subsection  Misc
  */
 
