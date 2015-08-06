@@ -14,7 +14,7 @@
  * @subsection  Main navigation
  */
 
-#main-navigation {
+.main-navigation {
   @include full-width;
   background-color: $primary-color;
   display: none;
