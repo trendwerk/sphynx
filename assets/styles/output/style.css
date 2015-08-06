@@ -405,7 +405,7 @@ a {
   /* Add characters :before/:after link */
   /* Style for tags */ }
   a:hover {
-    color: #1758a8;
+    color: #1759a9;
     text-decoration: underline; }
   a.read-more {
     white-space: nowrap; }
@@ -540,18 +540,6 @@ del {
 
 ins {
   text-decoration: none; }
-
-/**
- * @section     Typography
- * @subsection  Selection 
- */
-::-moz-selection {
-  background-color: #333333;
-  color: white; }
-
-::selection {
-  background-color: #333333;
-  color: white; }
 
 /**
  * @section     Typography
