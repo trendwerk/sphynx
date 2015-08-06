@@ -7,6 +7,7 @@ var gulp = require('gulp');
 var cache = require('gulp-cached');
 var scsslint = require('gulp-scss-lint');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var coffee = require('gulp-coffee');
 var gutil = require('gulp-util');
@@ -43,6 +44,7 @@ gulp.task('sass', function() {
   .on('error', handleError)
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
+  .pipe(autoprefixer())
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('assets/styles/output/'))
   .pipe(livereload())
