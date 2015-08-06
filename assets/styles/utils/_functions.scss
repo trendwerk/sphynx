@@ -73,12 +73,14 @@
   @include border-radius;
   @include hover(shade($primary-color, 15%), white);
   background-color: $primary-color;
+  border: 0;
   color: white;
   display: inline-block;
   font-weight: bold;
   height: 50px;
   line-height: 50px;
   margin: 0 10px 10px 0;
+  outline: 0;
   padding: 0 35px;
   position: relative;
   text-decoration: none;
@@ -99,6 +101,24 @@
     margin: 0 0 5px 5px;
     padding: 0 10px;
     text-transform: lowercase;
+
+  } @else if $type == pager {
+    background-color: $light-background;
+    color: $text-color;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px 10px 5px;
+    padding: 0 20px;
+    text-transform: none;
+
+    &.current,
+    &.dots {
+      background-color: tint($light-background, 75%);
+
+      &:hover {
+        color: inherit;
+      }
+    }
   }
 }
 

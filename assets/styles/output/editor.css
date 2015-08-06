@@ -493,12 +493,14 @@ hr {
 .button {
   border-radius: 3px;
   background-color: #333333;
+  border: 0;
   color: white;
   display: inline-block;
   font-weight: bold;
   height: 50px;
   line-height: 50px;
   margin: 0 10px 10px 0;
+  outline: 0;
   padding: 0 35px;
   position: relative;
   text-decoration: none;
@@ -512,12 +514,14 @@ hr {
   .button.secondary {
     border-radius: 3px;
     background-color: #333333;
+    border: 0;
     color: white;
     display: inline-block;
     font-weight: bold;
     height: 50px;
     line-height: 50px;
     margin: 0 10px 10px 0;
+    outline: 0;
     padding: 0 35px;
     position: relative;
     text-decoration: none;
@@ -629,12 +633,14 @@ hr {
   #respond small a {
     border-radius: 3px;
     background-color: #333333;
+    border: 0;
     color: white;
     display: inline-block;
     font-weight: bold;
     height: 50px;
     line-height: 50px;
     margin: 0 10px 10px 0;
+    outline: 0;
     padding: 0 35px;
     position: relative;
     text-decoration: none;
@@ -658,30 +664,8 @@ hr {
       color: white;
       outline: none;
       text-decoration: none; }
-  #respond #author,
-  #respond #email,
-  #respond #url {
-    box-sizing: border-box;
-    width: 100%; }
-    @media (min-width: 641px) {
-      #respond #author,
-      #respond #email,
-      #respond #url {
-        width: 50%; } }
-  #respond .form-allowed-tags,
   #respond .submit {
-    float: left;
-    width: auto; }
-    @media (min-width: 641px) {
-      #respond .form-allowed-tags,
-      #respond .submit {
-        margin-left: 25%; } }
-  #respond .submit {
-    margin-top: 10px;
-    margin-bottom: 0; }
-    @media (min-width: 641px) {
-      #respond .submit {
-        margin-top: 0; } }
+    margin-top: 10px; }
 
 /**
  * @section     Images
@@ -913,19 +897,18 @@ hr {
  * @subsection  Tags
  */
 .tags span {
-  display: inline-block;
-  line-height: inherit;
   padding-right: 15px; }
-
-.tag {
+.tags .tag {
   border-radius: 3px;
   background-color: #333333;
+  border: 0;
   color: white;
   display: inline-block;
   font-weight: bold;
   height: 50px;
   line-height: 50px;
   margin: 0 10px 10px 0;
+  outline: 0;
   padding: 0 35px;
   position: relative;
   text-decoration: none;
@@ -939,12 +922,12 @@ hr {
   margin: 0 0 5px 5px;
   padding: 0 10px;
   text-transform: lowercase; }
-  .tag:active, .tag:focus, .tag:hover {
+  .tags .tag:active, .tags .tag:focus, .tags .tag:hover {
     background-color: #2b2b2b;
     color: white;
     outline: none;
     text-decoration: none; }
-  .tag:active, .tag:focus, .tag:hover {
+  .tags .tag:active, .tags .tag:focus, .tags .tag:hover {
     background-color: #333333;
     color: white;
     outline: none;
@@ -967,55 +950,58 @@ hr {
  */
 #pager {
   clear: both;
-  padding: 30px 0;
-  text-align: center;
-  width: 100%; }
+  float: left;
+  width: 100%;
+  margin: 30px 0;
+  text-align: center; }
   #pager .page-numbers,
   #pager .prev,
   #pager .next {
-    background-color: #ededed;
-    border: 2px solid #ededed;
     border-radius: 3px;
-    color: #666666;
+    background-color: #333333;
+    border: 0;
+    color: white;
     display: inline-block;
-    height: 36px;
-    line-height: 37px;
-    margin: 0 5px 10px;
-    text-align: center; }
-  #pager a {
-    text-decoration: none; }
-    #pager a:hover {
-      background-color: #d5d5d5;
-      border-color: #d5d5d5; }
-  #pager .page-numbers {
-    width: 38px; }
-    #pager .page-numbers.current, #pager .page-numbers.dots {
-      background-color: white; }
-  #pager .prev,
-  #pager .next {
-    padding: 0 15px;
-    width: auto; }
-
-/**
- * @section     Parts
- * @subsection  Pages
- */
-.pages {
-  margin-bottom: 30px; }
-
-.pages a {
-  background-color: #ededed;
-  border-radius: 3px;
-  color: #666666;
-  display: inline-block;
-  font-size: 13px;
-  height: 40px;
-  line-height: 40px;
-  margin-right: 5px;
-  padding: 0 20px;
-  text-decoration: none; }
-  .pages a:hover {
-    background-color: #d5d5d5; }
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px 10px 0;
+    outline: 0;
+    padding: 0 35px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: #ededed;
+    color: #666666;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px 10px 5px;
+    padding: 0 20px;
+    text-transform: none; }
+    #pager .page-numbers:active, #pager .page-numbers:focus, #pager .page-numbers:hover,
+    #pager .prev:active,
+    #pager .prev:focus,
+    #pager .prev:hover,
+    #pager .next:active,
+    #pager .next:focus,
+    #pager .next:hover {
+      background-color: #2b2b2b;
+      color: white;
+      outline: none;
+      text-decoration: none; }
+    #pager .page-numbers.current, #pager .page-numbers.dots,
+    #pager .prev.current,
+    #pager .prev.dots,
+    #pager .next.current,
+    #pager .next.dots {
+      background-color: #fafafa; }
+      #pager .page-numbers.current:hover, #pager .page-numbers.dots:hover,
+      #pager .prev.current:hover,
+      #pager .prev.dots:hover,
+      #pager .next.current:hover,
+      #pager .next.dots:hover {
+        color: inherit; }
 
 /**
  * @section     Images

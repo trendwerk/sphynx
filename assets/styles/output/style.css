@@ -646,6 +646,7 @@ select {
   background-color: white;
   border: 1px solid #cccccc;
   border-radius: 3px;
+  box-sizing: border-box;
   color: #666666;
   display: block;
   font-family: "Helvetica Neue", sans-serif;
@@ -654,7 +655,8 @@ select {
   line-height: 25px;
   margin: 0;
   outline: none;
-  padding: 0 12px; }
+  padding: 0 12px;
+  width: 100%; }
   input[type="datetime-local"]:-moz-placeholder,
   input[type="datetime"]:-moz-placeholder,
   input[type="password"]:-moz-placeholder,
@@ -799,7 +801,8 @@ select {
     input[type="url"],
     textarea,
     select {
-      font-size: 14px; } }
+      font-size: 14px;
+      width: 50%; } }
   input[type="datetime-local"]:focus,
   input[type="datetime"]:focus,
   input[type="password"]:focus,
@@ -830,11 +833,39 @@ textarea {
 
 input[type="submit"],
 input[type="button"],
-input[type="reset"],
 button {
-  -webkit-appearance: none;
+  border-radius: 3px;
+  background-color: #333333;
   border: 0;
-  outline: 0; }
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px 10px 0;
+  outline: 0;
+  padding: 0 35px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-appearance: none; }
+  input[type="submit"]:active, input[type="submit"]:focus, input[type="submit"]:hover,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="button"]:hover,
+  button:active,
+  button:focus,
+  button:hover {
+    background-color: #2b2b2b;
+    color: white;
+    outline: none;
+    text-decoration: none; }
+  @media (min-width: 641px) {
+    input[type="submit"],
+    input[type="button"],
+    button {
+      margin-left: 25%; } }
 
 label {
   float: left;
@@ -1136,79 +1167,50 @@ select {
  * @section     Extends
  * @subsection  Button
  */
-.button, input[type="submit"],
-input[type="button"],
-input[type="reset"],
-button {
+.button {
   border-radius: 3px;
   background-color: #333333;
+  border: 0;
   color: white;
   display: inline-block;
   font-weight: bold;
   height: 50px;
   line-height: 50px;
   margin: 0 10px 10px 0;
+  outline: 0;
   padding: 0 35px;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap; }
-  .button:active, input[type="submit"]:active,
-  input[type="button"]:active,
-  input[type="reset"]:active,
-  button:active, .button:focus, input[type="submit"]:focus,
-  input[type="button"]:focus,
-  input[type="reset"]:focus,
-  button:focus, .button:hover, input[type="submit"]:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  button:hover {
+  .button:active, .button:focus, .button:hover {
     background-color: #2b2b2b;
     color: white;
     outline: none;
     text-decoration: none; }
-  .button.secondary, input.secondary[type="submit"],
-  input.secondary[type="button"],
-  input.secondary[type="reset"],
-  button.secondary {
+  .button.secondary {
     border-radius: 3px;
     background-color: #333333;
+    border: 0;
     color: white;
     display: inline-block;
     font-weight: bold;
     height: 50px;
     line-height: 50px;
     margin: 0 10px 10px 0;
+    outline: 0;
     padding: 0 35px;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
     background-color: #999999; }
-    .button.secondary:active, input.secondary[type="submit"]:active,
-    input.secondary[type="button"]:active,
-    input.secondary[type="reset"]:active,
-    button.secondary:active, .button.secondary:focus, input.secondary[type="submit"]:focus,
-    input.secondary[type="button"]:focus,
-    input.secondary[type="reset"]:focus,
-    button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover,
-    input.secondary[type="button"]:hover,
-    input.secondary[type="reset"]:hover,
-    button.secondary:hover {
+    .button.secondary:active, .button.secondary:focus, .button.secondary:hover {
       background-color: #2b2b2b;
       color: white;
       outline: none;
       text-decoration: none; }
-    .button.secondary:active, input.secondary[type="submit"]:active,
-    input.secondary[type="button"]:active,
-    input.secondary[type="reset"]:active,
-    button.secondary:active, .button.secondary:focus, input.secondary[type="submit"]:focus,
-    input.secondary[type="button"]:focus,
-    input.secondary[type="reset"]:focus,
-    button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover,
-    input.secondary[type="button"]:hover,
-    input.secondary[type="reset"]:hover,
-    button.secondary:hover {
+    .button.secondary:active, .button.secondary:focus, .button.secondary:hover {
       background-color: #828282;
       color: white;
       outline: none;
@@ -1308,12 +1310,14 @@ button {
   #respond small a {
     border-radius: 3px;
     background-color: #333333;
+    border: 0;
     color: white;
     display: inline-block;
     font-weight: bold;
     height: 50px;
     line-height: 50px;
     margin: 0 10px 10px 0;
+    outline: 0;
     padding: 0 35px;
     position: relative;
     text-decoration: none;
@@ -1337,30 +1341,8 @@ button {
       color: white;
       outline: none;
       text-decoration: none; }
-  #respond #author,
-  #respond #email,
-  #respond #url {
-    box-sizing: border-box;
-    width: 100%; }
-    @media (min-width: 641px) {
-      #respond #author,
-      #respond #email,
-      #respond #url {
-        width: 50%; } }
-  #respond .form-allowed-tags,
   #respond .submit {
-    float: left;
-    width: auto; }
-    @media (min-width: 641px) {
-      #respond .form-allowed-tags,
-      #respond .submit {
-        margin-left: 25%; } }
-  #respond .submit {
-    margin-top: 10px;
-    margin-bottom: 0; }
-    @media (min-width: 641px) {
-      #respond .submit {
-        margin-top: 0; } }
+    margin-top: 10px; }
 
 /**
  * @section     Images
@@ -1592,19 +1574,18 @@ button {
  * @subsection  Tags
  */
 .tags span {
-  display: inline-block;
-  line-height: inherit;
   padding-right: 15px; }
-
-.tag {
+.tags .tag {
   border-radius: 3px;
   background-color: #333333;
+  border: 0;
   color: white;
   display: inline-block;
   font-weight: bold;
   height: 50px;
   line-height: 50px;
   margin: 0 10px 10px 0;
+  outline: 0;
   padding: 0 35px;
   position: relative;
   text-decoration: none;
@@ -1618,12 +1599,12 @@ button {
   margin: 0 0 5px 5px;
   padding: 0 10px;
   text-transform: lowercase; }
-  .tag:active, .tag:focus, .tag:hover {
+  .tags .tag:active, .tags .tag:focus, .tags .tag:hover {
     background-color: #2b2b2b;
     color: white;
     outline: none;
     text-decoration: none; }
-  .tag:active, .tag:focus, .tag:hover {
+  .tags .tag:active, .tags .tag:focus, .tags .tag:hover {
     background-color: #333333;
     color: white;
     outline: none;
@@ -1646,55 +1627,58 @@ button {
  */
 #pager {
   clear: both;
-  padding: 30px 0;
-  text-align: center;
-  width: 100%; }
+  float: left;
+  width: 100%;
+  margin: 30px 0;
+  text-align: center; }
   #pager .page-numbers,
   #pager .prev,
   #pager .next {
-    background-color: #ededed;
-    border: 2px solid #ededed;
     border-radius: 3px;
-    color: #666666;
+    background-color: #333333;
+    border: 0;
+    color: white;
     display: inline-block;
-    height: 36px;
-    line-height: 37px;
-    margin: 0 5px 10px;
-    text-align: center; }
-  #pager a {
-    text-decoration: none; }
-    #pager a:hover {
-      background-color: #d5d5d5;
-      border-color: #d5d5d5; }
-  #pager .page-numbers {
-    width: 38px; }
-    #pager .page-numbers.current, #pager .page-numbers.dots {
-      background-color: white; }
-  #pager .prev,
-  #pager .next {
-    padding: 0 15px;
-    width: auto; }
-
-/**
- * @section     Parts
- * @subsection  Pages
- */
-.pages {
-  margin-bottom: 30px; }
-
-.pages a {
-  background-color: #ededed;
-  border-radius: 3px;
-  color: #666666;
-  display: inline-block;
-  font-size: 13px;
-  height: 40px;
-  line-height: 40px;
-  margin-right: 5px;
-  padding: 0 20px;
-  text-decoration: none; }
-  .pages a:hover {
-    background-color: #d5d5d5; }
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px 10px 0;
+    outline: 0;
+    padding: 0 35px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: #ededed;
+    color: #666666;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px 10px 5px;
+    padding: 0 20px;
+    text-transform: none; }
+    #pager .page-numbers:active, #pager .page-numbers:focus, #pager .page-numbers:hover,
+    #pager .prev:active,
+    #pager .prev:focus,
+    #pager .prev:hover,
+    #pager .next:active,
+    #pager .next:focus,
+    #pager .next:hover {
+      background-color: #2b2b2b;
+      color: white;
+      outline: none;
+      text-decoration: none; }
+    #pager .page-numbers.current, #pager .page-numbers.dots,
+    #pager .prev.current,
+    #pager .prev.dots,
+    #pager .next.current,
+    #pager .next.dots {
+      background-color: #fafafa; }
+      #pager .page-numbers.current:hover, #pager .page-numbers.dots:hover,
+      #pager .prev.current:hover,
+      #pager .prev.dots:hover,
+      #pager .next.current:hover,
+      #pager .next.dots:hover {
+        color: inherit; }
 
 /**
  * @section     Images

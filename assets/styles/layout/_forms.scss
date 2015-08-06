@@ -34,6 +34,7 @@ select {
   background-color: white;
   border: 1px solid $border-color;
   border-radius: 3px;
+  box-sizing: border-box;
   color: $text-color;
   display: block;
   font-family: $text-font;
@@ -43,9 +44,11 @@ select {
   margin: 0;
   outline: none;
   padding: 0 12px;
+  width: 100%;
 
   @include respond-to('medium') {
     font-size: 14px;
+    width: 50%;
   }
 
   &:focus {
@@ -68,12 +71,13 @@ textarea {
 
 input[type="submit"],
 input[type="button"],
-input[type="reset"],
 button {
-  @extend .button;
+  @include button;
   -webkit-appearance: none;
-  border: 0;
-  outline: 0;
+
+  @include respond-to('medium') {
+    margin-left: 25%;
+  }
 }
 
 label {

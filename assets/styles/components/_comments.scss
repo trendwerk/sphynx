@@ -105,33 +105,7 @@
     @include button(tag);
   }
 
-  #author,
-  #email,
-  #url {
-    box-sizing: border-box;
-    width: 100%;
-
-     @include respond-to('medium') {
-      width: 50%; 
-    }   
-  }
-  
-  .form-allowed-tags,
-  .submit {
-    float: left;
-    width: auto;
-
-    @include respond-to('medium') {
-      margin-left: 25%;
-    }
-  }
-
   .submit {
     margin-top: 10px;
-    margin-bottom: 0;
-
-    @include respond-to('medium') {
-      margin-top: 0;
-    }
   }
 }

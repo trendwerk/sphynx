@@ -16,72 +16,13 @@
  */
  
 #pager {
-  clear: both;
-  padding: $line-height 0;
+  @include full-width;
+  margin: $line-height 0;
   text-align: center;
-  width: 100%;
 
   .page-numbers,
   .prev,
   .next {
-    background-color: $light-background;
-    border: 2px solid $light-background;
-    border-radius: 3px;
-    color: $text-color;
-    display: inline-block;
-    height: 36px;
-    line-height: 37px;
-    margin: 0 5px 10px;
-    text-align: center;   
-  }
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      background-color: shade($light-background, 10%);
-      border-color: shade($light-background, 10%);
-    }
-  }
-
-  .page-numbers {
-    width: 38px;
-
-    &.current,
-    &.dots {
-      background-color: white;
-    }
-  }
-
-  .prev,
-  .next {
-    padding: 0 15px;
-    width: auto;
-  }
-}
-
-/**
- * @section     Parts
- * @subsection  Pages
- */
-
-.pages {
-  margin-bottom: $line-height;
-}
-
-.pages a {
-  background-color: $light-background;
-  border-radius: 3px;
-  color: $text-color;
-  display: inline-block;
-  font-size: 13px;
-  height: 40px;
-  line-height: 40px;
-  margin-right: 5px;
-  padding: 0 20px;
-  text-decoration: none;
-
-  &:hover {
-    background-color: shade($light-background, 10%);
+    @include button(pager); 
   }
 }
