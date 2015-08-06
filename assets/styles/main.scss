@@ -12,7 +12,7 @@
 /// @section     Main
 /// @subsection  Import Sass files
 
-@import 'vendors/normalize';
+@import '../../bower_components/normalize-scss/normalize';
 
 @import 'utils/variables';
 @import 'utils/functions';

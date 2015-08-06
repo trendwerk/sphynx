@@ -12,7 +12,7 @@
 /// @section     Editor
 /// @subsection  Import Sass files
 
-@import 'vendors/normalize';
+@import '../../bower_components/normalize-scss/normalize';
 
 @import 'utils/variables';
 @import 'utils/functions';
@@ -33,8 +33,7 @@
  * @section     Editor
  * @subsection  the style of the WYSIWYG itself
  */
-
-#tinymce {
+html {
   padding: 20px;
 }
 

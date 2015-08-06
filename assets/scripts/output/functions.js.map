@@ -1,10 +1,1 @@
-{
-  "version": 3,
-  "file": "functions.js",
-  "sourceRoot": "../",
-  "sources": [
-    "functions.coffee"
-  ],
-  "names": [],
-  "mappings": "AAAA;AAAA,EAAA,CAAA,CAAE,SAAA,GAAA;AAGA,IAAA,CAAA,CAAG,YAAH,CAAiB,CAAC,IAAlB,CAAuB,SAAA,GAAA;AACrB,MAAA,IAAwB,0BAA0B,CAAC,IAA3B,CAAiC,CAAA,CAAG,IAAH,CAAS,CAAC,IAAV,CAAgB,MAAhB,CAAjC,CAAxB;eAAA,CAAA,CAAG,IAAH,CAAS,CAAC,QAAV,CAAA,EAAA;OADqB;IAAA,CAAvB,CAAA,CAAA;WAIA,CAAA,CAAG,UAAH,CAAe,CAAC,IAAhB,CAAqB,SAAE,CAAF,GAAA;AACnB,MAAA,CAAA,CAAG,IAAH,CAAS,CAAC,IAAV,CAAgB,GAAhB,CAAqB,CAAC,IAAtB,CAA2B,KAA3B,EAAkC,mBAAA,GAAsB,CAAxD,CAAA,CAAA;aACA,CAAA,CAAG,IAAH,CAAS,CAAC,IAAV,CAAgB,uBAAhB,CAAyC,CAAC,QAA1C,CAAmD;AAAA,QAAA,IAAA,EAAM,OAAN;OAAnD,EAFmB;IAAA,CAArB,EAPA;EAAA,CAAF,CAAA,CAAA;AAAA"
-}
+{"version":3,"sources":["functions.coffee"],"names":[],"mappings":"AAAA,CAAA,CAAE,SAAA;EAGA,CAAA,CAAG,YAAH,CAAiB,CAAC,IAAlB,CAAuB,SAAA;IACrB,IAAG,0BAA0B,CAAC,IAA3B,CAAiC,CAAA,CAAG,IAAH,CAAS,CAAC,IAAV,CAAgB,MAAhB,CAAjC,CAAH;aACE,CAAA,CAAG,IAAH,CAAS,CAAC,QAAV,CAAA,EADF;;EADqB,CAAvB;SAKA,CAAA,CAAG,UAAH,CAAe,CAAC,IAAhB,CAAqB,SAAE,CAAF;IACnB,CAAA,CAAG,IAAH,CAAS,CAAC,IAAV,CAAgB,GAAhB,CAAqB,CAAC,IAAtB,CAA2B,KAA3B,EAAkC,mBAAA,GAAsB,CAAxD;WACA,CAAA,CAAG,IAAH,CAAS,CAAC,IAAV,CAAgB,uBAAhB,CAAyC,CAAC,QAA1C,CAAmD;MAAA,IAAA,EAAM,OAAN;KAAnD;EAFmB,CAArB;AARA,CAAF","file":"functions.js","sourceRoot":"/source/","sourcesContent":["$ ->\n\n  # Fancybox for images\n  $( 'a:has(img)' ).each ->\n    if /(jpeg|jpg|png|gif|bmp)$/i.test( $( this ).prop( 'href' ) )\n      $( this ).fancybox()\n\n  # Fancybox for galleries\n  $( '.gallery' ).each ( i ) ->\n    $( this ).find( 'a' ).prop 'rel', 'fancybox-gallery-' + i\n    $( this ).find( 'figure.gallery-item a' ).fancybox type: 'image'\n"]}

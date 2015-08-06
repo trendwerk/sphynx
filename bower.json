@@ -1,0 +1,7 @@
+{
+  "name": "trendpress",
+  "dependencies": {
+    "fancybox": "~2.1.5",
+    "normalize-scss": "~3.0.2"
+  }
+}
