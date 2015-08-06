@@ -43,7 +43,7 @@ module.exports = function( grunt ) {
 
 		/**
 		 * Compile CoffeeScript to JavaScript
-		 */	
+		 */
 		coffee: {
 			compile: {
 				options: {
@@ -62,13 +62,13 @@ module.exports = function( grunt ) {
 		},
 
 		/**
-		 * Compile SASS to CSS 
-		 */	
+		 * Compile SASS to CSS
+		 */
 		sass: {
 			compile: {
 				files: {
 					'assets/styles/output/editor.css': 'assets/styles/editor.scss',
-					'assets/styles/output/style.css': 'assets/styles/style.scss'
+					'assets/styles/output/style.css': 'assets/styles/main.scss'
 				}
 			}
 		},
@@ -85,7 +85,7 @@ module.exports = function( grunt ) {
 				},
 			},
 			sass: {
-				files: [ 'assets/styles/*' ],
+				files: [ 'assets/styles/**/*.scss' ],
 				tasks: [ 'sass' ],
 				options: {
 					livereload: true

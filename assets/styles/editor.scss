@@ -1,5 +1,5 @@
 ///
-/// @section Main stylesheet
+/// @section Editor stylesheet
 ///
 /// @package     WordPress
 /// @subpackage  TrendPress
@@ -9,7 +9,7 @@
 
 @charset 'UTF-8';
 
-/// @section     Main
+/// @section     Editor
 /// @subsection  Import Sass files
 
 @import 'vendors/normalize';
@@ -20,13 +20,6 @@
 
 @import 'base/typography';
 
-@import 'layout/container';
-@import 'layout/footer';
-@import 'layout/forms';
-@import 'layout/header';
-@import 'layout/images';
-@import 'layout/navigation';
-
 @import 'components/buttons';
 @import 'components/comments';
 @import 'components/gallery';
@@ -36,5 +29,16 @@
 @import 'components/tables';
 @import 'components/videos';
 
-@import 'pages/search';
-@import 'pages/single';
+/**
+ * @section     Editor
+ * @subsection  the style of the WYSIWYG itself
+ */
+
+#tinymce {
+  padding: 20px;
+}
+
+.video-container {
+  height: auto;
+  padding: 0;
+}
