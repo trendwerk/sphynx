@@ -41,21 +41,17 @@ gulp.task('sass', function() {
 gulp.task('coffee', function() {
   gulp.src(files.coffee)
   .pipe(cache('coffee'))
+  .pipe(coffeelint())
+  .pipe(coffeelint.reporter())
+  .pipe(coffeelint.reporter('fail'))
+  .on('error', function(error) {
+    this.end();
+  })
   .pipe(sourcemaps.init())
   .pipe(coffee({bare: true}).on('error', gutil.log))
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('assets/scripts/output/'))
   .pipe(livereload())
-});
-
-/**
- * Lint CoffeeScript
- */
-gulp.task('coffeelint', function() {
-  gulp.src(files.coffee)
-  .pipe(cache('coffeelint'))
-  .pipe(coffeelint())
-  .pipe(coffeelint.reporter())
 });
 
 /**
@@ -122,7 +118,7 @@ var welcomeMessage = [
 gulp.task('default', function() {
   gutil.log(gutil.colors.blue(welcomeMessage));
   gulp.watch(files.sass, ['sass']);
-  gulp.watch(files.coffee, ['coffee', 'coffeelint']);
+  gulp.watch(files.coffee, ['coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
   livereload.listen();
 });
