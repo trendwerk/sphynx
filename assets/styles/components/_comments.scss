@@ -37,6 +37,10 @@
   .comment-body {
     @include block;
     @include full-width;
+
+    @include respond-to('medium') {
+      padding-left: 120px;
+    }
   }
 
   .comment-meta {

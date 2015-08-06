@@ -41,7 +41,7 @@
   padding: 20px;
 
   @include respond-to('medium') {
-    padding: 30px 30px 30px 120px;
+    padding: 30px;
   }
 }
 
