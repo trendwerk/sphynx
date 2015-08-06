@@ -349,8 +349,7 @@ a {
   outline: 0;
   text-decoration: underline;
   /* More link */
-  /* Add characters :before/:after link */
-  /* Style for tags */ }
+  /* Add characters :before/:after link */ }
   a:hover {
     color: #1758a8;
     text-decoration: underline; }
@@ -364,19 +363,6 @@ a {
   a.read-more:after, a.next:after {
     content: '»';
     padding-left: 4px; }
-  a.tag {
-    background-color: #ededed;
-    border-radius: 3px;
-    color: #666666;
-    display: inline-block;
-    line-height: 25px;
-    margin: 0 0 5px 5px;
-    padding: 0 10px;
-    text-decoration: none;
-    text-transform: lowercase; }
-    a.tag:hover {
-      background-color: #333333;
-      color: white; }
 
 /**
  * @section     Typography
@@ -505,8 +491,8 @@ hr {
  * @subsection  Button
  */
 .button {
-  background-color: #333333;
   border-radius: 3px;
+  background-color: #333333;
   color: white;
   display: inline-block;
   font-weight: bold;
@@ -518,18 +504,36 @@ hr {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap; }
-  .button:active {
-    top: 1px; }
   .button:active, .button:focus, .button:hover {
     background-color: #2b2b2b;
     color: white;
     outline: none;
     text-decoration: none; }
   .button.secondary {
-    background-color: #999999;
-    color: white; }
+    border-radius: 3px;
+    background-color: #333333;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px 10px 0;
+    padding: 0 35px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: #999999; }
     .button.secondary:active, .button.secondary:focus, .button.secondary:hover {
-      background-color: #828282; }
+      background-color: #2b2b2b;
+      color: white;
+      outline: none;
+      text-decoration: none; }
+    .button.secondary:active, .button.secondary:focus, .button.secondary:hover {
+      background-color: #828282;
+      color: white;
+      outline: none;
+      text-decoration: none; }
 
 /**
  * 
@@ -908,6 +912,39 @@ hr {
   display: inline-block;
   line-height: inherit;
   padding-right: 15px; }
+
+.tag {
+  border-radius: 3px;
+  background-color: #333333;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px 10px 0;
+  padding: 0 35px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: #ededed;
+  color: #666666;
+  font-weight: normal;
+  height: 25px;
+  line-height: 25px;
+  margin: 0 0 5px 5px;
+  padding: 0 10px;
+  text-transform: lowercase; }
+  .tag:active, .tag:focus, .tag:hover {
+    background-color: #2b2b2b;
+    color: white;
+    outline: none;
+    text-decoration: none; }
+  .tag:active, .tag:focus, .tag:hover {
+    background-color: #333333;
+    color: white;
+    outline: none;
+    text-decoration: none; }
 
 /**
  * 

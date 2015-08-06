@@ -146,25 +146,6 @@ a {
     content: '»';
     padding-left: 4px;
   }
-
-  /* Style for tags */
-
-  &.tag {
-    background-color: $light-background;
-    border-radius: 3px;
-    color: $text-color;
-    display: inline-block;
-    line-height: 25px;
-    margin: 0 0 5px 5px;
-    padding: 0 10px;
-    text-decoration: none;
-    text-transform: lowercase;
-
-    &:hover {
-      background-color: $heading-color;
-      color: white;
-    }
-  }
 }
 
 /**

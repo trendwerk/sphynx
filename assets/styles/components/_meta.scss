@@ -34,11 +34,12 @@
  * @subsection  Tags
  */
 
-.tags {
-
-  span {
+.tags span {
     display: inline-block;
     line-height: inherit;
     padding-right: 15px;
-  }
+}
+
+.tag {
+  @include button(tag);
 }

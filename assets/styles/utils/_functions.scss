@@ -13,6 +13,63 @@
 ///
 
 /// @section     Mixins
+/// @subsection  Hover
+
+@mixin hover($background, $foreground) {
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $background;
+    color: $foreground;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+/// @section     Mixins
+/// @subsection  Animate
+
+@mixin border-radius {
+  border-radius: 3px;
+}
+
+/// @section     Mixins
+/// @subsection  Button
+
+@mixin button($type: main) {
+  @include border-radius;
+  @include hover(shade($primary-color, 15%), white);
+  background-color: $primary-color;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px 10px 0;
+  padding: 0 35px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @if $type == secondary {
+    @include hover(shade($secondary-color, 15%), white);
+    background-color: $secondary-color;
+
+  } @else if $type == tag {
+    @include hover($heading-color, white);
+    background-color: $light-background;
+    color: $text-color;
+    font-weight: normal;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 0 5px 5px;
+    padding: 0 10px;
+    text-transform: lowercase;
+  }
+}
+
+/// @section     Mixins
 /// @subsection  Animate
 
 @mixin animate-this($what: all, $time: 0.5s, $ease: ease-in-out) {
