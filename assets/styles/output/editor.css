@@ -48,13 +48,17 @@ button {
   input[type="reset"]:active,
   button:active {
     top: 1px; }
-  .button:active, input[type="submit"]:active,
+  .button:active,
+  input[type="submit"]:active,
   input[type="button"]:active,
   input[type="reset"]:active,
-  button:active, .button:focus, input[type="submit"]:focus,
+  button:active,
+  .button:focus,
+  input[type="submit"]:focus,
   input[type="button"]:focus,
   input[type="reset"]:focus,
-  button:focus, .button:hover, input[type="submit"]:hover,
+  button:focus,
+  .button:hover, input[type="submit"]:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   button:hover {
@@ -68,13 +72,17 @@ button {
   button.secondary {
     background-color: #999999;
     color: white; }
-    .button.secondary:active, input.secondary[type="submit"]:active,
+    .button.secondary:active,
+    input.secondary[type="submit"]:active,
     input.secondary[type="button"]:active,
     input.secondary[type="reset"]:active,
-    button.secondary:active, .button.secondary:focus, input.secondary[type="submit"]:focus,
+    button.secondary:active,
+    .button.secondary:focus,
+    input.secondary[type="submit"]:focus,
     input.secondary[type="button"]:focus,
     input.secondary[type="reset"]:focus,
-    button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover,
+    button.secondary:focus,
+    .button.secondary:hover, input.secondary[type="submit"]:hover,
     input.secondary[type="button"]:hover,
     input.secondary[type="reset"]:hover,
     button.secondary:hover {
@@ -343,8 +351,7 @@ select {
  *  Known issue: inner spacing remains in IE 6.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -571,12 +578,15 @@ a {
     text-decoration: underline; }
   a.read-more {
     white-space: nowrap; }
-  a.read-more:after, a.prev:before, a.next:after {
+  a.read-more:after,
+  a.prev:before,
+  a.next:after {
     display: inline-block; }
   a.prev:before {
     content: '«';
     padding-right: 4px; }
-  a.read-more:after, a.next:after {
+  a.read-more:after,
+  a.next:after {
     content: '»';
     padding-left: 4px; }
   a.tag {
@@ -1189,4 +1199,4 @@ select {
   height: auto;
   padding: 0; }
 
-/*# sourceMappingURL=editor.css.map */
+/*# sourceMappingURL=/editor.css.map */
