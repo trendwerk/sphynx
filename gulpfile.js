@@ -82,37 +82,37 @@ gulp.task('phpcs', function() {
 /**
  * Welcome message
  */
-var welcomeMessage = function() {
-  console.log('                                 ');
-  console.log('            ________             ');
-  console.log('           //   |\\ \\\\            ');
-  console.log('          //    | \\ \\\\           ');
-  console.log('    |\\\\  //     |  \\ \\\\  //|     ');
-  console.log('    ||\\\\//       —-—  \\\\//||     ');
-  console.log('    || \\/______________\\/ ||     ');
-  console.log('    ||                    ||     ');
-  console.log('    ||                    ||     ');
-  console.log('    ||    ( )      ( )    ||     ');
-  console.log('    ||        ____        ||     ');
-  console.log('    ||        \\  /        ||     ');
-  console.log('    ||         ||         ||     ');
-  console.log('    ||     \\__/  \\__/     ||     ');
-  console.log('    ||                    ||     ');
-  console.log('    ||                    ||     ');
-  console.log('                                 ');
-  console.log('  #   #  ###  #     #      ###   ');
-  console.log('  #   # #   # #     #     #   #  ');
-  console.log('  ##### ##### #     #     #   #  ');
-  console.log('  #   # #   # #     #     #   #  ');
-  console.log('  #   # #   # ##### #####  ###   ');
-  console.log('                                 ');
-};
+var welcomeMessage = [
+  '',
+  '            ________',
+  '           //   |\\ \\\\',
+  '          //    | \\ \\\\',
+  '    |\\\\  //     |  \\ \\\\  //|',
+  '    ||\\\\//       —-—  \\\\//||',
+  '    || \\/______________\\/ ||',
+  '    ||                    ||',
+  '    ||                    ||',
+  '    ||    ( )      ( )    ||',
+  '    ||        ____        ||',
+  '    ||        \\  /        ||',
+  '    ||         ||         ||',
+  '    ||     \\__/  \\__/     ||',
+  '    ||                    ||',
+  '    ||                    ||',
+  '',
+  '  #   #  ###  #     #      ###',
+  '  #   # #   # #     #     #   #',
+  '  ##### ##### #     #     #   #',
+  '  #   # #   # #     #     #   #',
+  '  #   # #   # ##### #####  ###',
+  ''
+].join("\n");
 
 /**
  * Watch
  */
 gulp.task('default', function() {
-  welcomeMessage();
+  gutil.log(gutil.colors.blue(welcomeMessage));
   gulp.watch(files.sass, ['sass']);
   gulp.watch(files.coffee, ['coffee', 'coffeelint']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
