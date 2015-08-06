@@ -21,13 +21,17 @@ button {
   input[type="reset"]:active,
   button:active {
     top: 1px; }
-  .button:active, input[type="submit"]:active,
+  .button:active,
+  input[type="submit"]:active,
   input[type="button"]:active,
   input[type="reset"]:active,
-  button:active, .button:focus, input[type="submit"]:focus,
+  button:active,
+  .button:focus,
+  input[type="submit"]:focus,
   input[type="button"]:focus,
   input[type="reset"]:focus,
-  button:focus, .button:hover, input[type="submit"]:hover,
+  button:focus,
+  .button:hover, input[type="submit"]:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   button:hover {
@@ -41,13 +45,17 @@ button {
   button.secondary {
     background: #999;
     color: #fff; }
-    .button.secondary:active, input.secondary[type="submit"]:active,
+    .button.secondary:active,
+    input.secondary[type="submit"]:active,
     input.secondary[type="button"]:active,
     input.secondary[type="reset"]:active,
-    button.secondary:active, .button.secondary:focus, input.secondary[type="submit"]:focus,
+    button.secondary:active,
+    .button.secondary:focus,
+    input.secondary[type="submit"]:focus,
     input.secondary[type="button"]:focus,
     input.secondary[type="reset"]:focus,
-    button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover,
+    button.secondary:focus,
+    .button.secondary:hover, input.secondary[type="submit"]:hover,
     input.secondary[type="button"]:hover,
     input.secondary[type="reset"]:hover,
     button.secondary:hover {
@@ -305,14 +313,17 @@ a {
     text-decoration: underline; }
   a.read-more {
     white-space: nowrap; }
-  a.read-more:after, a.prev:before, a.next:after {
+  a.read-more:after,
+  a.prev:before,
+  a.next:after {
     display: inline-block;
     font-family: fontawesome;
     font-size: 9px; }
   a.prev:before {
     content: '\f053';
     padding-right: 4px; }
-  a.read-more:after, a.next:after {
+  a.read-more:after,
+  a.next:after {
     content: '\f054';
     padding-left: 4px; }
   a.tag {
@@ -956,12 +967,15 @@ main {
       #main-navigation ul li:hover a {
         background: #222;
         text-decoration: none; } }
-    #main-navigation ul li.current_page_item > a, #main-navigation ul li.current_page_parent > a, #main-navigation ul li.current_page_ancestor > a {
+    #main-navigation ul li.current_page_item > a,
+    #main-navigation ul li.current_page_parent > a,
+    #main-navigation ul li.current_page_ancestor > a {
       font-weight: bold; }
     #main-navigation ul li ul {
       margin: 0 0 0 20px; }
     @media (min-width: 641px) {
-      #main-navigation ul li.menu-item-has-children > a::after, #main-navigation ul li.page_item_has_children > a::after {
+      #main-navigation ul li.menu-item-has-children > a::after,
+      #main-navigation ul li.page_item_has_children > a::after {
         border-color: #fff transparent transparent transparent;
         border-style: solid;
         border-width: 4px 4px 0 4px;
@@ -983,7 +997,8 @@ main {
         z-index: 1; }
         #main-navigation ul li:hover ul li {
           width: 100%; }
-          #main-navigation ul li:hover ul li.menu-item-has-children > a::after, #main-navigation ul li:hover ul li.page_item_has_children > a::after {
+          #main-navigation ul li:hover ul li.menu-item-has-children > a::after,
+          #main-navigation ul li:hover ul li.page_item_has_children > a::after {
             display: none; }
           #main-navigation ul li:hover ul li a {
             box-sizing: border-box;
@@ -1022,7 +1037,9 @@ main {
       text-align: center; }
       main .wrapper .meta a {
         color: #666; }
-        main .wrapper .meta a:active, main .wrapper .meta a:focus, main .wrapper .meta a:hover {
+        main .wrapper .meta a:active,
+        main .wrapper .meta a:focus,
+        main .wrapper .meta a:hover {
           color: #1d6fd1; }
     main .wrapper .tags span {
       display: block;
@@ -1049,7 +1066,9 @@ main {
   margin-bottom: 0; }
   #footer a {
     color: #fff; }
-    #footer a:active, #footer a:focus, #footer a:hover {
+    #footer a:active,
+    #footer a:focus,
+    #footer a:hover {
       color: #ccc; }
   #footer #credits {
     float: left;
@@ -1090,6 +1109,7 @@ main {
 .blog .archive-description {
   margin-bottom: 30px;
   text-align: center; }
+
 .archive article,
 .search article,
 .blog article {
@@ -1111,7 +1131,9 @@ main {
     .blog article h2 a {
       color: #333;
       text-decoration: none; }
-      .archive article h2 a:active, .archive article h2 a:focus, .archive article h2 a:hover,
+      .archive article h2 a:active,
+      .archive article h2 a:focus,
+      .archive article h2 a:hover,
       .search article h2 a:active,
       .search article h2 a:focus,
       .search article h2 a:hover,
@@ -1136,6 +1158,7 @@ main {
 .single main .featured-image {
   float: right;
   margin: 5px 0 10px 20px; }
+
 .single main nav.pages {
   margin-bottom: 30px; }
   .single main nav.pages a {
@@ -1149,7 +1172,9 @@ main {
     margin-right: 5px;
     padding: 0 20px;
     text-decoration: none; }
-    .single main nav.pages a:active, .single main nav.pages a:focus, .single main nav.pages a:hover {
+    .single main nav.pages a:active,
+    .single main nav.pages a:focus,
+    .single main nav.pages a:hover {
       background: #d4d4d4; }
 
 .search article h2 {
@@ -1272,7 +1297,7 @@ p.tags {
           position: relative;
           font-weight: 700; }
           #comments ol .comment-body .reply a:before {
-            content: " ";
+            content: "  ";
             font-family: FontAwesome;
             font-style: normal;
             font-weight: normal;
@@ -1301,12 +1326,15 @@ p.tags {
     text-align: center; }
   #pager a {
     text-decoration: none; }
-    #pager a:active, #pager a:focus, #pager a:hover {
+    #pager a:active,
+    #pager a:focus,
+    #pager a:hover {
       background: #d4d4d4;
       border-color: #d4d4d4; }
   #pager .page-numbers {
     width: 38px; }
-    #pager .page-numbers.current, #pager .page-numbers.dots {
+    #pager .page-numbers.current,
+    #pager .page-numbers.dots {
       background-color: #fff; }
   #pager .prev,
   #pager .next {
@@ -1428,4 +1456,4 @@ p.tags {
     -o-transform: rotate(45deg) translate(-6px, -6px);
     transform: rotate(45deg) translate(-6px, -6px); }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=/style.css.map */
