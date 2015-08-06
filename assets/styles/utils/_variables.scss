@@ -19,11 +19,13 @@ $text-font:        'Helvetica Neue', sans-serif;
 $primary-color:     hsl(0, 0%, 20%);
 $secondary-color:   hsl(0, 0%, 60%);
 
+$black:				hsl(0, 0%, 0%);
 $marker:            hsl(47, 100%, 85%);
 $red:               hsl(0, 58%, 52%);
+$white:             hsl(0, 0%, 100%);
 
 $light-background:  hsl(0, 0%, 93%);
-$body-background:   white;
+$body-background:   $white;
 $border-color:      hsl(0, 0%, 80%);
 
 $heading-color:     hsl(0, 0%, 20%);

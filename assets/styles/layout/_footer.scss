@@ -17,11 +17,11 @@
 #footer {
   @include full-width;
   background-color: $primary-color;
-  color: white;
+  color: $white;
   margin-bottom: 0;
 
   a {
-    color: white;
+    color: $white;
 
     &:active,
     &:focus,
@@ -68,7 +68,7 @@
     }
 
     li:after {
-      color: white;
+      color: $white;
       content: '|';
       padding: 0 5px 0 10px;
     }

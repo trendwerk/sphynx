@@ -956,7 +956,6 @@ button {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
   -webkit-appearance: none; }
   input[type="submit"]:active,
   input[type="submit"]:focus,
@@ -1352,8 +1351,7 @@ main {
   padding: 0 35px;
   position: relative;
   text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap; }
+  text-transform: uppercase; }
   .button:active,
   .button:focus,
   .button:hover {
@@ -1376,7 +1374,6 @@ main {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    white-space: nowrap;
     background-color: #999999; }
     .button.secondary:active,
     .button.secondary:focus,
@@ -1502,7 +1499,6 @@ main {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    white-space: nowrap;
     background-color: #ededed;
     color: #666666;
     font-weight: normal;
@@ -1775,7 +1771,6 @@ main {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
   background-color: #ededed;
   color: #666666;
   font-weight: normal;
@@ -1837,12 +1832,11 @@ main {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    white-space: nowrap;
     background-color: #ededed;
     color: #666666;
     height: 40px;
     line-height: 40px;
-    margin: 0 5px 10px 5px;
+    margin: 0 5px 10px;
     padding: 0 20px;
     text-transform: none; }
     #pager .page-numbers:active,
@@ -1906,9 +1900,9 @@ main {
 
 /**
  * @section Templates
- * 
+ *
  * Defines the template specific styling
- * 
+ *
  * @package     WordPress
  * @subpackage  TrendPress
  * @author      Trendwerk

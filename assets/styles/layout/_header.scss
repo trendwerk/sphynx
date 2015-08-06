@@ -16,7 +16,7 @@
   }
 
   a {
-    color: white;
+    color: $white;
     text-decoration: none;
 
     @include respond-to('large') {

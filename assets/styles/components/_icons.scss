@@ -22,7 +22,7 @@
 
   .line {
     @include transition(-webkit-transform 0.2s ease-out);
-    background-color: white;
+    background-color: $white;
     height: 3px;
     position: absolute;
     width: 24px;
@@ -61,7 +61,7 @@
  */
 
 .glass {
-  border: 3px solid white;
+  border: 3px solid $white;
   border-radius: 100%;
   display: block;
   height: 10px;
@@ -70,7 +70,7 @@
 
   &:after {
     @include transform(rotate(45deg));
-    background-color: white;
+    background-color: $white;
     content: '';
     height: 3px;
     position: absolute;

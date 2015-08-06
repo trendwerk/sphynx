@@ -71,10 +71,10 @@
 
 @mixin button($type: main) {
   @include border-radius;
-  @include hover(shade($primary-color, 15%), white);
+  @include hover(shade($primary-color, 15%), $white);
   background-color: $primary-color;
   border: 0;
-  color: white;
+  color: $white;
   display: inline-block;
   font-weight: bold;
   height: 50px;
@@ -85,14 +85,14 @@
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
+  $white-space: nowrap;
 
   @if $type == secondary {
-    @include hover(shade($secondary-color, 15%), white);
+    @include hover(shade($secondary-color, 15%), $white);
     background-color: $secondary-color;
 
   } @else if $type == tag {
-    @include hover($heading-color, white);
+    @include hover($heading-color, $white);
     background-color: $light-background;
     color: $text-color;
     font-weight: normal;
@@ -241,7 +241,7 @@
 /// @subsection  Shade
 
 @function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
+  @return mix($black, $color, $percentage);
 }
 
 /// @section     Mixins
@@ -263,7 +263,7 @@
 /// @subsection  Tint
 
 @function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
+  @return mix($white, $color, $percentage);
 }
 
 /// @section     Mixins

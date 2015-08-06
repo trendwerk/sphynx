@@ -42,7 +42,7 @@
 
   .gallery-caption {
     @include animate-this(opacity, 400ms, ease-in-out);
-    background-color: black;
+    background-color: $black;
     box-sizing: border-box;
     color: white;
     font-size: 12px;
@@ -58,7 +58,7 @@
     width: 100%;
 
     &:before {
-      box-shadow: 0 -10px 15px black inset;
+      box-shadow: 0 -10px 15px $black inset;
       content: '';
       height: 100%;
       left: 0;

@@ -28,7 +28,7 @@
   }
 
   a {
-    color: white;
+    color: $white;
     text-decoration: none;
 
     &:hover {
@@ -49,7 +49,7 @@
     }
 
     li:hover {
-      background-color: black;
+      background-color: $black;
 
       /* Display drop-down on hover */
 
@@ -72,7 +72,7 @@
 
     .menu-item-has-children > a::after,
     .page_item_has_children > a::after {
-      border-color: white transparent transparent;
+      border-color: $white transparent transparent;
       border-style: solid;
       border-width: 4px 4px 0;
       content: '';
@@ -94,7 +94,7 @@
 
     .children,
     .sub-menu {
-      background-color: black;
+      background-color: $black;
       display: none;
       padding: 10px 0;
       position: absolute;

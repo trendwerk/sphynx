@@ -677,8 +677,7 @@ table {
   padding: 0 35px;
   position: relative;
   text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap; }
+  text-transform: uppercase; }
   .button:active,
   .button:focus,
   .button:hover {
@@ -701,7 +700,6 @@ table {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    white-space: nowrap;
     background-color: #999999; }
     .button.secondary:active,
     .button.secondary:focus,
@@ -827,7 +825,6 @@ table {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    white-space: nowrap;
     background-color: #ededed;
     color: #666666;
     font-weight: normal;
@@ -1100,7 +1097,6 @@ table {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
   background-color: #ededed;
   color: #666666;
   font-weight: normal;
@@ -1162,12 +1158,11 @@ table {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    white-space: nowrap;
     background-color: #ededed;
     color: #666666;
     height: 40px;
     line-height: 40px;
-    margin: 0 5px 10px 5px;
+    margin: 0 5px 10px;
     padding: 0 20px;
     text-transform: none; }
     #pager .page-numbers:active,
