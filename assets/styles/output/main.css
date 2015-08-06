@@ -676,6 +676,7 @@ hr {
           float: right;
           width: auto; } }
     #footer #credits ul {
+      list-style: none;
       margin: 0;
       padding: 0; }
     #footer #credits li {
@@ -959,7 +960,7 @@ select {
 
 /**
  * @section     Forms
- * @subsection  Fix for admin-bar search form 
+ * @subsection  Fix for admin-bar search form
  */
 .adminbar-input {
   min-width: 0; }
@@ -1217,7 +1218,7 @@ main {
   padding: 0 0 20px;
   /* Desktop navigation */ }
   #main-navigation ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0; }
   #main-navigation li {
@@ -1349,7 +1350,7 @@ main {
       text-decoration: none; }
 
 /**
- * 
+ *
  * @section Components
  *
  * Defines the styling for components
@@ -1744,7 +1745,7 @@ main {
     text-decoration: none; }
 
 /**
- * 
+ *
  * @section Components
  *
  * Defines the styling for components
@@ -1883,9 +1884,9 @@ table {
 
 /**
  * @section Templates
- * 
+ *
  * Defines the template specific styling
- * 
+ *
  * @package     WordPress
  * @subpackage  TrendPress
  * @author      Trendwerk
