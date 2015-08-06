@@ -4,6 +4,7 @@
  */
 
 #footer {
+  @include full-width;
   background-color: $primary-color;
   color: white;
   margin-bottom: 0;

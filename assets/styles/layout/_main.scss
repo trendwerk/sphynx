@@ -1,62 +1,18 @@
 /**
  * @section     Layout
- * @subsection  Default
+ * @subsection  Main
  */
 
 body {
   background-color: $body-background;
 }
 
-#main-navigation,
-#header,
-#footer,
 main {
-  clear: both;
-  float: left;
-  margin: 0;
-  width: 100%;
-
-  .wrapper {
-    box-sizing: border-box;
-    padding: 0 20px;
-    width: 100%;
-
-    @include respond-to('medium') {
-      padding: 0 40px;
-    }
-
-    @include respond-to('large') {
-      margin: 0 auto;
-      width: 980px;
-    }
-
-    @include respond-to('huge') {
-      width: 1160px;
-    }
-  }
-}
-
-/**
- * @section     Layout
- * @subsection  Main
- */
-
-main {
-  margin-top: 0;
+  @include full-width;
   padding: ($line-height * 2) 0 $line-height;
 
   @include respond-to('medium') {
     background-color: $body-background;
-  }
-
-  .wrapper {
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 100%;
-
-    @media(min-width: 821px) {
-      width: 780px;
-    }
   }
 }
 

@@ -4,6 +4,7 @@
  */
 
 #main-navigation {
+  @include full-width;
   background-color: $primary-color;
   display: none;
   margin: 0;

@@ -488,92 +488,35 @@ hr {
 
 /**
  * @section     Layout
- * @subsection  Default
- */
-body {
-  background-color: white; }
-
-#main-navigation,
-#header,
-#footer,
-main {
-  clear: both;
-  float: left;
-  margin: 0;
-  width: 100%; }
-  #main-navigation .wrapper,
-  #header .wrapper,
-  #footer .wrapper,
-  main .wrapper {
-    box-sizing: border-box;
-    padding: 0 20px;
-    width: 100%; }
-    @media (min-width: 641px) {
-      #main-navigation .wrapper,
-      #header .wrapper,
-      #footer .wrapper,
-      main .wrapper {
-        padding: 0 40px; } }
-    @media (min-width: 981px) {
-      #main-navigation .wrapper,
-      #header .wrapper,
-      #footer .wrapper,
-      main .wrapper {
-        margin: 0 auto;
-        width: 980px; } }
-    @media (min-width: 1161px) {
-      #main-navigation .wrapper,
-      #header .wrapper,
-      #footer .wrapper,
-      main .wrapper {
-        width: 1160px; } }
-
-/**
- * @section     Layout
  * @subsection  Main
  */
-main {
-  margin-top: 0;
-  padding: 60px 0 30px; }
-  @media (min-width: 641px) {
-    main {
-      background-color: white; } }
-  main .wrapper {
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 100%; }
-    @media (min-width: 821px) {
-      main .wrapper {
-        width: 780px; } }
-
-/**
- * @section     Parts
- * @subsection  Hentry
- */
-.hentry {
-  clear: both;
-  padding: 0 0 30px;
-  margin: 0 0 30px;
-  text-align: left;
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 20px;
   width: 100%; }
-  .hentry.sticky {
-    background-color: #ededed;
-    box-sizing: border-box;
-    padding: 30px;
-    margin-bottom: 60px; }
-  .hentry h2 {
-    margin: 0 0 10px; }
-  .hentry .featured {
-    float: right;
-    margin: 0 0 30px 20px; }
-  .hentry p:last-of-type {
-    margin-bottom: 0; }
+  @media (min-width: 641px) {
+    .wrapper {
+      padding: 0 40px; } }
+  @media (min-width: 981px) {
+    .wrapper {
+      margin: 0 auto;
+      width: 980px; } }
+  @media (min-width: 1161px) {
+    .wrapper {
+      width: 1160px; } }
+
+@media (min-width: 821px) {
+  main .wrapper {
+    width: 780px; } }
 
 /**
  * @section     Layout
  * @subsection  Footer
  */
 #footer {
+  clear: both;
+  float: left;
+  width: 100%;
   background-color: #333333;
   color: white;
   margin-bottom: 0; }
@@ -952,6 +895,9 @@ select {
  * @subsection  Header
  */
 #header {
+  clear: both;
+  float: left;
+  width: 100%;
   background-color: #333333;
   box-sizing: border-box;
   padding: 20px 0;
@@ -1082,9 +1028,51 @@ select {
 
 /**
  * @section     Layout
+ * @subsection  Main
+ */
+body {
+  background-color: white; }
+
+main {
+  clear: both;
+  float: left;
+  width: 100%;
+  padding: 60px 0 30px; }
+  @media (min-width: 641px) {
+    main {
+      background-color: white; } }
+
+/**
+ * @section     Parts
+ * @subsection  Hentry
+ */
+.hentry {
+  clear: both;
+  padding: 0 0 30px;
+  margin: 0 0 30px;
+  text-align: left;
+  width: 100%; }
+  .hentry.sticky {
+    background-color: #ededed;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: 60px; }
+  .hentry h2 {
+    margin: 0 0 10px; }
+  .hentry .featured {
+    float: right;
+    margin: 0 0 30px 20px; }
+  .hentry p:last-of-type {
+    margin-bottom: 0; }
+
+/**
+ * @section     Layout
  * @subsection  Main navigation
  */
 #main-navigation {
+  clear: both;
+  float: left;
+  width: 100%;
   background-color: #333333;
   display: none;
   margin: 0;
