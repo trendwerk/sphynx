@@ -1,7 +1,8 @@
 /**
- * @section Typography
- * 
- * Defines the styling of text elements
+ *
+ * @section Base
+ *
+ * Defines the styling for base elements
  *
  * @package     WordPress
  * @subpackage  TrendPress
@@ -25,7 +26,7 @@ html {
  */
 
 body {
-  color: $text-color; 
+  color: $text-color;
   font-family: $text-font;
   font-size: 14px;
   line-height: $line-height;
@@ -108,16 +109,16 @@ h6 {
 }
 
 /**
- * @section     Typography 
+ * @section     Typography
  * @subsection  Links
  */
- 
+
 a {
   color: $link-color;
   outline: 0;
   text-decoration: underline;
 
-  &:hover { 
+  &:hover {
     color: shade($link-color, 20%);
     text-decoration: underline;
   }
@@ -178,7 +179,7 @@ i {
  */
 
 ul,
-ol { 
+ol {
   list-style-position: outside;
   margin: 0 0 $line-height 20px;
 
@@ -216,7 +217,7 @@ cite {
   display: block;
   font-style: normal;
   font-weight: bold;
-  margin: 5px 0 10px; 
+  margin: 5px 0 10px;
 
   a {
     color: $text-color;
@@ -234,10 +235,10 @@ pre {
   color: $text-color;
   font-size: 13px;
 }
-  
+
 pre {
-  margin-bottom: 20px; 
-  padding: 20px; 
+  margin-bottom: 20px;
+  padding: 20px;
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   white-space: pre-wrap;
@@ -245,7 +246,7 @@ pre {
 
 /**
  * @section     Typography
- * @subsection  Deleted and inserted text 
+ * @subsection  Deleted and inserted text
  */
 
 del {

@@ -20,10 +20,10 @@
 
 @import 'base/typography';
 @import 'base/tables';
+@import 'base/forms';
 
 @import 'layout/container';
 @import 'layout/footer';
-@import 'layout/forms';
 @import 'layout/header';
 @import 'layout/images';
 @import 'layout/main';
@@ -31,6 +31,8 @@
 
 @import 'components/buttons';
 @import 'components/comments';
+@import 'components/admin-bar';
+@import 'components/search-form';
 @import 'components/gallery';
 @import 'components/icons';
 @import 'components/meta';
