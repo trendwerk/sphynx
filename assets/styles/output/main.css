@@ -1634,7 +1634,7 @@ main {
       opacity: 1; }
   .gallery .gallery-caption {
     -webkit-transition: opacity 400ms ease-in-out;
-    transition: opacity 400ms ease-in-out;
+            transition: opacity 400ms ease-in-out;
     background-color: black;
     box-sizing: border-box;
     color: white;

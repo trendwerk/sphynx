@@ -143,7 +143,6 @@
 /// @subsection  Animate
 
 @mixin animate-this($what: all, $time: 0.5s, $ease: ease-in-out) {
-  -webkit-transition: $what $time $ease;
   transition: $what $time $ease;
 }
 
