@@ -151,11 +151,7 @@
 /// @subsection  Collumns
 
 @mixin columns($number, $gap) {
-  -moz-column-count: $number;
-  -webkit-column-count: $number;
   column-count: $number;
-  -moz-column-gap: $gap;
-  -webkit-column-gap: $gap;
   column-gap: $gap;
 }
 
