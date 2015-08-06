@@ -1224,8 +1224,7 @@ main {
         padding: 10px 15px; }
         #main-navigation a:hover {
           text-decoration: none; }
-      #main-navigation .menu-item-has-children > a::after,
-      #main-navigation .page_item_has_children > a::after {
+      #main-navigation .menu-item-has-children > a::after {
         border-color: white transparent transparent;
         border-style: solid;
         border-width: 4px 4px 0;
@@ -1234,6 +1233,8 @@ main {
         height: 0;
         margin: 0 0 3px 5px;
         width: 0; }
+      #main-navigation .current-menu-item {
+        background-color: black; }
       #main-navigation .children,
       #main-navigation .sub-menu {
         background-color: black;
