@@ -36,7 +36,9 @@ function handleError(error) {
  */
 gulp.task('sass', function() {
   gulp.src(files.sass)
-  .pipe(scsslint())
+  .pipe(scsslint({
+    'config': 'config/lint/scss.yml'
+  }))
   .pipe(scsslint.failReporter())
   .on('error', handleError)
   .pipe(sourcemaps.init())
