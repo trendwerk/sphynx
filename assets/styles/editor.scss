@@ -33,6 +33,7 @@
  * @section     Editor
  * @subsection  the style of the WYSIWYG itself
  */
+
 html {
   padding: 20px;
 }
@@ -40,4 +41,18 @@ html {
 .video-container {
   height: auto;
   padding: 0;
+}
+
+#tinymce {
+  .gallery-columns-1 .gallery-item:nth-of-type(1n),
+  .gallery-columns-2 .gallery-item:nth-of-type(2n - 1),
+  .gallery-columns-3 .gallery-item:nth-of-type(3n - 2),
+  .gallery-columns-4 .gallery-item:nth-of-type(4n - 3),
+  .gallery-columns-5 .gallery-item:nth-of-type(5n - 4),
+  .gallery-columns-6 .gallery-item:nth-of-type(6n - 5),
+  .gallery-columns-7 .gallery-item:nth-of-type(7n - 6),
+  .gallery-columns-8 .gallery-item:nth-of-type(8n - 7),
+  .gallery-columns-9 .gallery-item:nth-of-type(9n - 8) {
+    margin-left: 12px;
+  }
 }
