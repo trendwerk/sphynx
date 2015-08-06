@@ -67,14 +67,6 @@
       width: 0;
     }
 
-    /* Currently active items */
-
-    .current_page_ancestor > a,
-    .current_page_parent > a,
-    .current_page_item > a {
-      text-decoration: underline;
-    }
-
     /* Drop-down */
 
     .children,
@@ -98,10 +90,6 @@
 
       a:after {
         display: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
       }
     }
   }

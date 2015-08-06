@@ -1210,7 +1210,6 @@ main {
       padding-bottom: 0;
       /* Top level */
       /* Add arrow list items with children */
-      /* Currently active items */
       /* Drop-down */ }
       #main-navigation li {
         float: left; }
@@ -1235,10 +1234,6 @@ main {
         height: 0;
         margin: 0 0 3px 5px;
         width: 0; }
-      #main-navigation .current_page_ancestor > a,
-      #main-navigation .current_page_parent > a,
-      #main-navigation .current_page_item > a {
-        text-decoration: underline; }
       #main-navigation .children,
       #main-navigation .sub-menu {
         background-color: black;
@@ -1256,10 +1251,7 @@ main {
           padding: 5px 15px; }
         #main-navigation .children a:after,
         #main-navigation .sub-menu a:after {
-          display: none; }
-        #main-navigation .children a:hover,
-        #main-navigation .sub-menu a:hover {
-          text-decoration: underline; } }
+          display: none; } }
   #main-navigation ul {
     list-style: none;
     margin: 0;
