@@ -64,8 +64,8 @@ header {
     }
   }
 
-  #mobile-navigation,
-  #mobile-search {
+  .mobile-navigation,
+  .mobile-search {
     cursor: pointer;
     padding: 10px;
     float: left;
@@ -75,12 +75,12 @@ header {
     }
   }
 
-  #mobile-navigation {
+  .mobile-navigation {
     float: right;
     margin-right: -10px;
   }
 
-  #mobile-search {
+  .mobile-search {
     height: 19px;
     margin-left: -10px;
     width: 20px;

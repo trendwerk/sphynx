@@ -1064,19 +1064,19 @@ header {
       @media (min-width: 981px) {
         header .logo .sitedescription {
           display: block; } }
-  header #mobile-navigation,
-  header #mobile-search {
+  header .mobile-navigation,
+  header .mobile-search {
     cursor: pointer;
     padding: 10px;
     float: left; }
     @media (min-width: 981px) {
-      header #mobile-navigation,
-      header #mobile-search {
+      header .mobile-navigation,
+      header .mobile-search {
         display: none; } }
-  header #mobile-navigation {
+  header .mobile-navigation {
     float: right;
     margin-right: -10px; }
-  header #mobile-search {
+  header .mobile-search {
     height: 19px;
     margin-left: -10px;
     width: 20px; }
