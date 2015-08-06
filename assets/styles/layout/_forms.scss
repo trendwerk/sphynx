@@ -54,7 +54,16 @@ select {
 }
 
 textarea {
+  box-sizing: border-box;
+  display: block;
+  height: 200px;
+  margin: 0;
   padding: 8px 12px;
+  width: 100%;
+
+  @include respond-to('medium') {
+    width: 75%; 
+  }
 }
 
 input[type="submit"],
@@ -65,6 +74,17 @@ button {
   -webkit-appearance: none;
   border: 0;
   outline: 0;
+}
+
+label {
+  float: left;
+  margin-bottom: ($line-height / 2);
+  width: 100%;
+
+  @include respond-to('medium') {
+    margin-bottom: 0;
+    width: 25%;
+  }
 }
 
 select {

@@ -818,7 +818,15 @@ select {
     border: 1px solid #a3a3a3; }
 
 textarea {
-  padding: 8px 12px; }
+  box-sizing: border-box;
+  display: block;
+  height: 200px;
+  margin: 0;
+  padding: 8px 12px;
+  width: 100%; }
+  @media (min-width: 641px) {
+    textarea {
+      width: 75%; } }
 
 input[type="submit"],
 input[type="button"],
@@ -827,6 +835,15 @@ button {
   -webkit-appearance: none;
   border: 0;
   outline: 0; }
+
+label {
+  float: left;
+  margin-bottom: 15px;
+  width: 100%; }
+  @media (min-width: 641px) {
+    label {
+      margin-bottom: 0;
+      width: 25%; } }
 
 select {
   background-image: url("data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==");
@@ -1212,62 +1229,59 @@ button {
  * @section     Components
  * @subsection  Comments
  */
+#comments ol,
+#comments ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 #comments {
   clear: both;
   float: left;
-  margin: 30px 0;
-  width: 100%; }
-
-#comments ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-  #comments ol .children {
-    box-sizing: border-box;
-    list-style-type: none;
+  width: 100%;
+  margin: 30px 0; }
+  #comments .children {
+    list-style: none;
     margin: 0;
-    padding: 0 0 0 15px; }
-    @media (min-width: 641px) {
-      #comments ol .children {
-        padding-left: 30px; } }
-  #comments ol .comment-body {
-    background-color: #ededed;
+    padding: 0;
     box-sizing: border-box;
+    padding-bottom: 15px; }
+    @media (min-width: 641px) {
+      #comments .children {
+        padding-left: 30px; } }
+  #comments .comment-body {
+    background-color: #ededed;
     border-radius: 3px;
-    clear: both;
-    float: left;
+    box-sizing: border-box;
     margin-bottom: 30px;
     padding: 20px;
+    clear: both;
+    float: left;
     width: 100%; }
     @media (min-width: 641px) {
-      #comments ol .comment-body {
+      #comments .comment-body {
         padding: 30px 30px 30px 120px; } }
-  #comments ol .comment-meta {
+  #comments .comment-meta {
     position: relative;
     width: 100%; }
-  #comments ol .avatar {
+  #comments .avatar {
     border-radius: 3px;
     display: block;
     margin-bottom: 10px; }
     @media (min-width: 641px) {
-      #comments ol .avatar {
+      #comments .avatar {
         left: -90px;
         position: absolute; } }
-  #comments ol .comment-author {
-    float: left; }
-  #comments ol .comment-metadata {
-    float: right;
+  #comments .comment-author,
+  #comments .comment-metadata {
+    float: left;
     width: 100%; }
-    @media (min-width: 641px) {
-      #comments ol .comment-metadata {
-        float: left;
-        width: inherit; } }
-  #comments ol .comment-content {
+  #comments .comment-content {
     padding: 15px 0; }
-    #comments ol .comment-content p:last-of-type {
+    #comments .comment-content p:last-of-type {
       margin-bottom: 0; }
-  #comments ol .comment-content,
-  #comments ol .reply {
+  #comments .comment-content,
+  #comments .reply {
     clear: both;
     float: left;
     width: 100%; }
@@ -1279,43 +1293,50 @@ button {
 #respond {
   clear: both;
   float: left;
-  position: relative;
+  width: 100%;
   margin: 30px 0;
-  width: 100%; }
+  position: relative; }
   #respond p {
-    clear: both;
-    float: left;
-    margin-bottom: 15px;
-    width: 100%; }
+    margin-bottom: 15px; }
     @media (min-width: 641px) {
       #respond p {
         margin-bottom: 30px; } }
-    #respond p label {
-      float: left;
-      margin-bottom: 15px;
-      width: 100%; }
-      @media (min-width: 641px) {
-        #respond p label {
-          margin-bottom: 0;
-          width: 25%; } }
     #respond p.form-submit {
       margin-bottom: 0; }
   #respond p:last-of-type {
     margin-bottom: 0; }
-  #respond small {
-    font-size: 12px;
-    position: absolute;
-    right: 0;
-    top: 0; }
-  #respond textarea {
-    box-sizing: border-box;
-    display: block;
-    height: 200px;
-    margin: 0;
-    width: 100%; }
-    @media (min-width: 641px) {
-      #respond textarea {
-        width: 75%; } }
+  #respond small a {
+    border-radius: 3px;
+    background-color: #333333;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px 10px 0;
+    padding: 0 35px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: #ededed;
+    color: #666666;
+    font-weight: normal;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 0 5px 5px;
+    padding: 0 10px;
+    text-transform: lowercase; }
+    #respond small a:active, #respond small a:focus, #respond small a:hover {
+      background-color: #2b2b2b;
+      color: white;
+      outline: none;
+      text-decoration: none; }
+    #respond small a:active, #respond small a:focus, #respond small a:hover {
+      background-color: #333333;
+      color: white;
+      outline: none;
+      text-decoration: none; }
   #respond #author,
   #respond #email,
   #respond #url {

@@ -14,24 +14,20 @@
  * @section     Components
  * @subsection  Comments
  */
+ 
+#comments ol,
+#comments ul {
+  @include remove-list-styles;
+}
 
 #comments {
-  clear: both;
-  float: left;
+  @include full-width;
   margin: $line-height 0;
-  width: 100%;
-}
- 
-#comments ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 
   .children {
+    @include remove-list-styles;
     box-sizing: border-box;
-    list-style-type: none;
-    margin: 0;
-    padding: 0 0 0 15px;
+    padding-bottom: $line-height / 2;
 
     @include respond-to('medium') {
       padding-left: 30px;
@@ -39,19 +35,8 @@
   }
 
   .comment-body {
-    background-color: $light-background;
-    box-sizing: border-box;
-    border-radius: 3px;
-    clear: both;
-    float: left;
-    margin-bottom: $line-height;
-    padding: 20px;
-    width: 100%;
-
-    @include respond-to('medium') {
-      padding: 30px 30px 30px 120px;
-    }
-
+    @include block;
+    @include full-width;
   }
 
   .comment-meta {
@@ -60,7 +45,7 @@
   }
 
   .avatar {
-    border-radius: 3px;
+    @include border-radius;
     display: block;
     margin-bottom: 10px;
 
@@ -70,18 +55,10 @@
     }
   }
 
-  .comment-author {
-    float: left;
-  }
-
+  .comment-author,
   .comment-metadata {
-    float: right;
+    float: left;
     width: 100%;
-
-    @include respond-to('medium') {
-      float: left;
-      width: inherit;
-    }
   }
 
   .comment-content {
@@ -94,9 +71,7 @@
   
   .comment-content,
   .reply {
-    clear: both;
-    float: left;
-    width: 100%;
+    @include full-width;
   }
 }
 
@@ -106,31 +81,15 @@
  */
 
 #respond {
-  clear: both;
-  float: left;
-  position: relative;
+  @include full-width;
   margin: $line-height 0;
-  width: 100%;
+  position: relative;
   
   p {
-    clear: both;
-    float: left;
     margin-bottom: ($line-height / 2);
-    width: 100%;
 
     @include respond-to('medium') {
-      margin-bottom: 30px;
-    }
-    
-    label { 
-      float: left;
-      margin-bottom: ($line-height / 2);
-      width: 100%;
-
-      @include respond-to('medium') {
-        margin-bottom: 0;
-        width: 25%;
-      }
+      margin-bottom: $line-height;
     }
 
     &.form-submit {
@@ -142,23 +101,8 @@
     margin-bottom: 0;
   }
   
-  small {
-    font-size: 12px;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  textarea { 
-    box-sizing: border-box;
-    display: block;
-    height: 200px;
-    margin: 0;
-    width: 100%;
-
-    @include respond-to('medium') {
-      width: 75%; 
-    }
+  small a {
+    @include button(tag);
   }
 
   #author,
