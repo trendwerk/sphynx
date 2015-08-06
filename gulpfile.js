@@ -56,12 +56,14 @@ gulp.task('coffeelint', function() {
 /**
  * Lint PHP
  */
-gulp.task('phplint', function (cb) {
-  phplint(files.php, {limit: 10}, function (err, stdout, stderr) {
+gulp.task('phplint', function(cb) {
+  phplint(files.php, {limit: 10}, function(err, stdout, stderr) {
     if (err) {
-      console.log(err);
+      cb(err);
+      gutil.beep();
+    } else {
+      cb();
     }
-    cb()
   })
 });
 
