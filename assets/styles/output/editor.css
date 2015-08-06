@@ -555,18 +555,6 @@ ins {
 
 /**
  * @section     Typography
- * @subsection  Selection 
- */
-::-moz-selection {
-  background-color: #333333;
-  color: white; }
-
-::selection {
-  background-color: #333333;
-  color: white; }
-
-/**
- * @section     Typography
  * @subsection  Misc
  */
 hr {
