@@ -1,9 +1,9 @@
 ///
 /// @section Mixins
 ///
-/// Mixins allow you to embed all the properties of a class into another class 
-/// by simply including the class name as one of its properties. It’s just like 
-/// variables, but for whole classes. Mixins can also behave like functions, 
+/// Mixins allow you to embed all the properties of a class into another class
+/// by simply including the class name as one of its properties. It’s just like
+/// variables, but for whole classes. Mixins can also behave like functions,
 /// and take arguments.
 ///
 /// @package     WordPress
@@ -12,53 +12,8 @@
 /// @license     GPL v2
 ///
 
-/**
- * @section     Extends
- * @subsection  Button
- */
-
-.button {
-  background-color: $primary-color;
-  border-radius: 3px;
-  color: white;
-  display: inline-block;
-  font-weight: bold;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 10px 10px 0;
-  padding: 0 35px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-
-  &:active {
-    top: 1px;
-  }
-
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: shade($primary-color, 15%);
-    color: white;
-    outline: none;
-    text-decoration: none;
-  }
-
-  &.secondary {
-    background-color: $secondary-color;
-    color: white;
-
-    &:active,
-    &:focus,
-    &:hover {
-      background-color: shade($secondary-color, 15%);
-    }
-  }
-}
-
 /// @section     Mixins
-/// @subsection  Animate 
+/// @subsection  Animate
 
 @mixin animate-this($what: all, $time: 0.5s, $ease: ease-in-out) {
   -webkit-transition: $what $time $ease;
@@ -118,7 +73,7 @@
   &::-webkit-input-placeholder {
     color: $out;
   }
-  
+
   &:focus:-moz-placeholder {
     color: $on;
   }
@@ -170,7 +125,7 @@
   background-position: $top $left;
   background-repeat: no-repeat;
 
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url('../../../assets/images/sprite-x2.png');
     background-position: $top x 2 $left x 2;
     background-size: 500px 500px;

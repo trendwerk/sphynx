@@ -220,37 +220,6 @@ th {
   padding: 0; }
 
 /**
- * @section     Extends
- * @subsection  Button
- */
-.button {
-  background-color: #333333;
-  border-radius: 3px;
-  color: white;
-  display: inline-block;
-  font-weight: bold;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 10px 10px 0;
-  padding: 0 35px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap; }
-  .button:active {
-    top: 1px; }
-  .button:active, .button:focus, .button:hover {
-    background-color: shade(#333333, 15%);
-    color: white;
-    outline: none;
-    text-decoration: none; }
-  .button.secondary {
-    background-color: #999999;
-    color: white; }
-    .button.secondary:active, .button.secondary:focus, .button.secondary:hover {
-      background-color: shade(#999999, 15%); }
-
-/**
  * @section Helpers
  *
  * Defines helpers
@@ -530,6 +499,37 @@ hr {
   height: 1px;
   margin: 0 0 30px;
   padding: 0; }
+
+/**
+ * @section     Extends
+ * @subsection  Button
+ */
+.button {
+  background-color: #333333;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px 10px 0;
+  padding: 0 35px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap; }
+  .button:active {
+    top: 1px; }
+  .button:active, .button:focus, .button:hover {
+    background-color: #2b2b2b;
+    color: white;
+    outline: none;
+    text-decoration: none; }
+  .button.secondary {
+    background-color: #999999;
+    color: white; }
+    .button.secondary:active, .button.secondary:focus, .button.secondary:hover {
+      background-color: #828282; }
 
 /**
  * 

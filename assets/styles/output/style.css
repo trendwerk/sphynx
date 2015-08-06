@@ -220,64 +220,6 @@ th {
   padding: 0; }
 
 /**
- * @section     Extends
- * @subsection  Button
- */
-.button, input[type="submit"],
-input[type="button"],
-input[type="reset"],
-button {
-  background-color: #333333;
-  border-radius: 3px;
-  color: white;
-  display: inline-block;
-  font-weight: bold;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 10px 10px 0;
-  padding: 0 35px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap; }
-  .button:active, input[type="submit"]:active,
-  input[type="button"]:active,
-  input[type="reset"]:active,
-  button:active {
-    top: 1px; }
-  .button:active, input[type="submit"]:active,
-  input[type="button"]:active,
-  input[type="reset"]:active,
-  button:active, .button:focus, input[type="submit"]:focus,
-  input[type="button"]:focus,
-  input[type="reset"]:focus,
-  button:focus, .button:hover, input[type="submit"]:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  button:hover {
-    background-color: shade(#333333, 15%);
-    color: white;
-    outline: none;
-    text-decoration: none; }
-  .button.secondary, input.secondary[type="submit"],
-  input.secondary[type="button"],
-  input.secondary[type="reset"],
-  button.secondary {
-    background-color: #999999;
-    color: white; }
-    .button.secondary:active, input.secondary[type="submit"]:active,
-    input.secondary[type="button"]:active,
-    input.secondary[type="reset"]:active,
-    button.secondary:active, .button.secondary:focus, input.secondary[type="submit"]:focus,
-    input.secondary[type="button"]:focus,
-    input.secondary[type="reset"]:focus,
-    button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover,
-    input.secondary[type="button"]:hover,
-    input.secondary[type="reset"]:hover,
-    button.secondary:hover {
-      background-color: shade(#999999, 15%); }
-
-/**
  * @section Helpers
  *
  * Defines helpers
@@ -1186,6 +1128,64 @@ select {
         #main-navigation .children a:hover,
         #main-navigation .sub-menu a:hover {
           text-decoration: underline; } }
+
+/**
+ * @section     Extends
+ * @subsection  Button
+ */
+.button, input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+  background-color: #333333;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px 10px 0;
+  padding: 0 35px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap; }
+  .button:active, input[type="submit"]:active,
+  input[type="button"]:active,
+  input[type="reset"]:active,
+  button:active {
+    top: 1px; }
+  .button:active, input[type="submit"]:active,
+  input[type="button"]:active,
+  input[type="reset"]:active,
+  button:active, .button:focus, input[type="submit"]:focus,
+  input[type="button"]:focus,
+  input[type="reset"]:focus,
+  button:focus, .button:hover, input[type="submit"]:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  button:hover {
+    background-color: #2b2b2b;
+    color: white;
+    outline: none;
+    text-decoration: none; }
+  .button.secondary, input.secondary[type="submit"],
+  input.secondary[type="button"],
+  input.secondary[type="reset"],
+  button.secondary {
+    background-color: #999999;
+    color: white; }
+    .button.secondary:active, input.secondary[type="submit"]:active,
+    input.secondary[type="button"]:active,
+    input.secondary[type="reset"]:active,
+    button.secondary:active, .button.secondary:focus, input.secondary[type="submit"]:focus,
+    input.secondary[type="button"]:focus,
+    input.secondary[type="reset"]:focus,
+    button.secondary:focus, .button.secondary:hover, input.secondary[type="submit"]:hover,
+    input.secondary[type="button"]:hover,
+    input.secondary[type="reset"]:hover,
+    button.secondary:hover {
+      background-color: #828282; }
 
 /**
  * 
