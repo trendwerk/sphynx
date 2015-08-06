@@ -14,10 +14,19 @@ var phpcs = require('gulp-phpcs');
 var livereload = require('gulp-livereload');
 
 /**
+ * Setup files to watch
+ */
+var files = {
+  sass: 'assets/styles/**/*.scss',
+  coffee: 'assets/scripts/**/*.coffee',
+  php: ['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*']
+};
+
+/**
  * Compile Sass
  */
 gulp.task('sass', function() {
-  gulp.src('assets/styles/**/*.scss')
+  gulp.src(files.sass)
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write('/'))
@@ -29,7 +38,7 @@ gulp.task('sass', function() {
  * Compile CoffeeScript
  */
 gulp.task('coffee', function() {
-  gulp.src('assets/scripts/**/*.coffee')
+  gulp.src(files.coffee)
   .pipe(coffee({bare: true}).on('error', gutil.log))
   .pipe(gulp.dest('assets/scripts/output/'))
   .pipe(livereload())
@@ -39,7 +48,7 @@ gulp.task('coffee', function() {
  * Lint CoffeeScript
  */
 gulp.task('coffeelint', function() {
-  gulp.src('assets/scripts/**/*.coffee')
+  gulp.src(files.coffee)
   .pipe(coffeelint())
   .pipe(coffeelint.reporter())
 });
@@ -48,7 +57,7 @@ gulp.task('coffeelint', function() {
  * Lint PHP
  */
 gulp.task('phplint', function (cb) {
-  phplint(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'], {limit: 10}, function (err, stdout, stderr) {
+  phplint(files.php, {limit: 10}, function (err, stdout, stderr) {
     if (err) {
       console.log(err);
     }
@@ -60,7 +69,7 @@ gulp.task('phplint', function (cb) {
  * PHP CodeSniffer (PSR)
  */
 gulp.task('phpcs', function() {
-  gulp.src(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'])
+  gulp.src(files.php)
   .pipe(phpcs({
     bin: '~/.composer/vendor/bin/phpcs',
     standard: 'PSR2',
@@ -104,8 +113,8 @@ var welcomeMessage = function() {
  */
 gulp.task('default', function() {
   welcomeMessage();
-  gulp.watch('assets/styles/**/*.scss',['sass']);
-  gulp.watch('assets/scripts/**/*.coffee',['coffee', 'coffeelint']);
-  gulp.watch(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'],['phplint', 'phpcs']);
+  gulp.watch(files.sass, ['sass']);
+  gulp.watch(files.coffee, ['coffee', 'coffeelint']);
+  gulp.watch(files.php, ['phplint', 'phpcs']);
   livereload.listen();
 });
