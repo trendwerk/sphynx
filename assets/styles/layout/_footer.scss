@@ -49,8 +49,7 @@
     }
 
     ul {
-      margin: 0;
-      padding: 0;
+      @include remove-list-styles;
     }
 
     li {
