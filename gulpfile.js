@@ -43,7 +43,7 @@ gulp.task('sass', function() {
   .on('error', handleError)
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
-  .pipe(sourcemaps.write('/'))
+  .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('assets/styles/output/'))
   .pipe(livereload())
 });
