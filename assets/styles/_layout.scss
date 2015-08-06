@@ -1,7 +1,7 @@
 /**
  * @section    Layout
  *
- * Defines the default layout for a regular page, archive and post (e.g. position, 
+ * Defines the default layout for a regular page, archive and post (e.g. position,
  * size, margin, etc)
  *
  *
@@ -15,7 +15,7 @@
  * @section     Layout
  * @subsection  Default
  */
-  
+
 body {
   background-color: $body-background;
 }
@@ -180,9 +180,9 @@ main {
       text-decoration: underline;
     }
   }
-  
+
   /* Desktop navigation */
-  
+
   @include respond-to('large') {
     display: block;
     padding-bottom: 0;
@@ -198,7 +198,8 @@ main {
 
       /* Display drop-down on hover */
 
-      .children {
+      .children,
+      .sub-menu {
         display: block;
       }
     }
@@ -227,7 +228,7 @@ main {
     }
 
     /* Currently active items */
-    
+
     .current_page_ancestor > a,
     .current_page_parent > a,
     .current_page_item > a {
@@ -236,13 +237,14 @@ main {
 
     /* Drop-down */
 
-    .children {
+    .children,
+    .sub-menu {
       background-color: black;
       display: none;
       padding: 10px 0;
       position: absolute;
       width: 260px;
-    
+
       li {
         clear: both;
         width: 100%;
@@ -277,7 +279,7 @@ main {
   @include respond-to('medium') {
     background-color: $body-background;
   }
-  
+
   .wrapper {
     box-sizing: border-box;
     margin: 0 auto;
@@ -298,8 +300,8 @@ main {
   background-color: $primary-color;
   color: white;
   margin-bottom: 0;
-  
-  a { 
+
+  a {
     color: white;
 
     &:active,
@@ -308,17 +310,17 @@ main {
       color: $text-light;
     }
   }
-  
+
   #credits {
     float: left;
     margin: $line-height 0;
     width: 100%;
-    
+
     p {
       margin: 0;
     }
-    
-    #copyright { 
+
+    #copyright {
       text-align: center;
       width: 100%;
 
@@ -327,8 +329,8 @@ main {
         width: auto;
       }
     }
-    
-    nav { 
+
+    nav {
       text-align: center;
       width: 100%;
 
@@ -352,7 +354,7 @@ main {
       content: '|';
       padding: 0 5px 0 10px;
     }
-  
+
     li:last-child:after {
       display: none;
     }

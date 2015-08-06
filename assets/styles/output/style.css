@@ -1019,7 +1019,7 @@ select {
 /**
  * @section    Layout
  *
- * Defines the default layout for a regular page, archive and post (e.g. position, 
+ * Defines the default layout for a regular page, archive and post (e.g. position,
  * size, margin, etc)
  *
  *
@@ -1178,7 +1178,8 @@ main {
       #main-navigation li:hover {
         background-color: black;
         /* Display drop-down on hover */ }
-        #main-navigation li:hover .children {
+        #main-navigation li:hover .children,
+        #main-navigation li:hover .sub-menu {
           display: block; }
       #main-navigation a {
         display: block;
@@ -1199,21 +1200,26 @@ main {
       #main-navigation .current_page_parent > a,
       #main-navigation .current_page_item > a {
         text-decoration: underline; }
-      #main-navigation .children {
+      #main-navigation .children,
+      #main-navigation .sub-menu {
         background-color: black;
         display: none;
         padding: 10px 0;
         position: absolute;
         width: 260px;
         /* Hide arrow list items with children */ }
-        #main-navigation .children li {
+        #main-navigation .children li,
+        #main-navigation .sub-menu li {
           clear: both;
           width: 100%; }
-        #main-navigation .children a {
+        #main-navigation .children a,
+        #main-navigation .sub-menu a {
           padding: 5px 15px; }
-        #main-navigation .children a:after {
+        #main-navigation .children a:after,
+        #main-navigation .sub-menu a:after {
           display: none; }
-        #main-navigation .children a:hover {
+        #main-navigation .children a:hover,
+        #main-navigation .sub-menu a:hover {
           text-decoration: underline; } }
 
 /**

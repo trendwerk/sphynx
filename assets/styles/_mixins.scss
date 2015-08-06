@@ -101,7 +101,7 @@
   @if $raw-query {
     $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
 
-    @media #{$query} {
+    @media (min-width: #{$query}) {
       @content;
     }
 
