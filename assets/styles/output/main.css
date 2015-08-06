@@ -691,21 +691,21 @@ select {
   outline: none;
   padding: 0 12px;
   width: 100%; }
-  input[type="datetime-local"]:-moz-placeholder,
-  input[type="datetime"]:-moz-placeholder,
-  input[type="password"]:-moz-placeholder,
-  input[type="number"]:-moz-placeholder,
-  input[type="search"]:-moz-placeholder,
-  input[type="month"]:-moz-placeholder,
-  input[type="email"]:-moz-placeholder,
-  input[type="date"]:-moz-placeholder,
-  input[type="text"]:-moz-placeholder,
-  input[type="time"]:-moz-placeholder,
-  input[type="week"]:-moz-placeholder,
-  input[type="tel"]:-moz-placeholder,
-  input[type="url"]:-moz-placeholder,
-  textarea:-moz-placeholder,
-  select:-moz-placeholder {
+  input[type="datetime-local"]::-webkit-input-placeholder,
+  input[type="datetime"]::-webkit-input-placeholder,
+  input[type="password"]::-webkit-input-placeholder,
+  input[type="number"]::-webkit-input-placeholder,
+  input[type="search"]::-webkit-input-placeholder,
+  input[type="month"]::-webkit-input-placeholder,
+  input[type="email"]::-webkit-input-placeholder,
+  input[type="date"]::-webkit-input-placeholder,
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="time"]::-webkit-input-placeholder,
+  input[type="week"]::-webkit-input-placeholder,
+  input[type="tel"]::-webkit-input-placeholder,
+  input[type="url"]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  select::-webkit-input-placeholder {
     color: #666666; }
   input[type="datetime-local"]::-moz-placeholder,
   input[type="datetime"]::-moz-placeholder,
@@ -739,37 +739,37 @@ select {
   textarea:-ms-input-placeholder,
   select:-ms-input-placeholder {
     color: #666666; }
-  input[type="datetime-local"]::-webkit-input-placeholder,
-  input[type="datetime"]::-webkit-input-placeholder,
-  input[type="password"]::-webkit-input-placeholder,
-  input[type="number"]::-webkit-input-placeholder,
-  input[type="search"]::-webkit-input-placeholder,
-  input[type="month"]::-webkit-input-placeholder,
-  input[type="email"]::-webkit-input-placeholder,
-  input[type="date"]::-webkit-input-placeholder,
-  input[type="text"]::-webkit-input-placeholder,
-  input[type="time"]::-webkit-input-placeholder,
-  input[type="week"]::-webkit-input-placeholder,
-  input[type="tel"]::-webkit-input-placeholder,
-  input[type="url"]::-webkit-input-placeholder,
-  textarea::-webkit-input-placeholder,
-  select::-webkit-input-placeholder {
+  input[type="datetime-local"]::placeholder,
+  input[type="datetime"]::placeholder,
+  input[type="password"]::placeholder,
+  input[type="number"]::placeholder,
+  input[type="search"]::placeholder,
+  input[type="month"]::placeholder,
+  input[type="email"]::placeholder,
+  input[type="date"]::placeholder,
+  input[type="text"]::placeholder,
+  input[type="time"]::placeholder,
+  input[type="week"]::placeholder,
+  input[type="tel"]::placeholder,
+  input[type="url"]::placeholder,
+  textarea::placeholder,
+  select::placeholder {
     color: #666666; }
-  input[type="datetime-local"]:focus:-moz-placeholder,
-  input[type="datetime"]:focus:-moz-placeholder,
-  input[type="password"]:focus:-moz-placeholder,
-  input[type="number"]:focus:-moz-placeholder,
-  input[type="search"]:focus:-moz-placeholder,
-  input[type="month"]:focus:-moz-placeholder,
-  input[type="email"]:focus:-moz-placeholder,
-  input[type="date"]:focus:-moz-placeholder,
-  input[type="text"]:focus:-moz-placeholder,
-  input[type="time"]:focus:-moz-placeholder,
-  input[type="week"]:focus:-moz-placeholder,
-  input[type="tel"]:focus:-moz-placeholder,
-  input[type="url"]:focus:-moz-placeholder,
-  textarea:focus:-moz-placeholder,
-  select:focus:-moz-placeholder {
+  input[type="datetime-local"]:focus::-webkit-input-placeholder,
+  input[type="datetime"]:focus::-webkit-input-placeholder,
+  input[type="password"]:focus::-webkit-input-placeholder,
+  input[type="number"]:focus::-webkit-input-placeholder,
+  input[type="search"]:focus::-webkit-input-placeholder,
+  input[type="month"]:focus::-webkit-input-placeholder,
+  input[type="email"]:focus::-webkit-input-placeholder,
+  input[type="date"]:focus::-webkit-input-placeholder,
+  input[type="text"]:focus::-webkit-input-placeholder,
+  input[type="time"]:focus::-webkit-input-placeholder,
+  input[type="week"]:focus::-webkit-input-placeholder,
+  input[type="tel"]:focus::-webkit-input-placeholder,
+  input[type="url"]:focus::-webkit-input-placeholder,
+  textarea:focus::-webkit-input-placeholder,
+  select:focus::-webkit-input-placeholder {
     color: #999999; }
   input[type="datetime-local"]:focus::-moz-placeholder,
   input[type="datetime"]:focus::-moz-placeholder,
@@ -803,21 +803,21 @@ select {
   textarea:focus:-ms-input-placeholder,
   select:focus:-ms-input-placeholder {
     color: #999999; }
-  input[type="datetime-local"]:focus::-webkit-input-placeholder,
-  input[type="datetime"]:focus::-webkit-input-placeholder,
-  input[type="password"]:focus::-webkit-input-placeholder,
-  input[type="number"]:focus::-webkit-input-placeholder,
-  input[type="search"]:focus::-webkit-input-placeholder,
-  input[type="month"]:focus::-webkit-input-placeholder,
-  input[type="email"]:focus::-webkit-input-placeholder,
-  input[type="date"]:focus::-webkit-input-placeholder,
-  input[type="text"]:focus::-webkit-input-placeholder,
-  input[type="time"]:focus::-webkit-input-placeholder,
-  input[type="week"]:focus::-webkit-input-placeholder,
-  input[type="tel"]:focus::-webkit-input-placeholder,
-  input[type="url"]:focus::-webkit-input-placeholder,
-  textarea:focus::-webkit-input-placeholder,
-  select:focus::-webkit-input-placeholder {
+  input[type="datetime-local"]:focus::placeholder,
+  input[type="datetime"]:focus::placeholder,
+  input[type="password"]:focus::placeholder,
+  input[type="number"]:focus::placeholder,
+  input[type="search"]:focus::placeholder,
+  input[type="month"]:focus::placeholder,
+  input[type="email"]:focus::placeholder,
+  input[type="date"]:focus::placeholder,
+  input[type="text"]:focus::placeholder,
+  input[type="time"]:focus::placeholder,
+  input[type="week"]:focus::placeholder,
+  input[type="tel"]:focus::placeholder,
+  input[type="url"]:focus::placeholder,
+  textarea:focus::placeholder,
+  select:focus::placeholder {
     color: #999999; }
   @media (min-width: 641px) {
     input[type="datetime-local"],
@@ -1566,21 +1566,21 @@ main {
     padding: 12px 45px 12px 12px;
     right: 0;
     width: 100%; }
-    .search-form form .search-form-input:-moz-placeholder {
+    .search-form form .search-form-input::-webkit-input-placeholder {
       color: #999999; }
     .search-form form .search-form-input::-moz-placeholder {
       color: #999999; }
     .search-form form .search-form-input:-ms-input-placeholder {
       color: #999999; }
-    .search-form form .search-form-input::-webkit-input-placeholder {
+    .search-form form .search-form-input::placeholder {
       color: #999999; }
-    .search-form form .search-form-input:focus:-moz-placeholder {
+    .search-form form .search-form-input:focus::-webkit-input-placeholder {
       color: #666666; }
     .search-form form .search-form-input:focus::-moz-placeholder {
       color: #666666; }
     .search-form form .search-form-input:focus:-ms-input-placeholder {
       color: #666666; }
-    .search-form form .search-form-input:focus::-webkit-input-placeholder {
+    .search-form form .search-form-input:focus::placeholder {
       color: #666666; }
     @media (min-width: 641px) {
       .search-form form .search-form-input {
@@ -1759,8 +1759,7 @@ main {
   width: 24px; }
   .burger .line {
     -webkit-transition: -webkit-transform 0.2s ease-out;
-    -ms-transition: -webkit-transform 0.2s ease-out;
-    transition: -webkit-transform 0.2s ease-out;
+            transition: -webkit-transform 0.2s ease-out;
     background-color: white;
     height: 3px;
     position: absolute;
@@ -1773,16 +1772,16 @@ main {
     top: 16px; }
   .burger.active .line:nth-child(1) {
     -webkit-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-    -ms-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-    transform: rotate(-45deg) translate(-5.3px, 5.3px); }
+        -ms-transform: rotate(-45deg) translate(-5.3px, 5.3px);
+            transform: rotate(-45deg) translate(-5.3px, 5.3px); }
   .burger.active .line:nth-child(2) {
     -webkit-transform: scale(0, 1);
-    -ms-transform: scale(0, 1);
-    transform: scale(0, 1); }
+        -ms-transform: scale(0, 1);
+            transform: scale(0, 1); }
   .burger.active .line:nth-child(3) {
     -webkit-transform: rotate(45deg) translate(-6px, -6px);
-    -ms-transform: rotate(45deg) translate(-6px, -6px);
-    transform: rotate(45deg) translate(-6px, -6px); }
+        -ms-transform: rotate(45deg) translate(-6px, -6px);
+            transform: rotate(45deg) translate(-6px, -6px); }
 
 /**
  * @section     Components
@@ -1797,8 +1796,8 @@ main {
   width: 10px; }
   .glass:after {
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     background-color: white;
     content: '';
     height: 3px;

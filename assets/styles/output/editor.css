@@ -1005,8 +1005,7 @@ table {
   width: 24px; }
   .burger .line {
     -webkit-transition: -webkit-transform 0.2s ease-out;
-    -ms-transition: -webkit-transform 0.2s ease-out;
-    transition: -webkit-transform 0.2s ease-out;
+            transition: -webkit-transform 0.2s ease-out;
     background-color: white;
     height: 3px;
     position: absolute;
@@ -1019,16 +1018,16 @@ table {
     top: 16px; }
   .burger.active .line:nth-child(1) {
     -webkit-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-    -ms-transform: rotate(-45deg) translate(-5.3px, 5.3px);
-    transform: rotate(-45deg) translate(-5.3px, 5.3px); }
+        -ms-transform: rotate(-45deg) translate(-5.3px, 5.3px);
+            transform: rotate(-45deg) translate(-5.3px, 5.3px); }
   .burger.active .line:nth-child(2) {
     -webkit-transform: scale(0, 1);
-    -ms-transform: scale(0, 1);
-    transform: scale(0, 1); }
+        -ms-transform: scale(0, 1);
+            transform: scale(0, 1); }
   .burger.active .line:nth-child(3) {
     -webkit-transform: rotate(45deg) translate(-6px, -6px);
-    -ms-transform: rotate(45deg) translate(-6px, -6px);
-    transform: rotate(45deg) translate(-6px, -6px); }
+        -ms-transform: rotate(45deg) translate(-6px, -6px);
+            transform: rotate(45deg) translate(-6px, -6px); }
 
 /**
  * @section     Components
@@ -1043,8 +1042,8 @@ table {
   width: 10px; }
   .glass:after {
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     background-color: white;
     content: '';
     height: 3px;

@@ -40,7 +40,7 @@ gulp.task('sass', function() {
   .pipe(scsslint({
     'config': 'config/lint/scss.yml'
   }))
-  .pipe(scsslint.failReporter())
+  // .pipe(scsslint.failReporter())
   .on('error', handleError)
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
