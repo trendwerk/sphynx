@@ -1,0 +1,324 @@
+/**
+ * @section Typography
+ * 
+ * Defines the styling of text elements
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+
+/**
+ * @section     Typography
+ * @subsection  Render settings
+ */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+/**
+ * @section     Typography
+ * @subsection  Content
+ */
+
+body {
+  color: $text-color; 
+  font-family: $text-font;
+  font-size: 14px;
+  line-height: $line-height;
+}
+
+/**
+ * @section     Typography
+ * @subsection  Headings
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  font-family: $heading-font;
+  font-weight: 700;
+  line-height: 1.325em;
+
+  a {
+    color: $heading-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 $line-height;
+
+  @include respond-to('medium') {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+
+  @include respond-to('medium') {
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+
+  @include respond-to('medium') {
+    font-size: 22px;
+  }
+}
+
+h4 {
+  font-size: 16px;
+
+  @include respond-to('medium') {
+    font-size: 18px;
+  }
+}
+
+h5 {
+  font-size: 14px;
+
+  @include respond-to('medium') {
+    font-size: 16px;
+  }
+}
+
+h6 {
+  font-size: 12px;
+
+  @include respond-to('medium') {
+    font-size: 14px;
+  }
+}
+
+/**
+ * @section     Typography 
+ * @subsection  Links
+ */
+ 
+a {
+  color: $link-color;
+  outline: 0;
+  text-decoration: underline;
+
+  &:hover { 
+    color: shade($link-color, 20%);
+    text-decoration: underline;
+  }
+
+  /* More link */
+
+  &.read-more {
+    white-space: nowrap;
+  }
+
+  /* Add characters :before/:after link */
+
+  &.read-more:after,
+  &.prev:before,
+  &.next:after {
+    display: inline-block;
+  }
+
+  &.prev:before {
+    content: '«';
+    padding-right: 4px;
+  }
+
+  &.read-more:after,
+  &.next:after {
+    content: '»';
+    padding-left: 4px;
+  }
+
+  /* Style for tags */
+
+  &.tag {
+    background-color: $light-background;
+    border-radius: 3px;
+    color: $text-color;
+    display: inline-block;
+    line-height: 25px;
+    margin: 0 0 5px 5px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: lowercase;
+
+    &:hover {
+      background-color: $heading-color;
+      color: white;
+    }
+  }
+}
+
+/**
+ * @section     Typography
+ * @subsection  Paragraphs
+ */
+
+p {
+  margin: 0 0 $line-height;
+}
+
+/**
+ * @section     Typography
+ * @subsection  Text styles
+ */
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/**
+ * @section     Typography
+ * @subsection  Lists
+ */
+
+ul,
+ol { 
+  list-style-position: outside;
+  margin: 0 0 $line-height 20px;
+
+  ul,
+  ol {
+    margin: 0 0 0 20px;
+  }
+}
+
+/**
+ * @section     Typography
+ * @subsection  Tables
+ */
+
+table { 
+  border: 1px solid $border-color;
+  border-collapse: collapse;
+  border-spacing: 0;  
+  margin: 0 0 $line-height;
+  width: 100%;
+
+  tr { 
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+
+    td,
+    th { 
+      border-right: 1px solid $border-color;
+      padding: 5px 10px;
+      text-align: left;
+    }
+
+    th { 
+      font-weight: bold;
+    }
+  }
+
+  thead tr {
+    background-color: $light-background;
+  }
+}
+
+/**
+ * @section     Typography
+ * @subsection  Quotes
+ */
+
+blockquote {
+  color: $text-light;
+  display: inline-block;
+  font-style: italic;
+  margin: 0 0 $line-height;
+  text-align: center;
+  width: 100%;
+
+  p {
+    display: inline;
+  }
+
+  cite {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+cite {
+  color: $text-color;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  margin: 5px 0 10px; 
+
+  a {
+    color: $text-color;
+  }
+}
+
+/**
+ * @section     Typography
+ * @subsection  Code snippets
+ */
+
+code,
+pre {
+  background-color: $marker;
+  color: $text-color;
+  font-size: 13px;
+}
+  
+pre {
+  margin-bottom: 20px; 
+  padding: 20px; 
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+}
+
+/**
+ * @section     Typography
+ * @subsection  Deleted and inserted text 
+ */
+
+del {
+  color: $text-light;
+  text-decoration: line-through;
+}
+
+ins {
+  text-decoration: none;
+}
+
+/**
+ * @section     Typography
+ * @subsection  Misc
+ */
+
+hr {
+  border: 0;
+  border-top: 1px solid $border-color;
+  display: block;
+  height: 1px;
+  margin: 0 0 $line-height;
+  padding: 0;
+}

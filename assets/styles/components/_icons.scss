@@ -1,0 +1,81 @@
+/**
+ * 
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+
+/**
+ * @section     Components
+ * @subsection  Burger
+ */
+
+.burger {
+  height: 19px;
+  position: relative;
+  width: 24px;
+
+  .line {
+    @include transition(-webkit-transform 0.2s ease-out);
+    background-color: white;
+    height: 3px;
+    position: absolute;
+    width: 24px;
+  }
+
+  .line:nth-child(1) {
+    top: 0;
+  }
+
+  .line:nth-child(2) {
+    top: 8px;
+  }
+
+  .line:nth-child(3) {
+    top: 16px;
+  }
+
+  &.active {
+    .line:nth-child(1) {
+      @include transform(rotate(-45deg) translate(-5.3px, 5.3px));
+    }
+
+    .line:nth-child(2) {
+      @include transform(scale(0, 1));
+    }
+
+    .line:nth-child(3) {
+      @include transform(rotate(45deg) translate(-6px, -6px));
+    }
+  }
+}
+
+/**
+ * @section     Components
+ * @subsection  Glass
+ */
+
+.glass {
+  border: 3px solid white;
+  border-radius: 100%;
+  display: block;
+  height: 10px;
+  position: relative;
+  width: 10px;
+
+  &:after {
+    @include transform(rotate(45deg));
+    background-color: white;
+    content: '';
+    height: 3px;
+    position: absolute;
+    right: -7px;
+    top: 11px;
+    width: 8px;
+  }
+}

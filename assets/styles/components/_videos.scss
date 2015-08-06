@@ -1,0 +1,23 @@
+/**
+ * @section     Images
+ * @subsection  Video-container for better responsive videos
+ */
+
+.video-container {
+  height: 0;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  iframe,
+  object,
+  embed,
+  video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

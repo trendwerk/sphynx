@@ -1,0 +1,203 @@
+///
+/// @section Mixins
+///
+/// Mixins allow you to embed all the properties of a class into another class 
+/// by simply including the class name as one of its properties. It’s just like 
+/// variables, but for whole classes. Mixins can also behave like functions, 
+/// and take arguments.
+///
+/// @package     WordPress
+/// @subpackage  TrendPress
+/// @author      Trendwerk
+/// @license     GPL v2
+///
+
+/**
+ * @section     Extends
+ * @subsection  Button
+ */
+
+.button {
+  background-color: $primary-color;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px 10px 0;
+  padding: 0 35px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:active {
+    top: 1px;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: shade($primary-color, 15%);
+    color: white;
+    outline: none;
+    text-decoration: none;
+  }
+
+  &.secondary {
+    background-color: $secondary-color;
+    color: white;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: shade($secondary-color, 15%);
+    }
+  }
+}
+
+/// @section     Mixins
+/// @subsection  Animate 
+
+@mixin animate-this($what: all, $time: 0.5s, $ease: ease-in-out) {
+  -webkit-transition: $what $time $ease;
+  transition: $what $time $ease;
+}
+
+/// @section     Mixins
+/// @subsection  Collumns
+
+@mixin columns($number, $gap) {
+  -moz-column-count: $number;
+  -webkit-column-count: $number;
+  column-count: $number;
+  -moz-column-gap: $gap;
+  -webkit-column-gap: $gap;
+  column-gap: $gap;
+}
+
+/// @section    Mixins
+/// @subsection Gradient
+
+@mixin gradient($direction, $start-color, $end-color) {
+  background-color: $start-color;
+
+  @if $direction == horizontal {
+    background-image: -webkit-gradient(linear, left top, right top, from($start-color), to($end-color));
+    background-image: -webkit-linear-gradient(left, $start-color, $end-color);
+    background-image: -moz-linear-gradient(left, $start-color, $end-color);
+    background-image: -ms-linear-gradient(left, $start-color, $end-color);
+    background-image: -o-linear-gradient(left, $start-color, $end-color);
+  } @else if $direction == vertical {
+    background-image: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
+    background-image: -webkit-linear-gradient(top, $start-color, $end-color);
+    background-image: -moz-linear-gradient(top, $start-color, $end-color);
+    background-image: -ms-linear-gradient(top, $start-color, $end-color);
+    background-image: -o-linear-gradient(top, $start-color, $end-color);
+  }
+}
+
+/// @section     Mixins
+/// @subsection  Placeholder
+
+@mixin placeholder($out, $on) {
+
+  &:-moz-placeholder {
+    color: $out;
+  }
+
+  &::-moz-placeholder {
+    color: $out;
+  }
+
+  &:-ms-input-placeholder {
+    color: $out;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $out;
+  }
+  
+  &:focus:-moz-placeholder {
+    color: $on;
+  }
+
+  &:focus::-moz-placeholder {
+    color: $on;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: $on;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: $on;
+  }
+}
+
+/// @section     Mixins
+/// @subsection  Respond to
+/// @param       {String} $breakpoint - Breakpoint
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media (min-width: #{$query}) {
+      @content;
+    }
+
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in the `$breakpoints` map.';
+  }
+}
+
+/// @section     Mixins
+/// @subsection  Shade
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+/// @section     Mixins
+/// @subsection  Sprites
+
+@mixin sprite($top, $left) {
+  background-image: url('../../../assets/images/sprite-x1.png');
+  background-position: $top $left;
+  background-repeat: no-repeat;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    background-image: url('../../../assets/images/sprite-x2.png');
+    background-position: $top x 2 $left x 2;
+    background-size: 500px 500px;
+  }
+}
+
+/// @section     Mixins
+/// @subsection  Tint
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// @section     Mixins
+/// @subsection  Transform
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+/// @section     Mixins
+/// @subsection  Transition
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}

@@ -1,0 +1,44 @@
+/**
+ * 
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+
+/**
+ * @section     Components
+ * @subsection  Meta
+ */
+
+.meta {
+  color: $text-light;
+  font-size: 13px;
+  margin: 0 0 ($line-height / 2);
+
+  a {
+    color: $text-color;
+
+    &:hover {
+      color: $link-color; 
+    }
+  }
+}
+
+/**
+ * @section     Components
+ * @subsection  Tags
+ */
+
+.tags {
+
+  span {
+    display: inline-block;
+    line-height: inherit;
+    padding-right: 15px;
+  }
+}

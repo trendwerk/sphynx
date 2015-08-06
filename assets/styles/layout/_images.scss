@@ -1,0 +1,79 @@
+/**
+ * @section Images
+ * 
+ * Defines the default styling of images
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+
+/**
+ * @section     Images
+ * @subsection  Alignment
+ */
+
+.alignleft {
+  float: left;
+  margin: 10px 20px;
+}
+
+.alignright {
+  float: right;
+  margin: 10px 0 10px 20px;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+/**
+ * @section     Images
+ * @subsection  Captions
+ */
+
+.wp-caption {
+  background-color: $light-background;
+  margin-bottom: $line-height;
+  max-width: 100%;
+  text-align: center;
+
+  img { 
+    box-sizing: border-box;
+    padding: 5px;
+  }
+    
+  .wp-caption-text {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 10px 10px;
+  }
+}
+
+/**
+ * @section     Images
+ * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
+ */
+
+.aligncenter,
+.alignright,
+.alignleft,
+.alignnone {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.size-thumbnail,
+.size-medium,
+.size-large,
+.size-auto,
+.alignnone, 
+.size-full {
+  max-width: 100%;
+  height: auto;
+}
