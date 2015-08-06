@@ -1,0 +1,27 @@
+/**
+ * @section Templates
+ * 
+ * Defines the template specific styling
+ * 
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ *
+ */
+
+/**
+ * @section     Templates
+ * @subsection  single.php
+ */
+
+.single {
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .featured {
+    float: right;
+    margin: 5px 0 10px 20px; 
+  }
+}
