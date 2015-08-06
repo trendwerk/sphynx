@@ -1192,7 +1192,7 @@ select {
  * @section     Editor
  * @subsection  the style of the WYSIWYG itself
  */
-#tinymce {
+html {
   padding: 20px; }
 
 .video-container {
