@@ -5,6 +5,7 @@
  */
 var gulp = require('gulp');
 var cache = require('gulp-cached');
+var scsslint = require('gulp-scss-lint');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var coffee = require('gulp-coffee');
@@ -24,10 +25,20 @@ var files = {
 };
 
 /**
+ * Error handling
+ */
+function handleError(error) {
+  this.end();
+}
+
+/**
  * Compile Sass
  */
 gulp.task('sass', function() {
   gulp.src(files.sass)
+  .pipe(scsslint())
+  .pipe(scsslint.failReporter())
+  .on('error', handleError)
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write('/'))
@@ -44,9 +55,7 @@ gulp.task('coffee', function() {
   .pipe(coffeelint())
   .pipe(coffeelint.reporter())
   .pipe(coffeelint.reporter('fail'))
-  .on('error', function(error) {
-    this.end();
-  })
+  .on('error', handleError)
   .pipe(sourcemaps.init())
   .pipe(coffee({bare: true}).on('error', gutil.log))
   .pipe(sourcemaps.write('.'))
