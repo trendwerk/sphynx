@@ -394,9 +394,10 @@ th {
   white-space: nowrap; }
 
 /**
- * @section Typography
- * 
- * Defines the styling of text elements
+ *
+ * @section Base
+ *
+ * Defines the styling for base elements
  *
  * @package     WordPress
  * @subpackage  TrendPress
@@ -490,7 +491,7 @@ h6 {
       font-size: 14px; } }
 
 /**
- * @section     Typography 
+ * @section     Typography
  * @subsection  Links
  */
 a {
@@ -594,7 +595,7 @@ pre {
 
 /**
  * @section     Typography
- * @subsection  Deleted and inserted text 
+ * @subsection  Deleted and inserted text
  */
 del {
   color: #999999;
@@ -616,18 +617,15 @@ hr {
   padding: 0; }
 
 /**
- * @section Typography
  *
- * Defines the styling of text elements
+ * @section Base
+ *
+ * Defines the styling for base elements
  *
  * @package     WordPress
  * @subpackage  TrendPress
  * @author      Trendwerk
  * @license     GPL v2
- */
-/**
- * @section     Typography
- * @subsection  Tables
  */
 table {
   border: 1px solid #cccccc;
@@ -649,91 +647,15 @@ table {
     background-color: #ededed; }
 
 /**
- * @section     Layout
- * @subsection  Main
- */
-.wrapper {
-  box-sizing: border-box;
-  padding: 0 20px;
-  width: 100%; }
-  @media (min-width: 641px) {
-    .wrapper {
-      padding: 0 40px; } }
-  @media (min-width: 981px) {
-    .wrapper {
-      margin: 0 auto;
-      width: 980px; } }
-  @media (min-width: 1161px) {
-    .wrapper {
-      width: 1160px; } }
-
-@media (min-width: 821px) {
-  main .wrapper {
-    width: 780px; } }
-
-/**
- * @section     Layout
- * @subsection  Footer
- */
-#footer {
-  clear: both;
-  float: left;
-  width: 100%;
-  background-color: #333333;
-  color: white;
-  margin-bottom: 0; }
-  #footer a {
-    color: white; }
-    #footer a:active,
-    #footer a:focus,
-    #footer a:hover {
-      color: #999999; }
-  #footer #credits {
-    float: left;
-    margin: 30px 0;
-    width: 100%; }
-    #footer #credits p {
-      margin: 0; }
-    #footer #credits #copyright {
-      text-align: center;
-      width: 100%; }
-      @media (min-width: 641px) {
-        #footer #credits #copyright {
-          float: left;
-          width: auto; } }
-    #footer #credits nav {
-      text-align: center;
-      width: 100%; }
-      @media (min-width: 641px) {
-        #footer #credits nav {
-          float: right;
-          width: auto; } }
-    #footer #credits ul {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-    #footer #credits li {
-      display: inline; }
-    #footer #credits li:after {
-      color: white;
-      content: '|';
-      padding: 0 5px 0 10px; }
-    #footer #credits li:last-child:after {
-      display: none; }
-
-/**
- * @section forms
- * 
- * Defines the styling of forms
- * 
+ *
+ * @section Base
+ *
+ * Defines the styling for base elements
+ *
  * @package     WordPress
  * @subpackage  TrendPress
  * @author      Trendwerk
  * @license     GPL v2
- */
-/**
- * @section     Forms
- * @subsection  Default form styles
  */
 input[type="datetime-local"],
 input[type="datetime"],
@@ -991,70 +913,97 @@ select {
   background-repeat: no-repeat; }
 
 /**
- * @section     Forms
- * @subsection  Fix for admin-bar search form
+ * @section Layout
+ *
+ * Defines the default layout
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
  */
-.adminbar-input {
-  min-width: 0; }
-
 /**
- * @section     Forms
- * @subsection  Search
+ * @section     Layout
+ * @subsection  Wrapper
  */
-.search-form form {
-  position: relative;
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 20px;
   width: 100%; }
   @media (min-width: 641px) {
-    .search-form form {
-      width: 265px; } }
-  .search-form form .search-form-input {
-    box-sizing: border-box;
-    color: #666666;
-    font-size: 16px;
-    font-style: italic;
-    margin: 0;
-    padding: 12px 45px 12px 12px;
-    right: 0;
+    .wrapper {
+      padding: 0 40px; } }
+  @media (min-width: 981px) {
+    .wrapper {
+      margin: 0 auto;
+      width: 980px; } }
+  @media (min-width: 1161px) {
+    .wrapper {
+      width: 1160px; } }
+
+@media (min-width: 821px) {
+  main .wrapper {
+    width: 780px; } }
+
+/**
+ * @section Layout
+ *
+ * Defines the default layout
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Layout
+ * @subsection  Footer
+ */
+#footer {
+  clear: both;
+  float: left;
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  margin-bottom: 0; }
+  #footer a {
+    color: white; }
+    #footer a:active,
+    #footer a:focus,
+    #footer a:hover {
+      color: #999999; }
+  #footer #credits {
+    float: left;
+    margin: 30px 0;
     width: 100%; }
-    .search-form form .search-form-input:-moz-placeholder {
-      color: #999999; }
-    .search-form form .search-form-input::-moz-placeholder {
-      color: #999999; }
-    .search-form form .search-form-input:-ms-input-placeholder {
-      color: #999999; }
-    .search-form form .search-form-input::-webkit-input-placeholder {
-      color: #999999; }
-    .search-form form .search-form-input:focus:-moz-placeholder {
-      color: #666666; }
-    .search-form form .search-form-input:focus::-moz-placeholder {
-      color: #666666; }
-    .search-form form .search-form-input:focus:-ms-input-placeholder {
-      color: #666666; }
-    .search-form form .search-form-input:focus::-webkit-input-placeholder {
-      color: #666666; }
-    @media (min-width: 641px) {
-      .search-form form .search-form-input {
-        font-size: 13px; } }
-  .search-form form .search-form-submit {
-    background-color: transparent;
-    height: 40px;
-    margin: 0;
-    padding: 0 0 0 15px;
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    width: 40px; }
-  .search-form form .glass {
-    border: 2px solid #999999;
-    height: 8px;
-    top: -1px;
-    width: 8px; }
-  .search-form form .glass:after {
-    background-color: #999999;
-    height: 2px;
-    right: -5px;
-    top: 9px;
-    width: 6px; }
+    #footer #credits p {
+      margin: 0; }
+    #footer #credits #copyright {
+      text-align: center;
+      width: 100%; }
+      @media (min-width: 641px) {
+        #footer #credits #copyright {
+          float: left;
+          width: auto; } }
+    #footer #credits nav {
+      text-align: center;
+      width: 100%; }
+      @media (min-width: 641px) {
+        #footer #credits nav {
+          float: right;
+          width: auto; } }
+    #footer #credits ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+    #footer #credits li {
+      display: inline; }
+    #footer #credits li:after {
+      color: white;
+      content: '|';
+      padding: 0 5px 0 10px; }
+    #footer #credits li:last-child:after {
+      display: none; }
 
 /**
  * @section     Layout
@@ -1537,6 +1486,94 @@ main {
  */
 /**
  * @section     Components
+ * @subsection  Fix for admin-bar search form
+ */
+.adminbar-input {
+  min-width: 0; }
+
+/**
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+  * @section     Components
+  * @subsection  Search form
+  */
+.search-form form {
+  position: relative;
+  width: 100%; }
+  @media (min-width: 641px) {
+    .search-form form {
+      width: 265px; } }
+  .search-form form .search-form-input {
+    box-sizing: border-box;
+    color: #666666;
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    padding: 12px 45px 12px 12px;
+    right: 0;
+    width: 100%; }
+    .search-form form .search-form-input:-moz-placeholder {
+      color: #999999; }
+    .search-form form .search-form-input::-moz-placeholder {
+      color: #999999; }
+    .search-form form .search-form-input:-ms-input-placeholder {
+      color: #999999; }
+    .search-form form .search-form-input::-webkit-input-placeholder {
+      color: #999999; }
+    .search-form form .search-form-input:focus:-moz-placeholder {
+      color: #666666; }
+    .search-form form .search-form-input:focus::-moz-placeholder {
+      color: #666666; }
+    .search-form form .search-form-input:focus:-ms-input-placeholder {
+      color: #666666; }
+    .search-form form .search-form-input:focus::-webkit-input-placeholder {
+      color: #666666; }
+    @media (min-width: 641px) {
+      .search-form form .search-form-input {
+        font-size: 13px; } }
+  .search-form form .search-form-submit {
+    background-color: transparent;
+    height: 40px;
+    margin: 0;
+    padding: 0 0 0 15px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 40px; }
+  .search-form form .glass {
+    border: 2px solid #999999;
+    height: 8px;
+    top: -1px;
+    width: 8px; }
+  .search-form form .glass:after {
+    background-color: #999999;
+    height: 2px;
+    right: -5px;
+    top: 9px;
+    width: 6px; }
+
+/**
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Components
  * @subsection  Gallery
  */
 .gallery {
@@ -1657,7 +1694,7 @@ main {
   display: none; }
 
 /**
- * 
+ *
  * @section Components
  *
  * Defines the styling for components
@@ -1726,7 +1763,7 @@ main {
     width: 8px; }
 
 /**
- * 
+ *
  * @section Components
  *
  * Defines the styling for components

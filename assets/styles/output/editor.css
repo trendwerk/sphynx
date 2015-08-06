@@ -394,9 +394,10 @@ th {
   white-space: nowrap; }
 
 /**
- * @section Typography
- * 
- * Defines the styling of text elements
+ *
+ * @section Base
+ *
+ * Defines the styling for base elements
  *
  * @package     WordPress
  * @subpackage  TrendPress
@@ -490,7 +491,7 @@ h6 {
       font-size: 14px; } }
 
 /**
- * @section     Typography 
+ * @section     Typography
  * @subsection  Links
  */
 a {
@@ -594,7 +595,7 @@ pre {
 
 /**
  * @section     Typography
- * @subsection  Deleted and inserted text 
+ * @subsection  Deleted and inserted text
  */
 del {
   color: #999999;
@@ -616,18 +617,15 @@ hr {
   padding: 0; }
 
 /**
- * @section Typography
  *
- * Defines the styling of text elements
+ * @section Base
+ *
+ * Defines the styling for base elements
  *
  * @package     WordPress
  * @subpackage  TrendPress
  * @author      Trendwerk
  * @license     GPL v2
- */
-/**
- * @section     Typography
- * @subsection  Tables
  */
 table {
   border: 1px solid #cccccc;
@@ -983,7 +981,7 @@ table {
   display: none; }
 
 /**
- * 
+ *
  * @section Components
  *
  * Defines the styling for components
@@ -1052,7 +1050,7 @@ table {
     width: 8px; }
 
 /**
- * 
+ *
  * @section Components
  *
  * Defines the styling for components
