@@ -1885,15 +1885,15 @@ main {
  * @section     Components
  * @subsection  Pager
  */
-#pager {
+.pager {
   clear: both;
   float: left;
   width: 100%;
   margin: 30px 0;
   text-align: center; }
-  #pager .page-numbers,
-  #pager .prev,
-  #pager .next {
+  .pager .page-numbers,
+  .pager .prev,
+  .pager .next {
     border-radius: 3px;
     background-color: #333333;
     border: 0;
@@ -1915,32 +1915,32 @@ main {
     margin: 0 5px 10px;
     padding: 0 20px;
     text-transform: none; }
-    #pager .page-numbers:active,
-    #pager .page-numbers:focus,
-    #pager .page-numbers:hover,
-    #pager .prev:active,
-    #pager .prev:focus,
-    #pager .prev:hover,
-    #pager .next:active,
-    #pager .next:focus,
-    #pager .next:hover {
+    .pager .page-numbers:active,
+    .pager .page-numbers:focus,
+    .pager .page-numbers:hover,
+    .pager .prev:active,
+    .pager .prev:focus,
+    .pager .prev:hover,
+    .pager .next:active,
+    .pager .next:focus,
+    .pager .next:hover {
       background-color: #2b2b2b;
       color: white;
       outline: none;
       text-decoration: none; }
-    #pager .page-numbers.current,
-    #pager .page-numbers.dots,
-    #pager .prev.current,
-    #pager .prev.dots,
-    #pager .next.current,
-    #pager .next.dots {
+    .pager .page-numbers.current,
+    .pager .page-numbers.dots,
+    .pager .prev.current,
+    .pager .prev.dots,
+    .pager .next.current,
+    .pager .next.dots {
       background-color: #fbfbfb; }
-      #pager .page-numbers.current:hover,
-      #pager .page-numbers.dots:hover,
-      #pager .prev.current:hover,
-      #pager .prev.dots:hover,
-      #pager .next.current:hover,
-      #pager .next.dots:hover {
+      .pager .page-numbers.current:hover,
+      .pager .page-numbers.dots:hover,
+      .pager .prev.current:hover,
+      .pager .prev.dots:hover,
+      .pager .next.current:hover,
+      .pager .next.dots:hover {
         color: inherit; }
 
 /**
