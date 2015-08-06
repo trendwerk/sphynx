@@ -735,27 +735,27 @@ table {
  * @section     Components
  * @subsection  Comments
  */
-#comments ol,
-#comments ul {
+.comments ol,
+.comments ul {
   list-style: none;
   margin: 0;
   padding: 0; }
 
-#comments {
+.comments {
   clear: both;
   float: left;
   width: 100%;
   margin: 30px 0; }
-  #comments .children {
+  .comments .children {
     list-style: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     padding-bottom: 15px; }
     @media (min-width: 641px) {
-      #comments .children {
+      .comments .children {
         padding-left: 30px; } }
-  #comments .comment-body {
+  .comments .comment-body {
     background-color: #ededed;
     border-radius: 3px;
     box-sizing: border-box;
@@ -765,32 +765,32 @@ table {
     float: left;
     width: 100%; }
     @media (min-width: 641px) {
-      #comments .comment-body {
+      .comments .comment-body {
         padding: 30px; } }
     @media (min-width: 641px) {
-      #comments .comment-body {
+      .comments .comment-body {
         padding-left: 120px; } }
-  #comments .comment-meta {
+  .comments .comment-meta {
     position: relative;
     width: 100%; }
-  #comments .avatar {
+  .comments .avatar {
     border-radius: 3px;
     display: block;
     margin-bottom: 10px; }
     @media (min-width: 641px) {
-      #comments .avatar {
+      .comments .avatar {
         left: -90px;
         position: absolute; } }
-  #comments .comment-author,
-  #comments .comment-metadata {
+  .comments .comment-author,
+  .comments .comment-metadata {
     float: left;
     width: 100%; }
-  #comments .comment-content {
+  .comments .comment-content {
     padding: 15px 0; }
-    #comments .comment-content p:last-of-type {
+    .comments .comment-content p:last-of-type {
       margin-bottom: 0; }
-  #comments .comment-content,
-  #comments .reply {
+  .comments .comment-content,
+  .comments .reply {
     clear: both;
     float: left;
     width: 100%; }
@@ -799,22 +799,22 @@ table {
  * @section     Components
  * @subsection  Respond
  */
-#respond {
+.comment-respond {
   clear: both;
   float: left;
   width: 100%;
   margin: 30px 0;
   position: relative; }
-  #respond p {
+  .comment-respond p {
     margin-bottom: 15px; }
     @media (min-width: 641px) {
-      #respond p {
+      .comment-respond p {
         margin-bottom: 30px; } }
-    #respond p.form-submit {
+    .comment-respond p.form-submit {
       margin-bottom: 0; }
-  #respond p:last-of-type {
+  .comment-respond p:last-of-type {
     margin-bottom: 0; }
-  #respond small a {
+  .comment-respond small a {
     border-radius: 3px;
     background-color: #333333;
     border: 0;
@@ -837,21 +837,21 @@ table {
     margin: 0 0 5px 5px;
     padding: 0 10px;
     text-transform: lowercase; }
-    #respond small a:active,
-    #respond small a:focus,
-    #respond small a:hover {
+    .comment-respond small a:active,
+    .comment-respond small a:focus,
+    .comment-respond small a:hover {
       background-color: #2b2b2b;
       color: white;
       outline: none;
       text-decoration: none; }
-    #respond small a:active,
-    #respond small a:focus,
-    #respond small a:hover {
+    .comment-respond small a:active,
+    .comment-respond small a:focus,
+    .comment-respond small a:hover {
       background-color: #333333;
       color: white;
       outline: none;
       text-decoration: none; }
-  #respond .submit {
+  .comment-respond .submit {
     margin-top: 10px; }
 
 /**

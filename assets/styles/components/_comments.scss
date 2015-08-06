@@ -15,12 +15,12 @@
  * @subsection  Comments
  */
 
-#comments ol,
-#comments ul {
+.comments ol,
+.comments ul {
   @include remove-list-styles;
 }
 
-#comments {
+.comments {
   @include full-width;
   margin: $line-height 0;
 
@@ -84,7 +84,7 @@
  * @subsection  Respond
  */
 
-#respond {
+.comment-respond {
   @include full-width;
   margin: $line-height 0;
   position: relative;
