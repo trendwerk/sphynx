@@ -16,3 +16,5 @@ $(function() {
     return $('.glass', this).toggleClass('active');
   });
 });
+
+//# sourceMappingURL=responsive.js.map

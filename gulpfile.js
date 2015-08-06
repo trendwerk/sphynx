@@ -39,7 +39,9 @@ gulp.task('sass', function() {
  */
 gulp.task('coffee', function() {
   gulp.src(files.coffee)
+  .pipe(sourcemaps.init())
   .pipe(coffee({bare: true}).on('error', gutil.log))
+  .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('assets/scripts/output/'))
   .pipe(livereload())
 });
