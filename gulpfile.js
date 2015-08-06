@@ -116,7 +116,7 @@ var welcomeMessage = [
  * Watch
  */
 gulp.task('default', function() {
-  gutil.log(gutil.colors.blue(welcomeMessage));
+  gutil.log(gutil.colors.cyan(welcomeMessage));
   gulp.watch(files.sass, ['sass']);
   gulp.watch(files.coffee, ['coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
