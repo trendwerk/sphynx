@@ -14,7 +14,7 @@
  * @subsection  Footer
  */
 
-#footer {
+footer {
   @include full-width;
   background-color: $primary-color;
   color: $white;
@@ -30,7 +30,7 @@
     }
   }
 
-  #credits {
+  .credits {
     float: left;
     margin: $line-height 0;
     width: 100%;
@@ -39,7 +39,7 @@
       margin: 0;
     }
 
-    #copyright {
+    .copyright {
       text-align: center;
       width: 100%;
 
