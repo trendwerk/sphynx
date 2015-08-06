@@ -21,32 +21,6 @@
   margin: 0;
   padding: 0 0 20px;
 
-  ul {
-    @include remove-list-styles;
-  }
-
-  li {
-    font-weight: 700;
-    position: relative;
-  }
-
-  li li {
-    font-weight: 400;
-  }
-
-  ul ul {
-    padding: 5px 10px;
-  }
-
-  a {
-    color: $white;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   /* Desktop navigation */
 
   @include respond-to('large') {
@@ -129,6 +103,32 @@
       a:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  ul {
+    @include remove-list-styles;
+  }
+
+  li {
+    font-weight: 700;
+    position: relative;
+  }
+
+  li li {
+    font-weight: 400;
+  }
+
+  ul ul {
+    padding: 5px 10px;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
