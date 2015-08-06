@@ -1,5 +1,17 @@
 /**
- * @section     Images
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+
+/**
+ * @section     Components
  * @subsection  Gallery
  */
 
@@ -14,7 +26,7 @@
     margin: 0 4px 4px 0;
     overflow: hidden;
     padding: 0;
-    position: relative; 
+    position: relative;
 
     img {
       display: block;
@@ -22,7 +34,7 @@
       height: auto;
       width: 100%;
     }
-    
+
     &:hover .gallery-caption {
       opacity: 1;
     }

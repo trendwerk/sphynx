@@ -616,7 +616,51 @@ hr {
   padding: 0; }
 
 /**
- * @section     Extends
+ * @section Typography
+ *
+ * Defines the styling of text elements
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Typography
+ * @subsection  Tables
+ */
+table {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 30px;
+  width: 100%; }
+  table tr {
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #cccccc; }
+    table tr td,
+    table tr th {
+      border-right: 1px solid #cccccc;
+      padding: 5px 10px;
+      text-align: left; }
+    table tr th {
+      font-weight: bold; }
+  table thead tr {
+    background-color: #ededed; }
+
+/**
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Components
  * @subsection  Button
  */
 .button {
@@ -810,7 +854,18 @@ hr {
     margin-top: 10px; }
 
 /**
- * @section     Images
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Components
  * @subsection  Gallery
  */
 .gallery {
@@ -1144,30 +1199,18 @@ hr {
         color: inherit; }
 
 /**
- * @section     Typography
- * @subsection  Tables
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
  */
-table {
-  border: 1px solid #cccccc;
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin: 0 0 30px;
-  width: 100%; }
-  table tr {
-    border-bottom: 1px solid #cccccc;
-    border-right: 1px solid #cccccc; }
-    table tr td,
-    table tr th {
-      border-right: 1px solid #cccccc;
-      padding: 5px 10px;
-      text-align: left; }
-    table tr th {
-      font-weight: bold; }
-  table thead tr {
-    background-color: #ededed; }
-
 /**
- * @section     Images
+ * @section     Components
  * @subsection  Video-container for better responsive videos
  */
 .video-container {

@@ -1,16 +1,27 @@
 /**
+ * @section Typography
+ *
+ * Defines the styling of text elements
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+
+/**
  * @section     Typography
  * @subsection  Tables
  */
 
-table { 
+table {
   border: 1px solid $border-color;
   border-collapse: collapse;
-  border-spacing: 0;  
+  border-spacing: 0;
   margin: 0 0 $line-height;
   width: 100%;
 
-  tr { 
+  tr {
     border-bottom: 1px solid $border-color;
     border-right: 1px solid $border-color;
 
