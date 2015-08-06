@@ -34,16 +34,16 @@ gulp.task('coffee', function() {
 });
 
 /**
- * LINT CoffeeScript
+ * Lint CoffeeScript
  */
-gulp.task('coffeelint', function () {
+gulp.task('coffeelint', function() {
   gulp.src('assets/scripts/**/*.coffee')
   .pipe(coffeelint())
   .pipe(coffeelint.reporter())
 });
 
 /**
- * LINT PHP
+ * Lint PHP
  */
 gulp.task('phplint', function (cb) {
   phplint(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'], {limit: 10}, function (err, stdout, stderr) {
@@ -55,7 +55,7 @@ gulp.task('phplint', function (cb) {
 });
 
 /**
- * PHP codesniffer
+ * PHP CodeSniffer (PSR)
  */
 gulp.task('phpcs', function() {
   gulp.src(['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'])
@@ -100,7 +100,7 @@ var welcomeMessage = function() {
 /**
  * Watch
  */
-gulp.task('default',function() {
+gulp.task('default', function() {
   welcomeMessage();
   gulp.watch('assets/styles/**/*.scss',['sass']);
   gulp.watch('assets/scripts/**/*.coffee',['coffee', 'coffeelint']);
