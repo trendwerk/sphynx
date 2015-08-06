@@ -22,21 +22,17 @@ main {
  */
 
 .hentry {
-  clear: both;
-  padding: 0 0 $line-height;
+  @include full-width;
   margin: 0 0 $line-height;
-  text-align: left;
-  width: 100%;
+  padding: 0 0 $line-height;
 
-  &.sticky { 
-    background-color: $light-background;
-    box-sizing: border-box;
-    padding: 30px;
+  &.sticky {
+    @include block;
     margin-bottom: ($line-height * 2);
   }
 
   h2 {
-    margin: 0 0 10px;
+    margin-bottom: ($line-height / 2);
   }
 
   .featured {
