@@ -1,15 +1,19 @@
-<p class="tags">
+{% if post.terms('tags') %}
 
-	<span>
-		{{__('Tags', 'tp')}}
-	</span>
+	<p class="tags">
 
-	{% for term in post.terms('tags') %}
+		<span>
+			{{__('Tags', 'tp')}}
+		</span>
 
-		<a class="tag" href="{{term.link}}">
-			{{term.name}}
-		</a>
+		{% for term in post.terms('tags') %}
 
-	{% endfor %}
+			<a class="tag" href="{{term.link}}">
+				{{term.name}}
+			</a>
 
-</p>
+		{% endfor %}
+
+	</p>
+
+{% endif %}
