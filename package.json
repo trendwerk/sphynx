@@ -16,7 +16,8 @@
     "gulp-sass": "^2.0.4",
     "gulp-scss-lint": "^0.2.1",
     "gulp-sourcemaps": "^1.5.2",
-    "phplint": "^1.5.2"
+    "phplint": "^1.5.2",
+    "bower": "^1.4.1"
   },
   "dependencies": {
     "gulp-util": "^3.0.6"
