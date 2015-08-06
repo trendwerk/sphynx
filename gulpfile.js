@@ -35,20 +35,27 @@ function handleError(error) {
 /**
  * Compile Sass
  */
-gulp.task('sass', function() {
-  gulp.src(files.sass)
+gulp.task('scsslint', function(cb) {
+  return gulp.src(files.sass)
   .pipe(scsslint({
     'config': 'config/lint/scss.yml'
   }))
   .pipe(scsslint.failReporter())
-  .on('error', handleError)
-  .pipe(sourcemaps.init())
-  .pipe(sass().on('error', sass.logError))
-  .pipe(autoprefixer())
-  .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest('assets/styles/output/'))
-  .pipe(livereload())
+  .on('error', handleError);
 });
+
+/**
+ * Compile Sass
+ */
+ gulp.task('sass', ['scsslint'], function() {
+   gulp.src(files.sass)
+   .pipe(sourcemaps.init())
+   .pipe(sass().on('error', sass.logError))
+   .pipe(autoprefixer())
+   .pipe(sourcemaps.write('.'))
+   .pipe(gulp.dest('assets/styles/output/'))
+   .pipe(livereload())
+ });
 
 /**
  * Compile CoffeeScript
@@ -136,7 +143,7 @@ var welcomeMessage = [
  */
 gulp.task('default', function() {
   gutil.log(gutil.colors.cyan(welcomeMessage));
-  gulp.watch(files.sass, ['sass']);
+  gulp.watch(files.sass, ['scsslint', 'sass']);
   gulp.watch(files.coffee, ['coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
   livereload.listen();
