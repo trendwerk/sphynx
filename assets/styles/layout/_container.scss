@@ -1,0 +1,29 @@
+/**
+ * @section     Layout
+ * @subsection  Main
+ */
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+
+  @include respond-to('medium') {
+    padding: 0 40px;
+  }
+
+  @include respond-to('large') {
+    margin: 0 auto;
+    width: 980px;
+  }
+
+  @include respond-to('huge') {
+    width: 1160px;
+  }
+}
+
+main .wrapper {
+  @media(min-width: 821px) {
+    width: 780px;
+  }
+}
