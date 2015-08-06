@@ -14,7 +14,7 @@
  * @subsection  Header
  */
 
-#header {
+header {
   @include full-width;
   background-color: $primary-color;
   box-sizing: border-box;
@@ -35,7 +35,7 @@
     }
   }
 
-  #logo {
+  .logo {
     display: inline-block;
     margin-top: 5px;
 
@@ -46,14 +46,14 @@
       text-align: left;
     }
 
-    #sitename {
+    .sitename {
       font-size: 28px;
       font-family: $heading-font;
       font-weight: 700;
       margin: 0;
     }
 
-    #description {
+    .sitedescription {
       color: $text-color;
       display: none;
       margin: 0;
@@ -86,7 +86,7 @@
     width: 20px;
   }
 
-  #search {
+  .search-top {
     display: none;
     float: right;
     margin-top: 20px;

@@ -18,11 +18,11 @@
 	
 	<body class="{{body_class}}">
 	
-		<header id="header">
+		<header>
 		
 			<div class="wrapper">
 
-				<div id="mobile-search" data-toggle="#search">
+				<div id="mobile-search" data-toggle=".search-top">
 					<div class="glass"></div>
 				</div>
 
@@ -34,21 +34,21 @@
 					</div>
 				</div>
 				
-				<div id="logo">
+				<div class="logo">
 
-					<p id="sitename">
+					<p class="sitename">
 						<a href="{{site.url}}">
 							{{site.name}}
 						</a>
 					</p>
 
-					<p id="description">
+					<p class="sitedescription">
 						{{site.description}}
 					</p>
 
 				</div>
-
-				<div id="search">
+				
+				<div class="search-top">
 					{% include 'partials/searchform.twig' %}
 				</div>
 
