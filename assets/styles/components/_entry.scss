@@ -1,0 +1,40 @@
+/**
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+
+/**
+ * @section     Components
+ * @subsection  Entry
+ */
+
+.hentry {
+  @include full-width;
+  margin: 0 0 $line-height;
+  padding: 0 0 $line-height;
+
+  &.sticky {
+    @include block;
+    margin-bottom: ($line-height * 2);
+  }
+
+  h2 {
+    margin-bottom: ($line-height / 2);
+  }
+
+  .featured {
+    float: right;
+    margin: 0 0 $line-height 20px;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}

@@ -1,6 +1,17 @@
 /**
+ * @section Layout
+ *
+ * Defines the default layout
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+
+/**
  * @section     Layout
- * @subsection  Main
+ * @subsection  Core
  */
 
 body {
@@ -13,34 +24,5 @@ main {
 
   @include respond-to('medium') {
     background-color: $body-background;
-  }
-}
-
-/**
- * @section     Parts
- * @subsection  Hentry
- */
-
-.hentry {
-  @include full-width;
-  margin: 0 0 $line-height;
-  padding: 0 0 $line-height;
-
-  &.sticky {
-    @include block;
-    margin-bottom: ($line-height * 2);
-  }
-
-  h2 {
-    margin-bottom: ($line-height / 2);
-  }
-
-  .featured {
-    float: right;
-    margin: 0 0 $line-height 20px;
-  }
-
-  p:last-of-type {
-    margin-bottom: 0;
   }
 }
