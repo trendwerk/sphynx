@@ -4,6 +4,7 @@
  * Require dependencies
  */
 var gulp = require('gulp');
+var cache = require('gulp-cached');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var coffee = require('gulp-coffee');
@@ -39,6 +40,7 @@ gulp.task('sass', function() {
  */
 gulp.task('coffee', function() {
   gulp.src(files.coffee)
+  .pipe(cache('coffee'))
   .pipe(sourcemaps.init())
   .pipe(coffee({bare: true}).on('error', gutil.log))
   .pipe(sourcemaps.write('.'))
@@ -51,6 +53,7 @@ gulp.task('coffee', function() {
  */
 gulp.task('coffeelint', function() {
   gulp.src(files.coffee)
+  .pipe(cache('coffeelint'))
   .pipe(coffeelint())
   .pipe(coffeelint.reporter())
 });
@@ -74,6 +77,7 @@ gulp.task('phplint', function(cb) {
  */
 gulp.task('phpcs', function() {
   gulp.src(files.php)
+  .pipe(cache('phpcs'))
   .pipe(phpcs({
     bin: '~/.composer/vendor/bin/phpcs',
     standard: 'PSR2',
