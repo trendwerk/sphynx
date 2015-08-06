@@ -405,7 +405,7 @@ th {
  * @license     GPL v2
  */
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Render settings
  */
 html {
@@ -413,7 +413,7 @@ html {
   -webkit-text-size-adjust: none; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Content
  */
 body {
@@ -423,7 +423,7 @@ body {
   line-height: 30px; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Headings
  */
 h1,
@@ -491,7 +491,7 @@ h6 {
       font-size: 14px; } }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Links
  */
 a {
@@ -518,14 +518,14 @@ a {
     padding-left: 4px; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Paragraphs
  */
 p {
   margin: 0 0 30px; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Text styles
  */
 strong,
@@ -537,7 +537,7 @@ i {
   font-style: italic; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Lists
  */
 ul,
@@ -551,7 +551,7 @@ ol {
     margin: 0 0 0 20px; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Quotes
  */
 blockquote {
@@ -577,7 +577,7 @@ cite {
     color: #666666; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Code snippets
  */
 code,
@@ -594,7 +594,7 @@ pre {
   white-space: pre-wrap; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Deleted and inserted text
  */
 del {
@@ -605,7 +605,7 @@ ins {
   text-decoration: none; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Misc
  */
 hr {
@@ -627,6 +627,10 @@ hr {
  * @author      Trendwerk
  * @license     GPL v2
  */
+/**
+  * @section     Base
+  * @subsection  Table
+  */
 table {
   border: 1px solid #cccccc;
   border-collapse: collapse;

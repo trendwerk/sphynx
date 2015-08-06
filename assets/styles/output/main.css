@@ -405,7 +405,7 @@ th {
  * @license     GPL v2
  */
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Render settings
  */
 html {
@@ -413,7 +413,7 @@ html {
   -webkit-text-size-adjust: none; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Content
  */
 body {
@@ -423,7 +423,7 @@ body {
   line-height: 30px; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Headings
  */
 h1,
@@ -491,7 +491,7 @@ h6 {
       font-size: 14px; } }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Links
  */
 a {
@@ -518,14 +518,14 @@ a {
     padding-left: 4px; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Paragraphs
  */
 p {
   margin: 0 0 30px; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Text styles
  */
 strong,
@@ -537,7 +537,7 @@ i {
   font-style: italic; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Lists
  */
 ul,
@@ -551,7 +551,7 @@ ol {
     margin: 0 0 0 20px; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Quotes
  */
 blockquote {
@@ -577,7 +577,7 @@ cite {
     color: #666666; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Code snippets
  */
 code,
@@ -594,7 +594,7 @@ pre {
   white-space: pre-wrap; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Deleted and inserted text
  */
 del {
@@ -605,7 +605,7 @@ ins {
   text-decoration: none; }
 
 /**
- * @section     Typography
+ * @section     Base
  * @subsection  Misc
  */
 hr {
@@ -627,6 +627,10 @@ hr {
  * @author      Trendwerk
  * @license     GPL v2
  */
+/**
+  * @section     Base
+  * @subsection  Table
+  */
 table {
   border: 1px solid #cccccc;
   border-collapse: collapse;
@@ -1006,6 +1010,16 @@ select {
       display: none; }
 
 /**
+ * @section Layout
+ *
+ * Defines the default layout
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
  * @section     Layout
  * @subsection  Header
  */
@@ -1079,7 +1093,7 @@ select {
 
 /**
  * @section Images
- * 
+ *
  * Defines the default styling of images
  *
  * @package     WordPress
@@ -1088,8 +1102,8 @@ select {
  * @license     GPL v2
  */
 /**
- * @section     Images
- * @subsection  Alignment
+ * @section     Layout
+ * @subsection  Alignment types
  */
 .alignleft {
   float: left;
@@ -1104,7 +1118,7 @@ select {
   margin: 0 auto; }
 
 /**
- * @section     Images
+ * @section     Layout
  * @subsection  Captions
  */
 .wp-caption {
@@ -1122,7 +1136,7 @@ select {
     margin: 0 10px 10px; }
 
 /**
- * @section     Images
+ * @section     Layout
  * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
  */
 .aligncenter img,
@@ -1142,8 +1156,18 @@ select {
   height: auto; }
 
 /**
+ * @section Layout
+ *
+ * Defines the default layout
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
  * @section     Layout
- * @subsection  Main
+ * @subsection  Core
  */
 body {
   background-color: white; }
@@ -1158,33 +1182,15 @@ main {
       background-color: white; } }
 
 /**
- * @section     Parts
- * @subsection  Hentry
+ * @section Layout
+ *
+ * Defines the default layout
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
  */
-.hentry {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin: 0 0 30px;
-  padding: 0 0 30px; }
-  .hentry.sticky {
-    background-color: #ededed;
-    border-radius: 3px;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-    padding: 20px;
-    margin-bottom: 60px; }
-    @media (min-width: 641px) {
-      .hentry.sticky {
-        padding: 30px; } }
-  .hentry h2 {
-    margin-bottom: 15px; }
-  .hentry .featured {
-    float: right;
-    margin: 0 0 30px 20px; }
-  .hentry p:last-of-type {
-    margin-bottom: 0; }
-
 /**
  * @section     Layout
  * @subsection  Main navigation
@@ -1490,6 +1496,45 @@ main {
  */
 .adminbar-input {
   min-width: 0; }
+
+/**
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Components
+ * @subsection  Entry
+ */
+.hentry {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0 0 30px; }
+  .hentry.sticky {
+    background-color: #ededed;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding: 20px;
+    margin-bottom: 60px; }
+    @media (min-width: 641px) {
+      .hentry.sticky {
+        padding: 30px; } }
+  .hentry h2 {
+    margin-bottom: 15px; }
+  .hentry .featured {
+    float: right;
+    margin: 0 0 30px 20px; }
+  .hentry p:last-of-type {
+    margin-bottom: 0; }
 
 /**
  *
