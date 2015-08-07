@@ -90,7 +90,7 @@ linters:
 
   PropertySpelling:
     enabled: true
-    extra_properties: []
+    extra_properties: [text-size-adjust]
 
   QualifyingElement:
     enabled: true
