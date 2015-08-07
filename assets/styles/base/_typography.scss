@@ -110,7 +110,7 @@ h6 {
 
 /**
  * @section     Base
- * @subsection  Links
+ * @subsection  Hyperlinks
  */
 
 a {
@@ -129,7 +129,7 @@ a {
     white-space: nowrap;
   }
 
-  /* Add characters :before/:after link */
+  /* Add characters :before and :after link */
 
   &.read-more:after,
   &.prev:before,
@@ -160,7 +160,7 @@ p {
 
 /**
  * @section     Base
- * @subsection  Text styles
+ * @subsection  Strong and italic
  */
 
 strong,
@@ -191,7 +191,7 @@ ol {
 
 /**
  * @section     Base
- * @subsection  Quotes
+ * @subsection  Blockquotes and cites
  */
 
 blockquote {
@@ -226,7 +226,7 @@ cite {
 
 /**
  * @section     Base
- * @subsection  Code snippets
+ * @subsection  Code and pre
  */
 
 code,
@@ -246,7 +246,7 @@ pre {
 
 /**
  * @section     Base
- * @subsection  Deleted and inserted text
+ * @subsection  Deleted and inserted
  */
 
 del {
@@ -256,18 +256,4 @@ del {
 
 ins {
   text-decoration: none;
-}
-
-/**
- * @section     Base
- * @subsection  Misc
- */
-
-hr {
-  border: 0;
-  border-top: 1px solid $border-color;
-  display: block;
-  height: 1px;
-  margin: 0 0 $line-height;
-  padding: 0;
 }
