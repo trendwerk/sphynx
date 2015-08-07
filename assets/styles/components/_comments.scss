@@ -61,10 +61,10 @@
 
   .comment-author,
   .comment-metadata {
-    float: left;
-    width: 100%;
+    @include full-width;
 
     @include respond-to('medium') {
+      clear: none;
       width: auto;
     }
   }
