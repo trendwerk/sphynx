@@ -30,15 +30,14 @@
 [type="url"],
 textarea,
 select {
+  @include border-radius;
   @include placeholder($text-color, $text-light);
   -webkit-appearance: none;
   background-color: $white;
   border: 1px solid $border-color;
-  border-radius: 3px;
   box-sizing: border-box;
   color: $text-color;
   display: block;
-  font-family: $text-font;
   font-size: 16px;
   height: 40px;
   line-height: 25px;
@@ -58,12 +57,8 @@ select {
 }
 
 textarea {
-  box-sizing: border-box;
-  display: block;
   height: 200px;
-  margin: 0;
   padding: 8px 12px;
-  width: 100%;
 
   @include respond-to('medium') {
     width: 75%;
