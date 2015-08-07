@@ -953,50 +953,50 @@ select {
  * @section     Layout
  * @subsection  Footer
  */
-footer {
+.footer {
   clear: both;
   float: left;
   width: 100%;
   background-color: #333333;
   color: white;
   margin-bottom: 0; }
-  footer a {
+  .footer a {
     color: white; }
-    footer a:active,
-    footer a:focus,
-    footer a:hover {
+    .footer a:active,
+    .footer a:focus,
+    .footer a:hover {
       color: #999999; }
-  footer .credits {
+  .footer .credits {
     float: left;
     margin: 30px 0;
     width: 100%; }
-    footer .credits p {
+    .footer .credits p {
       margin: 0; }
-    footer .credits .copyright {
+    .footer .credits .copyright {
       text-align: center;
       width: 100%; }
       @media (min-width: 641px) {
-        footer .credits .copyright {
+        .footer .credits .copyright {
           float: left;
           width: auto; } }
-    footer .credits nav {
+    .footer .credits nav {
       text-align: center;
       width: 100%; }
       @media (min-width: 641px) {
-        footer .credits nav {
+        .footer .credits nav {
           float: right;
           width: auto; } }
-    footer .credits ul {
+    .footer .credits ul {
       list-style: none;
       margin: 0;
       padding: 0; }
-    footer .credits li {
+    .footer .credits li {
       display: inline; }
-    footer .credits li:after {
+    .footer .credits li:after {
       color: white;
       content: '|';
       padding: 0 5px 0 10px; }
-    footer .credits li:last-child:after {
+    .footer .credits li:last-child:after {
       display: none; }
 
 /**
@@ -1390,12 +1390,19 @@ main {
       .comments .avatar {
         left: -90px;
         position: absolute; } }
-  .comments .comment-meta {
-    background-color: transparent; }
   .comments .comment-author,
   .comments .comment-metadata {
     float: left;
     width: 100%; }
+    @media (min-width: 641px) {
+      .comments .comment-author,
+      .comments .comment-metadata {
+        width: auto; } }
+  .comments time {
+    margin-right: 10px; }
+  @media (min-width: 641px) {
+    .comments .comment-metadata {
+      float: right; } }
   .comments .comment-content {
     padding: 15px 0; }
     .comments .comment-content p:last-of-type {
@@ -1497,11 +1504,31 @@ main {
         padding: 30px; } }
   .hentry h2 {
     margin-bottom: 15px; }
-  .hentry .featured {
-    float: right;
-    margin: 0 0 30px 20px; }
   .hentry p:last-of-type {
     margin-bottom: 0; }
+
+/**
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+/**
+ * @section     Components
+ * @subsection  Featured
+ */
+.featured {
+  display: block;
+  margin-bottom: 30px; }
+  @media (min-width: 641px) {
+    .featured {
+      float: right;
+      margin: 0 0 30px 20px; } }
 
 /**
  *
@@ -1983,9 +2010,5 @@ main {
  */
 .single h1 {
   margin-bottom: 0; }
-
-.single .featured {
-  float: right;
-  margin: 5px 0 10px 20px; }
 
 /*# sourceMappingURL=main.css.map */

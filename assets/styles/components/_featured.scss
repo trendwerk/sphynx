@@ -1,0 +1,26 @@
+/**
+ *
+ * @section Components
+ *
+ * Defines the styling for components
+ *
+ * @package     WordPress
+ * @subpackage  TrendPress
+ * @author      Trendwerk
+ * @license     GPL v2
+ */
+
+/**
+ * @section     Components
+ * @subsection  Featured
+ */
+
+.featured {
+  display: block;
+  margin-bottom: $line-height;
+  
+  @include respond-to('medium') {
+    float: right;
+    margin: 0 0 $line-height 20px;
+  }
+}

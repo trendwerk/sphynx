@@ -59,14 +59,24 @@
     }
   }
 
-  .comment-meta {
-    background-color: transparent;
-  }
-
   .comment-author,
   .comment-metadata {
     float: left;
     width: 100%;
+
+    @include respond-to('medium') {
+      width: auto;
+    }
+  }
+
+  time {
+    margin-right: 10px;
+  }
+
+  .comment-metadata {
+    @include respond-to('medium') {
+      float: right;
+    }
   }
 
   .comment-content {
