@@ -458,50 +458,50 @@ h6 {
 
 h1 {
   font-size: 28px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h1 {
       font-size: 40px; } }
 
 h2 {
   font-size: 20px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h2 {
       font-size: 28px; } }
 
 h3 {
   font-size: 18px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h3 {
       font-size: 22px; } }
 
 h4 {
   font-size: 16px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h4 {
       font-size: 18px; } }
 
 h5 {
   font-size: 14px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h5 {
       font-size: 16px; } }
 
 h6 {
   font-size: 12px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h6 {
       font-size: 14px; } }
 
 /**
  * @section     Base
- * @subsection  Links
+ * @subsection  Hyperlinks
  */
 a {
   color: #1d6fd3;
   outline: 0;
   text-decoration: underline;
   /* More link */
-  /* Add characters :before/:after link */ }
+  /* Add characters :before and :after link */ }
   a:hover {
     color: #1759a9;
     text-decoration: underline; }
@@ -528,7 +528,7 @@ p {
 
 /**
  * @section     Base
- * @subsection  Text styles
+ * @subsection  Strong and italic
  */
 strong,
 b {
@@ -554,7 +554,7 @@ ol {
 
 /**
  * @section     Base
- * @subsection  Quotes
+ * @subsection  Blockquotes and cites
  */
 blockquote {
   color: #999999;
@@ -580,13 +580,12 @@ cite {
 
 /**
  * @section     Base
- * @subsection  Code snippets
+ * @subsection  Code and pre
  */
 code,
 pre {
   background-color: #ffeeb3;
-  color: #666666;
-  font-size: 13px; }
+  color: #666666; }
 
 pre {
   margin-bottom: 20px;
@@ -597,26 +596,15 @@ pre {
 
 /**
  * @section     Base
- * @subsection  Deleted and inserted text
+ * @subsection  Deleted and inserted
  */
 del {
   color: #999999;
   text-decoration: line-through; }
 
 ins {
-  text-decoration: none; }
-
-/**
- * @section     Base
- * @subsection  Misc
- */
-hr {
-  border: 0;
-  border-top: 1px solid #cccccc;
-  display: block;
-  height: 1px;
-  margin: 0 0 30px;
-  padding: 0; }
+  color: #333333;
+  text-decoration: underline; }
 
 /**
  *
@@ -631,7 +619,7 @@ hr {
  */
 /**
   * @section     Base
-  * @subsection  Table
+  * @subsection  Tables
   */
 table {
   border: 1px solid #cccccc;
@@ -835,8 +823,7 @@ table {
     height: 25px;
     line-height: 25px;
     margin: 0 0 5px 5px;
-    padding: 0 10px;
-    text-transform: lowercase; }
+    padding: 0 10px; }
     .comment-respond small a:active,
     .comment-respond small a:focus,
     .comment-respond small a:hover {
@@ -1106,8 +1093,7 @@ table {
   height: 25px;
   line-height: 25px;
   margin: 0 0 5px 5px;
-  padding: 0 10px;
-  text-transform: lowercase; }
+  padding: 0 10px; }
   .tags .tag:active,
   .tags .tag:focus,
   .tags .tag:hover {

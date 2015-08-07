@@ -13,31 +13,64 @@
 /// @section     Variables
 /// @subsection  Defines recurring colors and fonts
 
-$heading-font:     'Helvetica Neue', sans-serif;
-$text-font:        'Helvetica Neue', sans-serif;
+$heading-font: 'Helvetica Neue', sans-serif;
+$text-font: 'Helvetica Neue', sans-serif;
 
-$primary-color:     hsl(0, 0%, 20%);
-$secondary-color:   hsl(0, 0%, 60%);
+$primary-color: hsl(0, 0%, 20%);
+$secondary-color: hsl(0, 0%, 60%);
 
-$black:				hsl(0, 0%, 0%);
-$marker:            hsl(47, 100%, 85%);
-$red:               hsl(0, 58%, 52%);
-$white:             hsl(0, 0%, 100%);
+$marker: hsl(47, 100%, 85%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$red: hsl(0, 58%, 52%);
 
-$light-background:  hsl(0, 0%, 93%);
-$body-background:   $white;
-$border-color:      hsl(0, 0%, 80%);
+$light-background: hsl(0, 0%, 93%);
+$border-color: hsl(0, 0%, 80%);
+$body-background: $white;
 
-$heading-color:     hsl(0, 0%, 20%);
-$text-color:        hsl(0, 0%, 40%);
-$text-light:        hsl(0, 0%, 60%);
-$link-color:        hsl(213, 76%, 47%);
+$heading-color: hsl(0, 0%, 20%);
+$link-color: hsl(213, 76%, 47%);
+$text-color: hsl(0, 0%, 40%);
+$text-light: hsl(0, 0%, 60%);
 
-$line-height:       30px;
+$line-height: 30px;
+
+/// @section     Variables
+/// @subsection  Defines maps
 
 $breakpoints: (
-  'small':       	421px,
-  'medium':      	641px,
-  'large':       	981px,
-  'huge':        	1161px,
+  'small': 421px,
+  'medium': 641px,
+  'large': 981px,
+  'huge': 1161px,
+);
+
+$h1-font-sizes: (
+  null: 28px,
+  medium: 40px,
+);
+
+$h2-font-sizes: (
+  null: 20px,
+  medium: 28px,
+);
+
+$h3-font-sizes: (
+  null: 18px,
+  medium: 22px,
+);
+
+$h4-font-sizes: (
+  null: 16px,
+  medium: 18px,
+);
+
+$h5-font-sizes: (
+  null: 14px,
+  medium: 16px,
+);
+
+$h6-font-sizes: (
+  null: 12px,
+  medium: 14px,
 );

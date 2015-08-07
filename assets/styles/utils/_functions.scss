@@ -1,9 +1,9 @@
 ///
-/// @section Mixins
+/// @section Functions
 ///
-/// Mixins allow you to embed all the properties of a class into another class
+/// Functions allow you to embed all the properties of a class into another class
 /// by simply including the class name as one of its properties. It’s just like
-/// variables, but for whole classes. Mixins can also behave like functions,
+/// variables, but for whole classes. Functions can also behave like functions,
 /// and take arguments.
 ///
 /// @package     WordPress
@@ -12,25 +12,14 @@
 /// @license     GPL v2
 ///
 
-/// @section     Mixins
-/// @subsection  Full width
+/// @section     Functions
+/// @subsection  Animate
 
-@mixin full-width {
-  clear: both;
-  float: left;
-  width: 100%;
+@mixin animate-this($what: all, $time: 0.5s, $ease: ease-in-out) {
+  transition: $what $time $ease;
 }
 
-/// @section     Mixins
-/// @subsection  Remove list style
-
-@mixin remove-list-styles {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/// @section     Mixins
+/// @section     Functions
 /// @subsection  Block
 
 @mixin block {
@@ -45,28 +34,14 @@
   }
 }
 
-/// @section     Mixins
-/// @subsection  Hover
-
-@mixin hover($background, $foreground) {
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: $background;
-    color: $foreground;
-    outline: none;
-    text-decoration: none;
-  }
-}
-
-/// @section     Mixins
-/// @subsection  Animate
+/// @section     Functions
+/// @subsection  Border radius
 
 @mixin border-radius {
   border-radius: 3px;
 }
 
-/// @section     Mixins
+/// @section     Functions
 /// @subsection  Button
 
 @mixin button($type: main) {
@@ -121,7 +96,69 @@
   }
 }
 
-/// @section     Mixins
+/// @section     Functions
+/// @subsection  Collumns
+
+@mixin columns($number, $gap) {
+  column-count: $number;
+  column-gap: $gap;
+}
+
+/// @section     Functions
+/// @subsection  Font size
+
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+/// @section     Functions
+/// @subsection  Full width
+
+@mixin full-width {
+  clear: both;
+  float: left;
+  width: 100%;
+}
+
+/// @section    Functions
+/// @subsection Gradient
+
+@mixin gradient($direction, $start-color, $end-color) {
+  background-color: $start-color;
+
+  @if $direction == horizontal {
+    background-image: linear-gradient(to right, $start-color, $end-color);
+  } @else if $direction == vertical {
+    background-image: linear-gradient(top, $start-color, $end-color);
+  }
+}
+
+/// @section     Functions
+/// @subsection  Hover
+
+@mixin hover($background, $foreground) {
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $background;
+    color: $foreground;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+/// @section     Functions
 /// @subsection  Meta
 
 @mixin meta() {
@@ -138,35 +175,7 @@
   }
 }
 
-/// @section     Mixins
-/// @subsection  Animate
-
-@mixin animate-this($what: all, $time: 0.5s, $ease: ease-in-out) {
-  transition: $what $time $ease;
-}
-
-/// @section     Mixins
-/// @subsection  Collumns
-
-@mixin columns($number, $gap) {
-  column-count: $number;
-  column-gap: $gap;
-}
-
-/// @section    Mixins
-/// @subsection Gradient
-
-@mixin gradient($direction, $start-color, $end-color) {
-  background-color: $start-color;
-
-  @if $direction == horizontal {
-    background-image: linear-gradient(to right, $start-color, $end-color);
-  } @else if $direction == vertical {
-    background-image: linear-gradient(top, $start-color, $end-color);
-  }
-}
-
-/// @section     Mixins
+/// @section     Functions
 /// @subsection  Placeholder
 
 @mixin placeholder($out, $on) {
@@ -179,7 +188,16 @@
   }
 }
 
-/// @section     Mixins
+/// @section     Functions
+/// @subsection  Remove list style
+
+@mixin remove-list-styles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/// @section     Functions
 /// @subsection  Respond to
 /// @param       {String} $breakpoint - Breakpoint
 
@@ -198,14 +216,14 @@
   }
 }
 
-/// @section     Mixins
+/// @section     Functions
 /// @subsection  Shade
 
 @function shade($color, $percentage) {
   @return mix($black, $color, $percentage);
 }
 
-/// @section     Mixins
+/// @section     Functions
 /// @subsection  Sprites
 
 @mixin sprite($top, $left) {
@@ -220,21 +238,21 @@
   }
 }
 
-/// @section     Mixins
+/// @section     Functions
 /// @subsection  Tint
 
 @function tint($color, $percentage) {
   @return mix($white, $color, $percentage);
 }
 
-/// @section     Mixins
+/// @section     Functions
 /// @subsection  Transform
 
 @mixin transform($transform) {
   transform: $transform;
 }
 
-/// @section     Mixins
+/// @section     Functions
 /// @subsection  Transition
 
 @mixin transition($transition) {

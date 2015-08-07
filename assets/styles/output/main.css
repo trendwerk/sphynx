@@ -458,50 +458,50 @@ h6 {
 
 h1 {
   font-size: 28px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h1 {
       font-size: 40px; } }
 
 h2 {
   font-size: 20px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h2 {
       font-size: 28px; } }
 
 h3 {
   font-size: 18px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h3 {
       font-size: 22px; } }
 
 h4 {
   font-size: 16px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h4 {
       font-size: 18px; } }
 
 h5 {
   font-size: 14px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h5 {
       font-size: 16px; } }
 
 h6 {
   font-size: 12px; }
-  @media (min-width: 641px) {
+  @media screen and (min-width: 641px) {
     h6 {
       font-size: 14px; } }
 
 /**
  * @section     Base
- * @subsection  Links
+ * @subsection  Hyperlinks
  */
 a {
   color: #1d6fd3;
   outline: 0;
   text-decoration: underline;
   /* More link */
-  /* Add characters :before/:after link */ }
+  /* Add characters :before and :after link */ }
   a:hover {
     color: #1759a9;
     text-decoration: underline; }
@@ -528,7 +528,7 @@ p {
 
 /**
  * @section     Base
- * @subsection  Text styles
+ * @subsection  Strong and italic
  */
 strong,
 b {
@@ -554,7 +554,7 @@ ol {
 
 /**
  * @section     Base
- * @subsection  Quotes
+ * @subsection  Blockquotes and cites
  */
 blockquote {
   color: #999999;
@@ -580,13 +580,12 @@ cite {
 
 /**
  * @section     Base
- * @subsection  Code snippets
+ * @subsection  Code and pre
  */
 code,
 pre {
   background-color: #ffeeb3;
-  color: #666666;
-  font-size: 13px; }
+  color: #666666; }
 
 pre {
   margin-bottom: 20px;
@@ -597,26 +596,15 @@ pre {
 
 /**
  * @section     Base
- * @subsection  Deleted and inserted text
+ * @subsection  Deleted and inserted
  */
 del {
   color: #999999;
   text-decoration: line-through; }
 
 ins {
-  text-decoration: none; }
-
-/**
- * @section     Base
- * @subsection  Misc
- */
-hr {
-  border: 0;
-  border-top: 1px solid #cccccc;
-  display: block;
-  height: 1px;
-  margin: 0 0 30px;
-  padding: 0; }
+  color: #333333;
+  text-decoration: underline; }
 
 /**
  *
@@ -631,7 +619,7 @@ hr {
  */
 /**
   * @section     Base
-  * @subsection  Table
+  * @subsection  Tables
   */
 table {
   border: 1px solid #cccccc;
@@ -663,19 +651,23 @@ table {
  * @author      Trendwerk
  * @license     GPL v2
  */
-input[type="datetime-local"],
-input[type="datetime"],
-input[type="password"],
-input[type="number"],
-input[type="search"],
-input[type="month"],
-input[type="email"],
-input[type="date"],
-input[type="text"],
-input[type="time"],
-input[type="week"],
-input[type="tel"],
-input[type="url"],
+/**
+  * @section     Base
+  * @subsection  Forms
+  */
+[type="datetime-local"],
+[type="datetime"],
+[type="password"],
+[type="number"],
+[type="search"],
+[type="month"],
+[type="email"],
+[type="date"],
+[type="text"],
+[type="time"],
+[type="week"],
+[type="tel"],
+[type="url"],
 textarea,
 select {
   -webkit-appearance: none;
@@ -693,165 +685,165 @@ select {
   outline: none;
   padding: 0 12px;
   width: 100%; }
-  input[type="datetime-local"]::-webkit-input-placeholder,
-  input[type="datetime"]::-webkit-input-placeholder,
-  input[type="password"]::-webkit-input-placeholder,
-  input[type="number"]::-webkit-input-placeholder,
-  input[type="search"]::-webkit-input-placeholder,
-  input[type="month"]::-webkit-input-placeholder,
-  input[type="email"]::-webkit-input-placeholder,
-  input[type="date"]::-webkit-input-placeholder,
-  input[type="text"]::-webkit-input-placeholder,
-  input[type="time"]::-webkit-input-placeholder,
-  input[type="week"]::-webkit-input-placeholder,
-  input[type="tel"]::-webkit-input-placeholder,
-  input[type="url"]::-webkit-input-placeholder,
+  [type="datetime-local"]::-webkit-input-placeholder,
+  [type="datetime"]::-webkit-input-placeholder,
+  [type="password"]::-webkit-input-placeholder,
+  [type="number"]::-webkit-input-placeholder,
+  [type="search"]::-webkit-input-placeholder,
+  [type="month"]::-webkit-input-placeholder,
+  [type="email"]::-webkit-input-placeholder,
+  [type="date"]::-webkit-input-placeholder,
+  [type="text"]::-webkit-input-placeholder,
+  [type="time"]::-webkit-input-placeholder,
+  [type="week"]::-webkit-input-placeholder,
+  [type="tel"]::-webkit-input-placeholder,
+  [type="url"]::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder,
   select::-webkit-input-placeholder {
     color: #666666; }
-  input[type="datetime-local"]::-moz-placeholder,
-  input[type="datetime"]::-moz-placeholder,
-  input[type="password"]::-moz-placeholder,
-  input[type="number"]::-moz-placeholder,
-  input[type="search"]::-moz-placeholder,
-  input[type="month"]::-moz-placeholder,
-  input[type="email"]::-moz-placeholder,
-  input[type="date"]::-moz-placeholder,
-  input[type="text"]::-moz-placeholder,
-  input[type="time"]::-moz-placeholder,
-  input[type="week"]::-moz-placeholder,
-  input[type="tel"]::-moz-placeholder,
-  input[type="url"]::-moz-placeholder,
+  [type="datetime-local"]::-moz-placeholder,
+  [type="datetime"]::-moz-placeholder,
+  [type="password"]::-moz-placeholder,
+  [type="number"]::-moz-placeholder,
+  [type="search"]::-moz-placeholder,
+  [type="month"]::-moz-placeholder,
+  [type="email"]::-moz-placeholder,
+  [type="date"]::-moz-placeholder,
+  [type="text"]::-moz-placeholder,
+  [type="time"]::-moz-placeholder,
+  [type="week"]::-moz-placeholder,
+  [type="tel"]::-moz-placeholder,
+  [type="url"]::-moz-placeholder,
   textarea::-moz-placeholder,
   select::-moz-placeholder {
     color: #666666; }
-  input[type="datetime-local"]:-ms-input-placeholder,
-  input[type="datetime"]:-ms-input-placeholder,
-  input[type="password"]:-ms-input-placeholder,
-  input[type="number"]:-ms-input-placeholder,
-  input[type="search"]:-ms-input-placeholder,
-  input[type="month"]:-ms-input-placeholder,
-  input[type="email"]:-ms-input-placeholder,
-  input[type="date"]:-ms-input-placeholder,
-  input[type="text"]:-ms-input-placeholder,
-  input[type="time"]:-ms-input-placeholder,
-  input[type="week"]:-ms-input-placeholder,
-  input[type="tel"]:-ms-input-placeholder,
-  input[type="url"]:-ms-input-placeholder,
+  [type="datetime-local"]:-ms-input-placeholder,
+  [type="datetime"]:-ms-input-placeholder,
+  [type="password"]:-ms-input-placeholder,
+  [type="number"]:-ms-input-placeholder,
+  [type="search"]:-ms-input-placeholder,
+  [type="month"]:-ms-input-placeholder,
+  [type="email"]:-ms-input-placeholder,
+  [type="date"]:-ms-input-placeholder,
+  [type="text"]:-ms-input-placeholder,
+  [type="time"]:-ms-input-placeholder,
+  [type="week"]:-ms-input-placeholder,
+  [type="tel"]:-ms-input-placeholder,
+  [type="url"]:-ms-input-placeholder,
   textarea:-ms-input-placeholder,
   select:-ms-input-placeholder {
     color: #666666; }
-  input[type="datetime-local"]::placeholder,
-  input[type="datetime"]::placeholder,
-  input[type="password"]::placeholder,
-  input[type="number"]::placeholder,
-  input[type="search"]::placeholder,
-  input[type="month"]::placeholder,
-  input[type="email"]::placeholder,
-  input[type="date"]::placeholder,
-  input[type="text"]::placeholder,
-  input[type="time"]::placeholder,
-  input[type="week"]::placeholder,
-  input[type="tel"]::placeholder,
-  input[type="url"]::placeholder,
+  [type="datetime-local"]::placeholder,
+  [type="datetime"]::placeholder,
+  [type="password"]::placeholder,
+  [type="number"]::placeholder,
+  [type="search"]::placeholder,
+  [type="month"]::placeholder,
+  [type="email"]::placeholder,
+  [type="date"]::placeholder,
+  [type="text"]::placeholder,
+  [type="time"]::placeholder,
+  [type="week"]::placeholder,
+  [type="tel"]::placeholder,
+  [type="url"]::placeholder,
   textarea::placeholder,
   select::placeholder {
     color: #666666; }
-  input[type="datetime-local"]:focus::-webkit-input-placeholder,
-  input[type="datetime"]:focus::-webkit-input-placeholder,
-  input[type="password"]:focus::-webkit-input-placeholder,
-  input[type="number"]:focus::-webkit-input-placeholder,
-  input[type="search"]:focus::-webkit-input-placeholder,
-  input[type="month"]:focus::-webkit-input-placeholder,
-  input[type="email"]:focus::-webkit-input-placeholder,
-  input[type="date"]:focus::-webkit-input-placeholder,
-  input[type="text"]:focus::-webkit-input-placeholder,
-  input[type="time"]:focus::-webkit-input-placeholder,
-  input[type="week"]:focus::-webkit-input-placeholder,
-  input[type="tel"]:focus::-webkit-input-placeholder,
-  input[type="url"]:focus::-webkit-input-placeholder,
+  [type="datetime-local"]:focus::-webkit-input-placeholder,
+  [type="datetime"]:focus::-webkit-input-placeholder,
+  [type="password"]:focus::-webkit-input-placeholder,
+  [type="number"]:focus::-webkit-input-placeholder,
+  [type="search"]:focus::-webkit-input-placeholder,
+  [type="month"]:focus::-webkit-input-placeholder,
+  [type="email"]:focus::-webkit-input-placeholder,
+  [type="date"]:focus::-webkit-input-placeholder,
+  [type="text"]:focus::-webkit-input-placeholder,
+  [type="time"]:focus::-webkit-input-placeholder,
+  [type="week"]:focus::-webkit-input-placeholder,
+  [type="tel"]:focus::-webkit-input-placeholder,
+  [type="url"]:focus::-webkit-input-placeholder,
   textarea:focus::-webkit-input-placeholder,
   select:focus::-webkit-input-placeholder {
     color: #999999; }
-  input[type="datetime-local"]:focus::-moz-placeholder,
-  input[type="datetime"]:focus::-moz-placeholder,
-  input[type="password"]:focus::-moz-placeholder,
-  input[type="number"]:focus::-moz-placeholder,
-  input[type="search"]:focus::-moz-placeholder,
-  input[type="month"]:focus::-moz-placeholder,
-  input[type="email"]:focus::-moz-placeholder,
-  input[type="date"]:focus::-moz-placeholder,
-  input[type="text"]:focus::-moz-placeholder,
-  input[type="time"]:focus::-moz-placeholder,
-  input[type="week"]:focus::-moz-placeholder,
-  input[type="tel"]:focus::-moz-placeholder,
-  input[type="url"]:focus::-moz-placeholder,
+  [type="datetime-local"]:focus::-moz-placeholder,
+  [type="datetime"]:focus::-moz-placeholder,
+  [type="password"]:focus::-moz-placeholder,
+  [type="number"]:focus::-moz-placeholder,
+  [type="search"]:focus::-moz-placeholder,
+  [type="month"]:focus::-moz-placeholder,
+  [type="email"]:focus::-moz-placeholder,
+  [type="date"]:focus::-moz-placeholder,
+  [type="text"]:focus::-moz-placeholder,
+  [type="time"]:focus::-moz-placeholder,
+  [type="week"]:focus::-moz-placeholder,
+  [type="tel"]:focus::-moz-placeholder,
+  [type="url"]:focus::-moz-placeholder,
   textarea:focus::-moz-placeholder,
   select:focus::-moz-placeholder {
     color: #999999; }
-  input[type="datetime-local"]:focus:-ms-input-placeholder,
-  input[type="datetime"]:focus:-ms-input-placeholder,
-  input[type="password"]:focus:-ms-input-placeholder,
-  input[type="number"]:focus:-ms-input-placeholder,
-  input[type="search"]:focus:-ms-input-placeholder,
-  input[type="month"]:focus:-ms-input-placeholder,
-  input[type="email"]:focus:-ms-input-placeholder,
-  input[type="date"]:focus:-ms-input-placeholder,
-  input[type="text"]:focus:-ms-input-placeholder,
-  input[type="time"]:focus:-ms-input-placeholder,
-  input[type="week"]:focus:-ms-input-placeholder,
-  input[type="tel"]:focus:-ms-input-placeholder,
-  input[type="url"]:focus:-ms-input-placeholder,
+  [type="datetime-local"]:focus:-ms-input-placeholder,
+  [type="datetime"]:focus:-ms-input-placeholder,
+  [type="password"]:focus:-ms-input-placeholder,
+  [type="number"]:focus:-ms-input-placeholder,
+  [type="search"]:focus:-ms-input-placeholder,
+  [type="month"]:focus:-ms-input-placeholder,
+  [type="email"]:focus:-ms-input-placeholder,
+  [type="date"]:focus:-ms-input-placeholder,
+  [type="text"]:focus:-ms-input-placeholder,
+  [type="time"]:focus:-ms-input-placeholder,
+  [type="week"]:focus:-ms-input-placeholder,
+  [type="tel"]:focus:-ms-input-placeholder,
+  [type="url"]:focus:-ms-input-placeholder,
   textarea:focus:-ms-input-placeholder,
   select:focus:-ms-input-placeholder {
     color: #999999; }
-  input[type="datetime-local"]:focus::placeholder,
-  input[type="datetime"]:focus::placeholder,
-  input[type="password"]:focus::placeholder,
-  input[type="number"]:focus::placeholder,
-  input[type="search"]:focus::placeholder,
-  input[type="month"]:focus::placeholder,
-  input[type="email"]:focus::placeholder,
-  input[type="date"]:focus::placeholder,
-  input[type="text"]:focus::placeholder,
-  input[type="time"]:focus::placeholder,
-  input[type="week"]:focus::placeholder,
-  input[type="tel"]:focus::placeholder,
-  input[type="url"]:focus::placeholder,
+  [type="datetime-local"]:focus::placeholder,
+  [type="datetime"]:focus::placeholder,
+  [type="password"]:focus::placeholder,
+  [type="number"]:focus::placeholder,
+  [type="search"]:focus::placeholder,
+  [type="month"]:focus::placeholder,
+  [type="email"]:focus::placeholder,
+  [type="date"]:focus::placeholder,
+  [type="text"]:focus::placeholder,
+  [type="time"]:focus::placeholder,
+  [type="week"]:focus::placeholder,
+  [type="tel"]:focus::placeholder,
+  [type="url"]:focus::placeholder,
   textarea:focus::placeholder,
   select:focus::placeholder {
     color: #999999; }
   @media (min-width: 641px) {
-    input[type="datetime-local"],
-    input[type="datetime"],
-    input[type="password"],
-    input[type="number"],
-    input[type="search"],
-    input[type="month"],
-    input[type="email"],
-    input[type="date"],
-    input[type="text"],
-    input[type="time"],
-    input[type="week"],
-    input[type="tel"],
-    input[type="url"],
+    [type="datetime-local"],
+    [type="datetime"],
+    [type="password"],
+    [type="number"],
+    [type="search"],
+    [type="month"],
+    [type="email"],
+    [type="date"],
+    [type="text"],
+    [type="time"],
+    [type="week"],
+    [type="tel"],
+    [type="url"],
     textarea,
     select {
       font-size: 14px;
       width: 50%; } }
-  input[type="datetime-local"]:focus,
-  input[type="datetime"]:focus,
-  input[type="password"]:focus,
-  input[type="number"]:focus,
-  input[type="search"]:focus,
-  input[type="month"]:focus,
-  input[type="email"]:focus,
-  input[type="date"]:focus,
-  input[type="text"]:focus,
-  input[type="time"]:focus,
-  input[type="week"]:focus,
-  input[type="tel"]:focus,
-  input[type="url"]:focus,
+  [type="datetime-local"]:focus,
+  [type="datetime"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="search"]:focus,
+  [type="month"]:focus,
+  [type="email"]:focus,
+  [type="date"]:focus,
+  [type="text"]:focus,
+  [type="time"]:focus,
+  [type="week"]:focus,
+  [type="tel"]:focus,
+  [type="url"]:focus,
   textarea:focus,
   select:focus {
     border: 1px solid #a3a3a3; }
@@ -867,8 +859,8 @@ textarea {
     textarea {
       width: 75%; } }
 
-input[type="submit"],
-input[type="button"],
+[type="submit"],
+[type="button"],
 button {
   border-radius: 3px;
   background-color: #333333;
@@ -885,12 +877,12 @@ button {
   text-decoration: none;
   text-transform: uppercase;
   -webkit-appearance: none; }
-  input[type="submit"]:active,
-  input[type="submit"]:focus,
-  input[type="submit"]:hover,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="button"]:hover,
+  [type="submit"]:active,
+  [type="submit"]:focus,
+  [type="submit"]:hover,
+  [type="button"]:active,
+  [type="button"]:focus,
+  [type="button"]:hover,
   button:active,
   button:focus,
   button:hover {
@@ -899,8 +891,8 @@ button {
     outline: none;
     text-decoration: none; }
   @media (min-width: 641px) {
-    input[type="submit"],
-    input[type="button"],
+    [type="submit"],
+    [type="button"],
     button {
       margin-left: 25%; } }
 
@@ -1455,8 +1447,7 @@ main {
     height: 25px;
     line-height: 25px;
     margin: 0 0 5px 5px;
-    padding: 0 10px;
-    text-transform: lowercase; }
+    padding: 0 10px; }
     .comment-respond small a:active,
     .comment-respond small a:focus,
     .comment-respond small a:hover {
@@ -1473,24 +1464,6 @@ main {
       text-decoration: none; }
   .comment-respond .submit {
     margin-top: 10px; }
-
-/**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Components
- * @subsection  Fix for admin-bar search form
- */
-.adminbar-input {
-  min-width: 0; }
 
 /**
  *
@@ -1853,8 +1826,7 @@ main {
   height: 25px;
   line-height: 25px;
   margin: 0 0 5px 5px;
-  padding: 0 10px;
-  text-transform: lowercase; }
+  padding: 0 10px; }
   .tags .tag:active,
   .tags .tag:focus,
   .tags .tag:hover {

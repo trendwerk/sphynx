@@ -61,51 +61,27 @@ h6 {
 }
 
 h1 {
-  font-size: 28px;
-
-  @include respond-to('medium') {
-    font-size: 40px;
-  }
+  @include font-size($h1-font-sizes);
 }
 
 h2 {
-  font-size: 20px;
-
-  @include respond-to('medium') {
-    font-size: 28px;
-  }
+  @include font-size($h2-font-sizes);
 }
 
 h3 {
-  font-size: 18px;
-
-  @include respond-to('medium') {
-    font-size: 22px;
-  }
+  @include font-size($h3-font-sizes);
 }
 
 h4 {
-  font-size: 16px;
-
-  @include respond-to('medium') {
-    font-size: 18px;
-  }
+  @include font-size($h4-font-sizes);
 }
 
 h5 {
-  font-size: 14px;
-
-  @include respond-to('medium') {
-    font-size: 16px;
-  }
+  @include font-size($h5-font-sizes);
 }
 
 h6 {
-  font-size: 12px;
-
-  @include respond-to('medium') {
-    font-size: 14px;
-  }
+  @include font-size($h6-font-sizes);
 }
 
 /**
@@ -233,7 +209,6 @@ code,
 pre {
   background-color: $marker;
   color: $text-color;
-  font-size: 13px;
 }
 
 pre {
