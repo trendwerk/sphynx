@@ -1441,7 +1441,8 @@ main {
     height: 25px;
     line-height: 25px;
     margin: 0 0 5px 5px;
-    padding: 0 10px; }
+    padding: 0 10px;
+    text-transform: none; }
     .comment-respond small a:active,
     .comment-respond small a:focus,
     .comment-respond small a:hover {
@@ -1834,7 +1835,8 @@ main {
   height: 25px;
   line-height: 25px;
   margin: 0 0 5px 5px;
-  padding: 0 10px; }
+  padding: 0 10px;
+  text-transform: none; }
   .tags .tag:active,
   .tags .tag:focus,
   .tags .tag:hover {

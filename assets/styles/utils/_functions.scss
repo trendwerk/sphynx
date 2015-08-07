@@ -75,6 +75,7 @@
     line-height: 25px;
     margin: 0 0 5px 5px;
     padding: 0 10px;
+    text-transform: none;
 
   } @else if $type == pager {
     background-color: $light-background;
