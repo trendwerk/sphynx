@@ -1390,6 +1390,8 @@ main {
       .comments .avatar {
         left: -90px;
         position: absolute; } }
+  .comments .comment-meta {
+    background-color: transparent; }
   .comments .comment-author,
   .comments .comment-metadata {
     float: left;
