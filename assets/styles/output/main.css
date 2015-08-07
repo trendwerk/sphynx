@@ -616,8 +616,6 @@ ins {
   */
 table {
   border: 1px solid #cccccc;
-  border-collapse: collapse;
-  border-spacing: 0;
   margin: 0 0 30px;
   width: 100%; }
   table tr {
@@ -841,7 +839,7 @@ select {
     border: 1px solid #a3a3a3; }
 
 textarea {
-  height: 200px;
+  min-height: 200px;
   padding: 8px 12px; }
   @media (min-width: 641px) {
     textarea {

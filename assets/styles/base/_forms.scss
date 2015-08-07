@@ -57,7 +57,7 @@ select {
 }
 
 textarea {
-  height: 200px;
+  min-height: 200px;
   padding: 8px 12px;
 
   @include respond-to('medium') {
