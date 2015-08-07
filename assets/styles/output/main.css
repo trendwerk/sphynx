@@ -588,7 +588,7 @@ pre {
   color: #666666; }
 
 pre {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 20px;
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
@@ -939,10 +939,6 @@ select {
     .wrapper {
       width: 1160px; } }
 
-@media (min-width: 821px) {
-  main .wrapper {
-    width: 780px; } }
-
 /**
  * @section Layout
  *
@@ -1163,9 +1159,6 @@ header {
  * @section     Layout
  * @subsection  Core
  */
-body {
-  background-color: white; }
-
 main {
   clear: both;
   float: left;
@@ -1174,6 +1167,10 @@ main {
   @media (min-width: 641px) {
     main {
       background-color: white; } }
+
+@media (min-width: 821px) {
+  main .wrapper {
+    width: 780px; } }
 
 /**
  * @section Layout

@@ -14,15 +14,17 @@
  * @subsection  Core
  */
 
-body {
-  background-color: $body-background;
-}
-
 main {
   @include full-width;
   padding: ($line-height * 2) 0 $line-height;
 
   @include respond-to('medium') {
     background-color: $body-background;
+  }
+}
+
+main .wrapper {
+  @media(min-width: 821px) {
+    width: 780px;
   }
 }
