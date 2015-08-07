@@ -15,19 +15,19 @@
   * @subsection  Forms
   */
 
-input[type="datetime-local"],
-input[type="datetime"],
-input[type="password"],
-input[type="number"],
-input[type="search"],
-input[type="month"],
-input[type="email"],
-input[type="date"],
-input[type="text"],
-input[type="time"],
-input[type="week"],
-input[type="tel"],
-input[type="url"],
+[type="datetime-local"],
+[type="datetime"],
+[type="password"],
+[type="number"],
+[type="search"],
+[type="month"],
+[type="email"],
+[type="date"],
+[type="text"],
+[type="time"],
+[type="week"],
+[type="tel"],
+[type="url"],
 textarea,
 select {
   @include placeholder($text-color, $text-light);
@@ -70,8 +70,8 @@ textarea {
   }
 }
 
-input[type="submit"],
-input[type="button"],
+[type="submit"],
+[type="button"],
 button {
   @include button;
   -webkit-appearance: none;
