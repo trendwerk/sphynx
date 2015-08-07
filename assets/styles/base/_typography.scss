@@ -212,18 +212,3 @@ pre {
   white-space: -o-pre-wrap;
   white-space: pre-wrap;
 }
-
-/**
- * @section     Base
- * @subsection  Deleted and inserted
- */
-
-del {
-  color: $text-light;
-  text-decoration: line-through;
-}
-
-ins {
-  color: $heading-color;
-  text-decoration: underline;
-}

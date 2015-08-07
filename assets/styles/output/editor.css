@@ -588,18 +588,6 @@ pre {
   white-space: pre-wrap; }
 
 /**
- * @section     Base
- * @subsection  Deleted and inserted
- */
-del {
-  color: #999999;
-  text-decoration: line-through; }
-
-ins {
-  color: #333333;
-  text-decoration: underline; }
-
-/**
  *
  * @section Base
  *
