@@ -1297,8 +1297,6 @@ main {
     .gallery .gallery-item:hover .gallery-caption {
       opacity: 1; }
   .gallery .gallery-caption {
-    -webkit-transition: opacity 400ms ease-in-out;
-            transition: opacity 400ms ease-in-out;
     background-color: black;
     bottom: 0;
     box-sizing: border-box;
@@ -1312,6 +1310,8 @@ main {
     padding: 2px 8px;
     position: absolute;
     text-align: left;
+    -webkit-transition: opacity, 400ms, ease-in-out;
+            transition: opacity, 400ms, ease-in-out;
     width: 100%; }
     .gallery .gallery-caption:before {
       box-shadow: 0 -10px 15px black inset;

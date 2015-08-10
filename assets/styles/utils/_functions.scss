@@ -13,13 +13,6 @@
 ///
 
 /// @section     Functions
-/// @subsection  Animate
-
-@mixin animate-this($what: all, $time: 0.5s, $ease: ease-in-out) {
-  transition: $what $time $ease;
-}
-
-/// @section     Functions
 /// @subsection  Block
 
 @mixin block {

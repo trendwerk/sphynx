@@ -28,7 +28,6 @@
   }
 
   .gallery-caption {
-    @include animate-this(opacity, 400ms, ease-in-out);
     background-color: $black;
     bottom: 0;
     box-sizing: border-box;
@@ -42,6 +41,7 @@
     padding: 2px 8px;
     position: absolute;
     text-align: left;
+    transition: opacity, 400ms, ease-in-out;
     width: 100%;
 
     &:before {
