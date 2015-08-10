@@ -837,18 +837,7 @@ select {
       width: 1160px; } }
 
 /**
- * @section Layout
- *
- * Defines the default layout
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Layout
- * @subsection  Footer
+ * Footer
  */
 .footer {
   clear: both;
@@ -897,18 +886,7 @@ select {
       display: none; }
 
 /**
- * @section Layout
- *
- * Defines the default layout
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Layout
- * @subsection  Header
+ * Header
  */
 .header {
   clear: both;
@@ -968,11 +946,10 @@ main {
   @media (min-width: 641px) {
     main {
       background-color: white;
-      padding: 60px 0 30px; } }
-
-@media (min-width: 821px) {
-  main .wrapper {
-    width: 780px; } }
+      padding: 60px 0 30px; }
+      main .wrapper {
+        margin: 0 auto;
+        width: 780px; } }
 
 /**
  * Main navigation
