@@ -1,0 +1,33 @@
+/**
+ * Stylesheet that defines a global style for WordPress comment form
+ */
+
+.comment-respond {
+  @include full-width;
+  margin: $line-height 0;
+  position: relative;
+
+  p {
+    margin-bottom: ($line-height / 2);
+
+    @include respond-to('medium') {
+      margin-bottom: $line-height;
+    }
+
+    &.form-submit {
+      margin-bottom: 0;
+    }
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  small a {
+    @include button(tag);
+  }
+
+  .submit {
+    margin-top: 10px;
+  }
+}

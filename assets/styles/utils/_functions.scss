@@ -98,14 +98,6 @@
 }
 
 /// @section     Functions
-/// @subsection  Collumns
-
-@mixin columns($number, $gap) {
-  column-count: $number;
-  column-gap: $gap;
-}
-
-/// @section     Functions
 /// @subsection  Font size
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
@@ -244,18 +236,4 @@
 
 @function tint($color, $percentage) {
   @return mix($white, $color, $percentage);
-}
-
-/// @section     Functions
-/// @subsection  Transform
-
-@mixin transform($transform) {
-  transform: $transform;
-}
-
-/// @section     Functions
-/// @subsection  Transition
-
-@mixin transition($transition) {
-  transition: $transition;
 }

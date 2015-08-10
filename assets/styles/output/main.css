@@ -394,37 +394,19 @@ th {
   white-space: nowrap; }
 
 /**
- *
- * @section Base
- *
- * Defines the styling for base elements
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Base
- * @subsection  Render settings
+ * Stylesheet that defines typographic styles
  */
 html {
   -webkit-font-smoothing: antialiased; }
 
-/**
- * @section     Base
- * @subsection  Content
- */
+/* Core style */
 body {
   color: #666666;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   line-height: 30px; }
 
-/**
- * @section     Base
- * @subsection  Headings
- */
+/* Headings */
 h1,
 h2,
 h3,
@@ -489,21 +471,15 @@ h6 {
     h6 {
       font-size: 14px; } }
 
-/**
- * @section     Base
- * @subsection  Hyperlinks
- */
+/* Hyperlinks */
 a {
   color: #1d6fd3;
   outline: 0;
   text-decoration: underline;
-  /* More link */
-  /* Add characters :before and :after link */ }
+  /* Style for read-more, previous and next hyperlinks */ }
   a:hover {
     color: #1759a9;
     text-decoration: underline; }
-  a.read-more {
-    white-space: nowrap; }
   a.read-more:after,
   a.prev:before,
   a.next:after {
@@ -516,25 +492,16 @@ a {
     content: '»';
     padding-left: 4px; }
 
-/**
- * @section     Base
- * @subsection  Paragraphs
- */
+/* Paragraphs */
 p {
   margin: 0 0 30px; }
 
-/**
- * @section     Base
- * @subsection  Italic
- */
+/* Emphasized and italic */
 em,
 i {
   font-style: italic; }
 
-/**
- * @section     Base
- * @subsection  Lists
- */
+/* Ordered and unordered lists */
 ul,
 ol {
   list-style-position: outside;
@@ -545,10 +512,7 @@ ol {
   ol ol {
     margin: 0 0 0 20px; }
 
-/**
- * @section     Base
- * @subsection  Blockquotes and cites
- */
+/* Blockquotes and cites */
 blockquote {
   color: #999999;
   display: inline-block;
@@ -571,10 +535,7 @@ cite {
   cite a {
     color: #666666; }
 
-/**
- * @section     Base
- * @subsection  Code and pre
- */
+/* Code and preformatted */
 code,
 pre {
   background-color: #ffeeb3;
@@ -587,6 +548,7 @@ pre {
   white-space: -o-pre-wrap;
   white-space: pre-wrap; }
 
+<<<<<<< HEAD
 /**
  *
  * @section Base
@@ -597,11 +559,20 @@ pre {
  * @subpackage  TrendPress
  * @author      Trendwerk
  * @license     GPL v2
- */
+=======
+/*  Deleted and inserted */
+del {
+  color: #999999;
+  text-decoration: line-through; }
+
+ins {
+  color: #333333;
+  text-decoration: underline; }
+
 /**
-  * @section     Base
-  * @subsection  Tables
-  */
+ * Stylesheet that defines a minimal style for tables
+>>>>>>> Changing structure
+ */
 table {
   border: 1px solid #cccccc;
   margin: 0 0 30px;
@@ -612,28 +583,15 @@ table {
     table tr td,
     table tr th {
       border-right: 1px solid #cccccc;
-      padding: 5px 10px;
-      text-align: left; }
+      padding: 5px 10px; }
     table tr th {
       font-weight: bold; }
   table thead tr {
     background-color: #ededed; }
 
 /**
- *
- * @section Base
- *
- * Defines the styling for base elements
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
+ * Stylesheet that defines a global style for form elements
  */
-/**
-  * @section     Base
-  * @subsection  Forms
-  */
 [type="datetime-local"],
 [type="datetime"],
 [type="password"],
@@ -1236,19 +1194,7 @@ main {
       text-decoration: underline; }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Components
- * @subsection  Button
+ * Stylesheet that sets a default style for buttons
  */
 .button {
   border-radius: 3px;
@@ -1304,19 +1250,7 @@ main {
       text-decoration: none; }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Components
- * @subsection  Comments
+ * Stylesheet that defines a global style for WordPress comments
  */
 .comments ol,
 .comments ul {
@@ -1449,19 +1383,7 @@ main {
     margin-top: 10px; }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Components
- * @subsection  Entry
+ * Stylesheet that defines global style for articles
  */
 .hentry {
   clear: both;
@@ -1485,19 +1407,7 @@ main {
     margin-bottom: 0; }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Components
- * @subsection  Featured
+ * Stylesheet that defines a global style for featured images
  */
 .featured {
   display: block;
@@ -1578,19 +1488,7 @@ main {
     width: 6px; }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Components
- * @subsection  Gallery
+ * Stylesheet that defines a global style for the WordPress gallery
  */
 .gallery {
   clear: both;
@@ -1704,30 +1602,18 @@ main {
   display: none; }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Components
- * @subsection  Burger
+ * Stylesheet that contains the style for the navigation icons
  */
 .burger {
   height: 19px;
   position: relative;
   width: 24px; }
   .burger .line {
-    -webkit-transition: -webkit-transform 0.2s ease-out;
-            transition: -webkit-transform 0.2s ease-out;
     background-color: white;
     height: 3px;
     position: absolute;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+            transition: transform 0.2s ease-out;
     width: 24px; }
   .burger .line:nth-child(1) {
     top: 0; }
@@ -1760,31 +1646,19 @@ main {
   position: relative;
   width: 10px; }
   .glass:after {
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
     background-color: white;
     content: '';
     height: 3px;
     position: absolute;
     right: -7px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     top: 11px;
     width: 8px; }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Components
- * @subsection  Meta
+ * Stylesheet that defines a minimal style the metadata
  */
 .meta {
   color: #999999;
@@ -1795,10 +1669,7 @@ main {
     .meta a:hover {
       color: #1d6fd3; }
 
-/**
- * @section     Components
- * @subsection  Tags
- */
+/* Tags */
 .tags span {
   padding-right: 15px; }
 
@@ -1841,19 +1712,7 @@ main {
     text-decoration: none; }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Components
- * @subsection  Pager
+ * Stylesheet that a style for the pager
  */
 .pager {
   clear: both;

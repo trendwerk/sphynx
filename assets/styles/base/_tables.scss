@@ -1,19 +1,6 @@
 /**
- *
- * @section Base
- *
- * Defines the styling for base elements
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
+ * Stylesheet that defines a minimal style for tables
  */
-
- /**
-  * @section     Base
-  * @subsection  Tables
-  */
 
 table {
   border: 1px solid $border-color;
@@ -28,7 +15,6 @@ table {
     th {
       border-right: 1px solid $border-color;
       padding: 5px 10px;
-      text-align: left;
     }
 
     th {

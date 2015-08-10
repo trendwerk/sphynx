@@ -1,28 +1,12 @@
 /**
- *
- * @section Base
- *
- * Defines the styling for base elements
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-
-/**
- * @section     Base
- * @subsection  Render settings
+ * Stylesheet that defines typographic styles
  */
 
 html {
   -webkit-font-smoothing: antialiased;
 }
 
-/**
- * @section     Base
- * @subsection  Content
- */
+/* Core style */
 
 body {
   color: $text-color;
@@ -31,10 +15,7 @@ body {
   line-height: $line-height;
 }
 
-/**
- * @section     Base
- * @subsection  Headings
- */
+/* Headings */
 
 h1,
 h2,
@@ -83,10 +64,7 @@ h6 {
   @include font-size($h6-font-sizes);
 }
 
-/**
- * @section     Base
- * @subsection  Hyperlinks
- */
+/* Hyperlinks */
 
 a {
   color: $link-color;
@@ -98,13 +76,7 @@ a {
     text-decoration: underline;
   }
 
-  /* More link */
-
-  &.read-more {
-    white-space: nowrap;
-  }
-
-  /* Add characters :before and :after link */
+  /* Style for read-more, previous and next hyperlinks */
 
   &.read-more:after,
   &.prev:before,
@@ -124,29 +96,20 @@ a {
   }
 }
 
-/**
- * @section     Base
- * @subsection  Paragraphs
- */
+/* Paragraphs */
 
 p {
   margin: 0 0 $line-height;
 }
 
-/**
- * @section     Base
- * @subsection  Italic
- */
+/* Emphasized and italic */
 
 em,
 i {
   font-style: italic;
 }
 
-/**
- * @section     Base
- * @subsection  Lists
- */
+/* Ordered and unordered lists */
 
 ul,
 ol {
@@ -159,10 +122,7 @@ ol {
   }
 }
 
-/**
- * @section     Base
- * @subsection  Blockquotes and cites
- */
+/* Blockquotes and cites */
 
 blockquote {
   color: $text-light;
@@ -194,10 +154,7 @@ cite {
   }
 }
 
-/**
- * @section     Base
- * @subsection  Code and pre
- */
+/* Code and preformatted */
 
 code,
 pre {
@@ -212,3 +169,18 @@ pre {
   white-space: -o-pre-wrap;
   white-space: pre-wrap;
 }
+<<<<<<< HEAD
+=======
+
+/*  Deleted and inserted */
+
+del {
+  color: $text-light;
+  text-decoration: line-through;
+}
+
+ins {
+  color: $heading-color;
+  text-decoration: underline;
+}
+>>>>>>> Changing structure

@@ -1,0 +1,15 @@
+/**
+ * Stylesheet that a style for the pager
+ */
+
+.pager {
+  @include full-width;
+  margin: $line-height 0;
+  text-align: center;
+
+  .page-numbers,
+  .prev,
+  .next {
+    @include button(pager);
+  }
+}

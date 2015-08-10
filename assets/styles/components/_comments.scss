@@ -1,18 +1,5 @@
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-
-/**
- * @section     Components
- * @subsection  Comments
+ * Stylesheet that defines a global style for WordPress comments
  */
 
 .comments ol,
@@ -90,40 +77,5 @@
   .comment-content,
   .reply {
     @include full-width;
-  }
-}
-
-/**
- * @section     Components
- * @subsection  Respond
- */
-
-.comment-respond {
-  @include full-width;
-  margin: $line-height 0;
-  position: relative;
-
-  p {
-    margin-bottom: ($line-height / 2);
-
-    @include respond-to('medium') {
-      margin-bottom: $line-height;
-    }
-
-    &.form-submit {
-      margin-bottom: 0;
-    }
-  }
-
-  p:last-of-type {
-    margin-bottom: 0;
-  }
-
-  small a {
-    @include button(tag);
-  }
-
-  .submit {
-    margin-top: 10px;
   }
 }
