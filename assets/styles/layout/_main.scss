@@ -4,10 +4,11 @@
 
 main {
   @include full-width;
-  padding: ($line-height * 2) 0 $line-height;
+  padding: $line-height 0 ($line-height / 2);
 
   @include respond-to('medium') {
     background-color: $body-background;
+    padding: ($line-height * 2) 0 $line-height;
   }
 }
 

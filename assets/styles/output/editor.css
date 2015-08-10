@@ -486,11 +486,11 @@ a {
     display: inline-block; }
   a.prev:before {
     content: '«';
-    padding-right: 4px; }
+    padding-right: 5px; }
   a.read-more:after,
   a.next:after {
     content: '»';
-    padding-left: 4px; }
+    padding-left: 5px; }
 
 /* Paragraphs */
 p {
@@ -505,7 +505,7 @@ i {
 ul,
 ol {
   list-style-position: outside;
-  margin: 0 0 30px 20px; }
+  margin: 0 0 30px; }
   ul ul,
   ul ol,
   ol ul,
@@ -550,20 +550,20 @@ pre {
  * Tables
  */
 table {
-  border: 1px solid #cccccc;
+  border: 1px solid #e6e6e6;
   margin: 0 0 30px;
   width: 100%; }
   table tr {
-    border-bottom: 1px solid #cccccc;
-    border-right: 1px solid #cccccc; }
+    border-bottom: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6; }
     table tr td,
     table tr th {
-      border-right: 1px solid #cccccc;
+      border-right: 1px solid #e6e6e6;
       padding: 5px 10px; }
     table tr th {
       font-weight: bold; }
   table thead tr {
-    background-color: #ededed; }
+    background-color: #e6e6e6; }
 
 /**
  * Buttons
