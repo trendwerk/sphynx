@@ -1,0 +1,23 @@
+/**
+ * Search icon
+ */
+
+.glass {
+  border: 3px solid $white;
+  border-radius: 100%;
+  display: block;
+  height: 10px;
+  position: relative;
+  width: 10px;
+
+  &:after {
+    background-color: $white;
+    content: '';
+    height: 3px;
+    position: absolute;
+    right: -7px;
+    transform: rotate(45deg);
+    top: 11px;
+    width: 8px;
+  }
+}

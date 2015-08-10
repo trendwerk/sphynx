@@ -394,7 +394,7 @@ th {
   white-space: nowrap; }
 
 /**
- * Stylesheet that defines typographic styles
+ * Typography
  */
 html {
   -webkit-font-smoothing: antialiased; }
@@ -544,34 +544,10 @@ pre {
 pre {
   margin-bottom: 30px;
   padding: 20px;
-  white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap;
   white-space: pre-wrap; }
 
-<<<<<<< HEAD
 /**
- *
- * @section Base
- *
- * Defines the styling for base elements
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
-=======
-/*  Deleted and inserted */
-del {
-  color: #999999;
-  text-decoration: line-through; }
-
-ins {
-  color: #333333;
-  text-decoration: underline; }
-
-/**
- * Stylesheet that defines a minimal style for tables
->>>>>>> Changing structure
+ * Tables
  */
 table {
   border: 1px solid #cccccc;
@@ -590,7 +566,7 @@ table {
     background-color: #ededed; }
 
 /**
- * Stylesheet that defines a global style for form elements
+ * Forms
  */
 [type="datetime-local"],
 [type="datetime"],
@@ -843,18 +819,7 @@ select {
   background-repeat: no-repeat; }
 
 /**
- * @section Layout
- *
- * Defines the default layout
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Layout
- * @subsection  Wrapper
+ * Wrapper
  */
 .wrapper {
   box-sizing: border-box;
@@ -945,7 +910,7 @@ select {
  * @section     Layout
  * @subsection  Header
  */
-header {
+.header {
   clear: both;
   float: left;
   width: 100%;
@@ -955,141 +920,66 @@ header {
   text-align: center;
   z-index: 1; }
   @media (min-width: 981px) {
-    header {
+    .header {
       background-color: white; } }
-  header a {
+  .header a {
     color: white;
     text-decoration: none; }
     @media (min-width: 981px) {
-      header a {
+      .header a {
         color: #333333; } }
-  header .logo {
+  .header .logo {
     display: inline-block;
     margin-top: 5px; }
     @media (min-width: 981px) {
-      header .logo {
+      .header .logo {
         display: block;
         float: left;
         margin-top: 0;
         text-align: left; } }
-    header .logo .sitename {
+    .header .logo .sitename {
       font-size: 28px;
       font-family: "Helvetica Neue", sans-serif;
       font-weight: 700;
       margin: 0; }
-    header .logo .sitedescription {
+    .header .logo .sitedescription {
       color: #666666;
       display: none;
       margin: 0; }
       @media (min-width: 981px) {
-        header .logo .sitedescription {
+        .header .logo .sitedescription {
           display: block; } }
-  header .mobile-navigation,
-  header .mobile-search {
+  .header .mobile-navigation,
+  .header .mobile-search {
     cursor: pointer;
     padding: 10px;
     float: left; }
     @media (min-width: 981px) {
-      header .mobile-navigation,
-      header .mobile-search {
+      .header .mobile-navigation,
+      .header .mobile-search {
         display: none; } }
-  header .mobile-navigation {
+  .header .mobile-navigation {
     float: right;
     margin-right: -10px; }
-  header .mobile-search {
+  .header .mobile-search {
     height: 19px;
     margin-left: -10px;
     width: 20px; }
-  header .search-top {
+  .header .header-search {
     display: none;
     float: right;
     margin-top: 20px;
     width: 100%; }
     @media (min-width: 421px) {
-      header .search-top {
+      .header .header-search {
         margin-top: 10px; } }
     @media (min-width: 981px) {
-      header .search-top {
+      .header .header-search {
         display: block;
         width: auto; } }
 
 /**
- * @section Images
- *
- * Defines the default styling of images
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Layout
- * @subsection  Alignment types
- */
-.alignleft {
-  float: left;
-  margin: 10px 20px; }
-
-.alignright {
-  float: right;
-  margin: 10px 0 10px 20px; }
-
-.aligncenter {
-  display: block;
-  margin: 0 auto; }
-
-/**
- * @section     Layout
- * @subsection  Captions
- */
-.wp-caption {
-  background-color: #ededed;
-  margin-bottom: 30px;
-  max-width: 100%;
-  text-align: center; }
-  .wp-caption img {
-    box-sizing: border-box;
-    padding: 5px; }
-  .wp-caption .wp-caption-text {
-    display: inline-block;
-    font-size: 12px;
-    line-height: 20px;
-    margin: 0 10px 10px; }
-
-/**
- * @section     Layout
- * @subsection  Set max width for $content_width (http://codex.wordpress.org/Content_Width)
- */
-.aligncenter img,
-.alignright img,
-.alignleft img,
-.alignnone img {
-  max-width: 100%;
-  height: auto; }
-
-.size-thumbnail,
-.size-medium,
-.size-large,
-.size-auto,
-.alignnone,
-.size-full {
-  max-width: 100%;
-  height: auto; }
-
-/**
- * @section Layout
- *
- * Defines the default layout
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Layout
- * @subsection  Core
+ * Main
  */
 main {
   clear: both;
@@ -1105,18 +995,7 @@ main {
     width: 780px; } }
 
 /**
- * @section Layout
- *
- * Defines the default layout
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Layout
- * @subsection  Main navigation
+ * Main navigation
  */
 .main-navigation {
   clear: both;
@@ -1194,7 +1073,31 @@ main {
       text-decoration: underline; }
 
 /**
- * Stylesheet that sets a default style for buttons
+ * Article
+ */
+.hentry {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0 0 30px; }
+  .hentry.sticky {
+    background-color: #ededed;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding: 20px;
+    margin-bottom: 60px; }
+    @media (min-width: 641px) {
+      .hentry.sticky {
+        padding: 30px; } }
+  .hentry h2 {
+    margin-bottom: 15px; }
+  .hentry p:last-of-type {
+    margin-bottom: 0; }
+
+/**
+ * Buttons
  */
 .button {
   border-radius: 3px;
@@ -1250,7 +1153,65 @@ main {
       text-decoration: none; }
 
 /**
- * Stylesheet that defines a global style for WordPress comments
+ * Comment form
+ */
+.comment-respond {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin: 30px 0;
+  position: relative; }
+  .comment-respond p {
+    margin-bottom: 15px; }
+    @media (min-width: 641px) {
+      .comment-respond p {
+        margin-bottom: 30px; } }
+    .comment-respond p.form-submit {
+      margin-bottom: 0; }
+  .comment-respond p:last-of-type {
+    margin-bottom: 0; }
+  .comment-respond small a {
+    border-radius: 3px;
+    background-color: #333333;
+    border: 0;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px 10px 0;
+    outline: 0;
+    padding: 0 35px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #ededed;
+    color: #666666;
+    font-weight: normal;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 0 5px 5px;
+    padding: 0 10px;
+    text-transform: none; }
+    .comment-respond small a:active,
+    .comment-respond small a:focus,
+    .comment-respond small a:hover {
+      background-color: #2b2b2b;
+      color: white;
+      outline: none;
+      text-decoration: none; }
+    .comment-respond small a:active,
+    .comment-respond small a:focus,
+    .comment-respond small a:hover {
+      background-color: #333333;
+      color: white;
+      outline: none;
+      text-decoration: none; }
+  .comment-respond .submit {
+    margin-top: 10px; }
+
+/**
+ * Comments component style
  */
 .comments ol,
 .comments ul {
@@ -1324,90 +1285,7 @@ main {
     width: 100%; }
 
 /**
- * @section     Components
- * @subsection  Respond
- */
-.comment-respond {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin: 30px 0;
-  position: relative; }
-  .comment-respond p {
-    margin-bottom: 15px; }
-    @media (min-width: 641px) {
-      .comment-respond p {
-        margin-bottom: 30px; } }
-    .comment-respond p.form-submit {
-      margin-bottom: 0; }
-  .comment-respond p:last-of-type {
-    margin-bottom: 0; }
-  .comment-respond small a {
-    border-radius: 3px;
-    background-color: #333333;
-    border: 0;
-    color: white;
-    display: inline-block;
-    font-weight: bold;
-    height: 50px;
-    line-height: 50px;
-    margin: 0 10px 10px 0;
-    outline: 0;
-    padding: 0 35px;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: #ededed;
-    color: #666666;
-    font-weight: normal;
-    height: 25px;
-    line-height: 25px;
-    margin: 0 0 5px 5px;
-    padding: 0 10px;
-    text-transform: none; }
-    .comment-respond small a:active,
-    .comment-respond small a:focus,
-    .comment-respond small a:hover {
-      background-color: #2b2b2b;
-      color: white;
-      outline: none;
-      text-decoration: none; }
-    .comment-respond small a:active,
-    .comment-respond small a:focus,
-    .comment-respond small a:hover {
-      background-color: #333333;
-      color: white;
-      outline: none;
-      text-decoration: none; }
-  .comment-respond .submit {
-    margin-top: 10px; }
-
-/**
- * Stylesheet that defines global style for articles
- */
-.hentry {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin: 0 0 30px;
-  padding: 0 0 30px; }
-  .hentry.sticky {
-    background-color: #ededed;
-    border-radius: 3px;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-    padding: 20px;
-    margin-bottom: 60px; }
-    @media (min-width: 641px) {
-      .hentry.sticky {
-        padding: 30px; } }
-  .hentry h2 {
-    margin-bottom: 15px; }
-  .hentry p:last-of-type {
-    margin-bottom: 0; }
-
-/**
- * Stylesheet that defines a global style for featured images
+ * Featured
  */
 .featured {
   display: block;
@@ -1418,77 +1296,7 @@ main {
       margin: 0 0 30px 20px; } }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
-  * @section     Components
-  * @subsection  Search form
-  */
-.search-form form {
-  position: relative;
-  width: 100%; }
-  @media (min-width: 641px) {
-    .search-form form {
-      width: 265px; } }
-  .search-form form .search-form-input {
-    box-sizing: border-box;
-    color: #666666;
-    font-size: 16px;
-    font-style: italic;
-    margin: 0;
-    padding: 12px 45px 12px 12px;
-    right: 0;
-    width: 100%; }
-    .search-form form .search-form-input::-webkit-input-placeholder {
-      color: #999999; }
-    .search-form form .search-form-input::-moz-placeholder {
-      color: #999999; }
-    .search-form form .search-form-input:-ms-input-placeholder {
-      color: #999999; }
-    .search-form form .search-form-input::placeholder {
-      color: #999999; }
-    .search-form form .search-form-input:focus::-webkit-input-placeholder {
-      color: #666666; }
-    .search-form form .search-form-input:focus::-moz-placeholder {
-      color: #666666; }
-    .search-form form .search-form-input:focus:-ms-input-placeholder {
-      color: #666666; }
-    .search-form form .search-form-input:focus::placeholder {
-      color: #666666; }
-    @media (min-width: 641px) {
-      .search-form form .search-form-input {
-        font-size: 13px; } }
-  .search-form form .search-form-submit {
-    background-color: transparent;
-    height: 40px;
-    margin: 0;
-    padding: 0 0 0 15px;
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    width: 40px; }
-  .search-form form .glass {
-    border: 2px solid #999999;
-    height: 8px;
-    top: -1px;
-    width: 8px; }
-  .search-form form .glass:after {
-    background-color: #999999;
-    height: 2px;
-    right: -5px;
-    top: 9px;
-    width: 6px; }
-
-/**
- * Stylesheet that defines a global style for the WordPress gallery
+ * Gallery
  */
 .gallery {
   clear: both;
@@ -1602,7 +1410,19 @@ main {
   display: none; }
 
 /**
- * Stylesheet that contains the style for the navigation icons
+ * Meta
+ */
+.meta {
+  color: #999999;
+  font-size: 13px;
+  margin: 0 0 15px; }
+  .meta a {
+    color: #666666; }
+    .meta a:hover {
+      color: #1d6fd3; }
+
+/**
+ *  Navigation icon
  */
 .burger {
   height: 19px;
@@ -1635,84 +1455,7 @@ main {
             transform: rotate(45deg) translate(-6px, -6px); }
 
 /**
- * @section     Components
- * @subsection  Glass
- */
-.glass {
-  border: 3px solid white;
-  border-radius: 100%;
-  display: block;
-  height: 10px;
-  position: relative;
-  width: 10px; }
-  .glass:after {
-    background-color: white;
-    content: '';
-    height: 3px;
-    position: absolute;
-    right: -7px;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 11px;
-    width: 8px; }
-
-/**
- * Stylesheet that defines a minimal style the metadata
- */
-.meta {
-  color: #999999;
-  font-size: 13px;
-  margin: 0 0 15px; }
-  .meta a {
-    color: #666666; }
-    .meta a:hover {
-      color: #1d6fd3; }
-
-/* Tags */
-.tags span {
-  padding-right: 15px; }
-
-.tags .tag {
-  border-radius: 3px;
-  background-color: #333333;
-  border: 0;
-  color: white;
-  display: inline-block;
-  font-weight: bold;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 10px 10px 0;
-  outline: 0;
-  padding: 0 35px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-color: #ededed;
-  color: #666666;
-  font-weight: normal;
-  height: 25px;
-  line-height: 25px;
-  margin: 0 0 5px 5px;
-  padding: 0 10px;
-  text-transform: none; }
-  .tags .tag:active,
-  .tags .tag:focus,
-  .tags .tag:hover {
-    background-color: #2b2b2b;
-    color: white;
-    outline: none;
-    text-decoration: none; }
-  .tags .tag:active,
-  .tags .tag:focus,
-  .tags .tag:hover {
-    background-color: #333333;
-    color: white;
-    outline: none;
-    text-decoration: none; }
-
-/**
- * Stylesheet that a style for the pager
+ * Pager
  */
 .pager {
   clear: both;
@@ -1773,19 +1516,131 @@ main {
         color: inherit; }
 
 /**
- *
- * @section Components
- *
- * Defines the styling for components
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
+ * Search form
  */
+.search-form form {
+  position: relative;
+  width: 100%; }
+  @media (min-width: 641px) {
+    .search-form form {
+      width: 265px; } }
+  .search-form form .search-form-input {
+    box-sizing: border-box;
+    color: #666666;
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    padding: 12px 45px 12px 12px;
+    right: 0;
+    width: 100%; }
+    .search-form form .search-form-input::-webkit-input-placeholder {
+      color: #999999; }
+    .search-form form .search-form-input::-moz-placeholder {
+      color: #999999; }
+    .search-form form .search-form-input:-ms-input-placeholder {
+      color: #999999; }
+    .search-form form .search-form-input::placeholder {
+      color: #999999; }
+    .search-form form .search-form-input:focus::-webkit-input-placeholder {
+      color: #666666; }
+    .search-form form .search-form-input:focus::-moz-placeholder {
+      color: #666666; }
+    .search-form form .search-form-input:focus:-ms-input-placeholder {
+      color: #666666; }
+    .search-form form .search-form-input:focus::placeholder {
+      color: #666666; }
+    @media (min-width: 641px) {
+      .search-form form .search-form-input {
+        font-size: 13px; } }
+  .search-form form .search-form-submit {
+    background-color: transparent;
+    height: 40px;
+    margin: 0;
+    padding: 0 0 0 15px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 40px; }
+  .search-form form .glass {
+    border: 2px solid #999999;
+    height: 8px;
+    top: -1px;
+    width: 8px; }
+  .search-form form .glass:after {
+    background-color: #999999;
+    height: 2px;
+    right: -5px;
+    top: 9px;
+    width: 6px; }
+
 /**
- * @section     Components
- * @subsection  Video-container for better responsive videos
+ * Search icon
+ */
+.glass {
+  border: 3px solid white;
+  border-radius: 100%;
+  display: block;
+  height: 10px;
+  position: relative;
+  width: 10px; }
+  .glass:after {
+    background-color: white;
+    content: '';
+    height: 3px;
+    position: absolute;
+    right: -7px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 11px;
+    width: 8px; }
+
+/**
+ * Tags
+ */
+.tags span {
+  padding-right: 15px; }
+
+.tags .tag {
+  border-radius: 3px;
+  background-color: #333333;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px 10px 0;
+  outline: 0;
+  padding: 0 35px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ededed;
+  color: #666666;
+  font-weight: normal;
+  height: 25px;
+  line-height: 25px;
+  margin: 0 0 5px 5px;
+  padding: 0 10px;
+  text-transform: none; }
+  .tags .tag:active,
+  .tags .tag:focus,
+  .tags .tag:hover {
+    background-color: #2b2b2b;
+    color: white;
+    outline: none;
+    text-decoration: none; }
+  .tags .tag:active,
+  .tags .tag:focus,
+  .tags .tag:hover {
+    background-color: #333333;
+    color: white;
+    outline: none;
+    text-decoration: none; }
+
+/**
+ * Video container
  */
 .video-container {
   height: 0;
@@ -1802,6 +1657,54 @@ main {
     position: absolute;
     top: 0;
     width: 100%; }
+
+/**
+ * WordPress images
+ */
+.aligncenter img,
+.alignright img,
+.alignleft img,
+.alignnone img {
+  max-width: 100%;
+  height: auto; }
+
+.alignleft {
+  float: left;
+  margin: 10px 20px 10px 0; }
+
+.alignright {
+  float: right;
+  margin: 10px 0 10px 20px; }
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 10px; }
+
+.size-thumbnail,
+.size-medium,
+.size-large,
+.size-auto,
+.alignnone,
+.size-full {
+  max-width: 100%;
+  height: auto; }
+
+/**
+ * WP caption
+ */
+.wp-caption {
+  background-color: #ededed;
+  margin-bottom: 30px;
+  max-width: 100%;
+  text-align: center; }
+  .wp-caption img {
+    box-sizing: border-box;
+    padding: 5px; }
+  .wp-caption .wp-caption-text {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 10px 10px; }
 
 /**
  * @section Templates

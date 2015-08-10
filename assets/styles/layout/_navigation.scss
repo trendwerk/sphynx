@@ -1,17 +1,5 @@
 /**
- * @section Layout
- *
- * Defines the default layout
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-
-/**
- * @section     Layout
- * @subsection  Main navigation
+ * Main navigation
  */
 
 .main-navigation {
@@ -57,7 +45,6 @@
 
     .menu-item-has-children > a::after {
       $transparent: transparent;
-
       border-color: $white $transparent $transparent;
       border-style: solid;
       border-width: 4px 4px 0;

@@ -1,19 +1,7 @@
 /**
- * Stylesheet that defines a minimal style the metadata
+ * Meta
  */
 
 .meta {
   @include meta;
-}
-
-/* Tags */
-
-.tags {
-  span {
-    padding-right: 15px;
-  }
-
-  .tag {
-    @include button(tag);
-  }
 }

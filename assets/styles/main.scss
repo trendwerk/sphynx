@@ -22,24 +22,27 @@
 @import 'base/tables';
 @import 'base/forms';
 
-@import 'layout/container';
+@import 'layout/wrapper';
 @import 'layout/footer';
 @import 'layout/header';
-@import 'layout/images';
 @import 'layout/main';
 @import 'layout/navigation';
 
-@import 'components/buttons';
-@import 'components/comments';
-@import 'components/comments-form';
 @import 'components/article';
+@import 'components/buttons';
+@import 'components/comment-form';
+@import 'components/comments';
 @import 'components/featured';
-@import 'components/search-form';
 @import 'components/gallery';
-@import 'components/icons';
 @import 'components/meta';
-@import 'components/pagination';
-@import 'components/videos';
+@import 'components/navigation-icon';
+@import 'components/pager';
+@import 'components/search-form';
+@import 'components/search-icon';
+@import 'components/tags';
+@import 'components/video-container';
+@import 'components/wordpress-images';
+@import 'components/wp-caption';
 
 @import 'pages/search';
 @import 'pages/single';

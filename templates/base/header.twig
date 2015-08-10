@@ -15,25 +15,25 @@
 		{{wp_head}}
 
 	</head>
-	
+
 	<body class="{{body_class}}">
-	
-		<header>
-		
+
+		<header class="header">
+
 			<div class="wrapper">
 
-				<div class="mobile-search" data-toggle=".search-top">
+				<div class="mobile-search" data-toggle=".header-search">
 					<div class="glass"></div>
 				</div>
 
-				<div class="mobile-navigation" data-toggle="#main-navigation">
+				<div class="mobile-navigation" data-toggle=".main-navigation">
 					<div class="burger">
 						<div class="line"></div>
 						<div class="line"></div>
 						<div class="line"></div>
 					</div>
 				</div>
-				
+
 				<div class="logo">
 
 					<p class="sitename">
@@ -47,8 +47,8 @@
 					</p>
 
 				</div>
-				
-				<div class="search-top">
+
+				<div class="header-search">
 					{% include 'partials/searchform.twig' %}
 				</div>
 

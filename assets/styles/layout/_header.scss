@@ -14,7 +14,7 @@
  * @subsection  Header
  */
 
-header {
+.header {
   @include full-width;
   background-color: $primary-color;
   box-sizing: border-box;
@@ -86,7 +86,7 @@ header {
     width: 20px;
   }
 
-  .search-top {
+  .header-search {
     display: none;
     float: right;
     margin-top: 20px;

@@ -1,10 +1,10 @@
 /**
- * Stylesheet that contains style for the search form
+ * Search form
  */
 
 .search-form form {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 
   @include respond-to('medium') {
     width: 265px;

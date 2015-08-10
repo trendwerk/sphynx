@@ -1,5 +1,5 @@
 /**
- * Stylesheet that defines typographic styles
+ * Typography
  */
 
 html {
@@ -165,22 +165,5 @@ pre {
 pre {
   margin-bottom: $line-height;
   padding: 20px;
-  white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap;
   white-space: pre-wrap;
 }
-<<<<<<< HEAD
-=======
-
-/*  Deleted and inserted */
-
-del {
-  color: $text-light;
-  text-decoration: line-through;
-}
-
-ins {
-  color: $heading-color;
-  text-decoration: underline;
-}
->>>>>>> Changing structure

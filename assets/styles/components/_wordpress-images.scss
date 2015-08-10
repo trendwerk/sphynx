@@ -1,0 +1,38 @@
+/**
+ * WordPress images
+ */
+
+.aligncenter,
+.alignright,
+.alignleft,
+.alignnone {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.alignleft {
+  float: left;
+  margin: 10px 20px 10px 0;
+}
+
+.alignright {
+  float: right;
+  margin: 10px 0 10px 20px;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.size-thumbnail,
+.size-medium,
+.size-large,
+.size-auto,
+.alignnone,
+.size-full {
+  max-width: 100%;
+  height: auto;
+}

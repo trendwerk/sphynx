@@ -1,5 +1,5 @@
 /**
- * Stylesheet that contains the style for the navigation icons
+ *  Navigation icon
  */
 
 .burger {
@@ -39,30 +39,5 @@
     .line:nth-child(3) {
       transform: rotate(45deg) translate(-6px, -6px);
     }
-  }
-}
-
-/**
- * @section     Components
- * @subsection  Glass
- */
-
-.glass {
-  border: 3px solid $white;
-  border-radius: 100%;
-  display: block;
-  height: 10px;
-  position: relative;
-  width: 10px;
-
-  &:after {
-    background-color: $white;
-    content: '';
-    height: 3px;
-    position: absolute;
-    right: -7px;
-    transform: rotate(45deg);
-    top: 11px;
-    width: 8px;
   }
 }
