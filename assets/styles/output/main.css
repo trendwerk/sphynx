@@ -1689,19 +1689,7 @@ main {
     margin: 0 10px 10px; }
 
 /**
- * @section Templates
- *
- * Defines the template specific styling
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- *
- */
-/**
- * @section     Templates
- * @subsection  search.php
+ * Search
  */
 .search h2 {
   margin-bottom: 30px; }
@@ -1710,19 +1698,7 @@ main {
   margin-bottom: 15px; }
 
 /**
- * @section Templates
- *
- * Defines the template specific styling
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- *
- */
-/**
- * @section     Templates
- * @subsection  single.php
+ * Single
  */
 .single h1 {
   margin-bottom: 0; }
