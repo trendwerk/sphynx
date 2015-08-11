@@ -435,41 +435,53 @@ h6 {
     color: #1d6fd3;
     text-decoration: none; }
 
-h1 {
-  font-size: 28px; }
-  @media screen and (min-width: 641px) {
-    h1 {
-      font-size: 40px; } }
+@media screen and (min-width: default) {
+  h1 {
+    font-size: 28px; } }
 
-h2 {
-  font-size: 20px; }
-  @media screen and (min-width: 641px) {
-    h2 {
-      font-size: 28px; } }
+@media screen and (min-width: 641px) {
+  h1 {
+    font-size: 40px; } }
 
-h3 {
-  font-size: 18px; }
-  @media screen and (min-width: 641px) {
-    h3 {
-      font-size: 22px; } }
+@media screen and (min-width: default) {
+  h2 {
+    font-size: 20px; } }
 
-h4 {
-  font-size: 16px; }
-  @media screen and (min-width: 641px) {
-    h4 {
-      font-size: 18px; } }
+@media screen and (min-width: 641px) {
+  h2 {
+    font-size: 28px; } }
 
-h5 {
-  font-size: 14px; }
-  @media screen and (min-width: 641px) {
-    h5 {
-      font-size: 16px; } }
+@media screen and (min-width: default) {
+  h3 {
+    font-size: 18px; } }
 
-h6 {
-  font-size: 12px; }
-  @media screen and (min-width: 641px) {
-    h6 {
-      font-size: 14px; } }
+@media screen and (min-width: 641px) {
+  h3 {
+    font-size: 22px; } }
+
+@media screen and (min-width: default) {
+  h4 {
+    font-size: 16px; } }
+
+@media screen and (min-width: 641px) {
+  h4 {
+    font-size: 18px; } }
+
+@media screen and (min-width: default) {
+  h5 {
+    font-size: 14px; } }
+
+@media screen and (min-width: 641px) {
+  h5 {
+    font-size: 16px; } }
+
+@media screen and (min-width: default) {
+  h6 {
+    font-size: 12px; } }
+
+@media screen and (min-width: 641px) {
+  h6 {
+    font-size: 14px; } }
 
 /* Hyperlinks */
 a {
