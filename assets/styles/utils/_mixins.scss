@@ -1,10 +1,5 @@
 ///
-/// @section Functions
-///
-/// Functions allow you to embed all the properties of a class into another class
-/// by simply including the class name as one of its properties. It’s just like
-/// variables, but for whole classes. Functions can also behave like functions,
-/// and take arguments.
+/// @section Mixins
 ///
 /// @package     WordPress
 /// @subpackage  TrendPress
@@ -12,7 +7,7 @@
 /// @license     GPL v2
 ///
 
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Block
 
 @mixin block {
@@ -27,7 +22,7 @@
   }
 }
 
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Button
 
 @mixin button($type: 'main') {
@@ -83,7 +78,7 @@
   }
 }
 
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Font size
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
@@ -102,7 +97,7 @@
   }
 }
 
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Full width
 
 @mixin full-width {
@@ -111,7 +106,7 @@
   width: 100%;
 }
 
-/// @section    Functions
+/// @section    Mixins
 /// @subsection Gradient
 
 @mixin gradient($direction, $start-color, $end-color) {
@@ -124,7 +119,7 @@
   }
 }
 
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Hover
 
 @mixin hover($background, $foreground) {
@@ -138,7 +133,7 @@
   }
 }
 
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Meta
 
 @mixin meta() {
@@ -155,7 +150,7 @@
   }
 }
 
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Placeholder
 
 @mixin placeholder($out, $on) {
@@ -168,7 +163,7 @@
   }
 }
 
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Remove list style
 
 @mixin remove-list-styles {
@@ -177,7 +172,7 @@
   padding: 0;
 }
 
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Respond to
 /// @param       {String} $breakpoint - Breakpoint
 
@@ -196,14 +191,7 @@
   }
 }
 
-/// @section     Functions
-/// @subsection  Shade
-
-@function shade($color, $percentage) {
-  @return mix($black, $color, $percentage);
-}
-
-/// @section     Functions
+/// @section     Mixins
 /// @subsection  Sprites
 
 @mixin sprite($top, $left) {
@@ -216,11 +204,4 @@
     background-position: $top x 2 $left x 2;
     background-size: 500px 500px;
   }
-}
-
-/// @section     Functions
-/// @subsection  Tint
-
-@function tint($color, $percentage) {
-  @return mix($white, $color, $percentage);
 }
