@@ -1366,17 +1366,17 @@ main {
       float: left;
       margin-top: 0;
       text-align: left; } }
-  .logo .sitename {
+  .logo .site-name {
     font-size: 28px;
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 700;
     margin: 0; }
-  .logo .sitedescription {
+  .logo .site-description {
     color: #666666;
     display: none;
     margin: 0; }
     @media (min-width: 981px) {
-      .logo .sitedescription {
+      .logo .site-description {
         display: block; } }
 
 /**
