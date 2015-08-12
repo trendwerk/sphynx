@@ -25,7 +25,7 @@
 /// @section     Mixins
 /// @subsection  Button
 
-@mixin button($type: 'main') {
+@mixin button($type: '') {
   @include hover(shade($primary-color, 15%), $white);
   background-color: $primary-color;
   border-radius: 3px;
