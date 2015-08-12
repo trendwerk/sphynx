@@ -557,8 +557,8 @@ table {
  * Buttons
  */
 .button {
-  border-radius: 3px;
   background-color: #333333;
+  border-radius: 3px;
   border: 0;
   color: white;
   display: inline-block;
@@ -579,8 +579,8 @@ table {
     outline: none;
     text-decoration: none; }
   .button.secondary {
-    border-radius: 3px;
     background-color: #333333;
+    border-radius: 3px;
     border: 0;
     color: white;
     display: inline-block;

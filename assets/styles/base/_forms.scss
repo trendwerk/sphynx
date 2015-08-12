@@ -17,11 +17,11 @@
 [type="url"],
 textarea,
 select {
-  @include border-radius;
   @include placeholder($text-color, $text-light);
   -webkit-appearance: none;
   background-color: $white;
   border: 1px solid $border-color;
+  border-radius: 3px;
   box-sizing: border-box;
   color: $text-color;
   display: block;

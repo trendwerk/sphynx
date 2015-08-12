@@ -571,10 +571,10 @@ table {
 [type="url"],
 textarea,
 select {
-  border-radius: 3px;
   -webkit-appearance: none;
   background-color: white;
   border: 1px solid #e6e6e6;
+  border-radius: 3px;
   box-sizing: border-box;
   color: #666666;
   display: block;
@@ -758,8 +758,8 @@ textarea {
 [type="submit"],
 [type="button"],
 button {
-  border-radius: 3px;
   background-color: #333333;
+  border-radius: 3px;
   border: 0;
   color: white;
   display: inline-block;
@@ -1045,8 +1045,8 @@ main {
  * Buttons
  */
 .button {
-  border-radius: 3px;
   background-color: #333333;
+  border-radius: 3px;
   border: 0;
   color: white;
   display: inline-block;
@@ -1067,8 +1067,8 @@ main {
     outline: none;
     text-decoration: none; }
   .button.secondary {
-    border-radius: 3px;
     background-color: #333333;
+    border-radius: 3px;
     border: 0;
     color: white;
     display: inline-block;
@@ -1116,8 +1116,8 @@ main {
   .comment-respond p:last-of-type {
     margin-bottom: 0; }
   .comment-respond small a {
-    border-radius: 3px;
     background-color: #333333;
+    border-radius: 3px;
     border: 0;
     color: white;
     display: inline-block;
@@ -1436,8 +1436,8 @@ main {
   .pager .page-numbers,
   .pager .prev,
   .pager .next {
-    border-radius: 3px;
     background-color: #333333;
+    border-radius: 3px;
     border: 0;
     color: white;
     display: inline-block;
@@ -1572,8 +1572,8 @@ main {
   padding-right: 15px; }
 
 .tags .tag {
-  border-radius: 3px;
   background-color: #333333;
+  border-radius: 3px;
   border: 0;
   color: white;
   display: inline-block;

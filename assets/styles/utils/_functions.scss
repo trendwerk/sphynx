@@ -28,19 +28,12 @@
 }
 
 /// @section     Functions
-/// @subsection  Border radius
-
-@mixin border-radius {
-  border-radius: 3px;
-}
-
-/// @section     Functions
 /// @subsection  Button
 
 @mixin button($type: 'main') {
-  @include border-radius;
   @include hover(shade($primary-color, 15%), $white);
   background-color: $primary-color;
+  border-radius: 3px;
   border: 0;
   color: $white;
   display: inline-block;

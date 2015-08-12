@@ -36,7 +36,7 @@
   }
 
   .avatar {
-    @include border-radius;
+    border-radius: 3px;
     display: block;
     margin-bottom: 10px;
 
