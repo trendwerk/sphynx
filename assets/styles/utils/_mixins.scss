@@ -41,7 +41,6 @@
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  $white-space: nowrap;
 
   @if $type == 'secondary' {
     @include hover(shade($secondary-color, 15%), $white);
