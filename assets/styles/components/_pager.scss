@@ -10,6 +10,6 @@
   .page-numbers,
   .prev,
   .next {
-    @include button(pager);
+    @include button('pager');
   }
 }

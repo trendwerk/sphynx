@@ -8,6 +8,6 @@
   }
 
   .tag {
-    @include button(tag);
+    @include button('tag');
   }
 }

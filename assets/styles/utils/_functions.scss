@@ -37,7 +37,7 @@
 /// @section     Functions
 /// @subsection  Button
 
-@mixin button($type: main) {
+@mixin button($type: 'main') {
   @include border-radius;
   @include hover(shade($primary-color, 15%), $white);
   background-color: $primary-color;
@@ -55,11 +55,11 @@
   text-transform: uppercase;
   $white-space: nowrap;
 
-  @if $type == secondary {
+  @if $type == 'secondary' {
     @include hover(shade($secondary-color, 15%), $white);
     background-color: $secondary-color;
 
-  } @else if $type == tag {
+  } @else if $type == 'tag' {
     @include hover($heading-color, $white);
     background-color: $light-background;
     color: $text-color;
@@ -70,7 +70,7 @@
     padding: 0 10px;
     text-transform: none;
 
-  } @else if $type == pager {
+  } @else if $type == 'pager' {
     background-color: $light-background;
     color: $text-color;
     height: 40px;
@@ -124,9 +124,9 @@
 @mixin gradient($direction, $start-color, $end-color) {
   background-color: $start-color;
 
-  @if $direction == horizontal {
+  @if $direction == 'horizontal' {
     background-image: linear-gradient(to right, $start-color, $end-color);
-  } @else if $direction == vertical {
+  } @else if $direction == 'vertical' {
     background-image: linear-gradient(top, $start-color, $end-color);
   }
 }

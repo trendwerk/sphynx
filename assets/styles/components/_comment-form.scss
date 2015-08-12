@@ -24,7 +24,7 @@
   }
 
   small a {
-    @include button(tag);
+    @include button('tag');
   }
 
   .submit {
