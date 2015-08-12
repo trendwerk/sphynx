@@ -41,27 +41,27 @@ h6 {
 }
 
 h1 {
-  @include font-size($h1-font-sizes);
+  @include font-size(map-get($heading-sizes, 'h1'));
 }
 
 h2 {
-  @include font-size($h2-font-sizes);
+  @include font-size(map-get($heading-sizes, 'h2'));
 }
 
 h3 {
-  @include font-size($h3-font-sizes);
+  font-size: 22px;
 }
 
 h4 {
-  @include font-size($h4-font-sizes);
+  font-size: 18px;
 }
 
 h5 {
-  @include font-size($h5-font-sizes);
+  font-size: 16px;
 }
 
 h6 {
-  @include font-size($h6-font-sizes);
+  font-size: 14px;
 }
 
 /* Hyperlinks */

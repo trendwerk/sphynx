@@ -1,0 +1,18 @@
+/// @section     Variables
+/// @subsection  Typography
+
+$heading-font: 'Helvetica Neue', sans-serif;
+$text-font: 'Helvetica Neue', sans-serif;
+
+$line-height: 30px;
+
+$heading-sizes: (
+  'h1': (
+    'small': 28px,
+    'medium': 40px
+  ),
+  'h2': (
+    'small': 24px,
+    'medium': 28px
+  )
+);

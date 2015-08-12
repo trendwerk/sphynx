@@ -1,20 +1,5 @@
-///
-/// @section Variables
-///
-/// This is where you should include all the recurring colors,
-/// fonts, etc.te
-///
-/// @package     WordPress
-/// @subpackage  TrendPress
-/// @author      Trendwerk
-/// @license     GPL v2
-///
-
 /// @section     Variables
-/// @subsection  Defines recurring colors and fonts
-
-$heading-font: 'Helvetica Neue', sans-serif;
-$text-font: 'Helvetica Neue', sans-serif;
+/// @subsection  Colors
 
 $light-yellow: hsl(47, 100%, 85%);
 $red: hsl(0, 58%, 52%);
@@ -40,5 +25,3 @@ $text-color: $medium-gray;
 $text-light: $gray;
 
 $code-color: $light-yellow;
-
-$line-height: 30px;

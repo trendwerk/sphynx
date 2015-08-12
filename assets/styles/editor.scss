@@ -14,8 +14,9 @@
 
 @import '../../bower_components/normalize-scss/normalize';
 
-@import 'utils/variables';
-@import 'utils/maps';
+@import 'utils/variables/breakpoints';
+@import 'utils/variables/colors';
+@import 'utils/variables/typography';
 @import 'utils/functions';
 @import 'utils/helpers';
 
