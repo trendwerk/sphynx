@@ -146,18 +146,3 @@
     @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in the `$breakpoints` map.';
   }
 }
-
-/// @section     Mixins
-/// @subsection  Sprites
-
-@mixin sprite($top, $left) {
-  background-image: url('../../../assets/images/sprite-x1.png');
-  background-position: $top $left;
-  background-repeat: no-repeat;
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background-image: url('../../../assets/images/sprite-x2.png');
-    background-position: $top x 2 $left x 2;
-    background-size: 500px 500px;
-  }
-}
