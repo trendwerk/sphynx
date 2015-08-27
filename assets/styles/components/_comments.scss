@@ -22,7 +22,7 @@
   }
 
   .comment-body {
-    @include block();
+    @include box();
     @include full-width();
 
     @include respond-to('medium') {

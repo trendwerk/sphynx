@@ -8,7 +8,7 @@
   padding: 0 0 $line-height;
 
   &.sticky {
-    @include block();
+    @include box();
     margin-bottom: ($line-height * 2);
   }
 

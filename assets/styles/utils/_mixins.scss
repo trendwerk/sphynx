@@ -8,9 +8,9 @@
 ///
 
 /// @section     Mixins
-/// @subsection  Block
+/// @subsection  Box
 
-@mixin block() {
+@mixin box() {
   background-color: $light-background;
   border-radius: 3px;
   box-sizing: border-box;
