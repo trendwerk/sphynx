@@ -10,7 +10,7 @@
 /// @section     Mixins
 /// @subsection  Block
 
-@mixin block {
+@mixin block() {
   background-color: $light-background;
   border-radius: 3px;
   box-sizing: border-box;
@@ -99,7 +99,7 @@
 /// @section     Mixins
 /// @subsection  Full width
 
-@mixin full-width {
+@mixin full-width() {
   clear: both;
   float: left;
   width: 100%;
@@ -135,7 +135,7 @@
 /// @section     Mixins
 /// @subsection  Remove list style
 
-@mixin remove-list-styles {
+@mixin remove-list-styles() {
   list-style: none;
   margin: 0;
   padding: 0;

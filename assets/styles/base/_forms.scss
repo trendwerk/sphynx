@@ -55,7 +55,7 @@ textarea {
 [type="submit"],
 [type="button"],
 button {
-  @include button;
+  @include button();
   -webkit-appearance: none;
 
   @include respond-to('medium') {

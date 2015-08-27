@@ -3,7 +3,7 @@
  */
 
 .pager {
-  @include full-width;
+  @include full-width();
   margin: $line-height 0;
   text-align: center;
 

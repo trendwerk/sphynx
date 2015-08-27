@@ -3,12 +3,12 @@
  */
 
 .hentry {
-  @include full-width;
+  @include full-width();
   margin: 0 0 $line-height;
   padding: 0 0 $line-height;
 
   &.sticky {
-    @include block;
+    @include block();
     margin-bottom: ($line-height * 2);
   }
 

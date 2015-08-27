@@ -3,7 +3,7 @@
  */
 
 .main-navigation {
-  @include full-width;
+  @include full-width();
   background-color: $primary-color;
   display: none;
   margin: 0;
@@ -87,7 +87,7 @@
   }
 
   ul {
-    @include remove-list-styles;
+    @include remove-list-styles();
   }
 
   li {

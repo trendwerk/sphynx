@@ -3,7 +3,7 @@
  */
 
 main {
-  @include full-width;
+  @include full-width();
   padding: $line-height 0 ($line-height / 2);
 
   @include respond-to('medium') {

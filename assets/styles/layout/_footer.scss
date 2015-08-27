@@ -3,7 +3,7 @@
  */
 
 .footer {
-  @include full-width;
+  @include full-width();
   background-color: $primary-color;
   color: $white;
   margin-bottom: 0;
@@ -48,7 +48,7 @@
     }
 
     ul {
-      @include remove-list-styles;
+      @include remove-list-styles();
     }
 
     li {

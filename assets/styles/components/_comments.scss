@@ -4,15 +4,15 @@
 
 .comments ol,
 .comments ul {
-  @include remove-list-styles;
+  @include remove-list-styles();
 }
 
 .comments {
-  @include full-width;
+  @include full-width();
   margin: $line-height 0;
 
   .children {
-    @include remove-list-styles;
+    @include remove-list-styles();
     box-sizing: border-box;
     padding-bottom: $line-height / 2;
 
@@ -22,8 +22,8 @@
   }
 
   .comment-body {
-    @include block;
-    @include full-width;
+    @include block();
+    @include full-width();
 
     @include respond-to('medium') {
       padding-left: 120px;
@@ -48,7 +48,7 @@
 
   .comment-author,
   .comment-metadata {
-    @include full-width;
+    @include full-width();
 
     @include respond-to('medium') {
       clear: none;
@@ -76,6 +76,6 @@
 
   .comment-content,
   .reply {
-    @include full-width;
+    @include full-width();
   }
 }
