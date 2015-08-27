@@ -814,6 +814,23 @@ pre {
   height: auto; }
 
 /**
+ * WP caption
+ */
+.wp-caption {
+  background-color: #e6e6e6;
+  margin-bottom: 30px;
+  max-width: 100%;
+  text-align: center; }
+  .wp-caption img {
+    box-sizing: border-box;
+    padding: 5px; }
+  .wp-caption .wp-caption-text {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 10px 10px; }
+
+/**
  * @section     Editor
  * @subsection  the style of the WYSIWYG itself
  */
