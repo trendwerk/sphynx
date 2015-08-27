@@ -3,5 +3,13 @@
  */
 
 .meta {
-  @include meta;
+  color: $text-light;
+
+  a {
+    color: $text-color;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
 }

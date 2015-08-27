@@ -133,23 +133,6 @@
 }
 
 /// @section     Mixins
-/// @subsection  Meta
-
-@mixin meta() {
-  color: $text-light;
-  font-size: 13px;
-  margin: 0 0 ($line-height / 2);
-
-  a {
-    color: $text-color;
-
-    &:hover {
-      color: $link-color;
-    }
-  }
-}
-
-/// @section     Mixins
 /// @subsection  Placeholder
 
 @mixin placeholder($out, $on) {

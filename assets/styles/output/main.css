@@ -1423,9 +1423,7 @@ main {
  * Meta
  */
 .meta {
-  color: #999999;
-  font-size: 13px;
-  margin: 0 0 15px; }
+  color: #999999; }
   .meta a {
     color: #666666; }
     .meta a:hover {
