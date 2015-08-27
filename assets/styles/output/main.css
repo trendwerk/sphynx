@@ -1716,19 +1716,4 @@ main {
     line-height: 20px;
     margin: 0 10px 10px; }
 
-/**
- * Search
- */
-.search h2 {
-  margin-bottom: 30px; }
-
-.search-no-results .wrapper {
-  margin-bottom: 15px; }
-
-/**
- * Single
- */
-.single h1 {
-  margin-bottom: 0; }
-
 /*# sourceMappingURL=main.css.map */
