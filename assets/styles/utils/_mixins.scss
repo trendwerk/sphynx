@@ -105,19 +105,6 @@
   width: 100%;
 }
 
-/// @section    Mixins
-/// @subsection Gradient
-
-@mixin gradient($direction, $start-color, $end-color) {
-  background-color: $start-color;
-
-  @if $direction == 'horizontal' {
-    background-image: linear-gradient(to right, $start-color, $end-color);
-  } @else if $direction == 'vertical' {
-    background-image: linear-gradient(top, $start-color, $end-color);
-  }
-}
-
 /// @section     Mixins
 /// @subsection  Hover
 
