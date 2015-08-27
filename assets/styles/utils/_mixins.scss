@@ -133,9 +133,9 @@
 }
 
 /// @section     Mixins
-/// @subsection  Remove list style
+/// @subsection  No list style
 
-@mixin remove-list-styles() {
+@mixin list-style-none() {
   list-style: none;
   margin: 0;
   padding: 0;

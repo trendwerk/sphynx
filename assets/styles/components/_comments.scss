@@ -4,7 +4,7 @@
 
 .comments ol,
 .comments ul {
-  @include remove-list-styles();
+  @include list-style-none();
 }
 
 .comments {
@@ -12,7 +12,7 @@
   margin: $line-height 0;
 
   .children {
-    @include remove-list-styles();
+    @include list-style-none();
     box-sizing: border-box;
     padding-bottom: $line-height / 2;
 

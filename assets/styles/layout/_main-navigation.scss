@@ -87,7 +87,7 @@
   }
 
   ul {
-    @include remove-list-styles();
+    @include list-style-none();
   }
 
   li {
