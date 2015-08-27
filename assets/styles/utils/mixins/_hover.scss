@@ -1,0 +1,14 @@
+/// Hover
+/// 
+/// @param {Color} $background
+/// @param {Color} $foreground
+@mixin hover($background, $foreground) {
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $background;
+    color: $foreground;
+    outline: none;
+    text-decoration: none;
+  }
+}

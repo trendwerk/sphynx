@@ -583,6 +583,25 @@ select {
   background-repeat: no-repeat; }
 
 /**
+ * Tables
+ */
+table {
+  border: 1px solid #e6e6e6;
+  margin: 0 0 30px;
+  width: 100%; }
+  table tr {
+    border-bottom: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6; }
+    table tr td,
+    table tr th {
+      border-right: 1px solid #e6e6e6;
+      padding: 5px 10px; }
+    table tr th {
+      font-weight: bold; }
+  table thead tr {
+    background-color: #e6e6e6; }
+
+/**
  * Typography
  */
 html {
@@ -722,25 +741,6 @@ pre {
   margin-bottom: 30px;
   padding: 20px;
   white-space: pre-wrap; }
-
-/**
- * Tables
- */
-table {
-  border: 1px solid #e6e6e6;
-  margin: 0 0 30px;
-  width: 100%; }
-  table tr {
-    border-bottom: 1px solid #e6e6e6;
-    border-right: 1px solid #e6e6e6; }
-    table tr td,
-    table tr th {
-      border-right: 1px solid #e6e6e6;
-      padding: 5px 10px; }
-    table tr th {
-      font-weight: bold; }
-  table thead tr {
-    background-color: #e6e6e6; }
 
 /**
  * Footer

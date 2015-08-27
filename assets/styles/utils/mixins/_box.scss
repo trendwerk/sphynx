@@ -1,0 +1,12 @@
+/// Boxed content
+@mixin box() {
+  background-color: $light-background;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: $line-height;
+  padding: 20px;
+
+  @include respond-to('medium') {
+    padding: 30px;
+  }
+}

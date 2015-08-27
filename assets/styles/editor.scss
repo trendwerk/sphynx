@@ -14,20 +14,25 @@
 
 @import '../../bower_components/normalize-scss/normalize';
 
+@import 'utils/functions';
+@import 'utils/helpers';
+
+@import 'utils/mixins/button';
+@import 'utils/mixins/hover';
+@import 'utils/mixins/font-size';
+
 @import 'utils/variables/breakpoints';
 @import 'utils/variables/colors';
 @import 'utils/variables/typography';
-@import 'utils/functions';
-@import 'utils/mixins';
-@import 'utils/helpers';
 
-@import 'base/typography';
 @import 'base/tables';
+@import 'base/typography';
 
 @import 'components/buttons';
 @import 'components/gallery';
 @import 'components/video-container';
 @import 'components/wordpress-images';
+
 /**
  * @section     Editor
  * @subsection  the style of the WYSIWYG itself
