@@ -14,7 +14,9 @@
 
 @import '../../bower_components/normalize-scss/normalize';
 
-@import 'utils/functions';
+@import 'utils/functions/shade';
+@import 'utils/functions/tint';
+
 @import 'utils/helpers';
 
 @import 'utils/mixins/box';

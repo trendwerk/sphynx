@@ -1,0 +1,4 @@
+/// Share (darken) a color
+@function shade($color, $percentage) {
+  @return mix($black, $color, $percentage);
+}
