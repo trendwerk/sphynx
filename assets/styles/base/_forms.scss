@@ -17,7 +17,6 @@
 [type="url"],
 textarea,
 select {
-  @include placeholder($text-color, $text-light);
   -webkit-appearance: none;
   background-color: $white;
   border: 1px solid $border-color;
@@ -36,6 +35,10 @@ select {
   @include respond-to('medium') {
     font-size: 14px;
     width: 50%;
+  }
+  
+  &::placeholder {
+    color: $text-light;
   }
 
   &:focus {

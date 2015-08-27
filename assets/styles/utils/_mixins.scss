@@ -120,19 +120,6 @@
 }
 
 /// @section     Mixins
-/// @subsection  Placeholder
-
-@mixin placeholder($out, $on) {
-  &::placeholder {
-    color: $out;
-  }
-
-  &:focus::placeholder {
-    color: $on;
-  }
-}
-
-/// @section     Mixins
 /// @subsection  No list style
 
 @mixin list-style-none() {
