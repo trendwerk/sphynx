@@ -14,22 +14,22 @@
 
 @import '../../bower_components/normalize-scss/normalize';
 
+@import 'utils/functions';
+@import 'utils/helpers';
+@import 'utils/mixins';
 @import 'utils/variables/breakpoints';
 @import 'utils/variables/colors';
 @import 'utils/variables/typography';
-@import 'utils/functions';
-@import 'utils/mixins';
-@import 'utils/helpers';
 
+@import 'base/forms';
 @import 'base/typography';
 @import 'base/tables';
-@import 'base/forms';
 
-@import 'layout/wrapper';
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/main-navigation';
+@import 'layout/wrapper';
 
 @import 'components/article';
 @import 'components/buttons';
