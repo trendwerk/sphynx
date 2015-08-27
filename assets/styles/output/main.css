@@ -369,31 +369,6 @@ th {
   padding: 0; }
 
 /**
- * @section Helpers
- *
- * Defines helpers
- *
- * @package     WordPress
- * @subpackage  TrendPress
- * @author      Trendwerk
- * @license     GPL v2
- */
-/**
- * @section     Helpers
- * @subsection  Classes
- */
-.clear {
-  clear: both; }
-
-.hide {
-  display: none; }
-
-.ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-
-/**
  * Forms
  */
 [type="datetime-local"],
