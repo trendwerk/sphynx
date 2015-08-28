@@ -938,28 +938,7 @@ main {
     outline: none;
     text-decoration: none; }
   .button.secondary {
-    background-color: #333333;
-    border-radius: 3px;
-    border: 0;
-    color: white;
-    display: inline-block;
-    font-weight: bold;
-    height: 50px;
-    line-height: 50px;
-    margin: 0 10px 10px 0;
-    outline: 0;
-    padding: 0 35px;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
     background-color: #999999; }
-    .button.secondary:active,
-    .button.secondary:focus,
-    .button.secondary:hover {
-      background-color: #2b2b2b;
-      color: white;
-      outline: none;
-      text-decoration: none; }
     .button.secondary:active,
     .button.secondary:focus,
     .button.secondary:hover {

@@ -18,11 +18,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  @if $type == 'secondary' {
-    @include hover(shade($secondary-color, 15%), $white);
-    background-color: $secondary-color;
-
-  } @else if $type == 'tag' {
+  @if $type == 'tag' {
     @include hover($heading-color, $white);
     background-color: $light-background;
     color: $text-color;

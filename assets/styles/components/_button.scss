@@ -6,6 +6,7 @@
   @include button();
 
   &.secondary {
-    @include button('secondary');
+    @include hover(shade($secondary-color, 15%), $white);
+    background-color: $secondary-color;
   }
 }
