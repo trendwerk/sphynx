@@ -1295,34 +1295,34 @@ main {
       color: #1d6fd3; }
 
 /**
- *  Navigation icon
+ * Navigation icon
  */
-.burger {
+.navigation-icon {
   height: 19px;
   position: relative;
   width: 24px; }
-  .burger .line {
+  .navigation-icon .line {
     background-color: white;
     height: 3px;
     position: absolute;
     -webkit-transition: -webkit-transform 0.2s ease-out;
             transition: transform 0.2s ease-out;
     width: 24px; }
-  .burger .line:nth-child(1) {
+  .navigation-icon .line:nth-child(1) {
     top: 0; }
-  .burger .line:nth-child(2) {
+  .navigation-icon .line:nth-child(2) {
     top: 8px; }
-  .burger .line:nth-child(3) {
+  .navigation-icon .line:nth-child(3) {
     top: 16px; }
-  .burger.active .line:nth-child(1) {
+  .navigation-icon.active .line:nth-child(1) {
     -webkit-transform: rotate(-45deg) translate(-5.3px, 5.3px);
         -ms-transform: rotate(-45deg) translate(-5.3px, 5.3px);
             transform: rotate(-45deg) translate(-5.3px, 5.3px); }
-  .burger.active .line:nth-child(2) {
+  .navigation-icon.active .line:nth-child(2) {
     -webkit-transform: scale(0, 1);
         -ms-transform: scale(0, 1);
             transform: scale(0, 1); }
-  .burger.active .line:nth-child(3) {
+  .navigation-icon.active .line:nth-child(3) {
     -webkit-transform: rotate(45deg) translate(-6px, -6px);
         -ms-transform: rotate(45deg) translate(-6px, -6px);
             transform: rotate(45deg) translate(-6px, -6px); }

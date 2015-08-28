@@ -9,7 +9,7 @@ $(function() {
     });
   });
   $('.mobile-navigation').click(function() {
-    return $('.burger', this).toggleClass('active');
+    return $('.navigation-icon', this).toggleClass('active');
   });
   return $('.mobile-search').click(function() {
     $($(this).data('toggle')).find('input[type="text"]').focus();

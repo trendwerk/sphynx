@@ -7,7 +7,7 @@ $ ->
         $( this ).css 'display': ''
 
   $( '.mobile-navigation' ).click ->
-    $( '.burger', this ).toggleClass( 'active' )
+    $( '.navigation-icon', this ).toggleClass( 'active' )
 
   $( '.mobile-search' ).click ->
     $( $( this ).data 'toggle' ).find( 'input[type="text"]' ).focus()
