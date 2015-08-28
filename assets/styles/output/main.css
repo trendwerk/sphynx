@@ -1029,17 +1029,15 @@ main {
 /**
  * Comments component style
  */
-.comments ol,
-.comments ul {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
 .comments {
   clear: both;
   float: left;
   width: 100%;
   margin: 30px 0; }
+  .comments ol {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
   .comments .children {
     list-style: none;
     margin: 0;

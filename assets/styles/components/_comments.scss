@@ -2,14 +2,13 @@
  * Comments component style
  */
 
-.comments ol,
-.comments ul {
-  @include list-style-none();
-}
-
 .comments {
   @include full-width();
   margin: $line-height 0;
+
+  ol {
+    @include list-style-none();
+  }
 
   .children {
     @include list-style-none();
