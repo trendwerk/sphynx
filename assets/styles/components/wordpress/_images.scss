@@ -1,17 +1,6 @@
 /**
- * WordPress images
+ * Images from the WordPress editor
  */
-
-.aligncenter,
-.alignright,
-.alignleft,
-.alignnone {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
 .alignleft {
   float: left;
   margin: 10px 20px 10px 0;
@@ -32,7 +21,10 @@
 .size-large,
 .size-auto,
 .alignnone,
+.alignleft,
+.alignright,
+.aligncenter,
 .size-full {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
