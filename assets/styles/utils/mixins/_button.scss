@@ -34,21 +34,6 @@
     text-transform: none;
 
   } @else if $type == 'pager' {
-    background-color: $light-background;
-    color: $text-color;
-    height: 40px;
-    line-height: 40px;
-    margin: 0 5px 10px;
-    padding: 0 20px;
-    text-transform: none;
-
-    &.current,
-    &.dots {
-      background-color: tint($light-background, 75%);
-
-      &:hover {
-        color: inherit;
-      }
-    }
+    
   }
 }

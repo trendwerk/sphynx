@@ -1100,13 +1100,28 @@ main {
     .pager .next.current,
     .pager .next.dots {
       background-color: #f9f9f9; }
+      .pager .page-numbers.current:active,
+      .pager .page-numbers.current:focus,
       .pager .page-numbers.current:hover,
+      .pager .page-numbers.dots:active,
+      .pager .page-numbers.dots:focus,
       .pager .page-numbers.dots:hover,
+      .pager .prev.current:active,
+      .pager .prev.current:focus,
       .pager .prev.current:hover,
+      .pager .prev.dots:active,
+      .pager .prev.dots:focus,
       .pager .prev.dots:hover,
+      .pager .next.current:active,
+      .pager .next.current:focus,
       .pager .next.current:hover,
+      .pager .next.dots:active,
+      .pager .next.dots:focus,
       .pager .next.dots:hover {
-        color: inherit; }
+        background-color: auto;
+        color: inherit;
+        outline: none;
+        text-decoration: none; }
 
 /**
  * Search form

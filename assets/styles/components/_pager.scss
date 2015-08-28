@@ -10,6 +10,19 @@
   .page-numbers,
   .prev,
   .next {
-    @include button('pager');
+    @include button();
+    background-color: $light-background;
+    color: $text-color;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px 10px;
+    padding: 0 20px;
+    text-transform: none;
+
+    &.current,
+    &.dots {
+      @include hover(auto, inherit);
+      background-color: tint($light-background, 75%);
+    }
   }
 }
