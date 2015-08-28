@@ -1,0 +1,14 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: $text-color;
+  font-family: $text-font;
+  font-size: 14px;
+  line-height: $line-height;
+}
+
+p {
+  margin: 0 0 $line-height;
+}

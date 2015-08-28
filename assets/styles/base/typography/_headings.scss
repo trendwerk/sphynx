@@ -1,0 +1,46 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  font-family: $heading-font;
+  font-weight: 700;
+  line-height: 1.325em;
+  margin: 0 0 $line-height;
+
+  a {
+    color: $heading-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+}
+
+h1 {
+  @include font-size(map-get($heading-sizes, 'h1'));
+}
+
+h2 {
+  @include font-size(map-get($heading-sizes, 'h2'));
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}

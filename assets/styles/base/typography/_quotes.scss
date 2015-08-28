@@ -1,0 +1,29 @@
+blockquote {
+  color: $text-light;
+  display: inline-block;
+  font-style: italic;
+  margin: 0 0 $line-height;
+  text-align: center;
+  width: 100%;
+
+  p {
+    display: inline;
+  }
+
+  cite {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+cite {
+  color: $text-color;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  margin: 5px 0 10px;
+
+  a {
+    color: $text-color;
+  }
+}

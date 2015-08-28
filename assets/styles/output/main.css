@@ -576,20 +576,28 @@ table {
   table thead tr {
     background-color: #e6e6e6; }
 
-/**
- * Typography
- */
 html {
   -webkit-font-smoothing: antialiased; }
 
-/* Core style */
 body {
   color: #666666;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
   line-height: 30px; }
 
-/* Headings */
+p {
+  margin: 0 0 30px; }
+
+code,
+pre {
+  background-color: #ffeeb3;
+  color: #666666; }
+
+pre {
+  margin-bottom: 30px;
+  padding: 20px;
+  white-space: pre-wrap; }
+
 h1,
 h2,
 h3,
@@ -642,12 +650,10 @@ h5 {
 h6 {
   font-size: 14px; }
 
-/* Hyperlinks */
 a {
   color: #1d6fd3;
   outline: 0;
-  text-decoration: underline;
-  /* Style for read-more, previous and next hyperlinks */ }
+  text-decoration: underline; }
   a:hover {
     color: #1759a9;
     text-decoration: underline; }
@@ -663,11 +669,6 @@ a {
     content: '»';
     padding-left: 5px; }
 
-/* Paragraphs */
-p {
-  margin: 0 0 30px; }
-
-/* Ordered and unordered lists */
 ul,
 ol {
   list-style-position: outside;
@@ -678,7 +679,6 @@ ol {
   ol ol {
     margin: 0 0 0 20px; }
 
-/* Blockquotes and cites */
 blockquote {
   color: #999999;
   display: inline-block;
@@ -700,17 +700,6 @@ cite {
   margin: 5px 0 10px; }
   cite a {
     color: #666666; }
-
-/* Code and preformatted */
-code,
-pre {
-  background-color: #ffeeb3;
-  color: #666666; }
-
-pre {
-  margin-bottom: 30px;
-  padding: 20px;
-  white-space: pre-wrap; }
 
 /**
  * Footer
