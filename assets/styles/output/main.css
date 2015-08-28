@@ -1303,7 +1303,8 @@ main {
     line-height: 25px;
     margin: 0 0 5px 5px;
     padding: 0 10px;
-    text-transform: none; }
+    text-transform: none;
+    font-size: 14px; }
     .comment-respond small a:active,
     .comment-respond small a:focus,
     .comment-respond small a:hover {

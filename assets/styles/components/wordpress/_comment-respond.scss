@@ -20,6 +20,7 @@
   }
 
   small a {
-    @include button('tag');
+    @include tag();
+    font-size: 14px;
   }
 }

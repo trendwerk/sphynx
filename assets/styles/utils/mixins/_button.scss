@@ -1,7 +1,5 @@
 /// Button
-/// 
-/// @param {String} $type - The context of the button
-@mixin button($type: '') {
+@mixin button() {
   @include hover(shade($primary-color, 15%), $white);
   background-color: $primary-color;
   border-radius: 3px;
@@ -17,17 +15,4 @@
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-
-  @if $type == 'tag' {
-    @include hover($heading-color, $white);
-    background-color: $light-background;
-    color: $text-color;
-    font-weight: normal;
-    height: 25px;
-    line-height: 25px;
-    margin: 0 0 5px 5px;
-    padding: 0 10px;
-    text-transform: none;
-
-  }
 }
