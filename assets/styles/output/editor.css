@@ -569,6 +569,64 @@ cite {
       text-decoration: none; }
 
 /**
+ * Video container
+ */
+.video-container {
+  height: 0;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  position: relative; }
+  .video-container iframe,
+  .video-container object,
+  .video-container embed,
+  .video-container video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+
+/**
+ * Caption
+ */
+.wp-caption {
+  margin-bottom: 30px;
+  max-width: 100%;
+  text-align: center; }
+  .wp-caption img {
+    box-sizing: border-box; }
+  .wp-caption .wp-caption-text {
+    font-style: italic; }
+
+/**
+ * Images from the editor
+ */
+.alignleft {
+  float: left;
+  margin: 10px 20px 10px 0; }
+
+.alignright {
+  float: right;
+  margin: 10px 0 10px 20px; }
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 10px; }
+
+.size-thumbnail,
+.size-medium,
+.size-large,
+.size-auto,
+.alignnone,
+.alignleft,
+.alignright,
+.aligncenter,
+.size-full {
+  height: auto;
+  max-width: 100%; }
+
+/**
  * Gallery
  */
 .gallery {
@@ -721,64 +779,6 @@ cite {
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
   display: none; }
-
-/**
- * Video container
- */
-.video-container {
-  height: 0;
-  margin-bottom: 30px;
-  padding-top: 30px;
-  padding-bottom: 56.25%;
-  position: relative; }
-  .video-container iframe,
-  .video-container object,
-  .video-container embed,
-  .video-container video {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%; }
-
-/**
- * WordPress caption
- */
-.wp-caption {
-  margin-bottom: 30px;
-  max-width: 100%;
-  text-align: center; }
-  .wp-caption img {
-    box-sizing: border-box; }
-  .wp-caption .wp-caption-text {
-    font-style: italic; }
-
-/**
- * Images from the WordPress editor
- */
-.alignleft {
-  float: left;
-  margin: 10px 20px 10px 0; }
-
-.alignright {
-  float: right;
-  margin: 10px 0 10px 20px; }
-
-.aligncenter {
-  display: block;
-  margin: 0 auto 10px; }
-
-.size-thumbnail,
-.size-medium,
-.size-large,
-.size-auto,
-.alignnone,
-.alignleft,
-.alignright,
-.aligncenter,
-.size-full {
-  height: auto;
-  max-width: 100%; }
 
 /**
  * @section     Editor
