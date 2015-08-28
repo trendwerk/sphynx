@@ -984,8 +984,6 @@ main {
         margin-bottom: 30px; } }
     .comment-respond p.form-submit {
       margin-bottom: 0; }
-  .comment-respond p:last-of-type {
-    margin-bottom: 0; }
   .comment-respond small a {
     background-color: #333333;
     border-radius: 3px;
@@ -1023,8 +1021,6 @@ main {
       color: white;
       outline: none;
       text-decoration: none; }
-  .comment-respond .submit {
-    margin-top: 10px; }
 
 /**
  * Comments component style
