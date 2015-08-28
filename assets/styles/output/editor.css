@@ -478,11 +478,6 @@ a {
 p {
   margin: 0 0 30px; }
 
-/* Emphasized and italic */
-em,
-i {
-  font-style: italic; }
-
 /* Ordered and unordered lists */
 ul,
 ol {
