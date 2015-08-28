@@ -913,30 +913,6 @@ main {
       width: 1160px; } }
 
 /**
- * Article
- */
-.hentry {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin: 0 0 30px;
-  padding: 0 0 30px; }
-  .hentry.sticky {
-    background-color: #e6e6e6;
-    border-radius: 3px;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-    padding: 20px;
-    margin-bottom: 60px; }
-    @media (min-width: 641px) {
-      .hentry.sticky {
-        padding: 30px; } }
-  .hentry h2 {
-    margin-bottom: 15px; }
-  .hentry p:last-of-type {
-    margin-bottom: 0; }
-
-/**
  * Buttons
  */
 .button {
@@ -1525,6 +1501,30 @@ main {
     color: white;
     outline: none;
     text-decoration: none; }
+
+/**
+ * Post (loop)
+ */
+.post {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0 0 30px; }
+  .post.sticky {
+    background-color: #e6e6e6;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding: 20px;
+    margin-bottom: 60px; }
+    @media (min-width: 641px) {
+      .post.sticky {
+        padding: 30px; } }
+  .post h2 {
+    margin-bottom: 15px; }
+  .post p:last-of-type {
+    margin-bottom: 0; }
 
 /**
  * Video container

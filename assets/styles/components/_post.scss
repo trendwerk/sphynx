@@ -1,8 +1,8 @@
 /**
- * Article
+ * Post (loop)
  */
 
-.hentry {
+.post {
   @include full-width();
   margin: 0 0 $line-height;
   padding: 0 0 $line-height;
