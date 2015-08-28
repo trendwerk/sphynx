@@ -11,4 +11,4 @@ $ ->
 
   $( '.mobile-search' ).click ->
     $( $( this ).data 'toggle' ).find( 'input[type="text"]' ).focus()
-    $( '.glass', this ).toggleClass( 'active' )
+    $( '.search-icon', this ).toggleClass( 'active' )

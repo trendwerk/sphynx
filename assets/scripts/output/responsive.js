@@ -13,7 +13,7 @@ $(function() {
   });
   return $('.mobile-search').click(function() {
     $($(this).data('toggle')).find('input[type="text"]').focus();
-    return $('.glass', this).toggleClass('active');
+    return $('.search-icon', this).toggleClass('active');
   });
 });
 

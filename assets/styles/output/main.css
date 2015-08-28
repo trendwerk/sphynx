@@ -1418,12 +1418,12 @@ main {
     right: 1px;
     top: 1px;
     width: 40px; }
-  .search-form form .glass {
+  .search-form form .search-icon {
     border: 2px solid #999999;
     height: 8px;
     top: -1px;
     width: 8px; }
-  .search-form form .glass:after {
+  .search-form form .search-icon:after {
     background-color: #999999;
     height: 2px;
     right: -5px;
@@ -1433,14 +1433,14 @@ main {
 /**
  * Search icon
  */
-.glass {
+.search-icon {
   border: 3px solid white;
   border-radius: 100%;
   display: block;
   height: 10px;
   position: relative;
   width: 10px; }
-  .glass:after {
+  .search-icon:after {
     background-color: white;
     content: '';
     height: 3px;
