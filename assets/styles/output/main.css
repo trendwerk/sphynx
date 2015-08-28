@@ -1423,12 +1423,12 @@ main {
     height: 8px;
     top: -1px;
     width: 8px; }
-  .search-form form .search-icon:after {
-    background-color: #999999;
-    height: 2px;
-    right: -5px;
-    top: 9px;
-    width: 6px; }
+    .search-form form .search-icon:after {
+      background-color: #999999;
+      height: 2px;
+      right: -5px;
+      top: 9px;
+      width: 6px; }
 
 /**
  * Search icon
