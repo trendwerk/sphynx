@@ -1,0 +1,11 @@
+code,
+pre {
+  background-color: $code-color;
+  color: $text-color;
+}
+
+pre {
+  margin-bottom: $line-height;
+  padding: 20px;
+  white-space: pre-wrap;
+}

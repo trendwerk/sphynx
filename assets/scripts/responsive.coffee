@@ -1,14 +1,14 @@
 $ ->
 
   # Toggle navigation search
-  $( '#mobile-navigation, #mobile-search' ).click ->
+  $( '.mobile-navigation, .mobile-search' ).click ->
     $( $( this ).data 'toggle' ).slideToggle 'fast', ->
       if ! $( this ).is ':visible'
         $( this ).css 'display': ''
 
-  $( '#mobile-navigation' ).click ->
-    $( '.burger', this ).toggleClass( 'active' )
+  $( '.mobile-navigation' ).click ->
+    $( '.navigation-icon', this ).toggleClass( 'active' )
 
-  $( '#mobile-search' ).click ->
+  $( '.mobile-search' ).click ->
     $( $( this ).data 'toggle' ).find( 'input[type="text"]' ).focus()
-    $( '.glass', this ).toggleClass( 'active' )
+    $( '.search-icon', this ).toggleClass( 'active' )

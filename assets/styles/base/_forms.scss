@@ -1,0 +1,82 @@
+/**
+ * Forms
+ */
+
+[type="datetime-local"],
+[type="datetime"],
+[type="password"],
+[type="number"],
+[type="search"],
+[type="month"],
+[type="email"],
+[type="date"],
+[type="text"],
+[type="time"],
+[type="week"],
+[type="tel"],
+[type="url"],
+textarea,
+select {
+  -webkit-appearance: none;
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: $text-color;
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  line-height: 25px;
+  margin: 0;
+  outline: none;
+  padding: 0 12px;
+  width: 100%;
+
+  @include respond-to('medium') {
+    font-size: 14px;
+    width: 50%;
+  }
+  
+  &::placeholder {
+    color: $text-light;
+  }
+
+  &:focus {
+    border: 1px solid shade($border-color, 20%);
+  }
+}
+
+textarea {
+  min-height: 200px;
+  padding: 8px 12px;
+
+  @include respond-to('medium') {
+    width: 75%;
+  }
+}
+
+[type="submit"],
+[type="button"],
+button {
+  @include button();
+  -webkit-appearance: none;
+  border: 0;
+  line-height: $line-height;
+}
+
+label {
+  float: left;
+  margin-bottom: ($line-height / 2);
+  width: 100%;
+
+  @include respond-to('medium') {
+    margin-bottom: 0;
+    width: 25%;
+  }
+}
+
+select {
+  background-image: url('data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
+  background-position: 95% center;
+  background-repeat: no-repeat;
+}

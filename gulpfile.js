@@ -5,7 +5,9 @@
  */
 var gulp = require('gulp');
 var cache = require('gulp-cached');
+var scsslint = require('gulp-scss-lint');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var coffee = require('gulp-coffee');
 var gutil = require('gulp-util');
@@ -24,16 +26,36 @@ var files = {
 };
 
 /**
+ * Error handling
+ */
+function handleError(error) {
+  this.end();
+}
+
+/**
  * Compile Sass
  */
-gulp.task('sass', function() {
-  gulp.src(files.sass)
-  .pipe(sourcemaps.init())
-  .pipe(sass().on('error', sass.logError))
-  .pipe(sourcemaps.write('/'))
-  .pipe(gulp.dest('assets/styles/output/'))
-  .pipe(livereload())
+gulp.task('scsslint', function(cb) {
+  return gulp.src(files.sass)
+  .pipe(scsslint({
+    'config': 'config/lint/scss.yml'
+  }))
+  .pipe(scsslint.failReporter())
+  .on('error', handleError);
 });
+
+/**
+ * Compile Sass
+ */
+ gulp.task('sass', ['scsslint'], function() {
+   gulp.src(files.sass)
+   .pipe(sourcemaps.init())
+   .pipe(sass().on('error', sass.logError))
+   .pipe(autoprefixer())
+   .pipe(sourcemaps.write('.'))
+   .pipe(gulp.dest('assets/styles/output/'))
+   .pipe(livereload())
+ });
 
 /**
  * Compile CoffeeScript
@@ -44,9 +66,7 @@ gulp.task('coffee', function() {
   .pipe(coffeelint())
   .pipe(coffeelint.reporter())
   .pipe(coffeelint.reporter('fail'))
-  .on('error', function(error) {
-    this.end();
-  })
+  .on('error', handleError)
   .pipe(sourcemaps.init())
   .pipe(coffee({bare: true}).on('error', gutil.log))
   .pipe(sourcemaps.write('.'))
@@ -123,7 +143,7 @@ var welcomeMessage = [
  */
 gulp.task('default', function() {
   gutil.log(gutil.colors.cyan(welcomeMessage));
-  gulp.watch(files.sass, ['sass']);
+  gulp.watch(files.sass, ['scsslint', 'sass']);
   gulp.watch(files.coffee, ['coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
   livereload.listen();

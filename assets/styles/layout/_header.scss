@@ -1,0 +1,63 @@
+/**
+ * Header
+ */
+
+.header {
+  @include full-width();
+  background-color: $primary-color;
+  box-sizing: border-box;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1;
+
+  @include respond-to('large') {
+    background-color: $body-background;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    @include respond-to('large') {
+      color: $heading-color;
+    }
+  }
+
+  .mobile-navigation,
+  .mobile-search {
+    cursor: pointer;
+    padding: 10px;
+    float: left;
+
+    @include respond-to('large') {
+      display: none;
+    }
+  }
+
+  .mobile-navigation {
+    float: right;
+    margin-right: -10px;
+  }
+
+  .mobile-search {
+    height: 19px;
+    margin-left: -10px;
+    width: 20px;
+  }
+
+  .header-search {
+    display: none;
+    float: right;
+    margin-top: 20px;
+    width: 100%;
+
+    @include respond-to('small') {
+      margin-top: 10px;
+    }
+
+    @include respond-to('large') {
+      display: block;
+      width: auto;
+    }
+  }
+}

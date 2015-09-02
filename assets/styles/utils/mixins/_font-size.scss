@@ -1,0 +1,20 @@
+/// Font size
+/// 
+/// @param {Map} $fs-map - Font size map
+/// @param {Map} $fs-breakpoints [$breakpoints] - Corresponding breakpoints
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  $fs-keys: map-keys($fs-breakpoints);
+  
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == nth($fs-keys, 1) {
+      font-size: $fs-font-size;
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}

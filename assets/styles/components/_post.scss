@@ -1,0 +1,22 @@
+/**
+ * Post (loop)
+ */
+
+.post {
+  @include full-width();
+  margin: 0 0 $line-height;
+  padding: 0 0 $line-height;
+
+  &.sticky {
+    @include box();
+    margin-bottom: ($line-height * 2);
+  }
+
+  h2 {
+    margin-bottom: ($line-height / 2);
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}

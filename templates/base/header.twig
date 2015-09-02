@@ -15,40 +15,40 @@
 		{{wp_head}}
 
 	</head>
-	
+
 	<body class="{{body_class}}">
-	
-		<header id="header">
-		
+
+		<header class="header">
+
 			<div class="wrapper">
 
-				<div id="mobile-search" data-toggle="#search">
-					<div class="glass"></div>
+				<div class="mobile-search" data-toggle=".header-search">
+					<div class="search-icon"></div>
 				</div>
 
-				<div id="mobile-navigation" data-toggle="#main-navigation">
-					<div class="burger">
+				<div class="mobile-navigation" data-toggle=".main-navigation">
+					<div class="navigation-icon">
 						<div class="line"></div>
 						<div class="line"></div>
 						<div class="line"></div>
 					</div>
 				</div>
-				
-				<div id="logo">
 
-					<p id="sitename">
+				<div class="logo">
+
+					<p class="site-name">
 						<a href="{{site.url}}">
 							{{site.name}}
 						</a>
 					</p>
 
-					<p id="description">
+					<p class="site-description">
 						{{site.description}}
 					</p>
 
 				</div>
 
-				<div id="search">
+				<div class="header-search">
 					{% include 'partials/searchform.twig' %}
 				</div>
 
@@ -56,12 +56,10 @@
 
 		</header>
 
-		<nav id="main-navigation">
+		<nav class="main-navigation">
 
 			<div class="wrapper">
-
 				{{menus.main}}
-
 			</div>
 
 		</nav>

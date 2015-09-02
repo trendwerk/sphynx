@@ -1,0 +1,11 @@
+/// Button
+@mixin button() {
+  $height: 50px;
+  $padding-horizontal: 35px;
+  $margin: 10px;
+
+  @include box-link($primary-color, $white, $height, $padding-horizontal, $margin);
+  @include hover(shade($primary-color, 15%), $white);
+  font-weight: bold;
+  text-transform: uppercase;
+}

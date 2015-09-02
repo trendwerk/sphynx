@@ -23,6 +23,6 @@ function pagination($args = array())
     )));
 
     if (0 < strlen($pagination)) {
-        return '<nav id="pager">' . $pagination . '</nav>';
+        return '<nav class="pager">' . $pagination . '</nav>';
     }
 }

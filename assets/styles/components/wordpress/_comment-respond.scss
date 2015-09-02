@@ -1,0 +1,30 @@
+/**
+ * Comment form
+ */
+
+.comment-respond {
+  @include full-width();
+  margin: $line-height 0;
+  position: relative;
+
+  p {
+    margin-bottom: ($line-height / 2);
+
+    @include respond-to('medium') {
+      margin-bottom: $line-height;
+    }
+
+    &.form-submit {
+      margin-bottom: 0;
+
+      @include respond-to('medium') {
+        margin-left: 25%;
+      }
+    }
+  }
+
+  small a {
+    @include tag();
+    font-size: 14px;
+  }
+}

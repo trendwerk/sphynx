@@ -1,0 +1,13 @@
+/**
+ * Tags
+ */
+
+.tags {
+  span {
+    padding-right: 15px;
+  }
+
+  .tag {
+    @include tag();
+  }
+}

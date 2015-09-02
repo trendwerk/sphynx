@@ -1,0 +1,5 @@
+/// Tag
+@mixin tag() {
+  @include box-link();
+  @include hover($primary-color, $white);
+}

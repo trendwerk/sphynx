@@ -1,0 +1,43 @@
+/**
+ * Navigation icon
+ */
+
+.navigation-icon {
+  height: 19px;
+  position: relative;
+  width: 24px;
+
+  .line {
+    background-color: $white;
+    height: 3px;
+    position: absolute;
+    transition: transform 0.2s ease-out;
+    width: 24px;
+  }
+
+  .line:nth-child(1) {
+    top: 0;
+  }
+
+  .line:nth-child(2) {
+    top: 8px;
+  }
+
+  .line:nth-child(3) {
+    top: 16px;
+  }
+
+  &.active {
+    .line:nth-child(1) {
+      transform: rotate(-45deg) translate(-5.3px, 5.3px);
+    }
+
+    .line:nth-child(2) {
+      transform: scale(0, 1);
+    }
+
+    .line:nth-child(3) {
+      transform: rotate(45deg) translate(-6px, -6px);
+    }
+  }
+}

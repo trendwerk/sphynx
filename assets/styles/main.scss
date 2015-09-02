@@ -1,5 +1,5 @@
 ///
-/// @section Editor stylesheet
+/// @section Main stylesheet
 ///
 /// @package     WordPress
 /// @subpackage  TrendPress
@@ -9,7 +9,7 @@
 
 @charset 'UTF-8';
 
-/// @section     Editor
+/// @section     Main
 /// @subsection  Import Sass files
 
 @import '../../bower_components/normalize-scss/normalize';
@@ -22,11 +22,16 @@
 @import 'utils/mixins/button';
 @import 'utils/mixins/hover';
 @import 'utils/mixins/font-size';
+@import 'utils/mixins/full-width';
+@import 'utils/mixins/list-style-none';
+@import 'utils/mixins/respond-to';
+@import 'utils/mixins/tag';
 
 @import 'utils/variables/breakpoints';
 @import 'utils/variables/colors';
 @import 'utils/variables/typography';
 
+@import 'base/forms';
 @import 'base/tables';
 @import 'base/typography/base';
 @import 'base/typography/code';
@@ -35,22 +40,25 @@
 @import 'base/typography/lists';
 @import 'base/typography/quotes';
 
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/main-navigation';
+@import 'layout/wrapper';
+
 @import 'components/button';
+@import 'components/featured';
+@import 'components/logo';
+@import 'components/meta';
+@import 'components/navigation-icon';
+@import 'components/pager';
+@import 'components/search-form';
+@import 'components/search-icon';
+@import 'components/tags';
+@import 'components/post';
 @import 'components/video-container';
 @import 'components/wordpress/caption';
-@import 'components/wordpress/images';
+@import 'components/wordpress/comment-respond';
+@import 'components/wordpress/comments';
 @import 'components/wordpress/gallery';
-
-/**
- * @section     Editor
- * @subsection  the style of the WYSIWYG itself
- */
-
-html {
-  padding: 20px;
-}
-
-.video-container {
-  height: auto;
-  padding: 0;
-}
+@import 'components/wordpress/images';

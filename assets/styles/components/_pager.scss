@@ -1,0 +1,28 @@
+/**
+ * Pager
+ */
+
+.pager {
+  @include full-width();
+  margin: $line-height 0;
+  text-align: center;
+
+  .page-numbers,
+  .prev,
+  .next {
+    $height: 40px;
+    $padding-horizontal: 20px;
+    $margin: 10px;
+
+    @include box-link($light-background, $text-color, $height, $padding-horizontal, $margin);
+    @include hover(shade($primary-color, 15%), $white);
+
+    font-weight: bold;
+
+    &.current,
+    &.dots {
+      @include hover(auto, inherit);
+      background-color: tint($light-background, 75%);
+    }
+  }
+}

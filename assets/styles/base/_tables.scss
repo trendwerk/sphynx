@@ -1,0 +1,28 @@
+/**
+ * Tables
+ */
+
+table {
+  border: 1px solid $border-color;
+  margin: 0 0 $line-height;
+  width: 100%;
+
+  tr {
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+
+    td,
+    th {
+      border-right: 1px solid $border-color;
+      padding: 5px 10px;
+    }
+
+    th {
+      font-weight: bold;
+    }
+  }
+
+  thead tr {
+    background-color: $light-background;
+  }
+}

@@ -1,0 +1,18 @@
+/**
+ * Main
+ */
+
+main {
+  @include full-width();
+  padding: $line-height 0 ($line-height / 2);
+
+  @include respond-to('medium') {
+    background-color: $body-background;
+    padding: ($line-height * 2) 0 $line-height;
+
+    .wrapper {
+      margin: 0 auto;
+      width: 780px;
+    }
+  }
+}

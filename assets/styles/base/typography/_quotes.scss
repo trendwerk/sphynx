@@ -1,0 +1,19 @@
+blockquote {
+  border-left: 4px solid $border-color;
+  color: $text-light;
+  font-style: italic;
+  margin: 0;
+  padding-left: 20px;
+}
+
+cite {
+  color: $text-color;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  margin: 5px 0 10px;
+
+  a {
+    color: $text-color;
+  }
+}

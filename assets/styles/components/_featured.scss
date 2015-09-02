@@ -1,0 +1,12 @@
+/**
+ * Featured image
+ */
+.featured {
+  display: block;
+  margin-bottom: $line-height;
+
+  @include respond-to('medium') {
+    float: right;
+    margin: 0 0 $line-height 20px;
+  }
+}

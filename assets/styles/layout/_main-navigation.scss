@@ -1,0 +1,114 @@
+/**
+ * Main navigation
+ */
+
+.main-navigation {
+  @include full-width();
+  background-color: $primary-color;
+  display: none;
+  margin: 0;
+  padding: 0 0 20px;
+
+  /* Desktop navigation */
+
+  @include respond-to('large') {
+    display: block;
+    padding-bottom: 0;
+
+    /* Top level */
+
+    li {
+      float: left;
+    }
+
+    li:hover {
+      background-color: $black;
+
+      /* Display drop-down on hover */
+
+      .children,
+      .sub-menu {
+        display: block;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 10px 15px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    /* Add arrow list items with children */
+
+    .menu-item-has-children > a::after {
+      $transparent: transparent;
+      border-color: $white $transparent $transparent;
+      border-style: solid;
+      border-width: 4px 4px 0;
+      content: '';
+      display: inline-block;
+      height: 0;
+      margin: 0 0 3px 5px;
+      width: 0;
+    }
+
+    .current-menu-item {
+      background-color: $black;
+    }
+
+    /* Drop-down */
+
+    .children,
+    .sub-menu {
+      background-color: $black;
+      display: none;
+      padding: 10px 0;
+      position: absolute;
+      width: 260px;
+
+      li {
+        clear: both;
+        width: 100%;
+      }
+
+      a {
+        padding: 5px 15px;
+      }
+
+      /* Hide arrow list items with children */
+
+      a:after {
+        display: none;
+      }
+    }
+  }
+
+  ul {
+    @include list-style-none();
+  }
+
+  li {
+    font-weight: 700;
+    position: relative;
+  }
+
+  li li {
+    font-weight: 400;
+  }
+
+  ul ul {
+    padding: 5px 10px;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

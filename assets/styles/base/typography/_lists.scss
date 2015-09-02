@@ -1,0 +1,10 @@
+ul,
+ol {
+  list-style-position: outside;
+  margin: 0 0 $line-height;
+
+  ul,
+  ol {
+    margin: 0 0 0 20px;
+  }
+}
