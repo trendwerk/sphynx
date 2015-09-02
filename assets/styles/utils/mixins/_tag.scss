@@ -1,7 +1,7 @@
 /// Tag
 @mixin tag() {
   @include button();
-  @include hover($heading-color, $white);
+  @include hover($primary-color, $white);
   background-color: $light-background;
   color: $text-color;
   font-weight: normal;
