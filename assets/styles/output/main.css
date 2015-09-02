@@ -514,13 +514,13 @@ button {
   box-sizing: border-box;
   margin-bottom: 30px;
   padding: 30px;
-  border: 0;
   color: white;
   display: inline-block;
-  font-weight: bold;
   margin: 0 10px 10px 0;
   padding: 10px 35px;
   text-decoration: none;
+  border: 0;
+  font-weight: bold;
   text-transform: uppercase;
   -webkit-appearance: none; }
   [type="submit"]:active,
@@ -915,13 +915,13 @@ main {
   box-sizing: border-box;
   margin-bottom: 30px;
   padding: 30px;
-  border: 0;
   color: white;
   display: inline-block;
-  font-weight: bold;
   margin: 0 10px 10px 0;
   padding: 10px 35px;
   text-decoration: none;
+  border: 0;
+  font-weight: bold;
   text-transform: uppercase; }
   .button:active,
   .button:focus,
@@ -1036,13 +1036,13 @@ main {
     box-sizing: border-box;
     margin-bottom: 30px;
     padding: 30px;
-    border: 0;
     color: white;
     display: inline-block;
-    font-weight: bold;
     margin: 0 10px 10px 0;
     padding: 10px 35px;
     text-decoration: none;
+    border: 0;
+    font-weight: bold;
     text-transform: uppercase;
     background-color: #e6e6e6;
     color: #666666;
@@ -1165,34 +1165,16 @@ main {
   padding-right: 15px; }
 
 .tags .tag {
-  background-color: #333333;
+  background-color: #e6e6e6;
   border-radius: 3px;
   box-sizing: border-box;
   margin-bottom: 30px;
   padding: 30px;
-  border: 0;
-  color: white;
-  display: inline-block;
-  font-weight: bold;
-  margin: 0 10px 10px 0;
-  padding: 10px 35px;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-color: #e6e6e6;
   color: #666666;
-  font-weight: normal;
-  height: 25px;
-  line-height: 25px;
-  margin: 0 0 5px 5px;
-  padding: 0 10px;
-  text-transform: none; }
-  .tags .tag:active,
-  .tags .tag:focus,
-  .tags .tag:hover {
-    background-color: #2b2b2b;
-    color: white;
-    outline: none;
-    text-decoration: none; }
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  padding: 0px 10px;
+  text-decoration: none; }
   .tags .tag:active,
   .tags .tag:focus,
   .tags .tag:hover {
@@ -1270,35 +1252,17 @@ main {
     .comment-respond p.form-submit {
       margin-bottom: 0; }
   .comment-respond small a {
-    background-color: #333333;
+    background-color: #e6e6e6;
     border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 30px;
     padding: 30px;
-    border: 0;
-    color: white;
-    display: inline-block;
-    font-weight: bold;
-    margin: 0 10px 10px 0;
-    padding: 10px 35px;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: #e6e6e6;
     color: #666666;
-    font-weight: normal;
-    height: 25px;
-    line-height: 25px;
-    margin: 0 0 5px 5px;
-    padding: 0 10px;
-    text-transform: none;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    padding: 0px 10px;
+    text-decoration: none;
     font-size: 14px; }
-    .comment-respond small a:active,
-    .comment-respond small a:focus,
-    .comment-respond small a:hover {
-      background-color: #2b2b2b;
-      color: white;
-      outline: none;
-      text-decoration: none; }
     .comment-respond small a:active,
     .comment-respond small a:focus,
     .comment-respond small a:hover {

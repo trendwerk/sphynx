@@ -515,13 +515,13 @@ cite {
   box-sizing: border-box;
   margin-bottom: 30px;
   padding: 30px;
-  border: 0;
   color: white;
   display: inline-block;
-  font-weight: bold;
   margin: 0 10px 10px 0;
   padding: 10px 35px;
   text-decoration: none;
+  border: 0;
+  font-weight: bold;
   text-transform: uppercase; }
   .button:active,
   .button:focus,

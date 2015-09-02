@@ -1,13 +1,5 @@
 /// Tag
 @mixin tag() {
-  @include button();
+  @include box-link();
   @include hover($primary-color, $white);
-  background-color: $light-background;
-  color: $text-color;
-  font-weight: normal;
-  height: 25px;
-  line-height: 25px;
-  margin: 0 0 5px 5px;
-  padding: 0 10px;
-  text-transform: none;
 }
