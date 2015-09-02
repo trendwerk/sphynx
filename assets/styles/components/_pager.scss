@@ -10,14 +10,14 @@
   .page-numbers,
   .prev,
   .next {
-    @include button();
-    background-color: $light-background;
-    color: $text-color;
-    height: 40px;
-    line-height: 40px;
-    margin: 0 5px 10px;
-    padding: 0 20px;
-    text-transform: none;
+    $height: 40px;
+    $padding-horizontal: 20px;
+    $margin: 10px;
+
+    @include box-link($light-background, $text-color, $height, $padding-horizontal, $margin);
+    @include hover(shade($primary-color, 15%), $white);
+
+    font-weight: bold;
 
     &.current,
     &.dots {

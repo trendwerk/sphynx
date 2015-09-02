@@ -6,7 +6,6 @@
 
   @include box-link($primary-color, $white, $height, $padding-horizontal, $margin);
   @include hover(shade($primary-color, 15%), $white);
-  border: 0;
   font-weight: bold;
   text-transform: uppercase;
 }

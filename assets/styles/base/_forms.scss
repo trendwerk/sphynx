@@ -60,10 +60,8 @@ textarea {
 button {
   @include button();
   -webkit-appearance: none;
-
-  @include respond-to('medium') {
-    margin-left: 25%;
-  }
+  border: 0;
+  line-height: $line-height;
 }
 
 label {
