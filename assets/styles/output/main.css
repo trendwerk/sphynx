@@ -511,16 +511,15 @@ textarea {
 button {
   background-color: #333333;
   border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 30px;
   border: 0;
   color: white;
   display: inline-block;
   font-weight: bold;
-  height: 50px;
-  line-height: 50px;
   margin: 0 10px 10px 0;
-  outline: 0;
-  padding: 0 35px;
-  position: relative;
+  padding: 10px 35px;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-appearance: none; }
@@ -913,16 +912,15 @@ main {
 .button {
   background-color: #333333;
   border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 30px;
   border: 0;
   color: white;
   display: inline-block;
   font-weight: bold;
-  height: 50px;
-  line-height: 50px;
   margin: 0 10px 10px 0;
-  outline: 0;
-  padding: 0 35px;
-  position: relative;
+  padding: 10px 35px;
   text-decoration: none;
   text-transform: uppercase; }
   .button:active,
@@ -1035,16 +1033,15 @@ main {
   .pager .next {
     background-color: #333333;
     border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding: 30px;
     border: 0;
     color: white;
     display: inline-block;
     font-weight: bold;
-    height: 50px;
-    line-height: 50px;
     margin: 0 10px 10px 0;
-    outline: 0;
-    padding: 0 35px;
-    position: relative;
+    padding: 10px 35px;
     text-decoration: none;
     text-transform: uppercase;
     background-color: #e6e6e6;
@@ -1170,16 +1167,15 @@ main {
 .tags .tag {
   background-color: #333333;
   border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 30px;
   border: 0;
   color: white;
   display: inline-block;
   font-weight: bold;
-  height: 50px;
-  line-height: 50px;
   margin: 0 10px 10px 0;
-  outline: 0;
-  padding: 0 35px;
-  position: relative;
+  padding: 10px 35px;
   text-decoration: none;
   text-transform: uppercase;
   background-color: #e6e6e6;
@@ -1219,11 +1215,8 @@ main {
     border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 30px;
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 60px; }
-    @media (min-width: 641px) {
-      .post.sticky {
-        padding: 30px; } }
   .post h2 {
     margin-bottom: 15px; }
   .post p:last-of-type {
@@ -1279,16 +1272,15 @@ main {
   .comment-respond small a {
     background-color: #333333;
     border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding: 30px;
     border: 0;
     color: white;
     display: inline-block;
     font-weight: bold;
-    height: 50px;
-    line-height: 50px;
     margin: 0 10px 10px 0;
-    outline: 0;
-    padding: 0 35px;
-    position: relative;
+    padding: 10px 35px;
     text-decoration: none;
     text-transform: uppercase;
     background-color: #e6e6e6;
@@ -1341,13 +1333,10 @@ main {
     border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 30px;
-    padding: 20px;
+    padding: 30px;
     clear: both;
     float: left;
     width: 100%; }
-    @media (min-width: 641px) {
-      .comments .comment-body {
-        padding: 30px; } }
     @media (min-width: 641px) {
       .comments .comment-body {
         padding-left: 120px; } }
