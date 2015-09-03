@@ -20,7 +20,6 @@ final class Menus
     {
         register_nav_menu('main', __('Main navigation', 'tp'));
         register_nav_menu('footer', __('Footer', 'tp'));
-        register_nav_menu('sitemap', __('Sitemap', 'tp'));
     }
 
     /**
