@@ -501,10 +501,9 @@ select {
 
 textarea {
   min-height: 200px;
-  padding: 8px 12px; }
-  @media (min-width: 641px) {
-    textarea {
-      width: 75%; } }
+  max-width: 100%;
+  padding: 10px 15px;
+  resize: vertical; }
 
 [type="submit"],
 [type="button"],
@@ -1235,7 +1234,9 @@ main {
     margin-bottom: 15px; }
     @media (min-width: 641px) {
       .comment-respond p {
-        margin-bottom: 30px; } }
+        margin-bottom: 30px; }
+        .comment-respond p textarea {
+          width: 75%; } }
     .comment-respond p.form-submit {
       margin-bottom: 0; }
       @media (min-width: 641px) {

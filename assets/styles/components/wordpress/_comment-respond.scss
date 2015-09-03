@@ -12,6 +12,10 @@
 
     @include respond-to('medium') {
       margin-bottom: $line-height;
+
+      textarea {
+        width: 75%;
+      }
     }
 
     &.form-submit {
