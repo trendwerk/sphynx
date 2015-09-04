@@ -7,6 +7,6 @@
 
   @include respond-to('medium') {
     float: right;
-    margin: 0 0 $vertical-spacing 20px;
+    margin: 0 0 $vertical-spacing $horizontal-spacing;
   }
 }
