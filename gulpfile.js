@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     sourcemaps = require('gulp-sourcemaps'),
     livereload = require('gulp-livereload'),
+    rimraf = require('gulp-rimraf'),
 
     // Sass
     scsslint = require('gulp-scss-lint'),
@@ -17,6 +18,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     minify = require('gulp-minify-css'),
+    cssBase64 = require('gulp-css-base64'),
     
     // Coffee
     coffeelint = require('gulp-coffeelint'),
@@ -67,10 +69,7 @@ gulp.task('scsslint', function(cb) {
  * Compile Sass
  */
 gulp.task('sass', ['scsslint'], function() {
-  gulp.src(files.sass)
-
-  // Init sourcemaps
-  .pipe(sourcemaps.init())
+  return gulp.src(files.sass)
 
   // Don't stop watch on error (just log it)
   .pipe(sass().on('error', sass.logError))
@@ -82,15 +81,40 @@ gulp.task('sass', ['scsslint'], function() {
   .pipe(rename({suffix: '.min'}))
   .pipe(minify())
 
-  // Write sourcemaps
-  .pipe(sourcemaps.write('.'))
+  // Write output
+  .pipe(gulp.dest('assets/styles/output/'))
+});
+
+/**
+ * Copy Fancybox assets
+ */
+gulp.task('copy-fancybox-assets', ['sass'], function() {
+  return gulp.src('bower_components/fancybox/source/*.{png,gif}')
+  .pipe(gulp.dest('assets/styles/output/'))
+});
+
+/**
+ * Base64 images in CSS
+ */
+gulp.task('base64', ['copy-fancybox-assets'], function() {
+  return gulp.src('assets/styles/output/*.css')
+  // Base64 images
+  .pipe(cssBase64())
 
   // Write output
   .pipe(gulp.dest('assets/styles/output/'))
 
   // Reload
   .pipe(livereload())
- });
+});
+
+/**
+ * Remove Fancybox assets
+ */
+gulp.task('remove-fancybox-assets', ['base64'], function() {
+  gulp.src('assets/styles/output/*.{png,gif}')
+  .pipe(rimraf())
+});
 
 /**
  * Lint CoffeeScript
@@ -214,7 +238,7 @@ var welcomeMessage = [
  */
 gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
-  gulp.watch(files.sass, ['scsslint', 'sass']);
+  gulp.watch(files.sass, ['scsslint', 'sass', 'copy-fancybox-assets', 'base64', 'remove-fancybox-assets']);
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
   livereload.listen();
