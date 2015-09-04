@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     cache = require('gulp-cached'),
     beep = require('beepbeep'),
     colors = require('colors'),
+    plumber = require('gulp-plumber'),
     sourcemaps = require('gulp-sourcemaps'),
     livereload = require('gulp-livereload'),
 
@@ -39,9 +40,13 @@ var files = {
 /**
  * Error handling
  */
-function handleError(error) {
-  beep();
-  this.end();
+var gulp_src = gulp.src;
+
+gulp.src = function() {
+  return gulp_src.apply(gulp, arguments)
+  .pipe(plumber(function(error) {
+    beep();
+  }));
 }
 
 /**
@@ -49,7 +54,6 @@ function handleError(error) {
  */
 gulp.task('scsslint', function(cb) {
   return gulp.src(files.sass)
-
   // Lint
   .pipe(scsslint({
     'config': 'config/lint/scss.yml'
@@ -57,7 +61,6 @@ gulp.task('scsslint', function(cb) {
 
   // Make the reporter fail task on error
   .pipe(scsslint.failReporter())
-  .on('error', handleError);
 });
 
 /**
@@ -103,7 +106,6 @@ gulp.task('coffeelint', function() {
 
   // Make reporter fail task on error
   .pipe(coffeelint.reporter('fail'))
-  .on('error', handleError)
 });
 
 /**
@@ -164,8 +166,9 @@ gulp.task('phpcs', ['phplint'], function() {
     warningSeverity: 0
   }))
 
-  // Log errors
+  // Log errors and fail afterwards
   .pipe(phpcs.reporter('log'))
+  .pipe(phpcs.reporter('fail'))
 
   // Reload
   .pipe(livereload())
