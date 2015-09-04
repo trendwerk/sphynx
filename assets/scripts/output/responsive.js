@@ -1,2 +1,0 @@
-$(function(){return $(".mobile-navigation, .mobile-search").click(function(){return $($(this).data("toggle")).slideToggle("fast",function(){return $(this).is(":visible")?void 0:$(this).css({display:""})})}),$(".mobile-navigation").click(function(){return $(".navigation-icon",this).toggleClass("active")}),$(".mobile-search").click(function(){return $($(this).data("toggle")).find('input[type="text"]').focus(),$(".search-icon",this).toggleClass("active")})});
-//# sourceMappingURL=responsive.js.map

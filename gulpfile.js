@@ -16,6 +16,7 @@ var phplint = require('phplint').lint;
 var phpcs = require('gulp-phpcs');
 var livereload = require('gulp-livereload');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 
 /**
  * Setup files to watch
@@ -63,13 +64,13 @@ gulp.task('scsslint', function(cb) {
  */
 gulp.task('coffee', function() {
   gulp.src(files.coffee)
-  .pipe(cache('coffee'))
   .pipe(coffeelint())
   .pipe(coffeelint.reporter())
   .pipe(coffeelint.reporter('fail'))
   .on('error', handleError)
   .pipe(sourcemaps.init())
   .pipe(coffee({bare: true}).on('error', gutil.log))
+  .pipe(concat('all.js'))
   .pipe(uglify())
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('assets/scripts/output/'))
