@@ -6,6 +6,7 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     cache = require('gulp-cached'),
+    beep = require('beepbeep'),
     sourcemaps = require('gulp-sourcemaps'),
     livereload = require('gulp-livereload'),
 
@@ -39,6 +40,7 @@ var files = {
  * Error handling
  */
 function handleError(error) {
+  beep();
   this.end();
 }
 
@@ -139,7 +141,7 @@ gulp.task('phplint', function(cb) {
   phplint(files.php, {limit: 10}, function(err, stdout, stderr) {
     if(err) {
       cb(err);
-      gutil.beep();
+      beep();
     } else {
       cb();
     }
@@ -213,4 +215,5 @@ gulp.task('default', function() {
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
   livereload.listen();
+  beep([0, 250, 150, 150, 250, 600, 250]);
 });
