@@ -1199,7 +1199,6 @@ main {
 .video-container {
   height: 0;
   margin-bottom: 30px;
-  padding-top: 30px;
   padding-bottom: 56.25%;
   position: relative; }
   .video-container iframe,
