@@ -389,7 +389,6 @@ select {
   -webkit-appearance: none;
   background-color: white;
   border: 1px solid #e6e6e6;
-  border-radius: 3px;
   box-sizing: border-box;
   color: #666666;
   display: block;
@@ -509,7 +508,6 @@ textarea {
 [type="button"],
 button {
   background-color: #333333;
-  border-radius: 3px;
   box-sizing: border-box;
   margin-bottom: 30px;
   padding: 30px;
@@ -907,7 +905,6 @@ main {
  */
 .button {
   background-color: #333333;
-  border-radius: 3px;
   box-sizing: border-box;
   margin-bottom: 30px;
   padding: 30px;
@@ -1027,7 +1024,6 @@ main {
   .pager .prev,
   .pager .next {
     background-color: #e6e6e6;
-    border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 30px;
     padding: 30px;
@@ -1152,7 +1148,6 @@ main {
 
 .tags .tag {
   background-color: #e6e6e6;
-  border-radius: 3px;
   box-sizing: border-box;
   margin-bottom: 30px;
   padding: 30px;
@@ -1180,7 +1175,6 @@ main {
   padding: 0 0 30px; }
   .post.sticky {
     background-color: #e6e6e6;
-    border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 30px;
     padding: 30px;
@@ -1244,7 +1238,6 @@ main {
           margin-left: 25%; } }
   .comment-respond small a {
     background-color: #e6e6e6;
-    border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 30px;
     padding: 30px;
@@ -1285,7 +1278,6 @@ main {
         padding-left: 30px; } }
   .comments .comment-body {
     background-color: #e6e6e6;
-    border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 30px;
     padding: 30px;
