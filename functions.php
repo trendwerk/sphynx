@@ -2,8 +2,8 @@
 /**
  * Autoload classes
  */
-include_once('assets/includes/autoload.php');
-include_once('assets/includes/template-tags.php');
+include_once('lib/autoload.php');
+include_once('lib/template-tags.php');
 
 /**
  * Timber
