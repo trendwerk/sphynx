@@ -5,6 +5,7 @@
 .search-icon {
   border: 3px solid $white;
   border-radius: 100%;
+  box-sizing: content-box;
   display: block;
   height: 10px;
   position: relative;
