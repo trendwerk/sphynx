@@ -4,7 +4,7 @@
 
 .comments {
   @include full-width();
-  margin: $line-height 0;
+  margin: $vertical-spacing 0;
 
   ol {
     @include list-style-none();
@@ -12,7 +12,7 @@
 
   .children {
     @include list-style-none();
-    padding-bottom: $line-height / 2;
+    padding-bottom: $vertical-spacing / 2;
 
     @include respond-to('medium') {
       padding-left: 30px;
@@ -65,7 +65,7 @@
   }
 
   .comment-content {
-    padding: ($line-height / 2) 0;
+    padding: ($vertical-spacing / 2) 0;
 
     p:last-of-type {
       margin-bottom: 0;

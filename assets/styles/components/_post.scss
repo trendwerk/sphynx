@@ -4,16 +4,16 @@
 
 .post {
   @include full-width();
-  margin: 0 0 $line-height;
-  padding: 0 0 $line-height;
+  margin: 0 0 $vertical-spacing;
+  padding: 0 0 $vertical-spacing;
 
   &.sticky {
     @include box();
-    margin-bottom: ($line-height * 2);
+    margin-bottom: ($vertical-spacing * 2);
   }
 
   h2 {
-    margin-bottom: ($line-height / 2);
+    margin-bottom: ($vertical-spacing / 2);
   }
 
   p:last-of-type {

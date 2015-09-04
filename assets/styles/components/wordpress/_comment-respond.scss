@@ -4,14 +4,14 @@
 
 .comment-respond {
   @include full-width();
-  margin: $line-height 0;
+  margin: $vertical-spacing 0;
   position: relative;
 
   p {
-    margin-bottom: ($line-height / 2);
+    margin-bottom: ($vertical-spacing / 2);
 
     @include respond-to('medium') {
-      margin-bottom: $line-height;
+      margin-bottom: $vertical-spacing;
 
       textarea {
         width: 75%;

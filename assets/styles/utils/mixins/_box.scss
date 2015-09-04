@@ -1,6 +1,6 @@
 /// Boxed content
 @mixin box($background: $light-background) {
   background-color: $background;
-  margin-bottom: $line-height;
+  margin-bottom: $vertical-spacing;
   padding: 30px;
 }

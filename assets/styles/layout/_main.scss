@@ -4,11 +4,11 @@
 
 main {
   @include full-width();
-  padding: $line-height 0 ($line-height / 2);
+  padding: $vertical-spacing 0 ($vertical-spacing / 2);
 
   @include respond-to('medium') {
     background-color: $body-background;
-    padding: ($line-height * 2) 0 $line-height;
+    padding: ($vertical-spacing * 2) 0 $vertical-spacing;
 
     .wrapper {
       margin: 0 auto;

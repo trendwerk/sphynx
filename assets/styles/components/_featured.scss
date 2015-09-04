@@ -3,10 +3,10 @@
  */
 .featured {
   display: block;
-  margin-bottom: $line-height;
+  margin-bottom: $vertical-spacing;
 
   @include respond-to('medium') {
     float: right;
-    margin: 0 0 $line-height 20px;
+    margin: 0 0 $vertical-spacing 20px;
   }
 }
