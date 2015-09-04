@@ -23,6 +23,7 @@ var gulp = require('gulp'),
     coffeelint = require('gulp-coffeelint'),
     coffee = require('gulp-coffee'),
     concat = require('gulp-concat'),
+    addsrc = require('gulp-add-src'),
     uglify = require('gulp-uglify'),
 
     // PHP
@@ -31,11 +32,18 @@ var gulp = require('gulp'),
 
 /**
  * Setup files to watch
+ *
+ * Concat contains extra files to concat
  */
 var files = {
   sass: 'assets/styles/**/*.scss',
   coffee: 'assets/scripts/**/*.coffee',
-  php: ['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*']
+  php: ['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'],
+  concat: {
+    coffee: [
+      'bower_components/fancybox/source/jquery.fancybox.js'
+    ]
+  }
 };
 
 /**
@@ -132,6 +140,8 @@ gulp.task('coffee', ['coffeelint'], function() {
 
   // Compile
   .pipe(coffee({bare: true}))
+
+  .pipe(addsrc.prepend(files.concat.coffee))
 
   // Concat
   .pipe(concat('all.js'))

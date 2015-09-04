@@ -29,8 +29,7 @@ final class Enqueue
         /**
          * Scripts
          */
-        wp_enqueue_script('all', $assets . '/scripts/output/all.js', array('jquery', 'fancybox'));
-        wp_enqueue_script('fancybox', $bower . '/fancybox/source/jquery.fancybox.js', array('jquery'));
+        wp_enqueue_script('all', $assets . '/scripts/output/all.js', array('jquery'));
 
         /**
          * Styles
