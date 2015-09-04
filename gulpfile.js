@@ -10,7 +10,6 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     sourcemaps = require('gulp-sourcemaps'),
     livereload = require('gulp-livereload'),
-    rimraf = require('gulp-rimraf'),
 
     // Sass
     scsslint = require('gulp-scss-lint'),
@@ -83,6 +82,9 @@ gulp.task('base64', ['scsslint'], function() {
 gulp.task('sass', ['scsslint', 'base64'], function() {
   return gulp.src(files.sass)
 
+  // Init sourcemaps
+  .pipe(sourcemaps.init())
+
   // Don't stop watch on error (just log it)
   .pipe(sass().on('error', sass.logError))
 
@@ -92,6 +94,9 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
   // Minify
   .pipe(rename({suffix: '.min'}))
   .pipe(minify())
+
+  // Write sourcemaps
+  .pipe(sourcemaps.write('.'))
 
   // Write output
   .pipe(gulp.dest('assets/styles/output/'))
