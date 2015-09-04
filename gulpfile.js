@@ -3,22 +3,29 @@
 /**
  * Require dependencies
  */
-var gulp = require('gulp');
-var cache = require('gulp-cached');
-var scsslint = require('gulp-scss-lint');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var coffee = require('gulp-coffee');
-var gutil = require('gulp-util');
-var coffeelint = require('gulp-coffeelint');
-var phplint = require('phplint').lint;
-var phpcs = require('gulp-phpcs');
-var livereload = require('gulp-livereload');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var minify = require('gulp-minify-css');
-var rename = require("gulp-rename");
+var gulp = require('gulp'),
+    gutil = require('gulp-util'),
+    cache = require('gulp-cached'),
+    beep = require('beepbeep'),
+    sourcemaps = require('gulp-sourcemaps'),
+    livereload = require('gulp-livereload'),
+
+    // Sass
+    scsslint = require('gulp-scss-lint'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    rename = require('gulp-rename'),
+    minify = require('gulp-minify-css'),
+    
+    // Coffee
+    coffeelint = require('gulp-coffeelint'),
+    coffee = require('gulp-coffee'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+
+    // PHP
+    phplint = require('phplint').lint,
+    phpcs = require('gulp-phpcs');
 
 /**
  * Setup files to watch
@@ -33,6 +40,7 @@ var files = {
  * Error handling
  */
 function handleError(error) {
+  beep();
   this.end();
 }
 
@@ -41,9 +49,13 @@ function handleError(error) {
  */
 gulp.task('scsslint', function(cb) {
   return gulp.src(files.sass)
+
+  // Lint
   .pipe(scsslint({
     'config': 'config/lint/scss.yml'
   }))
+
+  // Make the reporter fail task on error
   .pipe(scsslint.failReporter())
   .on('error', handleError);
 });
@@ -51,16 +63,30 @@ gulp.task('scsslint', function(cb) {
 /**
  * Compile Sass
  */
- gulp.task('sass', ['scsslint'], function() {
-   gulp.src(files.sass)
-   .pipe(sourcemaps.init())
-   .pipe(sass().on('error', sass.logError))
-   .pipe(autoprefixer())
-   .pipe(rename({suffix: '.min'}))
-   .pipe(minify())
-   .pipe(sourcemaps.write('.'))
-   .pipe(gulp.dest('assets/styles/output/'))
-   .pipe(livereload())
+gulp.task('sass', ['scsslint'], function() {
+  gulp.src(files.sass)
+
+  // Init sourcemaps
+  .pipe(sourcemaps.init())
+
+  // Don't stop watch on error (just log it)
+  .pipe(sass().on('error', sass.logError))
+
+  // Autoprefixer
+  .pipe(autoprefixer())
+
+  // Minify
+  .pipe(rename({suffix: '.min'}))
+  .pipe(minify())
+
+  // Write sourcemaps
+  .pipe(sourcemaps.write('.'))
+
+  // Write output
+  .pipe(gulp.dest('assets/styles/output/'))
+
+  // Reload
+  .pipe(livereload())
  });
 
 /**
@@ -68,10 +94,16 @@ gulp.task('scsslint', function(cb) {
  */
 gulp.task('coffeelint', function() {
   return gulp.src(files.coffee)
-    .pipe(coffeelint())
-    .pipe(coffeelint.reporter())
-    .pipe(coffeelint.reporter('fail'))
-    .on('error', handleError)
+
+  // Lint
+  .pipe(coffeelint())
+
+  // Report errors
+  .pipe(coffeelint.reporter())
+
+  // Make reporter fail task on error
+  .pipe(coffeelint.reporter('fail'))
+  .on('error', handleError)
 });
 
 /**
@@ -79,12 +111,26 @@ gulp.task('coffeelint', function() {
  */
 gulp.task('coffee', ['coffeelint'], function() {
   gulp.src(files.coffee)
+
+  // Init sourcemaps
   .pipe(sourcemaps.init())
+
+  // Compile
   .pipe(coffee({bare: true}).on('error', gutil.log))
+
+  // Concat
   .pipe(concat('all.js'))
+
+  // Uglify
   .pipe(uglify())
+
+  // Write sourcemaps
   .pipe(sourcemaps.write('.'))
+
+  // Write output
   .pipe(gulp.dest('assets/scripts/output/'))
+
+  // Reload
   .pipe(livereload())
 });
 
@@ -93,9 +139,9 @@ gulp.task('coffee', ['coffeelint'], function() {
  */
 gulp.task('phplint', function(cb) {
   phplint(files.php, {limit: 10}, function(err, stdout, stderr) {
-    if (err) {
+    if(err) {
       cb(err);
-      gutil.beep();
+      beep();
     } else {
       cb();
     }
@@ -105,15 +151,23 @@ gulp.task('phplint', function(cb) {
 /**
  * PHP CodeSniffer (PSR)
  */
-gulp.task('phpcs', function() {
+gulp.task('phpcs', ['phplint'], function() {
   gulp.src(files.php)
+
+  // Use cache to filter out unmodified files
   .pipe(cache('phpcs'))
+
+  // Sniff code
   .pipe(phpcs({
     bin: '~/.composer/vendor/bin/phpcs',
     standard: 'PSR2',
     warningSeverity: 0
   }))
+
+  // Log errors
   .pipe(phpcs.reporter('log'))
+
+  // Reload
   .pipe(livereload())
 });
 
@@ -161,4 +215,5 @@ gulp.task('default', function() {
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
   livereload.listen();
+  beep([0, 250, 150, 150, 250, 600, 250]);
 });
