@@ -66,9 +66,21 @@ gulp.task('scsslint', function(cb) {
 });
 
 /**
+ * Base64 Fancybox images
+ */
+gulp.task('base64', ['scsslint'], function() {
+  return gulp.src('bower_components/fancybox/source/*.css')
+  // Base64 images
+  .pipe(cssBase64())
+
+  // Write output
+  .pipe(gulp.dest('bower_components/fancybox/source/'))
+});
+
+/**
  * Compile Sass
  */
-gulp.task('sass', ['scsslint'], function() {
+gulp.task('sass', ['scsslint', 'base64'], function() {
   return gulp.src(files.sass)
 
   // Don't stop watch on error (just log it)
@@ -83,37 +95,9 @@ gulp.task('sass', ['scsslint'], function() {
 
   // Write output
   .pipe(gulp.dest('assets/styles/output/'))
-});
-
-/**
- * Copy Fancybox assets
- */
-gulp.task('copy-fancybox-assets', ['sass'], function() {
-  return gulp.src('bower_components/fancybox/source/*.{png,gif}')
-  .pipe(gulp.dest('assets/styles/output/'))
-});
-
-/**
- * Base64 images in CSS
- */
-gulp.task('base64', ['copy-fancybox-assets'], function() {
-  return gulp.src('assets/styles/output/*.css')
-  // Base64 images
-  .pipe(cssBase64())
-
-  // Write output
-  .pipe(gulp.dest('assets/styles/output/'))
 
   // Reload
   .pipe(livereload())
-});
-
-/**
- * Remove Fancybox assets
- */
-gulp.task('remove-fancybox-assets', ['base64'], function() {
-  gulp.src('assets/styles/output/*.{png,gif}')
-  .pipe(rimraf())
 });
 
 /**
@@ -238,7 +222,7 @@ var welcomeMessage = [
  */
 gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
-  gulp.watch(files.sass, ['scsslint', 'sass', 'copy-fancybox-assets', 'base64', 'remove-fancybox-assets']);
+  gulp.watch(files.sass, ['base64', 'scsslint', 'sass']);
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
   livereload.listen();
