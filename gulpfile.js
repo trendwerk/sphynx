@@ -15,6 +15,7 @@ var coffeelint = require('gulp-coffeelint');
 var phplint = require('phplint').lint;
 var phpcs = require('gulp-phpcs');
 var livereload = require('gulp-livereload');
+var uglify = require('gulp-uglify');
 
 /**
  * Setup files to watch
@@ -69,6 +70,7 @@ gulp.task('coffee', function() {
   .on('error', handleError)
   .pipe(sourcemaps.init())
   .pipe(coffee({bare: true}).on('error', gutil.log))
+  .pipe(uglify())
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('assets/scripts/output/'))
   .pipe(livereload())

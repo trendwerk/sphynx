@@ -1,15 +1,2 @@
-$(function() {
-  $('a:has(img)').each(function() {
-    if (/(jpeg|jpg|png|gif|bmp)$/i.test($(this).prop('href'))) {
-      return $(this).fancybox();
-    }
-  });
-  return $('.gallery').each(function(i) {
-    $(this).find('a').prop('rel', 'fancybox-gallery-' + i);
-    return $(this).find('figure.gallery-item a').fancybox({
-      type: 'image'
-    });
-  });
-});
-
+$(function(){return $("a:has(img)").each(function(){return/(jpeg|jpg|png|gif|bmp)$/i.test($(this).prop("href"))?$(this).fancybox():void 0}),$(".gallery").each(function(e){return $(this).find("a").prop("rel","fancybox-gallery-"+e),$(this).find("figure.gallery-item a").fancybox({type:"image"})})});
 //# sourceMappingURL=functions.js.map
