@@ -4,9 +4,9 @@
  * Require dependencies
  */
 var gulp = require('gulp'),
-    gutil = require('gulp-util'),
     cache = require('gulp-cached'),
     beep = require('beepbeep'),
+    colors = require('colors'),
     sourcemaps = require('gulp-sourcemaps'),
     livereload = require('gulp-livereload'),
 
@@ -116,7 +116,7 @@ gulp.task('coffee', ['coffeelint'], function() {
   .pipe(sourcemaps.init())
 
   // Compile
-  .pipe(coffee({bare: true}).on('error', gutil.log))
+  .pipe(coffee({bare: true}))
 
   // Concat
   .pipe(concat('all.js'))
@@ -210,7 +210,7 @@ var welcomeMessage = [
  * Watch
  */
 gulp.task('default', function() {
-  gutil.log(gutil.colors.cyan(welcomeMessage));
+  console.log(welcomeMessage.cyan);
   gulp.watch(files.sass, ['scsslint', 'sass']);
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
