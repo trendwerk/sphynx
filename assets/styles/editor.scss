@@ -1,16 +1,10 @@
 ///
-/// @section Editor stylesheet
-///
-/// @package     WordPress
-/// @subpackage  TrendPress
-/// @author      Trendwerk
-/// @license     GPL v2
+/// Editor stylesheet
 ///
 
 @charset 'UTF-8';
 
-/// @section     Editor
-/// @subsection  Import Sass files
+/// Import Sass files
 
 @import '../../bower_components/normalize-scss/normalize';
 
@@ -43,11 +37,8 @@
 @import 'components/wordpress/images';
 @import 'components/wordpress/gallery';
 
-/**
- * @section     Editor
- * @subsection  the style of the WYSIWYG itself
- */
-
+/// Back-end editor style
+ 
 html {
   padding: 20px;
 }
