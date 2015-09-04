@@ -8,7 +8,7 @@ $text-font: (
   sans-serif,
 );
 
-$line-height: 30px;
+$line-height: $vertical-spacing;
 
 $heading-sizes: (
   'h1': (
