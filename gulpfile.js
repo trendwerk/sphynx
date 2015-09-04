@@ -18,6 +18,7 @@ var livereload = require('gulp-livereload');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify-css');
+var rename = require("gulp-rename");
 
 /**
  * Setup files to watch
@@ -55,6 +56,7 @@ gulp.task('scsslint', function(cb) {
    .pipe(sourcemaps.init())
    .pipe(sass().on('error', sass.logError))
    .pipe(autoprefixer())
+   .pipe(rename({suffix: '.min'}))
    .pipe(minify())
    .pipe(sourcemaps.write('.'))
    .pipe(gulp.dest('assets/styles/output/'))
