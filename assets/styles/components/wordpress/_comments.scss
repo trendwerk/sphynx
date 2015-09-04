@@ -12,7 +12,6 @@
 
   .children {
     @include list-style-none();
-    box-sizing: border-box;
     padding-bottom: $line-height / 2;
 
     @include respond-to('medium') {

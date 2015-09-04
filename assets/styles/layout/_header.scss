@@ -5,7 +5,6 @@
 .header {
   @include full-width();
   background-color: $primary-color;
-  box-sizing: border-box;
   padding: 20px 0;
   text-align: center;
   z-index: 1;
