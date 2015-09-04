@@ -1,11 +1,5 @@
 <?php
 /**
- * Autoload classes
- */
-include_once('lib/autoload.php');
-include_once('lib/template-tags.php');
-
-/**
  * Timber
  */
 if (class_exists('Timber')) {
