@@ -39,6 +39,7 @@ var files = {
   sass: 'assets/styles/**/*.scss',
   coffee: 'assets/scripts/**/*.coffee',
   php: ['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'],
+  twig: ['templates/**/*.twig'],
   concat: {
     coffee: [
       'bower_components/fancybox/source/jquery.fancybox.js'
@@ -198,6 +199,19 @@ gulp.task('phpcs', ['phplint'], function() {
 });
 
 /**
+ * Twig: Livereload
+ */
+gulp.task('twig', function() {
+  gulp.src(files.twig)
+
+  // Use cache to filter out unmodified files
+  .pipe(cache('twig'))
+
+  // Reload
+  .pipe(livereload())
+});
+
+/**
  * Welcome message
  */
 var welcomeMessage = [
@@ -240,6 +254,7 @@ gulp.task('default', function() {
   gulp.watch(files.sass, ['base64', 'scsslint', 'sass']);
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
   gulp.watch(files.php, ['phplint', 'phpcs']);
+  gulp.watch(files.twig, ['twig']);
   livereload.listen();
   beep([0, 250, 150, 150, 250, 600, 250]);
 });
