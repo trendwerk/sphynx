@@ -26,15 +26,14 @@
     margin: 0;
     padding: 0 0 0 15px;
     position: absolute;
-    right: 1px;
-    top: 1px;
+    right: 0;
+    top: 0;
     width: 40px;
   }
 
   .search-icon {
     border: 2px solid $text-light;
     height: 12px;
-    top: -1px;
     width: 12px;
 
     &:after {
