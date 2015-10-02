@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     minify = require('gulp-minify-css'),
     cssBase64 = require('gulp-css-base64'),
-    
+
     // Coffee
     coffeelint = require('gulp-coffeelint'),
     coffee = require('gulp-coffee'),
@@ -256,5 +256,4 @@ gulp.task('default', function() {
   gulp.watch(files.php, ['phplint', 'phpcs']);
   gulp.watch(files.twig, ['twig']);
   livereload.listen();
-  beep([0, 250, 150, 150, 250, 600, 250]);
 });
