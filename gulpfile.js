@@ -27,7 +27,6 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
 
     // PHP
-    phplint = require('phplint').lint,
     phpcs = require('gulp-phpcs');
 
 /**
@@ -161,23 +160,9 @@ gulp.task('coffee', ['coffeelint'], function() {
 });
 
 /**
- * Lint PHP
- */
-gulp.task('phplint', function(cb) {
-  phplint(files.php, {limit: 10}, function(err, stdout, stderr) {
-    if(err) {
-      cb(err);
-      beep();
-    } else {
-      cb();
-    }
-  })
-});
-
-/**
  * PHP CodeSniffer (PSR)
  */
-gulp.task('phpcs', ['phplint'], function() {
+gulp.task('phpcs', function() {
   gulp.src(files.php)
 
   // Use cache to filter out unmodified files
@@ -253,7 +238,7 @@ gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
   gulp.watch(files.sass, ['base64', 'scsslint', 'sass']);
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
-  gulp.watch(files.php, ['phplint', 'phpcs']);
+  gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
   livereload.listen();
 });
