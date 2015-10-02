@@ -3,21 +3,21 @@
 {% block content %}
 
 	<h1>
-		{{post.title}}
+		{{ post.title }}
 	</h1>
 	
 	{% include 'partials/post-meta.twig' %}
 
 	{% if post.thumbnail %}
 
-		<img class="featured" src="{{post.thumbnail.src('medium')}}" alt="{{post.thumbnail.title}}">
+		<img class="featured" src="{{ post.thumbnail.src('medium') }}" alt="{{ post.thumbnail.title }}">
 
 	{% endif %}
 
-	{{post.content}}
+	{{ post.content }}
 
 	{% include 'partials/tags.twig' %}
 
-	{{fn('comments_template')}}
+	{{ fn('comments_template') }}
 
 {% endblock %}

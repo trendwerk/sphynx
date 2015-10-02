@@ -3,6 +3,11 @@
   margin: $vertical-spacing 0;
   text-align: center;
 
+  .pages {
+    @include list-style-none();
+  }
+
+  .dots,
   .page-numbers,
   .prev,
   .next {

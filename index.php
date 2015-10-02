@@ -9,6 +9,8 @@ if (is_archive()) {
 }
 
 $context['description'] = get_the_archive_description('<div class="archive-description">', '</div>');
-$context['pagination'] = Trendwerk\TrendPress\pagination();
+$context['pagination'] = Timber::get_pagination(array(
+    'mid_size' => 2,
+));
 
 Timber::render('index.twig', $context);

@@ -26,8 +26,7 @@
     "gulp-sass": "^2.0.4",
     "gulp-scss-lint": "^0.2.2",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.4.0",
-    "phplint": "^1.5.2"
+    "gulp-uglify": "^1.4.0"
   },
   "scripts": {
     "postinstall": "bower install && gulp"

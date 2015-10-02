@@ -1,0 +1,31 @@
+<nav class="pager">
+
+    {% if pagination.prev %}
+
+        <a class="prev" href="{{ pagination.prev.link }}">{{ __('Previous', 'tp') }}</a>
+
+    {% endif %}
+
+    {% for page in pagination.pages %}
+
+            {% if page.link %}
+
+                <a class="{{ page.class }}" href="{{ page.link }}">{{ page.title }}</a>
+
+            {% else %}
+
+                <span class="{{ page.class }}">
+                    {{ page.title }}
+                </span>
+
+            {% endif %}
+
+    {% endfor %}
+
+    {% if pagination.next %}
+
+        <a class="next" href="{{ pagination.next.link }}">{{ __('Next', 'tp') }}</a>
+
+    {% endif %}
+
+</nav>

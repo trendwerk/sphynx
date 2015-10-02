@@ -3,10 +3,10 @@
 {% block content %}
 
 	<h1>
-		{{title}}
+		{{ title }}
 	</h1>
 
-	{{description}}
+	{{ description }}
 	
 	{% if posts is not empty %}
 
@@ -14,12 +14,12 @@
 			{% include 'partials/loop-post.twig' %}
 		{% endfor %}
 
-		{{pagination}}
+		{% include 'partials/pagination.twig' %}
 
 	{% else %}
 
 		<p>
-			{{__('No results found.', 'tp')}}
+			{{ __('No results found.', 'tp') }}
 		</p>
 
 	{% endif %}

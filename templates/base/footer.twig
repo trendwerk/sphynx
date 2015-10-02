@@ -6,7 +6,7 @@
 
 					<div class="copyright">
 						<p>
-							&copy; {{__('Copyright', 'tp')}} {{now|date('Y')}} - {{site.name}}
+							&copy; {{ __('Copyright', 'tp') }} {{ now|date('Y') }} - {{ site.name }}
 						</p>
 					</div>
 					
@@ -18,9 +18,7 @@
 
 								{% for item in menus.footer.get_items %}
 
-									<li class="{{item.classes|join(' ')}}">
-										<a href="{{item.get_link}}">{{item.title}}</a>
-									</li>
+									<li class="{{ item.classes|join(' ') }}"><a href="{{ item.get_link }}">{{ item.title }}</a></li>
 
 								{% endfor %}
 
@@ -36,7 +34,7 @@
 
 		</footer>
 
-		{{wp_footer}}
+		{{ wp_footer }}
 
 	</body>
 
