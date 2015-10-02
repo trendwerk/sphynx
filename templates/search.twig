@@ -3,7 +3,7 @@
 {% block content %}
 
 	<h1>
-		{{__('Search Results for: %1$s', 'tp')|format(search_query)}}
+		{{ __('Search Results for: %1$s', 'tp')|format(search_query) }}
 	</h1>
 
 	{% if posts is not empty %}
@@ -17,7 +17,7 @@
 	{% else %}
 
 		<p>
-			{{__('Your search for <em>&quot;%1$s&quot;</em> did not match any documents. Please make sure all your words are spelled correctly or try different keywords.', 'tp')|format(search_query)}}
+			{{ __('Your search for <em>&quot;%1$s&quot;</em> did not match any documents. Please make sure all your words are spelled correctly or try different keywords.', 'tp')|format(search_query) }}
 		</p>
 
 		{% include 'partials/searchform.twig' %}

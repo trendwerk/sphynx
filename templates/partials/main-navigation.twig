@@ -6,8 +6,8 @@
 
 				{% for item in menus.main.get_items %}
 
-					<li class="{{item.classes|join(' ')}}">
-						<a href="{{item.get_link}}">{{item.title}}</a>
+					<li class="{{ item.classes|join(' ') }}">
+						<a href="{{ item.get_link }}">{{ item.title }}</a>
 
 						{% if item.get_children %}
 
@@ -15,8 +15,8 @@
 
 								{% for child in item.get_children %}
 
-									<li class="{{child.classes|join(' ')}}">
-										<a href="{{child.get_link}}">{{child.title}}</a>
+									<li class="{{ child.classes|join(' ') }}">
+										<a href="{{ child.get_link }}">{{ child.title }}</a>
 									</li>
 
 								{% endfor %}

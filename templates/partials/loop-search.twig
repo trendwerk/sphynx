@@ -1,11 +1,11 @@
 <article class="hentry">
 
 	<h2>
-		<a href="{{post.permalink}}">
-			{{post.title}}
+		<a href="{{ post.permalink }}">
+			{{ post.title }}
 		</a>
 	</h2>
 	
-	{{post.get_preview(40, false, __('Read more', 'tp'))|wpautop}}
+	{{ post.get_preview(40, false, __('Read more', 'tp'))|wpautop }}
 
 </article>

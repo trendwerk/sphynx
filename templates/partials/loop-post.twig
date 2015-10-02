@@ -1,8 +1,8 @@
-<article class="{{post.class}}">
+<article class="{{ post.class }}">
 
 	<h2>
-		<a href="{{post.permalink}}">
-			{{post.title}}
+		<a href="{{ post.permalink }}">
+			{{ post.title }}
 		</a>
 	</h2>
 	
@@ -10,12 +10,12 @@
 
 	{% if post.thumbnail %}
 
-		<a href="{{post.permalink}}">
-			<img class="featured" src="{{post.thumbnail.src('thumbnail')}}" alt="{{post.thumbnail.title}}">
+		<a href="{{ post.permalink }}">
+			<img class="featured" src="{{ post.thumbnail.src('thumbnail') }}" alt="{{ post.thumbnail.title }}">
 		</a>
 
 	{% endif %}
 	
-	{{post.get_preview(100, false, __('Read more', 'tp'))|wpautop}}
+	{{ post.get_preview(100, false, __('Read more', 'tp'))|wpautop }}
 
 </article>

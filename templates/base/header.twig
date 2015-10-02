@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 
-<html {{site.language_attributes}}>
+<html {{ site.language_attributes }}>
 
 	<head>
 
-		<meta charset="{{site.charset}}" />
+		<meta charset="{{ site.charset }}" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="alternate" type="application/rss+xml" href="{{bloginfo('rss2_url')}}" title="{{site.name}} RSS feed" />
-		<link rel="pingback" href="{{site.pingback_url}}" />
+		<link rel="alternate" type="application/rss+xml" href="{{ bloginfo('rss2_url') }}" title="{{ site.name }} RSS feed" />
+		<link rel="pingback" href="{{ site.pingback_url }}" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 
-		{{wp_head}}
+		{{ wp_head }}
 
 	</head>
 
-	<body class="{{body_class}}">
+	<body class="{{ body_class }}">
 
 		<header class="header">
 
@@ -36,13 +36,13 @@
 				<div class="logo">
 
 					<p class="site-name">
-						<a href="{{site.url}}">
-							{{site.name}}
+						<a href="{{ site.url }}">
+							{{ site.name }}
 						</a>
 					</p>
 
 					<p class="site-description">
-						{{site.description}}
+						{{ site.description }}
 					</p>
 
 				</div>
