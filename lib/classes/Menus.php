@@ -28,11 +28,7 @@ final class Menus
     public function timber($context)
     {
         $context['menus'] = array(
-            'main'               => wp_nav_menu(array(
-                'theme_location' => 'main',
-                'depth'          => 2,
-                'echo'           => false,
-            )),
+            'main'               => new \TimberMenu('main'),
             'footer'             => wp_nav_menu(array(
                 'depth'          => 1,
                 'fallback_cb'    => null,
