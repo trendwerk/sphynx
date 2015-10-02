@@ -28,13 +28,8 @@ final class Menus
     public function timber($context)
     {
         $context['menus'] = array(
-            'main'               => new \TimberMenu('main'),
-            'footer'             => wp_nav_menu(array(
-                'depth'          => 1,
-                'fallback_cb'    => null,
-                'theme_location' => 'footer',
-                'echo'           => false,
-            )),
+            'main'   => new \TimberMenu('main'),
+            'footer' => new \TimberMenu('footer'),
         );
 
         return $context;
