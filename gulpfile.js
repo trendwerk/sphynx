@@ -15,6 +15,7 @@ var gulp = require('gulp'),
     scsslint = require('gulp-scss-lint'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
+    rename = require('gulp-rename'),
     minify = require('gulp-minify-css'),
     cssBase64 = require('gulp-css-base64'),
 
@@ -99,6 +100,7 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
   .pipe(autoprefixer())
 
   // Minify
+  .pipe(rename({suffix: '.min'}))
   .pipe(minify())
 
   // Write sourcemaps
