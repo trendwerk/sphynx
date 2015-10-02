@@ -36,9 +36,14 @@ add_action('init', function () {
 load_theme_textdomain('tp', get_template_directory() . '/assets/languages');
 
 /**
- * Instantiate classes
+ * WordPress defaults
  */
 new Trendwerk\TrendPress\Editor;
 new Trendwerk\TrendPress\Enqueue;
 new Trendwerk\TrendPress\Media;
 new Trendwerk\TrendPress\Menus;
+
+/**
+ * Timber helpers
+ */
+new Trendwerk\TrendPress\TimberHelpers\Menus;

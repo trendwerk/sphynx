@@ -9,10 +9,26 @@
 							&copy; {{__('Copyright', 'tp')}} {{now|date('Y')}} - {{site.name}}
 						</p>
 					</div>
+					
+					{% if menus.footer.get_items %}
+						
+						<nav>
 
-					<nav>
-						{{menus.footer}}
-					</nav>
+							<ul class="menu">
+
+								{% for item in menus.footer.get_items %}
+
+									<li class="{{item.classes|join(' ')}}">
+										<a href="{{item.get_link}}">{{item.title}}</a>
+									</li>
+
+								{% endfor %}
+
+							</ul>
+
+						</nav>
+
+					{% endif %}
 
 				</div>
 
