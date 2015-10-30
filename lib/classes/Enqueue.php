@@ -38,7 +38,7 @@ final class Enqueue
         /**
          * Styles
          */
-        wp_enqueue_style('main', $assets . '/styles/output/main.css');
+        wp_enqueue_style('main', $assets . '/styles/output/main.min.css');
 
         /**
          * jQuery from Google's CDN
