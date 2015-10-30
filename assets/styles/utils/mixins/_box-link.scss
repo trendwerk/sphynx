@@ -1,11 +1,21 @@
 /// Boxed link
-@mixin box-link($background: $light-background, $color: $text-color, $height: $vertical-spacing, $horizontal-padding: 10px, $margin: 5px) {
+///
+/// @param {Map} $args
+@mixin box-link($args: ()) {
+  $declarations: map-merge((
+    'background-color': $light-background,
+    'color': $text-color,
+    'height': $vertical-spacing,
+    'horizontal-padding': 10px,
+    'margin': 5px,
+  ), $args);
+
   @include box((
-  	'background-color': $background,
+    'background-color': map-get($declarations, 'background-color'),
   ));
-  color: $color;
+  color: map-get($declarations, 'color');
   display: inline-block;
-  margin: 0 $margin $margin 0;
-  padding: (($height - $vertical-spacing) / 2) $horizontal-padding;
+  margin: 0 map-get($declarations, 'margin') map-get($declarations, 'margin') 0;
+  padding: ((map-get($declarations, 'height') - $vertical-spacing) / 2) map-get($declarations, 'horizontal-padding');
   text-decoration: none;
 }

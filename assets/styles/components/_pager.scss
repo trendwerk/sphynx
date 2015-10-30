@@ -11,13 +11,12 @@
   .page-numbers,
   .prev,
   .next {
-    $height: 40px;
-    $padding-horizontal: 20px;
-    $margin: 10px;
-
-    @include box-link($light-background, $text-color, $height, $padding-horizontal, $margin);
+    @include box-link((
+      'height': 40px,
+      'horizontal-padding': 20px,
+      'margin': 10px,
+    ));
     @include hover(shade($primary-color, 15%), $white);
-
     font-weight: bold;
 
     &.current,
