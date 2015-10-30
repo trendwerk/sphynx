@@ -23,20 +23,16 @@
   }
 
   .gallery-caption {
+    @include caption;
     background-color: $black;
     bottom: 0;
     color: $white;
-    font-size: 12px;
     left: 0;
-    line-height: 1.3;
     margin: 0;
     max-height: 50%;
     opacity: 0;
-    padding: 2px 8px;
     position: absolute;
-    text-align: left;
     transition: opacity, 400ms, ease-in-out;
-    width: 100%;
 
     &:before {
       box-shadow: 0 -10px 15px $black inset;
