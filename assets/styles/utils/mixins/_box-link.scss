@@ -1,6 +1,8 @@
 /// Boxed link
 @mixin box-link($background: $light-background, $color: $text-color, $height: $vertical-spacing, $horizontal-padding: 10px, $margin: 5px) {
-  @include box($background);
+  @include box((
+  	'background-color': $background,
+  ));
   color: $color;
   display: inline-block;
   margin: 0 $margin $margin 0;

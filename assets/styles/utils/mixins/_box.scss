@@ -1,6 +1,12 @@
 /// Boxed content
-@mixin box($background: $light-background) {
-  background-color: $background;
+///
+/// @param {Map} $args
+@mixin box($args: ()) {
+  $declarations: map-merge((
+    'background-color': $light-background,
+  ), $args);
+
+  background-color: map-get($declarations, 'background-color');
   margin-bottom: $vertical-spacing;
   padding: 30px;
 }
