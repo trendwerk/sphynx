@@ -32,7 +32,7 @@ final class Installer
 
         $changedFiles = self::renameNamespaceInDir($root, $defaultNamespace, $namespace);
 
-        $io->write('<info>Renamed namespace in ' . $changedFiles . ' files</info>');
+        $io->write('Renamed namespace in ' . $changedFiles . ' files');
 
         return 1;
     }
@@ -136,7 +136,7 @@ final class Installer
             file_put_contents($style, $contents);
         }
 
-        $io->write('<info>Your theme is set up!</info>');
+        $io->write('<info>Hooray! You can now start developing something great.</info>');
 
         return 1;
     }
