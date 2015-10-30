@@ -2,7 +2,7 @@
 ///
 /// @param {Map} $args
 @mixin box-link($args: ()) {
-  $declarations: map-merge((
+  $settings: map-merge((
     'background-color': $light-background,
     'color': $text-color,
     'height': $vertical-spacing,
@@ -11,11 +11,11 @@
   ), $args);
 
   @include box((
-    'background-color': map-get($declarations, 'background-color'),
+    'background-color': map-get($settings, 'background-color'),
   ));
-  color: map-get($declarations, 'color');
+  color: map-get($settings, 'color');
   display: inline-block;
-  margin: 0 map-get($declarations, 'margin') map-get($declarations, 'margin') 0;
-  padding: ((map-get($declarations, 'height') - $vertical-spacing) / 2) map-get($declarations, 'horizontal-padding');
+  margin: 0 map-get($settings, 'margin') map-get($settings, 'margin') 0;
+  padding: ((map-get($settings, 'height') - $vertical-spacing) / 2) map-get($settings, 'horizontal-padding');
   text-decoration: none;
 }

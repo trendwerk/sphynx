@@ -2,11 +2,11 @@
 ///
 /// @param {Map} $args
 @mixin box($args: ()) {
-  $declarations: map-merge((
+  $settings: map-merge((
     'background-color': $light-background,
   ), $args);
 
-  background-color: map-get($declarations, 'background-color');
+  background-color: map-get($settings, 'background-color');
   margin-bottom: $vertical-spacing;
   padding: 30px;
 }
