@@ -20,6 +20,15 @@
 			"email": "sjoerd@trendwerk.nl"
 		}
 	],
+	"autoload": {
+		"psr-4": {"Trendwerk\\TrendPress\\": "lib/installer/"}
+	},
+	"scripts": {
+		"post-root-package-install": [
+			"Trendwerk\\TrendPress\\Installer::setNamespace",
+			"Trendwerk\\TrendPress\\Installer::setThemeData"
+		]
+	},
 	"require": {
 		"php": ">=5.4"
 	}
