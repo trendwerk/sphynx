@@ -26,7 +26,7 @@ final class Installer
         $namespace = $io->ask('<question>What namespace would you like to use?</question> [<comment>' . $defaultNamespace . '</comment>] ', $defaultNamespace);
 
         if ($namespace == $defaultNamespace || 0 == strlen($namespace)) {
-            $io->write('<info>Using default namespace</info>');
+            $io->write('Using default namespace');
             return 1;
         }
 
@@ -126,7 +126,7 @@ final class Installer
 
         foreach ($newSettings as $setting => $value) {
             if ($value == $currentSettings[$setting] || 0 == strlen($value)) {
-                $io->write('<info>Using default ' . $setting . '</info>');
+                $io->write('Using default ' . $setting);
             } else {
                 $contents = preg_replace('/(.+)' . $setting . ': (\s+)(.+)/', '$1' . $setting . ': $2' . $value, $contents);
             }
@@ -134,8 +134,9 @@ final class Installer
 
         if ($contents != $_contents) {
             file_put_contents($style, $contents);
-            $io->write('<info>Your theme is set up!</info>');
         }
+
+        $io->write('<info>Your theme is set up!</info>');
 
         return 1;
     }
