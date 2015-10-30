@@ -1,13 +1,16 @@
 /// Hover
 ///
-/// @param {Color} $background
-/// @param {Color} $foreground
-@mixin hover($background, $foreground) {
+/// @param {Map} $args
+@mixin hover($settings) {
+  @if not map-has-key($settings, 'background-color') or not map-has-key($settings, 'color') {
+    @error 'The background-color and color settings are required for hover()';
+  }
+
   &:active,
   &:focus,
   &:hover {
-    background-color: $background;
-    color: $foreground;
+    background-color: map-get($settings, 'background-color');
+    color: map-get($settings, 'color');
     outline: none;
     text-decoration: none;
   }

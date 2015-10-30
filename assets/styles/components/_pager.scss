@@ -16,12 +16,18 @@
       'horizontal-padding': 20px,
       'margin': 10px,
     ));
-    @include hover(shade($primary-color, 15%), $white);
+    @include hover((
+      'background-color': shade($primary-color, 15%),
+      'color': $white,
+    ));
     font-weight: bold;
 
     &.current,
     &.dots {
-      @include hover(auto, inherit);
+      @include hover((
+        'background-color': auto,
+        'color': inherit,
+      ));
       background-color: tint($light-background, 75%);
     }
   }

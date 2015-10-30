@@ -7,7 +7,10 @@
   	'horizontal-padding': 35px,
   	'margin': 10px,
   ));
-  @include hover(shade($primary-color, 15%), $white);
+  @include hover((
+    'background-color': shade($primary-color, 15%),
+    'color': $white
+  ));
   font-weight: bold;
   text-transform: uppercase;
 }
