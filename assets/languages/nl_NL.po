@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-10 13:04+0100\n"
-"PO-Revision-Date: 2015-07-10 13:04+0100\n"
-"Last-Translator: Harold <harold@trendwerk.nl>\n"
+"POT-Creation-Date: 2015-11-27 14:29+0100\n"
+"PO-Revision-Date: 2015-11-27 14:29+0100\n"
+"Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -12,44 +12,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:2c,1\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.8.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../../comments.php:17 ../../assets/includes/template-tags.php:22
-#: ../includes/template-tags.php:22
+#: ../../comments.php:17 ../../templates/partials/pagination.twig:27
 msgid "Next"
 msgstr "Volgende"
 
-#: ../../comments.php:18 ../../assets/includes/template-tags.php:21
-#: ../includes/template-tags.php:21
+#: ../../comments.php:18 ../../templates/partials/pagination.twig:5
 msgid "Previous"
 msgstr "Vorige"
 
-#: ../../assets/includes/Editor.php:32 ../includes/Editor.php:32
+#: ../../lib/classes/Editor.php:32
 msgid "Button"
 msgstr "Knop"
 
-#: ../../assets/includes/Editor.php:37 ../includes/Editor.php:37
+#: ../../lib/classes/Editor.php:37
 msgid "Secondary button"
 msgstr "Secondaire knop"
 
-#: ../../assets/includes/Editor.php:42 ../includes/Editor.php:42
-msgid "More link"
-msgstr "Lees meer link"
+#: ../../lib/classes/Editor.php:42 ../../templates/partials/loop-post.twig:19
+#: ../../templates/partials/loop-search.twig:9
+msgid "Read more"
+msgstr "Lees verder"
 
-#: ../../assets/includes/Menus.php:21 ../includes/Menus.php:21
+#: ../../lib/classes/Menus.php:20
 msgid "Main navigation"
 msgstr "Hoofdnavigatie"
 
-#: ../../assets/includes/Menus.php:22 ../includes/Menus.php:22
+#: ../../lib/classes/Menus.php:21
 msgid "Footer"
 msgstr "Footer"
-
-#: ../../assets/includes/Menus.php:23 ../includes/Menus.php:23
-msgid "Sitemap"
-msgstr "Sitemap"
 
 #: ../../templates/404.twig:6
 msgid "The page you are looking for doesn't exist."
@@ -63,13 +58,34 @@ msgstr ""
 "Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of "
 "nooit heeft bestaan."
 
-#: ../../templates/index.twig:22 ../../templates/base/base.twig:10
+#: ../../templates/base/base.twig:8 ../../templates/index.twig:22
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
+#: ../../templates/base/footer.twig:9
+msgid "Copyright"
+msgstr "Copyright"
+
+#: ../../templates/partials/post-meta.twig:2
+msgid "Posted on"
+msgstr "Geplaatst op"
+
+#: ../../templates/partials/post-meta.twig:3
+msgid "by"
+msgstr "door"
+
+#: ../../templates/partials/post-meta.twig:6
+msgid "in the category"
+msgstr "in de categorie"
+
+#: ../../templates/partials/tags.twig:6
+msgid "Tags"
+msgstr "Tags"
+
 #: ../../templates/search.twig:6
-msgid "Search Results for: %1$s"
-msgstr "Zoek resultaten voor:  %1$s"
+#, fuzzy
+msgid "Search results for: %1$s"
+msgstr "Zoekresultaten voor:  %1$s"
 
 #: ../../templates/search.twig:20
 msgid ""
@@ -81,26 +97,11 @@ msgstr ""
 "opgeleverd. Controleer of alle woorden correct gespeld zijn of probeer een "
 "andere zoekterm."
 
-#: ../../templates/base/footer.twig:9
-msgid "Copyright"
-msgstr "Copyright"
+#~ msgid "More link"
+#~ msgstr "Lees meer link"
 
-#: ../../templates/partials/loop-post.twig:23
-#: ../../templates/partials/loop-search.twig:12
-msgid "Read more"
-msgstr "Lees verder"
-
-#: ../../templates/partials/post-meta.twig:2
-msgid "Posted on"
-msgstr "Geplaatst op"
-
-#: ../../templates/partials/post-meta.twig:3
-msgid "by"
-msgstr "door"
-
-#: ../../templates/partials/post-meta.twig:4
-msgid "in the category"
-msgstr "in de categorie"
+#~ msgid "Sitemap"
+#~ msgstr "Sitemap"
 
 #~ msgid ""
 #~ "You might want to check out our <a href=\"%1$s\">sitemap</a> or use the "
