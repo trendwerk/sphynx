@@ -9,7 +9,7 @@
   ));
   @include hover((
     'background-color': shade($primary-color, 15%),
-    'color': $white
+    'color': $white,
   ));
   font-weight: bold;
   text-transform: uppercase;
