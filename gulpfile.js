@@ -13,7 +13,6 @@ var gulp = require('gulp'),
     // Sass
     scsslint = require('gulp-scss-lint'),
     sass = require('gulp-sass'),
-    rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     cssBase64 = require('gulp-css-base64'),
 
@@ -91,9 +90,6 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
 
   // Don't stop watch on error (just log it)
   .pipe(sass().on('error', sass.logError))
-
-  // Rename
-  .pipe(rename({suffix: '.min'}))
 
   // Minify, prefix
   .pipe(cssnano({
