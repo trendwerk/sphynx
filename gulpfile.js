@@ -42,6 +42,7 @@ var files = {
   twig: ['templates/**/*.twig'],
   concat: {
     coffee: [
+      'bower_components/jquery/dist/jquery.js',
       'bower_components/fancybox/source/jquery.fancybox.js'
     ]
   }
