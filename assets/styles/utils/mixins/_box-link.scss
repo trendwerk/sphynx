@@ -13,9 +13,11 @@
   @include box((
     'background-color': map-get($settings, 'background-color'),
   ));
+  border-radius: 3px;
   color: map-get($settings, 'color');
   display: inline-block;
   margin: 0 map-get($settings, 'margin') map-get($settings, 'margin') 0;
   padding: ((map-get($settings, 'height') - $vertical-spacing) / 2) map-get($settings, 'horizontal-padding');
+  text-align: center;
   text-decoration: none;
 }
