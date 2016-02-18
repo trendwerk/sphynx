@@ -4,6 +4,8 @@
 
 	{% if post.terms('category') %}
 		{{ __('in the category', 'tp') }}
-		<a href="{{ (post.terms('category')|first).link }}">{{ post.terms('category')|first }}</a>
+		<a href="{{ (post.terms('category')|first).link }}">
+			{{- post.terms('category')|first -}}
+		</a>
 	{% endif %}
 </p>

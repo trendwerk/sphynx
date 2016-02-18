@@ -9,7 +9,7 @@
 		{% for term in post.terms('tags') %}
 
 			<a class="tag" href="{{ term.link }}">
-				{{ term.name }}
+				{{- term.name -}}
 			</a>
 
 		{% endfor %}
