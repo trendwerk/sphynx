@@ -15,7 +15,7 @@
     margin: 5px -10px 0 0;
     padding: 10px;
 
-    @include respond-to('huge') {
+    @include respond-to('large') {
       display: none;
     }
   }
