@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     beep = require('beepbeep'),
     colors = require('colors'),
     plumber = require('gulp-plumber'),
-    sourcemaps = require('gulp-sourcemaps'),
     livereload = require('gulp-livereload'),
 
     // Sass
@@ -36,8 +35,7 @@ var gulp = require('gulp'),
  */
 var files = {
   sass: 'assets/styles/**/*.scss',
-  coffee: ['assets/scripts/**/*.coffee', '!assets/scripts/defer.coffee'],
-  defer: 'assets/scripts/defer.coffee',
+  coffee: ['assets/scripts/**/*.coffee'],
   php: ['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'],
   twig: ['templates/**/*.twig'],
   concat: {
@@ -92,9 +90,6 @@ gulp.task('base64', ['scsslint'], function() {
 gulp.task('sass', ['scsslint', 'base64'], function() {
   return gulp.src(files.sass)
 
-  // Init sourcemaps
-  .pipe(sourcemaps.init())
-
   // Don't stop watch on error (just log it)
   .pipe(sass().on('error', sass.logError))
 
@@ -104,9 +99,6 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
   // Minify
   .pipe(rename({suffix: '.min'}))
   .pipe(minify())
-
-  // Write sourcemaps
-  .pipe(sourcemaps.write('.'))
 
   // Write output
   .pipe(gulp.dest('assets/styles/output/'))
@@ -137,9 +129,6 @@ gulp.task('coffeelint', function() {
 gulp.task('coffee', ['coffeelint'], function() {
   gulp.src(files.coffee)
 
-  // Init sourcemaps
-  .pipe(sourcemaps.init())
-
   // Compile
   .pipe(coffee({bare: true}))
 
@@ -150,32 +139,6 @@ gulp.task('coffee', ['coffeelint'], function() {
 
   // Uglify
   .pipe(uglify())
-
-  // Write sourcemaps
-  .pipe(sourcemaps.write('.'))
-
-  // Write output
-  .pipe(gulp.dest('assets/scripts/output/'))
-
-  // Reload
-  .pipe(livereload())
-});
-
-// Compile defer
-gulp.task('defer', ['coffeelint'], function() {
-  gulp.src('assets/scripts/defer.coffee')
-
-  // Init sourcemaps
-  .pipe(sourcemaps.init())
-
-  // Compile
-  .pipe(coffee({bare: true}))
-
-  // Uglify
-  .pipe(uglify())
-
-  // Write sourcemaps
-  .pipe(sourcemaps.write('.'))
 
   // Write output
   .pipe(gulp.dest('assets/scripts/output/'))
@@ -263,7 +226,6 @@ gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
   gulp.watch(files.sass, ['base64', 'scsslint', 'sass']);
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
-  gulp.watch(files.defer, ['defer']);
   gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
   livereload.listen();
