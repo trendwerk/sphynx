@@ -44,7 +44,7 @@ final class Installer
      * @param string $fromNamespace
      * @param string $toNamespace
      */
-    public static function renameNamespaceInDir($dir, $fromNamespace, $toNamespace)
+    private static function renameNamespaceInDir($dir, $fromNamespace, $toNamespace)
     {
         $changedFiles = 0;
         $files = scandir($dir);
@@ -81,7 +81,7 @@ final class Installer
      * @param string $fromNamespace
      * @param string $toNamespace
      */
-    public static function renameNamespaceInFile($file, $fromNamespace, $toNamespace)
+    private static function renameNamespaceInFile($file, $fromNamespace, $toNamespace)
     {
         $_contents = $contents = file_get_contents($file);
         $contents = str_replace($fromNamespace, $toNamespace, $contents);
