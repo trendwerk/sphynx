@@ -36,8 +36,7 @@ var gulp = require('gulp'),
  */
 var files = {
   sass: 'assets/styles/**/*.scss',
-  coffee: ['assets/scripts/**/*.coffee', '!assets/scripts/defer.coffee'],
-  defer: 'assets/scripts/defer.coffee',
+  coffee: ['assets/scripts/**/*.coffee'],
   php: ['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'],
   twig: ['templates/**/*.twig'],
   concat: {
@@ -160,29 +159,6 @@ gulp.task('coffee', ['coffeelint'], function() {
   .pipe(livereload())
 });
 
-// Compile defer
-gulp.task('defer', ['coffeelint'], function() {
-  gulp.src('assets/scripts/defer.coffee')
-
-  // Init sourcemaps
-  .pipe(sourcemaps.init())
-
-  // Compile
-  .pipe(coffee({bare: true}))
-
-  // Uglify
-  .pipe(uglify())
-
-  // Write sourcemaps
-  .pipe(sourcemaps.write('.'))
-
-  // Write output
-  .pipe(gulp.dest('assets/scripts/output/'))
-
-  // Reload
-  .pipe(livereload())
-});
-
 /**
  * PHP CodeSniffer (PSR)
  */
@@ -262,7 +238,6 @@ gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
   gulp.watch(files.sass, ['base64', 'scsslint', 'sass']);
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
-  gulp.watch(files.defer, ['defer']);
   gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
   livereload.listen();

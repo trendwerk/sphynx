@@ -1,2 +1,0 @@
-var defer;defer=function(){var e;return e=document.createElement("script"),e.src=Assets.scripts+"/all.js",document.body.appendChild(e)},window.addEventListener?window.addEventListener("load",defer):window.attachEvent&&window.attachEvent("onload",defer);
-//# sourceMappingURL=defer.js.map

@@ -29,11 +29,7 @@ final class Enqueue
         /**
          * Scripts
          */
-        wp_enqueue_script('defer', $assets . '/scripts/output/defer.js', array('jquery'), false, true);
-
-        wp_localize_script('defer', 'Assets', array(
-            'scripts' => $assets . '/scripts/output',
-        ));
+        wp_enqueue_script('main', $assets . '/scripts/output/all.js', array('jquery'), false, true);
 
         /**
          * Styles
