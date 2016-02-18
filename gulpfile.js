@@ -13,9 +13,8 @@ var gulp = require('gulp'),
     // Sass
     scsslint = require('gulp-scss-lint'),
     sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    minify = require('gulp-minify-css'),
+    cssnano = require('gulp-cssnano'),
     cssBase64 = require('gulp-css-base64'),
 
     // Coffee
@@ -93,12 +92,16 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
   // Don't stop watch on error (just log it)
   .pipe(sass().on('error', sass.logError))
 
-  // Autoprefixer
-  .pipe(autoprefixer())
-
-  // Minify
+  // Rename
   .pipe(rename({suffix: '.min'}))
-  .pipe(minify())
+
+  // Minify, prefix
+  .pipe(cssnano({
+    autoprefixer: {
+      add: true,
+      browsers: ['> 1%']
+    },
+  }))
 
   // Write output
   .pipe(gulp.dest('assets/styles/output/'))
