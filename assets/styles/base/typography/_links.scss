@@ -8,19 +8,19 @@ a {
     text-decoration: underline;
   }
 
-  &.read-more:after,
-  &.prev:before,
-  &.next:after {
+  &.read-more::after,
+  &.prev::before,
+  &.next::after {
     display: inline-block;
   }
 
-  &.prev:before {
+  &.prev::before {
     content: '«';
     padding-right: 5px;
   }
 
-  &.read-more:after,
-  &.next:after {
+  &.read-more::after,
+  &.next::after {
     content: '»';
     padding-left: 5px;
   }

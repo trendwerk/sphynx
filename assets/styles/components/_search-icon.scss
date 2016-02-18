@@ -6,7 +6,7 @@
   position: relative;
   width: 16px;
 
-  &:after {
+  &::after {
     background-color: $white;
     content: '';
     height: 3px;

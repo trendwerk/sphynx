@@ -80,7 +80,7 @@
 
       /* Hide arrow list items with children */
 
-      a:after {
+      a::after {
         display: none;
       }
     }

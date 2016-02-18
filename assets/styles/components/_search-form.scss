@@ -36,7 +36,7 @@
     height: 12px;
     width: 12px;
 
-    &:after {
+    &::after {
       background-color: $text-light;
       height: 2px;
       right: -5px;

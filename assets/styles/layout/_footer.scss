@@ -51,13 +51,13 @@
       display: inline;
     }
 
-    li:after {
+    li::after {
       color: $white;
       content: '|';
       padding: 0 5px;
     }
 
-    li:last-child:after {
+    li:last-child::after {
       display: none;
     }
   }

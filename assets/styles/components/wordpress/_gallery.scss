@@ -34,7 +34,7 @@
     position: absolute;
     transition: opacity, 400ms, ease-in-out;
 
-    &:before {
+    &::before {
       box-shadow: 0 -10px 15px $black inset;
       content: '';
       height: 100%;

@@ -12,6 +12,7 @@
       @if map-has-key($fs-breakpoints, $fs-breakpoint) {
         $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
       }
+
       @media screen and (min-width: $fs-breakpoint) {
         font-size: $fs-font-size;
       }
