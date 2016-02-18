@@ -1,6 +1,7 @@
 .header {
   @include full-width();
   background-color: $primary-color;
+  line-height: 1.25;
   padding: 20px 0;
   text-align: center;
 

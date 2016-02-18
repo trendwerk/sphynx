@@ -58,7 +58,7 @@ button {
 
 label {
   float: left;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: ($vertical-spacing / 2);
   width: 100%;
 
   @include respond-to('medium') {
