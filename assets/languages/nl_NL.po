@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-27 14:32+0100\n"
-"PO-Revision-Date: 2015-11-27 14:33+0100\n"
+"POT-Creation-Date: 2016-02-18 16:52+0100\n"
+"PO-Revision-Date: 2016-02-18 16:52+0100\n"
 "Last-Translator: Sjoerd Boerrigter <sjoerd@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -17,13 +17,17 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../../comments.php:17 ../../templates/partials/pagination.twig:27
+#: ../../comments.php:17 ../../templates/partials/pagination.twig:32
 msgid "Next"
 msgstr "Volgende"
 
-#: ../../comments.php:18 ../../templates/partials/pagination.twig:5
+#: ../../comments.php:18 ../../templates/partials/pagination.twig:6
 msgid "Previous"
 msgstr "Vorige"
+
+#: ../../index.php:8
+msgid "Search results for:"
+msgstr "Zoek resultaten voor:"
 
 #: ../../lib/classes/Editor.php:32
 msgid "Button"
@@ -34,7 +38,6 @@ msgid "Secondary button"
 msgstr "Secondaire knop"
 
 #: ../../lib/classes/Editor.php:42 ../../templates/partials/loop-post.twig:19
-#: ../../templates/partials/loop-search.twig:9
 msgid "Read more"
 msgstr "Lees verder"
 
@@ -47,16 +50,22 @@ msgid "Footer"
 msgstr "Footer"
 
 #: ../../templates/404.twig:6
-msgid "The page you are looking for doesn't exist."
-msgstr "De pagina die je zoekt bestaat niet."
+msgid "Page doesn't exist"
+msgstr "Pagina bestaat niet"
 
 #: ../../templates/404.twig:10
 msgid ""
-"Seems like the page you were looking for might have been moved or just "
-"didn't exist in the first place."
+"The page you are looking for doesn`t exist. Maybe the page has been moved or "
+"didn't or never existed. You might want to check the URL for typos, or use "
+"the menu to search for the page you are looking for."
 msgstr ""
-"Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of "
-"nooit heeft bestaan."
+"De pagina die je zoekt bestaat niet. Het zou kunnen dat de pagina is "
+"verplaatst of nooit heeft bestaan. Je kunt de URL controlleren op typfouten, "
+"of het menu gebruiken om de website te doorzoeken."
+
+#: ../../templates/404.twig:15
+msgid "To the homepage"
+msgstr "Naar de homepagina"
 
 #: ../../templates/base/base.twig:8 ../../templates/index.twig:22
 msgid "No results found."
@@ -82,19 +91,24 @@ msgstr "in de categorie"
 msgid "Tags"
 msgstr "Tags"
 
-#: ../../templates/search.twig:6
-msgid "Search results for: %1$s"
-msgstr "Zoekresultaten voor: %1$s"
+#~ msgid "The page you are looking for doesn't exist."
+#~ msgstr "De pagina die je zoekt bestaat niet."
 
-#: ../../templates/search.twig:20
-msgid ""
-"Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
-"Please make sure all your words are spelled correctly or try different "
-"keywords."
-msgstr ""
-"Je zoekopdracht voor <em>&quot;%1$s&quot;</em> heeft geen resultaten "
-"opgeleverd. Controleer of alle woorden correct gespeld zijn of probeer een "
-"andere zoekterm."
+#~ msgid ""
+#~ "Seems like the page you were looking for might have been moved or just "
+#~ "didn't exist in the first place."
+#~ msgstr ""
+#~ "Het lijkt er op dat de pagina waarnaar je op zoek bent is verplaatst of "
+#~ "nooit heeft bestaan."
+
+#~ msgid ""
+#~ "Your search for <em>&quot;%1$s&quot;</em> did not match any documents. "
+#~ "Please make sure all your words are spelled correctly or try different "
+#~ "keywords."
+#~ msgstr ""
+#~ "Je zoekopdracht voor <em>&quot;%1$s&quot;</em> heeft geen resultaten "
+#~ "opgeleverd. Controleer of alle woorden correct gespeld zijn of probeer "
+#~ "een andere zoekterm."
 
 #~ msgid "More link"
 #~ msgstr "Lees meer link"

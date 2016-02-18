@@ -3,13 +3,17 @@
 {% block content %}
 
 	<h1>
-		{{ __('The page you are looking for doesn\'t exist.', 'tp') }}
+		{{ __('Page doesn\'t exist', 'tp') }}
 	</h1>
 
 	<p>
-		{{ __('Seems like the page you were looking for might have been moved or just didn\'t exist in the first place.', 'tp') }}
+		{{ __('The page you are looking for doesn`t exist. Maybe the page has been moved or didn\'t or never existed. You might want to check the URL for typos, or use the menu to search for the page you are looking for.', 'tp') }}
 	</p>
 
-	{% include 'partials/searchform.twig' %}
+	<p>
+		<a class="button" href="{{ site.url }}">
+			{{ __('To the homepage', 'tp') }}
+		</a>
+	</p>
 
 {% endblock %}

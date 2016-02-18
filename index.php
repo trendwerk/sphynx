@@ -4,6 +4,8 @@ $context['posts'] = Timber::get_posts();
 
 if (is_archive()) {
     $context['title'] = get_the_archive_title();
+} elseif (is_search()) {
+    $context['title'] = __('Search results for:', 'tp') . ' ' . get_search_query();
 } else {
     $context['title'] = get_the_title(get_option('page_for_posts'));
 }
