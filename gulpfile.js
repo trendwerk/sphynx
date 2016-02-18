@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     beep = require('beepbeep'),
     colors = require('colors'),
     plumber = require('gulp-plumber'),
-    sourcemaps = require('gulp-sourcemaps'),
     livereload = require('gulp-livereload'),
 
     // Sass
@@ -90,9 +89,6 @@ gulp.task('base64', ['scsslint'], function() {
 gulp.task('sass', ['scsslint', 'base64'], function() {
   return gulp.src(files.sass)
 
-  // Init sourcemaps
-  .pipe(sourcemaps.init())
-
   // Don't stop watch on error (just log it)
   .pipe(sass().on('error', sass.logError))
 
@@ -102,9 +98,6 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
   // Minify
   .pipe(rename({suffix: '.min'}))
   .pipe(minify())
-
-  // Write sourcemaps
-  .pipe(sourcemaps.write('.'))
 
   // Write output
   .pipe(gulp.dest('assets/styles/output/'))
@@ -135,9 +128,6 @@ gulp.task('coffeelint', function() {
 gulp.task('coffee', ['coffeelint'], function() {
   gulp.src(files.coffee)
 
-  // Init sourcemaps
-  .pipe(sourcemaps.init())
-
   // Compile
   .pipe(coffee({bare: true}))
 
@@ -148,9 +138,6 @@ gulp.task('coffee', ['coffeelint'], function() {
 
   // Uglify
   .pipe(uglify())
-
-  // Write sourcemaps
-  .pipe(sourcemaps.write('.'))
 
   // Write output
   .pipe(gulp.dest('assets/scripts/output/'))
