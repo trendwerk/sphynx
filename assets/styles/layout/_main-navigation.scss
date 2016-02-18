@@ -2,23 +2,30 @@
   @include full-width();
   background-color: $primary-color;
   display: none;
+  float: right;
   margin: 0;
-  padding: 0 0 20px;
 
   /* Desktop navigation */
 
-  @include respond-to('large') {
+  @include respond-to('huge') {
+    clear: none;
     display: block;
     padding-bottom: 0;
+    width: auto;
 
     /* Top level */
 
     li {
+      border-radius: 3px;
       float: left;
+
+      &.menu-item-has-children {
+        border-radius: 3px 3px 0 0;
+      }
     }
 
     li:hover {
-      background-color: $black;
+      background-color: shade($primary-color, 25%);
 
       /* Display drop-down on hover */
 
@@ -30,11 +37,8 @@
 
     a {
       display: block;
-      padding: 10px 15px;
-
-      &:hover {
-        text-decoration: none;
-      }
+      line-height: 30px;
+      padding: 10px 20px;
     }
 
     /* Add arrow list items with children */
@@ -56,14 +60,15 @@
     .current-menu-ancestor > a,
     .current-menu-parent > a,
     .current-menu-item > a, {
-      background-color: $black;
+      text-decoration: underline;
     }
 
     /* Drop-down */
 
     .children,
     .sub-menu {
-      background-color: $black;
+      background-color: shade($primary-color, 25%);
+      border-radius: 0 3px 3px;
       display: none;
       padding: 10px 0;
       position: absolute;
@@ -71,6 +76,7 @@
 
       li {
         clear: both;
+        line-height: 2;
         width: 100%;
       }
 
@@ -99,13 +105,17 @@
     font-weight: 400;
   }
 
-  ul ul {
-    padding: 5px 10px;
-  }
-
   a {
     color: $white;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
     text-decoration: none;
+    width: 100%;
+
+    @include respond-to('huge') {
+      text-align: left;
+    }
 
     &:hover {
       text-decoration: underline;

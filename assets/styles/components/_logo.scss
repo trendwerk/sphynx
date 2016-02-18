@@ -3,12 +3,6 @@
   font-size: 28px;
   font-family: $heading-font;
   font-weight: 700;
-  margin: 5px 0 0 0 0;
-
-  @include respond-to('large') {
-    display: block;
-    float: left;
-    margin-top: 0;
-    text-align: left;
-  }
+  line-height: 50px;
+  margin: 0 0 0 0 0;
 }

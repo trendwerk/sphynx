@@ -21,9 +21,9 @@
 
 			<div class="wrapper">
 
-				<div class="mobile-search" data-toggle=".header-search">
-					<div class="search-icon"></div>
-				</div>
+				<a class="logo" href="{{ site.url }}">
+					{{- site.name -}}
+				</a>
 
 				<div class="mobile-navigation" data-toggle=".main-navigation">
 					<div class="navigation-icon">
@@ -33,12 +33,8 @@
 					</div>
 				</div>
 
-				<a class="logo" href="{{ site.url }}">
-					{{- site.name -}}
-				</a>
+				{% include 'partials/main-navigation.twig' %}
 
 			</div>
 
 		</header>
-
-		{% include 'partials/main-navigation.twig' %}
