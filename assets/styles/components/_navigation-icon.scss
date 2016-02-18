@@ -1,12 +1,10 @@
 .navigation-icon {
   height: 19px;
-  margin: 3px 0;
   position: relative;
   width: 24px;
 
   .line {
     background-color: $white;
-    border-radius: 1.5px;
     height: 3px;
     position: absolute;
     transition: transform 0.2s ease-out;
