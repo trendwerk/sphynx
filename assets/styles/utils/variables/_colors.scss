@@ -1,24 +1,31 @@
-$light-yellow: hsl(47, 100%, 85%);
-$red: hsl(0, 58%, 52%);
-$blue: hsl(213, 76%, 47%);
+/**
+ * Color definitions
+ */
+$green: rgb(0, 179, 149);;
+$red: rgb(255, 109, 79);;
+
+$light-yellow: rgb(47, 100%, 85%);
 
 $black: black;
-$dark-gray: hsl(0, 0%, 20%);
-$medium-gray: hsl(0, 0%, 40%);
-$gray: hsl(0, 0%, 60%);
-$light-gray: hsl(0, 0%, 90%);
+$extra-dark-grey: rgb(51, 51, 51);
+$dark-grey: rgb(102, 102, 102);
+$medium-grey: rgb(153, 153, 153);
+$light-grey: rgb(204, 204, 204);
+$extra-light-grey: rgb(238, 238, 238);
 $white: white;
 
-$light-background: $light-gray;
-$border-color: $light-gray;
-$body-background: $white;
+/**
+ * Color variables
+ */
+$primary-color: $extra-dark-grey;
+$secondary-color: $dark-grey;
 
-$primary-color: $dark-gray;
-$secondary-color: $gray;
+$heading-color: $extra-dark-grey;
+$text-color: $dark-grey;
+$text-light: $medium-grey;
+$link-color: $primary-color;
 
-$heading-color: $dark-gray;
-$link-color: $blue;
-$text-color: $medium-gray;
-$text-light: $gray;
+$light-background: $extra-light-grey;
+$border-color: $light-grey;
 
 $code-color: $light-yellow;

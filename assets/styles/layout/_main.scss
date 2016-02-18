@@ -3,7 +3,7 @@ main {
   padding: $vertical-spacing 0 ($vertical-spacing / 2);
 
   @include respond-to('medium') {
-    background-color: $body-background;
+    background-color: $white;
     padding: ($vertical-spacing * 2) 0 $vertical-spacing;
 
     .wrapper {

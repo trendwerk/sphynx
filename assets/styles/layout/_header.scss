@@ -6,7 +6,7 @@
   text-align: center;
 
   @include respond-to('large') {
-    background-color: $body-background;
+    background-color: $white;
   }
 
   a {
