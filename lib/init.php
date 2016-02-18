@@ -19,7 +19,7 @@ add_theme_support('title-tag');
 /**
  * Add HTML5 theme support
  */
-add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
+add_theme_support('html5', array('comment-list', 'comment-form', 'gallery', 'caption'));
 
 /**
  * Add theme support for featured images for posts

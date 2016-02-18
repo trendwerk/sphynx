@@ -1,6 +1,4 @@
 $ ->
-
-  # Toggle navigation search
   $( '.mobile-navigation' ).click ->
     $( '.navigation-icon', this ).toggleClass( 'active' )
 
