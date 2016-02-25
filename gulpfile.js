@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 
 /**
  * Require dependencies
@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
 
     // Sass
-    scsslint = require('gulp-scss-lint'),
+    scssLint = require('gulp-scss-lint'),
     sass = require('gulp-sass'),
     cssnano = require('gulp-cssnano'),
     cssBase64 = require('gulp-css-base64'),
@@ -20,7 +20,7 @@ var gulp = require('gulp'),
     coffeelint = require('gulp-coffeelint'),
     coffee = require('gulp-coffee'),
     concat = require('gulp-concat'),
-    addsrc = require('gulp-add-src'),
+    addSrc = require('gulp-add-src'),
     uglify = require('gulp-uglify'),
 
     // PHP
@@ -32,9 +32,13 @@ var gulp = require('gulp'),
  * Concat contains extra files to concat
  */
 var files = {
-  sass: 'assets/styles/**/*.scss',
+  sass: ['assets/styles/**/*.scss'],
   coffee: ['assets/scripts/**/*.coffee'],
-  php: ['**/*.php', '!vendor/**/*.*', '!node_modules/**/*.*'],
+  php: [
+    '**/*.php',
+    '!vendor/**/*.*',
+    '!node_modules/**/*.*'
+  ],
   twig: ['templates/**/*.twig'],
   concat: {
     coffee: [
@@ -51,23 +55,25 @@ var gulp_src = gulp.src;
 
 gulp.src = function() {
   return gulp_src.apply(gulp, arguments)
+
   .pipe(plumber(function(error) {
     beep();
   }));
-}
+};
 
 /**
  * Lint Sass
  */
-gulp.task('scsslint', function(cb) {
+gulp.task('scsslint', function() {
   return gulp.src(files.sass)
+
   // Lint
-  .pipe(scsslint({
+  .pipe(scssLint({
     'config': 'config/lint/scss.yml'
   }))
 
   // Make the reporter fail task on error
-  .pipe(scsslint.failReporter())
+  .pipe(scssLint.failReporter());
 });
 
 /**
@@ -75,11 +81,12 @@ gulp.task('scsslint', function(cb) {
  */
 gulp.task('base64', ['scsslint'], function() {
   return gulp.src('bower_components/fancybox/source/*.css')
+
   // Base64 images
   .pipe(cssBase64())
 
   // Write output
-  .pipe(gulp.dest('bower_components/fancybox/source/'))
+  .pipe(gulp.dest('bower_components/fancybox/source/'));
 });
 
 /**
@@ -103,7 +110,7 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
   .pipe(gulp.dest('assets/styles/output/'))
 
   // Reload
-  .pipe(livereload())
+  .pipe(livereload());
 });
 
 /**
@@ -119,19 +126,19 @@ gulp.task('coffeelint', function() {
   .pipe(coffeelint.reporter())
 
   // Make reporter fail task on error
-  .pipe(coffeelint.reporter('fail'))
+  .pipe(coffeelint.reporter('fail'));
 });
 
 /**
  * Compile CoffeeScript
  */
 gulp.task('coffee', ['coffeelint'], function() {
-  gulp.src(files.coffee)
+  return gulp.src(files.coffee)
 
   // Compile
   .pipe(coffee({bare: true}))
 
-  .pipe(addsrc.prepend(files.concat.coffee))
+  .pipe(addSrc.prepend(files.concat.coffee))
 
   // Concat
   .pipe(concat('all.js'))
@@ -143,14 +150,14 @@ gulp.task('coffee', ['coffeelint'], function() {
   .pipe(gulp.dest('assets/scripts/output/'))
 
   // Reload
-  .pipe(livereload())
+  .pipe(livereload());
 });
 
 /**
  * PHP CodeSniffer (PSR)
  */
 gulp.task('phpcs', function() {
-  gulp.src(files.php)
+  return gulp.src(files.php)
 
   // Use cache to filter out unmodified files
   .pipe(cache('phpcs'))
@@ -167,20 +174,20 @@ gulp.task('phpcs', function() {
   .pipe(phpcs.reporter('fail'))
 
   // Reload
-  .pipe(livereload())
+  .pipe(livereload());
 });
 
 /**
  * Twig: Livereload
  */
 gulp.task('twig', function() {
-  gulp.src(files.twig)
+  return gulp.src(files.twig)
 
   // Use cache to filter out unmodified files
   .pipe(cache('twig'))
 
   // Reload
-  .pipe(livereload())
+  .pipe(livereload());
 });
 
 /**
@@ -216,16 +223,18 @@ var welcomeMessage = [
   ' \\__|  \\__|\\__|  \\__|\\________|\\________|\\______/',
   '',
   ''
-].join("\n");
+].join('\n');
 
 /**
  * Watch
  */
 gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
+
   gulp.watch(files.sass, ['base64', 'scsslint', 'sass']);
   gulp.watch(files.coffee, ['coffeelint', 'coffee']);
   gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
+
   livereload.listen();
 });
