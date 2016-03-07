@@ -1,22 +1,10 @@
 .header {
   @include full-width();
   background-color: $primary-color;
-  line-height: 1.25;
   padding: 15px 0;
 
   a {
     color: $white;
     text-decoration: none;
-  }
-
-  .mobile-navigation {
-    cursor: pointer;
-    float: right;
-    margin: 5px -10px 0 0;
-    padding: 10px;
-
-    @include respond-to('large') {
-      display: none;
-    }
   }
 }
