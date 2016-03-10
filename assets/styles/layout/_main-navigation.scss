@@ -1,7 +1,6 @@
 .main-navigation {
   @include respond-to('large') {
     float: right;
-    width: auto;
   }
 
   .menu {
@@ -14,11 +13,11 @@
     @include respond-to('large') {
       border: 0;
       float: left;
-      margin: 0 5px 0 0;
+      margin-left: 5px;
     }
 
     &:last-child {
-      border-bottom: 0;
+      border: 0;
     }
 
     a {
@@ -31,7 +30,7 @@
     &.current-menu-item a,
     &.current-menu-parent a,
     a:hover {
-      background-color: shade($primary-color, 20%);
+      background: shade($primary-color, 20%);
     }
   }
 }
