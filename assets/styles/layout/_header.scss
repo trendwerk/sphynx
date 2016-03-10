@@ -1,7 +1,15 @@
 .header {
+  $padding: 15px;
+
   @include full-width();
+  @include toggle-navigation((
+    'item': '.menu-item',
+    'height': ($line-height-header + ($padding * 2)),
+    'menu': '.main-navigation',
+    'until': map-get($breakpoints, 'large'),
+  ));
   background-color: $primary-color;
-  padding: 15px 0;
+  padding: $padding 0;
 
   a {
     color: $white;

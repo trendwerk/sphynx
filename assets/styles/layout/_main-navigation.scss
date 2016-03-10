@@ -1,6 +1,14 @@
 .main-navigation {
+  padding: 0 $horizontal-spacing;
+  width: 100%;
+
+  @include respond-to('medium') {
+    padding: 0 ($horizontal-spacing * 2);
+  }
+
   @include respond-to('large') {
     float: right;
+    width: auto;
   }
 
   .menu {
