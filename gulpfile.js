@@ -44,7 +44,7 @@ var files = {
     coffee: [
       'bower_components/jquery/dist/jquery.js',
       'bower_components/fancybox/source/jquery.fancybox.js',
-      'bower_components/toggle-navigation/toggle-navigation.js'
+      'bower_components/toggle-navigation/src/toggle-navigation.js'
     ]
   }
 };
