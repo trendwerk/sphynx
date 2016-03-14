@@ -3,8 +3,8 @@
 
   @include full-width();
   @include toggle-navigation((
-    'item': '.menu-item',
     'height': ($line-height-header + ($padding * 2)),
+    'item': '.menu-item',
     'menu': '.main-navigation',
     'until': map-get($breakpoints, 'large'),
   ));
