@@ -1,14 +1,25 @@
-.navigation-icon {
-  height: 19px;
+.navigation-toggle {
+  $height: 19px;
+  $width: 24px;
+
+  cursor: pointer;
+  float: right;
+  height: $height;
+  margin-top: (($line-height-header - $height) / 2);
   position: relative;
-  width: 24px;
+  transition: transform 0.4s cubic-bezier(0, 0, 0, 1);
+  width: $width;
+
+  @include respond-to('large') {
+    display: none;
+  }
 
   .line {
     background-color: $white;
     height: 3px;
     position: absolute;
-    transition: transform 0.2s ease-out;
-    width: 24px;
+    transition: transform 0.4s cubic-bezier(0, 0, 0, 1);
+    width: $width;
   }
 
   .line:nth-child(1) {
@@ -23,7 +34,9 @@
     top: 16px;
   }
 
-  &.active {
+  .navigation-open & {
+    transform: rotate(-90deg);
+
     .line:nth-child(1) {
       transform: rotate(-45deg) translate(-5.3px, 5.3px);
     }

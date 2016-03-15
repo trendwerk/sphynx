@@ -2,6 +2,7 @@
 
 @import '../../bower_components/fancybox/source/jquery.fancybox';
 @import '../../bower_components/normalize.css/normalize';
+@import '../../bower_components/toggle-navigation/src/toggle-navigation';
 
 @import 'utils/functions/shade';
 @import 'utils/functions/tint';
@@ -36,14 +37,14 @@
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/main';
-@import 'layout/main-navigation';
 @import 'layout/wrapper';
 
 @import 'components/button';
 @import 'components/featured';
 @import 'components/logo';
+@import 'components/main-navigation';
 @import 'components/meta';
-@import 'components/navigation-icon';
+@import 'components/navigation-toggle';
 @import 'components/pager';
 @import 'components/tags';
 @import 'components/post';

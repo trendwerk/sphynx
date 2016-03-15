@@ -1,0 +1,46 @@
+.main-navigation {
+  padding: 0 $horizontal-spacing;
+  width: 100%;
+
+  @include respond-to('medium') {
+    padding: 0 ($horizontal-spacing * 2);
+  }
+
+  @include respond-to('large') {
+    float: right;
+    width: auto;
+  }
+
+  .menu {
+    @include list-style-none();
+  }
+
+  .menu-item {
+    @include respond-to('large') {
+      float: left;
+      margin-left: 5px;
+    }
+
+    a {
+      border-bottom: 1px solid tint($primary-color, 10%);
+      display: block;
+      font-weight: bold;
+      padding: 10px 20px;
+
+      @include respond-to('large') {
+        border: 0;
+      }
+    }
+
+    &:last-child a {
+      border: 0;
+    }
+
+    &.current-menu-ancestor a,
+    &.current-menu-item a,
+    &.current-menu-parent a,
+    a:hover {
+      background: shade($primary-color, 20%);
+    }
+  }
+}
