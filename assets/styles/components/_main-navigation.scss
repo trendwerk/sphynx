@@ -17,7 +17,6 @@
 
   .menu-item {
     @include respond-to('large') {
-      border: 0;
       float: left;
       margin-left: 5px;
     }
@@ -27,6 +26,10 @@
       display: block;
       font-weight: bold;
       padding: 10px 20px;
+
+      @include respond-to('large') {
+        border: 0;
+      }
     }
 
     &:last-child a {
