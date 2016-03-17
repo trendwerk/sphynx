@@ -4,6 +4,6 @@
 
   @include respond-to('medium') {
     float: right;
-    margin: 0 0 $vertical-spacing $horizontal-spacing;
+    margin: 10px 0 $vertical-spacing ($horizontal-spacing * 2);
   }
 }
