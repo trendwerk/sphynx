@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     cssBase64 = require('gulp-css-base64'),
 
     // JavaScript
+    babel = require('gulp-babel'),
     jslint = require('gulp-jshint'),
     concat = require('gulp-concat'),
     addSrc = require('gulp-add-src'),
@@ -123,7 +124,9 @@ gulp.task('jslint', function() {
   return gulp.src(files.js)
 
   // Lint
-  .pipe(jslint())
+  .pipe(jslint({
+    esversion: 6
+  }))
 
   // Report errors
   .pipe(jslint.reporter())
@@ -137,6 +140,9 @@ gulp.task('jslint', function() {
  */
 gulp.task('js', ['jslint'], function() {
   return gulp.src(files.js)
+
+  // Babel
+  .pipe(babel())
 
   // Concat
   .pipe(addSrc.prepend(files.concat.js))

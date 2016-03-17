@@ -1,15 +1,19 @@
-$(document).ready(function() {
+$(document).ready(() => {
   // Fancybox for images
   $('a:has(img)').each(function() {
-    if(/(jpeg|jpg|png|gif|bmp)$/i.test($(this).prop('href'))) {
-      $(this).fancybox();
+    let _this = $(this);
+
+    if(/(jpeg|jpg|png|gif|bmp)$/i.test(_this.prop('href'))) {
+      _this.fancybox();
     }
   });
 
   // Fancybox for galleries
   $('.gallery').each(function(i) {
-    $(this).find('a').prop('rel', 'fancybox-gallery-' + i);
-    $(this).find('figure.gallery-item a').fancybox({
+    let _this = $(this);
+
+    _this.find('a').prop('rel', 'fancybox-gallery-' + i);
+    _this.find('figure.gallery-item a').fancybox({
       type: 'image'
     });
   });
