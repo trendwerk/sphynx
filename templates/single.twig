@@ -5,12 +5,12 @@
 	<h1>
 		{{ post.title }}
 	</h1>
-	
+
 	{% include 'partials/post-meta.twig' %}
 
 	{% if post.thumbnail %}
 
-		<img class="featured" src="{{ post.thumbnail.src('medium') }}" alt="{{ post.thumbnail.title }}">
+		<img class="featured-image" src="{{ post.thumbnail.src('medium') }}" alt="{{ post.thumbnail.title }}">
 
 	{% endif %}
 
