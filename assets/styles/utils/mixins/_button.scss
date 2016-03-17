@@ -3,14 +3,15 @@
   @include box-link((
   	'background-color': $primary-color,
   	'color': $white,
-  	'height': 50px,
-  	'horizontal-padding': 25px,
-  	'margin': 10px,
+  	'height': 60px,
+  	'horizontal-padding': 30px,
+  	'margin': 20px,
   ));
   @include hover((
-    'background-color': shade($primary-color, 15%),
+    'background-color': shade($primary-color, 25%),
     'color': $white,
   ));
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
 }
