@@ -23,9 +23,9 @@
     }
 
     a {
+      @include font-size(map-get($font-sizes, 'text-small'));
       border-bottom: 1px solid tint($primary-color, 10%);
       display: block;
-      font-size: 18px;
       line-height: 30px;
       font-weight: bold;
       padding: 10px 20px;
