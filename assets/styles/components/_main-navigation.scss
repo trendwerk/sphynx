@@ -3,11 +3,12 @@
   width: 100%;
 
   @include respond-to('medium') {
-    padding: 0;
+    padding: 0 ($horizontal-spacing * 2);
   }
 
   @include respond-to('large') {
     float: right;
+    padding: 0;
     width: auto;
   }
 
