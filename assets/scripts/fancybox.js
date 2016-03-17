@@ -1,4 +1,4 @@
-$(document).ready(() => {
+jQuery(($) => {
   // Fancybox for images
   $('a:has(img)').each(function() {
     let _this = $(this);

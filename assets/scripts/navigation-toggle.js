@@ -1,3 +1,3 @@
-$(document).ready(() => {
+jQuery(($) => {
   $('.navigation-toggle').toggleNavigation();
 });
