@@ -3,7 +3,7 @@
   width: 100%;
 
   @include respond-to('medium') {
-    padding: 0 ($horizontal-spacing * 2);
+    padding: 0;
   }
 
   @include respond-to('large') {
@@ -24,6 +24,8 @@
     a {
       border-bottom: 1px solid tint($primary-color, 10%);
       display: block;
+      font-size: 18px;
+      line-height: 30px;
       font-weight: bold;
       padding: 10px 20px;
 
