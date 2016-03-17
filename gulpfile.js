@@ -165,7 +165,7 @@ gulp.task('phpcs', function() {
 
   // Sniff code
   .pipe(phpcs({
-    bin: '~/.composer/vendor/bin/phpcs',
+    bin: 'vendor/bin/phpcs',
     standard: 'PSR2',
     warningSeverity: 0
   }))
