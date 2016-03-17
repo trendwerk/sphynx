@@ -1,7 +1,16 @@
+.aligncenter,
+.alignnone,
 .alignleft,
-.alignright {
+.alignright,
+.aligncenter {
   display: block;
-  margin: 10px ($horizontal-spacing * 2) $vertical-spacing 0;
+  height: auto;
+  margin: 0 0 $vertical-spacing;
+  max-width: 100%;
+}
+
+.aligncenter {
+  margin: 0 auto $vertical-spacing;
 }
 
 .alignleft {
@@ -24,23 +33,4 @@
   @include respond-to('huge') {
     margin-right: -180px;
   }
-}
-
-.aligncenter,
-.alignnone {
-  display: block;
-  margin: 0 auto $vertical-spacing;
-}
-
-.size-thumbnail,
-.size-medium,
-.size-large,
-.size-auto,
-.alignnone,
-.alignleft,
-.alignright,
-.aligncenter,
-.size-full {
-  height: auto;
-  max-width: 100%;
 }

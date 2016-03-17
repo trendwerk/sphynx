@@ -1,7 +1,3 @@
-.wp-caption {
-  margin: 0 $vertical-spacing 0 0;
-
-  .wp-caption-text {
-    @include caption;
-  }
+.wp-caption-text {
+  @include caption;
 }
