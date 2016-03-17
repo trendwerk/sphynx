@@ -1,8 +1,9 @@
 .meta {
   color: $text-light;
+  font-size: 18px;
 
   a {
-    color: $text-color;
+    color: $text-light;
 
     &:hover {
       color: $link-color;
