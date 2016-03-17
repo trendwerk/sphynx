@@ -118,7 +118,7 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
 });
 
 /**
- * Lint CoffeeScript
+ * Lint JavaScript
  */
 gulp.task('jslint', function() {
   return gulp.src(files.js)
@@ -136,7 +136,7 @@ gulp.task('jslint', function() {
 });
 
 /**
- * Compile CoffeeScript
+ * Compile JavaScript
  */
 gulp.task('js', ['jslint'], function() {
   return gulp.src(files.js)
