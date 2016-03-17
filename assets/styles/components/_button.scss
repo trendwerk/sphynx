@@ -3,7 +3,7 @@
 
   &.secondary {
     @include hover((
-    	'background-color': shade($secondary-color, 15%),
+    	'background-color': shade($secondary-color, 25%),
     	'color': $white
     ));
     background-color: $secondary-color;
