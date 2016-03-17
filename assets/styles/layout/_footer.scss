@@ -1,64 +1,54 @@
 .footer {
   @include full-width();
+  @include font-size(map-get($font-sizes, 'text-small'));
   background-color: $primary-color;
   color: $white;
-  margin-bottom: 0;
+  line-height: 30px;
+  padding: 25px 0;
+
+  p {
+    margin: 0;
+  }
 
   a {
     color: $white;
+    font-weight: 600;
+    text-decoration: none;
 
     &:active,
     &:focus,
     &:hover {
       color: $text-light;
+      text-decoration: underline;
     }
   }
 
-  .credits {
-    float: left;
-    margin: $vertical-spacing 0;
-    width: 100%;
+  .copyright {
+    text-align: center;
 
-    p {
-      margin: 0;
+    @include respond-to('medium') {
+      float: left;
     }
+  }
 
-    .copyright {
-      text-align: center;
-      width: 100%;
+  nav {
+    text-align: center;
 
-      @include respond-to('medium') {
-        float: left;
-        width: auto;
-      }
+    @include respond-to('medium') {
+      float: right;
     }
+  }
 
-    nav {
-      text-align: center;
-      width: 100%;
+  ul {
+    @include list-style-none();
+  }
 
-      @include respond-to('medium') {
-        float: right;
-        width: auto;
-      }
-    }
+  li {
+    display: inline;
+    margin: 0 5px;
 
-    ul {
-      @include list-style-none();
-    }
-
-    li {
-      display: inline;
-    }
-
-    li::after {
-      color: $white;
-      content: '|';
-      padding: 0 5px;
-    }
-
-    li:last-child::after {
-      display: none;
+    @include respond-to('medium') {
+      margin: 0 0 0 20px;
     }
   }
 }
