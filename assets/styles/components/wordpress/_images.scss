@@ -1,10 +1,11 @@
 .alignleft,
 .alignright {
-  clear: both;
+  display: block;
+  margin: 10px ($horizontal-spacing * 2) $vertical-spacing 0;
 }
 
 .alignleft {
-  @include respond-to('large') {
+  @media(min-width: 801px) {
     float: left;
     margin: 10px ($horizontal-spacing * 2) $vertical-spacing 0;
   }
@@ -15,7 +16,7 @@
 }
 
 .alignright {
-  @include respond-to('large') {
+  @media(min-width: 801px) {
     float: right;
     margin: 10px 0 $vertical-spacing ($horizontal-spacing * 2);
   }
@@ -23,6 +24,12 @@
   @include respond-to('huge') {
     margin-right: -180px;
   }
+}
+
+.aligncenter,
+.alignnone {
+  display: block;
+  margin: 0 auto $vertical-spacing;
 }
 
 .size-thumbnail,

@@ -1,5 +1,5 @@
 .wp-caption {
-  margin-bottom: $vertical-spacing;
+  margin: 0 $vertical-spacing 0 0;
 
   .wp-caption-text {
     @include caption;

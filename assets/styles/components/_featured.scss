@@ -2,7 +2,7 @@
   display: block;
   margin-bottom: $vertical-spacing;
 
-  @include respond-to('medium') {
+  @media(min-width: 801px) {
     float: right;
     margin: 10px 0 $vertical-spacing ($horizontal-spacing * 2);
   }
