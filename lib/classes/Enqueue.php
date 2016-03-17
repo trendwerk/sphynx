@@ -19,7 +19,6 @@ final class Enqueue
     {
         $template_root = get_template_directory_uri();
         $assets = $template_root . '/assets';
-        $bower = $template_root . '/bower_components';
 
         /**
          * Core
