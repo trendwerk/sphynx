@@ -1,34 +1,39 @@
 .pager {
   @include full-width();
-  margin: $vertical-spacing 0;
+  margin: 0 0 $vertical-spacing;
   text-align: center;
 
   .pages {
     @include list-style-none();
   }
 
-  .dots,
-  .page-numbers,
-  .prev,
-  .next {
+  a {
     @include box-link((
-      'height': 40px,
-      'horizontal-padding': 20px,
+      'height': 50px,
       'margin': 10px,
     ));
+    @include font-size(map-get($font-sizes, 'text-small'));
     @include hover((
-      'background-color': shade($primary-color, 15%),
+      'background-color': $primary-color,
       'color': $white,
     ));
-    font-weight: bold;
+    font-weight: 600;
+    min-width: 50px;
+  }
 
-    &.current,
-    &.dots {
-      @include hover((
-        'background-color': auto,
-        'color': inherit,
-      ));
-      background-color: tint($light-background, 75%);
-    }
+  .current {
+    @include box-link((
+      'height': 46px,
+      'margin': 10px,
+    ));
+    @include font-size(map-get($font-sizes, 'text-small'));
+    background: none;
+    border: 2px solid $light-background;
+    font-weight: 600;
+    min-width: 46px;
+  }
+
+  .dots {
+    margin: 0 10px 0 0;
   }
 }
