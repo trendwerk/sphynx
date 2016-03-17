@@ -4,7 +4,7 @@ a {
   text-decoration: underline;
 
   &:hover {
-    color: shade($link-color, 20%);
+    color: $text-color;
     text-decoration: underline;
   }
 
@@ -19,8 +19,8 @@ a {
     padding-right: 5px;
   }
 
-  &.read-more::after,
-  &.next::after {
+  &.next::after
+  &.read-more::after {
     content: '»';
     padding-left: 5px;
   }

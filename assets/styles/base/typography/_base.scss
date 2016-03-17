@@ -3,9 +3,9 @@ html {
 }
 
 body {
+  @include font-size(map-get($font-sizes, 'base'));
   color: $text-color;
   font-family: $text-font;
-  font-size: 14px;
   line-height: $line-height;
 }
 

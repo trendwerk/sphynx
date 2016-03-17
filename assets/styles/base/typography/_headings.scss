@@ -6,7 +6,7 @@ h5,
 h6 {
   color: $heading-color;
   font-family: $heading-font;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.325em;
   margin: 0 0 $vertical-spacing;
 
@@ -22,15 +22,15 @@ h6 {
 }
 
 h1 {
-  @include font-size(map-get($heading-sizes, 'h1'));
+  @include font-size(map-get($font-sizes, 'h1'));
 }
 
 h2 {
-  @include font-size(map-get($heading-sizes, 'h2'));
+  @include font-size(map-get($font-sizes, 'h2'));
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 h4 {

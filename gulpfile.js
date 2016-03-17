@@ -164,8 +164,7 @@ gulp.task('phpcs', function() {
   // Sniff code
   .pipe(phpcs({
     bin: 'vendor/bin/phpcs',
-    standard: 'PSR2',
-    warningSeverity: 0
+    standard: 'PSR2'
   }))
 
   // Log errors and fail afterwards

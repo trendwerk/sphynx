@@ -1,9 +1,9 @@
 blockquote {
-  border-left: 4px solid $border-color;
+  @include font-size(map-get($font-sizes, 'blockquote'));
   color: $text-light;
   font-style: italic;
+  line-height: 1.5;
   margin: 0;
-  padding-left: $horizontal-spacing;
 }
 
 cite {
