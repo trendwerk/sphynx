@@ -18,13 +18,13 @@ final class Media
      */
     public function defaults()
     {
-        update_option('thumbnail_size_w', 150);
-        update_option('thumbnail_size_h', 150);
+        update_option('thumbnail_size_w', 120);
+        update_option('thumbnail_size_h', 120);
 
-        update_option('medium_size_w', 340);
+        update_option('medium_size_w', 360);
         update_option('medium_size_h', '');
 
-        update_option('large_size_w', 720);
+        update_option('large_size_w', 840);
         update_option('large_size_h', '');
 
         update_option('image_default_link_type', 'file');

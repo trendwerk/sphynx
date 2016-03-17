@@ -1,16 +1,28 @@
+.alignleft,
+.alignright {
+  clear: both;
+}
+
 .alignleft {
-  float: left;
-  margin: 10px $horizontal-spacing 10px 0;
+  @include respond-to('large') {
+    float: left;
+    margin: 10px ($horizontal-spacing * 2) $vertical-spacing 0;
+  }
+
+  @include respond-to('huge') {
+    margin-left: -180px;
+  }
 }
 
 .alignright {
-  float: right;
-  margin: 10px 0 10px $horizontal-spacing;
-}
+  @include respond-to('large') {
+    float: right;
+    margin: 10px 0 $vertical-spacing ($horizontal-spacing * 2);
+  }
 
-.aligncenter {
-  display: block;
-  margin: 0 auto 10px;
+  @include respond-to('huge') {
+    margin-right: -180px;
+  }
 }
 
 .size-thumbnail,
