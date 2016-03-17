@@ -22,8 +22,9 @@ final class Installer
 
         $root = dirname(dirname(__DIR__));
         $defaultNamespace = __NAMESPACE__;
+        $question = '<question>What namespace would you like to use?</question>';
 
-        $namespace = $io->ask('<question>What namespace would you like to use?</question> [<comment>' . $defaultNamespace . '</comment>] ', $defaultNamespace);
+        $namespace = $io->ask($question . ' [<comment>' . $defaultNamespace . '</comment>] ', $defaultNamespace);
 
         if ($namespace == $defaultNamespace || 0 == strlen($namespace)) {
             $io->write('Using default namespace');
@@ -66,7 +67,7 @@ final class Installer
                 if ($changed) {
                     $changedFiles++;
                 }
-            } else if (is_dir($dir . '/' . $file)) {
+            } elseif (is_dir($dir . '/' . $file)) {
                 $changedFiles += self::renameNamespaceInDir($dir . '/' . $file, $fromNamespace, $toNamespace);
             }
         }
@@ -119,8 +120,10 @@ final class Installer
 
             if (isset($value[1]) && strlen(trim($value[1])) > 0) {
                 $currentSettings[$setting] = trim($value[1]);
+                $question = '<question>' . $setting . ':</question>';
+                $comment = '[<comment>' . $currentSettings[$setting] . '</comment>]';
 
-                $newSettings[$setting] = $io->ask('<question>' . $setting . ':</question> [<comment>' . $currentSettings[$setting] . '</comment>] ', $currentSettings[$setting]);
+                $newSettings[$setting] = $io->ask($question . ' ' . $comment . ' ', $currentSettings[$setting]);
             }
         }
 
@@ -128,7 +131,8 @@ final class Installer
             if ($value == $currentSettings[$setting] || 0 == strlen($value)) {
                 $io->write('Using default ' . $setting);
             } else {
-                $contents = preg_replace('/(.+)' . $setting . ': (\s+)(.+)/', '$1' . $setting . ': $2' . $value, $contents);
+                $regex = '/(.+)' . $setting . ': (\s+)(.+)/';
+                $contents = preg_replace($regex, '$1' . $setting . ': $2' . $value, $contents);
             }
         }
 
