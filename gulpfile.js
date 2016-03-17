@@ -16,9 +16,8 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     cssBase64 = require('gulp-css-base64'),
 
-    // Coffee
-    coffeelint = require('gulp-coffeelint'),
-    coffee = require('gulp-coffee'),
+    // JavaScript
+    jslint = require('gulp-jshint'),
     concat = require('gulp-concat'),
     addSrc = require('gulp-add-src'),
     uglify = require('gulp-uglify'),
@@ -33,7 +32,10 @@ var gulp = require('gulp'),
  */
 var files = {
   sass: ['assets/styles/**/*.scss'],
-  coffee: ['assets/scripts/**/*.coffee'],
+  js: [
+    'assets/scripts/**/*.js',
+    '!assets/scripts/output/*.js'
+  ],
   php: [
     '**/*.php',
     '!vendor/**/*.*',
@@ -41,7 +43,7 @@ var files = {
   ],
   twig: ['templates/**/*.twig'],
   concat: {
-    coffee: [
+    js: [
       'bower_components/jquery/dist/jquery.js',
       'bower_components/fancybox/source/jquery.fancybox.js',
       'bower_components/toggle-navigation/src/toggle-navigation.js'
@@ -117,31 +119,27 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
 /**
  * Lint CoffeeScript
  */
-gulp.task('coffeelint', function() {
-  return gulp.src(files.coffee)
+gulp.task('jslint', function() {
+  return gulp.src(files.js)
 
   // Lint
-  .pipe(coffeelint())
+  .pipe(jslint())
 
   // Report errors
-  .pipe(coffeelint.reporter())
+  .pipe(jslint.reporter())
 
   // Make reporter fail task on error
-  .pipe(coffeelint.reporter('fail'));
+  .pipe(jslint.reporter('fail'));
 });
 
 /**
  * Compile CoffeeScript
  */
-gulp.task('coffee', ['coffeelint'], function() {
-  return gulp.src(files.coffee)
-
-  // Compile
-  .pipe(coffee({bare: true}))
-
-  .pipe(addSrc.prepend(files.concat.coffee))
+gulp.task('js', ['jslint'], function() {
+  return gulp.src(files.js)
 
   // Concat
+  .pipe(addSrc.prepend(files.concat.js))
   .pipe(concat('all.js'))
 
   // Uglify
@@ -232,7 +230,7 @@ gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
 
   gulp.watch(files.sass, ['base64', 'scsslint', 'sass']);
-  gulp.watch(files.coffee, ['coffeelint', 'coffee']);
+  gulp.watch(files.js, ['jslint', 'js']);
   gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
 
