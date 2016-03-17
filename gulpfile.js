@@ -32,7 +32,10 @@ var gulp = require('gulp'),
  */
 var files = {
   sass: ['assets/styles/**/*.scss'],
-  js: ['assets/scripts/**/*.js'],
+  js: [
+    'assets/scripts/**/*.js',
+    '!assets/scripts/output/*.js'
+  ],
   php: [
     '**/*.php',
     '!vendor/**/*.*',
