@@ -1,13 +1,13 @@
 .aligncenter,
-.alignnone,
 .alignleft,
-.alignright,
-.aligncenter {
+.alignnone,
+.alignright {
   display: block;
   margin: 0 0 $vertical-spacing;
 }
 
-.aligncenter {
+.aligncenter,
+.alignnone {
   margin: 0 auto $vertical-spacing;
 }
 
