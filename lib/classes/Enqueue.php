@@ -28,7 +28,7 @@ final class Enqueue
         /**
          * Scripts
          */
-        wp_enqueue_script('main', $assets . '/scripts/output/all.js', array('jquery'), false, true);
+        wp_enqueue_script('main', $assets . '/scripts/output/all.js', null, null, true);
 
         /**
          * Styles
