@@ -13,8 +13,9 @@ var gulp = require('gulp'),
     // Sass
     scssLint = require('gulp-scss-lint'),
     sass = require('gulp-sass'),
+    sassglob = require('gulp-sass-glob'),
     cssnano = require('gulp-cssnano'),
-    cssBase64 = require('gulp-css-base64'),
+    cssbase64 = require('gulp-css-base64'),
 
     // JavaScript
     babel = require('gulp-babel'),
@@ -87,7 +88,7 @@ gulp.task('base64', ['scsslint'], function() {
   return gulp.src('bower_components/fancybox/source/*.css')
 
   // Base64 images
-  .pipe(cssBase64())
+  .pipe(cssbase64())
 
   // Write output
   .pipe(gulp.dest('bower_components/fancybox/source/'));
@@ -98,6 +99,9 @@ gulp.task('base64', ['scsslint'], function() {
  */
 gulp.task('sass', ['scsslint', 'base64'], function() {
   return gulp.src(files.sass)
+
+  //Glob
+  .pipe(sassglob())
 
   // Don't stop watch on error (just log it)
   .pipe(sass().on('error', sass.logError))

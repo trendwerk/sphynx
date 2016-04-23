@@ -2,29 +2,8 @@
 
 @import '../../bower_components/normalize.css/normalize';
 
-@import 'utils/functions/shade';
-@import 'utils/functions/tint';
-
-@import 'utils/mixins/box';
-@import 'utils/mixins/box-link';
-@import 'utils/mixins/button';
-@import 'utils/mixins/caption';
-@import 'utils/mixins/hover';
-@import 'utils/mixins/font-size';
-
-@import 'utils/variables/breakpoints';
-@import 'utils/variables/colors';
-@import 'utils/variables/spacing';
-@import 'utils/variables/typography';
-
-@import 'base/border-box';
-@import 'base/tables';
-@import 'base/typography/base';
-@import 'base/typography/code';
-@import 'base/typography/headings';
-@import 'base/typography/links';
-@import 'base/typography/lists';
-@import 'base/typography/quotes';
+@import 'abstracts/**/*';
+@import 'base/**/*';
 
 @import 'components/button';
 @import 'components/video-container';

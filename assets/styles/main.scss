@@ -4,55 +4,8 @@
 @import '../../bower_components/normalize.css/normalize';
 @import '../../bower_components/toggle-navigation/src/toggle-navigation';
 
-@import 'utils/functions/shade';
-@import 'utils/functions/tint';
-
-@import 'utils/mixins/box';
-@import 'utils/mixins/box-link';
-@import 'utils/mixins/button';
-@import 'utils/mixins/caption';
-@import 'utils/mixins/hover';
-@import 'utils/mixins/font-size';
-@import 'utils/mixins/full-width';
-@import 'utils/mixins/list-style-none';
-@import 'utils/mixins/respond-to';
-@import 'utils/mixins/tag';
-
-@import 'utils/variables/breakpoints';
-@import 'utils/variables/colors';
-@import 'utils/variables/spacing';
-@import 'utils/variables/typography';
-
-@import 'base/border-box';
-@import 'base/forms';
-@import 'base/images';
-@import 'base/tables';
-@import 'base/typography/base';
-@import 'base/typography/code';
-@import 'base/typography/headings';
-@import 'base/typography/links';
-@import 'base/typography/lists';
-@import 'base/typography/quotes';
-
-@import 'layout/footer';
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/wrapper';
-
-@import 'pages/single-post';
-
-@import 'components/button';
-@import 'components/featured-image';
-@import 'components/logo';
-@import 'components/main-navigation';
-@import 'components/meta';
-@import 'components/navigation-toggle';
-@import 'components/pager';
-@import 'components/post';
-@import 'components/tags';
-@import 'components/video-container';
-@import 'components/wordpress/caption';
-@import 'components/wordpress/comment-respond';
-@import 'components/wordpress/comments';
-@import 'components/wordpress/gallery';
-@import 'components/wordpress/images';
+@import 'abstracts/**/*';
+@import 'base/**/*';
+@import 'layout/**/*';
+@import 'pages/**/*';
+@import 'components/**/*';
