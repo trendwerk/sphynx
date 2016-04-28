@@ -2,6 +2,7 @@
   max-width: 100%;
 }
 
+.wp-caption-dd,
 .wp-caption-text {
   @include caption;
 }
