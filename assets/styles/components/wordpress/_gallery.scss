@@ -23,7 +23,6 @@
     $max-lines: 2;
     $padding: 5px;
 
-    @include caption();
     background-color: $black;
     bottom: 0;
     color: $white;
