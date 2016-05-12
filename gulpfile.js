@@ -8,18 +8,18 @@ var gulp = require('gulp'),
     beep = require('beepbeep'),
     colors = require('colors'),
     plumber = require('gulp-plumber'),
-    livereload = require('gulp-livereload'),
+    liveReload = require('gulp-livereload'),
 
     // Sass
     scssLint = require('gulp-scss-lint'),
     sass = require('gulp-sass'),
-    sassglob = require('gulp-sass-glob'),
-    cssnano = require('gulp-cssnano'),
-    cssbase64 = require('gulp-css-base64'),
+    sassGlob = require('gulp-sass-glob'),
+    cssNano = require('gulp-cssnano'),
+    cssBase64 = require('gulp-css-base64'),
 
     // JavaScript
     babel = require('gulp-babel'),
-    jslint = require('gulp-jshint'),
+    jsLint = require('gulp-jshint'),
     concat = require('gulp-concat'),
     addSrc = require('gulp-add-src'),
     uglify = require('gulp-uglify'),
@@ -69,7 +69,7 @@ gulp.src = function() {
 /**
  * Lint Sass
  */
-gulp.task('scsslint', function() {
+gulp.task('scssLint', function() {
   return gulp.src(files.sass)
 
   // Lint
@@ -84,11 +84,11 @@ gulp.task('scsslint', function() {
 /**
  * Base64 Fancybox images
  */
-gulp.task('base64', ['scsslint'], function() {
+gulp.task('base64', ['scssLint'], function() {
   return gulp.src('bower_components/fancybox/source/*.css')
 
   // Base64 images
-  .pipe(cssbase64())
+  .pipe(cssBase64())
 
   // Write output
   .pipe(gulp.dest('bower_components/fancybox/source/'));
@@ -97,17 +97,17 @@ gulp.task('base64', ['scsslint'], function() {
 /**
  * Compile Sass
  */
-gulp.task('sass', ['scsslint', 'base64'], function() {
+gulp.task('sass', ['scssLint', 'base64'], function() {
   return gulp.src(files.sass)
 
   //Glob
-  .pipe(sassglob())
+  .pipe(sassGlob())
 
   // Don't stop watch on error (just log it)
   .pipe(sass().on('error', sass.logError))
 
   // Minify, prefix
-  .pipe(cssnano({
+  .pipe(cssNano({
     autoprefixer: {
       add: true,
       browsers: ['> 1%']
@@ -118,31 +118,31 @@ gulp.task('sass', ['scsslint', 'base64'], function() {
   .pipe(gulp.dest('assets/styles/output/'))
 
   // Reload
-  .pipe(livereload());
+  .pipe(liveReload());
 });
 
 /**
  * Lint CoffeeScript
  */
-gulp.task('jslint', function() {
+gulp.task('jsLint', function() {
   return gulp.src(files.js)
 
   // Lint
-  .pipe(jslint({
+  .pipe(jsLint({
     esversion: 6
   }))
 
   // Report errors
-  .pipe(jslint.reporter())
+  .pipe(jsLint.reporter())
 
   // Make reporter fail task on error
-  .pipe(jslint.reporter('fail'));
+  .pipe(jsLint.reporter('fail'));
 });
 
 /**
  * Compile CoffeeScript
  */
-gulp.task('js', ['jslint'], function() {
+gulp.task('js', ['jsLint'], function() {
   return gulp.src(files.js)
 
   // Babel
@@ -159,7 +159,7 @@ gulp.task('js', ['jslint'], function() {
   .pipe(gulp.dest('assets/scripts/output/'))
 
   // Reload
-  .pipe(livereload());
+  .pipe(liveReload());
 });
 
 /**
@@ -182,11 +182,11 @@ gulp.task('phpcs', function() {
   .pipe(phpcs.reporter('fail'))
 
   // Reload
-  .pipe(livereload());
+  .pipe(liveReload());
 });
 
 /**
- * Twig: Livereload
+ * Twig: liveReload
  */
 gulp.task('twig', function() {
   return gulp.src(files.twig)
@@ -195,7 +195,7 @@ gulp.task('twig', function() {
   .pipe(cache('twig'))
 
   // Reload
-  .pipe(livereload());
+  .pipe(liveReload());
 });
 
 /**
@@ -239,10 +239,10 @@ var welcomeMessage = [
 gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
 
-  gulp.watch(files.sass, ['base64', 'scsslint', 'sass']);
-  gulp.watch(files.js, ['jslint', 'js']);
+  gulp.watch(files.sass, ['base64', 'scssLint', 'sass']);
+  gulp.watch(files.js, ['jsLint', 'js']);
   gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
 
-  livereload.listen();
+  liveReload.listen();
 });
