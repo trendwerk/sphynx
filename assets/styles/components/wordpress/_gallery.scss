@@ -13,7 +13,7 @@
     }
 
     &:hover .gallery-caption {
-      opacity: 1;
+      display: block;
     }
   }
 
@@ -26,12 +26,12 @@
     background-color: $black;
     bottom: 0;
     color: $white;
+    display: none;
     font-size: $font-size;
     line-height: $line-height;
     margin: 0;
     max-height: (($font-size * $line-height * $max-lines) + ($padding * 2));
     padding: $padding ($padding * 2);
-    opacity: 0;
     overflow: hidden;
     position: absolute;
     text-align: center;
