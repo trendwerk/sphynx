@@ -1,27 +1,35 @@
 .wp-editor {
   margin: 20px;
 
+  .aligncenter,
+  .alignleft,
+  .alignnone,
+  .alignright {
+    float: none;
+  }
+
   .alignleft {
+    @media(min-width: 801px) {
+      float: left;
+    }
+
     @include respond-to('huge') {
       margin-left: 0;
     }
   }
 
   .alignright {
+    @media(min-width: 801px) {
+      float: right;
+    }
+
     @include respond-to('huge') {
       margin-right: 0;
     }
   }
-}
 
-.aligncenter,
-.alignleft,
-.alignnone,
-.alignright {
-  float: none;
-}
-
-.video-container {
-  height: auto;
-  padding: 0;
+  .video-container {
+    height: auto;
+    padding: 0;
+  }
 }
