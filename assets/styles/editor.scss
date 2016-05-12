@@ -5,8 +5,9 @@
 @import 'abstracts/**/*';
 @import 'base/**/*';
 
+@import 'themes/admin/editor';
+
 @import 'components/button';
 @import 'components/video-container';
-@import 'components/wordpress/wp-editor';
 @import 'components/wordpress/caption';
 @import 'components/wordpress/images';
