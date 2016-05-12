@@ -186,7 +186,7 @@ gulp.task('phpcs', function() {
 });
 
 /**
- * Twig: liveReload
+ * Twig: Livereload
  */
 gulp.task('twig', function() {
   return gulp.src(files.twig)
