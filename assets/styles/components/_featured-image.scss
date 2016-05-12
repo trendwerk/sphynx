@@ -6,4 +6,10 @@
     float: right;
     margin: 10px 0 $vertical-spacing ($horizontal-spacing * 2);
   }
+
+  .single & {
+    @include respond-to('huge') {
+      margin-right: -180px;
+    }
+  }
 }
