@@ -7,16 +7,6 @@
 
 @import 'components/button';
 @import 'components/video-container';
+@import 'components/wordpress/editor';
 @import 'components/wordpress/caption';
 @import 'components/wordpress/images';
-
-/// Back-end editor style
-
-html {
-  padding: 20px;
-}
-
-.video-container {
-  height: auto;
-  padding: 0;
-}

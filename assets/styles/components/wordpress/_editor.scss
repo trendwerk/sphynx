@@ -1,0 +1,27 @@
+html {
+  padding: 20px;
+
+  .alignleft {
+    @include respond-to('huge') {
+      margin-left: 0;
+    }
+  }
+
+  .alignright {
+    @include respond-to('huge') {
+      margin-right: 0;
+    }
+  }
+}
+
+.aligncenter,
+.alignleft,
+.alignnone,
+.alignright {
+  float: none;
+}
+
+.video-container {
+  height: auto;
+  padding: 0;
+}
