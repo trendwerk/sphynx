@@ -24,11 +24,9 @@ select {
   margin: 0;
   outline: none;
   padding: 0 12px;
-  width: 100%;
 
   @include respond-to('medium') {
     font-size: 14px;
-    width: 50%;
   }
 
   &::placeholder {
@@ -54,18 +52,6 @@ button {
   -webkit-appearance: none;
   border: 0;
   line-height: $line-height;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-
-  @include respond-to('medium') {
-    float: left;
-    margin-bottom: 0;
-    padding-right: 20px;
-    width: 25%;
-  }
 }
 
 select {
