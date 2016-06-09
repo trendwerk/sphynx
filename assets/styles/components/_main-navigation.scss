@@ -23,12 +23,14 @@
     }
 
     a {
+      $padding: 10px;
+
       @include font-size(map-get($font-sizes, 'text-small'));
       border-bottom: 1px solid tint($primary-color, 10%);
       display: block;
-      line-height: 30px;
+      line-height: ($line-height-header - ($padding * 2));
       font-weight: bold;
-      padding: 10px 20px;
+      padding: $padding ($padding * 2);
 
       @include respond-to('large') {
         border: 0;
