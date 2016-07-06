@@ -5,8 +5,5 @@
     "fancybox": "~2.1.5",
     "normalize.css": "~3.0.3",
     "toggle-navigation": "trendwerk/toggle-navigation#~0.1.0"
-  },
-  "resolutions": {
-    "jquery": "^3.0.0"
   }
 }
