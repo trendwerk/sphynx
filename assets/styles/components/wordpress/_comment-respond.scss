@@ -16,10 +16,6 @@
 
     &.form-submit {
       margin-bottom: 0;
-
-      @include respond-to('medium') {
-        margin-left: 25%;
-      }
     }
   }
 
