@@ -52,10 +52,12 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	jQuery(($) => {
+	'use strict';
+
+	jQuery(function ($) {
 	  // Fancybox for images
 	  $('a:has(img)').each(function fancyboxImage() {
-	    const $this = $(this);
+	    var $this = $(this);
 
 	    if (/(jpeg|jpg|png|gif|bmp)$/i.test($this.prop('href'))) {
 	      $this.fancybox();
@@ -64,24 +66,24 @@
 
 	  // Fancybox for galleries
 	  $('.gallery').each(function fancyboxGallery(i) {
-	    const $this = $(this);
+	    var $this = $(this);
 
 	    $this.find('a').prop('rel', 'fancybox-gallery-' + i);
 	    $this.find('figure.gallery-item a').fancybox({
-	      type: 'image',
+	      type: 'image'
 	    });
 	  });
 	});
-
 
 /***/ },
 /* 2 */
 /***/ function(module, exports) {
 
-	jQuery(($) => {
+	'use strict';
+
+	jQuery(function ($) {
 	  $('.navigation-toggle').toggleNavigation();
 	});
-
 
 /***/ }
 /******/ ]);

@@ -12,18 +12,19 @@ module.exports = {
       {
         test: /\.js/,
         loader: 'eslint',
-        include: __dirname + '/src'
       }
     ],
     loaders: [
       {
         test: /\.js/,
         loader: 'babel',
-        include: __dirname + '/src',
         query: {
           presets: ['es2015']
         }
       }
     ]
+  },
+  resolve: {
+    moduleDirectories: ["bower_components"]
   }
 };
