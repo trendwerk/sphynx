@@ -146,7 +146,9 @@ gulp.task('js', ['jsLint'], function() {
   return gulp.src(files.js)
 
   // Babel
-  .pipe(babel())
+  .pipe(babel({
+    presets: ['es2015']
+  }))
 
   // Concat
   .pipe(addSrc.prepend(files.concat.js))
