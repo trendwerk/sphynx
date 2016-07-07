@@ -1,10 +1,12 @@
 <?php
+use Timber\Post;
+
 if (post_password_required()) {
     return;
 }
 
 $context = Timber::get_context();
-$context['post'] = new TimberPost();
+$context['post'] = new Post();
 
 $context['have_comments'] = have_comments();
 

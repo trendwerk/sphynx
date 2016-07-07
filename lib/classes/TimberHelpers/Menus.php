@@ -5,6 +5,8 @@
 
 namespace Trendwerk\TrendPress\TimberHelpers;
 
+use Timber\Menu;
+
 final class Menus
 {
     public function __construct()
@@ -18,8 +20,8 @@ final class Menus
     public function addToContext($context)
     {
         $context['menus'] = array(
-            'main'   => new \TimberMenu('main'),
-            'footer' => new \TimberMenu('footer'),
+            'main'   => new Menu('main'),
+            'footer' => new Menu('footer'),
         );
 
         return $context;
