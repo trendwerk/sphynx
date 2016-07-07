@@ -18,10 +18,10 @@ var gulp = require('gulp'),
     cssBase64 = require('gulp-css-base64'),
 
     // JavaScript
-    babel = require('gulp-babel'),
-    jsLint = require('gulp-jshint'),
-    concat = require('gulp-concat'),
     addSrc = require('gulp-add-src'),
+    babel = require('gulp-babel'),
+    concat = require('gulp-concat'),
+    esLint = require('gulp-eslint'),
     uglify = require('gulp-uglify'),
 
     // PHP
@@ -122,27 +122,22 @@ gulp.task('sass', ['scssLint', 'base64'], function() {
 });
 
 /**
- * Lint CoffeeScript
+ * Lint JavaScript
  */
-gulp.task('jsLint', function() {
+gulp.task('esLint', function() {
   return gulp.src(files.js)
 
   // Lint
-  .pipe(jsLint({
-    esversion: 6
-  }))
+  .pipe(esLint())
 
   // Report errors
-  .pipe(jsLint.reporter())
-
-  // Make reporter fail task on error
-  .pipe(jsLint.reporter('fail'));
+  .pipe(esLint.format());
 });
 
 /**
- * Compile CoffeeScript
+ * Compile JavaScript
  */
-gulp.task('js', ['jsLint'], function() {
+gulp.task('js', ['esLint'], function() {
   return gulp.src(files.js)
 
   // Babel
@@ -242,7 +237,7 @@ gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
 
   gulp.watch(files.sass, ['base64', 'scssLint', 'sass']);
-  gulp.watch(files.js, ['jsLint', 'js']);
+  gulp.watch(files.js, ['esLint', 'js']);
   gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
 

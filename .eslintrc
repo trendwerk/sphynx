@@ -1,0 +1,9 @@
+{
+  'extends': 'airbnb-base',
+  'globals': {
+  	'jQuery': true
+  },
+  'rules': {
+  	'prefer-template': 0
+  }
+}

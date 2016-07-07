@@ -1,20 +1,20 @@
 jQuery(($) => {
   // Fancybox for images
-  $('a:has(img)').each(function() {
-    let _this = $(this);
+  $('a:has(img)').each(function fancyboxImage() {
+    const $this = $(this);
 
-    if(/(jpeg|jpg|png|gif|bmp)$/i.test(_this.prop('href'))) {
-      _this.fancybox();
+    if (/(jpeg|jpg|png|gif|bmp)$/i.test($this.prop('href'))) {
+      $this.fancybox();
     }
   });
 
   // Fancybox for galleries
-  $('.gallery').each(function(i) {
-    let _this = $(this);
+  $('.gallery').each(function fancyboxGallery(i) {
+    const $this = $(this);
 
-    _this.find('a').prop('rel', 'fancybox-gallery-' + i);
-    _this.find('figure.gallery-item a').fancybox({
-      type: 'image'
+    $this.find('a').prop('rel', 'fancybox-gallery-' + i);
+    $this.find('figure.gallery-item a').fancybox({
+      type: 'image',
     });
   });
 });
