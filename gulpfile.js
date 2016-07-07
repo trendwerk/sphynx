@@ -23,6 +23,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     addSrc = require('gulp-add-src'),
     uglify = require('gulp-uglify'),
+    webpack = require('gulp-webpack'),
 
     // PHP
     phpcs = require('gulp-phpcs');
@@ -142,20 +143,11 @@ gulp.task('jsLint', function() {
 /**
  * Compile CoffeeScript
  */
-gulp.task('js', ['jsLint'], function() {
+gulp.task('js', function() {
   return gulp.src(files.js)
 
-  // Babel
-  .pipe(babel({
-    presets: ['es2015']
-  }))
-
-  // Concat
-  .pipe(addSrc.prepend(files.concat.js))
-  .pipe(concat('all.js'))
-
-  // Uglify
-  .pipe(uglify())
+  // Webpack
+  .pipe(webpack(require('./webpack.config.js')))
 
   // Write output
   .pipe(gulp.dest('assets/scripts/output/'))
@@ -242,7 +234,7 @@ gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
 
   gulp.watch(files.sass, ['base64', 'scssLint', 'sass']);
-  gulp.watch(files.js, ['jsLint', 'js']);
+  gulp.watch(files.js, ['js']);
   gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
 
