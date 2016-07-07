@@ -31,8 +31,8 @@
     line-height: $line-height;
     margin: 0;
     max-height: (($font-size * $line-height * $max-lines) + ($padding * 2));
-    padding: $padding ($padding * 2);
     overflow: hidden;
+    padding: $padding ($padding * 2);
     position: absolute;
     text-align: center;
   }

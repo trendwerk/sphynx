@@ -28,8 +28,8 @@
       @include font-size(map-get($font-sizes, 'text-small'));
       border-bottom: 1px solid tint($primary-color, 10%);
       display: block;
-      line-height: ($line-height-header - ($padding-vertical * 2));
       font-weight: bold;
+      line-height: ($line-height-header - ($padding-vertical * 2));
       padding: $padding-vertical 20px;
 
       @include respond-to('large') {
