@@ -2,9 +2,10 @@
 /**
  * Timber
  */
-if (class_exists('Timber')) {
-    Timber::$dirname = array('templates/base', 'templates');
-}
+use Timber\Timber;
+
+$timber = new Timber();
+Timber::$dirname = array('templates/base', 'templates');
 
 /**
  * Add theme support for RSS links
