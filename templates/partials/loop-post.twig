@@ -1,7 +1,7 @@
 <article class="{{ post.class }}">
 
 	<h2>
-		<a href="{{ post.permalink }}">
+		<a href="{{ post.link }}">
 			{{- post.title -}}
 		</a>
 	</h2>
@@ -10,7 +10,7 @@
 
 	{% if post.thumbnail %}
 
-		<a href="{{ post.permalink }}">
+		<a href="{{ post.link }}">
 			<img class="featured-image" src="{{ post.thumbnail.src('thumbnail') }}" alt="{{ post.thumbnail.title }}">
 		</a>
 
