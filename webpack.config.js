@@ -23,12 +23,12 @@ module.exports = {
           presets: ['es2015']
         }
       }
-    ]
+    ],
   },
   plugins: [
-      new BowerWebpackPlugin(),
-      new webpack.ProvidePlugin({
-        jQuery: "jquery",
-      }),
+    new BowerWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      jQuery: "jquery",
+    }),
   ],
 };
