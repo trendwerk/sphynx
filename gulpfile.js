@@ -18,7 +18,6 @@ var gulp = require('gulp'),
     cssBase64 = require('gulp-css-base64'),
 
     // JavaScript
-    uglify = require('gulp-uglify'),
     webpack = require('webpack-stream'),
 
     // PHP
