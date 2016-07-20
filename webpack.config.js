@@ -20,6 +20,7 @@ module.exports = {
         test: /\.js/,
         loader: 'babel',
         query: {
+          compact: true,
           presets: ['es2015']
         }
       }
