@@ -1,4 +1,3 @@
-import jQuery from '../../bower_components/jquery/dist/jquery';
 import '../../bower_components/fancybox/source/jquery.fancybox';
 
 jQuery(($) => {

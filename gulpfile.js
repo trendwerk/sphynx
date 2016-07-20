@@ -139,7 +139,7 @@ gulp.task('esLint', function() {
  * Compile JavaScript
  */
 gulp.task('js', function() {
-  return gulp.src(files.js)
+  return gulp.src('assets/scripts/main.js')
 
   // Webpack
   .pipe(webpack(require('./webpack.config.js')))

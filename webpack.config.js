@@ -1,6 +1,7 @@
 'use strict';
 
-const webpack = require('webpack');
+const webpack = require('webpack'),
+      BowerWebpackPlugin = require('bower-webpack-plugin');
 
 module.exports = {
   watch: true,
@@ -24,7 +25,10 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    moduleDirectories: ["bower_components"]
-  }
+  plugins: [
+      new BowerWebpackPlugin(),
+      new webpack.ProvidePlugin({
+        jQuery: "jquery",
+      }),
+  ],
 };
