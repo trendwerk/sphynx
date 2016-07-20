@@ -18,20 +18,14 @@ var gulp = require('gulp'),
     cssBase64 = require('gulp-css-base64'),
 
     // JavaScript
-    addSrc = require('gulp-add-src'),
-    babel = require('gulp-babel'),
-    concat = require('gulp-concat'),
-    esLint = require('gulp-eslint'),
     uglify = require('gulp-uglify'),
-    webpack = require('gulp-webpack'),
+    webpack = require('webpack-stream'),
 
     // PHP
     phpcs = require('gulp-phpcs');
 
 /**
  * Setup files to watch
- *
- * Concat contains extra files to concat
  */
 var files = {
   sass: ['assets/styles/**/*.scss'],
@@ -44,14 +38,7 @@ var files = {
     '!vendor/**/*.*',
     '!node_modules/**/*.*'
   ],
-  twig: ['templates/**/*.twig'],
-  concat: {
-    js: [
-      'bower_components/jquery/dist/jquery.js',
-      'bower_components/fancybox/source/jquery.fancybox.js',
-      'bower_components/toggle-navigation/src/toggle-navigation.js'
-    ]
-  }
+  twig: ['templates/**/*.twig']
 };
 
 /**
@@ -120,19 +107,6 @@ gulp.task('sass', ['scssLint', 'base64'], function() {
 
   // Reload
   .pipe(liveReload());
-});
-
-/**
- * Lint JavaScript
- */
-gulp.task('esLint', function() {
-  return gulp.src(files.js)
-
-  // Lint
-  .pipe(esLint())
-
-  // Report errors
-  .pipe(esLint.format());
 });
 
 /**
