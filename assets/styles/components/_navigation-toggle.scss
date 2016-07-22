@@ -10,7 +10,7 @@
   transition: transform 0.4s cubic-bezier(0, 0, 0, 1);
   width: $width;
 
-  @include respond-to('large') {
+  @include respond-to('toggle-navigation') {
     display: none;
   }
 

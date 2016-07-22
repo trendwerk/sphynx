@@ -6,7 +6,7 @@
     'height': ($line-height-header + ($padding * 2)),
     'item': '.menu-item',
     'menu': '.main-navigation',
-    'until': map-get($breakpoints, 'large'),
+    'until': map-get($breakpoints, 'toggle-navigation'),
   ));
   background-color: $primary-color;
   padding: $padding 0;
