@@ -18,19 +18,13 @@ var gulp = require('gulp'),
     cssBase64 = require('gulp-css-base64'),
 
     // JavaScript
-    addSrc = require('gulp-add-src'),
-    babel = require('gulp-babel'),
-    concat = require('gulp-concat'),
-    esLint = require('gulp-eslint'),
-    uglify = require('gulp-uglify'),
+    webpack = require('webpack-stream'),
 
     // PHP
     phpcs = require('gulp-phpcs');
 
 /**
  * Setup files to watch
- *
- * Concat contains extra files to concat
  */
 var files = {
   sass: ['assets/styles/**/*.scss'],
@@ -43,14 +37,7 @@ var files = {
     '!vendor/**/*.*',
     '!node_modules/**/*.*'
   ],
-  twig: ['templates/**/*.twig'],
-  concat: {
-    js: [
-      'bower_components/jquery/dist/jquery.js',
-      'bower_components/fancybox/source/jquery.fancybox.js',
-      'bower_components/toggle-navigation/src/toggle-navigation.js'
-    ]
-  }
+  twig: ['templates/**/*.twig']
 };
 
 /**
@@ -122,35 +109,13 @@ gulp.task('sass', ['scssLint', 'base64'], function() {
 });
 
 /**
- * Lint JavaScript
- */
-gulp.task('esLint', function() {
-  return gulp.src(files.js)
-
-  // Lint
-  .pipe(esLint())
-
-  // Report errors
-  .pipe(esLint.format());
-});
-
-/**
  * Compile JavaScript
  */
-gulp.task('js', ['esLint'], function() {
-  return gulp.src(files.js)
+gulp.task('js', function() {
+  return gulp.src('assets/scripts/main.js')
 
-  // Babel
-  .pipe(babel({
-    presets: ['es2015']
-  }))
-
-  // Concat
-  .pipe(addSrc.prepend(files.concat.js))
-  .pipe(concat('all.js'))
-
-  // Uglify
-  .pipe(uglify())
+  // Webpack
+  .pipe(webpack(require('./webpack.config.js')))
 
   // Write output
   .pipe(gulp.dest('assets/scripts/output/'))
@@ -237,7 +202,7 @@ gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
 
   gulp.watch(files.sass, ['base64', 'scssLint', 'sass']);
-  gulp.watch(files.js, ['esLint', 'js']);
+  gulp.watch(files.js, ['js']);
   gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
 
