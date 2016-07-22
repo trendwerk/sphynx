@@ -24,9 +24,9 @@ load_theme_textdomain('tp', get_template_directory() . '/assets/languages');
 /**
  * Instantiate hooks
  */
-new Trendwerk\TrendPress\Editor;
-new Trendwerk\TrendPress\Enqueue;
-new Trendwerk\TrendPress\Media;
-new Trendwerk\TrendPress\Menus;
+new Trendwerk\TrendPress\Editor();
+new Trendwerk\TrendPress\Enqueue();
+new Trendwerk\TrendPress\Media();
+new Trendwerk\TrendPress\Menus();
 
-new Trendwerk\TrendPress\TimberHelpers\Menus;
+new Trendwerk\TrendPress\TimberHelpers\Menus();
