@@ -1,4 +1,6 @@
 <?php
+namespace Trendwerk\TrendPress;
+
 use Timber\Timber;
 
 $timber = new Timber();
@@ -18,8 +20,8 @@ load_theme_textdomain('tp', get_template_directory() . '/assets/languages');
 /**
  * Instantiate hooks
  */
-new Trendwerk\TrendPress\Admin\Editor();
-new Trendwerk\TrendPress\Enqueue();
-new Trendwerk\TrendPress\Media();
-new Trendwerk\TrendPress\Menus();
-new Trendwerk\TrendPress\Plugins\Timber\Context();
+new Admin\Editor();
+new Enqueue();
+new Media();
+new Menus();
+new Plugins\Timber\Context();
