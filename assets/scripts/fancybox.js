@@ -1,7 +1,6 @@
 import '../../bower_components/fancybox/source/jquery.fancybox';
 
 jQuery(($) => {
-  // Fancybox for images
   $('a:has(img)').each(function fancyboxImage() {
     const $this = $(this);
 
@@ -10,7 +9,6 @@ jQuery(($) => {
     }
   });
 
-  // Fancybox for galleries
   $('.gallery').each(function fancyboxGallery(i) {
     const $this = $(this);
 
