@@ -1,17 +1,10 @@
 <?php
-/**
- * Composer install script
- */
-
 namespace Trendwerk\TrendPress;
 
 use Composer\Script\Event;
 
 final class Installer
 {
-    /**
-     * Set namespace for theme
-     */
     public static function setNamespace($event)
     {
         $io = $event->getIO();
@@ -38,13 +31,6 @@ final class Installer
         return 1;
     }
 
-    /**
-     * Rename namespace for all files in directory (recursively)
-     *
-     * @param string $dir Directory which to rename
-     * @param string $fromNamespace
-     * @param string $toNamespace
-     */
     private static function renameNamespaceInDir($dir, $fromNamespace, $toNamespace)
     {
         $changedFiles = 0;
@@ -75,13 +61,6 @@ final class Installer
         return $changedFiles;
     }
 
-    /**
-     * Rename namespace in file
-     *
-     * @param string $file
-     * @param string $fromNamespace
-     * @param string $toNamespace
-     */
     private static function renameNamespaceInFile($file, $fromNamespace, $toNamespace)
     {
         $_contents = $contents = file_get_contents($file);
@@ -95,9 +74,6 @@ final class Installer
         return false;
     }
 
-    /**
-     * Set theme data
-     */
     public static function setThemeData($event)
     {
         $io = $event->getIO();
