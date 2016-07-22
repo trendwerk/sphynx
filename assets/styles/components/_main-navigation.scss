@@ -23,17 +23,18 @@
     }
 
     a {
-      $padding-vertical: 10px;
+      $horizontal-padding: 20px;
 
       @include font-size(map-get($font-sizes, 'text-small'));
       border-bottom: 1px solid tint($primary-color, 10%);
       display: block;
       font-weight: bold;
-      line-height: ($line-height-header - ($padding-vertical * 2));
-      padding: $padding-vertical 20px;
+      padding: 10px $horizontal-padding;
 
       @include respond-to('toggle-navigation') {
         border: 0;
+        line-height: $header-height;
+        padding: 0 $horizontal-padding;
       }
     }
 
@@ -45,7 +46,7 @@
     &.current-menu-item a,
     &.current-menu-parent a,
     a:hover {
-      background: shade($primary-color, 20%);
+      text-decoration: underline;
     }
   }
 }
