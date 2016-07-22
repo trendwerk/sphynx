@@ -1,8 +1,4 @@
 <?php
-/**
- * Editor-specific settings
- */
-
 namespace Trendwerk\TrendPress;
 
 final class Editor
@@ -14,17 +10,11 @@ final class Editor
         add_filter('tiny_mce_before_init', array($this, 'buttons'), 1);
     }
 
-    /**
-     * Load editor styles
-     */
     public function loadStyles()
     {
         add_editor_style('assets/styles/output/editor.css');
     }
 
-    /**
-     * Define editor styles
-     */
     public function styles($settings)
     {
         $style_formats = array(
@@ -49,9 +39,6 @@ final class Editor
         return $settings;
     }
 
-    /**
-     * Define buttons
-     */
     public function buttons($settings)
     {
         $dfw_fs = (0 < strpos($settings['toolbar1'], 'dfw')) ? 'dfw' : 'fullscreen';
