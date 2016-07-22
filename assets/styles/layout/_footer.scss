@@ -37,18 +37,18 @@
     @include respond-to('medium') {
       float: right;
     }
-  }
 
-  ul {
-    @include list-style-none();
-  }
+    ul {
+      @include list-style-none();
+    }
 
-  li {
-    display: inline;
-    margin: 0 5px;
+    li {
+      display: inline;
+      margin: 0 5px;
 
-    @include respond-to('medium') {
-      margin: 0 0 0 20px;
+      @include respond-to('medium') {
+        margin: 0 0 0 20px;
+      }
     }
   }
 }
