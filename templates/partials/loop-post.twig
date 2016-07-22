@@ -7,11 +7,5 @@
 
   {% include 'partials/post-meta.twig' %}
 
-  {% if post.thumbnail %}
-    <a href="{{ post.link }}">
-      <img class="featured-image" src="{{ post.thumbnail.src('thumbnail') }}" alt="{{ post.thumbnail.title }}">
-    </a>
-  {% endif %}
-
   {{ post.get_preview(100, false, __('Read more', 'tp'))|wpautop }}
 </article>
