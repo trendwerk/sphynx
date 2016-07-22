@@ -1,13 +1,13 @@
 {% if menus.main.get_items %}
-	<nav class="main-navigation">
-		<ul class="menu">
-			{% for item in menus.main.get_items %}
-				<li class="{{ item.classes|join(' ') }}">
-					<a href="{{ item.get_link }}">
-						{{- item.title -}}
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
-	</nav>
+  <nav class="main-navigation">
+    <ul class="menu">
+      {% for item in menus.main.get_items %}
+        <li class="{{ item.classes|join(' ') }}">
+          <a href="{{ item.get_link }}">
+            {{- item.title -}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
 {% endif %}

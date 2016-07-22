@@ -1,11 +1,11 @@
 <p class="meta">
-	{{ __('Posted on', 'tp') }} <time datetime="{{ post.post_date|date('Y-m-d') }}">{{ post.date }}</time>
-	{{ __('by', 'tp') }} <a href="{{ post.author.path }}">{{ post.author.name }}</a>
+  {{ __('Posted on', 'tp') }} <time datetime="{{ post.post_date|date('Y-m-d') }}">{{ post.date }}</time>
+  {{ __('by', 'tp') }} <a href="{{ post.author.path }}">{{ post.author.name }}</a>
 
-	{% if post.terms('category') %}
-		{{ __('in the category', 'tp') }}
-		<a href="{{ (post.terms('category')|first).link }}">
-			{{- post.terms('category')|first -}}
-		</a>
-	{% endif %}
+  {% if post.terms('category') %}
+    {{ __('in the category', 'tp') }}
+    <a href="{{ (post.terms('category')|first).link }}">
+      {{- post.terms('category')|first -}}
+    </a>
+  {% endif %}
 </p>

@@ -1,41 +1,41 @@
-		<footer class="footer">
+    <footer class="footer">
 
-			<div class="wrapper">
+      <div class="wrapper">
 
-				<div class="copyright">
-					<p>
-						&copy; {{ __('Copyright', 'tp') }} {{ now|date('Y') }} - {{ site.name }}
-					</p>
-				</div>
+        <div class="copyright">
+          <p>
+            &copy; {{ __('Copyright', 'tp') }} {{ now|date('Y') }} - {{ site.name }}
+          </p>
+        </div>
 
-				{% if menus.footer.get_items %}
+        {% if menus.footer.get_items %}
 
-					<nav>
+          <nav>
 
-						<ul>
+            <ul>
 
-							{% for item in menus.footer.get_items %}
+              {% for item in menus.footer.get_items %}
 
-								<li class="{{ item.classes|join(' ') }}">
-									<a href="{{ item.get_link }}">
-										{{- item.title -}}
-									</a>
-								</li>
+                <li class="{{ item.classes|join(' ') }}">
+                  <a href="{{ item.get_link }}">
+                    {{- item.title -}}
+                  </a>
+                </li>
 
-							{% endfor %}
+              {% endfor %}
 
-						</ul>
+            </ul>
 
-					</nav>
+          </nav>
 
-				{% endif %}
+        {% endif %}
 
-			</div>
+      </div>
 
-		</footer>
+    </footer>
 
-		{{ wp_footer }}
+    {{ wp_footer }}
 
-	</body>
+  </body>
 
 </html>

@@ -2,18 +2,18 @@
 
 {% block content %}
 
-	<h1>
-		{{ __('Page doesn\'t exist', 'tp') }}
-	</h1>
+  <h1>
+    {{ __('Page doesn\'t exist', 'tp') }}
+  </h1>
 
-	<p>
-		{{ __('The page you are looking for doesn\'t exist. Maybe the page has been moved or never existed. You might want to check the URL for typos or use the menu to search for the page you are looking for.', 'tp') }}
-	</p>
+  <p>
+    {{ __('The page you are looking for doesn\'t exist. Maybe the page has been moved or never existed. You might want to check the URL for typos or use the menu to search for the page you are looking for.', 'tp') }}
+  </p>
 
-	<p>
-		<a class="button" href="{{ site.url }}">
-			{{ __('To the homepage', 'tp') }}
-		</a>
-	</p>
+  <p>
+    <a class="button" href="{{ site.url }}">
+      {{ __('To the homepage', 'tp') }}
+    </a>
+  </p>
 
 {% endblock %}
