@@ -1,8 +1,4 @@
 <?php
-/**
- * Everything that has to do with media
- */
-
 namespace Trendwerk\TrendPress;
 
 final class Media
@@ -13,9 +9,6 @@ final class Media
         add_filter('embed_oembed_html', array($this, 'videoEmbed'));
     }
 
-    /**
-     * Set default image sizes
-     */
     public function defaults()
     {
         update_option('thumbnail_size_w', 120);
@@ -30,9 +23,6 @@ final class Media
         update_option('image_default_link_type', 'file');
     }
 
-    /**
-     * Responsive video container
-     */
     public function videoEmbed($html)
     {
         return '<div class="video-container">' . $html . '</div>';

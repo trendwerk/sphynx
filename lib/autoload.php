@@ -1,8 +1,4 @@
 <?php
-/**
- * Autoload classes
- */
-
 namespace Trendwerk\TrendPress;
 
 spl_autoload_register(function ($class) {
