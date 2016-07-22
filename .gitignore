@@ -1,9 +1,3 @@
-# Bower
 bower_components
-
-# Grunt
 node_modules
-*.sass-cache
-
-# Composer
 vendor/*
