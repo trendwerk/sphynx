@@ -1,7 +1,3 @@
-/// Shade (darken) a color
-///
-/// @param {Color} $color
-/// @param {Percentage} $percentage
 @function shade($color, $percentage) {
   @return mix($black, $color, $percentage);
 }

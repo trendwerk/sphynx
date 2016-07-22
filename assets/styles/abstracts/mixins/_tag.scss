@@ -1,4 +1,3 @@
-/// Tag
 @mixin tag() {
   @include box-link();
   @include font-size(map-get($font-sizes, 'text-small'));

@@ -1,6 +1,3 @@
-/// Respond to a certain min-width
-///
-/// @param {String} $breakpoint - Breakpoint
 @mixin respond-to($breakpoint) {
   $raw-query: map-get($breakpoints, $breakpoint);
 

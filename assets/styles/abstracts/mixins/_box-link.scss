@@ -1,6 +1,3 @@
-/// Boxed link
-///
-/// @param {Map} $args
 @mixin box-link($args: ()) {
   $settings: map-merge((
     'background-color': $light-background,

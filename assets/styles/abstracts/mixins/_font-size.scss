@@ -1,7 +1,3 @@
-/// Font size
-///
-/// @param {Map} $fs-map - Font size map
-/// @param {Map} $fs-breakpoints [$breakpoints] - Corresponding breakpoints
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
   $fs-keys: map-keys($fs-breakpoints);
 

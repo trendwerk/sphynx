@@ -1,4 +1,3 @@
-/// Button
 @mixin button() {
   @include box-link((
   	'background-color': $primary-color,

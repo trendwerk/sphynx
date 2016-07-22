@@ -1,6 +1,3 @@
-/// Boxed content
-///
-/// @param {Map} $args
 @mixin box($args: ()) {
   $settings: map-merge((
     'background-color': $light-background,
