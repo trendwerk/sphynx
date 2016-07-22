@@ -1,8 +1,5 @@
 'use strict';
 
-/**
- * Require dependencies
- */
 var gulp = require('gulp'),
     cache = require('gulp-cached'),
     beep = require('beepbeep'),
@@ -10,22 +7,17 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     liveReload = require('gulp-livereload'),
 
-    // Sass
     scssLint = require('gulp-scss-lint'),
     sass = require('gulp-sass'),
     sassGlob = require('gulp-sass-glob'),
     cssNano = require('gulp-cssnano'),
     cssBase64 = require('gulp-css-base64'),
 
-    // JavaScript
     webpack = require('webpack-stream'),
 
-    // PHP
     phpcs = require('gulp-phpcs');
 
-/**
- * Setup files to watch
- */
+
 var files = {
   sass: ['assets/styles/**/*.scss'],
   js: [
@@ -47,122 +39,67 @@ var gulp_src = gulp.src;
 
 gulp.src = function() {
   return gulp_src.apply(gulp, arguments)
-
-  .pipe(plumber(function(error) {
-    beep();
-  }));
+    .pipe(plumber(function(error) {
+      beep();
+    }));
 };
 
 /**
- * Lint Sass
+ * Tasks
  */
 gulp.task('scssLint', function() {
   return gulp.src(files.sass)
-
-  // Lint
-  .pipe(scssLint({
-    'config': 'config/lint/scss.yml'
-  }))
-
-  // Make the reporter fail task on error
-  .pipe(scssLint.failReporter());
+    .pipe(scssLint({
+      'config': 'config/lint/scss.yml'
+    }))
+    .pipe(scssLint.failReporter());
 });
 
-/**
- * Base64 Fancybox images
- */
 gulp.task('base64', ['scssLint'], function() {
   return gulp.src('bower_components/fancybox/source/*.css')
-
-  // Base64 images
-  .pipe(cssBase64())
-
-  // Write output
-  .pipe(gulp.dest('bower_components/fancybox/source/'));
+    .pipe(cssBase64())
+    .pipe(gulp.dest('bower_components/fancybox/source/'));
 });
 
-/**
- * Compile Sass
- */
 gulp.task('sass', ['scssLint', 'base64'], function() {
   return gulp.src(files.sass)
-
-  //Glob
-  .pipe(sassGlob())
-
-  // Don't stop watch on error (just log it)
-  .pipe(sass().on('error', sass.logError))
-
-  // Minify, prefix
-  .pipe(cssNano({
-    autoprefixer: {
-      add: true,
-      browsers: ['> 1%']
-    },
-  }))
-
-  // Write output
-  .pipe(gulp.dest('assets/styles/output/'))
-
-  // Reload
-  .pipe(liveReload());
+    .pipe(sassGlob())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(cssNano({
+      autoprefixer: {
+        add: true,
+        browsers: ['> 1%']
+      },
+    }))
+    .pipe(gulp.dest('assets/styles/output/'))
+    .pipe(liveReload());
 });
 
-/**
- * Compile JavaScript
- */
 gulp.task('js', function() {
   return gulp.src('assets/scripts/main.js')
-
-  // Webpack
-  .pipe(webpack(require('./webpack.config.js')))
-
-  // Write output
-  .pipe(gulp.dest('assets/scripts/output/'))
-
-  // Reload
-  .pipe(liveReload());
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(gulp.dest('assets/scripts/output/'))
+    .pipe(liveReload());
 });
 
-/**
- * PHP CodeSniffer (PSR)
- */
 gulp.task('phpcs', function() {
   return gulp.src(files.php)
-
-  // Use cache to filter out unmodified files
-  .pipe(cache('phpcs'))
-
-  // Sniff code
-  .pipe(phpcs({
-    bin: 'vendor/bin/phpcs',
-    standard: 'PSR2'
-  }))
-
-  // Log errors and fail afterwards
-  .pipe(phpcs.reporter('log'))
-  .pipe(phpcs.reporter('fail'))
-
-  // Reload
-  .pipe(liveReload());
+    .pipe(cache('phpcs'))
+    .pipe(phpcs({
+      bin: 'vendor/bin/phpcs',
+      standard: 'PSR2'
+    }))
+    .pipe(phpcs.reporter('log'))
+    .pipe(phpcs.reporter('fail'))
+    .pipe(liveReload());
 });
 
-/**
- * Twig: Livereload
- */
 gulp.task('twig', function() {
   return gulp.src(files.twig)
-
-  // Use cache to filter out unmodified files
-  .pipe(cache('twig'))
-
-  // Reload
-  .pipe(liveReload());
+    .pipe(cache('twig'))
+    .pipe(liveReload());
 });
 
-/**
- * Welcome message
- */
 var welcomeMessage = [
   '',
   '',
@@ -195,9 +132,6 @@ var welcomeMessage = [
   ''
 ].join('\n');
 
-/**
- * Watch
- */
 gulp.task('default', function() {
   console.log(welcomeMessage.cyan);
 
