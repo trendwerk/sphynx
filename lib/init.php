@@ -28,5 +28,4 @@ new Trendwerk\TrendPress\Editor();
 new Trendwerk\TrendPress\Enqueue();
 new Trendwerk\TrendPress\Media();
 new Trendwerk\TrendPress\Menus();
-
-new Trendwerk\TrendPress\TimberHelpers\Menus();
+new Trendwerk\TrendPress\Plugins\Timber\Context();

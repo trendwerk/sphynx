@@ -1,16 +1,16 @@
 <?php
-namespace Trendwerk\TrendPress\TimberHelpers;
+namespace Trendwerk\TrendPress\Plugins\Timber;
 
 use Timber\Menu;
 
-final class Menus
+final class Context
 {
     public function __construct()
     {
-        add_filter('timber_context', array($this, 'addToContext'));
+        add_filter('timber_context', array($this, 'add'));
     }
 
-    public function addToContext($context)
+    public function add($context)
     {
         $context['menus'] = array(
             'main'   => new Menu('main'),
