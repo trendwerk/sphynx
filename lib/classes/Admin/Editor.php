@@ -1,5 +1,5 @@
 <?php
-namespace Trendwerk\TrendPress;
+namespace Trendwerk\TrendPress\Admin;
 
 final class Editor
 {
