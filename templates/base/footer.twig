@@ -1,7 +1,5 @@
     <footer class="footer">
-
       <div class="wrapper">
-
         <div class="copyright">
           <p>
             &copy; {{ __('Copyright', 'tp') }} {{ now|date('Y') }} - {{ site.name }}
@@ -9,33 +7,21 @@
         </div>
 
         {% if menus.footer.get_items %}
-
           <nav>
-
             <ul>
-
               {% for item in menus.footer.get_items %}
-
                 <li class="{{ item.classes|join(' ') }}">
                   <a href="{{ item.get_link }}">
                     {{- item.title -}}
                   </a>
                 </li>
-
               {% endfor %}
-
             </ul>
-
           </nav>
-
         {% endif %}
-
       </div>
-
     </footer>
 
     {{ wp_footer }}
-
   </body>
-
 </html>
