@@ -1,11 +1,9 @@
 a {
   color: $link-color;
   outline: 0;
-  text-decoration: underline;
 
   &:hover {
     color: $hover-color;
-    text-decoration: underline;
   }
 
   &.read-more::after,
