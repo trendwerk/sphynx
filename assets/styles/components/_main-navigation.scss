@@ -33,7 +33,7 @@
 
       @include respond-to('toggle-navigation') {
         border: 0;
-        line-height: $header-height;
+        line-height: map-get($header-height, 'full');
         padding: 0 $horizontal-padding;
       }
     }

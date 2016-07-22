@@ -1,6 +1,10 @@
 .logo {
+  @include font-size(map-get($font-sizes, 'h3'));
   font-family: $heading-font;
-  font-size: 28px;
   font-weight: 600;
-  line-height: $header-height;
+  line-height: map-get($header-height, 'toggle-navigation');
+
+  @include respond-to('toggle-navigation') {
+    line-height: map-get($header-height, 'full');
+  }
 }

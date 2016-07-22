@@ -5,7 +5,7 @@
   cursor: pointer;
   float: right;
   height: $height;
-  margin-top: (($header-height - $height) / 2);
+  margin-top: ((map-get($header-height, 'toggle-navigation') - $height) / 2);
   position: relative;
   transition: transform 0.4s cubic-bezier(0, 0, 0, 1);
   width: $width;
