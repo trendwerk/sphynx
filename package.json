@@ -29,6 +29,6 @@
     "webpack-stream": "^3.2.0"
   },
   "scripts": {
-    "postinstall": "bower install && gulp"
+    "postinstall": "composer install && bower install && gulp"
   }
 }
