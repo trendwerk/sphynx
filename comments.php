@@ -8,8 +8,6 @@ if (post_password_required()) {
 $context = Timber::get_context();
 $context['post'] = new Post();
 
-$context['have_comments'] = have_comments();
-
 $context['comment_list'] = wp_list_comments(array(
     'avatar_size' => 60,
     'echo'        => false,
