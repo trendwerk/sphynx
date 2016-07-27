@@ -2,11 +2,13 @@
   <div class="comments">
     {% if post.get_comment_count() > 0 %}
       <h2>
-        {{ fn('_n', 'One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', post.comment_count, 'tp')|format(post.comment_count,'<span>'~post.title~'</span>') }}
+        {{ fn('_n', 'One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', post.get_comment_count(), 'tp')|format(post.get_comment_count(),'<span>'~post.title~'</span>') }}
       </h2>
 
       <ol>
-        {{ comment_list }}
+        {% for comment in post.comments() %}
+          {% include 'partials/comment.twig' %}
+        {% endfor %}
       </ol>
 
       {% if comment_pages %}

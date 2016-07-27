@@ -1,0 +1,13 @@
+<li class="comment">
+  <img src="{{ comment.avatar(60) }}" srcset="{{ comment.avatar(120) }} 2x" alt="{{ comment.author.name }}" />
+
+  <span class="comment-author">
+    {{ comment.author.name }}
+  </span>
+
+  <span class="comment-date">
+    {{ comment.date }}
+  </span>
+
+  {{ comment.content }}
+</li>
