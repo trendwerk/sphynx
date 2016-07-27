@@ -10,6 +10,5 @@
   {{ post.content }}
 
   {% include 'partials/tags.twig' %}
-
-  {{ fn('comments_template') }}
+  {% include 'partials/comments.twig' %}
 {% endblock %}
