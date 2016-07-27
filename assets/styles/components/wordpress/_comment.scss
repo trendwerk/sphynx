@@ -5,9 +5,13 @@
   margin-bottom: 40px;
   padding: 30px;
 
+  &-avatar,
+  &-author {
+    vertical-align: middle;
+  }
+
   &-avatar {
     margin-right: $element-margin;
-    vertical-align: middle;
   }
 
   &-author {
