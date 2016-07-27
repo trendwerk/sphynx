@@ -1,15 +1,25 @@
-<li class="comment">
-  <img class="comment-avatar" src="{{ comment.avatar(60) }}" srcset="{{ comment.avatar(120) }} 2x" alt="{{ comment.author.name }}" />
+<li class="comment-wrapper">
+  <div class="comment">
+    <img class="comment-avatar" src="{{ comment.avatar(60) }}" srcset="{{ comment.avatar(120) }} 2x" alt="{{ comment.author.name }}" />
 
-  <span class="comment-author">
-    {{ comment.author.name }}
-  </span>
+    <span class="comment-author">
+      {{ comment.author.name }}
+    </span>
 
-  <span class="comment-date">
-    {{ comment.date }}
-  </span>
+    <span class="comment-date">
+      {{ comment.date }}
+    </span>
 
-  <div class="comment-content">
-    {{ comment.content|wpautop }}
+    <div class="comment-content">
+      {{ comment.content|wpautop }}
+    </div>
   </div>
+
+  {% if comment.children() %}
+    <ol class="children">
+      {% for reply in comment.children() %}
+        {% include 'partials/comment.twig' with { comment: reply } %}
+      {% endfor %}
+    </ol>
+  {% endif %}
 </li>
