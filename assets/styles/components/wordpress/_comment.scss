@@ -19,9 +19,12 @@
     float: right;
   }
 
+  &-meta {
+    margin-bottom: $element-margin;
+  }
+
   &-content {
     margin-bottom: $element-margin;
-    margin-top: $element-margin;
 
     p:last-of-type {
       margin-bottom: 0;
