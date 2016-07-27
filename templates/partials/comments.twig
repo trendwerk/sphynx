@@ -10,12 +10,6 @@
           {% include 'partials/comment.twig' %}
         {% endfor %}
       </ol>
-
-      {% if comment_pages %}
-        <nav class="pager">
-          {{ comment_pages }}
-        </nav>
-      {% endif %}
     {% endif %}
 
     {{ fn('comment_form', {'comment_notes_after': ''}) }}
