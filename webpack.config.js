@@ -29,7 +29,7 @@ module.exports = {
   plugins: [
     new BowerWebpackPlugin(),
     new webpack.ProvidePlugin({
-      jQuery: "jquery",
+      jQuery: 'jquery',
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
