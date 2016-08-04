@@ -17,7 +17,6 @@ var gulp = require('gulp'),
 
     phpcs = require('gulp-phpcs');
 
-
 var files = {
   sass: ['assets/styles/**/*.scss'],
   js: [
