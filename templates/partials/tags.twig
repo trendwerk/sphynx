@@ -5,9 +5,9 @@
         {{ __('Tags', 'tp') }}
       </span>
 
-      {% for term in post.terms('tags') %}
-        <a class="tag" href="{{ term.link }}">
-          {{- term.name -}}
+      {% for tag in post.terms('tags') %}
+        <a class="tag" href="{{ tag.link }}">
+          {{- tag.name -}}
         </a>
       {% endfor %}
     </p>
