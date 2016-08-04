@@ -7,7 +7,7 @@
 
       {% for tag in post.terms('tags') %}
         <a class="tag" href="{{ tag.link }}">
-          {{- tag.name -}}
+          {{ tag.name }}
         </a>
       {% endfor %}
     </p>
