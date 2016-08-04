@@ -13,8 +13,6 @@ final class Enqueue
         $template_root = get_template_directory_uri();
         $assets = $template_root . '/assets';
 
-        wp_enqueue_script('comment-reply');
-
         wp_enqueue_script('main', $assets . '/scripts/output/all.js', null, null, true);
         wp_enqueue_style('main', $assets . '/styles/output/main.css');
     }

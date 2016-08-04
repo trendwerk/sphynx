@@ -1,0 +1,37 @@
+.comment {
+  $element-margin: 20px;
+
+  background: $light-background;
+  margin-bottom: 40px;
+  padding: 30px;
+
+  &-avatar,
+  &-author {
+    vertical-align: middle;
+  }
+
+  &-avatar {
+    margin-right: $element-margin;
+  }
+
+  &-author {
+    font-weight: 600;
+  }
+
+  &-date {
+    color: $text-light;
+    float: right;
+  }
+
+  &-meta {
+    margin-bottom: $element-margin;
+  }
+
+  &-content {
+    margin-bottom: $element-margin;
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

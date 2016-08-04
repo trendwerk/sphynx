@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TrendPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-18 18:17+0100\n"
-"PO-Revision-Date: 2016-02-18 18:17+0100\n"
+"POT-Creation-Date: 2016-07-27 14:08+0200\n"
+"PO-Revision-Date: 2016-07-27 14:08+0200\n"
 "Last-Translator: Harold Angenent <harold@trendwerk.nl>\n"
 "Language-Team: Ontwerpstudio Trendwerk <info@trendwerk.nl>\n"
 "Language: nl_NL\n"
@@ -17,43 +17,32 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../..\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../../comments.php:17 ../../templates/partials/pagination.twig:32
-msgid "Next"
-msgstr "Volgende"
-
-#: ../../comments.php:18 ../../templates/partials/pagination.twig:6
-msgid "Previous"
-msgstr "Vorige"
-
-#: ../../index.php:8
-msgid "Search results for"
-msgstr "Zoekresultaten voor"
-
-#: ../../lib/classes/Editor.php:32
+#: ../../lib/classes/Admin/Editor.php:22
 msgid "Button"
 msgstr "Knop"
 
-#: ../../lib/classes/Editor.php:37
+#: ../../lib/classes/Admin/Editor.php:27
 msgid "Secondary button"
 msgstr "Secondaire knop"
 
-#: ../../lib/classes/Editor.php:42 ../../templates/partials/loop-post.twig:19
+#: ../../lib/classes/Admin/Editor.php:32
+#: ../../templates/partials/loop-post.twig:10
 msgid "Read more"
 msgstr "Lees verder"
 
-#: ../../lib/classes/Menus.php:20
+#: ../../lib/classes/Menus.php:13
 msgid "Main navigation"
 msgstr "Hoofdnavigatie"
 
-#: ../../lib/classes/Menus.php:21
+#: ../../lib/classes/Menus.php:14
 msgid "Footer"
 msgstr "Footer"
 
-#: ../../templates/404.twig:6
+#: ../../templates/404.twig:5
 msgid "Page doesn't exist"
 msgstr "Pagina bestaat niet"
 
-#: ../../templates/404.twig:10
+#: ../../templates/404.twig:9
 msgid ""
 "The page you are looking for doesn't exist. Maybe the page has been moved or "
 "never existed. You might want to check the URL for typos or use the menu to "
@@ -63,17 +52,33 @@ msgstr ""
 "verplaatst of nooit heeft bestaan. Je kunt de URL controleren op typfouten "
 "of het menu gebruiken om de website te doorzoeken."
 
-#: ../../templates/404.twig:15
+#: ../../templates/404.twig:14
 msgid "To the homepage"
 msgstr "Naar de homepagina"
 
-#: ../../templates/base/base.twig:8 ../../templates/index.twig:22
+#: ../../templates/base/base.twig:6 ../../templates/index.twig:18
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
-#: ../../templates/base/footer.twig:9
+#: ../../templates/base/footer.twig:5
 msgid "Copyright"
 msgstr "Copyright"
+
+#: ../../templates/partials/comment.twig:21
+msgid "Reply"
+msgstr "Reageren"
+
+#: ../../templates/partials/comments.twig:5
+msgid "Comments"
+msgstr "Reacties"
+
+#: ../../templates/partials/pagination.twig:6
+msgid "Previous"
+msgstr "Vorige"
+
+#: ../../templates/partials/pagination.twig:24
+msgid "Next"
+msgstr "Volgende"
 
 #: ../../templates/partials/post-meta.twig:2
 msgid "Posted on"
@@ -87,9 +92,12 @@ msgstr "door"
 msgid "in the category"
 msgstr "in de categorie"
 
-#: ../../templates/partials/tags.twig:6
+#: ../../templates/partials/tags.twig:5
 msgid "Tags"
 msgstr "Tags"
+
+#~ msgid "Search results for"
+#~ msgstr "Zoekresultaten voor"
 
 #~ msgid "The page you are looking for doesn't exist."
 #~ msgstr "De pagina die je zoekt bestaat niet."
@@ -681,9 +689,6 @@ msgstr "Tags"
 #~ msgid "Custom post type posts"
 #~ msgstr "Custom post type berichten"
 
-#~ msgid "Reply"
-#~ msgstr "Reageer"
-
 #~ msgid "Comments are closed"
 #~ msgstr "Reacties zijn gesloten"
 
@@ -705,9 +710,6 @@ msgstr "Tags"
 
 #~ msgid "on"
 #~ msgstr "op"
-
-#~ msgid "No comments yet"
-#~ msgstr "Nog geen reacties"
 
 #~ msgid "Respond"
 #~ msgstr "Reageer"
