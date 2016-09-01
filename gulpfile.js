@@ -136,12 +136,12 @@ var welcomeMessage = [
 ].join('\n');
 
 gulp.task('default', function() {
-  console.log(welcomeMessage.cyan);
-
   gulp.watch(files.sass, ['base64', 'scssLint', 'sass']);
   gulp.watch(files.js, ['js']);
   gulp.watch(files.php, ['phpcs']);
   gulp.watch(files.twig, ['twig']);
 
   liveReload.listen();
+
+  console.log(welcomeMessage.cyan);
 });
