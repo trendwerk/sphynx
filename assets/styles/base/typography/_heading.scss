@@ -22,17 +22,17 @@ h6 {
 }
 
 h1 {
-  @include font-size(map-get($font-sizes, 'h1'));
+  font-size: map-get($font-sizes, 'h1');
   margin: 0 0 $vertical-spacing;
 }
 
 h2 {
-  @include font-size(map-get($font-sizes, 'h2'));
+  font-size: map-get($font-sizes, 'h2');
   margin: 0 0 ($vertical-spacing * 0.65);
 }
 
 h3 {
-  @include font-size(map-get($font-sizes, 'h3'));
+  font-size: map-get($font-sizes, 'h3');
 }
 
 h4,

@@ -3,11 +3,17 @@ html {
 }
 
 body {
-  @include font-size(map-get($font-sizes, 'base'));
+  $base: map-get($font-sizes, 'base');
+
   color: $text-color;
   font-family: $text-font;
+  font-size: map-get($base, 'small');
   line-height: $line-height;
   word-wrap: break-word;
+
+  @include respond-to('medium') {
+    font-size: map-get($base, 'medium');
+  }
 }
 
 p {
