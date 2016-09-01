@@ -1,7 +1,6 @@
 .post {
   @include full-width();
-  margin: 0 0 $vertical-spacing;
-  padding: 0 0 $vertical-spacing;
+  margin-bottom: ($vertical-spacing * 2);
 
   &.sticky {
     @include box();
