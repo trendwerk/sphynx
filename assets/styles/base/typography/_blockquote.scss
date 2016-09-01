@@ -2,7 +2,7 @@ blockquote {
   color: $text-light;
   font-size: map-get($font-sizes, 'blockquote');
   font-style: italic;
-  line-height: 1.5;
+  line-height: 1.5em;
   margin: 0;
 }
 
