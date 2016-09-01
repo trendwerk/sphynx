@@ -1,13 +1,13 @@
 main {
   @include full-width();
-  padding: ($vertical-spacing * 1.5) 0 $vertical-spacing;
+  margin: ($vertical-spacing * 1.5) 0 $vertical-spacing;
 
   @include respond-to('medium') {
-    padding: ($vertical-spacing * 2) 0 $vertical-spacing;
+    margin: ($vertical-spacing * 2) 0 $vertical-spacing;
   }
 
   @include respond-to('large') {
-    padding: ($vertical-spacing * 3) 0 ($vertical-spacing * 2);
+    margin: ($vertical-spacing * 3) 0 ($vertical-spacing * 2);
 
     .wrapper {
       margin: 0 auto;
