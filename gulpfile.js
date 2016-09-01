@@ -68,7 +68,7 @@ gulp.task('sass', ['scssLint', 'base64'], function() {
     .pipe(cssNano({
       autoprefixer: {
         add: true,
-        browsers: ['> 1%']
+        browsers: ['> 0%']
       },
     }))
     .pipe(gulp.dest('assets/styles/output/'))
