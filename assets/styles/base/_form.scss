@@ -55,7 +55,7 @@ button {
   @include button();
   -webkit-appearance: none;
   border: 0;
-  line-height: $line-height;
+  line-height: map-get($line-height, 'base');
 }
 
 select {

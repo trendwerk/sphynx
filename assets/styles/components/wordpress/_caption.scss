@@ -4,8 +4,8 @@
 
 .wp-caption-dd,
 .wp-caption-text {
-  font-size: 16px;
+  font-size: map-get($font-sizes, 'text-small');
   font-style: italic;
-  line-height: 1.5em;
+  line-height: map-get($line-height, 'small');
   width: 100%;
 }

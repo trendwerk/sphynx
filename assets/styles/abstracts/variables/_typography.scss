@@ -10,8 +10,6 @@ $text-font: (
   sans-serif,
 );
 
-$line-height: 2em;
-
 $font-sizes: (
   'base': (
     'small': 1em,
@@ -23,4 +21,9 @@ $font-sizes: (
   'h3': 1.25em,
   'h4': 1.1em,
   'blockquote': 1.75em,
+);
+
+$line-height: (
+  'base': 2em,
+  'small': 1.5em,
 );

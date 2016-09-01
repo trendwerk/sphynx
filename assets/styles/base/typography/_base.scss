@@ -8,7 +8,7 @@ body {
   color: $text-color;
   font-family: $text-font;
   font-size: map-get($base, 'small');
-  line-height: $line-height;
+  line-height: map-get($line-height, 'base');
   word-wrap: break-word;
 
   @include respond-to('medium') {
