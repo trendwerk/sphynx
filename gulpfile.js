@@ -70,6 +70,9 @@ gulp.task('sass', ['scssLint', 'base64'], function() {
         add: true,
         browsers: ['> 0%']
       },
+      discardComments: {
+        removeAll: true
+      }
     }))
     .pipe(gulp.dest('assets/styles/output/'))
     .pipe(liveReload());
