@@ -8,10 +8,12 @@ main {
 
   @include respond-to('large') {
     margin: ($vertical-spacing * 3) 0 ($vertical-spacing * 2);
+  }
 
-    .wrapper {
+  .wrapper {
+    @media (min-width: $content-width) {
       margin: 0 auto;
-      width: 920px;
+      width: $content-width;
     }
   }
 }
