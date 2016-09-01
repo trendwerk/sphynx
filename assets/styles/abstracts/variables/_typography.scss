@@ -10,35 +10,26 @@ $text-font: (
   sans-serif,
 );
 
-$line-height: 2;
+$line-height: 2em;
 
 $font-sizes: (
   'base': (
-    'small': 18px,
-    'medium': 20px,
+    'small': 1.125em,
+    'medium': 1.25em,
   ),
-  'text-small': (
-    'small': 16px,
-    'medium': 18px,
-  ),
+  'text-small': 0.9em,
   'h1': (
-    'small': 32px,
-    'medium': 40px,
+    'small': 1.8em,
+    'medium': 2em,
   ),
   'h2': (
-    'small': 24px,
-    'medium': 28px,
+    'small': 1.3em,
+    'medium': 1.4em,
   ),
   'h3': (
-    'small': 20px,
-    'medium': 24px,
+    'small': 1.1em,
+    'medium': 1.2em,
   ),
-  'h4': (
-    'small': 18px,
-    'medium': 20px,
-  ),
-  'blockquote': (
-    'small': 28px,
-    'medium': 32px,
-  )
+  'h4': 1em,
+  'blockquote': 1.6em,
 );

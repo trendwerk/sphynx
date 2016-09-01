@@ -1,6 +1,6 @@
 blockquote {
-  @include font-size(map-get($font-sizes, 'blockquote'));
   color: $text-light;
+  font-size: map-get($font-sizes, 'blockquote');
   font-style: italic;
   line-height: 1.5;
   margin: 0;

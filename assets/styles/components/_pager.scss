@@ -12,11 +12,11 @@
       'height': 50px,
       'margin': 10px,
     ));
-    @include font-size(map-get($font-sizes, 'text-small'));
     @include hover((
       'background-color': $primary-color,
       'color': $white,
     ));
+    font-size: map-get($font-sizes, 'text-small');
     font-weight: 600;
     min-width: 50px;
   }
@@ -26,9 +26,9 @@
       'height': 46px,
       'margin': 10px,
     ));
-    @include font-size(map-get($font-sizes, 'text-small'));
     background: none;
     border: 2px solid $light-background;
+    font-size: map-get($font-sizes, 'text-small');
     font-weight: 600;
     min-width: 46px;
   }

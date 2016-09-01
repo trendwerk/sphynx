@@ -1,8 +1,8 @@
 .footer {
   @include full-width();
-  @include font-size(map-get($font-sizes, 'text-small'));
   background-color: $primary-color;
   color: $white;
+  font-size: map-get($font-sizes, 'text-small');
   line-height: 30px;
   padding: 25px 0;
 
