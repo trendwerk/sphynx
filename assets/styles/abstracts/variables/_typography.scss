@@ -14,22 +14,22 @@ $line-height: 2em;
 
 $font-sizes: (
   'base': (
-    'small': 1.125em,
-    'medium': 1.25em,
+    'small': 1em,
+    'medium': 1.125em,
   ),
-  'text-small': 0.9em,
+  'text-small': 1em,
   'h1': (
-    'small': 1.8em,
+    'small': 2em,
     'medium': 2em,
   ),
   'h2': (
-    'small': 1.3em,
-    'medium': 1.4em,
+    'small': 1.5em,
+    'medium': 1.5em,
   ),
   'h3': (
-    'small': 1.1em,
-    'medium': 1.2em,
+    'small': 1.25em,
+    'medium': 1.25em,
   ),
-  'h4': 1em,
-  'blockquote': 1.6em,
+  'h4': 1.1em,
+  'blockquote': 1.75em,
 );
