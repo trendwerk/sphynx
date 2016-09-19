@@ -5,15 +5,26 @@ final class Enqueue
 {
     public function __construct()
     {
-        add_action('wp_enqueue_scripts', array($this, 'frontend'));
+        add_action('wp_enqueue_scripts', [$this, 'frontend']);
     }
 
     public function frontend()
     {
-        $template_root = get_template_directory_uri();
-        $assets = $template_root . '/assets';
+        $assetsPath = get_stylesheet_directory() . '/assets';
+        $assetsUri = get_template_directory_uri() . '/assets';
 
-        wp_enqueue_script('main', $assets . '/scripts/output/all.js', null, null, true);
-        wp_enqueue_style('main', $assets . '/styles/output/main.css');
+        /**
+         * Style
+         */
+        $stylePath = '/styles/output/main.css';
+        $styleModTime = filemtime($assetsPath . $stylePath);
+        wp_enqueue_style('main', $assetsUri . $stylePath, null, $styleModTime);
+
+        /**
+         * Script
+         */
+        $scriptPath = '/scripts/output/all.js';
+        $scriptModTime = filemtime($assetsPath . $scriptPath);
+        wp_enqueue_script('main', $assetsUri . $scriptPath, null, $scriptModTime, true);
     }
 }
