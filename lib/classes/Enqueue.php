@@ -11,7 +11,7 @@ final class Enqueue
     public function frontend()
     {
         $assetsPath = get_stylesheet_directory() . '/assets';
-        $assetsUri = get_template_directory_uri() . '/assets';
+        $assetsUri = get_stylesheet_directory_uri() . '/assets';
 
         /**
          * Style
