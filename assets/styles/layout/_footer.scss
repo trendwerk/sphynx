@@ -3,7 +3,7 @@
   background-color: $primary-color;
   color: $white;
   font-size: map-get($font-sizes, 'text-small');
-  line-height: 30px;
+  line-height: map-get($line-height, 'base');
   padding: 25px 0;
 
   p {
