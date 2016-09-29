@@ -2,7 +2,7 @@ input,
 select,
 textarea,
 button {
-  outline: none; // Remove blue glow
+  outline: 0; // Remove blue glow
 }
 
 input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="radio"]):not([type="submit"]),
