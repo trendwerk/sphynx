@@ -1,6 +1,6 @@
 .gallery {
   @include full-width();
-  margin-bottom: $vertical-spacing;
+  @include responsive-margin-bottom(40px);
   margin-top: 20px;
 
   .gallery-item {
