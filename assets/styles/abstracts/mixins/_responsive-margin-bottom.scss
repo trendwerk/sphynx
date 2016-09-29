@@ -1,0 +1,3 @@
+@mixin responsive-margin-bottom($distance: $margin-bottom-default) {
+  @include responsive-property('margin-bottom', $distance);
+}

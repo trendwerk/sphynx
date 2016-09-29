@@ -1,0 +1,13 @@
+@mixin responsive-property($property, $value, $breakpoints: ()) {
+  $breakpoints: map-merge((
+    0: 0.7,
+    641px: 0.75,
+    981px: 1,
+  ), $breakpoints);
+
+  @each $breakpoint, $ratio in $breakpoints {
+    @media(min-width: $breakpoint) {
+      #{$property}: $value * $ratio;
+    }
+  }
+}
