@@ -1,6 +1,6 @@
 {% if post.terms('tags') %}
   {% spaceless %}
-    <p class="tags">
+    <div class="tags">
       <span>
         {{ __('Tags', 'tp') }}
       </span>
@@ -10,6 +10,6 @@
           {{- tag.name -}}
         </a>
       {% endfor %}
-    </p>
+    </div>
   {% endspaceless %}
 {% endif %}
