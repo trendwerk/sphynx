@@ -1,9 +1,9 @@
 .wrapper {
-  padding: 0 $horizontal-spacing;
+  padding: 0 map-get($wrapper-padding, 'small');
   width: 100%;
 
   @include respond-to('medium') {
-    padding: 0 ($horizontal-spacing * 2);
+    padding: 0 map-get($wrapper-padding, 'medium');
   }
 
   @include respond-to('huge') {
