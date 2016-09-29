@@ -8,35 +8,33 @@
   }
 
   a {
-    @include box-link((
-      'padding': (
-        'vertical': 6px,
-      ),
-    ));
     @include hover((
       'background-color': $primary-color,
       'color': $white,
     ));
+    background: $light-background;
+    color: $text-color;
+    display: inline-block;
     font-size: map-get($font-sizes, 'text-small');
     font-weight: 600;
     margin: 0 10px 10px 0;
     min-height: 50px;
     min-width: 50px;
+    padding: 6px 1em;
+    text-decoration: none;
   }
 
   .current {
-    @include box-link((
-      'padding': (
-        'vertical': 4px,
-      ),
-    ));
     background: none;
     border: 2px solid $light-background;
+    display: inline-block;
     font-size: map-get($font-sizes, 'text-small');
     font-weight: 600;
     margin: 0 10px 10px 0;
     min-height: 50px;
     min-width: 50px;
+    padding: 4px 1em;
+    text-decoration: none;
   }
 
   .dots {
