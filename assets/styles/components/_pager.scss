@@ -9,7 +9,9 @@
 
   a {
     @include box-link((
-      'height': 50px,
+      'padding': (
+        'vertical': 6px,
+      ),
     ));
     @include hover((
       'background-color': $primary-color,
@@ -18,19 +20,23 @@
     font-size: map-get($font-sizes, 'text-small');
     font-weight: 600;
     margin: 0 10px 10px 0;
+    min-height: 50px;
     min-width: 50px;
   }
 
   .current {
     @include box-link((
-      'height': 46px,
+      'padding': (
+        'vertical': 4px,
+      ),
     ));
     background: none;
     border: 2px solid $light-background;
     font-size: map-get($font-sizes, 'text-small');
     font-weight: 600;
     margin: 0 10px 10px 0;
-    min-width: 46px;
+    min-height: 50px;
+    min-width: 50px;
   }
 
   .dots {
