@@ -1,14 +1,7 @@
 main {
   @include full-width();
-  margin: ($vertical-spacing * 1.5) 0 $vertical-spacing;
-
-  @include respond-to('medium') {
-    margin: ($vertical-spacing * 2) 0 $vertical-spacing;
-  }
-
-  @include respond-to('large') {
-    margin: ($vertical-spacing * 3) 0 ($vertical-spacing * 2);
-  }
+  @include responsive-margin-bottom(80px);
+  @include responsive-property('margin-top', 120px);
 
   .wrapper {
     max-width: $content-width;
