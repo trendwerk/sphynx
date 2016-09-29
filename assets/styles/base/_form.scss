@@ -1,81 +1,60 @@
-[type="datetime-local"],
-[type="datetime"],
-[type="password"],
-[type="number"],
-[type="search"],
-[type="month"],
-[type="email"],
-[type="date"],
-[type="text"],
-[type="time"],
-[type="week"],
-[type="tel"],
-[type="url"],
+input,
+select,
 textarea,
-select {
-  -webkit-appearance: none;
-  background-color: $white;
+button {
+  outline: none; // Remove blue glow
+}
+
+input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="radio"]):not([type="submit"]),
+select,
+textarea {
+  background: $white;
   border: 1px solid $border-color;
-  color: $text-color;
   display: block;
-  font-size: 16px;
-  height: 40px;
-  line-height: 25px;
-  margin: 0;
-  outline: none;
-  padding: 0 12px;
+  font-size: 16px; // Disable iOS zoom on focus
+  height: 3em;
+  padding: 0 15px;
 
   @include respond-to('medium') {
     font-size: 14px;
   }
 
-  &::placeholder {
-    opacity: 0.6;
-  }
-
   &:focus {
     border: 1px solid shade($border-color, 20%);
-
-    &::placeholder {
-      opacity: 1;
-    }
   }
 }
 
-textarea {
-  max-width: 100%;
-  min-height: 200px;
-  padding: 10px 15px;
-  resize: vertical;
-}
-
-[type="submit"],
 [type="button"],
+[type="submit"],
 button {
   @include button();
-  -webkit-appearance: none;
   border: 0;
-  line-height: map-get($line-height, 'base');
 }
 
 select {
-  -moz-appearance: none;
+  appearance: none; // Remove built-in browser/device styling
   border-radius: 0;
 
   &[multiple] {
     height: auto;
     max-height: 200px;
-    padding-bottom: 12px;
-    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-top: 15px;
   }
 
   &:not([multiple]) {
-    background-image: url('data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
-    background-position: right 10px center;
-    background-repeat: no-repeat;
+    background: url('data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==') no-repeat right 10px center;
   }
 
   option {
     padding: 5px 10px;
   }
+}
+
+textarea {
+  line-height: map-get($line-height, 'base');
+  min-height: 200px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  resize: vertical;
 }
