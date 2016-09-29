@@ -1,6 +1,6 @@
 .post {
   @include full-width();
-  margin-bottom: ($vertical-spacing * 2);
+  @include responsive-margin-bottom(80px);
 
   &.sticky {
     background: $light-background;
@@ -8,7 +8,7 @@
   }
 
   h2 {
-    margin-bottom: ($vertical-spacing / 4);
+    margin-bottom: 0.4em;
   }
 
   p:last-of-type {
