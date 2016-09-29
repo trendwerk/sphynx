@@ -7,6 +7,17 @@
     @include list-style-none();
   }
 
+  a,
+  .current {
+    display: inline-block;
+    font-size: map-get($font-sizes, 'text-small');
+    font-weight: 600;
+    margin: 0 10px 10px 0;
+    min-height: 50px;
+    min-width: 50px;
+    text-decoration: none;
+  }
+
   a {
     @include hover((
       'background-color': $primary-color,
@@ -14,26 +25,12 @@
     ));
     background: $light-background;
     color: $text-color;
-    display: inline-block;
-    font-size: map-get($font-sizes, 'text-small');
-    font-weight: 600;
-    margin: 0 10px 10px 0;
-    min-height: 50px;
-    min-width: 50px;
     padding: 6px 1em;
-    text-decoration: none;
   }
 
   .current {
     border: 2px solid $light-background;
-    display: inline-block;
-    font-size: map-get($font-sizes, 'text-small');
-    font-weight: 600;
-    margin: 0 10px 10px 0;
-    min-height: 50px;
-    min-width: 50px;
     padding: 4px 1em;
-    text-decoration: none;
   }
 
   .dots {
