@@ -1,0 +1,7 @@
+@mixin wrapper-padding() {
+  padding: 0 map-get($wrapper-padding, 'small');
+
+  @include respond-to('medium') {
+    padding: 0 map-get($wrapper-padding, 'medium');
+  }
+}

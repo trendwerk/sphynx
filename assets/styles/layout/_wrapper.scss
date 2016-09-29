@@ -1,10 +1,6 @@
 .wrapper {
-  padding: 0 map-get($wrapper-padding, 'small');
+  @include wrapper-padding();
   width: 100%;
-
-  @include respond-to('medium') {
-    padding: 0 map-get($wrapper-padding, 'medium');
-  }
 
   @include respond-to('huge') {
     margin: 0 auto;
