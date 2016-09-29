@@ -3,7 +3,9 @@ $header-height: (
   'toggle-navigation': 60px,
   'full': 80px,
 );
-$wrapper-padding: (
-  'small': 20px,
-  'medium': 40px,
+$wrapper: (
+  'padding': (
+    'small': 20px,
+    'medium': 40px,
+  ),
 );
