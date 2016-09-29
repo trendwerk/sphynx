@@ -1,9 +1,13 @@
 @mixin tag() {
-  @include box-link();
   @include hover((
   	'background-color': $primary-color,
   	'color': $white,
   ));
+  background-color: $light-background;
+  color: $text-color;
+  display: inline-block;
   font-size: map-get($font-sizes, 'text-small');
   margin: 0 5px 5px 0;
+  padding: 0 1em;
+  text-decoration: none;
 }
