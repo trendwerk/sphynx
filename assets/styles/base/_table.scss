@@ -1,11 +1,19 @@
 table {
+  display: inline-block;
   margin: 0 0 $vertical-spacing;
+  overflow-x: auto;
+  white-space: nowrap;
   width: 100%;
+
+  @include respond-to('large') {
+    white-space: normal;
+  }
 
   th,
   td {
     border: 1px solid $border-color;
-    padding: 5px 10px;
+    line-height: map-get($line-height, 'small');
+    padding: 0.5em;
     text-align: left;
   }
 }
