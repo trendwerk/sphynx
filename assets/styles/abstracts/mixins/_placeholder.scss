@@ -1,0 +1,30 @@
+@mixin placeholder() {
+  $color: tint($text-color, 50%);
+  $color-focus: tint($text-color, 75%);
+
+  // scss-lint:disable PseudoElement
+  ::-moz-input-placeholder {
+    color: $color;
+  }
+
+  ::-ms-input-placeholder {
+    color: $color;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  :focus::-moz-input-placeholder {
+    color: $color-focus;
+  }
+
+  :focus::-ms-input-placeholder {
+    color: $color-focus;
+  }
+
+  :focus::-webkit-input-placeholder {
+    color: $color-focus;
+  }
+  // scss-lint:enable PseudoElement
+}
