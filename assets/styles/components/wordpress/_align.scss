@@ -2,18 +2,20 @@
 .alignleft,
 .alignnone,
 .alignright {
+  $image-margin: 40px;
+
   display: block;
-  margin: 0 0 $vertical-spacing;
+  margin: 0 0 $image-margin;
 
   &.aligncenter,
   &.alignnone {
-    margin: 0 auto $vertical-spacing;
+    margin: 0 auto $image-margin;
   }
 
   &.alignleft {
     @media(min-width: 801px) {
       float: left;
-      margin: 10px 40px $vertical-spacing 0;
+      margin: 10px $image-margin $image-margin 0;
     }
 
     @include respond-to('huge') {
@@ -24,7 +26,7 @@
   &.alignright {
     @media(min-width: 801px) {
       float: right;
-      margin: 10px 0 $vertical-spacing 40px;
+      margin: 10px 0 $image-margin $image-margin;
     }
 
     @include respond-to('huge') {
