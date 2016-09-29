@@ -8,8 +8,10 @@ button {
 input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="radio"]):not([type="submit"]),
 select,
 textarea {
+  appearance: none; // Remove built-in browser/device styling
   background: $white;
   border: 1px solid $border-color;
+  border-radius: 0;
   display: block;
   font-size: 16px; // Disable iOS zoom on focus
   height: 3em;
@@ -28,13 +30,9 @@ textarea {
 [type="submit"],
 button {
   @include button();
-  border: 0;
 }
 
 select {
-  appearance: none; // Remove built-in browser/device styling
-  border-radius: 0;
-
   &[multiple] {
     height: auto;
     max-height: 200px;
