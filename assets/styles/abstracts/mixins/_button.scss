@@ -1,17 +1,14 @@
 @mixin button() {
-  @include box-link((
-  	'background-color': $primary-color,
-  	'color': $white,
-  	'padding': (
-      'horizontal': 1.667em,
-      'vertical': 0.667em,
-    ),
-  ));
   @include hover((
     'background-color': shade($primary-color, 25%),
     'color': $white,
   ));
+  background-color: $primary-color;
+  color: $white;
+  display: inline-block;
   font-weight: 600;
   margin: 0 20px 20px 0;
+  padding: 0.667em 1.667em;
+  text-decoration: none;
   text-transform: uppercase;
 }
