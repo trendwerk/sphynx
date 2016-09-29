@@ -4,31 +4,31 @@
 .alignright {
   display: block;
   margin: 0 0 $vertical-spacing;
-}
 
-.aligncenter,
-.alignnone {
-  margin: 0 auto $vertical-spacing;
-}
-
-.alignleft {
-  @media(min-width: 801px) {
-    float: left;
-    margin: 10px 40px $vertical-spacing 0;
+  &.aligncenter,
+  &.alignnone {
+    margin: 0 auto $vertical-spacing;
   }
 
-  @include respond-to('huge') {
-    margin-left: -180px;
-  }
-}
+  &.alignleft {
+    @media(min-width: 801px) {
+      float: left;
+      margin: 10px 40px $vertical-spacing 0;
+    }
 
-.alignright {
-  @media(min-width: 801px) {
-    float: right;
-    margin: 10px 0 $vertical-spacing 40px;
+    @include respond-to('huge') {
+      margin-left: -180px;
+    }
   }
 
-  @include respond-to('huge') {
-    margin-right: -180px;
+  &.alignright {
+    @media(min-width: 801px) {
+      float: right;
+      margin: 10px 0 $vertical-spacing 40px;
+    }
+
+    @include respond-to('huge') {
+      margin-right: -180px;
+    }
   }
 }
