@@ -1,19 +1,31 @@
 table {
+  border: 1px solid $border-color;
+  border-bottom: 0;
   display: inline-block;
   margin: 0 0 $text-margin;
+  max-width: 100%;
   overflow-x: auto;
   white-space: nowrap;
-  width: 100%;
 
   @include respond-to('large') {
+    overflow-x: hidden;
     white-space: normal;
+  }
+
+  tr:nth-child(even) {
+    background: $light-background;
   }
 
   th,
   td {
-    border: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
     line-height: map-get($line-height, 'small');
-    padding: 0.5em;
+    padding: 0.5em 0.75em;
     text-align: left;
+  }
+
+  th {
+    background: $primary-color;
+    color: $white;
   }
 }
