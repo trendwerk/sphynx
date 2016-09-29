@@ -4,7 +4,6 @@
     'color': $text-color,
     'height': $vertical-spacing,
     'horizontal-padding': 15px,
-    'margin': 5px,
   ), $args);
 
   @include box((
@@ -12,7 +11,6 @@
   ));
   color: map-get($settings, 'color');
   display: inline-block;
-  margin: 0 map-get($settings, 'margin') map-get($settings, 'margin') 0;
   padding: ((map-get($settings, 'height') - $vertical-spacing) / 2) map-get($settings, 'horizontal-padding');
   text-decoration: none;
 }

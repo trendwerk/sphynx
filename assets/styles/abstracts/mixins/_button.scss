@@ -4,7 +4,6 @@
   	'color': $white,
   	'height': 60px,
   	'horizontal-padding': 30px,
-  	'margin': 20px,
   ));
   @include hover((
     'background-color': shade($primary-color, 25%),
@@ -12,5 +11,6 @@
   ));
   font-size: 18px;
   font-weight: 600;
+  margin: 0 20px 20px 0;
   text-transform: uppercase;
 }
