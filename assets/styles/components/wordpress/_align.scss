@@ -14,7 +14,7 @@
 .alignleft {
   @media(min-width: 801px) {
     float: left;
-    margin: 10px ($horizontal-spacing * 2) $vertical-spacing 0;
+    margin: 10px 40px $vertical-spacing 0;
   }
 
   @include respond-to('huge') {
@@ -25,7 +25,7 @@
 .alignright {
   @media(min-width: 801px) {
     float: right;
-    margin: 10px 0 $vertical-spacing ($horizontal-spacing * 2);
+    margin: 10px 0 $vertical-spacing 40px;
   }
 
   @include respond-to('huge') {
