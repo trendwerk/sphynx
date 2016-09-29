@@ -2,14 +2,15 @@
   @include box-link((
   	'background-color': $primary-color,
   	'color': $white,
-  	'height': 60px,
-  	'horizontal-padding': 30px,
+  	'padding': (
+      'horizontal': 1.667em,
+      'vertical': 0.667em,
+    ),
   ));
   @include hover((
     'background-color': shade($primary-color, 25%),
     'color': $white,
   ));
-  font-size: 18px;
   font-weight: 600;
   margin: 0 20px 20px 0;
   text-transform: uppercase;

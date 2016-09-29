@@ -1,16 +1,27 @@
 @mixin box-link($args: ()) {
-  $settings: map-merge((
+  $defaults: (
     'background-color': $light-background,
     'color': $text-color,
-    'height': $vertical-spacing,
-    'horizontal-padding': 15px,
-  ), $args);
+    'padding': (
+      'horizontal': 1em,
+      'vertical': 0,
+    ),
+  );
+
+  $settings: map-merge($defaults, $args);
+
+  // Deep merge padding
+  $padding: map-get($settings, 'padding');
+
+  @if $padding {
+    $padding: map-merge(map-get($defaults, 'padding'), $padding);
+  }
 
   @include box((
     'background-color': map-get($settings, 'background-color'),
   ));
   color: map-get($settings, 'color');
   display: inline-block;
-  padding: ((map-get($settings, 'height') - $vertical-spacing) / 2) map-get($settings, 'horizontal-padding');
+  padding: map-get($padding, 'vertical') map-get($padding, 'horizontal');
   text-decoration: none;
 }
