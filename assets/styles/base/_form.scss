@@ -51,6 +51,7 @@ select {
 
 textarea {
   line-height: map-get($line-height, 'base');
+  max-width: 100%; // Android bug
   min-height: 200px;
   padding-bottom: 10px;
   padding-top: 10px;
