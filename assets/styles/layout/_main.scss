@@ -11,9 +11,10 @@ main {
   }
 
   .wrapper {
-    @media (min-width: $content-width) {
+    max-width: $content-width;
+
+    @media(min-width: $content-width) {
       margin: 0 auto;
-      width: $content-width;
     }
   }
 }
