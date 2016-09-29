@@ -3,7 +3,8 @@
   margin-bottom: ($vertical-spacing * 2);
 
   &.sticky {
-    @include box();
+    background: $light-background;
+    padding: $box-padding;
   }
 
   h2 {

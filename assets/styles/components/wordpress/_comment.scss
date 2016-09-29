@@ -1,8 +1,9 @@
 .comment {
   $element-margin: 20px;
 
-  @include box();
+  background: $light-background;
   margin-bottom: 40px;
+  padding: $box-padding;
 
   &-avatar,
   &-author {
