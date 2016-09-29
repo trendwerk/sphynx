@@ -1,8 +1,0 @@
-@mixin box($args: ()) {
-  $settings: map-merge((
-    'background-color': $light-background,
-  ), $args);
-
-  background-color: map-get($settings, 'background-color');
-  padding: 30px;
-}
