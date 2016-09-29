@@ -12,9 +12,11 @@
     display: inline-block;
     font-size: map-get($font-sizes, 'text-small');
     font-weight: 600;
+    height: 3em;
+    line-height: 3em;
     margin: 0 10px 10px 0;
-    min-height: 50px;
-    min-width: 50px;
+    min-width: 3em;
+    padding: 0 1em;
     text-decoration: none;
   }
 
@@ -25,12 +27,11 @@
     ));
     background: $light-background;
     color: $text-color;
-    padding: 6px 1em;
   }
 
   .current {
-    border: 2px solid $light-background;
-    padding: 4px 1em;
+    background: $primary-color;
+    color: $white;
   }
 
   .dots {
