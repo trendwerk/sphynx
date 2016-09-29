@@ -4,7 +4,6 @@
 
   &.sticky {
     @include box();
-    margin-bottom: ($vertical-spacing * 2);
   }
 
   h2 {

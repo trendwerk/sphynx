@@ -4,6 +4,5 @@
   ), $args);
 
   background-color: map-get($settings, 'background-color');
-  margin-bottom: $vertical-spacing;
   padding: 30px;
 }
