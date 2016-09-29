@@ -25,7 +25,6 @@
   }
 
   .current {
-    background: none;
     border: 2px solid $light-background;
     display: inline-block;
     font-size: map-get($font-sizes, 'text-small');
