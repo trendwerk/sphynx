@@ -41,11 +41,12 @@ final class Installer
         }
 
         foreach ($files as $file) {
-            $extension = end((explode('.', $file)));
-
             if (in_array($file, array('.', '..', 'node_modules', 'vendor'))) {
                 continue;
             }
+
+            $splitByDot = explode('.', $file);
+            $extension = end($splitByDot);
 
             if ($extension == 'php') {
                 $changed = self::renameNamespaceInFile($dir . '/' . $file, $fromNamespace, $toNamespace);
