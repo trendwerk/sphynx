@@ -2,10 +2,6 @@
   @include full-width();
   text-align: center;
 
-  .pages {
-    @include list-style-none();
-  }
-
   a,
   .current {
     display: inline-block;
