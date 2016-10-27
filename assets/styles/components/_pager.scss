@@ -32,7 +32,33 @@
     background: $light-grey;
   }
 
+  .prev {
+    float: left;
+
+    @include respond-to('large') {
+      float: none;
+    }
+  }
+
+  .next {
+    float: right;
+    margin-right: none;
+
+    @include respond-to('large') {
+      float: none;
+    }
+  }
+
+  .dots,
+  .page-number {
+    display: none;
+
+    @include respond-to('large') {
+      display: inline-block;
+    }
+  }
+
   .dots {
-    margin: 0 10px 0 0;
+    margin: 0 15px 0 5px;
   }
 }
