@@ -1,5 +1,10 @@
 @include placeholder();
 
+label {
+  color: $heading-color;
+  font-weight: 600;
+}
+
 input,
 select,
 textarea,

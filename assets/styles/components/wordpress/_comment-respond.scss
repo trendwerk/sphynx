@@ -1,22 +1,45 @@
-.comment-respond {
-  @include full-width();
-  margin: 40px 0;
-  position: relative;
-
-  p {
-    @include respond-to('medium') {
-      textarea {
-        width: 75%;
-      }
-    }
-
-    &.form-submit {
-      margin-bottom: 0;
-    }
+.comment-reply-title {
+  a {
+    margin-right: 0.5em;
   }
 
   small a {
-    @include tag();
-    font-size: 14px;
+    @include button();
+    font-size: map-get($font-sizes, 'text-small');
+    margin: 0.5em 0 0;
+    padding: 0.75em 1em;
+  }
+}
+
+.comment-respond {
+  @include full-width();
+  margin: 20px 0;
+
+  .comment-notes {
+    font-style: italic;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+
+    @include respond-to('medium') {
+      width: 50%;
+    }
+  }
+
+  .form-submit {
+    margin: 2em 0 0;
+
+    input {
+      width: auto;
+    }
   }
 }

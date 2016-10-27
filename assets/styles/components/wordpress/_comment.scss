@@ -1,37 +1,47 @@
 .comment {
   $element-margin: 20px;
 
+  @include responsive-margin-bottom(40px);
   background: $light-background;
-  margin-bottom: 40px;
   padding: $box-padding;
-
-  &-avatar,
-  &-author {
-    vertical-align: middle;
-  }
-
-  &-avatar {
-    margin-right: $element-margin;
-  }
-
-  &-author {
-    font-weight: 600;
-  }
-
-  &-date {
-    color: $text-light;
-    float: right;
-  }
 
   &-meta {
     margin-bottom: $element-margin;
   }
 
-  &-content {
-    margin-bottom: $element-margin;
+  &-avatar,
+  &-author,
+  &-date {
+    vertical-align: middle;
+  }
 
-    p:last-of-type {
-      margin-bottom: 0;
+  &-avatar {
+    height: 40px;
+    margin-right: 10px;
+
+    @include respond-to('medium') {
+      height: 60px;
+      margin-right: $element-margin;
     }
+  }
+
+  &-author {
+    color: $heading-color;
+    font-weight: 600;
+    margin-right: 5px;
+  }
+
+  &-date {
+    color: $text-light;
+    font-size: map-get($font-sizes, 'text-small');
+  }
+
+  &-content p {
+    font-size: map-get($font-sizes, 'text-small');
+    margin-bottom: $element-margin;
+  }
+
+  &-reply {
+    font-size: map-get($font-sizes, 'text-small');
   }
 }
