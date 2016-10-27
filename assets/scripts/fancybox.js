@@ -13,7 +13,7 @@ jQuery(($) => {
     const $this = $(this);
 
     $this.find('a').prop('rel', 'fancybox-gallery-' + i);
-    $this.find('figure.gallery-item a').fancybox({
+    $this.find('.gallery-item a').fancybox({
       type: 'image',
     });
   });
