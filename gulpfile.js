@@ -1,23 +1,23 @@
 'use strict';
 
-var gulp = require('gulp'),
-    cache = require('gulp-cached'),
-    beep = require('beepbeep'),
-    colors = require('colors'),
-    plumber = require('gulp-plumber'),
-    liveReload = require('gulp-livereload'),
+const gulp = require('gulp'),
+      cache = require('gulp-cached'),
+      beep = require('beepbeep'),
+      colors = require('colors'),
+      plumber = require('gulp-plumber'),
+      liveReload = require('gulp-livereload'),
 
-    scssLint = require('gulp-scss-lint'),
-    sass = require('gulp-sass'),
-    sassGlob = require('gulp-sass-glob'),
-    cssNano = require('gulp-cssnano'),
-    cssBase64 = require('gulp-css-base64'),
+      scssLint = require('gulp-scss-lint'),
+      sass = require('gulp-sass'),
+      sassGlob = require('gulp-sass-glob'),
+      cssNano = require('gulp-cssnano'),
+      cssBase64 = require('gulp-css-base64'),
 
-    webpack = require('webpack-stream'),
+      webpack = require('webpack-stream'),
 
-    phpcs = require('gulp-phpcs');
+      phpcs = require('gulp-phpcs');
 
-var files = {
+const files = {
   sass: ['assets/styles/**/*.scss'],
   js: [
     'assets/scripts/**/*.js',
@@ -34,11 +34,11 @@ var files = {
 /**
  * Error handling
  */
-var gulp_src = gulp.src;
+const gulp_src = gulp.src;
 
 gulp.src = function() {
   return gulp_src.apply(gulp, arguments)
-    .pipe(plumber(function(error) {
+    .pipe(plumber(() => {
       beep();
     }));
 };
@@ -46,7 +46,7 @@ gulp.src = function() {
 /**
  * Tasks
  */
-gulp.task('scssLint', function() {
+gulp.task('scssLint', () => {
   return gulp.src(files.sass)
     .pipe(cache('scssLint'))
     .pipe(scssLint({
@@ -55,13 +55,13 @@ gulp.task('scssLint', function() {
     .pipe(scssLint.failReporter());
 });
 
-gulp.task('base64', ['scssLint'], function() {
+gulp.task('base64', ['scssLint'], () => {
   return gulp.src('bower_components/fancybox/source/*.css')
     .pipe(cssBase64())
     .pipe(gulp.dest('bower_components/fancybox/source/'));
 });
 
-gulp.task('sass', ['scssLint', 'base64'], function() {
+gulp.task('sass', ['scssLint', 'base64'], () => {
   return gulp.src(files.sass)
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
@@ -78,14 +78,14 @@ gulp.task('sass', ['scssLint', 'base64'], function() {
     .pipe(liveReload());
 });
 
-gulp.task('js', function() {
+gulp.task('js', () => {
   return gulp.src('assets/scripts/main.js')
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('assets/scripts/output/'))
     .pipe(liveReload());
 });
 
-gulp.task('phpcs', function() {
+gulp.task('phpcs', () => {
   return gulp.src(files.php)
     .pipe(cache('phpcs'))
     .pipe(phpcs({
@@ -97,13 +97,13 @@ gulp.task('phpcs', function() {
     .pipe(liveReload());
 });
 
-gulp.task('twig', function() {
+gulp.task('twig', () => {
   return gulp.src(files.twig)
     .pipe(cache('twig'))
     .pipe(liveReload());
 });
 
-var welcomeMessage = [
+const welcomeMessage = [
   '',
   '',
   '                     ________',
@@ -135,7 +135,7 @@ var welcomeMessage = [
   ''
 ].join('\n');
 
-gulp.task('default', function() {
+gulp.task('default', () => {
   gulp.watch(files.sass, ['base64', 'scssLint', 'sass']);
   gulp.watch(files.js, ['js']);
   gulp.watch(files.php, ['phpcs']);
