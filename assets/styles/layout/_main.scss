@@ -1,6 +1,6 @@
 main {
   @include full-width();
-  @include responsive-margin-bottom(80px);
+  @include responsive-margin-bottom();
   @include responsive-property('margin-top', 120px);
 
   .wrapper {
