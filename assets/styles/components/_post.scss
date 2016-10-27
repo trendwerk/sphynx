@@ -1,6 +1,6 @@
 .post {
   @include full-width();
-  @include responsive-margin-bottom(80px);
+  @include responsive-margin-bottom();
 
   &.sticky {
     background: $light-background;
