@@ -28,28 +28,11 @@
     background: $light-grey;
   }
 
-  .prev {
-    float: left;
-
-    @include respond-to('large') {
-      float: none;
-    }
-  }
-
-  .next {
-    float: right;
-    margin-right: none;
-
-    @include respond-to('large') {
-      float: none;
-    }
-  }
-
   .dots,
   .page-number {
     display: none;
 
-    @include respond-to('large') {
+    @include respond-to('medium') {
       display: inline-block;
     }
   }
