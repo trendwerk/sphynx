@@ -1,8 +1,8 @@
 @mixin responsive-property($property, $value, $breakpoints: ()) {
   $breakpoints: map-merge((
     0: 0.6,
-    641px: 0.75,
-    981px: 1,
+    640px: 0.75,
+    980px: 1,
   ), $breakpoints);
 
   @each $breakpoint, $ratio in $breakpoints {

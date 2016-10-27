@@ -13,7 +13,7 @@
   }
 
   &.alignleft {
-    @media(min-width: 801px) {
+    @media(min-width: 800px) {
       float: left;
       margin: 10px $image-margin $image-margin 0;
     }
@@ -24,7 +24,7 @@
   }
 
   &.alignright {
-    @media(min-width: 801px) {
+    @media(min-width: 800px) {
       float: right;
       margin: 10px 0 $image-margin $image-margin;
     }
