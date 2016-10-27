@@ -28,6 +28,23 @@
     background: $light-grey;
   }
 
+  .prev {
+    float: left;
+
+    @include respond-to('medium') {
+      float: none;
+    }
+  }
+
+  .next {
+    float: right;
+    margin-right: 0;
+
+    @include respond-to('medium') {
+      float: none;
+    }
+  }
+
   .dots,
   .page-number {
     display: none;
