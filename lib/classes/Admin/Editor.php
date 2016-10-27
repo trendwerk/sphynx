@@ -22,17 +22,7 @@ final class Editor
                 'title'    => __('Button', 'tp'),
                 'selector' => 'a',
                 'classes'  => 'button',
-            ),
-            array(
-                'title'    => __('Secondary button', 'tp'),
-                'selector' => 'a',
-                'classes'  => 'button secondary',
-            ),
-            array(
-                'title'    => __('Read more', 'tp'),
-                'selector' => 'a',
-                'classes'  => 'read-more',
-            ),
+            )
         );
         $settings['style_formats'] = json_encode($style_formats);
 
