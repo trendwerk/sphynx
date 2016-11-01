@@ -1,11 +1,26 @@
 .gallery {
+  $margin: 20px;
+  $wrapper-padding: map-get($wrapper, 'padding');
+  $padding-small: map-get($wrapper-padding, 'small') * 2;
+  $padding-medium: map-get($wrapper-padding, 'medium') * 2;
+  $width: 152px;
+
   @include full-width();
+  @include grid((
+    'breakpoints': (
+      0: 2,
+      ($width * 2) + $margin + $padding-small + 1px: 3,
+      ($width * 3) + ($margin * 2) + $padding-small + 1px: 4,
+      ($width * 4) + ($margin * 3) + $padding-medium + 1px: 5,
+    ),
+    'item': '.gallery-item',
+    'margin': $margin,
+  ));
   @include responsive-margin-bottom(40px);
   margin-top: 20px;
 
   .gallery-item {
     float: left;
-    margin: 0 20px 20px 0;
     position: relative;
 
     img {
