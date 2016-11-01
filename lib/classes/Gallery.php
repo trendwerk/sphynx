@@ -14,17 +14,21 @@ final class Gallery
         add_shortcode('gallery', [$this, 'add']);
     }
 
-    public function add()
+    public function add($attributes)
     {
+        if (empty($attributes['ids'])) {
+            return;
+        }
+
         $context['gallery'] = array_map(function ($item) {
             return new \TimberImage($item->ID);
         }, get_posts([
+            'include'        => $attributes['ids'],
             'post_mime_type' => 'image',
-            'post_parent'    => get_the_ID(),
             'post_status'    => 'inherit',
             'post_type'      => 'attachment',
             'order'          => 'ASC',
-            'orderby'        => 'menu_order ID',
+            'orderby'        => 'post__in',
         ]));
 
         return \Timber::fetch('partials/gallery.twig', $context);
