@@ -10,6 +10,7 @@
   display: inline-block;
   font-weight: 600;
   line-height: map-get($line-height, 'small');
+  max-width: 100%; // Fix for wide button inputs that will cause a scrollbar
   padding: 1em 1.5em;
   text-decoration: none;
   text-transform: uppercase;
