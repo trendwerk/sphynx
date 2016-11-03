@@ -25,6 +25,7 @@ final class Theme
     {
         new Admin\Editor();
         new Enqueue();
+        new Gallery();
         new Media();
         new Menus();
         new Plugins\Timber\Context();

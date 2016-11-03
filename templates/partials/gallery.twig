@@ -1,0 +1,15 @@
+<div class="gallery">
+  {% for item in gallery %}
+    <figure class="gallery-item">
+      <a href="{{ item.src('large') }}">
+        <img src="{{ item.src|resize(152, 152, 'center') }}" srcset="{{ item.src|resize(304, 304, 'center') }} 2x" alt="{{ item.alt }}">
+      </a>
+
+      {% if item.caption %}
+        <figcaption class="wp-caption-text gallery-caption">
+          {{ item.caption }}
+        </figcaption>
+      {% endif %}
+    </figure>
+  {% endfor %}
+</div>
