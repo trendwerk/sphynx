@@ -15,6 +15,12 @@
     <div class="comment-content">
       {{ comment.content|wpautop }}
     </div>
+
+    {% if not comment.is_child() %}
+      <a class="comment-reply" href="{{ fn('add_query_arg', 'replytocom', comment.id, post.link) }}#respond">
+        {{ __('Reply', 'tp') }}
+      </a>
+    {% endif %}
   </div>
 
   {% if comment.children() %}
