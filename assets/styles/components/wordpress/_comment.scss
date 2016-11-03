@@ -16,6 +16,7 @@
   }
 
   &-avatar {
+    border-radius: 100%;
     height: 40px;
     margin-right: 10px;
 
@@ -39,9 +40,9 @@
   &-content p {
     font-size: map-get($font-sizes, 'text-small');
     margin-bottom: $element-margin;
-  }
 
-  &-reply {
-    font-size: map-get($font-sizes, 'text-small');
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

@@ -9,5 +9,9 @@ main {
     @media(min-width: $content-width) {
       margin: 0 auto;
     }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 }
