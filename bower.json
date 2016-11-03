@@ -4,6 +4,7 @@
     "jquery": "^3.0.0",
     "fancybox": "~2.1.5",
     "normalize.css": "~3.0.3",
-    "toggle-navigation": "trendwerk/toggle-navigation#~0.1.0"
+    "toggle-navigation": "trendwerk/toggle-navigation#~0.1.0",
+    "grid": "trendwerk/grid#^0.0.3"
   }
 }
