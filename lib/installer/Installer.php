@@ -1,5 +1,5 @@
 <?php
-namespace Trendwerk\TrendPress;
+namespace Trendwerk\Sphynx;
 
 use Composer\Script\Event;
 

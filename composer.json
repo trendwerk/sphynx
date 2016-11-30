@@ -21,12 +21,12 @@
 		}
 	],
 	"autoload": {
-		"psr-4": {"Trendwerk\\TrendPress\\": "lib/installer/"}
+		"psr-4": {"Trendwerk\\Sphynx\\": "lib/installer/"}
 	},
 	"scripts": {
 		"post-root-package-install": [
-			"Trendwerk\\TrendPress\\Installer::setNamespace",
-			"Trendwerk\\TrendPress\\Installer::setThemeData"
+			"Trendwerk\\Sphynx\\Installer::setNamespace",
+			"Trendwerk\\Sphynx\\Installer::setThemeData"
 		]
 	},
 	"require": {
