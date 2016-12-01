@@ -1,5 +1,5 @@
 {
-  "name": "trendpress",
+  "name": "sphynx",
   "dependencies": {
     "jquery": "^3.0.0",
     "fancybox": "~2.1.5",

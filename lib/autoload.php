@@ -1,5 +1,5 @@
 <?php
-namespace Trendwerk\TrendPress;
+namespace Trendwerk\Sphynx;
 
 spl_autoload_register(function ($class) {
     $length = strlen(__NAMESPACE__);

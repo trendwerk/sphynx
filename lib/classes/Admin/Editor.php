@@ -1,5 +1,5 @@
 <?php
-namespace Trendwerk\TrendPress\Admin;
+namespace Trendwerk\Sphynx\Admin;
 
 final class Editor
 {

@@ -1,5 +1,5 @@
-# TrendPress
+# Sphynx
 
 A light & simple WordPress starter theme.
 
-Visit the [wiki](https://github.com/trendwerk/trendpress/wiki) for more information.
+Visit the [wiki](https://github.com/trendwerk/sphynx/wiki) for more information.

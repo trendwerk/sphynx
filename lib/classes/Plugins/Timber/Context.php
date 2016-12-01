@@ -1,5 +1,5 @@
 <?php
-namespace Trendwerk\TrendPress\Plugins\Timber;
+namespace Trendwerk\Sphynx\Plugins\Timber;
 
 use Timber\Menu;
 
