@@ -1,7 +1,7 @@
 <?php
 namespace Trendwerk\Sphynx;
 
-final class Enqueue
+final class Assets
 {
     public function __construct()
     {
