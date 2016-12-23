@@ -24,7 +24,7 @@ final class Theme
     private function setupHooks()
     {
         new Admin\Editor();
-        new Enqueue();
+        new Assets();
         new Gallery();
         new Media();
         new Menus();
