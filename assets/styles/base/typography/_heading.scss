@@ -13,11 +13,11 @@ h6 {
   a {
     color: $heading-color;
     text-decoration: none;
-  }
 
-  a:hover {
-    color: $hover-color;
-    text-decoration: none;
+    &:hover {
+      color: $hover-color;
+      text-decoration: none;
+    }
   }
 }
 
