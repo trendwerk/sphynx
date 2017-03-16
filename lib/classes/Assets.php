@@ -18,6 +18,7 @@ final class Assets
          */
         $stylePath = '/styles/output/main.css';
         $styleModTime = filemtime($assetsPath . $stylePath);
+        wp_enqueue_style('fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600');
         wp_enqueue_style('main', $assetsUri . $stylePath, null, $styleModTime);
 
         /**
