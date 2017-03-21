@@ -12,7 +12,11 @@ button {
   outline: 0; // Remove blue glow
 }
 
-input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="radio"]):not([type="submit"]),
+input:not([type="button"]),
+input:not([type="checkbox"]),
+input:not([type="file"]),
+input:not([type="radio"]),
+input:not([type="submit"]),
 select,
 textarea {
   appearance: none; // Remove built-in browser/device styling
