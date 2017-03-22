@@ -1,4 +1,4 @@
-import '../../bower_components/toggle-navigation/src/toggle-navigation';
+import 'toggle-navigation/src/toggle-navigation';
 
 jQuery(($) => {
   $('.navigation-toggle').toggleNavigation();
