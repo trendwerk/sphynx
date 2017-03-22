@@ -5,6 +5,13 @@
     "type": "git",
     "url": "https://github.com/trendwerk/sphynx.git"
   },
+  "dependencies": {
+    "fancybox": "^3.0.0",
+    "grid": "trendwerk/grid",
+    "jquery": "^3.2.1",
+    "normalize.css": "^5.0.0",
+    "toggle-navigation": "^0.1.3"
+  },
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
