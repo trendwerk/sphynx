@@ -1,4 +1,4 @@
-import '../../bower_components/fancybox/source/jquery.fancybox';
+import 'fancybox/dist/js/jquery.fancybox';
 
 jQuery(($) => {
   $('a:has(img)').each(function fancyboxImage() {

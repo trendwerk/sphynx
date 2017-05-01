@@ -56,9 +56,9 @@ gulp.task('scssLint', () => {
 });
 
 gulp.task('base64', ['scssLint'], () => {
-  return gulp.src('bower_components/fancybox/source/*.css')
+  return gulp.src('node_modules/fancybox/dist/css/*.css')
     .pipe(cssBase64())
-    .pipe(gulp.dest('bower_components/fancybox/source/'));
+    .pipe(gulp.dest('node_modules/fancybox/dist/css/'));
 });
 
 gulp.task('sass', ['scssLint', 'base64'], () => {
