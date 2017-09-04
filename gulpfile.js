@@ -68,7 +68,7 @@ gulp.task('sass', ['scssLint', 'base64'], () => {
     .pipe(cssNano({
       autoprefixer: {
         add: true,
-        browsers: ['> 0%']
+        browsers: ['> 0.1%']
       },
       discardComments: {
         removeAll: true
