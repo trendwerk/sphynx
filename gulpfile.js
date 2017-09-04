@@ -21,7 +21,7 @@ const files = {
   sass: ['assets/styles/**/*.scss'],
   js: [
     'assets/scripts/**/*.js',
-    '!assets/scripts/output/*.js'
+    '!assets/scripts/dist/*.js'
   ],
   php: [
     '**/*.php',
@@ -74,14 +74,14 @@ gulp.task('sass', ['scssLint', 'base64'], () => {
         removeAll: true
       }
     }))
-    .pipe(gulp.dest('assets/styles/output/'))
+    .pipe(gulp.dest('assets/styles/dist/'))
     .pipe(liveReload());
 });
 
 gulp.task('js', () => {
   return gulp.src('assets/scripts/main.js')
     .pipe(webpack(require('./webpack.config.js')))
-    .pipe(gulp.dest('assets/scripts/output/'))
+    .pipe(gulp.dest('assets/scripts/dist/'))
     .pipe(liveReload());
 });
 

@@ -16,7 +16,7 @@ final class Assets
         /**
          * Style
          */
-        $stylePath = '/styles/output/main.css';
+        $stylePath = '/styles/dist/main.css';
         $styleModTime = filemtime($assetsPath . $stylePath);
         wp_enqueue_style('fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600');
         wp_enqueue_style('main', $assetsUri . $stylePath, null, $styleModTime);
@@ -24,7 +24,7 @@ final class Assets
         /**
          * Script
          */
-        $scriptPath = '/scripts/output/all.js';
+        $scriptPath = '/scripts/dist/all.js';
         $scriptModTime = filemtime($assetsPath . $scriptPath);
         wp_enqueue_script('main', $assetsUri . $scriptPath, null, $scriptModTime, true);
     }
