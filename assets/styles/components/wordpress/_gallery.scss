@@ -19,7 +19,6 @@
     'margin': $margin,
   ));
   @include responsive-margin-bottom(40px);
-  margin-top: 20px;
 
   .gallery-item {
     float: left;
