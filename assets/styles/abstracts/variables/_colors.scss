@@ -1,27 +1,27 @@
 /**
  * Definitions
  */
-$red:               rgb(204, 0, 0);
+$red: rgb(204, 0, 0);
 
-$black:             black;
-$grey-extra-dark:   rgb(51, 51, 51);
-$grey-dark:         rgb(102, 102, 102);
-$grey:              rgb(153, 153, 153);
-$grey-light:        rgb(204, 204, 204);
-$grey-extra-light:  rgb(238, 238, 238);
-$white:             white;
+$black: black;
+$grey-extra-dark: rgb(51, 51, 51);
+$grey-dark: rgb(102, 102, 102);
+$grey: rgb(153, 153, 153);
+$grey-light: rgb(204, 204, 204);
+$grey-extra-light: rgb(238, 238, 238);
+$white: white;
 
 /**
  * Implementation
  */
-$primary-color:     $grey-extra-dark;
+$primary-color: $grey-extra-dark;
 
-$heading-color:     $grey-extra-dark;
-$text-color:        $grey-dark;
-$text-light:        $grey;
+$heading-color: $grey-extra-dark;
+$text-color: $grey-dark;
+$text-light: $grey;
 
-$link-color:        $grey-extra-dark;
-$hover-color:       $grey-dark;
+$link-color: $grey-extra-dark;
+$hover-color: $grey-dark;
 
-$light-background:  $grey-extra-light;
-$border-color:      $grey-light;
+$light-background: $grey-extra-light;
+$border-color: $grey-light;
