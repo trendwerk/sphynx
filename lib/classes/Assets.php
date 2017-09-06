@@ -10,8 +10,8 @@ final class Assets
 
     public function frontend()
     {
-        $assetsPath = get_stylesheet_directory() . '/assets';
-        $assetsUri = get_stylesheet_directory_uri() . '/assets';
+        $assetsPath = get_stylesheet_directory();
+        $assetsUri = get_stylesheet_directory_uri();
 
         /**
          * Style

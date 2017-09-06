@@ -12,7 +12,7 @@ final class Editor
 
     public function loadStyles()
     {
-        add_editor_style('assets/styles/output/editor.css');
+        add_editor_style('styles/output/editor.css');
     }
 
     public function styles($settings)

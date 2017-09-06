@@ -18,7 +18,7 @@ final class Theme
 
     private function localize()
     {
-        load_theme_textdomain('tp', get_template_directory() . '/assets/languages');
+        load_theme_textdomain('tp', get_template_directory() . '/languages');
     }
 
     private function setupHooks()

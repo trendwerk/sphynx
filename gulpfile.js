@@ -18,10 +18,10 @@ const gulp = require('gulp'),
       phpcs = require('gulp-phpcs');
 
 const files = {
-  sass: ['assets/styles/**/*.scss'],
+  sass: ['styles/**/*.scss'],
   js: [
-    'assets/scripts/**/*.js',
-    '!assets/scripts/dist/*.js'
+    'scripts/**/*.js',
+    '!scripts/dist/*.js'
   ],
   php: [
     '**/*.php',
@@ -74,14 +74,14 @@ gulp.task('sass', ['scssLint', 'base64'], () => {
         removeAll: true
       }
     }))
-    .pipe(gulp.dest('assets/styles/dist/'))
+    .pipe(gulp.dest('styles/dist/'))
     .pipe(liveReload());
 });
 
 gulp.task('js', () => {
-  return gulp.src('assets/scripts/main.js')
+  return gulp.src('scripts/main.js')
     .pipe(webpack(require('./webpack.config.js')))
-    .pipe(gulp.dest('assets/scripts/dist/'))
+    .pipe(gulp.dest('scripts/dist/'))
     .pipe(liveReload());
 });
 
