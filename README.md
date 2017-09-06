@@ -35,8 +35,6 @@ To use Gulp, just use terminal to navigate to your theme root folder and type `g
 
 **NPM** - Sphynx uses Node Package manager to manage Node.js dependencies for Gulp. More info: https://www.npmjs.com/
 
-**Bower** - Bower is used to manage front-end dependencies. More info: http://bower.io/
-
 ## Coding standards
 
 Sphynx complies to the following coding standards to make the code consistent and more readable. We strongly recommend you to follow these coding standards as well when you use Sphynx as a starter theme.
