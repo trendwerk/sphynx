@@ -2,8 +2,6 @@
 
 A light & simple WordPress starter theme.
 
-![sphynx](https://raw.githubusercontent.com/trendwerk/sphynx/master/screenshot.png)
-
 ## Installation
 
 If you're using Composer (and you should), you can start your project based on Sphynx with the command below.
