@@ -3,7 +3,6 @@
 const gulp = require('gulp'),
       cache = require('gulp-cached'),
       beep = require('beepbeep'),
-      colors = require('colors'),
       plumber = require('gulp-plumber'),
       liveReload = require('gulp-livereload'),
       sass = require('gulp-sass'),
@@ -80,38 +79,6 @@ gulp.task('twig', () => {
     .pipe(liveReload());
 });
 
-const welcomeMessage = [
-  '',
-  '',
-  '                     ________',
-  '                    //   |\\ \\\\',
-  '                   //    | \\ \\\\',
-  '             |\\\\  //     |  \\ \\\\  //|',
-  '             ||\\\\//       —-—  \\\\//||',
-  '             || \\/______________\\/ ||',
-  '             ||                    ||',
-  '             ||                    ||',
-  '             ||    ( )      ( )    ||',
-  '             ||        ____        ||',
-  '             ||        \\  /        ||',
-  '             ||         ||         ||',
-  '             ||     \\__/  \\__/     ||',
-  '             ||                    ||',
-  '             ||                    ||',
-  '',
-  '',
-  ' $$\\   $$\\  $$$$$$\\  $$\\       $$\\       $$$$$$\\',
-  ' $$ |  $$ |$$  __$$\\ $$ |      $$ |     $$  __$$\\',
-  ' $$ |  $$ |$$ /  $$ |$$ |      $$ |     $$ /  $$ |',
-  ' $$$$$$$$ |$$$$$$$$ |$$ |      $$ |     $$ |  $$ |',
-  ' $$  __$$ |$$  __$$ |$$ |      $$ |     $$ |  $$ |',
-  ' $$ |  $$ |$$ |  $$ |$$ |      $$ |     $$ |  $$ |',
-  ' $$ |  $$ |$$ |  $$ |$$$$$$$$\\ $$$$$$$$\\ $$$$$$  |',
-  ' \\__|  \\__|\\__|  \\__|\\________|\\________|\\______/',
-  '',
-  ''
-].join('\n');
-
 gulp.task('default', () => {
   gulp.watch(files.sass, ['base64', 'sass']);
   gulp.watch(files.js, ['js']);
@@ -119,6 +86,4 @@ gulp.task('default', () => {
   gulp.watch(files.twig, ['twig']);
 
   liveReload.listen();
-
-  console.log(welcomeMessage.cyan);
 });
