@@ -31,7 +31,7 @@
   .prev {
     float: left;
 
-    @include respond-to('medium') {
+    @include min-width('medium') {
       float: none;
     }
   }
@@ -40,7 +40,7 @@
     float: right;
     margin-right: 0;
 
-    @include respond-to('medium') {
+    @include min-width('medium') {
       float: none;
     }
   }
@@ -49,7 +49,7 @@
   .page-number {
     display: none;
 
-    @include respond-to('medium') {
+    @include min-width('medium') {
       display: inline-block;
     }
   }

@@ -3,7 +3,7 @@
 
   padding: 0 map-get($wrapper-padding, 'small');
 
-  @include respond-to('medium') {
+  @include min-width('medium') {
     padding: 0 map-get($wrapper-padding, 'medium');
   }
 }

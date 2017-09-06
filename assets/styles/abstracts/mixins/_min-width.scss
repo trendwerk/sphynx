@@ -1,4 +1,4 @@
-@mixin respond-to($breakpoint) {
+@mixin min-width($breakpoint) {
   $raw-query: map-get($breakpoints, $breakpoint);
 
   @if $raw-query {

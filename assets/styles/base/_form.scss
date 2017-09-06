@@ -28,7 +28,7 @@ textarea {
   height: 3em;
   padding: 0 15px;
 
-  @include respond-to('medium') {
+  @include min-width('medium') {
     font-size: 14px;
   }
 

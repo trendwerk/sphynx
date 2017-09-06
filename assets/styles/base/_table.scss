@@ -7,7 +7,7 @@ table {
   overflow-x: auto;
   white-space: nowrap;
 
-  @include respond-to('large') {
+  @include min-width('large') {
     overflow-x: hidden;
     white-space: normal;
   }

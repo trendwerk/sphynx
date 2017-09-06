@@ -7,7 +7,7 @@ body {
   line-height: map-get($line-height, 'base');
   word-wrap: break-word;
 
-  @include respond-to('medium') {
+  @include min-width('medium') {
     font-size: map-get($base, 'medium');
   }
 }
