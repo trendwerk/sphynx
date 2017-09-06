@@ -5,7 +5,7 @@ final class Menus
 {
     public function __construct()
     {
-        add_action('init', array($this, 'register'));
+        add_action('init', [$this, 'register']);
     }
 
     public function register()

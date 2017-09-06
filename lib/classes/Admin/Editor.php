@@ -5,9 +5,9 @@ final class Editor
 {
     public function __construct()
     {
-        add_action('init', array($this, 'loadStyles'));
-        add_action('tiny_mce_before_init', array($this, 'styles'));
-        add_filter('tiny_mce_before_init', array($this, 'buttons'), 1);
+        add_action('init', [$this, 'loadStyles']);
+        add_action('tiny_mce_before_init', [$this, 'styles']);
+        add_filter('tiny_mce_before_init', [$this, 'buttons'], 1);
     }
 
     public function loadStyles()
@@ -17,13 +17,13 @@ final class Editor
 
     public function styles($settings)
     {
-        $style_formats = array(
-            array(
+        $style_formats = [
+            [
                 'title'    => __('Button', 'tp'),
                 'selector' => 'a',
                 'classes'  => 'button',
-            )
-        );
+            ]
+        ];
         $settings['style_formats'] = json_encode($style_formats);
 
         return $settings;

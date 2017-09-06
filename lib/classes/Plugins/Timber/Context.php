@@ -7,15 +7,15 @@ final class Context
 {
     public function __construct()
     {
-        add_filter('timber_context', array($this, 'add'));
+        add_filter('timber_context', [$this, 'add']);
     }
 
     public function add($context)
     {
-        $context['menus'] = array(
+        $context['menus'] = [
             'main'   => new Menu('main'),
             'footer' => new Menu('footer'),
-        );
+        ];
 
         return $context;
     }
