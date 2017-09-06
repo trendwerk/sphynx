@@ -19,7 +19,6 @@ table {
   th,
   td {
     border-bottom: 1px solid $border-color;
-    line-height: map-get($line-height, 'small');
     padding: 0.5em 0.75em;
     text-align: left;
   }

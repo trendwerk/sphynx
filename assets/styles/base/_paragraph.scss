@@ -1,3 +1,4 @@
 p {
+  line-height: map-get($line-height, 'large');
   margin: 0 0 $text-margin;
 }
