@@ -17,9 +17,6 @@ final class Media
         update_option('medium_size_w', 360);
         update_option('medium_size_h', '');
 
-        update_option('medium_large_size_w', 0);
-        update_option('medium_large_size_h', 0);
-
         update_option('large_size_w', 840);
         update_option('large_size_h', '');
 
