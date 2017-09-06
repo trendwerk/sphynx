@@ -29,9 +29,7 @@ Sphynx uses the following development tools and preprocessors to make our lives 
 
 ### Development tools
 
-**Gulp** - Sphynx uses the task manager “Gulp” to automatically compile Sass and to perform some other automated tasks. More info: http://gulpjs.com/
-
-To use Gulp, just use terminal to navigate to your theme root folder and type `gulp`. The first time you use Gulp on your project you should use the `npm install` command first.
+**Gulp** - Sphynx uses the task manager “Gulp” to automatically compile Sass and to perform some other automated tasks. Gulp will start watching for changes automatically after you run `npm install` in your theme root. More info: http://gulpjs.com/
 
 **NPM** - Sphynx uses Node Package manager to manage Node.js dependencies for Gulp. More info: https://www.npmjs.com/
 
