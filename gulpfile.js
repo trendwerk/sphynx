@@ -1,14 +1,14 @@
 'use strict';
 
-const gulp = require('gulp'),
+const beep = require('beepbeep'),
       cache = require('gulp-cached'),
-      beep = require('beepbeep'),
-      plumber = require('gulp-plumber'),
+      cssBase64 = require('gulp-css-base64'),
+      cssNano = require('gulp-cssnano'),
+      gulp = require('gulp'),
       liveReload = require('gulp-livereload'),
+      plumber = require('gulp-plumber'),
       sass = require('gulp-sass'),
       sassGlob = require('gulp-sass-glob'),
-      cssNano = require('gulp-cssnano'),
-      cssBase64 = require('gulp-css-base64'),
       webpack = require('webpack-stream');
 
 const files = {
