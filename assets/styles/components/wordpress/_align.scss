@@ -18,7 +18,7 @@
       margin: 10px $image-margin $image-margin 0;
     }
 
-    @include respond-to('huge') {
+    @include respond-to('full') {
       margin-left: -180px;
     }
   }
@@ -29,7 +29,7 @@
       margin: 10px 0 $image-margin $image-margin;
     }
 
-    @include respond-to('huge') {
+    @include respond-to('full') {
       margin-right: -180px;
     }
   }
