@@ -6,16 +6,11 @@ const gulp = require('gulp'),
       colors = require('colors'),
       plumber = require('gulp-plumber'),
       liveReload = require('gulp-livereload'),
-
-      scssLint = require('gulp-scss-lint'),
       sass = require('gulp-sass'),
       sassGlob = require('gulp-sass-glob'),
       cssNano = require('gulp-cssnano'),
       cssBase64 = require('gulp-css-base64'),
-
-      webpack = require('webpack-stream'),
-
-      phpcs = require('gulp-phpcs');
+      webpack = require('webpack-stream');
 
 const files = {
   sass: ['assets/styles/**/*.scss'],
@@ -43,25 +38,13 @@ gulp.src = function() {
     }));
 };
 
-/**
- * Tasks
- */
-gulp.task('scssLint', () => {
-  return gulp.src(files.sass)
-    .pipe(cache('scssLint'))
-    .pipe(scssLint({
-      'config': 'config/lint/scss.yml'
-    }))
-    .pipe(scssLint.failReporter());
-});
-
-gulp.task('base64', ['scssLint'], () => {
+gulp.task('base64', () => {
   return gulp.src('node_modules/fancybox/dist/css/*.css')
     .pipe(cssBase64())
     .pipe(gulp.dest('node_modules/fancybox/dist/css/'));
 });
 
-gulp.task('sass', ['scssLint', 'base64'], () => {
+gulp.task('sass', ['base64'], () => {
   return gulp.src(files.sass)
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
@@ -85,15 +68,9 @@ gulp.task('js', () => {
     .pipe(liveReload());
 });
 
-gulp.task('phpcs', () => {
+gulp.task('php', () => {
   return gulp.src(files.php)
-    .pipe(cache('phpcs'))
-    .pipe(phpcs({
-      bin: 'vendor/bin/phpcs',
-      standard: 'PSR2'
-    }))
-    .pipe(phpcs.reporter('log'))
-    .pipe(phpcs.reporter('fail'))
+    .pipe(cache('php'))
     .pipe(liveReload());
 });
 
@@ -136,9 +113,9 @@ const welcomeMessage = [
 ].join('\n');
 
 gulp.task('default', () => {
-  gulp.watch(files.sass, ['base64', 'scssLint', 'sass']);
+  gulp.watch(files.sass, ['base64', 'sass']);
   gulp.watch(files.js, ['js']);
-  gulp.watch(files.php, ['phpcs']);
+  gulp.watch(files.php, ['php']);
   gulp.watch(files.twig, ['twig']);
 
   liveReload.listen();
