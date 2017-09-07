@@ -9,7 +9,6 @@
   color: $white;
   display: inline-block;
   font-weight: 600;
-  line-height: map-get($line-height, 'small');
   white-space: normal; // Fix for wide button inputs that won't flow to the next line
   padding: 1em 1.5em;
   text-decoration: none;

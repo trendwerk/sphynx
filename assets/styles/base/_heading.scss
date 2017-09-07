@@ -7,7 +7,7 @@ h6 {
   color: $heading-color;
   font-family: $heading-font;
   font-weight: 600;
-  line-height: map-get($line-height, 'small');
+  line-height: map-get($line-height, 'base');
   margin: 0 0 1em;
 
   a {
