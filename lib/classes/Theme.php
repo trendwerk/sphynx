@@ -13,7 +13,7 @@ final class Theme
     private function setSupport()
     {
         add_theme_support('title-tag');
-        add_theme_support('html5', array('gallery', 'caption'));
+        add_theme_support('html5', ['gallery', 'caption']);
     }
 
     private function localize()

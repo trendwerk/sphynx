@@ -41,7 +41,7 @@ final class Installer
         }
 
         foreach ($files as $file) {
-            if (in_array($file, array('.', '..', 'node_modules', 'vendor'))) {
+            if (in_array($file, ['.', '..', 'node_modules', 'vendor'])) {
                 continue;
             }
 
@@ -87,10 +87,10 @@ final class Installer
         $style = $root . '/style.css';
         $contents = $_contents = file_get_contents($style);
 
-        $settings = array('Theme Name', 'Theme URI', 'Description', 'Author', 'Author URI');
+        $settings = ['Theme Name', 'Theme URI', 'Description', 'Author', 'Author URI'];
 
-        $currentSettings = array();
-        $newSettings = array();
+        $currentSettings = [];
+        $newSettings = [];
 
         foreach ($settings as $setting) {
             preg_match('/' . $setting . ':(.+)/', $contents, $value);
