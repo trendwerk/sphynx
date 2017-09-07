@@ -1,14 +1,7 @@
 @mixin max-width($breakpoint) {
-  $raw-query: map-get($breakpoints, $breakpoint);
+  $breakpoint: map-get($breakpoints, $breakpoint);
 
-  @if $raw-query {
-    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
-
-    @media (max-width: #{$query - 1px}) {
-      @content;
-    }
-
-  } @else {
-    @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in the `$breakpoints` map.';
+  @media (max-width: #{$breakpoint - 1px}) {
+    @content;
   }
 }
