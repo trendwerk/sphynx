@@ -1,0 +1,31 @@
+{
+	"name": "trendwerk/sphynx",
+	"description": "A light & simple WordPress starter theme.",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Harold Angenent",
+			"email": "harold@trendwerk.nl"
+		},
+		{
+			"name": "Luuk de Vlieger",
+			"email": "luuk@trendwerk.nl"
+		},
+		{
+			"name": "Sjoerd Boerrigter",
+			"email": "sjoerd@trendwerk.nl"
+		}
+	],
+	"autoload": {
+		"psr-4": {"Trendwerk\\Sphynx\\": "lib/installer/"}
+	},
+	"scripts": {
+		"post-root-package-install": [
+			"Trendwerk\\Sphynx\\Installer::setNamespace",
+			"Trendwerk\\Sphynx\\Installer::setThemeData"
+		]
+	},
+	"require": {
+		"php": ">=5.4"
+	}
+}
