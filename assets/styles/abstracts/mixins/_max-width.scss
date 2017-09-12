@@ -1,7 +1,0 @@
-@mixin max-width($breakpoint) {
-  $breakpoint: map-get($breakpoints, $breakpoint);
-
-  @media (max-width: #{$breakpoint - 1px}) {
-    @content;
-  }
-}
