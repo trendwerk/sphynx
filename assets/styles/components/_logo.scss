@@ -4,7 +4,7 @@
   font-weight: 600;
   line-height: map-get($header-height, 'toggle-navigation');
 
-  @include respond-to('toggle-navigation') {
+  @include min-width('toggle-navigation') {
     line-height: map-get($header-height, 'full');
   }
 }

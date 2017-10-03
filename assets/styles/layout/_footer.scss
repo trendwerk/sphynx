@@ -26,7 +26,7 @@
   .copyright {
     text-align: center;
 
-    @include respond-to('medium') {
+    @include min-width('medium') {
       float: left;
     }
   }
@@ -34,7 +34,7 @@
   nav {
     text-align: center;
 
-    @include respond-to('medium') {
+    @include min-width('medium') {
       float: right;
     }
 
@@ -46,7 +46,7 @@
       display: inline;
       margin: 0 5px;
 
-      @include respond-to('medium') {
+      @include min-width('medium') {
         margin: 0 0 0 20px;
       }
     }

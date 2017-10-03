@@ -2,7 +2,7 @@
   @include wrapper-padding();
   width: 100%;
 
-  @include respond-to('toggle-navigation') {
+  @include min-width('toggle-navigation') {
     float: right;
     padding: 0;
     width: auto;
@@ -13,7 +13,7 @@
   }
 
   .menu-item {
-    @include respond-to('toggle-navigation') {
+    @include min-width('toggle-navigation') {
       float: left;
       margin-left: 5px;
     }
@@ -27,7 +27,7 @@
       font-weight: bold;
       padding: 10px $horizontal-padding;
 
-      @include respond-to('toggle-navigation') {
+      @include min-width('toggle-navigation') {
         border: 0;
         line-height: map-get($header-height, 'full');
         padding: 0 $horizontal-padding;

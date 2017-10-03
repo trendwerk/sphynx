@@ -13,7 +13,7 @@
       float: left;
     }
 
-    @include respond-to('wrapper-width') {
+    @include min-width('huge') {
       margin-left: 0;
     }
   }
@@ -23,7 +23,7 @@
       float: right;
     }
 
-    @include respond-to('wrapper-width') {
+    @include min-width('huge') {
       margin-right: 0;
     }
   }

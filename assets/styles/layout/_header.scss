@@ -10,7 +10,7 @@
   height: map-get($header-height, 'toggle-navigation');
   z-index: 1;
 
-  @include respond-to('toggle-navigation') {
+  @include min-width('toggle-navigation') {
     height: map-get($header-height, 'full');
   }
 
