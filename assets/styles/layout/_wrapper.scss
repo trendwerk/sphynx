@@ -3,7 +3,7 @@
   max-width: map-get($wrapper, 'width');
   width: 100%;
 
-  @include respond-to('huge') {
+  @include respond-to('wrapper-width') {
     margin: 0 auto;
   }
 }
