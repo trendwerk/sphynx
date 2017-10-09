@@ -17,11 +17,11 @@
 
   a {
     @include hover((
-      'background-color': $primary-color,
+      'background-color': $grey-extra-dark,
       'color': $white,
     ));
-    background: $light-background;
-    color: $text-color;
+    background: $grey-extra-light;
+    color: $grey-dark;
   }
 
   .current {

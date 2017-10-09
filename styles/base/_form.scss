@@ -1,7 +1,7 @@
 @include placeholder();
 
 label {
-  color: $heading-color;
+  color: $grey-extra-dark;
   font-weight: 600;
 }
 
@@ -21,7 +21,7 @@ select,
 textarea {
   appearance: none; // Remove built-in browser/device styling
   background: $white;
-  border: 1px solid $border-color;
+  border: 1px solid $grey-light;
   border-radius: 0;
   display: block;
   font-size: 16px; // Disable iOS zoom on focus
@@ -33,7 +33,7 @@ textarea {
   }
 
   &:focus {
-    border: 1px solid shade($border-color, 20%);
+    border: 1px solid shade($grey-light, 20%);
   }
 }
 

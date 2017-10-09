@@ -3,8 +3,8 @@
   @include responsive-margin-bottom();
 
   &.sticky {
-    background: $light-background;
-    padding: $box-padding;
+    background: $grey-extra-light;
+    padding: 30px;
   }
 
   h2 {

@@ -4,18 +4,18 @@ h3,
 h4,
 h5,
 h6 {
-  color: $heading-color;
+  color: $grey-extra-dark;
   font-family: $heading-font;
   font-weight: 600;
   line-height: map-get($line-height, 'base');
   margin: 0 0 1em;
 
   a {
-    color: $heading-color;
+    color: $grey-extra-dark;
     text-decoration: none;
 
     &:hover {
-      color: $hover-color;
+      color: $grey-dark;
       text-decoration: none;
     }
   }

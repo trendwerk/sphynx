@@ -6,7 +6,7 @@
     'menu': '.main-navigation',
     'until': map-get($breakpoints, 'toggle-navigation'),
   ));
-  background-color: $primary-color;
+  background-color: $grey-extra-dark;
   height: map-get($header-height, 'toggle-navigation');
   z-index: 1;
 
