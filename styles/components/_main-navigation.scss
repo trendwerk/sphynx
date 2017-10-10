@@ -21,7 +21,7 @@
     a {
       $horizontal-padding: 20px;
 
-      border-bottom: 1px solid tint($primary-color, 10%);
+      border-bottom: 1px solid tint($grey-extra-dark, 10%);
       display: block;
       font-size: map-get($font-sizes, 'text-small');
       font-weight: bold;

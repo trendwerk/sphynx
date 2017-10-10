@@ -1,0 +1,69 @@
+/**
+ * Colors
+ */
+$black: black;
+$grey-extra-dark: rgb(51, 51, 51);
+$grey-dark: rgb(102, 102, 102);
+$grey: rgb(153, 153, 153);
+$grey-light: rgb(204, 204, 204);
+$grey-extra-light: rgb(238, 238, 238);
+$white: white;
+
+/**
+ * Typography
+ */
+$heading-font: (
+  'Source Sans Pro',
+  sans-serif,
+);
+
+$text-font: (
+  'Source Sans Pro',
+  sans-serif,
+);
+
+$font-sizes: (
+  'base': (
+    'small': 1em,
+    'medium': 1.125em,
+  ),
+  'text-small': 0.9em,
+  'h1': 2em,
+  'h2': 1.5em,
+  'h3': 1.25em,
+  'h4': 1.1em,
+  'blockquote': 1.75em,
+);
+
+$text-margin: 2em;
+
+$line-height: (
+  'base': 1.5em,
+  'large': 2em,
+);
+
+/**
+ * Dimensions
+ */
+$content-width: 920px;
+$header-height: (
+  'toggle-navigation': 60px,
+  'full': 80px,
+);
+$wrapper: (
+  'padding': (
+    'small': 20px,
+    'medium': 40px,
+  ),
+  'width': 1280px,
+);
+
+/**
+ * Breakpoints
+ */
+$breakpoints: (
+  'medium': 640px,
+  'large': 980px,
+  'toggle-navigation': 900px,
+  'wrapper-width': map-get($wrapper, 'width'),
+);

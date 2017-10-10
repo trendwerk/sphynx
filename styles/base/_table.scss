@@ -1,5 +1,5 @@
 table {
-  border: 1px solid $border-color;
+  border: 1px solid $grey-light;
   border-bottom: 0;
   display: inline-block;
   margin: 0 0 $text-margin;
@@ -13,18 +13,18 @@ table {
   }
 
   tr:nth-child(even) {
-    background: $light-background;
+    background: $grey-extra-light;
   }
 
   th,
   td {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $grey-light;
     padding: 0.5em 0.75em;
     text-align: left;
   }
 
   th {
-    background: $primary-color;
+    background: $grey-extra-dark;
     color: $white;
   }
 }

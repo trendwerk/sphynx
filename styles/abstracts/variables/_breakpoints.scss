@@ -1,8 +1,0 @@
-@import 'dimensions';
-
-$breakpoints: (
-  'medium': 640px,
-  'large': 960px,
-  'wrapper-width': map-get($wrapper, 'width'),
-  'toggle-navigation': 900px,
-);
